@@ -88,7 +88,9 @@ Cairo acknowledges that his aspect ratio recommendation also can result in *misl
  knitr::include_graphics("images/15-detect/temperature2-aspect-cairo-annotated.png")
 ```
 
-Where does all of this leave us? If you feel confused, that's because data visualization has *no universal rule about aspect ratios*. What should you do? First, never automatically accept the default chart. Second, explore how different aspect ratios affect its appearance. Finally, even Cairo argues that you should use own judgment and ignore his recommendation in several cases, because there is no single rule about aspect ratio that fits all circumstances.
+Note: Some experts advise that aspect ratios for line charts should follow the *banking to 45 degrees* principle, which states that the average orientation of line segments should be equal to 45 degrees, upwards or downwards, in order to distinguish individual segments. But this requires statistical software to calculate slopes for all of the lines, and still is not a "rule" that fits all cases. Read a [good overview by Robert Kosara](https://eagereyes.org/basics/banking-45-degrees).^[@kosaraAspectRatioBanking2013]
+
+Where does all of this leave us? If you feel confused, that's because data visualization has *no universal rule about aspect ratios*. What should you do? First, never automatically accept the default chart. Second, explore how different aspect ratios affect its appearance. Finally, even Cairo argues that you should use your own judgment rather than follow his recommendation in every situation, because there is no single rule about aspect ratio that fits all circumstances. Make a choice that honestly interprets the data and clearly tells a story to your reader.
 
 #### Add more data and a dual vertical axis {-}
 Another common way to mislead is to add more data, such as a second data series that corresponds to a second vertical axis on the right side of a line chart. While it's technically possible to construct a dual-axis chart, we strongly advise against them because they can easily be manipulated to mislead readers. Let's illustrate how with an example that combines two prior datasets---global temperature change and US Gross Domestic Product---in one dual-axis chart. In the Google Sheet, go to the *temp+GDP* sheet, where you will see temperature change plus a new column: US Gross Domestic Product (GDP) in billions of dollars from 1929 to 2019, downloaded from the [US Federal Reserve](https://fred.stlouisfed.org/series/GDPA). To simplify this example, we deleted pre-1929 temperature data to match it up more neatly with available GDP data.
@@ -204,13 +206,13 @@ We define bias as unfairly favoring one view over another. When working with dat
 
 Schwabish and Feng offer several excellent recommendations to improve racial equity in data visualization, though some of their more provocative proposals are likely to generate more discussion and debate. For example, they [contrast different ways to portray Covid-19 pandemic data](https://medium.com/@urban_institute/applying-racial-equity-awareness-in-data-visualization-bd359bf7a7ff) and recommend that we stop placing disaggregated racial and ethnic data on the same chart because it promotes a "deficit-based perspective" that judges lower-performing groups by the standards of higher-performing ones, as shown in Figure \@ref(fig:schwabish-feng1). Instead, Schwabish and Feng suggest that we plot racial and ethnic data in separate but adjacent charts, each with its own reference to state or national averages and confidence intervals, as shown in Figure \@ref(fig:schwabish-feng2).
 
-(ref:schwabish-feng1) To avoid a deficit-based perspective, Schwabish and Feng argue against combining racial and ethnic data on the same chart. Source: [Data@Urban](https://medium.com/@urban_institute/applying-racial-equity-awareness-in-data-visualization-bd359bf7a7ff).
+(ref:schwabish-feng1) To avoid a deficit-based perspective, Schwabish and Feng argue against combining racial and ethnic data on the same chart. Image by [Data@Urban](https://medium.com/@urban_institute/applying-racial-equity-awareness-in-data-visualization-bd359bf7a7ff).
 
 ```{r schwabish-feng1, out.width=500, fig.cap="(ref:schwabish-feng1)"}
  knitr::include_graphics("images/15-detect/schwabish-feng1.png")
 ```
 
-(ref:schwabish-feng2) Instead, Schwabish and Feng recommend placing racial and ethnic data in separate charts, with state or national averages as a comparison point. Source: [Data@Urban](https://medium.com/@urban_institute/applying-racial-equity-awareness-in-data-visualization-bd359bf7a7ff).
+(ref:schwabish-feng2) Instead, Schwabish and Feng recommend placing racial and ethnic data in separate charts, with state or national averages as a comparison point. Image by [Data@Urban](https://medium.com/@urban_institute/applying-racial-equity-awareness-in-data-visualization-bd359bf7a7ff).
 
 ```{r schwabish-feng2, out.width=500, fig.cap="(ref:schwabish-feng2)"}
  knitr::include_graphics("images/15-detect/schwabish-feng2.png")

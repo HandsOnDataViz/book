@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-12-12" />
+<meta name="date" content="2020-12-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -342,8 +342,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="design-choropleth" class="section level2 unnumbered" number="">
 <h2>Design Choropleth Colors &amp; Intervals</h2>
-<p>When you build a choropleth map, your choices about how to represent data with colors will determine its overall appearance, so it’s important to learn key principles. Good choropleth maps make true and insightful geographic patterns clearly visible to readers, whether they are printed in black-and-white on paper or displayed in color on a computer screen. Furthermore, the best choropleth maps are designed to be interpreted correctly by people with colorblindness. For an excellent overview of visualization colors in general, see Lisa Charlotte Rost’s “<a href="https://blog.datawrapper.de/colorguide/">A Friendly Guide to Colors in Data Visualization</a>” and “<a href="https://blog.datawrapper.de/beautifulcolors/index.html">How to Pick More Beautiful Colors for Your Data Visualizations</a>,” both on the Datawrapper blog.<a href="#fn29" class="footnote-ref" id="fnref29"><sup>29</sup></a></p>
-<p>To illustrate key concepts about colors in choropleth maps, let’s explore a wonderful design assistant called <a href="https://colorbrewer2.org/">ColorBrewer</a>, created by Cynthia Brewer and Mark Harrower.<a href="#fn30" class="footnote-ref" id="fnref30"><sup>30</sup></a> Since ColorBrewer is a design assistant, you do <em>not</em> upload your map data directly into it. Instead, you select the type of data you wish to display in your choropleth map, and ColorBrewer will recommend color palettes that work best with your data story. Then you can export those color codes into your preferred choropleth mapping tool, as shown in the <a href="choropleth-datawrapper.html">Datawrapper</a> and <a href="map-tableau.html">Tableau Public</a> tutorials below. See the ColorBrewer interface in Figure <a href="design-choropleth.html#fig:map-colorbrewer">8.5</a>.</p>
+<p>When you build a choropleth map, your choices about how to represent data with colors will determine its overall appearance, so it’s important to learn key principles. Good choropleth maps make true and insightful geographic patterns clearly visible to readers, whether they are printed in black-and-white on paper or displayed in color on a computer screen. Furthermore, the best choropleth maps are designed to be interpreted correctly by people with colorblindness. For an excellent overview of visualization colors in general, see Lisa Charlotte Rost’s “<a href="https://blog.datawrapper.de/colorguide/">A Friendly Guide to Colors in Data Visualization</a>” and “<a href="https://blog.datawrapper.de/beautifulcolors/index.html">How to Pick More Beautiful Colors for Your Data Visualizations</a>,” both on the Datawrapper blog.<a href="#fn30" class="footnote-ref" id="fnref30"><sup>30</sup></a></p>
+<p>To illustrate key concepts about colors in choropleth maps, let’s explore a wonderful design assistant called <a href="https://colorbrewer2.org/">ColorBrewer</a>, created by Cynthia Brewer and Mark Harrower.<a href="#fn31" class="footnote-ref" id="fnref31"><sup>31</sup></a> Since ColorBrewer is a design assistant, you do <em>not</em> upload your map data directly into it. Instead, you select the type of data you wish to display in your choropleth map, and ColorBrewer will recommend color palettes that work best with your data story. Then you can export those color codes into your preferred choropleth mapping tool, as shown in the <a href="choropleth-datawrapper.html">Datawrapper</a> and <a href="map-tableau.html">Tableau Public</a> tutorials below. See the ColorBrewer interface in Figure <a href="design-choropleth.html#fig:map-colorbrewer">8.5</a>.</p>
 
 <div class="figure"><span id="fig:map-colorbrewer"></span>
 <img src="images/08-map/map-colorbrewer-annotated.png" alt="The ColorBrewer design assistant interface: data classes, type of color scheme, and recommended color codes."  />
@@ -430,9 +430,9 @@ Figure 8.12: Histogram of evenly-distributed data (on right) versus skewed data 
 <p>Overall, <a href="https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps">Datawrapper Academy recommends</a> that you make color intervals choices to help readers “see all the differences in the data” by fully utilizing all of the colors in your range, as shown in Figure <a href="design-choropleth.html#fig:intervals-datawrapper-montage">8.13</a>. In other words, if your map displays only the lightest and darkest colors, you’re not sufficiently using the middle portion of your color range to highlight geographic patterns and diversity within your data. To do this, you’ll need to explore beyond the default map settings and test which options do the best job of telling an honest and insightful data story.</p>
 
 <div class="figure"><span id="fig:intervals-datawrapper-montage"></span>
-<img src="images/08-map/intervals-datawrapper-montage.png" alt="Use the full color range to show all of the differences in the data. (Image by Datawrapper Academy.)" width="500" />
+<img src="images/08-map/intervals-datawrapper-montage.png" alt="Use the full color range to show all of the differences in the data. Image by Datawrapper Academy, reprinted with permission." width="500" />
 <p class="caption">
-Figure 8.13: Use the full color range to show all of the differences in the data. (Image by Datawrapper Academy.)
+Figure 8.13: Use the full color range to show all of the differences in the data. Image by <a href="https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps">Datawrapper Academy</a>, reprinted with permission.
 </p>
 </div>
 <p>Designing true and meaningful choropleth maps is challenging work. You will improve your skills the same way we did, by reading widely, looking at different maps, and testing various ways to visualize your data. Become more aware of how your decisions about color intervals can dramatically alter how the data appears to readers. Most important, create maps that tell truthful and insightful data stories.</p>
@@ -440,9 +440,9 @@ Figure 8.13: Use the full color range to show all of the differences in the data
 </div>
 <div class="footnotes">
 <hr />
-<ol start="29">
-<li id="fn29"><p><span class="citation">Rost, “Your Friendly Guide to Colors in Data Visualisation.”</span>; <span class="citation">Rost, “How to Pick More Beautiful Colors for Your Data Visualizations.”</span><a href="design-choropleth.html#fnref29" class="footnote-back">↩︎</a></p></li>
-<li id="fn30"><p>See also <span class="citation">Cynthia A. Brewer, <em>Designing Better Maps: A Guide for GIS Users</em> (Esri Press, 2016), <a href="https://www.google.com/books/edition/Designing_Better_Maps/gFErrgEACAAJ" role="doc-biblioref">https://www.google.com/books/edition/Designing_Better_Maps/gFErrgEACAAJ</a></span><a href="design-choropleth.html#fnref30" class="footnote-back">↩︎</a></p></li>
+<ol start="30">
+<li id="fn30"><p><span class="citation">Rost, “Your Friendly Guide to Colors in Data Visualisation.”</span>; <span class="citation">Rost, “How to Pick More Beautiful Colors for Your Data Visualizations.”</span><a href="design-choropleth.html#fnref30" class="footnote-back">↩︎</a></p></li>
+<li id="fn31"><p>See also <span class="citation">Cynthia A. Brewer, <em>Designing Better Maps: A Guide for GIS Users</em> (Esri Press, 2016), <a href="https://www.google.com/books/edition/Designing_Better_Maps/gFErrgEACAAJ" role="doc-biblioref">https://www.google.com/books/edition/Designing_Better_Maps/gFErrgEACAAJ</a></span><a href="design-choropleth.html#fnref31" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

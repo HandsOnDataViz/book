@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-12-12" />
+<meta name="date" content="2020-12-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -343,7 +343,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="chart-design" class="section level2 unnumbered" number="">
 <h2>Chart Design Principles</h2>
 <p>There are <em>so</em> many different types of charts. However, just because data <em>can</em> be made into a chart does not necessarily mean that it <em>should</em> be turned into one. Before creating a chart, stop and ask: <em>Does a visualized data pattern really matter to your story?</em> Sometimes a simple table, or even text alone, can communicate the idea more effectively to your audience. Since creating a well-designed chart requires time and effort, make sure it enhances your data story.</p>
-<p>Although not a science, data visualization comes with a set of principles and best practices that serve as a foundation for creating truthful and eloquent charts. In this section, we’ll identify some important rules about chart design. But you may be surprised to learn that some rules are less rigid than others, and can be “broken” when necessary to emphasize a point, as long as you are honestly interpreting the data. To begin to understand the difference, let’s start by establishing a common vocabulary about charts.</p>
+<p>Although not a science, data visualization comes with a set of principles and best practices that serve as a foundation for creating truthful and eloquent charts. In this section, we’ll identify some important rules about chart design. But you may be surprised to learn that some rules are less rigid than others, and can be “broken” when necessary to emphasize a point, as long as you honestly interpret the data.</p>
+<p>To better understand this tension between following and breaking rules in data visualization, see Lisa Charlotte Rost’s thoughtful reflection on “<a href="https://lisacharlotterost.de/datavisrules">What To Consider When Considering Data Vis Rules</a>.” By articulating the unspoken rules behind good chart design, Rost argues that we all benefit by moving them into the public realm, where we can openly discuss and improve on them, as she had done in many <a href="https://academy.datawrapper.de">Datawrapper Academy</a>, which also beautifully visualize each rule. But Rost reminds us that rules also have a downside. First, following rules too closely can block creativity and innovation, especially when we look for ways to overcome challenges in design work. Second, since rules have emerged from different “theories of data visualization,” they sometimes contradict one another. One example of colliding rules is the tension between creating easy-to-grasp data stories versus those that reveal the complexity of the data, as it often feels impossible to do both. Rost concludes that the rules we follow reflect our values, and each of us needs to ask, “What do you want your data visualizations to be judged for?”<a href="#fn26" class="footnote-ref" id="fnref26"><sup>26</sup></a></p>
+<p>To delve further into chart design, let’s start by establishing a common vocabulary about charts.</p>
 <div id="deconstruct-a-chart" class="section level3 unnumbered" number="">
 <h3>Deconstruct a Chart</h3>
 <p>Let’s take a look at Figure <a href="chart-design.html#fig:design-principles-chart-components">7.1</a>.
@@ -397,7 +399,7 @@ is visible without any user interaction.</p>
 Figure 7.2: Start your bar chart at zero.
 </p>
 </div>
-<p>But the zero-baseline rule does <em>not</em> apply to line charts. According to visualization expert Alberto Cairo, line charts represent values through the <em>position</em> and <em>angle</em> of the line, rather than its height or length. Starting a line chart at a number other than zero does <em>not</em> necessarily distort its encoded information because our eyes rely on its shape to determine its meaning, rather than its proximity to the baseline.<a href="#fn26" class="footnote-ref" id="fnref26"><sup>26</sup></a> For example, compare both the right and left sides of Figure <a href="chart-design.html#fig:design-principles-baseline-comparison">7.3</a>, where both are correct.</p>
+<p>But the zero-baseline rule does <em>not</em> apply to line charts. According to visualization expert Alberto Cairo, line charts represent values through the <em>position</em> and <em>angle</em> of the line, rather than its height or length. Starting a line chart at a number other than zero does <em>not</em> necessarily distort its encoded information because our eyes rely on its shape to determine its meaning, rather than its proximity to the baseline.<a href="#fn27" class="footnote-ref" id="fnref27"><sup>27</sup></a> For example, compare both the right and left sides of Figure <a href="chart-design.html#fig:design-principles-baseline-comparison">7.3</a>, where both are correct.</p>
 
 <div class="figure"><span id="fig:design-principles-baseline-comparison"></span>
 <img src="images/07-chart/design-principles-baseline-comparison.png" alt="Since line charts do not require a zero baseline, both sides are correct."  />
@@ -528,7 +530,7 @@ Consider using commas as thousands separators for readability (<code>1,000,000</
 Figure 7.10: Don’t use colors just for the sake of it.
 </p>
 </div>
-<p>The use of color is a complex topic, and there are plenty of books and research devoted to it. For an excellent overview, see Lisa Charlotte Rost’s “<a href="https://blog.datawrapper.de/colorguide/">A Friendly Guide to Colors in Data Visualization</a>” and “<a href="https://blog.datawrapper.de/beautifulcolors/index.html">How to Pick More Beautiful Colors for Your Data Visualizations</a>,” both on the Datawrapper blog.<a href="#fn27" class="footnote-ref" id="fnref27"><sup>27</sup></a></p>
+<p>The use of color is a complex topic, and there are plenty of books and research devoted to it. For an excellent overview, see Lisa Charlotte Rost’s “<a href="https://blog.datawrapper.de/colorguide/">A Friendly Guide to Colors in Data Visualization</a>” and “<a href="https://blog.datawrapper.de/beautifulcolors/index.html">How to Pick More Beautiful Colors for Your Data Visualizations</a>,” both on the Datawrapper blog.<a href="#fn28" class="footnote-ref" id="fnref28"><sup>28</sup></a></p>
 <p>If you follow our advice, you should end up with a de-cluttered chart as shown in
 Figure <a href="chart-design.html#fig:design-principles-decluttered">7.11</a>. Notice how your eyes are drawn to the bars and their corresponding values, not bright colors or secondary components like the axes lines.</p>
 
@@ -544,8 +546,9 @@ Figure 7.11: Make sure important things catch the eye first.
 <div class="footnotes">
 <hr />
 <ol start="26">
-<li id="fn26"><p><span class="citation">Cairo, <em>How Charts Lie</em>, 2019</span>, p. 61.<a href="chart-design.html#fnref26" class="footnote-back">↩︎</a></p></li>
-<li id="fn27"><p><span class="citation">Lisa Charlotte Rost, “Your Friendly Guide to Colors in Data Visualisation” (Chartable: A Blog by Datawrapper, July 31, 2018), <a href="https://blog.datawrapper.de/colorguide/" role="doc-biblioref">https://blog.datawrapper.de/colorguide/</a></span>; <span class="citation">Lisa Charlotte Rost, “How to Pick More Beautiful Colors for Your Data Visualizations” (Chartable), accessed October 21, 2020, <a href="https://blog.datawrapper.de/beautifulcolors/index.html" role="doc-biblioref">https://blog.datawrapper.de/beautifulcolors/index.html</a></span><a href="chart-design.html#fnref27" class="footnote-back">↩︎</a></p></li>
+<li id="fn26"><p><span class="citation">Lisa Charlotte Rost, “What to Consider When Considering Data Vis Rules” (Lisa Charlotte Rost, November 27, 2020), <a href="https://lisacharlotterost.de/datavisrules" role="doc-biblioref">https://lisacharlotterost.de/datavisrules</a></span><a href="chart-design.html#fnref26" class="footnote-back">↩︎</a></p></li>
+<li id="fn27"><p><span class="citation">Cairo, <em>How Charts Lie</em>, 2019</span>, p. 61.<a href="chart-design.html#fnref27" class="footnote-back">↩︎</a></p></li>
+<li id="fn28"><p><span class="citation">Lisa Charlotte Rost, “Your Friendly Guide to Colors in Data Visualisation” (Datawrapper Blog, July 31, 2018), <a href="https://blog.datawrapper.de/colorguide/" role="doc-biblioref">https://blog.datawrapper.de/colorguide/</a></span>; <span class="citation">Lisa Charlotte Rost, “How to Pick More Beautiful Colors for Your Data Visualizations” (DataWrapper Blog), accessed October 21, 2020, <a href="https://blog.datawrapper.de/beautifulcolors/index.html" role="doc-biblioref">https://blog.datawrapper.de/beautifulcolors/index.html</a></span><a href="chart-design.html#fnref28" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

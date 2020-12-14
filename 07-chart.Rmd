@@ -28,13 +28,17 @@ Table: (\#tab:chart-types) Basic Chart Types, Best Uses, and Tutorials
 
 Note: For a more extensive collection of chart types and use cases, see the [Financial Times Visual Vocabulary](https://ft.com/vocabulary).
 
-TODO above: ILYA improve and standardize chart images, improve colors, aspect ratio;  redo range chart
+TODO above: ILYA improve and standardize chart images, improve colors, aspect ratio
 
 ## Chart Design Principles {- #chart-design}
 
 There are *so* many different types of charts. However, just because data *can* be made into a chart does not necessarily mean that it *should* be turned into one. Before creating a chart, stop and ask: *Does a visualized data pattern really matter to your story?* Sometimes a simple table, or even text alone, can communicate the idea more effectively to your audience. Since creating a well-designed chart requires time and effort, make sure it enhances your data story.
 
-Although not a science, data visualization comes with a set of principles and best practices that serve as a foundation for creating truthful and eloquent charts. In this section, we'll identify some important rules about chart design. But you may be surprised to learn that some rules are less rigid than others, and can be "broken" when necessary to emphasize a point, as long as you are honestly interpreting the data. To begin to understand the difference, let's start by establishing a common vocabulary about charts.
+Although not a science, data visualization comes with a set of principles and best practices that serve as a foundation for creating truthful and eloquent charts. In this section, we'll identify some important rules about chart design. But you may be surprised to learn that some rules are less rigid than others, and can be "broken" when necessary to emphasize a point, as long as you honestly interpret the data.
+
+To better understand this tension between following and breaking rules in data visualization, see Lisa Charlotte Rost’s thoughtful reflection on "[What To Consider When Considering Data Vis Rules](https://lisacharlotterost.de/datavisrules)." By articulating the unspoken rules behind good chart design, Rost argues that we all benefit by moving them into the public realm, where we can openly discuss and improve on them, as she had done in many [Datawrapper Academy](https://academy.datawrapper.de), which also beautifully visualize each rule. But Rost reminds us that rules also have a downside. First, following rules too closely can block creativity and innovation, especially when we look for ways to overcome challenges in design work. Second, since rules have emerged from different "theories of data visualization," they sometimes contradict one another. One example of colliding rules is the tension between creating easy-to-grasp data stories versus those that reveal the complexity of the data, as it often feels impossible to do both. Rost concludes that the rules we follow reflect our values, and each of us needs to ask, "What do you want your data visualizations to be judged for?"^[@rostWhatConsiderWhen2020]
+
+To delve further into chart design, let's start by establishing a common vocabulary about charts.
 
 ### Deconstruct a Chart {-}
 
@@ -388,13 +392,15 @@ To change the color of a data series (for example, to show Overweight category i
 
 ## - Histograms {- #histogram-google}
 
-Histograms are best to show the distribution of raw data, by displaying the number of values that fall within defined ranges, often called *buckets* or *bins*. Creating a histogram can be a great way to better understand what your data looks like to inform your decision-making when designing more advanced visualizations, such as [choropleth maps, as you'll learn in Chapter 8](design-choropleth.html). Although histograms may look similar to column charts, the two are different. First, histograms show *continuous* data, and usually you can adjust the bucket ranges to explore frequency patterns. For example, you can shift histogram buckets from 0-1, 1-2, 2-3, etc. to 0-2, 2-4, etc. By contrast, column charts show *categorical* data (such as the number of apples, bananas, carrots, etc.), so their ranges cannot be adjusted. Second, histograms do not usually show spaces between buckets because these are continuous values, while column charts show spaces to separate each category.
+Histograms are best to show the distribution of raw data, by displaying the number of values that fall within defined ranges, often called *buckets* or *bins*. Creating a histogram can be a great way to better understand what your data looks like to inform your decision-making when designing more advanced visualizations, such as [choropleth maps, as you'll learn in Chapter 8](design-choropleth.html). Although histograms may look similar to column charts, the two are different. First, histograms show *continuous* data, and usually you can adjust the bucket ranges to explore frequency patterns. For example, you can shift histogram buckets from 0-1, 1-2, 2-3, etc. to 0-2, 2-4, etc. By contrast, column charts show *categorical* data, such as the number of apples, bananas, carrots, etc. Second, histograms do not usually show spaces between buckets because these are continuous values, while column charts show spaces to separate each category.
 
-In this section, you'll create two types of histograms in Google Sheets: quick histograms using the *Column stats* menu versus regular histograms using the *Chart* menu, and the advantages of each method. For both tutorials we'll use the same data on TODO DESCRIBE...JACK TO UPDATE after Ilya prepares data....for 174 countries in TODO: YEAR from the [United Nations Food and Agriculture Organization](http://www.fao.org/). Before you begin, open the TODO: CHECK NAME [Average Calorie Consumption by nation data in Google Sheets](https://docs.google.com/spreadsheets/d/1V-r1bOWpvyCRhmJa0gRZ1TEchXvrr7UTZ97rKOU1WRo/edit#gid=1132930452), log in with your account, and go to *File > Make a Copy* to create a version you can edit in your Google Drive.
+In this section, you'll create two types of histograms in Google Sheets: quick histograms using the *Column stats* menu versus regular histograms using the *Chart* menu, and the advantages of each method. For both tutorials we'll use the same data: the average calorie supply per capita for 174 countries in 2017, compiled by the [United Nations Food and Agriculture Organization](http://www.fao.org/faostat/en/#data/FBS), accessed through [Our World In Data](https://ourworldindata.org/food-supply). Note that methods for measuring food supply vary across nations and over time, and estimate the amount of food availability, rather than actual consumption.
 
 ### Quick Histograms with Google Sheets Column Stats {-}
 
-To create a quick histogram in Google Sheets, select any column, then go to *Data > Column stats*, and click the green *Distribution* button in the sidebar to view a histogram for that column, as shown in Figure \@ref(fig:histogram-quick). The advantage is that this method is very fast, and you can quickly create histograms for other columns in the same sheet using the arrows near the top of the sidebar (`< >`). However, you cannot manually adjust the bucket ranges or make other edits to these quick histograms, and you cannot embed them on the web as you can with regular charts in Google Sheets.
+1. Open the sample data on [Average Daily Calorie Supply per capita by country 2017 in Google Sheets](https://docs.google.com/spreadsheets/d/1V-r1bOWpvyCRhmJa0gRZ1TEchXvrr7UTZ97rKOU1WRo/edit#gid=1132930452), log in with your account, and go to *File > Make a Copy* to create a version you can edit in your Google Drive.
+
+2. To create a quick histogram in Google Sheets, select any column, then go to *Data > Column stats*, and click the *Distribution* button in the sidebar to view a histogram for that column, as shown in Figure \@ref(fig:histogram-quick). The advantage is that this method is very fast, and you can quickly create histograms for other columns in the same sheet using the arrows near the top of the sidebar (`< >`). However, you cannot manually adjust the bucket ranges or make other edits to these quick histograms, and you cannot embed them on the web as you can with regular charts in Google Sheets.
 
 (ref:histogram-quick) To create a quick histogram in a Google Sheet, select a column, then go to *Data - Column stats - Distribution*.
 
@@ -402,20 +408,16 @@ To create a quick histogram in Google Sheets, select any column, then go to *Dat
  knitr::include_graphics("images/07-chart/histogram-quick.png")
 ```
 
-TODO: JACK to update interpretation.... Histograms are designed to represent distributions, not individual values. Figure \@ref(fig:histogram-quick) shows two peaks, one of 2,100–2,300 calories and the second one at 2,700-3,100 calories (two consecutive buckets). We can also see that daily calorie consumption in five countries does not exceed 1,900, and exceeds 3,700 calories in three countries. Histograms by themselves, without annotations, don't tell us what those countries are.
-
-TODO above: JACK to redo image using new data; create PDF version
+Histograms are designed to show broad patterns of data distribution, not individual values. The histogram in Figure \@ref(fig:histogram-quick) shows that while most nations have an average daily supply around 2,800 calories per capita, 8 nations have fewer than 2,000, and 11 nations have more than 3,500. Without annotations, histograms don't tell us the names of those outlier countries. But they do offer a better sense of the shape of the data distribution.
 
 ### Regular Histograms with Google Sheets Charts {-}
 
-TODO below: ILYA to prepare replacement histogram data and demo, and JACK to redo screenshots and text as needed
+Compare the quick histogram created with *Column stats* in Figure \@ref(fig:histogram-quick) with the regular histogram created with *Charts* in Figure \@ref(fig:histogram). You'll notice that in the regular histogram, you can define the bucket ranges, display dividers, and add titles and labels to provide more context to readers. Also, the interactive version of the regular histogram allows users to float their cursor to see underlying data on the count for each column.
 
-Compare the quick histogram in Figure \@ref(fig:histogram-quick) with the regular histogram created with the Charts menu in Figure \@ref(fig:histogram). You'll notice that....TODO....DESCRIBE differences....
-
-(ref:histogram) Histogram: Explore the full-screen [interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=480820223&format=interactive).
+(ref:histogram) Regular histogram chart: Explore the full-screen [interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=480820223&amp;format=interactive).
 
 ```{r histogram, fig.cap="(ref:histogram)"}
-if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=480820223&format=interactive") else knitr::include_graphics("images/07-chart/histogram.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=480820223&amp;format=interactive") else knitr::include_graphics("images/07-chart/histogram.png")
 ```
 
 1. To create a regular histogram in Google Sheets, select a column with values and go to *Insert > Chart*. If Google Sheets does not automatically select *Histogram chart* as the *Chart type* in Chart editor, use the dropdown and select it manually, near the bottom of the list in the *Other* category, as shown in Figure \@ref(fig:histogram-chart-type)
@@ -432,9 +434,9 @@ Note: Currently, Google Sheets does not allow users to remove decimal points in 
 
 3. Optionally, you can break down the column into individual items (in our case, countries), which will appear as blocks with white boundaries. To do this, go to *Customize > Histogram > Show item dividers*.
 
-4. To further assist the reader in interpreting the histogram, add a vertical y-axis label (such as *Number of countries*) and a subtitle (such as *Each bar represents number of countries per calorie range*). You can add both from the *Customize* tab in the Chart editor.
+4. In the Chart Editor, customize further to add a *Chart title*, a *subtitle* to describe the source, and also vertical and horizontal axis titles to help readers interpret the chart.
 
-Since this histogram is created using the regular Charts feature, you can choose to *Publish* it and copy the embed code for the interactive version, as you'll learn in [Chapter 10: Embed on the Web](embed.html).
+Since the regular histogram is created using the Charts feature, you can choose to *Publish* it and copy the embed code for the interactive version, as you'll learn in [Chapter 10: Embed on the Web](embed.html).
 
 Now that you've learned how to create histograms to show the distribution of raw data, in the next section we'll move on to other types of Google Sheets chart types, such as pie, line, and area charts.
 
@@ -574,25 +576,25 @@ Congratulations on creating your first interactive Datawrapper chart. Now let's 
 
 ## - Range Charts {- #range-datawrapper}
 
-TODO below: ILYA to create new data and sample chart on gender pay gap with updated data, and JACK to update text and screenshots as needed
+A range chart, which can be classed as a specific type of a dot chart, emphasizes gaps between data points, and is often used to highlight inequalities. In this tutorial, we will use Datawrapper to build a range chart about the US gender pay gap. The chart compares the median earnings of American men and women by education level, according to the 2019 American Community Survey, as shown in Figure \@ref(fig:datawrapper-range). We were inspired by the [Datawrapper Academy range plot tutorial](https://academy.datawrapper.de/article/111-how-to-create-a-range-plot) and created our version using more recent data. Overall, the range chart shows how men, on average, earn more than women at all education levels. In fact, an average US man with a bachelor's degree earns more than an average US woman with a graduate degree.
 
-A range chart (also known as a specific type of dot chart) is best to show gaps between data points, such as inequalities. The line chart above illustrated how the overall US unemployment rate changed over time. But if we wish to look at differences in gender and race/ethnicity for a specific point in time, a range chart will highlight any gaps. Organize the data for a range chart into rows and columns, as shown in Figure \@ref(fig:datawrapper-range-data). The column headers contain data labels you wish to highlight, such *Men* and *Women*. The first column contains your categories, such as racial/ethnic groups, followed by the numerical values under each header. Now you can easily create an interactive range chart as shown in Figure \@ref(fig:datawrapper-range). The employment gender gap is visible in all three racial/ethnic groups, but the gap was widest between Hispanic men and women in May 2020.
+(ref:datawrapper-range) Range chart: Explore the [interactive version](https://datawrapper.dwcdn.net/lVGnz/). Data from [US Census 2019 American Community Survey](https://docs.google.com/spreadsheets/d/1qAfMHBegOz1-ZlN9UurZ_wsesmLGYlu_ch7M3Anwdsg/edit#gid=0).
 
-(ref:datawrapper-range-data) Organize your range chart data labels into column headers, with categories and values in each row.
+```{r datawrapper-range, fig.cap="(ref:datawrapper-range)"}
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://datawrapper.dwcdn.net/lVGnz/", height="260px") else knitr::include_graphics("images/07-chart/datawrapper-range.png")
+```
 
-```{r datawrapper-range-data, out.width=300, fig.cap="(ref:datawrapper-range-data)"}
+To build this range chart, we organized the data as shown in Figure \@ref(fig:datawrapper-range-data). The first column contains five educational attainment levels, from lowest (*less than high school*) to highest (*graduate or professional degree*). The second and third columns contain numeric values of median earnings for *Men* and *Women* respectively.
+
+(ref:datawrapper-range-data) Organize your range chart data into three columns: labels, and values for both subgroups.
+
+```{r datawrapper-range-data, out.width=500, fig.cap="(ref:datawrapper-range-data)"}
 knitr::include_graphics("images/07-chart/datawrapper-range-data.png")
 ```
 
-(ref:datawrapper-range) Range chart: Explore the [interactive version](https://datawrapper.dwcdn.net/v8D2z/). Data from [US Federal Reserve Open Data](https://docs.google.com/spreadsheets/d/1qAfMHBegOz1-ZlN9UurZ_wsesmLGYlu_ch7M3Anwdsg/edit#gid=0).
+Since by now you should be familiar with Datawrapper, the steps to create a range chart are less detailed than in the previous tutorial on annotated line charts. If you get lost, see more detailed steps about Datawrapper charts in the section above.
 
-```{r datawrapper-range, fig.cap="(ref:datawrapper-range)"}
-if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://datawrapper.dwcdn.net/v8D2z/") else knitr::include_graphics("images/07-chart/datawrapper-range.png")
-```
-
-To create your own range chart with our sample data, follow this tutorial. Since we assume that you're already familiar with Datawrapper from the previous tutorial on annotated line charts, these steps are abbreviated. So if you get lost, see more details and images above.
-
-1. Open the [US Unemployment by Gender and Race/Ethnicity May 2020 sample data in Google Sheets](https://docs.google.com/spreadsheets/d/1qAfMHBegOz1-ZlN9UurZ_wsesmLGYlu_ch7M3Anwdsg/edit#gid=0) and go to *File > Make a Copy* to create your own version in your Google Drive. Or download the [sample data in Excel format](data/us-unemployment-gender-race-ethnicity-may2020.xlsx) to your computer.
+1. Open the [US Earnings by Gender by Education Level data in Google Sheets](https://docs.google.com/spreadsheets/d/1qAfMHBegOz1-ZlN9UurZ_wsesmLGYlu_ch7M3Anwdsg/edit#gid=0) and go to *File > Make a Copy* to create your own version in your Google Drive.
 
 2. Open [Datawrapper](https://www.datawrapper.de) in your browser and click *Start Creating*. We recommend that you create a free account to better manage your visualizations, but it's not required.
 
@@ -604,27 +606,28 @@ To create your own range chart with our sample data, follow this tutorial. Since
 
 6. Click the *Annotate* tab near the top-left of the *Visualize* screen to add a meaningful title, data source, and byline credits.
 
-7. Click the *Refine* tab of the *Visualize* screen to modify the range chart appearance. You have several options, but here's the most important ones in this case. First, in the *Labels* section, change the visibility of the values from *start* to *both*, which places numbers at both ends of each range. Second, push the slider to *Label first range*, which places the word *Men* and *Women* above the first range, as shown in Figure \@ref(fig:datawrapper-range-labels).
+7. Click the *Refine* tab of the *Visualize* screen to modify the range chart appearance. You have several options, but here's the most important ones in this case. First, in the *Labels* section, change the visibility of the values from *start* to *both*, which places numbers at both ends of each range. Second, push the slider to *Label first range*, which places the word *Men* and *Women* above the first range. Third, change *Number format* to *123k*, which will round dollar amounts to the nearest thousand, and replace thousands with a *k* as shown in Figure \@ref(fig:datawrapper-range-labels).
 
 (ref:datawrapper-range-labels) Modify the labels settings to show values at both ends of each range, and to place your data labels on your first range.
 
-```{r datawrapper-range-labels, fig.cap="(ref:datawrapper-range-labels)"}
+```{r datawrapper-range-labels, out.width=600, fig.cap="(ref:datawrapper-range-labels)"}
 knitr::include_graphics("images/07-chart/datawrapper-range-labels.png")
 ```
 
-8. Still in the *Refine* tab, scroll down to the *Appearance* section to improve the colors. Select the *Range end* drop-down menu to select a better color, such as red. Also, change the *Range color* setting to *gradient* to emphasize the range, as shown in Figure \@ref(fig:datawrapper-range-appearance).
+8. Still in the *Refine* tab, scroll down to the *Appearance* section to improve the colors. Select the *Range end* drop-down menu to select a better color, such as red. Change the *Range color* setting to *gradient* to emphasize the range, as shown in Figure \@ref(fig:datawrapper-range-appearance).
 
 (ref:datawrapper-range-appearance) Modify the appearance settings to improve the color and add a gradient.
 
-```{r datawrapper-range-appearance, fig.cap="(ref:datawrapper-range-appearance)"}
+```{r datawrapper-range-appearance, out.width=600, fig.cap="(ref:datawrapper-range-appearance)"}
 knitr::include_graphics("images/07-chart/datawrapper-range-appearance.png")
 ```
 
-Tip: The *Refine* tab also includes options to resort or group data rows, change the chart size for different devices, and check visibility for colorblind readers.
+Tip: The *Refine* tab includes options to resort or group data rows, change the chart size for different devices, and check visibility for colorblind readers.
 
-9. After modifying your visualization, proceed to the *Publish and Embed* screen, and follow the prompts to share your work, or refer to the more detailed tutorial above.
+9. After modifying your visualization, proceed to the *Publish and Embed* screen, and follow the prompts to share your work, or refer to the previous detailed Datawrapper tutorial.
 
-Now that you've completed a range chart, let's create another new chart type, scatter and bubble charts, which are relatively easy to design in Datawrapper.
+Now that you've completed a range chart, let's see how we can use Datawrapper to build scatter and bubble charts to show relationships between two or more variables.
+
 
 ## - Scatter and Bubble Charts {- #scatter-bubble-datawrapper}
 Scatter charts (also known as scatter plots) are best to show the relationship between two datasets by displaying their XY coordinates as dots to reveal possible correlations. In the scatter chart example below, each dot represents a nation, with its life expectancy on the horizontal X axis and its fertility rate (births per woman) on the vertical Y axis. The overall dot pattern illustrates a correlation between these two datasets: life expectancy tends to increase as fertility decreases.

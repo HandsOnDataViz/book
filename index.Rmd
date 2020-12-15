@@ -93,7 +93,41 @@ If you're working on a laptop, consider buying or borrowing an external mouse th
 
 ### Chapter Outline {-}
 
-TODO
+The chapters in this book build up toward our central goal: telling true and meaningful stories with data.
+
+- [Chapter 1: Introduction](introduction.html) asks why data visualization matters, and shows how charts, maps, and words can draw us further into a story or deceive us from the truth.
+
+- [Chapter 2: Choose Tools to Tell Your Data Story](choose.html) helps you to navigate your way through the process of sketching out your story and selecting which visualization tools you need to tell it effectively.
+
+- [Chapter 3: Strengthen Your Spreadsheet Skills](spreadsheet.html) starts with basics and moves on to ways of organizing and analyzing data with pivot tables and lookup formulas, as well as geocoding add-on tools and collecting data with online forms.
+
+- [Chapter 4: Find and Question Your Data](find.html) offers concrete strategies for locating reliable information, while raising deeper questions about what data truly represents and whose interests it serves.
+
+- [Chapter 5: Clean Up Messy Data](clean.html) introduces ways to spot and fix inconsistencies and duplicates with spreadsheets and more advanced tools, and also how to extra tables from digital documents.
+
+- [Chapter 6: Make Meaningful Comparisons](comparisons.html) provides common-sense strategies to begin analyzing and normalizing your data, while watching out for biased methods.
+
+- [Chapter 7: Chart Your Data](chart.html) teaches how to create visualizations with easy-to-learn drag-and-drop tools, and which ones work best with different data stories.
+
+- [Chapter 8: Map Your Data](map.html) focuses on building different types of visualizations that include a spatial element, and the challenges of designing true and meaningful maps.
+
+- [Chapter 9: Table Your Data](table.html) explains how to create interactive tables that include thumbnail visualizations called sparklines.
+
+- [Chapter 10: Embed on the Web](embed.html) connects prior chapters by demonstrating how to copy and modify embed codes to publish your visualizations online and share your work with wider audiences.
+
+- [Chapter 11: Edit and Host Code with GitHub](github.html) walks through the web interface for this popular platform for modifying and sharing open-source visualization code templates.
+
+- [Chapter 12: Chart.js and Highcharts Templates](chartcode.html) brings together open-source code templates to create charts you can customize and host anywhere on the web.
+
+- [Chapter 13: Leaflet Map Templates](leaflet.html) gathers open-source code templates to build a wider variety of maps to communicate your data story.
+
+- [Chapter 14: Transform Your Map Data](transform.html) takes a deeper look into geospatial data and easy-to-learn tools to customize data for your maps.
+
+- [Chapter 15: Detect Lies and Reduce Bias](detect.html) explores how to lie with charts and maps, to teach you how to do a better job of telling the truth.
+
+- [Chapter 16: Tell and Show Your Data Story](story.html) brings together all of the prior chapters to emphasize how data visualization is not simply about numbers, but truthful narratives that persuade readers how and why your interpretation matters.
+
+- [Appendix: How to Fix Common Problems](fix.html) serves as a guide for when your visualization tool or code does not work, which is also a great way to learn how it works.
 
 ## Authors & Acknowledgements {- #authors}
 

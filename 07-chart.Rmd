@@ -11,24 +11,22 @@ Table: (\#tab:chart-types) Basic Chart Types, Best Uses, and Tutorials
 
 | Chart | Best use and tutorials in this book |
 | --- | --- |
-| Grouped bar or column chart<br> ![](images/07-chart/tablechart-grouped-column.png) | Best to compare categories side-by-side. If labels are long, use horizontal bars instead of vertical columns. <br>Easy tools: [Bar and Column Charts in Google Sheets tutorial](bar-column-google.html)<br>Power tool: [Ch 12: Chart.js and Highcharts templates](chartcode.html) |
-| Split bar or column chart<br> ![](images/07-chart/tablechart-split-column.png) | Best to compare categories in separate clusters.  If labels are long, use horizontal bars instead of vertical columns.<br>Easy tools: [Bar and Column Charts in Google Sheets tutorial](bar-column-google.html)<br>Power tool: [Ch 12: Chart.js and Highcharts templates](chartcode.html) |
-| Stacked bar or column chart<br> ![](images/07-chart/tablechart-stacked-column.png) | Best to compare sub-categories, or parts of a whole.  If labels are long, use horizontal bars instead of vertical columns.<br>Easy tools: [Bar and Column Charts in Google Sheets tutorial](bar-column-google.html)<br>Power tool: [Ch 12: Chart.js and Highcharts templates](chartcode.html) |
-| Error bars in bar or column chart<br> ![](images/07-chart/tablechart-error-column.png) | Best to show margin of error bars when comparing categories side-by-side. If labels are long, use horizontal bars instead of vertical columns.<br>Easy tool: [Limited error bars in Google Sheets](bar-column-google.html) <br>Power tool: [Ch 12: Chart.js and Highcharts templates](chartcode.html)  |
-| Histogram<br> ![](images/07-chart/tablechart-histogram.png) | Best to show distribution of raw data, with number of values in each bucket.<br>Easy tools: [Histogram Chart in Google Sheets tutorial](histogram-google.html)<br>Power tool: [Ch 12: Chart.js and Highcharts templates](chartcode.html) |
-| Pie chart<br> ![](images/07-chart/tablechart-pie.png) | Best to show parts of a whole, but hard to estimate size of slices.<br>Easy tools: [Pie Chart in Google Sheets tutorial](pie-line-area-google.html)<br>Power tool: [Ch 12: Chart.js and Highcharts templates](chartcode.html) |
-| Line chart<br> ![](images/07-chart/tablechart-line.png) | Best to show continuous data, such as change over time.<br>Easy tools: [Line Chart in Google Sheets tutorial](pie-line-area-google.html)<br>Power tool: [Ch 12: Chart.js and Highcharts templates](chartcode.html) |
+| Grouped bar or column chart<br> ![](images/07-chart/tablechart-grouped-column.png) | Best to compare categories side-by-side. If labels are long, use horizontal bars instead of vertical columns. <br>Easy tool: [Bar and Column Charts in Google Sheets tutorial](bar-column-google.html) or [Datawrapper Charts](chart-datawrapper.html)<br>Power tool: [Ch 12: Chart.js and Highcharts templates](chartcode.html) |
+| Split bar or column chart<br> ![](images/07-chart/tablechart-split-column.png) | Best to compare categories in separate clusters.  If labels are long, use horizontal bars instead of vertical columns.<br>Easy tool: [Bar and Column Charts in Google Sheets tutorial](bar-column-google.html) or [Datawrapper Charts](chart-datawrapper.html)<br>Power tool: [Ch 12: Chart.js and Highcharts templates](chartcode.html) |
+| Stacked bar or column chart<br> ![](images/07-chart/tablechart-stacked-column.png) | Best to compare sub-categories, or parts of a whole.  If labels are long, use horizontal bars instead of vertical columns.<br>Easy tool: [Bar and Column Charts in Google Sheets tutorial](bar-column-google.html) or [Datawrapper Charts](chart-datawrapper.html)<br>Power tool: [Ch 12: Chart.js and Highcharts templates](chartcode.html) |
+| Error bars in bar or column chart<br> ![](images/07-chart/tablechart-error-column.png) | Best to show margin of error bars when comparing categories side-by-side. If labels are long, use horizontal bars instead of vertical columns.<br>Easy tool: Google Sheets Charts has [limited support for error bars](bar-column-google.html) <br>Power tool: [Ch 12: Chart.js and Highcharts templates](chartcode.html)  |
+| Histogram<br> ![](images/07-chart/tablechart-histogram.png) | Best to show distribution of raw data, with number of values in each bucket.<br>Easy tool: [Histogram Chart in Google Sheets tutorial](histogram-google.html)<br>Power tool: [Ch 12: Chart.js and Highcharts templates](chartcode.html) |
+| Pie chart<br> ![](images/07-chart/tablechart-pie.png) | Best to show parts of a whole, but hard to estimate size of slices.<br>Easy tools: [Pie Chart in Google Sheets tutorial](pie-line-area-google.html) or [Datawrapper Charts](chart-datawrapper.html)<br>Power tool: [Ch 12: Chart.js and Highcharts templates](chartcode.html) |
+| Line chart<br> ![](images/07-chart/tablechart-line.png) | Best to show continuous data, such as change over time.<br>Easy tools: [Line Chart in Google Sheets tutorial](pie-line-area-google.html) or [Datawrapper Charts](chart-datawrapper.html)<br>Power tool: [Ch 12: Chart.js and Highcharts templates](chartcode.html) |
 | Annotated line chart<br> ![](images/07-chart/tablechart-annotated.png) | Best to add notes or highlight data inside a chart, such as historical context in a line chart.<br>Easy tools: [Annotated Chart in Datawrapper tutorial](annotated-datawrapper.html)<br>Power tool: [Ch 12: Chart.js and Highcharts templates](chartcode.html) |
 | Filtered line chart <br> ![](images/07-chart/tablechart-filtered-line.png) | Best to show multiple lines of continuous data, which users can toggle on and off. <br>Easy tool: [Filtered Line Chart in Tableau Public tutorial](filtered-line-tableau.html) |
-| Stacked area chart<br> ![](images/07-chart/tablechart-stacked-area.png) | Best to show parts of a whole, with continuous data such as change over time. <br>Easy tools: [Stacked Area Chart in Google Sheets tutorial](pie-line-area-google.html)<br>Power tool: TODO DECIDE |
-| Range chart<br> ![](images/07-chart/tablechart-range.png) | Best to show gaps between data points, such as inequalities.<br>Easy tools: [Range Chart in Datawrapper tutorial](annotated-datawrapper.html)<br>Power tool: TODO DECIDE |
+| Stacked area chart<br> ![](images/07-chart/tablechart-stacked-area.png) | Best to show parts of a whole, with continuous data such as change over time. <br>Easy tools: [Stacked Area Chart in Google Sheets tutorial](pie-line-area-google.html) or [Datawrapper Charts](chart-datawrapper.html)<br>Power tool: [Ch 12: Chart.js and Highcharts templates](chartcode.html) |
+| Range chart<br> ![](images/07-chart/tablechart-range.png) | Best to show gaps between data points, such as inequalities.<br>Easy tool and Power tool: [Range Chart in Datawrapper tutorial](range-datawrapper.html) |
 | Scatter chart <br> ![](images/07-chart/tablechart-scatter.png) | Best to show the relationship between two variables, with each dot representing its X and Y coordinates. <br>Easy tool: [Scatter and Bubble Chart in Datawrapper tutorial](scatter-bubble-datawrapper.html) or [Scatter Chart in Tableau Public tutorial](scatter-tableau.html). <br>Power tool: [Ch 12: Chart.js and Highcharts templates](chartcode.html) |
 | Bubble chart <br> ![](images/07-chart/tablechart-bubble.png) | Best to show the relationship between three or four sets of data, with XY coordinates, bubble size, and color.<br>Easy tool: [Scatter and Bubble Chart in Datawrapper tutorial](scatter-bubble-datawrapper.html)<br>Power tool: [Ch 12: Chart.js and Highcharts templates](chartcode.html) |
 | Sparklines<br> ![](images/07-chart/tablechart-sparklines.png) | Best to compare data trends with tiny line or bar charts, aligned in a table column.<br>Easy tool: [Ch 9: Interactive Table with Sparklines in Datawrapper tutorial](table-datawrapper.html) |
 
 Note: For a more extensive collection of chart types and use cases, see the [Financial Times Visual Vocabulary](https://ft.com/vocabulary).
-
-TODO above: ILYA improve and standardize chart images, improve colors, aspect ratio
 
 ## Chart Design Principles {- #chart-design}
 
@@ -258,7 +256,7 @@ A grouped bar or column chart is best to compare categories side-by-side. For ex
  knitr::include_graphics("images/07-chart/column-grouped-data.png")
 ```
 
-(ref:column-grouped) Grouped Column chart: Explore the [interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o4UR8OJXSxBWvUK531t5vYubt39gecV9yLIfic89DCeJnGNvpRttFfKzn/pubchart?oid=787918829&format=interactive). Data from [StateOfObesity.org](http://stateofobesity.org/files/stateofobesity2016.pdf).
+(ref:column-grouped) Grouped Column chart: Explore the [interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o4UR8OJXSxBWvUK531t5vYubt39gecV9yLIfic89DCeJnGNvpRttFfKzn/pubchart?oid=787918829&format=interactive). Data from [NHANES / State of Childhood Obesity, 2017-18](https://stateofchildhoodobesity.org/monitor/).
 
 ```{r column-grouped, fig.cap="(ref:column-grouped)"}
 if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o4UR8OJXSxBWvUK531t5vYubt39gecV9yLIfic89DCeJnGNvpRttFfKzn/pubchart?oid=787918829&amp;format=interactive") else knitr::include_graphics("images/07-chart/column-grouped.png")
@@ -286,7 +284,7 @@ Note: Another name for the 3-dot menu symbol is the "kebab menu" because it rese
 food cooked on a skewer, in contrast to the three-line "hamburger menu" on many mobile devices,
 as shown in Figure \@ref(fig:menu-hamburger-kebab). Software developers must be hungry.
 
-(ref:menu-hamburger-kebab) Distinguish between the hamburger verus kebab menu icons.
+(ref:menu-hamburger-kebab) Distinguish between the hamburger versus kebab menu icons.
 
 ```{r menu-hamburger-kebab, fig.cap="(ref:menu-hamburger-kebab)"}
 knitr::include_graphics("images/07-chart/menu-hamburger-kebab.png")

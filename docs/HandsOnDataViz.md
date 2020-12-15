@@ -6,7 +6,7 @@ Preface
 ![Book cover: Read about the [hoatzin “reptile
 bird”](https://en.wikipedia.org/wiki/Hoatzin)](images/0-preface/cover-400wide.jpg)
 
-**This BOOK-IN-PROGRESS was last updated on: 14 Dec 2020**.
+**This BOOK-IN-PROGRESS was last updated on: 15 Dec 2020**.
 
 Read the open-access web edition at
 <a href="https://HandsOnDataViz.org" class="uri">https://HandsOnDataViz.org</a>,
@@ -4626,31 +4626,31 @@ weight).
 <tbody>
 <tr class="odd">
 <td>Grouped bar or column chart<br> <img src="images/07-chart/tablechart-grouped-column.png" /></td>
-<td>Best to compare categories side-by-side. If labels are long, use horizontal bars instead of vertical columns. <br>Easy tools: <a href="bar-column-google.html">Bar and Column Charts in Google Sheets tutorial</a><br>Power tool: <a href="chartcode.html">Ch 12: Chart.js and Highcharts templates</a></td>
+<td>Best to compare categories side-by-side. If labels are long, use horizontal bars instead of vertical columns. <br>Easy tool: <a href="bar-column-google.html">Bar and Column Charts in Google Sheets tutorial</a> or <a href="chart-datawrapper.html">Datawrapper Charts</a><br>Power tool: <a href="chartcode.html">Ch 12: Chart.js and Highcharts templates</a></td>
 </tr>
 <tr class="even">
 <td>Split bar or column chart<br> <img src="images/07-chart/tablechart-split-column.png" /></td>
-<td>Best to compare categories in separate clusters. If labels are long, use horizontal bars instead of vertical columns.<br>Easy tools: <a href="bar-column-google.html">Bar and Column Charts in Google Sheets tutorial</a><br>Power tool: <a href="chartcode.html">Ch 12: Chart.js and Highcharts templates</a></td>
+<td>Best to compare categories in separate clusters. If labels are long, use horizontal bars instead of vertical columns.<br>Easy tool: <a href="bar-column-google.html">Bar and Column Charts in Google Sheets tutorial</a> or <a href="chart-datawrapper.html">Datawrapper Charts</a><br>Power tool: <a href="chartcode.html">Ch 12: Chart.js and Highcharts templates</a></td>
 </tr>
 <tr class="odd">
 <td>Stacked bar or column chart<br> <img src="images/07-chart/tablechart-stacked-column.png" /></td>
-<td>Best to compare sub-categories, or parts of a whole. If labels are long, use horizontal bars instead of vertical columns.<br>Easy tools: <a href="bar-column-google.html">Bar and Column Charts in Google Sheets tutorial</a><br>Power tool: <a href="chartcode.html">Ch 12: Chart.js and Highcharts templates</a></td>
+<td>Best to compare sub-categories, or parts of a whole. If labels are long, use horizontal bars instead of vertical columns.<br>Easy tool: <a href="bar-column-google.html">Bar and Column Charts in Google Sheets tutorial</a> or <a href="chart-datawrapper.html">Datawrapper Charts</a><br>Power tool: <a href="chartcode.html">Ch 12: Chart.js and Highcharts templates</a></td>
 </tr>
 <tr class="even">
 <td>Error bars in bar or column chart<br> <img src="images/07-chart/tablechart-error-column.png" /></td>
-<td>Best to show margin of error bars when comparing categories side-by-side. If labels are long, use horizontal bars instead of vertical columns.<br>Easy tool: <a href="bar-column-google.html">Limited error bars in Google Sheets</a> <br>Power tool: <a href="chartcode.html">Ch 12: Chart.js and Highcharts templates</a></td>
+<td>Best to show margin of error bars when comparing categories side-by-side. If labels are long, use horizontal bars instead of vertical columns.<br>Easy tool: Google Sheets Charts has <a href="bar-column-google.html">limited support for error bars</a> <br>Power tool: <a href="chartcode.html">Ch 12: Chart.js and Highcharts templates</a></td>
 </tr>
 <tr class="odd">
 <td>Histogram<br> <img src="images/07-chart/tablechart-histogram.png" /></td>
-<td>Best to show distribution of raw data, with number of values in each bucket.<br>Easy tools: <a href="histogram-google.html">Histogram Chart in Google Sheets tutorial</a><br>Power tool: <a href="chartcode.html">Ch 12: Chart.js and Highcharts templates</a></td>
+<td>Best to show distribution of raw data, with number of values in each bucket.<br>Easy tool: <a href="histogram-google.html">Histogram Chart in Google Sheets tutorial</a><br>Power tool: <a href="chartcode.html">Ch 12: Chart.js and Highcharts templates</a></td>
 </tr>
 <tr class="even">
 <td>Pie chart<br> <img src="images/07-chart/tablechart-pie.png" /></td>
-<td>Best to show parts of a whole, but hard to estimate size of slices.<br>Easy tools: <a href="pie-line-area-google.html">Pie Chart in Google Sheets tutorial</a><br>Power tool: <a href="chartcode.html">Ch 12: Chart.js and Highcharts templates</a></td>
+<td>Best to show parts of a whole, but hard to estimate size of slices.<br>Easy tools: <a href="pie-line-area-google.html">Pie Chart in Google Sheets tutorial</a> or <a href="chart-datawrapper.html">Datawrapper Charts</a><br>Power tool: <a href="chartcode.html">Ch 12: Chart.js and Highcharts templates</a></td>
 </tr>
 <tr class="odd">
 <td>Line chart<br> <img src="images/07-chart/tablechart-line.png" /></td>
-<td>Best to show continuous data, such as change over time.<br>Easy tools: <a href="pie-line-area-google.html">Line Chart in Google Sheets tutorial</a><br>Power tool: <a href="chartcode.html">Ch 12: Chart.js and Highcharts templates</a></td>
+<td>Best to show continuous data, such as change over time.<br>Easy tools: <a href="pie-line-area-google.html">Line Chart in Google Sheets tutorial</a> or <a href="chart-datawrapper.html">Datawrapper Charts</a><br>Power tool: <a href="chartcode.html">Ch 12: Chart.js and Highcharts templates</a></td>
 </tr>
 <tr class="even">
 <td>Annotated line chart<br> <img src="images/07-chart/tablechart-annotated.png" /></td>
@@ -4662,11 +4662,11 @@ weight).
 </tr>
 <tr class="even">
 <td>Stacked area chart<br> <img src="images/07-chart/tablechart-stacked-area.png" /></td>
-<td>Best to show parts of a whole, with continuous data such as change over time. <br>Easy tools: <a href="pie-line-area-google.html">Stacked Area Chart in Google Sheets tutorial</a><br>Power tool: TODO DECIDE</td>
+<td>Best to show parts of a whole, with continuous data such as change over time. <br>Easy tools: <a href="pie-line-area-google.html">Stacked Area Chart in Google Sheets tutorial</a> or <a href="chart-datawrapper.html">Datawrapper Charts</a><br>Power tool: <a href="chartcode.html">Ch 12: Chart.js and Highcharts templates</a></td>
 </tr>
 <tr class="odd">
 <td>Range chart<br> <img src="images/07-chart/tablechart-range.png" /></td>
-<td>Best to show gaps between data points, such as inequalities.<br>Easy tools: <a href="annotated-datawrapper.html">Range Chart in Datawrapper tutorial</a><br>Power tool: TODO DECIDE</td>
+<td>Best to show gaps between data points, such as inequalities.<br>Easy tool and Power tool: <a href="range-datawrapper.html">Range Chart in Datawrapper tutorial</a></td>
 </tr>
 <tr class="even">
 <td>Scatter chart <br> <img src="images/07-chart/tablechart-scatter.png" /></td>
@@ -4685,9 +4685,6 @@ weight).
 
 Note: For a more extensive collection of chart types and use cases, see
 the [Financial Times Visual Vocabulary](https://ft.com/vocabulary).
-
-TODO above: ILYA improve and standardize chart images, improve colors,
-aspect ratio
 
 Chart Design Principles
 -----------------------
@@ -5103,12 +5100,12 @@ Figure 7.12: To create a grouped bar or column chart, format each data
 series vertically in Google Sheets.
 </p>
 
-<img src="images/07-chart/column-grouped.png" alt="Grouped Column chart: Explore the [interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o4UR8OJXSxBWvUK531t5vYubt39gecV9yLIfic89DCeJnGNvpRttFfKzn/pubchart?oid=787918829&format=interactive). Data from [StateOfObesity.org](http://stateofobesity.org/files/stateofobesity2016.pdf)."  />
+<img src="images/07-chart/column-grouped.png" alt="Grouped Column chart: Explore the [interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o4UR8OJXSxBWvUK531t5vYubt39gecV9yLIfic89DCeJnGNvpRttFfKzn/pubchart?oid=787918829&format=interactive). Data from [NHANES / State of Childhood Obesity, 2017-18](https://stateofchildhoodobesity.org/monitor/)."  />
 <p class="caption">
 Figure 7.13: Grouped Column chart: Explore the [interactive
 version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o4UR8OJXSxBWvUK531t5vYubt39gecV9yLIfic89DCeJnGNvpRttFfKzn/pubchart?oid=787918829&format=interactive).
-Data from
-[StateOfObesity.org](http://stateofobesity.org/files/stateofobesity2016.pdf).
+Data from [NHANES / State of Childhood Obesity,
+2017-18](https://stateofchildhoodobesity.org/monitor/).
 </p>
 
 To create your own interactive grouped column (or bar) chart, use our
@@ -5143,9 +5140,9 @@ three-line “hamburger menu” on many mobile devices, as shown in Figure
 <a href="#fig:menu-hamburger-kebab">7.16</a>. Software developers must
 be hungry.
 
-<img src="images/07-chart/menu-hamburger-kebab.png" alt="Distinguish between the hamburger verus kebab menu icons."  />
+<img src="images/07-chart/menu-hamburger-kebab.png" alt="Distinguish between the hamburger versus kebab menu icons."  />
 <p class="caption">
-Figure 7.16: Distinguish between the hamburger verus kebab menu icons.
+Figure 7.16: Distinguish between the hamburger versus kebab menu icons.
 </p>
 
 1.  Format your data to make each column a data series (such as male and

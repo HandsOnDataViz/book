@@ -6,7 +6,7 @@ Preface
 ![Book cover: Read about the [hoatzin “reptile
 bird”](https://en.wikipedia.org/wiki/Hoatzin)](images/0-preface/cover-400wide.jpg)
 
-**This BOOK-IN-PROGRESS was last updated on: 11 Dec 2020**.
+**This BOOK-IN-PROGRESS was last updated on: 14 Dec 2020**.
 
 Read the open-access web edition at
 <a href="https://HandsOnDataViz.org" class="uri">https://HandsOnDataViz.org</a>,
@@ -66,7 +66,7 @@ application, this book introduces you to over twenty different
 visualization tools, all of them free and easy-to-learn. We also offer
 guiding principles on how to make wise choices among digital tools as
 they continue to evolve in the future. By working through the sample
-datasets and tutorials, readers will create more than a dozen different
+datasets and tutorials, you will create more than a dozen different
 interactive charts, maps, and tables, and share these data stories with
 other readers on the public web.
 
@@ -85,15 +85,18 @@ who reads this book will discover something new and valuable.
 
 ### Advice for Hands-On Learning
 
-Learn by following the step-by-step tutorials on a laptop or desktop
-computer with an internet connection. We recommend any computer running
-either the Macintosh or Windows operating system, with a modern web
-browser such as Chrome, Firefox, Safari, or Edge. Another good option is
-a Chromebook or Linux computer, which allows you to complete *most* of
-the tutorials in this book, and we’ll point out any limitations in
-specific chapters. While it may be possible to complete some tutorials
-on a tablet or smartphone device, we do not recommend it because you
-cannot follow all of the steps.
+Learn by following our step-by-step tutorials on a laptop or desktop
+computer with an internet connection. Most of the tools introduced in
+the book are web-based, and we recommend you use an up-to-date version
+of Firefox, Chrome, Safari, or Edge browsers. We advise against using
+Internet Explorer as this older browser is no longer correctly supported
+by many web services. A Mac or a Windows computer will allow you to
+complete all tutorials, but if you use a Chromebook or Linux computer,
+you still should be able to complete most of them, and we’ll point out
+any limitations in specific sections. While it may be possible to
+complete some tutorials on a tablet or smartphone device, we do not
+recommend it because these smaller devices will prevent you from
+completing several key steps.
 
 If you’re working on a laptop, consider buying or borrowing an external
 mouse that plugs into your computer. We’ve met several people who find
@@ -162,29 +165,33 @@ College.
 
 We thank many individuals and organizations who helped us to learn many
 of the skills that we teach in this book, especially Alvin Chang and
-Andrew Ba Tran, who previously were data journalists at *The Connecticut
-Mirror*; and Michael Howser, Steve Batt, and their colleagues at the
+Andrew Ba Tran, who were previously data journalists at *The Connecticut
+Mirror*; Michael Howser, Steve Batt, and their colleagues at the
 University of Connecticut Libraries Map and Geographic Information
-Center (MAGIC). Also, thanks to everyone who inspired us to be
+Center (MAGIC); and Jean-Pierre Haeberly, Director of Web Development at
+Trinity College; Also, thank you to everyone who inspired Jack to be
 *code-curious* at The Humanities and Technology Camp (THATCamp) events,
 sponsored by the Roy Rosenzweig Center for History and New Media at
-George Mason University, and engaged us with civic technology for the
-public good at Transparency Camp events sponsored by the Sunlight
-Foundation. We also appreciated opportunities to share our
-work-in-progress at data workshops hosted by Scott Gaul and Doug
+George Mason University, and encouraged him and his students to explore
+civic technology for the public good at the Transparency Camp sponsored
+by the Sunlight Foundation. We also appreciated opportunities to share
+our work-in-progress at data workshops hosted by Scott Gaul and Doug
 Shipman, formerly at the Hartford Foundation for Public Giving, and
 Michelle Riordan-Nold at the Connecticut Data Collaborative.
 
 Guided by feedback from readers, educators, and our editors, we rewrote
 the entire draft in 2020 to reorganize the structure, deepen the
 concepts, and enhance the tutorials. We thank everyone at O’Reilly Media
-who worked with us to bring you this finish produced, especially our
-outstanding developmental editor, Amelia Blevins, and other members of
-her team: Nick Adams, Jonathan Hassel, Andy Kwan, and Katie Tozer. We
-also appreciate O’Reilly’s support for three technical reviewers who
-provided excellent feedback on the manuscript: Carl Allchin, Derek Eder,
-and Erica Hayes. Thanks also to readers whose comments helped us to
-improve the text: Gared Bard and Nick Klagge.
+who worked with us to bring you this finish product, especially our
+outstanding developmental editor, Amelia Blevins, and members of her
+team: Nick Adams, Jonathan Hassel, Andy Kwan, and Katie Tozer. We also
+appreciate O’Reilly’s support for three technical reviewers who provided
+excellent commentary that helped us to improve the manuscript: Carl
+Allchin, Derek Eder, and Erica Hayes. Thanks also to readers who shared
+kindly shared feedback on the draft text or code templates: Jen
+Andrella, Gared Bard, Alberto Cairo, Fionnuala Darby-Hudgens, Nick
+Klagge, Elizabeth Rose, Lisa Charlotte Rost, Xavier Ruiz, Laura
+Tateosian, Elizabeth von Briesen, and Colleen Wheeler.
 
 <!--chapter:end:index.Rmd-->
 
@@ -936,7 +943,7 @@ his first recommendation was: “The best possible tool is the one you’re
 already using to get work done.” Don’t fall into the familiar trap of
 believing that your productivity will increase if only you began to use
 yet another new tool. Mullen’s second piece of advice was: “Prefer the
-tool that your local co-workers use.” Even if different tool is
+tool that your local co-workers use.” Even if a different tool is
 objectively better, it may be outweighed by the benefits of mutual
 support and collaboration with people using a less-awesome application
 in your local setting.[5]
@@ -2608,11 +2615,12 @@ Hartford, Connecticut:
 -   Census blocks (sub-unit of block groups, but not always a city
     block)
 
-<img src="images/04-find/census-divisions-hartford.png" alt="Common US census geographies around Hartford, Connecticut, 2019. Explore the [interactive map](https://handsondataviz.github.io/census-divisions-hartford/)."  />
+<img src="images/04-find/census-divisions-hartford.png" alt="Common US census geographies around Hartford, Connecticut, 2019. Zoom out in the [interactive version](https://handsondataviz.github.io/census-divisions-hartford/) for county and state boundaries."  />
 <p class="caption">
 Figure 4.2: Common US census geographies around Hartford, Connecticut,
-2019. Explore the [interactive
-map](https://handsondataviz.github.io/census-divisions-hartford/).
+2019. Zoom out in the [interactive
+version](https://handsondataviz.github.io/census-divisions-hartford/)
+for county and state boundaries.
 </p>
 
 *Have prior publications drawn on similar data, and if so, how can we
@@ -2623,8 +2631,8 @@ described its source of evidence, and we imagined new ways to visualize
 that data. Several times we have stumbled across a data table in a print
 publication, or perhaps an old web page, which sparked our interest in
 tracking down a newer version to explore. Even *outdated* data helps by
-demonstrating how someone or some organization collected it at one point
-in time. Follow the footnotes to track down its origins. Use [Google
+demonstrating how someone previously collected it at one point in time.
+Follow the footnotes to track down its origins. Use [Google
 Scholar](https://google.com/scholar) and more specialized research
 databases (ask librarians for assistance if needed) to track down the
 source of previously-published data. One bonus is that if you can locate
@@ -2651,12 +2659,12 @@ collection in the US healthcare system. Journalists reported that “there
 was still no national system for tracking complications sustained in
 pregnancy and childbirth,” despite comparable systems for other health
 issues such as heart attacks or hip replacements. Power structures are
-designed to count people whose lives either are highly valued, or under
-a high degree of surveillance. D’Ignazio and Klein call on us critically
+designed to count people whose lives are highly valued, or under a high
+degree of surveillance. D’Ignazio and Klein call on us to critically
 examine these power systems, collect data to counter their effects, and
 make everyone’s labor in this process more visible.[9] If no one has
 collected the data you’re looking for, perhaps you can make valuable
-steps to publicly recognize the issue and contribute to positive change.
+steps to publicly recognize the issue, and possibly gather it yourself.
 
 Hunting for data involves much more than googling keywords. Deepen your
 search by reflecting on the types of questions that librarians,
@@ -3371,13 +3379,17 @@ But can you spot these other errors that Smart Cleanup missed?
 -   In cell A10, *Russsia* is misspelled with an extra *s*.
 -   In cell C6, Pakistan’s share of the world population appears in
     decimal form, not percentage.
--   In cell D4, the US date appears in MM/DD/YYYY format, not like the
-    other entries.
+-   In cell D4, the US date appears in a format unlike the other
+    entries. If you’re familiar with different international date
+    formats, you’ll also wonder if `12/10/2020` is meant to be
+    MM/DD/YYYY format that’s commonly used in the US, or the DD/MM/YYYY
+    format that’s commonly used elsewhere. Smart Cleanup cannot answer
+    this for you.
 
 The Google Sheets Smart Cleanup feature is a good place to start. But if
 your data is really messy, you may need to turn to more sophisticated
-tools described later in this chapter, such as [Open
-Refine](open-refine.html). In the next section you’ll learn another
+tools described later in this chapter, such as
+[OpenRefine](open-refine.html). In the next section you’ll learn another
 clean-up method that works in any spreadsheet: find and replace with a
 blank entry.
 
@@ -3705,24 +3717,30 @@ Tabula](https://tabula.technology/). You can use download buttons on the
 left-hand side, or scroll down to the *Download & Install Tabula*
 section to download a copy for your platform. Unlike most other
 programs, Tabula does not require installation. Just unzip the
-downloaded archive, and double-click the icon. If you work on a Mac, you
-may see a warning that states, “Tabula is an app downloaded from the
-internet. Are you sure you want to open it?” If so, click *Open*. Or you
-may have to go to *System Preferences &gt; Security & Privacy &gt;
-General tab*, and click the *Open Anyway* button in the lower half of
-the window to open the app the first time.
+downloaded archive, and double-click the icon.
+
+On a Mac, you may see this warning when launching Tabula for the first
+time: “Tabula is an app downloaded from the internet. Are you sure you
+want to open it?” If so, click *Open*, as shown in Figure
+<a href="#fig:tabula-mac-alert">5.8</a>.
+
+<img src="images/05-clean/tabula-mac-alert.png" alt="Mac users may need to confirm that they wish to open Tabula the first time." width="350" />
+<p class="caption">
+Figure 5.8: Mac users may need to confirm that they wish to open Tabula
+the first time.
+</p>
 
 When you start up Tabula, it opens your default browser as a localhost
 with a URL similar to `http://127.0.0.1/`, with or without an additional
 port number such as with `:8080`, as shown in Figure
-<a href="#fig:tabula-welcome">5.8</a>. Tabula runs on your local
+<a href="#fig:tabula-welcome">5.9</a>. Tabula runs on your local
 computer, not the internet. If your default browser (such as Safari or
 Edge) does not play nicely with Tabula, you can copy-and-paste the URL
 into a different browser (such as Firefox or Chrome).
 
 <img src="images/05-clean/tabula-welcome.png" alt="Tabula welcome page."  />
 <p class="caption">
-Figure 5.8: Tabula welcome page.
+Figure 5.9: Tabula welcome page.
 </p>
 
 Now let’s upload a sample text-based PDF and detect any tables we wish
@@ -3743,11 +3761,11 @@ provide your own.
 
 4.  Click the *Autodetect Tables* button to let Tabula look for relevant
     data. The tool highlights each table it detects in red, as shown in
-    Figure <a href="#fig:tabula-autodetect">5.9</a>.
+    Figure <a href="#fig:tabula-autodetect">5.10</a>.
 
 <img src="images/05-clean/tabula-autodetect.png" alt="Click *Autodetect Tables*, which Tabula will highlight in red."  />
 <p class="caption">
-Figure 5.9: Click *Autodetect Tables*, which Tabula will highlight in
+Figure 5.10: Click *Autodetect Tables*, which Tabula will highlight in
 red.
 </p>
 
@@ -3791,7 +3809,7 @@ Clean Data with OpenRefine
 
 Open the [US Foreign Aid sample dataset in Google Sheets
 format](https://docs.google.com/spreadsheets/d/19BilYJxd0fgi7MTAa2y9NUF65Xqf2_y_dVr1jPbmWeg/edit#gid=1983762503)
-as shown in Figure <a href="#fig:openrefine-dataset">5.10</a>. Can you
+as shown in Figure <a href="#fig:openrefine-dataset">5.11</a>. Can you
 spot any problems with it? This data excerpt is from [US Overseas Loans
 and Grants (Greenbook)
 dataset](https://catalog.data.gov/dataset/u-s-overseas-loans-and-grants-greenbook),
@@ -3803,7 +3821,7 @@ values.
 
 <img src="images/05-clean/openrefine-dataset.png" alt="Can you spot any problems with this sample data?" width="600" />
 <p class="caption">
-Figure 5.10: Can you spot any problems with this sample data?
+Figure 5.11: Can you spot any problems with this sample data?
 </p>
 
 Notice how the *Country* column various spellings of North and South
@@ -3820,35 +3838,36 @@ Let’s use OpenRefine to clean up this messy data. Download
 Linux. Just like Tabula, it runs in your browser and no data leaves your
 local machine, which is great for confidentiality.
 
-If you use Windows, unzip the downloaded file. Double-click the .exe
-file, and OpenRefine should open in your default browser.
+To launch OpenRefine in Windows, unzip the downloaded file, double-click
+the *.exe* file, and the tool should open in your default browser.
 
-If you work on a Mac, the downloaded file will be a .dmg file to be
-installed. But you will likely see a security warning that prevents
-OpenRefine from launching because Apple cannot identify the developer
-for this open-source project. To resolve the problem, go to *System
-Preferences &gt; Security and Privacy &gt; General tab*, and click the
-*Open Anyway* button in the lower half of the window, as shown in Figure
-<a href="#fig:openrefine-mac-alert-combined">5.11</a>. If prompted with
-another window, click *Open*.
+To launch OpenRefine on a Mac, double-click the downloaded *.dmg* file
+to install it. You will likely see a security warning that prevents
+OpenRefine from automatically launching because Apple does not recognize
+the developer for this open-source project. To resolve the problem, go
+to *System Preferences &gt; Security and Privacy &gt; General tab*, and
+click the *Open Anyway* button in the lower half of the window, as shown
+in Figure <a href="#fig:openrefine-mac-alert-combined">5.12</a>. If
+prompted with another window, click *Open*.
 
-<img src="images/05-clean/openrefine-mac-alert-combined.png" alt="If your Mac displays a warning about launching Open Refine (on left), go to *System Preferences - Security and Privacy - General tab* and click *Open Anyways* (on right)."  />
+<img src="images/05-clean/openrefine-mac-alert-combined.png" alt="If your Mac displays a warning about launching OpenRefine (on left), go to *System Preferences - Security and Privacy - General tab* and click *Open Anyways* (on right)."  />
 <p class="caption">
-Figure 5.11: If your Mac displays a warning about launching Open Refine
+Figure 5.12: If your Mac displays a warning about launching OpenRefine
 (on left), go to *System Preferences - Security and Privacy - General
 tab* and click *Open Anyways* (on right).
 </p>
 
 When you start up OpenRefine, it will open your default browser with the
-localhost `127.0.0.1` address, with or without the port `:3333`, as
-shown in Figure <a href="#fig:openrefine-welcome">5.12</a>. If your
-regular browser (such as Safari) does not behave nicely with OpenRefine,
-copy and paste the localhost address into a different browser (such as
-Firefox or Chrome).
+localhost `127.0.0.1` address, with or without the additional port
+number `:3333`, as shown in Figure
+<a href="#fig:openrefine-welcome">5.13</a>. If your regular browser
+(such as Safari) does not behave nicely with OpenRefine, copy and paste
+the localhost address into a different browser (such as Firefox or
+Chrome).
 
-<img src="images/05-clean/openrefine-welcome.png" alt="OpenRefine starting page." width="500" />
+<img src="images/05-clean/openrefine-welcome.png" alt="The OpenRefine welcome page." width="500" />
 <p class="caption">
-Figure 5.12: OpenRefine starting page.
+Figure 5.13: The OpenRefine welcome page.
 </p>
 
 ### Load Data and Start a New Project
@@ -3872,12 +3891,12 @@ of this book.
     the data is split into columns. Make sure OpenRefine assigned values
     to the right columns, or change setting in *Parse data as* block at
     the bottom of the page until it starts looking meaningful, as shown
-    in Figure <a href="#fig:openrefine-parse">5.13</a>. Then press
+    in Figure <a href="#fig:openrefine-parse">5.14</a>. Then press
     *Create Project* in the upper-right corner.
 
 <img src="images/05-clean/openrefine-parse.png" alt="OpenRefine parsing options."  />
 <p class="caption">
-Figure 5.13: OpenRefine parsing options.
+Figure 5.14: OpenRefine parsing options.
 </p>
 
 Now when you’ve successfully read the data into a new project, let’s
@@ -3897,11 +3916,11 @@ they need to be transformed into numeric format.
 
 1.  To transform text into numbers, select the *FundingAmount* column
     menu, and go to *Edit cells &gt; Common transforms &gt; To number*,
-    as shown in Figure <a href="#fig:openrefine-edit-common">5.14</a>.
+    as shown in Figure <a href="#fig:openrefine-edit-common">5.15</a>.
 
 <img src="images/05-clean/openrefine-edit-common.png" alt="In the *FundingAmount* column menu, select *Edit cells - Common transforms - To number*." width="450" />
 <p class="caption">
-Figure 5.14: In the *FundingAmount* column menu, select *Edit cells -
+Figure 5.15: In the *FundingAmount* column menu, select *Edit cells -
 Common transforms - To number*.
 </p>
 
@@ -3915,12 +3934,12 @@ converted into numbers.
     we need to manually enter the edit we wish to make. In the
     Expression window, type `value.replace(',', '')` and notice how
     commas disappear in the preview window, as shown in Figure
-    <a href="#fig:openrefine-edit-expression">5.15</a>. When you confirm
+    <a href="#fig:openrefine-edit-expression">5.16</a>. When you confirm
     your formula has no syntax errors, click *OK*
 
 <img src="images/05-clean/openrefine-edit-expression.png" alt="Type the expression into the screen, preview the change, and confirm that there are no syntax errors."  />
 <p class="caption">
-Figure 5.15: Type the expression into the screen, preview the change,
+Figure 5.16: Type the expression into the screen, preview the change,
 and confirm that there are no syntax errors.
 </p>
 
@@ -3940,11 +3959,11 @@ and confirm that there are no syntax errors.
     manually by hovering over a cell, click the *Edit* button, and in
     the new popup window, change *Data type* to *number*, and press
     *Apply*, as shown in Figure
-    <a href="#fig:openrefine-manual-edit">5.16</a>.
+    <a href="#fig:openrefine-manual-edit">5.17</a>.
 
 <img src="images/05-clean/openrefine-manual-edit-combined.png" alt="Manually edit to remove spaces and extra characters, and change data type to number." width="550" />
 <p class="caption">
-Figure 5.16: Manually edit to remove spaces and extra characters, and
+Figure 5.17: Manually edit to remove spaces and extra characters, and
 change data type to number.
 </p>
 
@@ -3970,11 +3989,11 @@ distinct values, North Korea and South Korea!
 1.  To begin standardizing spellings, click on the arrow-down button of
     the *Country* column header, and choose *Edit cells &gt; Cluster and
     edit*. You will see a window like the one shown in Figure
-    <a href="#fig:openrefine-cluster">5.17</a>.
+    <a href="#fig:openrefine-cluster">5.18</a>.
 
 <img src="images/05-clean/openrefine-cluster-annotated.png" alt="Cluster similar text values."  />
 <p class="caption">
-Figure 5.17: Cluster similar text values.
+Figure 5.18: Cluster similar text values.
 </p>
 
 You will have a choice of two clustering methods, *key collision* or
@@ -3993,7 +4012,7 @@ column contains grouped spellings that OpenRefine considers the same.
 
 1.  If you agree with a grouping, check the *Merge?* box, and assign the
     *true* value to the *New Cell Value* input box, as shown in the
-    first cluster in Figure <a href="#fig:openrefine-cluster">5.17</a>.
+    first cluster in Figure <a href="#fig:openrefine-cluster">5.18</a>.
     In our example, this would be either `North Korea` or `South Korea`.
 
 2.  You can go through all groupings, or stop after one or two and click
@@ -4443,12 +4462,12 @@ but actually include partially-hidden factors that skew the results.
 While we may believe we’re operating with open minds, we might overlook
 methods that effectively cherry-pick our evidence without our knowledge.
 
-One type to avoid is *selection bias*, which means that the sample
-chosen for your study differs systematically from the larger population.
-“What you see depends on where you look,” cautions professors Carol
-Bergstrom and Jevin West, authors of a book with an unforgettable title,
-*Calling Bullshit*.[24] If you randomly measured the height of people
-who happened to be leaving the gym after basketball practice, your
+First, look out for *selection bias*, which means that the sample chosen
+for your study differs systematically from the larger population. “What
+you see depends on where you look,” cautions professors Carl Bergstrom
+and Jevin West, authors of a book with an unforgettable title, *Calling
+Bullshit*.[24] If you randomly measured the height of people who
+happened to be leaving the gym after basketball practice, your
 artificially taller results would be due to selection bias, as shown in
 Figure <a href="#fig:selection-bias">6.2</a>.
 
@@ -4459,10 +4478,10 @@ to be leaving the gym after basketball practice, your artificially
 taller results would be due to selection bias.
 </p>
 
-A second type to avoid is *non-response bias*. If you send a survey to a
-broad population, but not everyone responds, you need to be aware that
-those who chose to participate may possess certain qualities that make
-them less representative of the whole population. For example, US Census
+Second, beware of *non-response bias*. If you send a survey to a broad
+population, but not everyone responds, you need to be aware that those
+who chose to participate may possess certain qualities that make them
+less representative of the whole population. For example, US Census
 researchers discovered that the non-response rate for lower-income
 people was significantly higher than usual for the 2020 Current
 Population Survey supplement, which they determined by comparing
@@ -4474,7 +4493,7 @@ that visualizes self-response rates by states, counties, and tracts. If
 you conduct a survey that does not correct for non-response bias, you
 may have biased results.
 
-A third type to avoid is *self-selection bias*, which often arises when
+Third, watch out for *self-selection bias*, which often arises when
 attempting to evaluate the effectiveness of a particular program or
 treatment where people applied or volunteered to participate, as shown
 in Figure <a href="#fig:self-selection-bias">6.3</a>. If your job is to
@@ -4514,12 +4533,12 @@ to participate into sub-groups, to better compare program effectiveness
 among people with similar motivations and other hard-to-see
 characteristics.
 
-<img src="images/06-comparisons/self-selection-bias.png" alt="Do not compare program non-participants (A) versus those who apply or volunteer to participate (B). Instead, randomly split all participants into two sub-groups (C and D) to compare program effectiveness." width="700" />
+<img src="images/06-comparisons/self-selection-bias.png" alt="To evaluate program effectiveness, do not compare program non-participants (A) versus those who apply or volunteer to participate (B). Instead, randomly split all participants into two sub-groups (C and D)." width="700" />
 <p class="caption">
-Figure 6.3: Do not compare program non-participants (A) versus those who
-apply or volunteer to participate (B). Instead, randomly split all
-participants into two sub-groups (C and D) to compare program
-effectiveness.
+Figure 6.3: To evaluate program effectiveness, do not compare program
+non-participants (A) versus those who apply or volunteer to participate
+(B). Instead, randomly split all participants into two sub-groups (C and
+D).
 </p>
 
 Bias warnings appear in several chapters of this book, because we
@@ -4606,59 +4625,59 @@ weight).
 </thead>
 <tbody>
 <tr class="odd">
-<td>Grouped bar or column chart<br> <img src="images/07-chart/chart-grouped-column.png" /></td>
+<td>Grouped bar or column chart<br> <img src="images/07-chart/tablechart-grouped-column.png" /></td>
 <td>Best to compare categories side-by-side. If labels are long, use horizontal bars instead of vertical columns. <br>Easy tools: <a href="bar-column-google.html">Bar and Column Charts in Google Sheets tutorial</a><br>Power tool: <a href="chartcode.html">Ch 12: Chart.js and Highcharts templates</a></td>
 </tr>
 <tr class="even">
-<td>Split bar or column chart<br> <img src="images/07-chart/chart-split-column.png" /></td>
+<td>Split bar or column chart<br> <img src="images/07-chart/tablechart-split-column.png" /></td>
 <td>Best to compare categories in separate clusters. If labels are long, use horizontal bars instead of vertical columns.<br>Easy tools: <a href="bar-column-google.html">Bar and Column Charts in Google Sheets tutorial</a><br>Power tool: <a href="chartcode.html">Ch 12: Chart.js and Highcharts templates</a></td>
 </tr>
 <tr class="odd">
-<td>Stacked bar or column chart<br> <img src="images/07-chart/chart-stacked-column.png" /></td>
+<td>Stacked bar or column chart<br> <img src="images/07-chart/tablechart-stacked-column.png" /></td>
 <td>Best to compare sub-categories, or parts of a whole. If labels are long, use horizontal bars instead of vertical columns.<br>Easy tools: <a href="bar-column-google.html">Bar and Column Charts in Google Sheets tutorial</a><br>Power tool: <a href="chartcode.html">Ch 12: Chart.js and Highcharts templates</a></td>
 </tr>
 <tr class="even">
-<td>Error bars in bar or column chart<br> <img src="images/07-chart/chart-error-column.png" /></td>
-<td>Best to show margin of error bars when comparing categories side-by-side. If labels are long, use horizontal bars instead of vertical columns.<br>Easy tool: TODO DECIDE <br>Power tool: <a href="chartcode.html">Ch 12: Chart.js and Highcharts templates</a></td>
+<td>Error bars in bar or column chart<br> <img src="images/07-chart/tablechart-error-column.png" /></td>
+<td>Best to show margin of error bars when comparing categories side-by-side. If labels are long, use horizontal bars instead of vertical columns.<br>Easy tool: <a href="bar-column-google.html">Limited error bars in Google Sheets</a> <br>Power tool: <a href="chartcode.html">Ch 12: Chart.js and Highcharts templates</a></td>
 </tr>
 <tr class="odd">
-<td>Histogram<br> <img src="images/07-chart/chart-histogram.png" /></td>
+<td>Histogram<br> <img src="images/07-chart/tablechart-histogram.png" /></td>
 <td>Best to show distribution of raw data, with number of values in each bucket.<br>Easy tools: <a href="histogram-google.html">Histogram Chart in Google Sheets tutorial</a><br>Power tool: <a href="chartcode.html">Ch 12: Chart.js and Highcharts templates</a></td>
 </tr>
 <tr class="even">
-<td>Pie chart<br> <img src="images/07-chart/chart-pie.png" /></td>
+<td>Pie chart<br> <img src="images/07-chart/tablechart-pie.png" /></td>
 <td>Best to show parts of a whole, but hard to estimate size of slices.<br>Easy tools: <a href="pie-line-area-google.html">Pie Chart in Google Sheets tutorial</a><br>Power tool: <a href="chartcode.html">Ch 12: Chart.js and Highcharts templates</a></td>
 </tr>
 <tr class="odd">
-<td>Line chart<br> <img src="images/07-chart/chart-line.png" /></td>
+<td>Line chart<br> <img src="images/07-chart/tablechart-line.png" /></td>
 <td>Best to show continuous data, such as change over time.<br>Easy tools: <a href="pie-line-area-google.html">Line Chart in Google Sheets tutorial</a><br>Power tool: <a href="chartcode.html">Ch 12: Chart.js and Highcharts templates</a></td>
 </tr>
 <tr class="even">
-<td>Annotated line chart<br> <img src="images/07-chart/chart-annotated.png" /></td>
+<td>Annotated line chart<br> <img src="images/07-chart/tablechart-annotated.png" /></td>
 <td>Best to add notes or highlight data inside a chart, such as historical context in a line chart.<br>Easy tools: <a href="annotated-datawrapper.html">Annotated Chart in Datawrapper tutorial</a><br>Power tool: <a href="chartcode.html">Ch 12: Chart.js and Highcharts templates</a></td>
 </tr>
 <tr class="odd">
-<td>Filtered line chart <br> <img src="images/07-chart/chart-filtered-line.png" /></td>
+<td>Filtered line chart <br> <img src="images/07-chart/tablechart-filtered-line.png" /></td>
 <td>Best to show multiple lines of continuous data, which users can toggle on and off. <br>Easy tool: <a href="filtered-line-tableau.html">Filtered Line Chart in Tableau Public tutorial</a></td>
 </tr>
 <tr class="even">
-<td>Stacked area chart<br> <img src="images/07-chart/chart-stacked-area.png" /></td>
+<td>Stacked area chart<br> <img src="images/07-chart/tablechart-stacked-area.png" /></td>
 <td>Best to show parts of a whole, with continuous data such as change over time. <br>Easy tools: <a href="pie-line-area-google.html">Stacked Area Chart in Google Sheets tutorial</a><br>Power tool: TODO DECIDE</td>
 </tr>
 <tr class="odd">
-<td>Range chart<br> <img src="images/07-chart/chart-range.png" /></td>
+<td>Range chart<br> <img src="images/07-chart/tablechart-range.png" /></td>
 <td>Best to show gaps between data points, such as inequalities.<br>Easy tools: <a href="annotated-datawrapper.html">Range Chart in Datawrapper tutorial</a><br>Power tool: TODO DECIDE</td>
 </tr>
 <tr class="even">
-<td>Scatter chart <br> <img src="images/07-chart/chart-scatter.png" /></td>
+<td>Scatter chart <br> <img src="images/07-chart/tablechart-scatter.png" /></td>
 <td>Best to show the relationship between two variables, with each dot representing its X and Y coordinates. <br>Easy tool: <a href="scatter-bubble-datawrapper.html">Scatter and Bubble Chart in Datawrapper tutorial</a> or <a href="scatter-tableau.html">Scatter Chart in Tableau Public tutorial</a>. <br>Power tool: <a href="chartcode.html">Ch 12: Chart.js and Highcharts templates</a></td>
 </tr>
 <tr class="odd">
-<td>Bubble chart <br> <img src="images/07-chart/chart-bubble.png" /></td>
+<td>Bubble chart <br> <img src="images/07-chart/tablechart-bubble.png" /></td>
 <td>Best to show the relationship between three or four sets of data, with XY coordinates, bubble size, and color.<br>Easy tool: <a href="scatter-bubble-datawrapper.html">Scatter and Bubble Chart in Datawrapper tutorial</a><br>Power tool: <a href="chartcode.html">Ch 12: Chart.js and Highcharts templates</a></td>
 </tr>
 <tr class="even">
-<td>Sparklines<br> <img src="images/07-chart/chart-sparklines.png" /></td>
+<td>Sparklines<br> <img src="images/07-chart/tablechart-sparklines.png" /></td>
 <td>Best to compare data trends with tiny line or bar charts, aligned in a table column.<br>Easy tool: <a href="table-datawrapper.html">Ch 9: Interactive Table with Sparklines in Datawrapper tutorial</a></td>
 </tr>
 </tbody>
@@ -4667,8 +4686,8 @@ weight).
 Note: For a more extensive collection of chart types and use cases, see
 the [Financial Times Visual Vocabulary](https://ft.com/vocabulary).
 
-TODO above: improve and standardize chart images, improve colors, aspect
-ratio; redo range chart
+TODO above: ILYA improve and standardize chart images, improve colors,
+aspect ratio
 
 Chart Design Principles
 -----------------------
@@ -4686,9 +4705,30 @@ principles and best practices that serve as a foundation for creating
 truthful and eloquent charts. In this section, we’ll identify some
 important rules about chart design. But you may be surprised to learn
 that some rules are less rigid than others, and can be “broken” when
-necessary to emphasize a point, as long as you are honestly interpreting
-the data. To begin to understand the difference, let’s start by
-establishing a common vocabulary about charts.
+necessary to emphasize a point, as long as you honestly interpret the
+data.
+
+To better understand this tension between following and breaking rules
+in data visualization, see Lisa Charlotte Rost’s thoughtful reflection
+on “[What To Consider When Considering Data Vis
+Rules](https://lisacharlotterost.de/datavisrules).” By articulating the
+unspoken rules behind good chart design, Rost argues that we all benefit
+by moving them into the public realm, where we can openly discuss and
+improve on them, as she had done in many [Datawrapper
+Academy](https://academy.datawrapper.de), which also beautifully
+visualize each rule. But Rost reminds us that rules also have a
+downside. First, following rules too closely can block creativity and
+innovation, especially when we look for ways to overcome challenges in
+design work. Second, since rules have emerged from different “theories
+of data visualization,” they sometimes contradict one another. One
+example of colliding rules is the tension between creating easy-to-grasp
+data stories versus those that reveal the complexity of the data, as it
+often feels impossible to do both. Rost concludes that the rules we
+follow reflect our values, and each of us needs to ask, “What do you
+want your data visualizations to be judged for?”[26]
+
+To delve further into chart design, let’s start by establishing a common
+vocabulary about charts.
 
 ### Deconstruct a Chart
 
@@ -4788,7 +4828,7 @@ the *position* and *angle* of the line, rather than its height or
 length. Starting a line chart at a number other than zero does *not*
 necessarily distort its encoded information because our eyes rely on its
 shape to determine its meaning, rather than its proximity to the
-baseline.[26] For example, compare both the right and left sides of
+baseline.[27] For example, compare both the right and left sides of
 Figure <a href="#fig:design-principles-baseline-comparison">7.3</a>,
 where both are correct.
 
@@ -4942,8 +4982,8 @@ extra dimension of color at all.
 
 Second, refer to the color wheel and standard [harmony
 rules](https://en.wikipedia.org/wiki/Harmony_color) when choosing your
-palette. Consider the rule of complementary colors—–opposites in the
-color wheel—–to find color pairs, such as blue and orange or yellow and
+palette. Consider the rule of complementary colors—opposites in the
+color wheel—to find color pairs, such as blue and orange or yellow and
 purple. Analogous colors, or neighbors in the color wheel, make good
 palettes, such as orange, red, and pink.
 
@@ -4981,7 +5021,7 @@ Rost’s “[A Friendly Guide to Colors in Data
 Visualization](https://blog.datawrapper.de/colorguide/)” and “[How to
 Pick More Beautiful Colors for Your Data
 Visualizations](https://blog.datawrapper.de/beautifulcolors/index.html),”
-both on the Datawrapper blog.[27]
+both on the Datawrapper blog.[28]
 
 If you follow our advice, you should end up with a de-cluttered chart as
 shown in Figure <a href="#fig:design-principles-decluttered">7.11</a>.
@@ -4992,10 +5032,6 @@ values, not bright colors or secondary components like the axes lines.
 <p class="caption">
 Figure 7.11: Make sure important things catch the eye first.
 </p>
-
-TODO: Compare our rules and recommendations to different dataviz style
-guides, such as Urban Institute, and cite them
-<a href="http://urbaninstitute.github.io/graphics-styleguide/" class="uri">http://urbaninstitute.github.io/graphics-styleguide/</a>
 
 Google Sheets Charts
 --------------------
@@ -5018,16 +5054,17 @@ about your data when you hover over them in your browser. Later, you’ll
 learn [how to embed an interactive chart on your website in Chapter
 10](embed.html).
 
-But Google Sheets also has limitations. First, there is no easy way to
-cite or link to your source data inside a Google Sheets chart, so you
-will need to add this key information to the text of a web page that
-contains your embedded interactive chart. Second, you cannot add text
-annotations or highlight specific items inside your charts. Finally, you
-are limited in customizing your chart design, especially tooltips when
-hovering over data visualizations. If Google Sheets does not meet your
-needs, refer back to Table <a href="#tab:chart-types">7.1</a> for other
-tools and tutorials, such as [Datawrapper](chart-datawrapper.html),
-[Tableau Public](chart-tableau.html), and [Chart.js and Highcharts code
+But Google Sheets also has limitations. First, while you can enter
+textual source notes in a chart subtitle, there is no easy way to place
+a clickable link to your source data inside a Google Sheets chart, so
+you will need to add source details or links in a web page that contains
+your embedded interactive chart. Second, you cannot add text annotations
+or highlight specific items inside your charts. Finally, you are limited
+in customizing your chart design, especially tooltips when hovering over
+data visualizations. If Google Sheets does not meet your needs, refer
+back to Table <a href="#tab:chart-types">7.1</a> for other tools and
+tutorials, such as [Datawrapper](chart-datawrapper.html), [Tableau
+Public](chart-tableau.html), and [Chart.js and Highcharts code
 templates](chartcode.html).
 
 In the next two sections, we’ll review the most appropriate cases to use
@@ -5173,25 +5210,25 @@ another web page.
 </p>
 
 Unfortunately Google Sheets functionality is very limited when it comes
-to displaying error bars, or uncertainty. You can only assign either
-constant numbers or percent values as error bar values to individual
-series (not data points). To do so, in *Chart editor*, select
-*Customize* tab, scroll down to *Series* and select a series from the
-dropdown. Check *Error bars*, and customize its value as either percent
-or a constant value, as shown in Figure
-@ref(fig:images/07-chart/chart-error-bar.png). This setting will then be
-applied to all data points from that series.
+to displaying error bars or uncertainty. You can only assign either
+constant numbers or percent values as error bar values to an individual
+series, not to specific data points. If you wish to display error bars
+in Google Sheets, in *Chart editor*, select *Customize* tab, scroll down
+to *Series*, and select a series from the dropdown menu. Check *Error
+bars*, and customize its value as either percent or a constant value, as
+shown in Figure <a href="#fig:chart-error-bar">7.22</a>. This setting
+will be applied to all data points in that series.
 
-<img src="images/07-chart/chart-error-bar.png" alt="Google Sheets is very limited when it comes to setting error bars." width="150" />
+<img src="images/07-chart/chart-error-bar.png" alt="Google Sheets has limited settings to create error bars." width="300" />
 <p class="caption">
-Figure 7.22: Google Sheets is very limited when it comes to setting
-error bars.
+Figure 7.22: Google Sheets has limited settings to create error bars.
 </p>
 
-Since there is no easy way to cite or link to your source data inside a
-Google Sheets chart, you will need to add this information to the text
-of the web page that contains your interactive chart. Remember that
-citing your data sources adds credibility to your work.
+Finally, remember that providing your data source adds credibility to
+your work. You can briefly describe the source in a chart subtitle in
+Google Sheets. But there is no easy way to insert a clickable link in
+your chart, so you would need to add more details or links in the
+separate web page that contains your embedded interactive chart.
 
 ### Split Bar and Column Charts
 
@@ -5275,7 +5312,7 @@ the appropriate series from the dropdown menu, and set its color in the
 dropdown menu, as shown in Figure
 <a href="#fig:column-stacked-edit-series">7.27</a>.
 
-<img src="images/07-chart/column-stacked-edit-series.png" alt="To edit a column color, select *Edit Chart - Customize - Series*." width="500" />
+<img src="images/07-chart/column-stacked-edit-series.png" alt="To edit a column color, select *Edit Chart - Customize - Series*." width="450" />
 <p class="caption">
 Figure 7.27: To edit a column color, select *Edit Chart - Customize -
 Series*.
@@ -5284,88 +5321,124 @@ Series*.
 - Histograms
 ------------
 
-A histogram chart is best for showing the distribution of raw data, with
-the number of values displayed in each bucket. Although a histogram may
-look similar to a column chart, the two are different. Since histograms
-show *continuous* data, you can adjust the bucket ranges to explore
-frequency patterns. For example, you can shift histogram buckets from
-0-1, 1-2, 2-3, etc. to 0-2, 2-4, etc. But column (and bar) charts show
-*categorical* data (such as the number of apples, bananas, etc.) so
-their ranges cannot be adjusted. Figure
-<a href="#fig:histogram">7.28</a> shows a histogram of average daily
-calorie consumption in 174 countries in 2006–2008 based on data from the
-[United Nations Food and Agriculture Organization](http://www.fao.org/).
+Histograms are best to show the distribution of raw data, by displaying
+the number of values that fall within defined ranges, often called
+*buckets* or *bins*. Creating a histogram can be a great way to better
+understand what your data looks like to inform your decision-making when
+designing more advanced visualizations, such as [choropleth maps, as
+you’ll learn in Chapter 8](design-choropleth.html). Although histograms
+may look similar to column charts, the two are different. First,
+histograms show *continuous* data, and usually you can adjust the bucket
+ranges to explore frequency patterns. For example, you can shift
+histogram buckets from 0-1, 1-2, 2-3, etc. to 0-2, 2-4, etc. By
+contrast, column charts show *categorical* data, such as the number of
+apples, bananas, carrots, etc. Second, histograms do not usually show
+spaces between buckets because these are continuous values, while column
+charts show spaces to separate each category.
 
-<img src="images/07-chart/histogram.png" alt="Histogram: Explore the full-screen [interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=480820223&format=interactive)."  />
+In this section, you’ll create two types of histograms in Google Sheets:
+quick histograms using the *Column stats* menu versus regular histograms
+using the *Chart* menu, and the advantages of each method. For both
+tutorials we’ll use the same data: the average calorie supply per capita
+for 174 countries in 2017, compiled by the [United Nations Food and
+Agriculture Organization](http://www.fao.org/faostat/en/#data/FBS),
+accessed through [Our World In
+Data](https://ourworldindata.org/food-supply). Note that methods for
+measuring food supply vary across nations and over time, and estimate
+the amount of food availability, rather than actual consumption.
+
+### Quick Histograms with Google Sheets Column Stats
+
+1.  Open the sample data on [Average Daily Calorie Supply per capita by
+    country 2017 in Google
+    Sheets](https://docs.google.com/spreadsheets/d/1V-r1bOWpvyCRhmJa0gRZ1TEchXvrr7UTZ97rKOU1WRo/edit#gid=1132930452),
+    log in with your account, and go to *File &gt; Make a Copy* to
+    create a version you can edit in your Google Drive.
+
+2.  To create a quick histogram in Google Sheets, select any column,
+    then go to *Data &gt; Column stats*, and click the *Distribution*
+    button in the sidebar to view a histogram for that column, as shown
+    in Figure <a href="#fig:histogram-quick">7.28</a>. The advantage is
+    that this method is very fast, and you can quickly create histograms
+    for other columns in the same sheet using the arrows near the top of
+    the sidebar (`< >`). However, you cannot manually adjust the bucket
+    ranges or make other edits to these quick histograms, and you cannot
+    embed them on the web as you can with regular charts in Google
+    Sheets.
+
+<img src="images/07-chart/histogram-quick.png" alt="To create a quick histogram in a Google Sheet, select a column, then go to *Data - Column stats - Distribution*." width="500" />
 <p class="caption">
-Figure 7.28: Histogram: Explore the full-screen [interactive
+Figure 7.28: To create a quick histogram in a Google Sheet, select a
+column, then go to *Data - Column stats - Distribution*.
+</p>
+
+Histograms are designed to show broad patterns of data distribution, not
+individual values. The histogram in Figure
+<a href="#fig:histogram-quick">7.28</a> shows that while most nations
+have an average daily supply around 2,800 calories per capita, 8 nations
+have fewer than 2,000, and 11 nations have more than 3,500. Without
+annotations, histograms don’t tell us the names of those outlier
+countries. But they do offer a better sense of the shape of the data
+distribution.
+
+### Regular Histograms with Google Sheets Charts
+
+Compare the quick histogram created with *Column stats* in Figure
+<a href="#fig:histogram-quick">7.28</a> with the regular histogram
+created with *Charts* in Figure <a href="#fig:histogram">7.29</a>.
+You’ll notice that in the regular histogram, you can define the bucket
+ranges, display dividers, and add titles and labels to provide more
+context to readers. Also, the interactive version of the regular
+histogram allows users to float their cursor to see underlying data on
+the count for each column.
+
+<img src="images/07-chart/histogram.png" alt="Regular histogram chart: Explore the full-screen [interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=480820223&amp;format=interactive)."  />
+<p class="caption">
+Figure 7.29: Regular histogram chart: Explore the full-screen
+[interactive
 version](https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=480820223&format=interactive).
 </p>
 
-Histograms are designed to represent distributions, not individual
-values. Figure <a href="#fig:histogram">7.28</a> shows two peaks, one of
-2,100–2,300 calories and the second one at 2,700-3,100 calories (two
-consecutive buckets). We can also see that daily calorie consumption in
-five countries does not exceed 1,900, and exceeds 3,700 calories in
-three countries. Histograms by themselves, without annotations, don’t
-tell us what those countries are.
+1.  To create a regular histogram in Google Sheets, select a column with
+    values and go to *Insert &gt; Chart*. If Google Sheets does not
+    automatically select *Histogram chart* as the *Chart type* in Chart
+    editor, use the dropdown and select it manually, near the bottom of
+    the list in the *Other* category, as shown in Figure
+    <a href="#fig:histogram-chart-type">7.30</a>
 
-Note: You can view and copy the [Google Sheet with the calorie
-consumption
-data](https://docs.google.com/spreadsheets/d/1V-r1bOWpvyCRhmJa0gRZ1TEchXvrr7UTZ97rKOU1WRo/edit#gid=1132930452).
-You can use *Sort sheet A-&gt;Z* function to see that five countries
-with lowest per-capita calorie consumption are Eritrea (1,590), Burundi
-(1,680), Comoros (1,840), Haiti (1,850), and Zambia (1,880). The three
-highest are Greece (3,710), USA (3,750), and Austria (3,800). Note that
-the dataset is over a decade old and things may be different today.
-
-Histograms use *buckets* or *bins*, which are predefined ranges of
-values, and count how many data points (usually rows in your dataset)
-fall within each interval. Each interval’s count is represented by a
-bar. Intervals should not overlap, and we recommend you make them all
-equal size. Consider making your ranges “pretty”, that is, using whole
-numbers such as multiples of 5 (5, 10, 15, 20) or 100 (1500, 1600, 1700,
-1800) for breakpoints, but only if that makes sense for your data
-distribution.
-
-Now, let’s look at how to create the histogram in Figure
-<a href="#fig:histogram">7.28</a> in Google Sheets. Our dataset contains
-two columns (*Country* and *Average Daily Calorie Consumption*) and 174
-records, as shown in Figure <a href="#fig:histogram-data">7.29</a>. But
-in reality you only need one column that lists all values to build a
-histogram.
-
-<img src="images/07-chart/histogram-data.png" alt="To create a histogram, you only need one column with numeric values." width="250" />
+<img src="images/07-chart/histogram-chart-type.png" alt="If not shown automatically, go to the Chart Editor sidebar and select *Setup - Chart type - Other - Histogram*." width="300" />
 <p class="caption">
-Figure 7.29: To create a histogram, you only need one column with
-numeric values.
+Figure 7.30: If not shown automatically, go to the Chart Editor sidebar
+and select *Setup - Chart type - Other - Histogram*.
 </p>
 
-Select a column with values, and go to *Insert &gt; Chart*. Google
-Sheets will likely automatically choose *Histogram chart* as the *Chart
-type* in Chart editor, but if not, use the dropdown and set it manually
-(you will find *Histogram* under the *Other* category). While some
-readers know what histograms represent, it may be useful to add a y-axis
-label (eg *Number of countries*) and a subtitle (eg *Each bar represents
-number of countries per calorie range*). You can add both from the
-*Customize* tab in the Chart editor.
+1.  You can manually set the range of each bucket and round the
+    breakpoints to whole numbers (such as multiple of 1, 5, or 100), if
+    this makes sense for the distribution of your data. In the Chart
+    Editor, go to *Customize &gt; Histogram &gt; Bucket size*. Larger
+    intervals will contain more data points and will appear wider, while
+    smaller intervals will contain fewer points and appear narrower.
 
-To further assist the reader in interpreting the histogram, you can
-break down the column into individual items (in our case, countries),
-which will appear as blocks with white boundaries. You can do that, and
-manually set the range of each bucket in the Chart editor (*Customize
-&gt; Histogram &gt; Show item dividers* and *Customize &gt; Histogram
-&gt; Bucket size*). Larger intervals will contain more datapoints and
-will also appear wider in the chart as fewer larger intervals are needed
-to cover the entire range. Smaller intervals will contain fewer
-datapoints each, and will appear narrower.
+Note: Currently, Google Sheets does not allow users to remove decimal
+points in the x-axis label of a histogram, even when all of the
+breakpoints are integers.
 
-Unfortunately, currently there is no way to get rid of decimal points in
-the x-axis labels in a Google Sheets histogram, even though all
-breakpoints may be integers.
+1.  Optionally, you can break down the column into individual items (in
+    our case, countries), which will appear as blocks with white
+    boundaries. To do this, go to *Customize &gt; Histogram &gt; Show
+    item dividers*.
 
-TODO: DISCUSS with AMELIA and ILYA the organization of the Histogram
-section and its sample data. See Meeting Notes
+2.  In the Chart Editor, customize further to add a *Chart title*, a
+    *subtitle* to describe the source, and also vertical and horizontal
+    axis titles to help readers interpret the chart.
+
+Since the regular histogram is created using the Charts feature, you can
+choose to *Publish* it and copy the embed code for the interactive
+version, as you’ll learn in [Chapter 10: Embed on the Web](embed.html).
+
+Now that you’ve learned how to create histograms to show the
+distribution of raw data, in the next section we’ll move on to other
+types of Google Sheets chart types, such as pie, line, and area charts.
 
 - Pie, Line, and Area Charts
 ----------------------------
@@ -5389,21 +5462,21 @@ with this type of chart for reasons explained further below. For
 example, if you wish to show the number of different fruits sold by a
 store in one day, as a proportion of total fruit sold, then format the
 labels and values in vertical columns in your Google Sheet, as shown in
-Figure <a href="#fig:pie-data">7.30</a>. Values can be expressed as
+Figure <a href="#fig:pie-data">7.31</a>. Values can be expressed as
 either raw numbers or percentages. Now you can easily create a pie chart
 that displays these values as colored slices of a circle, as shown in
-Figure <a href="#fig:pie">7.31</a>. Viewers can see that bananas made up
+Figure <a href="#fig:pie">7.32</a>. Viewers can see that bananas made up
 slightly over half of the fruit sold, followed by apples and oranges.
 
 <img src="images/07-chart/pie-data.png" alt="To create a pie chart, format the data values vertically in Google Sheets." width="300" />
 <p class="caption">
-Figure 7.30: To create a pie chart, format the data values vertically in
+Figure 7.31: To create a pie chart, format the data values vertically in
 Google Sheets.
 </p>
 
 <img src="images/07-chart/pie.png" alt="Pie chart: Explore the [interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vQai8YWkqMOHsiwWXpe1jyhBKy5wW6zcMaEIklkF-598h1QaVBrRR0F9JVrsX2Zo5ihXWP-HlnY-KlE/pubchart?oid=760990456&format=interactive). Data is fictitious."  />
 <p class="caption">
-Figure 7.31: Pie chart: Explore the [interactive
+Figure 7.32: Pie chart: Explore the [interactive
 version](https://docs.google.com/spreadsheets/d/e/2PACX-1vQai8YWkqMOHsiwWXpe1jyhBKy5wW6zcMaEIklkF-598h1QaVBrRR0F9JVrsX2Zo5ihXWP-HlnY-KlE/pubchart?oid=760990456&format=interactive).
 Data is fictitious.
 </p>
@@ -5441,21 +5514,21 @@ century. In your Google Sheet, organize the time units (such as years)
 into the first column, since these will appear on the horizontal X-axis.
 Also, place each data series (such as beef, pork, chicken) alongside the
 vertical time-unit column, and each series will become its own line, as
-shown in Figure <a href="#fig:line-data">7.32</a>. Now you can easily
+shown in Figure <a href="#fig:line-data">7.33</a>. Now you can easily
 create a line chart that emphasizes each data series changed over time,
-as shown in Figure <a href="#fig:line">7.33</a>. In the US, the amount
+as shown in Figure <a href="#fig:line">7.34</a>. In the US, the amount
 of chicken per capita steadily rose and surpassed pork and beef around
 2000.
 
 <img src="images/07-chart/line-data.png" alt="To create a line chart, format the time units and each data series in vertical columns." width="300" />
 <p class="caption">
-Figure 7.32: To create a line chart, format the time units and each data
+Figure 7.33: To create a line chart, format the time units and each data
 series in vertical columns.
 </p>
 
 <img src="images/07-chart/line.png" alt="Line chart: Explore the [interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vS38EC_34L8gKK9NStS8S322BzvBRbnRNpu9KXQ4oHHpaDmVMBAhEu4SXtCC6CD2yv_V6brX8s386Nf/pubchart?oid=2073830845&format=interactive). Data from [US Department of Agriculture](https://docs.google.com/spreadsheets/d/1wkWxxZ2-N5hqkcp7in8bxwdEcT1-XMnt1A8qUXxUSjw/edit?usp=sharing)."  />
 <p class="caption">
-Figure 7.33: Line chart: Explore the [interactive
+Figure 7.34: Line chart: Explore the [interactive
 version](https://docs.google.com/spreadsheets/d/e/2PACX-1vS38EC_34L8gKK9NStS8S322BzvBRbnRNpu9KXQ4oHHpaDmVMBAhEu4SXtCC6CD2yv_V6brX8s386Nf/pubchart?oid=2073830845&format=interactive).
 Data from [US Department of
 Agriculture](https://docs.google.com/spreadsheets/d/1wkWxxZ2-N5hqkcp7in8bxwdEcT1-XMnt1A8qUXxUSjw/edit?usp=sharing).
@@ -5473,7 +5546,7 @@ from the Chart type dropdown list.
 Sidebar: Tables and charts approach time-series data in opposite
 directions. When designing a table, the proper method is to place dates
 horizontally as column headers, so that we read them from left-to-right,
-like this:[28]
+like this:[29]
 
 <table>
 <thead>
@@ -5550,16 +5623,16 @@ capita over time. Stacked line charts show both aspects of your data
 simultaneously.
 
 To create a stacked area chart, organize the data in the same way as you
-did for the line chart in Figure <a href="#fig:line-data">7.32</a>. Now
+did for the line chart in Figure <a href="#fig:line-data">7.33</a>. Now
 you can easily create a stacked line chart that displays the
 availability of each meat—and their combined total—over time, as shown
-in Figure <a href="#fig:stacked-area">7.34</a>. Overall, we can see that
+in Figure <a href="#fig:stacked-area">7.35</a>. Overall, we can see that
 total available meat per capita increased after the 1930s Depression,
 and chicken steadily became a larger portion of the total after 1970.
 
 <img src="images/07-chart/stacked-area.png" alt="Stacked area chart: Explore the [interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSotrM_zZDo0MT--JgXwA3nBQudzIwmt8TGwmZxvUxNUzPrfBgqso5glLn05ObJxdTTmKoT_fQWQMx-/pubchart?oid=1976471326&format=interactive). Data from [US Department of Agriculture](https://docs.google.com/spreadsheets/d/16QR4prVUoztW6bFVyj_q0n8GjNWqkcW6sgAkIyHQIJc/edit?usp=sharing)."  />
 <p class="caption">
-Figure 7.34: Stacked area chart: Explore the [interactive
+Figure 7.35: Stacked area chart: Explore the [interactive
 version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSotrM_zZDo0MT--JgXwA3nBQudzIwmt8TGwmZxvUxNUzPrfBgqso5glLn05ObJxdTTmKoT_fQWQMx-/pubchart?oid=1976471326&format=interactive).
 Data from [US Department of
 Agriculture](https://docs.google.com/spreadsheets/d/16QR4prVUoztW6bFVyj_q0n8GjNWqkcW6sgAkIyHQIJc/edit?usp=sharing).
@@ -5644,13 +5717,13 @@ above. Place units of time (such as months-years) in the first column,
 and numerical data values (such as the unemployment rate) in the second
 column. Now you’re ready to create an interactive line chart with
 annotations, as shown in Figure
-<a href="#fig:datawrapper-annotated">7.35</a>. Since 2000, the
+<a href="#fig:datawrapper-annotated">7.36</a>. Since 2000, the
 unemployment rate has peaked three times, but the tallest peak occurred
 during the 2020 economic crisis sparked by the Covid pandemic.
 
 <img src="images/07-chart/datawrapper-annotated.png" alt="Line chart with annotation: Explore the [interactive version](https://datawrapper.dwcdn.net/vHuob/). Data from [US Federal Reserve Open Data](https://docs.google.com/spreadsheets/d/1mjUu4OfMjWfFP-miPiObi6vXzJUIMi1TSuoaT61FU6U/edit#gid=821851972)."  />
 <p class="caption">
-Figure 7.35: Line chart with annotation: Explore the [interactive
+Figure 7.36: Line chart with annotation: Explore the [interactive
 version](https://datawrapper.dwcdn.net/vHuob/). Data from [US Federal
 Reserve Open
 Data](https://docs.google.com/spreadsheets/d/1mjUu4OfMjWfFP-miPiObi6vXzJUIMi1TSuoaT61FU6U/edit#gid=821851972).
@@ -5673,7 +5746,7 @@ tutorial:
 3.  In the *Upload Data* screen, click *Import Google Spreadsheet* and
     paste the link to the data in the shared Google Sheet above, as
     shown in Figure
-    <a href="#fig:datawrapper-annotated-upload">7.36</a>, then click
+    <a href="#fig:datawrapper-annotated-upload">7.37</a>, then click
     *Proceed*. To upload a Google Sheet, the Share setting must be
     changed from *Private*, the default setting, to *Anyone with the
     link can view* at minimum. Also, if you update cells in your Google
@@ -5684,7 +5757,7 @@ tutorial:
 
 <img src="images/07-chart/datawrapper-annotated-upload.png" alt="To upload data from a shared Google Sheet, click the button and paste the link." width="550" />
 <p class="caption">
-Figure 7.36: To upload data from a shared Google Sheet, click the button
+Figure 7.37: To upload data from a shared Google Sheet, click the button
 and paste the link.
 </p>
 
@@ -5721,7 +5794,7 @@ does not need to be transposed, since it’s organized correctly.
     place your annotation on the chart, where unemployment rose sharply
     from 2008 to 2010, and type “Great Recession” into the text field,
     as shown in Figure
-    <a href="#fig:datawrapper-annotated-text">7.37</a>. This helps
+    <a href="#fig:datawrapper-annotated-text">7.38</a>. This helps
     readers to place the [Great
     Recession](https://en.wikipedia.org/wiki/Great_Recession_in_the_United_States)
     in historical context. Click the button a second time to add another
@@ -5732,7 +5805,7 @@ does not need to be transposed, since it’s organized correctly.
 
 <img src="images/07-chart/datawrapper-annotated-text.png" alt="Add text annotations by drawing a pink rectangle and typing in the text."  />
 <p class="caption">
-Figure 7.37: Add text annotations by drawing a pink rectangle and typing
+Figure 7.38: Add text annotations by drawing a pink rectangle and typing
 in the text.
 </p>
 
@@ -5740,7 +5813,7 @@ in the text.
     section, and click the button to add one to the chart. Click inside
     the chart to draw a pink lines from December 2007 to June 2009,
     which will highlight that portion of the chart in gray, as shown in
-    Figure <a href="#fig:datawrapper-annotated-range">7.38</a>. This
+    Figure <a href="#fig:datawrapper-annotated-range">7.39</a>. This
     period represents the official beginning and ending of the US Great
     Recession in the eyes of economists, although unemployment continued
     to grow for the population at large. To highlight other official
@@ -5753,7 +5826,7 @@ in the text.
 range highlight by”drawing" a rectangular bar on the chart." width=“600”
 /&gt;
 <p class="caption">
-Figure 7.38: Add a range highlight by “drawing” a rectangular bar on the
+Figure 7.39: Add a range highlight by “drawing” a rectangular bar on the
 chart.
 </p>
 
@@ -5772,6 +5845,11 @@ chart.
     create an account, you can enter your email to receive the embed
     code.
 
+Hint: See this [Datawrapper Academy article to create a line chart with
+confidence
+intervals](https://academy.datawrapper.de/article/205-how-to-show-confidence-intervals-in-datawrapper-line-charts),
+which are similar to error bars.
+
 Congratulations on creating your first interactive Datawrapper chart.
 Now let’s use Datawrapper to create a new type of chart, called a range
 chart.
@@ -5779,47 +5857,50 @@ chart.
 - Range Charts
 --------------
 
-A range chart (also known as a specific type of dot chart) is best to
-show gaps between data points, such as inequalities. The line chart
-above illustrated how the overall US unemployment rate changed over
-time. But if we wish to look at differences in gender and race/ethnicity
-for a specific point in time, a range chart will highlight any gaps.
-Organize the data for a range chart into rows and columns, as shown in
-Figure <a href="#fig:datawrapper-range-data">7.39</a>. The column
-headers contain data labels you wish to highlight, such *Men* and
-*Women*. The first column contains your categories, such as
-racial/ethnic groups, followed by the numerical values under each
-header. Now you can easily create an interactive range chart as shown in
-Figure <a href="#fig:datawrapper-range">7.40</a>. The employment gender
-gap is visible in all three racial/ethnic groups, but the gap was widest
-between Hispanic men and women in May 2020.
+A range chart, which can be classed as a specific type of a dot chart,
+emphasizes gaps between data points, and is often used to highlight
+inequalities. In this tutorial, we will use Datawrapper to build a range
+chart about the US gender pay gap. The chart compares the median
+earnings of American men and women by education level, according to the
+2019 American Community Survey, as shown in Figure
+<a href="#fig:datawrapper-range">7.40</a>. We were inspired by the
+[Datawrapper Academy range plot
+tutorial](https://academy.datawrapper.de/article/111-how-to-create-a-range-plot)
+and created our version using more recent data. Overall, the range chart
+shows how men, on average, earn more than women at all education levels.
+In fact, an average US man with a bachelor’s degree earns more than an
+average US woman with a graduate degree.
 
-<img src="images/07-chart/datawrapper-range-data.png" alt="Organize your range chart data labels into column headers, with categories and values in each row." width="300" />
-<p class="caption">
-Figure 7.39: Organize your range chart data labels into column headers,
-with categories and values in each row.
-</p>
-
-<img src="images/07-chart/datawrapper-range.png" alt="Range chart: Explore the [interactive version](https://datawrapper.dwcdn.net/v8D2z/). Data from [US Federal Reserve Open Data](https://docs.google.com/spreadsheets/d/1qAfMHBegOz1-ZlN9UurZ_wsesmLGYlu_ch7M3Anwdsg/edit#gid=0)."  />
+<img src="images/07-chart/datawrapper-range.png" alt="Range chart: Explore the [interactive version](https://datawrapper.dwcdn.net/lVGnz/). Data from [US Census 2019 American Community Survey](https://docs.google.com/spreadsheets/d/1qAfMHBegOz1-ZlN9UurZ_wsesmLGYlu_ch7M3Anwdsg/edit#gid=0)."  />
 <p class="caption">
 Figure 7.40: Range chart: Explore the [interactive
-version](https://datawrapper.dwcdn.net/v8D2z/). Data from [US Federal
-Reserve Open
-Data](https://docs.google.com/spreadsheets/d/1qAfMHBegOz1-ZlN9UurZ_wsesmLGYlu_ch7M3Anwdsg/edit#gid=0).
+version](https://datawrapper.dwcdn.net/lVGnz/). Data from [US Census
+2019 American Community
+Survey](https://docs.google.com/spreadsheets/d/1qAfMHBegOz1-ZlN9UurZ_wsesmLGYlu_ch7M3Anwdsg/edit#gid=0).
 </p>
 
-To create your own range chart with our sample data, follow this
-tutorial. Since we assume that you’re already familiar with Datawrapper
-from the previous tutorial on annotated line charts, these steps are
-abbreviated. So if you get lost, see more details and images above.
+To build this range chart, we organized the data as shown in Figure
+<a href="#fig:datawrapper-range-data">7.41</a>. The first column
+contains five educational attainment levels, from lowest (*less than
+high school*) to highest (*graduate or professional degree*). The second
+and third columns contain numeric values of median earnings for *Men*
+and *Women* respectively.
 
-1.  Open the [US Unemployment by Gender and Race/Ethnicity May 2020
-    sample data in Google
+<img src="images/07-chart/datawrapper-range-data.png" alt="Organize your range chart data into three columns: labels, and values for both subgroups." width="500" />
+<p class="caption">
+Figure 7.41: Organize your range chart data into three columns: labels,
+and values for both subgroups.
+</p>
+
+Since by now you should be familiar with Datawrapper, the steps to
+create a range chart are less detailed than in the previous tutorial on
+annotated line charts. If you get lost, see more detailed steps about
+Datawrapper charts in the section above.
+
+1.  Open the [US Earnings by Gender by Education Level data in Google
     Sheets](https://docs.google.com/spreadsheets/d/1qAfMHBegOz1-ZlN9UurZ_wsesmLGYlu_ch7M3Anwdsg/edit#gid=0)
     and go to *File &gt; Make a Copy* to create your own version in your
-    Google Drive. Or download the [sample data in Excel
-    format](data/us-unemployment-gender-race-ethnicity-may2020.xlsx) to
-    your computer.
+    Google Drive.
 
 2.  Open [Datawrapper](https://www.datawrapper.de) in your browser and
     click *Start Creating*. We recommend that you create a free account
@@ -5847,38 +5928,40 @@ abbreviated. So if you get lost, see more details and images above.
     the visibility of the values from *start* to *both*, which places
     numbers at both ends of each range. Second, push the slider to
     *Label first range*, which places the word *Men* and *Women* above
-    the first range, as shown in Figure
-    <a href="#fig:datawrapper-range-labels">7.41</a>.
+    the first range. Third, change *Number format* to *123k*, which will
+    round dollar amounts to the nearest thousand, and replace thousands
+    with a *k* as shown in Figure
+    <a href="#fig:datawrapper-range-labels">7.42</a>.
 
-<img src="images/07-chart/datawrapper-range-labels.png" alt="Modify the labels settings to show values at both ends of each range, and to place your data labels on your first range."  />
+<img src="images/07-chart/datawrapper-range-labels.png" alt="Modify the labels settings to show values at both ends of each range, and to place your data labels on your first range." width="600" />
 <p class="caption">
-Figure 7.41: Modify the labels settings to show values at both ends of
+Figure 7.42: Modify the labels settings to show values at both ends of
 each range, and to place your data labels on your first range.
 </p>
 
 1.  Still in the *Refine* tab, scroll down to the *Appearance* section
     to improve the colors. Select the *Range end* drop-down menu to
-    select a better color, such as red. Also, change the *Range color*
-    setting to *gradient* to emphasize the range, as shown in Figure
-    <a href="#fig:datawrapper-range-appearance">7.42</a>.
+    select a better color, such as red. Change the *Range color* setting
+    to *gradient* to emphasize the range, as shown in Figure
+    <a href="#fig:datawrapper-range-appearance">7.43</a>.
 
-<img src="images/07-chart/datawrapper-range-appearance.png" alt="Modify the appearance settings to improve the color and add a gradient."  />
+<img src="images/07-chart/datawrapper-range-appearance.png" alt="Modify the appearance settings to improve the color and add a gradient." width="600" />
 <p class="caption">
-Figure 7.42: Modify the appearance settings to improve the color and add
+Figure 7.43: Modify the appearance settings to improve the color and add
 a gradient.
 </p>
 
-Tip: The *Refine* tab also includes options to resort or group data
-rows, change the chart size for different devices, and check visibility
-for colorblind readers.
+Tip: The *Refine* tab includes options to resort or group data rows,
+change the chart size for different devices, and check visibility for
+colorblind readers.
 
 1.  After modifying your visualization, proceed to the *Publish and
     Embed* screen, and follow the prompts to share your work, or refer
-    to the more detailed tutorial above.
+    to the previous detailed Datawrapper tutorial.
 
-Now that you’ve completed a range chart, let’s create another new chart
-type, scatter and bubble charts, which are relatively easy to design in
-Datawrapper.
+Now that you’ve completed a range chart, let’s see how we can use
+Datawrapper to build scatter and bubble charts to show relationships
+between two or more variables.
 
 - Scatter and Bubble Charts
 ---------------------------
@@ -5921,12 +6004,12 @@ A scatter chart is best to show the relationship between two sets of
 data as XY coordinates on a grid. Imagine you wish to compare life
 expectancy and fertility data for different nations. Organize your data
 in three columns, as shown in Figure
-<a href="#fig:scatter-data">7.43</a>. The first column contains the
+<a href="#fig:scatter-data">7.44</a>. The first column contains the
 *Country* labels, and the second column, *Life Expectancy*, will appear
 on the horizontal x-axis, while the third column, *Fertility*, will
 appear on the vertical y-axis. Now you can easily create a scatter chart
 that displays a relationship between these datasets, as shown in Figure
-<a href="#fig:scatter">7.44</a>. One way to summarize the chart is that
+<a href="#fig:scatter">7.45</a>. One way to summarize the chart is that
 nations with lower fertility rates (or fewer births per woman) tend to
 have high life expectancy rates. But another way to phrase it is that
 nations with higher life expectancy at birth have lower fertility.
@@ -5936,13 +6019,13 @@ females create fewer children.
 
 <img src="images/07-chart/scatter-data.png" alt="To create a scatter chart in Datawrapper, format data in three columns: labels, x-values, and y-values." width="350" />
 <p class="caption">
-Figure 7.43: To create a scatter chart in Datawrapper, format data in
+Figure 7.44: To create a scatter chart in Datawrapper, format data in
 three columns: labels, x-values, and y-values.
 </p>
 
 <img src="images/07-chart/scatter.png" alt="Scatter chart: Explore the [interactive version](https://datawrapper.dwcdn.net/8OQz7/). Data from the [World Bank](https://docs.google.com/spreadsheets/d/1LJCj3RaVgaQsAZriV_JDQhBrIBSvnH_N1LBCkZK1bqs/)."  />
 <p class="caption">
-Figure 7.44: Scatter chart: Explore the [interactive
+Figure 7.45: Scatter chart: Explore the [interactive
 version](https://datawrapper.dwcdn.net/8OQz7/). Data from the [World
 Bank](https://docs.google.com/spreadsheets/d/1LJCj3RaVgaQsAZriV_JDQhBrIBSvnH_N1LBCkZK1bqs/).
 </p>
@@ -5983,23 +6066,23 @@ tooltips to properly display your data:
     *return* twice on your keyboard, then type `Fertility:` and click on
     the blue button with the same name to add it, so that
     `{{ Fertility }}` appears right after it, as shown in Figure
-    <a href="#fig:scatter-tooltip-editor">7.45</a>. Press *Save* to
+    <a href="#fig:scatter-tooltip-editor">7.46</a>. Press *Save* to
     close the tooltip editor window.
 
-<img src="images/07-chart/scatter-tooltip-editor.png" alt="In the tooltip editor window, type and click column headers to customize the display."  />
+<img src="images/07-chart/scatter-tooltip-editor.png" alt="In the tooltip editor window, type and click column headers to customize the display." width="350" />
 <p class="caption">
-Figure 7.45: In the tooltip editor window, type and click column headers
+Figure 7.46: In the tooltip editor window, type and click column headers
 to customize the display.
 </p>
 
 1.  Back in the *Visualize* screen, when you hover your cursor over a
     point, the tooltip will properly display its data according to your
     editor settings above, as shown in Figure
-    <a href="#fig:scatter-tooltip">7.46</a>.
+    <a href="#fig:scatter-tooltip">7.47</a>.
 
-<img src="images/07-chart/scatter-tooltip.png" alt="Hover over a data point to inspect the edited tooltip display." width="400" />
+<img src="images/07-chart/scatter-tooltip.png" alt="Hover over a data point to inspect the edited tooltip display." width="350" />
 <p class="caption">
-Figure 7.46: Hover over a data point to inspect the edited tooltip
+Figure 7.47: Hover over a data point to inspect the edited tooltip
 display.
 </p>
 
@@ -6017,21 +6100,21 @@ this concept by creating a bubble chart that adds two more datasets:
 population (shown by the size of each point, or bubble) and region of
 the world (shown by the color of each bubble). We’ll use similar World
 Bank data as before, with two additional columns, as shown in Figure
-<a href="#fig:bubble-data">7.47</a>. Note that we’re using numeric data
+<a href="#fig:bubble-data">7.48</a>. Note that we’re using numeric data
 (population) for bubble size, but categorical data (regions) for color.
 Now you can easily create a bubble chart that displays a relationship
 between these four datasets, as shown in Figure
-<a href="#fig:bubble">7.48</a>.
+<a href="#fig:bubble">7.49</a>.
 
 <img src="images/07-chart/bubble-data.png" alt="To create a bubble chart in Datawrapper, organize the data into five columns: labels, x-axis, y-axis, bubble size, bubble color." width="500" />
 <p class="caption">
-Figure 7.47: To create a bubble chart in Datawrapper, organize the data
+Figure 7.48: To create a bubble chart in Datawrapper, organize the data
 into five columns: labels, x-axis, y-axis, bubble size, bubble color.
 </p>
 
 <img src="images/07-chart/bubble.png" alt="Bubble chart: Explore the [interactive version](https://datawrapper.dwcdn.net/ZX9QR/). Data from the [World Bank](https://docs.google.com/spreadsheets/d/1yiZ975_uXOTOd0OCAdrR_s-bQFs7za3dar69IXPo6Xg)."  />
 <p class="caption">
-Figure 7.48: Bubble chart: Explore the [interactive
+Figure 7.49: Bubble chart: Explore the [interactive
 version](https://datawrapper.dwcdn.net/ZX9QR/). Data from the [World
 Bank](https://docs.google.com/spreadsheets/d/1yiZ975_uXOTOd0OCAdrR_s-bQFs7za3dar69IXPo6Xg).
 </p>
@@ -6054,12 +6137,12 @@ tooltips, bubble sizes, and colors to display your data:
     *Customize tooltip HTML* window, type in the fields and click on the
     blue column names to customize your tooltips to display country,
     life expectancy, fertility, and population, as shown in Figure
-    <a href="#fig:bubble-tooltip-editor">7.49</a>. Press *Save* to close
+    <a href="#fig:bubble-tooltip-editor">7.50</a>. Press *Save* to close
     the tooltip editor window.
 
 <img src="images/07-chart/bubble-tooltip-editor.png" alt="In the tooltip editor window, type and click column headers to customize the display."  />
 <p class="caption">
-Figure 7.49: In the tooltip editor window, type and click column headers
+Figure 7.50: In the tooltip editor window, type and click column headers
 to customize the display.
 </p>
 
@@ -6068,11 +6151,11 @@ to customize the display.
     colors* button to assign a unique color to each. Then scroll down to
     *Size*, check the box to change size to *variable*, select column
     for *Population*, and increase the max size slider, as shown in
-    Figure <a href="#fig:bubble-color-size">7.50</a>. Click *Proceed*.
+    Figure <a href="#fig:bubble-color-size">7.51</a>. Click *Proceed*.
 
 <img src="images/07-chart/bubble-color-size.png" alt="In the *Visualize* screen, modify the bubble colors and set size to variable." width="350" />
 <p class="caption">
-Figure 7.50: In the *Visualize* screen, modify the bubble colors and set
+Figure 7.51: In the *Visualize* screen, modify the bubble colors and set
 size to variable.
 </p>
 
@@ -6143,7 +6226,7 @@ Organize your data in three columns, the same way as the [Datawrapper
 scatter chart tutorial](scatter-datawrapper.html): the first column for
 data labels, the second column for the x-axis, and the third column for
 the y-axis. Then you can create an interactive scatter chart as shown in
-Figure <a href="#fig:tableau-scatter">7.51</a>, which illustrates a
+Figure <a href="#fig:tableau-scatter">7.52</a>, which illustrates a
 strong relationship between household income and test scores (above or
 below the national average for 6th grade math and English) in
 Connecticut public school districts. To learn more about the data and
@@ -6156,11 +6239,9 @@ Mirror/TrendCT](https://web.archive.org/web/20190129101923/http://trendct.org/20
 and this [TrendCT GitHub
 repo](https://github.com/trendct-data/stanford-cepa).
 
-<!-- TODO: Reminder: this Tableau Public visualization is stored in Jack.Dougherty@trincoll.edu account -->
-
 <img src="images/07-chart/tableau-scatter.png" alt="Scatter chart in Tableau Public: Explore the [interactive version](https://public.tableau.com/profile/jackdougherty#!/vizhome/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1). Data by [CT Mirror/TrendCT and Stanford CEPA](https://github.com/trendct-data/stanford-cepa)."  />
 <p class="caption">
-Figure 7.51: Scatter chart in Tableau Public: Explore the [interactive
+Figure 7.52: Scatter chart in Tableau Public: Explore the [interactive
 version](https://public.tableau.com/profile/jackdougherty#!/vizhome/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1).
 Data by [CT Mirror/TrendCT and Stanford
 CEPA](https://github.com/trendct-data/stanford-cepa).
@@ -6189,17 +6270,17 @@ Public, follow this tutorial.
     connect to a server, such as Google Sheets, click *More…* to connect
     to your account. After you successfully connect to your data source,
     you will see it under *Connections* in the *Data Source* tab. Under
-    *Sheets*, you will see two tables, `data` and `notes`.
+    *Sheets*, you will see two tables, *data* and *notes*.
 
-4.  Drag the `data` sheet into *Drag tables here* area, as shown in
-    Figure <a href="#fig:tableau-connect">7.52</a>. You will see the
+4.  Drag the *data* sheet into *Drag tables here* area, as shown in
+    Figure <a href="#fig:tableau-connect">7.53</a>. You will see the
     preview of the table under the drag-and-drop area. You have
     successfully connected one data source to Tableau Public, and you
     are ready to build your first chart.
 
-<img src="images/07-chart/tableau-connect-annotated.png" alt="Drag `data` sheet into *Drag tables here* area."  />
+<img src="images/07-chart/tableau-connect-annotated.png" alt="Drag *data* sheet into *Drag tables here* area."  />
 <p class="caption">
-Figure 7.52: Drag `data` sheet into *Drag tables here* area.
+Figure 7.53: Drag *data* sheet into *Drag tables here* area.
 </p>
 
 #### Create Scatter Chart in the Worksheet
@@ -6215,7 +6296,7 @@ or numeric labels) or green (for continuous values, mostly numbers).
 
 1.  In your worksheet, drag the *Grade Levels* field into the *Rows*
     field above the charting area, which for now is just empty space.
-    See Figure <a href="#fig:tableau-scatter-dragging">7.53</a> for this
+    See Figure <a href="#fig:tableau-scatter-dragging">7.54</a> for this
     dragging step and the following two steps. Tableau will apply a
     summation function to it, and you will see `SUM(Grade Levels)`
     appear in the *Rows* row, and a blue bar in the charting area. It
@@ -6241,7 +6322,7 @@ or numeric labels) or green (for continuous values, mostly numbers).
 
 <img src="images/07-chart/tableau-scatter-dragging-annotated.png" alt="Drag data fields to the right locations in Tableau Public."  />
 <p class="caption">
-Figure 7.53: Drag data fields to the right locations in Tableau Public.
+Figure 7.54: Drag data fields to the right locations in Tableau Public.
 </p>
 
 #### Add Title and Caption, and Publish
@@ -6254,11 +6335,11 @@ so inside a *Caption*, a text block that accompanies your Tableau chart.
 In the menu, go to *Worksheet &gt; Show Caption*. Double-click the
 Caption block that appears, and edit the text. As a result, your final
 worksheet will look like shown in Figure
-<a href="#fig:tableau-scatter-final">7.54</a>.
+<a href="#fig:tableau-scatter-final">7.55</a>.
 
 <img src="images/07-chart/tableau-scatter-final-annotated.png" alt="This scatter chart is ready to be published."  />
 <p class="caption">
-Figure 7.54: This scatter chart is ready to be published.
+Figure 7.55: This scatter chart is ready to be published.
 </p>
 
 Tip: In the dropdown above the *Columns* shelf, change *Standard* to
@@ -6282,14 +6363,14 @@ horizontal space.
     title or description. Under *Toolbar Settings*, see the checkbox to
     *Allow others to download or explore and copy this workbook and its
     data*, and select the setting you wish, as shown in Figure
-    @ref(fig:tableau-toolbar-settings. If you are publishing your
-    visualization on the web, we also recommend that you keep this box
-    checked so that others can download your data and see how you
-    constructed it, to improve data accessibility for all.
+    <a href="#fig:tableau-toolbar-settings">7.56</a>. If you are
+    publishing your visualization on the web, we also recommend that you
+    keep this box checked so that others can download your data and see
+    how you constructed it, to improve data accessibility for all.
 
 <img src="images/07-chart/tableau-toolbar-settings-annotated.png" alt="This scatter chart is ready to be published."  />
 <p class="caption">
-Figure 7.55: This scatter chart is ready to be published.
+Figure 7.56: This scatter chart is ready to be published.
 </p>
 
 Tip: Your entire portfolio of Tableau Public visualizations is online at
@@ -6316,7 +6397,7 @@ them with too much information at once.
 In this tutorial, we will build an interactive filtered line chart with
 Tableau Public, to visualize how internet access has changed in
 different nations over time. Organize the data in three columns, as
-shown in Figure <a href="#fig:tableau-filtered-data">7.56</a>. The first
+shown in Figure <a href="#fig:tableau-filtered-data">7.57</a>. The first
 column, *Country Name*, are the data labels that become the colored
 lines. The second column, *Year*, will appear on the horizontal x-axis.
 The third column, *Percent Internet Users*, are numeric values that
@@ -6324,19 +6405,17 @@ appear on the vertical y-axis. Now you can create a filtered line chart
 with checkboxes, to show only selected lines on startup to avoid
 overwhelming users, while allowing them to toggle on other lines, and
 hover over each one for more details, as shown in Figure
-<a href="#fig:tableau-filtered">7.57</a>.
+<a href="#fig:tableau-filtered">7.58</a>.
 
 <img src="images/07-chart/tableau-filtered-data.png" alt="In a filtered line chart, organize the data in three columns, data labels, year, and numeric values." width="350" />
 <p class="caption">
-Figure 7.56: In a filtered line chart, organize the data in three
+Figure 7.57: In a filtered line chart, organize the data in three
 columns, data labels, year, and numeric values.
 </p>
 
-<!-- TODO: Reminder that this Tableau Public chart is created in the ilya7257 account -->
-
 <img src="images/07-chart/tableau-filtered.png" alt="Filtered Line chart: Explore the [interactive version](https://public.tableau.com/profile/ilya7257#!/vizhome/InternetAccessbyCountry/Sheet1). Data from [World Bank](https://docs.google.com/spreadsheets/d/1nrfd8Cr-wpm5N9WGA2YO6d1XLuwk-VK8kCvDwoTdeWM/edit#gid=600173793)."  />
 <p class="caption">
-Figure 7.57: Filtered Line chart: Explore the [interactive
+Figure 7.58: Filtered Line chart: Explore the [interactive
 version](https://public.tableau.com/profile/ilya7257#!/vizhome/InternetAccessbyCountry/Sheet1).
 Data from [World
 Bank](https://docs.google.com/spreadsheets/d/1nrfd8Cr-wpm5N9WGA2YO6d1XLuwk-VK8kCvDwoTdeWM/edit#gid=600173793).
@@ -6381,24 +6460,36 @@ ready to begin building your interactive chart.
 
 1.  Drag the *Year* variable to *Columns* shelf. This will place years
     along the x-axis.
+
 2.  Drag the *Percent Internet Users* variable to *Rows* shelf to place
     them on the y-axis. The value in the shelf will change to
     `SUM(Percent Internet Users)`. You should see a single line chart
     that sums up percentages for each year. That is completely
     incorrect, so let’s fix it.
+
 3.  In order to “break” aggregation, drag-and-drop *Country Name* to the
-    *Color* shelf of the *Marks* card. Tableau will warn you that the
-    recommended number of colors should not exceed 20. Since we will be
-    adding checkbox filtering, ignore this warning, and go ahead and
-    press the *Add all members* button.
-4.  At first, everything will look like a spaghetti plate of lines and
+    *Color* shelf of the *Marks* card, as shown in Figure
+    <a href="#fig:tableau-filtered-filters">7.59</a>. Tableau will warn
+    you that the recommended number of colors should not exceed 20.
+    Since we will be adding checkbox filtering, ignore this warning, and
+    go ahead and press the *Add all members* button.
+
+<img src="images/07-chart/tableau-filtered-filters.png" alt="Drag *Country Name* to the *Color* shelf of the *Marks* card to break up the aggregated data." width="220" />
+<p class="caption">
+Figure 7.59: Drag *Country Name* to the *Color* shelf of the *Marks*
+card to break up the aggregated data.
+</p>
+
+1.  At first, everything will look like a spaghetti plate of lines and
     colors! To add filtering, drag *Country Name* to the *Filters* card.
     In the Filter window, make sure all countries are checked, and click
     *OK*.
-5.  In the *Filters* card, click the dropdown arrow of the **Country
-    Name** symbol, then scroll down and select Show Filter, as shown in
-    Figure <a href="#fig:tableau-filtered-show-filter">7.58</a>.
-6.  You will see a list of options with all checkboxes to appear on the
+
+2.  In the *Filters* card, click the dropdown arrow of the *Country
+    Name* symbol, then scroll down and select Show Filter, as shown in
+    Figure <a href="#fig:tableau-filtered-show-filter">7.60</a>.
+
+3.  You will see a list of options with all checkboxes to appear on the
     right side of the chart. Click *(All)* to add/remove all options,
     and select a few countries to see how the interactive filtering
     works. The checkboxes you select at this stage will appear “on” in
@@ -6413,10 +6504,10 @@ ready to begin building your interactive chart.
     among other countries as your palette is limited to 20 colors.
     Unfortunately, there is little you can do to go around this.
 
-<img src="images/07-chart/tableau-filtered-show-filter.png" alt="After you drag Country Name to the Filters card, make sure the Filter is displayed." width="220" />
+<img src="images/07-chart/tableau-filtered-show-filter.png" alt="After you drag *Country Name* to the *Filters* card, make sure the Filter is displayed." width="220" />
 <p class="caption">
-Figure 7.58: After you drag Country Name to the Filters card, make sure
-the Filter is displayed.
+Figure 7.60: After you drag *Country Name* to the *Filters* card, make
+sure the Filter is displayed.
 </p>
 
 1.  Double-click on the *Sheet 1* title (above the chart) and replace it
@@ -6432,20 +6523,20 @@ the Filter is displayed.
 3.  You may notice that the x-axis (Year) starts with 1994 and ends with
     2020, although our data is for 1995–2018. Double-click on the
     x-axis, and change *Range* from *Automatic* to *Fixed*, with the
-    Fixed start of `1995`, and the Fixed end of `2018`. Close the window
+    Fixed start of *1995*, and the Fixed end of *2018*. Close the window
     and see that the empty space on the edges has disappeared.
 
 4.  Once your filtered line chart looks like the one shown in Figure
-    <a href="#fig:tableau-filtered-ready">7.59</a>, you are ready to
+    <a href="#fig:tableau-filtered-ready">7.61</a>, you are ready to
     publish. Go to *File &gt; Save to Tableau Public As…*, and log into
     your account, or create one if you haven’t yet done so. Follow the
     prompts to publish your chart on the public web, or see the previous
     [Scatter Chart in Tableau Public tutorial](scatter-tableau.html) for
     more details.
 
-<img src="images/07-chart/tableau-filtered-ready.png" alt="This workbook is ready to be published."  />
+<img src="images/07-chart/tableau-filtered-ready-annotated.png" alt="This workbook is ready to be published."  />
 <p class="caption">
-Figure 7.59: This workbook is ready to be published.
+Figure 7.61: This workbook is ready to be published.
 </p>
 
 See the [Embed Tableau Public on Your Website](embed-tableau.html)
@@ -6610,10 +6701,10 @@ web maps* or *slippy maps*, because users can zoom into and pan around
 to explore map data layers on top of a seamless set of basemap tiles.
 Basemaps that display aerial photo imagery are known as *raster* tiles,
 while those that display pictorial images of streets and buildings are
-known as *vector* tiles. Raster map data is limited by the resolution of
-the original image, which gets fuzzier as we get closer. By contrast,
-you can zoom in very close to vector map data without diminishing its
-visual quality, as shown in Figure
+tiles that are built from *vector* data. Raster map data is limited by
+the resolution of the original image, which gets fuzzier as we get
+closer. By contrast, you can zoom in very close to vector map data
+without diminishing its visual quality, as shown in Figure
 <a href="#fig:raster-vs-vector-zoom">8.1</a>. You’ll learn more about
 these concepts in the [GeoJSON and Geospatial Data](geojson.html)
 section of Chapter 14.
@@ -6829,12 +6920,12 @@ overview of visualization colors in general, see Lisa Charlotte Rost’s
 Visualization](https://blog.datawrapper.de/colorguide/)” and “[How to
 Pick More Beautiful Colors for Your Data
 Visualizations](https://blog.datawrapper.de/beautifulcolors/index.html),”
-both on the Datawrapper blog.[29]
+both on the Datawrapper blog.[30]
 
 To illustrate key concepts about colors in choropleth maps, let’s
 explore a wonderful design assistant called
 [ColorBrewer](https://colorbrewer2.org/), created by Cynthia Brewer and
-Mark Harrower.[30] Since ColorBrewer is a design assistant, you do *not*
+Mark Harrower.[31] Since ColorBrewer is a design assistant, you do *not*
 upload your map data directly into it. Instead, you select the type of
 data you wish to display in your choropleth map, and ColorBrewer will
 recommend color palettes that work best with your data story. Then you
@@ -6957,7 +7048,7 @@ Some mapping tools allow you to choose between two different *types of
 color intervals* to show movement up or down a data scale, as shown in
 Figure <a href="#fig:intervals-type-combined">8.9</a>. *Steps* are
 clearly-marked color dividers, like a staircase, while *continuous* is a
-gradual change in hue, like a ramp. Both go upward, but take you there
+gradual change in color, like a ramp. Both go upward, but take you there
 in different ways.
 
 <img src="images/08-map/intervals-type-combined.png" alt="Steps versus continuous color intervals in Datawrapper (left) and Tableau Public (right)." width="500" />
@@ -7078,10 +7169,12 @@ geographic patterns and diversity within your data. To do this, you’ll
 need to explore beyond the default map settings and test which options
 do the best job of telling an honest and insightful data story.
 
-<img src="images/08-map/intervals-datawrapper-montage.png" alt="Use the full color range to show all of the differences in the data. (Image by Datawrapper Academy.)" width="500" />
+<img src="images/08-map/intervals-datawrapper-montage.png" alt="Use the full color range to show all of the differences in the data. Image by [Datawrapper Academy](https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps), reprinted with permission." width="500" />
 <p class="caption">
 Figure 8.13: Use the full color range to show all of the differences in
-the data. (Image by Datawrapper Academy.)
+the data. Image by [Datawrapper
+Academy](https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps),
+reprinted with permission.
 </p>
 
 Designing true and meaningful choropleth maps is challenging work. You
@@ -8378,7 +8471,7 @@ learned about [chart design in Chapter 7](chart-design.html) and [map
 design in Chapter 8](map-design.html). Jonathan Schwabish, an economist
 who specializes in creating policy-relevant data visualizations, offers
 his advice in recent publications about creating tables that communicate
-well with multiple audiences.[31]. Here’s a summary of several of his
+well with multiple audiences.[32]. Here’s a summary of several of his
 key points, which also appear in Figure
 <a href="#fig:table-design">9.1</a>.
 
@@ -8399,7 +8492,7 @@ items or outliers in your data, a topic we’ll discuss later in [Chapter
 
 When creating cross-tabulations to illustrate data correlations and
 possible causal relationships, statistician Joel Best offers two more
-design recommendations.[32]
+design recommendations.[33]
 
 1.  Place the independent variable (the suspected cause) at the top in
     the column headers, and the dependent variable (the possible effect)
@@ -8456,7 +8549,7 @@ the interactive table online.
 You’ll also learn how to create sparklines, or tiny line charts that
 quickly summarize data trends. This chart type was refined by Edward
 Tufte, a Yale professor and data visualization pioneer, who described
-sparklines as “datawords… intense, simple, word-sized graphics.”[33]
+sparklines as “datawords… intense, simple, word-sized graphics.”[34]
 While Tufte envisioned sparklines on a static sheet of paper or PDF
 document, you’ll create them inside an interactive table, as shown in
 Figure <a href="#fig:datawrapper-table">9.3</a>. Readers can search by
@@ -10811,7 +10904,7 @@ Mistakes](fix.html) in the appendix. Or to delve further into
 JavaScript, the language that Leaflet relies on, we strongly recommend
 Marijn Haverbeke’s *Eloquent JavaScript*, available both in print and as
 an [open-source online book](https://eloquentjavascript.net/) with an
-interactive coding sandbox to try out examples.[34]
+interactive coding sandbox to try out examples.[35]
 
 <table>
 <caption>Table 13.1: Map Code Templates, Best Uses, and Tutorials</caption>
@@ -13540,7 +13633,7 @@ algorithmic, and intergroup—as well as [spatial
 biases](spatial-bias.html) that more specific to working with maps.
 While we may not be able to stop bias entirely, in this chapter you’ll
 learn how to identify it in the works by other people, and strategies to
-reduce its presence in our own visualizations.[35]
+reduce its presence in our own visualizations.[36]
 
 How to Lie with Charts
 ----------------------
@@ -13644,7 +13737,7 @@ Celsius (or about 2 degrees Fahrenheit) during the past fifty years, and
 this warming has already begun to cause glacial melt and rising sea
 levels. Your task is to create *misleading* line charts that *diminish*
 the appearance of rising global temperature change in the reader’s
-eye.[36]
+eye.[37]
 
 1.  Open the [global temperature change 1880-2019 data in Google
     Sheets](https://docs.google.com/spreadsheets/d/1Npc7ozRjlsgRLLEV_B5zBvqyRqL6akE2qrEIGegHfGU/edit#gid=0),
@@ -13717,7 +13810,7 @@ expert Albert Cairo reminds us that line charts represent values in the
 line charts by their shape, rather than their height, so the baseline is
 irrelevant. Therefore, flattening the line chart for temperature change
 may mislead readers, but it’s technically not wrong, as long as it is
-labelled correctly.[37]
+labelled correctly.[38]
 
 #### Widen the chart to warp its aspect ratio
 
@@ -13748,7 +13841,7 @@ chart should roughly match its aspect ratio. For example, if a chart
 represents a 33 percent increase, which is the same as 33/100 or 1/3, he
 recommends an aspect ratio of 3:1 (because the fraction is flipped by
 placing width before height), or in other words, a line chart that is
-three times wider than its height.[38]
+three times wider than its height.[39]
 
 But Cairo does *not* propose his aspect ratio recommendation as a
 universal rule because he recognizes how it fails with very small or
@@ -13787,7 +13880,7 @@ translates into a 12:1 aspect ratio, or a line chart that is twelve
 times wider than it is tall, as shown in Figure
 <a href="#fig:temperature2-aspect-cairo">15.6</a>. Cairo warns that this
 significant global temperature increase looks “deceptively small,” so he
-cautious against using his aspect ratio recommendation in all cases.[39]
+cautious against using his aspect ratio recommendation in all cases.[40]
 
 &lt;img src=“images/15-detect/temperature2-aspect-cairo-annotated.png”
 alt=“Following Cairo’s”recommendation" for an 8% increase results in a
@@ -13797,13 +13890,24 @@ Figure 15.6: Following Cairo’s “recommendation” for an 8% increase
 results in a 12:1 aspect ratio that diminishes change.
 </p>
 
+Note: Some experts advise that aspect ratios for line charts should
+follow the *banking to 45 degrees* principle, which states that the
+average orientation of line segments should be equal to 45 degrees,
+upwards or downwards, in order to distinguish individual segments. But
+this requires statistical software to calculate slopes for all of the
+lines, and still is not a “rule” that fits all cases. Read a [good
+overview by Robert
+Kosara](https://eagereyes.org/basics/banking-45-degrees).[41]
+
 Where does all of this leave us? If you feel confused, that’s because
 data visualization has *no universal rule about aspect ratios*. What
 should you do? First, never automatically accept the default chart.
 Second, explore how different aspect ratios affect its appearance.
-Finally, even Cairo argues that you should use own judgment and ignore
-his recommendation in several cases, because there is no single rule
-about aspect ratio that fits all circumstances.
+Finally, even Cairo argues that you should use your own judgment rather
+than follow his recommendation in every situation, because there is no
+single rule about aspect ratio that fits all circumstances. Make a
+choice that honestly interprets the data and clearly tells a story to
+your reader.
 
 #### Add more data and a dual vertical axis
 
@@ -13919,7 +14023,7 @@ several ways that charts can be designed to deceive readers, but did not
 exhaust all of the options. For example, see additional readings on ways
 to create three-dimensional charts and to tilt the reader’s perspective
 below the baseline, which causes readers to misjudge the relative height
-of column or line charts.[40]
+of column or line charts.[42]
 
 You may feel frustrated that data visualization lacks clearly-defined
 design rules for many cases, like we are accustomed to reading in our
@@ -13943,7 +14047,7 @@ your own. We’ll focus our attention on choropleth maps that use shading
 or color to represent values in geographic areas, because they are a
 topic of considerable mischief. This exercise was inspired by geographer
 Mark Monmonier’s classic book by the same name, *How to Lie with Maps*,
-originally published in 1991, now in its third edition.[41]
+originally published in 1991, now in its third edition.[43]
 
 Before we get started, review the [map design principles in Chapter
 8](map-design.html) to avoid common mistakes when designing choropleth
@@ -14170,7 +14274,7 @@ identical. Furthermore, Spiegelhalter observes that when we supplement
 rates with raw counts, it further increases our impression of risks. For
 example, if we told you a surgical procedure had a 5 percent mortality
 rate *and* that 20 out of 400 patients died, it seems worse because we
-begin to imagine real people’s lives, not just abstract percentages.[42]
+begin to imagine real people’s lives, not just abstract percentages.[44]
 Counter framing bias by being aware of its potential effect on our minds
 and calling it out.
 
@@ -14184,12 +14288,12 @@ judges used when deciding on prison sentences or probation. But
 ProPublica investigative journalists found that the algorithm wrongly
 predicted Black defendants to be repeat offenders at almost twice the
 rate as White defendants, even when controlling for the types of prior
-crimes they committed.[43] Algorithms also have added to gender bias in
+crimes they committed.[45] Algorithms also have added to gender bias in
 the financial services industry. When Apple and Goldman Sachs partnered
 to offer a new type of credit card, several customers noticed that the
 software formula to evaluate applications sometimes offered men 10 to 20
 times the amount of credit as women, even if they were married, owned
-the same assets, and had similar prior credit scores.[44] In both cases,
+the same assets, and had similar prior credit scores.[46] In both cases,
 companies denied the charges of algorithmic bias but refused to reveal
 the decision-making process within their software formulas, which they
 argued were proprietary. As a result, we need to be vigilant about the
@@ -14204,7 +14308,7 @@ the field of data visualization, and have advocated for ways to counter
 its impact. For example, Jonathan Schwabish and Alice Feng describe how
 they applied a racial equity lens to revise the [Urban Institute’s Data
 Visualization Style
-Guide](http://urbaninstitute.github.io/graphics-styleguide/).[45] For
+Guide](http://urbaninstitute.github.io/graphics-styleguide/).[47] For
 example, Schwabish and Feng recommend ordering group labels to focus on
 the data story, rather than listing “White” and “Men” at the top by
 default. They also call on us to proactively acknowledge missing groups
@@ -14229,19 +14333,19 @@ in separate but adjacent charts, each with its own reference to state or
 national averages and confidence intervals, as shown in Figure
 <a href="#fig:schwabish-feng2">15.16</a>.
 
-<img src="images/15-detect/schwabish-feng1.png" alt="To avoid a deficit-based perspective, Schwabish and Feng argue against combining racial and ethnic data on the same chart. Source: [Data@Urban](https://medium.com/@urban_institute/applying-racial-equity-awareness-in-data-visualization-bd359bf7a7ff)." width="500" />
+<img src="images/15-detect/schwabish-feng1.png" alt="To avoid a deficit-based perspective, Schwabish and Feng argue against combining racial and ethnic data on the same chart. Image by [Data@Urban](https://medium.com/@urban_institute/applying-racial-equity-awareness-in-data-visualization-bd359bf7a7ff)." width="500" />
 <p class="caption">
 Figure 15.15: To avoid a deficit-based perspective, Schwabish and Feng
-argue against combining racial and ethnic data on the same chart.
-Source:
+argue against combining racial and ethnic data on the same chart. Image
+by
 [Data@Urban](https://medium.com/@urban_institute/applying-racial-equity-awareness-in-data-visualization-bd359bf7a7ff).
 </p>
 
-<img src="images/15-detect/schwabish-feng2.png" alt="Instead, Schwabish and Feng recommend placing racial and ethnic data in separate charts, with state or national averages as a comparison point. Source: [Data@Urban](https://medium.com/@urban_institute/applying-racial-equity-awareness-in-data-visualization-bd359bf7a7ff)." width="500" />
+<img src="images/15-detect/schwabish-feng2.png" alt="Instead, Schwabish and Feng recommend placing racial and ethnic data in separate charts, with state or national averages as a comparison point. Image by [Data@Urban](https://medium.com/@urban_institute/applying-racial-equity-awareness-in-data-visualization-bd359bf7a7ff)." width="500" />
 <p class="caption">
 Figure 15.16: Instead, Schwabish and Feng recommend placing racial and
 ethnic data in separate charts, with state or national averages as a
-comparison point. Source:
+comparison point. Image by
 [Data@Urban](https://medium.com/@urban_institute/applying-racial-equity-awareness-in-data-visualization-bd359bf7a7ff).
 </p>
 
@@ -14383,7 +14487,7 @@ anywhere else in the world, Google Maps shows a dotted-line border that
 represents a disputed territory. Although Google claims to “remain
 neutral on geopolitical disputes,” according to the *Washington Post*,
 the corporation clearly took a side by displaying a solid border for
-Russian viewers.[46] Google and several other web map providers have
+Russian viewers.[48] Google and several other web map providers have
 taken similar actions regarding the contested border between India and
 Pakistan, the waterway between Iran and Saudi Arabia, and the sea
 between Japan and South Korea.
@@ -14496,7 +14600,7 @@ you will need to make about the [format of your data
 story](story-format.html), with our continual emphasis on sharing
 interactive visualizations rather than static images. Our inspiration
 for this chapter is drawn from excellent books by visualization experts
-Cole Nussbaumer Knaflic and Alberto Cairo.[47]
+Cole Nussbaumer Knaflic and Alberto Cairo.[49]
 
 Build a Narrative on a Storyboard
 ---------------------------------
@@ -15204,6 +15308,9 @@ Wiley, 2015.
 ———. *Storytelling with Data: Let’s Practice!* John Wiley & Sons, 2019.
 <https://www.google.com/books/edition/Storytelling_with_Data/aGatDwAAQBAJ>.
 
+Kosara, Robert. “Aspect Ratio and Banking to 45 Degrees.” Eagereyes,
+June 3, 2013. <https://eagereyes.org/basics/banking-45-degrees>.
+
 Menasce Horowitz, Julia, Ruth Igielnik, and Rakesh Kochhar. “Trends in
 U.S. Income and Wealth Inequality.” Pew Research Center’s Social &
 Demographic Trends Project, January 9, 2020.
@@ -15225,21 +15332,22 @@ Times: Business*, July 27, 2009.
 <https://www.nytimes.com/2009/07/28/business/media/28adco.html>.
 
 Rost, Lisa Charlotte. “How to Pick More Beautiful Colors for Your Data
-Visualizations.” Chartable. Accessed October 21, 2020.
+Visualizations.” DataWrapper Blog. Accessed October 21, 2020.
 <https://blog.datawrapper.de/beautifulcolors/index.html>.
 
 ———. “How to Prepare Your Data for Analysis and Charting in Excel &
-Google Sheets.” Chartable: A Blog by Datawrapper. Accessed August 28,
-2020.
+Google Sheets.” Datawrapper Blog. Accessed August 28, 2020.
 <https://blog.datawrapper.de/prepare-and-clean-up-data-for-data-visualization/index.html>.
 
 ———. “What I Learned Recreating One Chart Using 24 Tools.” Source,
 December 8, 2016.
 <https://source.opennews.org/en-US/articles/what-i-learned-recreating-one-chart-using-24-tools/>.
 
-———. “Your Friendly Guide to Colors in Data Visualisation.” Chartable: A
-Blog by Datawrapper, July 31, 2018.
-<https://blog.datawrapper.de/colorguide/>.
+———. “What to Consider When Considering Data Vis Rules.” Lisa Charlotte
+Rost, November 27, 2020. <https://lisacharlotterost.de/datavisrules>.
+
+———. “Your Friendly Guide to Colors in Data Visualisation.” Datawrapper
+Blog, July 31, 2018. <https://blog.datawrapper.de/colorguide/>.
 
 Rothbaum, Jonathan, and Adam Bee. “Coronavirus Infects Surveys, Too:
 Nonresponse Bias During the Pandemic in the CPS ASEC.” US Census Bureau.
@@ -15406,8 +15514,8 @@ Enlighten*, Second edition (Burlingame, CA: Analytics Press, 2012),
 p. 166
 
 [17] Lisa Charlotte Rost, “How to Prepare Your Data for Analysis and
-Charting in Excel & Google Sheets” (Chartable: A Blog by Datawrapper),
-accessed August 28, 2020,
+Charting in Excel & Google Sheets” (Datawrapper Blog), accessed August
+28, 2020,
 <https://blog.datawrapper.de/prepare-and-clean-up-data-for-data-visualization/index.html>
 
 [18] Edward R Tufte, *Envisioning Information* (Cheshire, CT: Graphics
@@ -15448,25 +15556,29 @@ Nonresponse Bias During the Pandemic in the CPS ASEC” (US Census
 Bureau), accessed December 8, 2020,
 <https://www.census.gov/library/working-papers/2020/demo/SEHSD-WP2020-10.html>
 
-[26] Cairo, *How Charts Lie*, 2019, p. 61.
+[26] Lisa Charlotte Rost, “What to Consider When Considering Data Vis
+Rules” (Lisa Charlotte Rost, November 27, 2020),
+<https://lisacharlotterost.de/datavisrules>
 
-[27] Lisa Charlotte Rost, “Your Friendly Guide to Colors in Data
-Visualisation” (Chartable: A Blog by Datawrapper, July 31, 2018),
+[27] Cairo, *How Charts Lie*, 2019, p. 61.
+
+[28] Lisa Charlotte Rost, “Your Friendly Guide to Colors in Data
+Visualisation” (Datawrapper Blog, July 31, 2018),
 <https://blog.datawrapper.de/colorguide/>; Lisa Charlotte Rost, “How to
-Pick More Beautiful Colors for Your Data Visualizations” (Chartable),
-accessed October 21, 2020,
+Pick More Beautiful Colors for Your Data Visualizations” (DataWrapper
+Blog), accessed October 21, 2020,
 <https://blog.datawrapper.de/beautifulcolors/index.html>
 
-[28] Few, *Show Me the Numbers*, p. 166
+[29] Few, *Show Me the Numbers*, p. 166
 
-[29] Rost, “Your Friendly Guide to Colors in Data Visualisation.”; Rost,
+[30] Rost, “Your Friendly Guide to Colors in Data Visualisation.”; Rost,
 “How to Pick More Beautiful Colors for Your Data Visualizations.”
 
-[30] See also Cynthia A. Brewer, *Designing Better Maps: A Guide for GIS
+[31] See also Cynthia A. Brewer, *Designing Better Maps: A Guide for GIS
 Users* (Esri Press, 2016),
 <https://www.google.com/books/edition/Designing_Better_Maps/gFErrgEACAAJ>
 
-[31] Jon Schwabish, “Thread Summarizing ’Ten Guidelines for Better
+[32] Jon Schwabish, “Thread Summarizing ’Ten Guidelines for Better
 Tables’” (Twitter, August 3, 2020),
 <https://twitter.com/jschwabish/status/1290323581881266177>; Jonathan A.
 Schwabish, “Ten Guidelines for Better Tables,” *Journal of Benefit-Cost
@@ -15476,18 +15588,18 @@ Visualizations: A Guide for Scholars, Researchers, and Wonks* (Columbia
 University Press, 2021),
 <https://cup.columbia.edu/book/better-data-visualizations/9780231193115>
 
-[32] Joel Best, *More Damned Lies and Statistics: How Numbers Confuse
+[33] Joel Best, *More Damned Lies and Statistics: How Numbers Confuse
 Public Issues* (Berkeley, CA: University of California Press, 2004),
 <https://www.google.com/books/edition/More_Damned_Lies_and_Statistics/SWBr7D6VavoC>,
 pp. 31-35.
 
-[33] Edward R. Tufte, *Beautiful Evidence* (Graphics Press, 2006),
+[34] Edward R. Tufte, *Beautiful Evidence* (Graphics Press, 2006),
 <http://books.google.com/books?isbn=0961392177>, pp. 46-63.
 
-[34] Marijn Haverbeke, *Eloquent JavaScript: A Modern Introduction to
+[35] Marijn Haverbeke, *Eloquent JavaScript: A Modern Introduction to
 Programming, 3rd Edition*, 2018, <https://eloquentjavascript.net/>
 
-[35] The “how to lie” tutorials were inspired by several excellent works
+[36] The “how to lie” tutorials were inspired by several excellent works
 in data visualization: Cairo, *The Truthful Art*, 2016; Cairo, *How
 Charts Lie*, 2019; Darrell Huff, *How to Lie with Statistics* (W. W.
 Norton & Company, 1954),
@@ -15500,36 +15612,39 @@ Nathan Yau, “How to Spot Visualization Lies” (FlowingData, February 9,
 NASA JPL, “Educator Guide: Graphing Global Temperature Trends,” 2017,
 <https://www.jpl.nasa.gov/edu/teach/activity/graphing-global-temperature-trends/>
 
-[36] The tutorial on misleading climate change data was inspired by a
+[37] The tutorial on misleading climate change data was inspired by a
 high school classroom activity created by the NASA Jet Propulsion
 Laboratory (JPL), as well as Alberto Cairo’s analysis of charts by
 climate change deniers. NASA JPL; Cairo, *How Charts Lie*, 2019,
 pp. 65-67, 135-141.
 
-[37] Cairo, p. 61.
+[38] Cairo, p. 61.
 
-[38] Cairo, p. 69.
+[39] Cairo, p. 69.
 
-[39] Cairo, p. 70.
+[40] Cairo, p. 70.
 
-[40] Cairo, p. 58.
+[41] Robert Kosara, “Aspect Ratio and Banking to 45 Degrees” (Eagereyes,
+June 3, 2013), <https://eagereyes.org/basics/banking-45-degrees>
 
-[41] Monmonier, *How to Lie with Maps, Third Edition*.
+[42] Cairo, *How Charts Lie*, 2019, p. 58.
 
-[42] David Spiegelhalter, *The Art of Statistics: Learning from Data*
+[43] Monmonier, *How to Lie with Maps, Third Edition*.
+
+[44] David Spiegelhalter, *The Art of Statistics: Learning from Data*
 (Penguin UK, 2019),
 <https://www.google.com/books/edition/The_Art_of_Statistics/CiZeDwAAQBAJ>,
 pp. 22-5
 
-[43] Julia Angwin et al., “Machine Bias” (ProPublica, May 23, 2016),
+[45] Julia Angwin et al., “Machine Bias” (ProPublica, May 23, 2016),
 <https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing?token=pnmZCKup_9SO_Q1DvGQOooKLHsrJG0Fr>
 
-[44] Neil Vigdor, “Apple Card Investigated After Gender Discrimination
+[46] Neil Vigdor, “Apple Card Investigated After Gender Discrimination
 Complaints (Published 2019),” *The New York Times: Business*, November
 10, 2019,
 <https://www.nytimes.com/2019/11/10/business/Apple-credit-card-investigation.html>
 
-[45] Jonathan Schwabish and Alice Feng, “Applying Racial Equity
+[47] Jonathan Schwabish and Alice Feng, “Applying Racial Equity
 Awareness in Data Visualization,” preprint (Open Science Framework,
 August 27, 2020), <https://doi.org/10.31219/osf.io/x8tbw>. See also this
 web post summary of the paper, Jonathan Schwabish and Alice Feng,
@@ -15539,11 +15654,11 @@ accessed October 16, 2020,
 and Urban Institute, “Urban Institute Data Visualization Style Guide,”
 2020, <http://urbaninstitute.github.io/graphics-styleguide/>
 
-[46] Greg Bensinger, “Google Redraws the Borders on Maps Depending on
+[48] Greg Bensinger, “Google Redraws the Borders on Maps Depending on
 Who’s Looking,” *Washington Post*, February 14, 2020,
 <https://www.washingtonpost.com/technology/2020/02/14/google-maps-political-borders/>
 
-[47] Cole Nussbaumer Knaflic, *Storytelling with Data: A Data
+[49] Cole Nussbaumer Knaflic, *Storytelling with Data: A Data
 Visualization Guide for Business Professionals*, 1 edition (Hoboken, New
 Jersey: Wiley, 2015); Cole Nussbaumer Knaflic, *Storytelling with Data:
 Let’s Practice!* (John Wiley & Sons, 2019),

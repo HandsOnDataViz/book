@@ -372,43 +372,50 @@ Figure 7.58: Filtered Line chart: Explore the <a href="https://public.tableau.co
 <div id="build-and-publish-a-filtered-line-chart" class="section level4 unnumbered" number="">
 <h4>Build and Publish a Filtered Line Chart</h4>
 <ol style="list-style-type: decimal">
-<li>Drag the <em>Year</em> variable to <em>Columns</em> shelf. This will place years along the x-axis.</li>
-<li>Drag the <em>Percent Internet Users</em> variable to <em>Rows</em> shelf to place them on the y-axis. The value in the shelf will change to <code>SUM(Percent Internet Users)</code>. You should see a single line chart that sums up percentages for each year. That is completely incorrect, so let’s fix it.</li>
-<li>In order to “break” aggregation, drag-and-drop <em>Country Name</em> to the <em>Color</em> shelf of the <em>Marks</em> card.
-Tableau will warn you that the recommended number of colors should not exceed 20. Since we will be adding checkbox filtering, ignore this warning, and go ahead and press the <em>Add all members</em> button.</li>
-<li>At first, everything will look like a spaghetti plate of lines and colors! To add filtering,
+<li><p>Drag the <em>Year</em> variable to <em>Columns</em> shelf. This will place years along the x-axis.</p></li>
+<li><p>Drag the <em>Percent Internet Users</em> variable to <em>Rows</em> shelf to place them on the y-axis. The value in the shelf will change to <code>SUM(Percent Internet Users)</code>. You should see a single line chart that sums up percentages for each year. That is completely incorrect, so let’s fix it.</p></li>
+<li><p>In order to “break” aggregation, drag-and-drop <em>Country Name</em> to the <em>Color</em> shelf of the <em>Marks</em> card, as shown in Figure <a href="filtered-line-tableau.html#fig:tableau-filtered-filters">7.59</a>. Tableau will warn you that the recommended number of colors should not exceed 20. Since we will be adding checkbox filtering, ignore this warning, and go ahead and press the <em>Add all members</em> button.</p></li>
+</ol>
+
+<div class="figure"><span id="fig:tableau-filtered-filters"></span>
+<img src="images/07-chart/tableau-filtered-filters.png" alt="Drag Country Name to the Color shelf of the Marks card to break up the aggregated data." width="220" />
+<p class="caption">
+Figure 7.59: Drag <em>Country Name</em> to the <em>Color</em> shelf of the <em>Marks</em> card to break up the aggregated data.
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li><p>At first, everything will look like a spaghetti plate of lines and colors! To add filtering,
 drag <em>Country Name</em> to the <em>Filters</em> card. In the Filter window, make sure all countries
-are checked, and click <em>OK</em>.</li>
-<li>In the <em>Filters</em> card, click the dropdown arrow of the <strong>Country Name</strong> symbol, then scroll down and select Show Filter, as shown in Figure <a href="filtered-line-tableau.html#fig:tableau-filtered-show-filter">7.59</a>.</li>
-<li>You will see a list of options with all checkboxes to appear on the right side of the chart.
+are checked, and click <em>OK</em>.</p></li>
+<li><p>In the <em>Filters</em> card, click the dropdown arrow of the <em>Country Name</em> symbol, then scroll down and select Show Filter, as shown in Figure <a href="filtered-line-tableau.html#fig:tableau-filtered-show-filter">7.60</a>.</p></li>
+<li><p>You will see a list of options with all checkboxes to appear on the right side of the chart.
 Click <em>(All)</em> to add/remove all options, and select a few countries to see
 how the interactive filtering works. The checkboxes you select at this stage will appear “on” in the published map.
-You may notice that some countries from your “on” selection got assigned the same value. The good news is, Tableau lets you change colors of individual datapoints (in our case, countries). From the <em>Marks</em> card, click <em>Color</em> shelf, and then <em>Edit Colors…</em>. Double-click a country from the <em>Select Data Item:</em> list to bring up a color picker window, pick your favorite color, and click OK. Although you can ensure that your pre-selected countries are painted in unique colors, there will be repetitions among other countries as your palette is limited to 20 colors. Unfortunately, there is little you can do to go around this.</li>
+You may notice that some countries from your “on” selection got assigned the same value. The good news is, Tableau lets you change colors of individual datapoints (in our case, countries). From the <em>Marks</em> card, click <em>Color</em> shelf, and then <em>Edit Colors…</em>. Double-click a country from the <em>Select Data Item:</em> list to bring up a color picker window, pick your favorite color, and click OK. Although you can ensure that your pre-selected countries are painted in unique colors, there will be repetitions among other countries as your palette is limited to 20 colors. Unfortunately, there is little you can do to go around this.</p></li>
 </ol>
 
 <div class="figure"><span id="fig:tableau-filtered-show-filter"></span>
 <img src="images/07-chart/tableau-filtered-show-filter.png" alt="After you drag Country Name to the Filters card, make sure the Filter is displayed." width="220" />
 <p class="caption">
-Figure 7.59: After you drag Country Name to the Filters card, make sure the Filter is displayed.
+Figure 7.60: After you drag <em>Country Name</em> to the <em>Filters</em> card, make sure the Filter is displayed.
 </p>
 </div>
 <ol start="7" style="list-style-type: decimal">
-<li><p>Double-click on the <em>Sheet 1</em> title (above the chart) and replace it with a more meaningful title, such as “Internet Access by Country, 1995–2018.” In the menu, go to <em>Worksheet &gt; Show Caption</em> to add a Caption block under the chart.
-Use this space to add source of your data (World Bank), and perhaps credit yourself as
+<li><p>Double-click on the <em>Sheet 1</em> title (above the chart) and replace it with a more meaningful title, such as “Internet Access by Country, 1995–2018.” In the menu, go to <em>Worksheet &gt; Show Caption</em> to add a Caption block under the chart. Use this space to add source of your data (World Bank), and perhaps credit yourself as
 the author of this visualization.</p></li>
 <li><p>Change <em>Standard</em> to <em>Fit Width</em> in the drop-down menu above the <em>Columns</em> shelf.</p></li>
 <li><p>You may notice that the x-axis (Year) starts with 1994 and ends with 2020,
 although our data is for 1995–2018. Double-click on the x-axis, and change
-<em>Range</em> from <em>Automatic</em> to <em>Fixed</em>, with the Fixed start of <code>1995</code>, and the Fixed end of <code>2018</code>.
+<em>Range</em> from <em>Automatic</em> to <em>Fixed</em>, with the Fixed start of <em>1995</em>, and the Fixed end of <em>2018</em>.
 Close the window and see that the empty space on the edges has disappeared.</p></li>
-<li><p>Once your filtered line chart looks like the one shown in Figure <a href="filtered-line-tableau.html#fig:tableau-filtered-ready">7.60</a>,
+<li><p>Once your filtered line chart looks like the one shown in Figure <a href="filtered-line-tableau.html#fig:tableau-filtered-ready">7.61</a>,
 you are ready to publish. Go to <em>File &gt; Save to Tableau Public As…</em>, and log into your account, or create one if you haven’t yet done so. Follow the prompts to publish your chart on the public web, or see the previous <a href="scatter-tableau.html">Scatter Chart in Tableau Public tutorial</a> for more details.</p></li>
 </ol>
 
 <div class="figure"><span id="fig:tableau-filtered-ready"></span>
-<img src="images/07-chart/tableau-filtered-ready.png" alt="This workbook is ready to be published."  />
+<img src="images/07-chart/tableau-filtered-ready-annotated.png" alt="This workbook is ready to be published."  />
 <p class="caption">
-Figure 7.60: This workbook is ready to be published.
+Figure 7.61: This workbook is ready to be published.
 </p>
 </div>
 <p>See the <a href="embed-tableau.html">Embed Tableau Public on Your Website</a> section of this

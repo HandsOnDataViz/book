@@ -135,6 +135,7 @@ fig:tableau-scatter-final
 fig:tableau-toolbar-settings
 fig:tableau-filtered-data
 fig:tableau-filtered
+fig:tableau-filtered-filters
 fig:tableau-filtered-show-filter
 fig:tableau-filtered-ready
 tab:map-types
@@ -317,7 +318,6 @@ fig:geojson-github
 fig:gimme-geodata
 fig:geojson-io-import
 fig:geojson-io-csv-data
-fig:geojsonio-gif
 fig:geojson-io-draw
 fig:mapshaper-export
 fig:mapshaper-edit
@@ -357,14 +357,6 @@ fig:plastic-refine
 fig:plastic-area-chart
 fig:observed-vs-projected
 fig:mac-file-extensions2
-fig:tiger
-fig:screenshot-tall
-fig:sample-map
-fig:sheets-option-drag
-fig:video-sample
-fig:video-sample2
-tab:left-table
-tab:right-table
 introduction
 choose
 spreadsheet
@@ -382,6 +374,3 @@ transform
 detect
 story
 fix
-ct
-peer
-bookdown

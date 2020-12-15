@@ -33,7 +33,7 @@ But can you spot these other errors that Smart Cleanup missed?
 
 - In cell A10, *Russsia* is misspelled with an extra *s*.
 - In cell C6, Pakistan's share of the world population appears in decimal form, not percentage.
-- In cell D4, the US date appears in MM/DD/YYYY format, not like the other entries.
+- In cell D4, the US date appears in a format unlike the other entries. If you're familiar with different international date formats, you'll also wonder if `12/10/2020` is meant to be MM/DD/YYYY format that's commonly used in the US, or the DD/MM/YYYY format that's commonly used elsewhere. Smart Cleanup cannot answer this for you.
 
 The Google Sheets Smart Cleanup feature is a good place to start. But if your data is really messy, you may need to turn to more sophisticated tools described later in this chapter, such as [OpenRefine](open-refine.html). In the next section you'll learn another clean-up method that works in any spreadsheet: find and replace with a blank entry.
 

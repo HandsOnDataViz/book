@@ -31,7 +31,7 @@ Table: (\#tab:chart-templates) Chart Code Templates, Best Uses, and Tutorials
 | --- | --- |
 | Bar or Column Chart<br> ![](images/12-chartcode/chartjs-column.png) | Best to compare categories side-by-side. If labels are long, use horizontal bars instead of vertical columns. <br>Power tool: [Bar or Column Chart with CSV data in Chart.js code template and tutorial](chartjs-bar-column.html)  |
 | Error Bars in a Bar/Column Chart<br> ![](images/12-chartcode/chartjs-error-bars.png) | Best to show margin of error bars when comparing categories side-by-side. If labels are long, use horizontal bars instead of vertical columns. <br>Power tool: [Error Bars in Bar/Column Chart with CSV data in Chart.js code template and tutorial](chartjs-error-bars.html)  |
-| Line Chart<br> ![](images/12-chartcode/chartjs-line.png) | Best to show continuous data, such as change over time.<br>Power tool: [Line Chart with CSV data in Chart.js code template and tutorial](chartjs-line.html) |
+| Line Chart<br> ![](images/12-chartcode/chartjs-line.png) | Best to show continuous data, such as change over time.<br>Power tool: [Line Chart with CSV data in Chart.js code template and tutorial](chartjs-line.html). See also note to modify into stacked area chart. |
 | Annotated Line Chart<br> ![](images/12-chartcode/highcharts-annotated-line.png) | Best to add contextual notes inside chart of continuous data, such as change over time.<br>Power tool: [Annotated Line Chart with CSV data in Highcharts code template and tutorial](highcharts-annotated-line.html) |
 | Scatter Chart<br> ![](images/12-chartcode/chartjs-scatter.png) | Best to show the relationship between two datasets as XY coordinates to reveal possible correlations.<br>Power tool: [Scatter Chart with CSV data in Chart.js code template and tutorial](chartjs-scatter.html) |
 | Bubble Chart<br> ![](images/12-chartcode/chartjs-bubble.png) | Best to show the relationship between three or four sets of data, with XY coordinates, bubble size, and color. <br>Power tool: [Bubble Chart with CSV data in Chart.js code template and tutorial](chartjs-bubble.html) |
@@ -245,6 +245,8 @@ var SHOW_GRID = true;
  // `true` to show the legend, `false` to hide
 var SHOW_LEGEND = true;
 ```
+
+Note: To change a Chart.js line chart into a stacked area chart, make sure each `dataset` comes with a `fill: true` property, and that yAxis `stacked` property is set to `true`.
 
 Remember to look at the official [Chart.js documentation](https://www.chartjs.org/docs/latest/) if you want to add more features. If something isn't working as desired, visit [StackOverflow](https://stackoverflow.com/search?q=chartjs) to see if anyone had already solved your problem.
 

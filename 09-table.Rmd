@@ -33,15 +33,26 @@ When creating cross-tabulations to illustrate data correlations and possible cau
 6. Place the independent variable (the suspected cause) at the top in the column headers, and the dependent variable (the possible effect) on the side for each row.
 7. Calculate percentages from the raw numbers in a downward direction, so that each value of the independent variable (the suspected cause) totals 100 percent.
 
-Let's apply these design principles by constructing two tables that calculate percentages: the wrong way versus the right way. The first table calculates percentages in the wrong direction---horizontally---which confuses us about whether X is correlated with Y. But the second table calculates percentages in the correct direction---vertically---which shows how X is correlated with Y, and may signal a causal relationship, as shown in Figure \@ref(fig:table-direction-placeholder)
+Let's apply these design principles by constructing two different tables that calculate percentages, the bad way versus the better way, with data from the Pfizer coronavirus vaccine trial study results that were announced in November 2020. In this blind trial, 43,661 volunteers were randomly divided into two groups, about 21,830 each. One group received the vaccine and the other group received a placebo, which were the independent variables, the suspected causal factors. Researchers watched closely and observed these dependent variables (or possible effects): 162 people in the placebo group became infected with the virus, compared to 8 people in the vaccine group.^[@zimmerCompaniesSayTheir2020, @young-saverWhatDoes952020].
 
-(ref:table-direction-placeholder) TODO: Create side-by-side 'bad' and 'better' tables, with real data and superimposed arrows to show the direction of calculation, to improve on this placeholder from Best 2014 p. 32.
+Table \@ref(tab:vaccine-bad) calculates the percentages of this trial in the *wrong* direction---horizontally---and confuses the reader about the relationship between cause and effect, especially in the second row.
 
-```{r table-direction-placeholder, fig.cap="(ref:table-direction-placeholder)"}
-knitr::include_graphics("images/09-table/table-direction-placeholder.png")
-```
+Table: (\#tab:vaccine-bad) **Bad** Because It Calculates Percentages Horizontally
 
-TODO above: Find better data to replace his imaginary data below and rewrite text to match.
+|  | Vaccine | Placebo | Total |
+|-|-|-|-|
+| Infected | 4.7% (8) | 95.3% (162) | 100% (170) |
+| Not infected | 49.8% (21,822) | 50.2% (21,668) | 100% (43,490) |
+
+But Table \@ref(tab:vaccine-better) calculates percentages in the *correct* direction---vertically---which more clearly shows how the vaccine is correlated with lower infection rates, which researchers determined was a causal relationship.
+
+Table: (\#tab:vaccine-better) **Better** Because It Calculates Percentages Vertically
+
+|  | Vaccine | Placebo |
+|-|-|-|
+| Infected | 0.04% (8) | 0.74% (162) |
+| Not infected | 99.96% (21,822) | 99.27% (21,668) |
+| Total | 100% (21,830) | 100% (21,830) |
 
 Overall, the core principles of table design reflect similar concepts we previously discussed in chart and map design. Organize your presentation of the data with the readers' eyes in mind, to focus their attention on the most important elements of the story, so that they "take away" the most meaningful interpretation of the information. Do the visualization work for them, so that you don't have to rely on them to draw the same mental connections in their own minds. Remove any clutter or unnecessary repetition that stands in the way of these goals.
 

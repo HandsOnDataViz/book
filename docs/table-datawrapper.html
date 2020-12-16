@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-12-15" />
+<meta name="date" content="2020-12-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -343,13 +343,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="table-datawrapper" class="section level2 unnumbered" number="">
 <h2>Datawrapper Table with Sparklines</h2>
 <p>In this section, you’ll learn how to create an interactive table with <a href="https://datawrapper.de">Datawrapper</a>, the free online drag-and-drop visualization tool we previously introduced <a href="chart-design.html">to create charts in Chapter 7</a> and <a href="map-design.html">maps in Chapter 8</a>. You can start creating in Datawrapper right away in your browser, even without an account, but signing up for a free one will help you to keep your visualizations organized. Remember that you’ll probably still need a spreadsheet tool, such as Google Sheets, to compile and clean up data for large tables, but Datawrapper is the best tool to create and publish the interactive table online.</p>
-<p>You’ll also learn how to create sparklines, or tiny line charts that quickly summarize data trends. This chart type was refined by Edward Tufte, a Yale professor and data visualization pioneer, who described sparklines as “datawords… intense, simple, word-sized graphics.”<a href="#fn34" class="footnote-ref" id="fnref34"><sup>34</sup></a> While Tufte envisioned sparklines on a static sheet of paper or PDF document, you’ll create them inside an interactive table, as shown in Figure <a href="table-datawrapper.html#fig:datawrapper-table">9.3</a>. Readers can search by keyword, sort columns in ascending or descending order, and scroll through pages of sparklines to quickly identify data trends that would be difficult to spot in a traditional numbers-only table.</p>
+<p>You’ll also learn how to create sparklines, or tiny line charts that quickly summarize data trends. This chart type was refined by Edward Tufte, a Yale professor and data visualization pioneer, who described sparklines as “datawords… intense, simple, word-sized graphics.”<a href="#fn35" class="footnote-ref" id="fnref35"><sup>35</sup></a> While Tufte envisioned sparklines on a static sheet of paper or PDF document, you’ll create them inside an interactive table, as shown in Figure <a href="table-datawrapper.html#fig:datawrapper-table">9.2</a>. Readers can search by keyword, sort columns in ascending or descending order, and scroll through pages of sparklines to quickly identify data trends that would be difficult to spot in a traditional numbers-only table.</p>
 
 <div class="figure"><span id="fig:datawrapper-table"></span>
 <iframe src="https://datawrapper.dwcdn.net/0HK4f/" width="672" height="1007px">
 </iframe>
 <p class="caption">
-Figure 9.3: Table with sparklines. Explore the <a href="https://datawrapper.dwcdn.net/0HK4f/">interactive version</a>.
+Figure 9.2: Table with sparklines. Explore the <a href="https://datawrapper.dwcdn.net/0HK4f/">interactive version</a>.
 </p>
 </div>
 <p>In this tutorial, you’ll create an interactive table with sparklines to visualize differences in life expectancy at birth from 1960 to 2018 for over 195 nations around the world. Overall, life expectancy gradually rises in most nations, but a few display “dips” that stand out in the tiny line charts. For example, Cambodia and Vietnam both experienced a significant decrease in life expectancy, which corresponds with the deadly wars and refugee crises in both nations from the late 1960s to the mid-1970s. Sparklines help us to visually detect patterns like these, which anyone can investigate further by downloading the raw data through the link at the bottom of the interactive table.</p>
@@ -368,61 +368,61 @@ Figure 9.3: Table with sparklines. Explore the <a href="https://datawrapper.dwcd
 </ol>
 <p>Note: To learn more about flag icons, read the <a href="https://academy.datawrapper.de/article/144-how-to-insert-flag-icons-in-tables">Datawrapper post on this topic</a> and their <a href="https://github.com/datawrapper/datawrapper/wiki/Country-flag-icons">list of country codes and flags on GitHub</a>.</p>
 <ol start="7" style="list-style-type: decimal">
-<li>In the <em>Visualize</em> screen, under <em>Customize columns</em>, select the third line named <em>Nation</em>. Then scroll down and push the slider to <em>Replace country codes with flags</em>, as shown in Figure <a href="table-datawrapper.html#fig:datawrapper-flag">9.4</a>.</li>
+<li>In the <em>Visualize</em> screen, under <em>Customize columns</em>, select the third line named <em>Nation</em>. Then scroll down and push the slider to <em>Replace country codes with flags</em>, as shown in Figure <a href="table-datawrapper.html#fig:datawrapper-flag">9.3</a>.</li>
 </ol>
 
 <div class="figure"><span id="fig:datawrapper-flag"></span>
 <img src="images/09-table/datawrapper-flag.png" alt="Customize the Nation column and push slider to replace codes with flags."  />
 <p class="caption">
-Figure 9.4: Customize the <em>Nation</em> column and push slider to replace codes with flags.
+Figure 9.3: Customize the <em>Nation</em> column and push slider to replace codes with flags.
 </p>
 </div>
 <ol start="8" style="list-style-type: decimal">
 <li><p>Let’s hide the first two columns, since they’re no longer necessary to display. In the <em>Visualize</em> screen under <em>Customize columns</em>, select the <em>Name</em> column, then scroll down and un-check the boxes to <em>Show on desktop and mobile</em>. Repeat this step for the <em>Code</em> column. A “not visible” symbol (an eye with a slash through it) appears next to each customized column to remind us that we’ve hidden it.</p></li>
-<li><p>Now let’s color-code the <em>Continent</em> column to make it easier for readers to sort by category it in the interactive table. In the <em>Visualize</em> screen under <em>Customize columns</em>, select the <em>Continent</em> column, then scroll down and push the slider to select <em>Color cells based on categories</em>. In the drop-down menu, select the column <em>Continent</em>, and click on the <em>Background: customize colors</em> button. Select each continent and assign them different colors, as shown in Figure <a href="table-datawrapper.html#fig:datawrapper-colors">9.5</a>.</p></li>
+<li><p>Now let’s color-code the <em>Continent</em> column to make it easier for readers to sort by category it in the interactive table. In the <em>Visualize</em> screen under <em>Customize columns</em>, select the <em>Continent</em> column, then scroll down and push the slider to select <em>Color cells based on categories</em>. In the drop-down menu, select the column <em>Continent</em>, and click on the <em>Background: customize colors</em> button. Select each continent and assign them different colors, as shown in Figure <a href="table-datawrapper.html#fig:datawrapper-colors">9.4</a>.</p></li>
 </ol>
 
 <div class="figure"><span id="fig:datawrapper-colors"></span>
 <img src="images/09-table/datawrapper-colors.png" alt="Customize the Continent column and push slider to color cells based on categories." width="600" />
 <p class="caption">
-Figure 9.5: Customize the <em>Continent</em> column and push slider to color cells based on categories.
+Figure 9.4: Customize the <em>Continent</em> column and push slider to color cells based on categories.
 </p>
 </div>
 <p>Tip: To choose colors for the six continents, we used the <a href="design-choropleth.html">ColorBrewer design tool as described in Chapter 8</a>, and selected a 6-class qualitative scheme. Although this tool is designed primarily for choropleth maps, you can also use it to choose table and chart colors.</p>
 <ol start="10" style="list-style-type: decimal">
-<li>Now let’s prepare our data to add sparklines, or tiny line charts, to visually represent change in the <em>Life expectancy 1960</em> column, which we intentionally left blank for this step. Before you begin, you must change this column from textual data (represented by the A symbol in the <em>Customize columns</em> window) to numerical data (represented by the # symbol). At the top of the screen, click on the <em>2. Check and Describe</em> arrow to go back a step. (Datawrapper will save your work.) Now click on the table header to edit the properties for <em>column E: Life Expectancy 1960</em>. On the left side, use the drop-down menu to change its properties from <em>auto (text)</em> to <em>Number</em>, as shown in Figure <a href="table-datawrapper.html#fig:datawrapper-edit-column">9.6</a>. Then click <em>Proceed</em> to return to the <em>Visualize</em> window.</li>
+<li>Now let’s prepare our data to add sparklines, or tiny line charts, to visually represent change in the <em>Life expectancy 1960</em> column, which we intentionally left blank for this step. Before you begin, you must change this column from textual data (represented by the A symbol in the <em>Customize columns</em> window) to numerical data (represented by the # symbol). At the top of the screen, click on the <em>2. Check and Describe</em> arrow to go back a step. (Datawrapper will save your work.) Now click on the table header to edit the properties for <em>column E: Life Expectancy 1960</em>. On the left side, use the drop-down menu to change its properties from <em>auto (text)</em> to <em>Number</em>, as shown in Figure <a href="table-datawrapper.html#fig:datawrapper-edit-column">9.5</a>. Then click <em>Proceed</em> to return to the <em>Visualize</em> window.</li>
 </ol>
 
 <div class="figure"><span id="fig:datawrapper-edit-column"></span>
 <img src="images/09-table/datawrapper-edit-column.png" alt="Go back to Check &amp; Describe to change the properties of column E from textual to numerical data."  />
 <p class="caption">
-Figure 9.6: Go back to <em>Check &amp; Describe</em> to change the properties of column E from textual to numerical data.
+Figure 9.5: Go back to <em>Check &amp; Describe</em> to change the properties of column E from textual to numerical data.
 </p>
 </div>
 <ol start="11" style="list-style-type: decimal">
-<li>To create the sparklines, in the <em>Visualize</em> screen under <em>Customize columns</em>, select <em>all</em> of the columns from <em>Life expectancy 1960</em> down to <em>2018</em>. To select all at once, click on one column, then scroll down and shift-click on the next-to-last column. Then scroll down the page and click the <em>Show selected columns as tiny chart</em> button, as shown in Figure <a href="table-datawrapper.html#fig:datawrapper-tiny-chart">9.7</a>. These steps will create the sparklines in the column and automatically rename it to <em>Life expectancy 1960–2018</em>, as shown in Figure <a href="table-datawrapper.html#fig:datawrapper-bar-chart">9.8</a>.</li>
+<li>To create the sparklines, in the <em>Visualize</em> screen under <em>Customize columns</em>, select <em>all</em> of the columns from <em>Life expectancy 1960</em> down to <em>2018</em>. To select all at once, click on one column, then scroll down and shift-click on the next-to-last column. Then scroll down the page and click the <em>Show selected columns as tiny chart</em> button, as shown in Figure <a href="table-datawrapper.html#fig:datawrapper-tiny-chart">9.6</a>. These steps will create the sparklines in the column and automatically rename it to <em>Life expectancy 1960–2018</em>, as shown in Figure <a href="table-datawrapper.html#fig:datawrapper-bar-chart">9.7</a>.</li>
 </ol>
 <p>Tip: By design, we initially named this column <em>Life expectancy 1960</em>, because when we selected several columns to create sparklines, the tool added <em>–2018</em> to the end of the new column name.</p>
 
 <div class="figure"><span id="fig:datawrapper-tiny-chart"></span>
 <img src="images/09-table/datawrapper-tiny-chart.png" alt="Shift-click to select all columns from Life expectancy 1960–2018 down to 2018, then click on Show selected columns as tiny chart." width="300" />
 <p class="caption">
-Figure 9.7: Shift-click to select all columns from <em>Life expectancy 1960–2018</em> down to <em>2018</em>, then click on <em>Show selected columns as tiny chart</em>.
+Figure 9.6: Shift-click to select all columns from <em>Life expectancy 1960–2018</em> down to <em>2018</em>, then click on <em>Show selected columns as tiny chart</em>.
 </p>
 </div>
 <ol start="12" style="list-style-type: decimal">
-<li>Let’s add one more visual element: a bar chart to visually represent the <em>Difference</em> column in the table. In the <em>Visualize</em> screen under <em>Customize columns</em>, select <em>Difference</em>. Then scroll down and push the slider to select <em>Show as bar chart</em>, as shown in Figure <a href="table-datawrapper.html#fig:datawrapper-bar-chart">9.8</a>. Also, select a different bar color, such as black, to distinguish it from the continent colors.</li>
+<li>Let’s add one more visual element: a bar chart to visually represent the <em>Difference</em> column in the table. In the <em>Visualize</em> screen under <em>Customize columns</em>, select <em>Difference</em>. Then scroll down and push the slider to select <em>Show as bar chart</em>, as shown in Figure <a href="table-datawrapper.html#fig:datawrapper-bar-chart">9.7</a>. Also, select a different bar color, such as black, to distinguish it from the continent colors.</li>
 </ol>
 
 <div class="figure"><span id="fig:datawrapper-bar-chart"></span>
 <img src="images/09-table/datawrapper-bar-chart.png" alt="Select the Difference column and Show as bar chart."  />
 <p class="caption">
-Figure 9.8: Select the <em>Difference</em> column and <em>Show as bar chart</em>.
+Figure 9.7: Select the <em>Difference</em> column and <em>Show as bar chart</em>.
 </p>
 </div>
 <ol start="13" style="list-style-type: decimal">
 <li><p>In the <em>Visualize</em> screen, click the <em>Annotate</em> tab to add a title, data source, and byline.</p></li>
-<li><p>Click on <em>Publish &amp; Embed</em> to share the link to your <a href="https://datawrapper.dwcdn.net/0HK4f/2/">interactive table</a>, as previously shown in Figure <a href="table-datawrapper.html#fig:datawrapper-table">9.3</a>. If you logged into your free Datawrapper account, your work is automatically saved online in the <em>My Charts</em> menu in the top-right corner of the screen. Also, you can click the blue <em>Publish</em> button to generate the code to embed your interactive chart on your website, as you’ll learn about in <a href="embed.html">Chapter 10: Embed on the Web</a>. In addition, you can <em>add your chart to River</em> if you wish to share your work more widely by allowing other Datawrapper users to adapt and reuse your chart. Furthermore, scroll all the way down and click the <em>Download PNG</em> button to export a static image of your chart. Additional exporting and publishing options require a paid Datawrapper account. Or, if you prefer not to create an account, you can enter your email to receive the embed code.</p></li>
+<li><p>Click on <em>Publish &amp; Embed</em> to share the link to your <a href="https://datawrapper.dwcdn.net/0HK4f/2/">interactive table</a>, as previously shown in Figure <a href="table-datawrapper.html#fig:datawrapper-table">9.2</a>. If you logged into your free Datawrapper account, your work is automatically saved online in the <em>My Charts</em> menu in the top-right corner of the screen. Also, you can click the blue <em>Publish</em> button to generate the code to embed your interactive chart on your website, as you’ll learn about in <a href="embed.html">Chapter 10: Embed on the Web</a>. In addition, you can <em>add your chart to River</em> if you wish to share your work more widely by allowing other Datawrapper users to adapt and reuse your chart. Furthermore, scroll all the way down and click the <em>Download PNG</em> button to export a static image of your chart. Additional exporting and publishing options require a paid Datawrapper account. Or, if you prefer not to create an account, you can enter your email to receive the embed code.</p></li>
 </ol>
 <p>To learn more, we highly recommend the <a href="https://academy.datawrapper.de/">Datawrapper Academy support pages</a>, the extensive <a href="https://www.datawrapper.de/tables/">gallery of examples</a>, and well-designed <a href="https://www.datawrapper.de/training-materials/">training materials</a>.</p>
 <div id="summary9" class="section level3 unnumbered" number="">
@@ -434,8 +434,8 @@ Figure 9.8: Select the <em>Difference</em> column and <em>Show as bar chart</em>
 <!-- </div> -->
 <div class="footnotes">
 <hr />
-<ol start="34">
-<li id="fn34"><p><span class="citation">Edward R. Tufte, <em>Beautiful Evidence</em> (Graphics Press, 2006), <a href="http://books.google.com/books?isbn=0961392177" role="doc-biblioref">http://books.google.com/books?isbn=0961392177</a></span>, pp. 46-63.<a href="table-datawrapper.html#fnref34" class="footnote-back">↩︎</a></p></li>
+<ol start="35">
+<li id="fn35"><p><span class="citation">Edward R. Tufte, <em>Beautiful Evidence</em> (Graphics Press, 2006), <a href="http://books.google.com/books?isbn=0961392177" role="doc-biblioref">http://books.google.com/books?isbn=0961392177</a></span>, pp. 46-63.<a href="table-datawrapper.html#fnref35" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

@@ -9,14 +9,12 @@ Table: (\#tab:map-templates) Map Code Templates, Best Uses, and Tutorials
 
 | Map Templates | Best use and tutorials in this book |
 | --- | --- |
-| Leaflet Maps with Google Sheets<br> ![](images/13-leaflet/leaflet-maps-with-google-sheets.png) | Best to show interactive points, polygons, or polylines, using your choice of colors, styles, and icons, based on data loaded into your linked Google Sheet (or CSV file) and GitHub repository. Includes option to display a table of point map markers next to your map.  <br>Template with tutorial: [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets.html) |
-| Leaflet Storymaps with Google Sheets<br> ![](images/13-leaflet/leaflet-storymaps-with-google-sheets.png) | Best to show a point-by-point guided tour, with a scrolling narrative to display text, images, audio, video, and scanned map backgrounds loaded into your linked Google Sheet (or CSV file) and GitHub repository.<br>Template with tutorial: [Leaflet Storymaps with Google Sheets](leaflet-storymaps-with-google-sheets.html) |
-| Leaflet Point Map with CSV Data<br> ![](images/13-leaflet/leaflet-maps-with-csv.png) | Learn how to code your own Leaflet point map that pulls data from a CSV file in your GitHub repo.<br>Template with tutorial: [Leaflet Maps with CSV Data](leaflet-maps-with-csv.html)  |
-| Leaflet Heatmap Points with CSV Data <br> ![](images/13-leaflet/leaflet-heatmap.png) | Best to show clusters of points as colored hotspots to emphasize high frequency or density of cases.<br>Template with tutorial: [Leaflet Heatmap](leaflet-heatmap.html) |
-| Leaflet Searchable Point Map with CSV Data<br> ![](images/13-leaflet/searchable-map.png) | Best to show multiple locations for users to search by name or proximity, or filter by category, with optional list view. Developed by [Derek Eder](https://derekeder.com/) from DataMade.<br>Template with tutorial: [Leaflet Searchable Map with CSV](leaflet-searchable-map.html) |
-| Leaflet Maps with Open Data APIs<br> ![](images/13-leaflet/leaflet-open-data.png) | Learn how to code your own Leaflet map with an application programming interface (API) that continuously pulls the most current information directly from an open-data repository, such as Socrata and others.<br>Template with tutorial: [Leaflet Maps with Open Data APIs template](leaflet-maps-open-data-apis.html) |
-
-TODO above: Update screenshots after updating Leaflet demos, and make uniform size.
+| Leaflet Maps with Google Sheets<br> ![](images/13-leaflet/tableleaflet-maps-with-google-sheets-OLD.png) | Best to show interactive points, polygons, or polylines, using your choice of colors, styles, and icons, based on data loaded into your linked Google Sheet (or CSV file) and GitHub repository. Includes option to display a table of point map markers next to your map.  <br>Template with tutorial: [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets.html) |
+| Leaflet Storymaps with Google Sheets<br> ![](images/13-leaflet/tableleaflet-storymaps-with-google-sheets-OLD.png) | Best to show a point-by-point guided tour, with a scrolling narrative to display text, images, audio, video, and scanned map backgrounds loaded into your linked Google Sheet (or CSV file) and GitHub repository.<br>Template with tutorial: [Leaflet Storymaps with Google Sheets](leaflet-storymaps-with-google-sheets.html) |
+| Leaflet Point Map with CSV Data<br> ![](images/13-leaflet/tableleaflet-maps-with-csv.png) | Learn how to code your own Leaflet point map that pulls data from a CSV file in your GitHub repo.<br>Template with tutorial: [Leaflet Maps with CSV Data](leaflet-maps-with-csv.html)  |
+| Leaflet Heatmap Points with CSV Data <br> ![](images/13-leaflet/tableleaflet-heatmap.png) | Best to show clusters of points as colored hotspots to emphasize high frequency or density of cases.<br>Template with tutorial: [Leaflet Heatmap](leaflet-heatmap.html) |
+| Leaflet Searchable Point Map with CSV Data<br> ![](images/13-leaflet/tableleaflet-searchable-map.png) | Best to show multiple locations for users to search by name or proximity, or filter by category, with optional list view. Developed by [Derek Eder](https://derekeder.com/) from DataMade.<br>Template with tutorial: [Leaflet Searchable Map with CSV](leaflet-searchable-map.html) |
+| Leaflet Maps with Open Data APIs<br> ![](images/13-leaflet/tableleaflet-open-data.png) | Learn how to code your own Leaflet map with an application programming interface (API) that continuously pulls the most current information directly from an open-data repository, such as Socrata and others.<br>Template with tutorial: [Leaflet Maps with Open Data APIs template](leaflet-maps-open-data-apis.html) |
 
 ## Leaflet Maps with Google Sheets {- #leaflet-maps-with-google-sheets}
 Sometimes you need to create a map that cannot be made easily with drag-and-drop tools, because you need to customize its appearance or show some combination of point, polygon, or polyline data. One solution is to build your map based on our Leaflet Maps with Google Sheets code template, which allows you to display custom point icons, pick any choropleth color palettes, and stack different combinations of map data layers, as shown in Figure \@ref(fig:lmwgs-map). If you've explored prior chapters in this book, this template is a good template for newer users, because you enter your map data and settings in a linked Google Sheet, as shown in Figure \@ref(fig:lmwgs-sheet), and upload images or geographic files into a folder in your GitHub repository. All of the data you enter can easily be exported and migrated to other platforms as visualization technology continues to evolve in the future, as we discussed in the [how to choose tools section in Chapter 2](choose.html). Furthermore, the map design is responsive, meaning it automatically resizes to look good on small or large screens. Finally, the Leaflet Maps template is built on flexible open-source software that's written primarily in JavaScript, a very common coding language for the web, so you can customize it further if you have skills or support from a developer.
@@ -289,13 +287,15 @@ if(knitr::is_html_output(excludes="markdown")) knitr::include_url("images/13-lea
 if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vSqxGs67j80rAPDZdQaS5jI0avn1qs2y5N8fOaeHUGvyrnIwBmWomlfAuujtvPrxtF-5FBZxi_KdTUm/pubhtml?widget=true&amp;headers=false", height = "500px") else knitr::include_graphics("images/13-leaflet/storymap-sheet.png")
 ```
 
-TODO: DECIDE if we should create gallery of examples with thumbnail images or links:
+Explore the gallery in Table \@ref(tab:storymaps-gallery) to see what other people created with the Leaflet Storymaps with Google Sheets template.
 
-- https://jhsgh.github.io/storymap/
-- https://www.mappingtheuppermissouri.com/
-- https://kensingtonremembers.org
-- https://www.weneedtotalkabouttheborder.eu
-- https://www.laurentgontier.com/Storymap_Normandie/
+Table: (\#tab:storymaps-gallery) Gallery of Leaflet Storymaps with Google Sheets
+
+|  |  |
+| --- | --- |
+| ![](images/13-leaflet/storymaps-gallery1.png)<br> [Synagogue Map, Past and Present](https://jhsgh.org/synagogue-map/) by the Jewish Historical Society of Greater Hartford | ![](images/13-leaflet/storymaps-gallery2.png)<br> [Mapping the Upper Missouri](https://www.mappingtheuppermissouri.com/) by Jen Andrella |
+| ![](images/13-leaflet/storymaps-gallery3.png)<br> [Kensington Remembers](https://kensingtonremembers.org) by Gordon Coonfield, Erica Hayes, James Parente, David Uspal, Cheyenne Zaremba | ![](images/13-leaflet/storymaps-gallery4.png)<br> [We Need to Talk about the Border](https://www.weneedtotalkabouttheborder.eu) by Elisabeth Blanchet and Laurent Gontier |
+
 
 ### Tutorial Outline {-}
 Before beginning this tutorial, you must have a [Google Drive account](http://drive.google.com), and know how to [File > Make a Copy in Google Sheets](copy.html), as described in Chapter 3. Also, you must have a [GitHub account](http://github.com), and know how to [Edit and Host Code with GitHub](github.html), as described in Chapter 11. We have omitted many screenshots below that illustrate steps we previously covered, so if you get lost, go back to that chapter.

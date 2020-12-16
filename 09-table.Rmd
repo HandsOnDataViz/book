@@ -41,7 +41,7 @@ Table: (\#tab:vaccine-bad) **Bad** Because It Calculates Percentages Horizontall
 |  | Vaccine | Placebo | Total |
 |-|-:|-:|-:|
 | Infected | 4.7% (8) | 95.3% (162) | 100% (170) |
-| Not infected | 49.8% (21,822) | 50.2% (21,668) | 100% (43,490) |
+| Not infected | 50.2% (21,822) | 49.8% (21,668) | 100% (43,490) |
 
 But Table \@ref(tab:vaccine-better) calculates percentages in the *correct* direction---vertically---which more clearly shows how the vaccine is correlated with lower infection rates. Researchers determined that this was a strong causal relationship, and received approval to distribute the vaccine.
 
@@ -50,7 +50,7 @@ Table: (\#tab:vaccine-better) **Better** Because It Calculates Percentages Verti
 |  | Vaccine | Placebo |
 |-|-:|-:|
 | Infected | 0.04% (8) | 0.74% (162) |
-| Not infected | 99.96% (21,822) | 99.27% (21,668) |
+| Not infected | 99.96% (21,822) | 99.26% (21,668) |
 | Total | 100% (21,830) | 100% (21,830) |
 
 Overall, the core principles of table design reflect similar concepts we previously discussed in chart and map design. Organize your presentation of the data with the readers' eyes in mind, to focus their attention on the most important elements of your interpretation, to help them take away the key points. Do the visualization work for them, so that you don't have to rely on them to draw the same mental connections in their own minds. Remove any clutter or unnecessary repetition that stands in the way of these goals. Most importantly, tell true and meaningful stories about the data.

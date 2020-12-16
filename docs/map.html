@@ -346,7 +346,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Maps draw your readers into data that includes a spatial dimension, while also developing a stronger sense of place. Seeing the relative distance between points on a map, or identifying geographic patterns in a <em>choropleth</em> map (where colored polygons represent data values), relays information to readers’ eyes more effectively than text, tables, or charts. But creating meaningful maps that draw our attention to key insights in your data requires clear thinking about design choices.</p>
 <p>In this chapter, we will examine <a href="map-design.html">principles of map design</a> and distinguish between good and bad maps. You will learn about rules that apply to all maps, and specific guidelines for creating choropleth maps. While many tools allow you to download maps as <em>static</em> images, our book also demonstrates how to construct <em>interactive</em> charts that invite readers to zoom in and explore the data in their web browsers. Later you’ll learn how to <a href="embed.html">embed interactive charts on your website in Chapter 10</a>.</p>
 <p>Learn about different types of maps you can create in this book in Table <a href="map.html#tab:map-types">8.1</a>. Decisions about map types are based on two main factors: the format of your data, and the kind of story you wish to tell. For example, point maps work best to show specific locations with colored markers to represent categories (such as hospitals), while choropleth maps are best suited to display relative values for regions (such as birth rates across US states). After selecting your map type, follow our tool recommendations and step-by-step tutorials. This chapter features <em>Easy Tools</em> with drag-and-drop menus, such as <a href="mymaps.html">Google My Maps</a>, <a href="symbolmap-datawrapper.html">Datawrapper</a>, and <a href="map-tableau.html">Tableau Public</a>. But the table also points you to <em>Power Tools</em> that give you more control to customize and host your visualizations, such as <a href="leaflet.html">Leaflet code templates in Chapter 13</a>. These advanced tools require prior knowledge on how to <a href="github.html">edit and host code templates with GitHub in Chapter 11</a>.</p>
-<p>TODO below: ILYA to Improve and standardize map images</p>
 <table>
 <caption><span id="tab:map-types">Table 8.1: </span> Basic Map Types, Best Uses, and Tutorials</caption>
 <colgroup>
@@ -361,39 +360,39 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </thead>
 <tbody>
 <tr class="odd">
-<td>Point map with custom icons<br> <img src="images/08-map/map-point.png" /></td>
+<td>Point map with custom icons<br> <img src="images/08-map/tablemap-point.png" /></td>
 <td>Best to show specific locations (such as addresses) with customized colored markers for categories, plus text and images in popup windows. <br>Easy tool: <a href="mymaps.html">Google My Maps tutorial</a>. <br>Power tool: <a href="leaflet-maps-with-google-sheets.html">Ch 13: Leaflet Maps with Google Sheets tutorial</a></td>
 </tr>
 <tr class="even">
-<td>Symbol point map<br> <img src="images/08-map/map-symbol.png" /></td>
+<td>Symbol point map<br> <img src="images/08-map/tablemap-symbol.png" /></td>
 <td>Best to show specific locations (such as cities), with variable-sized shapes or colors to represent data values (such as population growth).<br>Easy tool: <a href="symbolmap-datawrapper.html">Symbol Point Map with Datawrapper tutorial</a></td>
 </tr>
 <tr class="odd">
-<td>Choropleth (colored polygon) map <br> <img src="images/08-map/map-choropleth.png" /></td>
+<td>Choropleth (colored polygon) map <br> <img src="images/08-map/tablemap-choropleth.png" /></td>
 <td>Best to show patterns across geographic areas (such as neighborhoods or nations) by coloring polygons to represent data values. <br>Easy tool: <a href="choropleth-datawrapper.html">Choropleth map with Datawrapper tutorial</a> or <a href="map-tableau.html">Choropleth map with Tableau Public tutorial</a> <br>Power tools: <a href="leaflet-maps-with-google-sheets.html">Ch 13: Leaflet Maps with Google Sheets tutorial</a></td>
 </tr>
 <tr class="even">
-<td>Heat point map <br> <img src="images/08-map/map-heat.png" /></td>
+<td>Heat point map <br> <img src="images/08-map/tablemap-heat.png" /></td>
 <td>Best to show clusters of points as colored hotspots to emphasize high frequency or density of cases. <br>Power tool: <a href="leaflet-heatmap.html">Ch 13: Leaflet Heatmap code template</a></td>
 </tr>
 <tr class="odd">
-<td>Story map <br> <img src="images/08-map/map-storymap.png" /></td>
+<td>Story map <br> <img src="images/08-map/tablemap-storymap.png" /></td>
 <td>Best to show a point-by-point guided tour, with a scrolling narrative to display text, images, audio, video, and scanned map backgrounds. <br> Power tool: <a href="leaflet-storymaps-with-google-sheets.html">Ch 13: Leaflet Storymaps with Google Sheets tutorial</a></td>
 </tr>
 <tr class="even">
-<td>Polyline map <br> <img src="images/08-map/map-polyline.png" /></td>
+<td>Polyline map <br> <img src="images/08-map/tablemap-polyline.png" /></td>
 <td>Best to show routes (such as trails or transit), with colors for different categories. <br>Easy Tool: <a href="mymaps.html">Google My Maps tutorial</a> <br>Power tool: <a href="leaflet-maps-with-google-sheets.html">Ch 13: Leaflet Maps with Google Sheets tutorial</a></td>
 </tr>
 <tr class="odd">
-<td>Customized point-polyline-polygon map <br> <img src="images/08-map/map-point-polygon-polyline.png" /></td>
+<td>Customized point-polyline-polygon map <br> <img src="images/08-map/tablemap-point-polyline-polygon.png" /></td>
 <td>Best to show any combination of points, polylines, or polygons, with customized icons for categories, and colored regions to represent data values. <br>Power tool: <a href="leaflet-maps-with-google-sheets.html">Ch 13: Leaflet Maps with Google Sheets tutorial</a></td>
 </tr>
 <tr class="even">
-<td>Searchable point map<br> <img src="images/08-map/map-searchable.png" /></td>
+<td>Searchable point map<br> <img src="images/08-map/tablemap-searchable.png" /></td>
 <td>Best to show specific locations for users to search by name or proximity, or filter by category, with optional list view.<br> Power Tool: <a href="leaflet-searchable-map.html">Ch 13: Leaflet Searchable Point Map code template</a></td>
 </tr>
 <tr class="odd">
-<td>Current map from open-data repository<br> <img src="images/08-map/map-open-data.png" /></td>
+<td>Current map from open-data repository<br> <img src="images/08-map/tablemap-open-data.png" /></td>
 <td>Best to show the most current information pulled directly from an open-data repository such as Socrata and others. <br>Easy tool: <a href="map-socrata.html">Current map with Socrata open data tutorial</a><br>Power tool: <a href="leaflet-maps-open-data-apis.html">Ch 13: Leaflet Maps with Open Data API code template</a></td>
 </tr>
 </tbody>

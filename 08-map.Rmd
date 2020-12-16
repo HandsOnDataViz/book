@@ -5,7 +5,7 @@ In this chapter, we will examine [principles of map design](map-design.html) and
 
 Learn about different types of maps you can create in this book in Table \@ref(tab:map-types). Decisions about map types are based on two main factors: the format of your data, and the kind of story you wish to tell. For example, point maps work best to show specific locations with colored markers to represent categories (such as hospitals), while choropleth maps are best suited to display relative values for regions (such as birth rates across US states). After selecting your map type, follow our tool recommendations and step-by-step tutorials. This chapter features *Easy Tools* with drag-and-drop menus, such as [Google My Maps](mymaps.html), [Datawrapper](symbolmap-datawrapper.html), and [Tableau Public](map-tableau.html). But the table also points you to *Power Tools* that give you more control to customize and host your visualizations, such as [Leaflet code templates in Chapter 13](leaflet.html). These advanced tools require prior knowledge on how to [edit and host code templates with GitHub in Chapter 11](github.html).
 
-TODO below: Improve and standardize map images
+TODO below: ILYA to Improve and standardize map images
 
 Table: (\#tab:map-types) Basic Map Types, Best Uses, and Tutorials
 
@@ -29,7 +29,7 @@ However, just because data *can* be mapped does not always mean it *should* be m
 As you learned in the previous chapter about charts, data visualization is not a science, but comes with a set of principles and best practices that serve as a foundation for creating true and meaningful maps. In this section, we'll identify a few rules about map design, but you may be surprised to learn that some rules are less rigid than others, and can be "broken" when necessary to emphasize a point, as long as you are honestly interpreting the data. To begin to understand the difference, let's start by establishing a common vocabulary about maps.
 
 ### Deconstruct a Map {-}
-Our book features how to create *interactive* maps, also called *tiled web maps* or *slippy maps*, because users can zoom into and pan around to explore map data layers on top of a seamless set of basemap tiles. Basemaps that display aerial photo imagery are known as *raster* tiles, while those that display pictorial images of streets and buildings are tiles that are built from *vector* data. Raster map data is limited by the resolution of the original image, which gets fuzzier as we get closer. By contrast, you can zoom in very close to vector map data without diminishing its visual quality, as shown in Figure \@ref(fig:raster-vs-vector-zoom). You'll learn more about these concepts in the [GeoJSON and Geospatial Data](geojson.html) section of Chapter 14.
+Our book features how to create *interactive* web maps, also called *tiled maps* or *slippy maps*, because users can zoom into and pan around to explore map data layers on top of a seamless set of basemap tiles. Basemaps that display aerial photo imagery are known as *raster* tiles, while those that display pictorial images of streets and buildings are tiles that are built from *vector* data. Raster map data is limited by the resolution of the original image, which gets fuzzier as we get closer. By contrast, you can zoom in very close to vector map data without diminishing its visual quality, as shown in Figure \@ref(fig:raster-vs-vector-zoom). You'll learn more about these concepts in the [GeoJSON and Geospatial Data](geojson.html) section of Chapter 14.
 
 (ref:raster-vs-vector-zoom) Raster map data from Esri World Imagery (on the left), and vector map data from OpenStreetMap (on the right), both showing co-author Ilyankou's childhood neighborhood in Mogilev, Belarus. Zooming into raster map data makes it fuzzier, while vector map data retains its sharpness.
 
@@ -37,7 +37,7 @@ Our book features how to create *interactive* maps, also called *tiled web maps*
 knitr::include_graphics("images/08-map/raster-vs-vector-zoom.png")
 ```
 
-Look at Figure \@ref(fig:map-principles-map) to learn about basic elements in the interactive maps you'll create in this chapter. The top layer usually display some combination of *points*, *polylines*, and *polygons*. Points show specific places, such as the street address of a home or business, sometimes with a location marker, and each point is represented by a pair of latitude and longitude coordinates. For example, `40.69, -74.04` marks the location of the Statue of Liberty in New York City. Polylines are connected strings of points, such as roads or transportation networks, and we place the “poly-” prefix before “lines” to remind us that they may contain multiple branches. Polygons are collections of lines that create a closed shape, such as building footprints, census tracts, or state or national boundaries. Since points, polylines, and polygons fundamentally consist of latitude and longitude coordinates, all of them are vector data.
+Look at Figure \@ref(fig:map-principles-map) to learn about basic elements in the interactive maps you'll create in this chapter. The top layer usually displays some combination of *points*, *polylines*, and *polygons*. Points show specific places, such as the street address of a home or business, sometimes with a location marker, and each point is represented by a pair of latitude and longitude coordinates. For example, `40.69, -74.04` marks the location of the Statue of Liberty in New York City. Polylines are connected strings of points, such as roads or transportation networks, and we place the “poly-” prefix before “lines” to remind us that they may contain multiple branches. Polygons are collections of lines that create a closed shape, such as building footprints, census tracts, or state or national boundaries. Since points, polylines, and polygons fundamentally consist of latitude and longitude coordinates, all of them are vector data.
 
 (ref:map-principles-map) Key elements of an interactive map.
 
@@ -219,8 +219,6 @@ What are the worst-hit states according to the map showing total Covid-19 counts
 so it makes sense that they will also have higher Covid-19 cases.
 
 Now, how about the map in Figure \@ref(fig:normalize-map-data)b? You can see that New York and its neighbors, including New Jersey and Massachusetts, have by far the highest rates per capita (per person), which we saw in the first map. But you can also see that in fact California, Texas, and Florida were impacted to a lesser extent than the map on the left had suggested. So the map with per-capita values is a much better illustration to the story about New York being the *first* epicenter of the Covid-19 crisis in the United States.
-
-TODO: Include a very simple normalization calculation to demonstrate raw counts versus normalized data (Cases / Population = Cases Per Capita) for two states, such as Texas and New York. Decide whether to show data at a specific moment (May 1 2020 near peak for NYC) or most up-to-date figure at this writing (which will show higher case rates elsewhere). Either way, clearly label the date in the caption.
 
 At this point, you should have a better idea of key principles in map design, and what makes them work (or not) when communicating data images to our eyes. In the next section, we'll begin our first hands-on tutorial with creating a point map. Later in the chapter we'll return to exercises in creating choropleth maps.  
 
@@ -465,7 +463,7 @@ Now that you've created a symbol point map with Datawrapper, in the next section
 
 ## Choropleth Map with Datawrapper {- #choropleth-datawrapper}
 
-Now that you've learned how to use [Datawrapper to create charts](chart-datawrapper.html) and [symbol maps](datawrapper-symbolmap.html), now let's design a choropleth map. These maps are best to show patterns across geographic areas by coloring polygons to represent data values. Datawrapper offers a wide collection of common geographical boundaries, including world regions, states and provinces, and also hexagons (cartograms), counties, congressional districts, and census tracts for the United States.
+Now that you've learned how to use [Datawrapper to create charts](chart-datawrapper.html) and [symbol maps](datawrapper-symbolmap.html), let's design a choropleth map. These maps are best to show patterns across geographic areas by coloring polygons to represent data values. Datawrapper offers a wide collection of common geographical boundaries, including world regions, states and provinces, and also hexagons (cartograms), counties, congressional districts, and census tracts for the United States.
 
 In this section, you'll create a choropleth map of typical home values for US states in August 2020 according to the [Zillow Home Value Index](https://www.zillow.com/research/data/), as shown in Figure \@ref(fig:datawrapper-map-final). The index reflects typical home values (meaning those in the 35th to 65th percentile range, around the median) for single-family residences, condos, and co-ops, and it is smoothed and seasonally adjusted.
 
@@ -702,7 +700,8 @@ Warning: Tableau may not be the best tool to create choropleth maps where you wa
 Now that you know that Tableau can be used not just for charts, but for maps as well, let's see how to use Socrata's visualization capabilities to build a map that always uses the most current data available.
 
 ## Current Map with Socrata Open Data {- #map-socrata}
-TODO: revise to emphasize how the map continuously pulls the most current information directly from the open-data repository; in this case, happens to be filtered point map of hospitals in Texas.... TODO: replace with a better example of frequently-updated "live" data?
+
+TODO update broken map, working on this...
 
 [Socrata](https://www.tylertech.com/products/socrata) is a database service that is used by government agencies,
 cities and countries to make open data available to the public. It offers user-friendly ways to view, filter,
@@ -716,10 +715,9 @@ This may be especially useful for "live" data that is continuously updated by ag
 such as fires, crimes, and property data.
 
 In this section, we will build an interactive point map of hospitals in Texas
-using [General Hospital Information](https://data.medicare.gov/Hospital-Compare/Hospital-General-Information/xubh-q36u/data) dataset by Medicare,
-which you can see in Figure \@ref(fig:socrata-final).
+using [General Hospital Information](https://data.medicare.gov/Hospital-Compare/Hospital-General-Information/xubh-q36u/data) dataset by Medicare, which you can see in Figure \@ref(fig:socrata-final).
 
-(ref:socrata-final) In this tutorial, we will build a point map of hospitals in Texas using Socrata.
+(ref:socrata-final) Point map of hospitals in Texas drawn from current open-data stream in Socrata. View the interactive version TODO.
 
 ```{r socrata-final, fig.cap="(ref:socrata-final)"}
 if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://data.medicare.gov/dataset/Texas-Hospitals/cvhn-bsmn/embed?width=100%25&height=500", height="500px") else knitr::include_graphics("images/08-map/socrata-final.png")

@@ -33,7 +33,7 @@
   
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="leaflet-maps-open-data-apis.html"/>
-<link rel="next" href="bulk-geocode.html"/>
+<link rel="next" href="geojson.html"/>
 <script src="libs/header-attrs-2.5/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -272,14 +272,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="14" data-path="transform.html"><a href="transform.html"><i class="fa fa-check"></i><b>14</b> Transform Your Map Data</a>
 <ul>
-<li class="chapter" data-level="" data-path="bulk-geocode.html"><a href="bulk-geocode.html"><i class="fa fa-check"></i>Bulk Geocode with US Census</a></li>
-<li class="chapter" data-level="" data-path="pivot-point-to-polygon.html"><a href="pivot-point-to-polygon.html"><i class="fa fa-check"></i>Pivot Points into Polygon Data</a></li>
 <li class="chapter" data-level="" data-path="geojson.html"><a href="geojson.html"><i class="fa fa-check"></i>Geospatial Data and GeoJSON</a></li>
 <li class="chapter" data-level="" data-path="find-geojson.html"><a href="find-geojson.html"><i class="fa fa-check"></i>Find GeoJSON Boundary Files</a></li>
 <li class="chapter" data-level="" data-path="geojsonio.html"><a href="geojsonio.html"><i class="fa fa-check"></i>Draw and Edit with GeoJson.io</a></li>
 <li class="chapter" data-level="" data-path="mapshaper.html"><a href="mapshaper.html"><i class="fa fa-check"></i>Edit and Join with Mapshaper</a></li>
-<li class="chapter" data-level="" data-path="mapwarper.html"><a href="mapwarper.html"><i class="fa fa-check"></i>Georeference with MapWarper</a></li>
 <li class="chapter" data-level="" data-path="convert-kmz.html"><a href="convert-kmz.html"><i class="fa fa-check"></i>Convert Compressed KMZ to KML</a></li>
+<li class="chapter" data-level="" data-path="mapwarper.html"><a href="mapwarper.html"><i class="fa fa-check"></i>Georeference with MapWarper</a></li>
+<li class="chapter" data-level="" data-path="bulk-geocode.html"><a href="bulk-geocode.html"><i class="fa fa-check"></i>Bulk Geocode with US Census</a></li>
+<li class="chapter" data-level="" data-path="pivot-point-to-polygon.html"><a href="pivot-point-to-polygon.html"><i class="fa fa-check"></i>Pivot Points into Polygon Data</a></li>
 </ul></li>
 <li class="chapter" data-level="15" data-path="detect.html"><a href="detect.html"><i class="fa fa-check"></i><b>15</b> Detect Lies and Reduce Bias</a>
 <ul>
@@ -342,22 +342,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="transform" class="section level1" number="14">
 <h1><span class="header-section-number">Chapter 14</span> Transform Your Map Data</h1>
-<p>TODO: clean up intro to raise major concepts about different types of data you can place on an interactive map. Then refer to the first two sections to transform points only (bulk geocode and pivot points to polygons), before broadening to GeoJSON and other geospatial data formats, and editor tools, and finally how MapWarper transforms raster data.</p>
-<p>All maps, including interactive web maps, are made up of different layers.
-These are background basemaps, colored or shaded polygons (also known as <em>choropleth</em> layers), lines,
-and point data that are often represented as markers.</p>
-<p>In this chapter, we will look at multiple ways to convert and edit geospatial data
-to create layers (files) that you can use in your favorite mapping tools.</p>
-<p>We will begin by looking at strategies to geocode large datasets, such as 10,000 addresses, with US Census tools. Before you can dive into creating shapes and dealing with boundaries in the map, we will
-introduce various file formats (most notably GeoJSON) and talk about geospatial data in general.
-You will learn that map data can be raster and vector, that geospatial data consists of location
-and attribute components, and how GeoJSON is different from Shapefiles and other geographical data formats.</p>
-<p>With our tutorials, you will learn how to <a href="find-geojson.html">find geographic boundaries in GeoJSON format</a>, convert or draw your own layer of map polygons or polylines on top of satellite imagery
-using <a href="geojsonio.html">the GeoJson.io tool</a>, and also how to edit geospatial data and join it with spreadsheet data using <a href="mapshaper.html">the Mapshaper tool</a>.
-Both are powerful, web-based open-source geodata tools that for common tasks can substitute for more complex geographic information system tools, such as ArcGIS, a Windows-only de-facto industry standard in geospatial software, or QGIS, a free and open-source alternative available for Mac, Linux, and Windows.
-Finally, you’ll also learn how to georeference a high-quality static image of a map, and transform it into interactive map tiles that you can display on top of a zoomable Leaflet map, using <a href="mapwarper.html">the MapWarper tool</a>.</p>
-<p>By the end of this chapter, you should feel much more confident navigating the
-overwhelming world of geospatial data.</p>
+<p>In <a href="map.html">Chapter 8: Map Your Data</a>, we introduced basic concepts about interactive web maps, which are made up of different data layers. When users explore an interactive map, they usually click on the upper layer, which often displays some combination of points, polylines, and polygons, on top of a seamless set of basemap tiles that are built from raster or vector data. Whether you <a href="choropleth-datawrapper.html">create maps with drag-and-drop tools such Datawrapper</a> or <a href="leaflet.html">customize Leaflet map code templates</a>, you may need to transform data to work with one of these types of map layers.</p>
+<p>In this chapter, we will delve further into the topic of <a href="geojson.html">geospatial data and its different formats</a>, such as GeoJSON, the open-standard format most commonly used in this book. You’ll learn <a href="find-geojson.html">how to find and extract geographic boundary files in this format</a> from the crowd-sourced OpenStreetMap platform. Also, we’ll show how to convert or create your own top-level map layer data using the <a href="geojsonio.html">GeoJson.io tool</a>, and how to edit these layers with spreadsheet data using the <a href="mapshaper.html">Mapshaper tool</a>. Moreover, you’ll also learn how to georeference a high-quality static map image and transform it into interactive map tiles using the <a href="mapwarper.html">the MapWarper tool</a>. All of these free, web-based geodata tools are easy to learn, and in many cases they replace the need for more costly or complex geographic information systems, such as the proprietary ArcGIS and the open-source QGIS desktop applications. Finally, we’ll conclude with strategies to <a href="bulk-geocode.html">bulk geocode large batches of address data</a>, and to <a href="pivot-point-to-polygon.html">pivot points into polygon data</a>, which enables you to display this information in choropleth maps. By the end of this chapter, you should feel much more confident in navigating the somewhat-overwhelming world of geospatial data.</p>
+<p>Let’s start with a general overview of geospatial data, and introduce you to various file formats to ensure you are ready to create, use, and share map data.</p>
 </div>
             </section>
 
@@ -365,7 +352,7 @@ overwhelming world of geospatial data.</p>
         </div>
       </div>
 <a href="leaflet-maps-open-data-apis.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="bulk-geocode.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="geojson.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

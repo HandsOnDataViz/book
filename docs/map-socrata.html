@@ -272,14 +272,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="14" data-path="transform.html"><a href="transform.html"><i class="fa fa-check"></i><b>14</b> Transform Your Map Data</a>
 <ul>
-<li class="chapter" data-level="" data-path="bulk-geocode.html"><a href="bulk-geocode.html"><i class="fa fa-check"></i>Bulk Geocode with US Census</a></li>
-<li class="chapter" data-level="" data-path="pivot-point-to-polygon.html"><a href="pivot-point-to-polygon.html"><i class="fa fa-check"></i>Pivot Points into Polygon Data</a></li>
 <li class="chapter" data-level="" data-path="geojson.html"><a href="geojson.html"><i class="fa fa-check"></i>Geospatial Data and GeoJSON</a></li>
 <li class="chapter" data-level="" data-path="find-geojson.html"><a href="find-geojson.html"><i class="fa fa-check"></i>Find GeoJSON Boundary Files</a></li>
 <li class="chapter" data-level="" data-path="geojsonio.html"><a href="geojsonio.html"><i class="fa fa-check"></i>Draw and Edit with GeoJson.io</a></li>
 <li class="chapter" data-level="" data-path="mapshaper.html"><a href="mapshaper.html"><i class="fa fa-check"></i>Edit and Join with Mapshaper</a></li>
-<li class="chapter" data-level="" data-path="mapwarper.html"><a href="mapwarper.html"><i class="fa fa-check"></i>Georeference with MapWarper</a></li>
 <li class="chapter" data-level="" data-path="convert-kmz.html"><a href="convert-kmz.html"><i class="fa fa-check"></i>Convert Compressed KMZ to KML</a></li>
+<li class="chapter" data-level="" data-path="mapwarper.html"><a href="mapwarper.html"><i class="fa fa-check"></i>Georeference with MapWarper</a></li>
+<li class="chapter" data-level="" data-path="bulk-geocode.html"><a href="bulk-geocode.html"><i class="fa fa-check"></i>Bulk Geocode with US Census</a></li>
+<li class="chapter" data-level="" data-path="pivot-point-to-polygon.html"><a href="pivot-point-to-polygon.html"><i class="fa fa-check"></i>Pivot Points into Polygon Data</a></li>
 </ul></li>
 <li class="chapter" data-level="15" data-path="detect.html"><a href="detect.html"><i class="fa fa-check"></i><b>15</b> Detect Lies and Reduce Bias</a>
 <ul>
@@ -342,7 +342,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="map-socrata" class="section level2 unnumbered" number="">
 <h2>Current Map with Socrata Open Data</h2>
-<p>TODO: revise to emphasize how the map continuously pulls the most current information directly from the open-data repository; in this case, happens to be filtered point map of hospitals in Texas…. TODO: replace with a better example of frequently-updated “live” data?</p>
+<p>TODO update broken map, working on this…</p>
 <p><a href="https://www.tylertech.com/products/socrata">Socrata</a> is a database service that is used by government agencies,
 cities and countries to make open data available to the public. It offers user-friendly ways to view, filter,
 and export data. In addition, the Socrata platform includes built-in support to create interactive charts and maps,
@@ -353,14 +353,13 @@ the data table, then a Socrata dataviz based on that data will be automatically 
 This may be especially useful for “live” data that is continuously updated by agency administrators
 such as fires, crimes, and property data.</p>
 <p>In this section, we will build an interactive point map of hospitals in Texas
-using <a href="https://data.medicare.gov/Hospital-Compare/Hospital-General-Information/xubh-q36u/data">General Hospital Information</a> dataset by Medicare,
-which you can see in Figure <a href="map-socrata.html#fig:socrata-final">8.60</a>.</p>
+using <a href="https://data.medicare.gov/Hospital-Compare/Hospital-General-Information/xubh-q36u/data">General Hospital Information</a> dataset by Medicare, which you can see in Figure <a href="map-socrata.html#fig:socrata-final">8.60</a>.</p>
 
 <div class="figure"><span id="fig:socrata-final"></span>
 <iframe src="https://data.medicare.gov/dataset/Texas-Hospitals/cvhn-bsmn/embed?width=100%25&amp;height=500" width="672" height="500px">
 </iframe>
 <p class="caption">
-Figure 8.60: In this tutorial, we will build a point map of hospitals in Texas using Socrata.
+Figure 8.60: Point map of hospitals in Texas drawn from current open-data stream in Socrata. View the interactive version TODO.
 </p>
 </div>
 <p>Generally, in order to create a map in Socrata, you need to be a registered user,

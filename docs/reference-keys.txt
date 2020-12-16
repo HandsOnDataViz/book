@@ -310,15 +310,12 @@ fig:leaflet-map-csv
 fig:leaflet-heatmap
 fig:searchable-map
 fig:leaflet-open-data
-fig:pivot-address
-fig:pivot-address-export
-fig:pivot-address-sheet
 fig:geospatial-raster-vector
 fig:geojson-github
 fig:gimme-geodata
 fig:geojson-io-import
 fig:geojson-io-csv-data
-fig:geojsonio-gif
+fig:geojson-io-points
 fig:geojson-io-draw
 fig:mapshaper-export
 fig:mapshaper-edit
@@ -332,6 +329,9 @@ fig:mapshaper-merge-csv
 fig:mapshaper-merge
 fig:kmz-earth
 fig:kmz-save-as
+fig:pivot-address
+fig:pivot-address-export
+fig:pivot-address-sheet
 fig:gdp-baseline-merged
 fig:temperature-default
 fig:temperature-axis-annotated

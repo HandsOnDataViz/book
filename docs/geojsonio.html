@@ -272,14 +272,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="14" data-path="transform.html"><a href="transform.html"><i class="fa fa-check"></i><b>14</b> Transform Your Map Data</a>
 <ul>
-<li class="chapter" data-level="" data-path="bulk-geocode.html"><a href="bulk-geocode.html"><i class="fa fa-check"></i>Bulk Geocode with US Census</a></li>
-<li class="chapter" data-level="" data-path="pivot-point-to-polygon.html"><a href="pivot-point-to-polygon.html"><i class="fa fa-check"></i>Pivot Points into Polygon Data</a></li>
 <li class="chapter" data-level="" data-path="geojson.html"><a href="geojson.html"><i class="fa fa-check"></i>Geospatial Data and GeoJSON</a></li>
 <li class="chapter" data-level="" data-path="find-geojson.html"><a href="find-geojson.html"><i class="fa fa-check"></i>Find GeoJSON Boundary Files</a></li>
 <li class="chapter" data-level="" data-path="geojsonio.html"><a href="geojsonio.html"><i class="fa fa-check"></i>Draw and Edit with GeoJson.io</a></li>
 <li class="chapter" data-level="" data-path="mapshaper.html"><a href="mapshaper.html"><i class="fa fa-check"></i>Edit and Join with Mapshaper</a></li>
-<li class="chapter" data-level="" data-path="mapwarper.html"><a href="mapwarper.html"><i class="fa fa-check"></i>Georeference with MapWarper</a></li>
 <li class="chapter" data-level="" data-path="convert-kmz.html"><a href="convert-kmz.html"><i class="fa fa-check"></i>Convert Compressed KMZ to KML</a></li>
+<li class="chapter" data-level="" data-path="mapwarper.html"><a href="mapwarper.html"><i class="fa fa-check"></i>Georeference with MapWarper</a></li>
+<li class="chapter" data-level="" data-path="bulk-geocode.html"><a href="bulk-geocode.html"><i class="fa fa-check"></i>Bulk Geocode with US Census</a></li>
+<li class="chapter" data-level="" data-path="pivot-point-to-polygon.html"><a href="pivot-point-to-polygon.html"><i class="fa fa-check"></i>Pivot Points into Polygon Data</a></li>
 </ul></li>
 <li class="chapter" data-level="15" data-path="detect.html"><a href="detect.html"><i class="fa fa-check"></i><b>15</b> Detect Lies and Reduce Bias</a>
 <ul>
@@ -347,132 +347,105 @@ edit, and create GeoJSON files. The tool was originally developed by
 <a href="https://macwright.org/about/">Tom MacWright</a> in 2013
 and quickly became a go-to tool for geospatial practitioners.</p>
 <p>In this tutorial, we will show you how to convert existing KML, GPX, TopoJSON, and even
-CSV files with lat/lon data into GeoJSON files. We will also look at
-editing attribute data and adding new features to GeoJSON files,
-and creating them from scratch by tracing satellite imagery.</p>
+CSV files with latitude/longitude data into GeoJSON files. We will also explore how to
+edit attribute data, add new features to GeoJSON files, and create new geodata from scratch by tracing satellite imagery.</p>
 <div id="convert-kml-gpx-and-other-formats-into-geojson" class="section level4 unnumbered" number="">
 <h4>Convert KML, GPX, and other formats into GeoJSON</h4>
-<p>Navigate to <a href="https://geojson.io">GeoJson.io</a>. You will see
+<p>Navigate to the <a href="https://geojson.io">GeoJson.io tool</a>. You will see
 a map on the left, and a Table/JSON attribute view area on the right. At the start,
 it represents an empty feature collection. Remember that features
-are your points, polylines, and polygons.</p>
+are points, polylines, and polygons.</p>
 <p>Drag and drop your geospatial data file into the map area on the left.
 Alternatively, you can also import a file from <em>Open &gt; File</em> menu.
-If you don’t have a geospatial file, download <a href="data/hartford-parks.kml">Hartford parks</a>
-in KML format. If GeoJson.io was able to recognize and import the file,
+If you don’t have a geospatial file, download the <a href="data/toronto-neighborhoods-sample.kml">Toronto neighborhoods sample file in KML format</a>
+to your computer, and upload it to the GeoJson.io tool. This simplified sample KML file was created from the <a href="https://open.toronto.ca/dataset/neighbourhoods/">Toronto Open Data portal</a>.</p>
+<p>If GeoJson.io can recognize and import your geodata file,
 you will see a green popup message in the upper-left corner saying how many
-features (in case of Hartford parks, only polygons) were imported.
-Figure <a href="geojsonio.html#fig:geojson-io-import">14.7</a> shows us that 62 features were imported from
-the sample Hartford parks file. You can see that the polygons appeared
-on top of the Mapbox world layer.</p>
-<p>Note: If GeoJson.io couldn’t import your file, you will see a red
-popup saying it “Could not detect file type”. You will need to use a different
-tool, such as Mapshaper or QGIS, to convert your file to GeoJSON.</p>
+features were imported. For example, Figure <a href="geojsonio.html#fig:geojson-io-import">14.4</a> shows us that 140 features were imported from
+the sample Toronto neighborhoods KML file, and these polygons appear in the top of the map view.</p>
+<p>Note: If GeoJson.io cannot import your file, you will see a red
+popup saying it “Could not detect file type.” Instead, try to convert your file into GeoJSON format using the <a href="mapshaper.html">Mapshaper tool</a>, as described further below.</p>
 
 <div class="figure"><span id="fig:geojson-io-import"></span>
-<img src="images/14-transform/geojson-io-import.png" alt="GeoJson.io successfully imported Hartford parks KML file."  />
+<img src="images/14-transform/geojson-io-import.png" alt="GeoJson.io successfully imported the Hartford Parks sample KML file." width="600" />
 <p class="caption">
-Figure 14.7: GeoJson.io successfully imported Hartford parks KML file.
+Figure 14.4: GeoJson.io successfully imported the Hartford Parks sample KML file.
 </p>
 </div>
-<p>You can now save your file to GeoJSON. Go to <em>Save &gt; GeoJSON</em> to download
-a converted GeoJSON file to your computer.</p>
+<p>To download a converted GeoJSON file to your computer, go to <em>Save &gt; GeoJSON</em>.</p>
+<p>Warning: The GeoJson.io tool will automatically name your downloaded file as <code>map.geojson</code>, so rename it to avoid confusion.</p>
 </div>
 <div id="create-geojson-from-a-csv-file" class="section level4 unnumbered" number="">
 <h4>Create GeoJSON from a CSV file</h4>
-<p>GeoJson.io can transform a spreadsheet with <em>latitude</em> (or <em>lat</em>) and <em>longitude</em> (or <em>lon</em>)
+<p>GeoJson.io can transform a CSV spreadsheet with <em>latitude</em> (or <em>lat</em>) and <em>longitude</em> (or <em>lon</em>)
 columns into a GeoJSON file of point features. Each row in the spreadsheet
 becomes its own point, and all columns other than <em>lat</em> and <em>lon</em>
-become <em>attributes</em> (or <em>properties</em>) of point features. An example of
-such spreadsheet is shown in Figure <a href="geojsonio.html#fig:geojson-io-csv-data">14.8</a>. You
-can <a href="data/hartford-and-suburbs.csv">download it</a> for the exercise.</p>
+become <em>attributes</em> (or <em>properties</em>) of point features. For this exercise, you can download the <a href="data/toronto-locations-sample.csv">Toronto locations sample CSV file</a> to your computer, which contains three rows of data as shown in Figure <a href="geojsonio.html#fig:geojson-io-csv-data">14.5</a>.</p>
 
 <div class="figure"><span id="fig:geojson-io-csv-data"></span>
-<img src="images/14-transform/geojson-io-csv-data.png" alt="A spreadsheet with lat/lon columns can be transformed into a GeoJSON with point features."  />
+<img src="images/14-transform/geojson-io-csv-data.png" alt="A CSV spreadsheet with lat/lon columns can be transformed into a GeoJSON with point features."  />
 <p class="caption">
-Figure 14.8: A spreadsheet with lat/lon columns can be transformed into a GeoJSON with point features.
+Figure 14.5: A CSV spreadsheet with lat/lon columns can be transformed into a GeoJSON with point features.
 </p>
 </div>
 <ol style="list-style-type: decimal">
-<li>Save your spreadsheet as a CSV file, and drag-and-drop it to the map area of GeoJson.io.
-You should see a green popup in the upper-left corner notifying you how many features
-were imported.</li>
+<li>Select <em>New</em> to clear data from the prior exercise in the GeoJson.io tool, then drag-and-drop the Toronto locations CSV file you downloaded above into the map area of the tool. A green popup show notify you that 3 features were successfully imported.</li>
 </ol>
-<p>Note: If you had some data on the map already, GeoJson.io wouldn’t erase anything
-but instead would add point features to the existing map.</p>
+<p>Note: If you add new data to existing data in GeoJson.io, it will combine them into one file, which can be useful for certain tasks.</p>
 <ol start="2" style="list-style-type: decimal">
-<li>Click on a marker to see a popup with point properties. If you used the sample file
-with towns around Hartford, you will see <em>town</em>, <em>community_type</em>, and <em>wiki_link</em> features
-in addition to the tool’s default <em>marker-color</em>, <em>marker-size</em>, and <em>marker-symbol</em>
-fields.</li>
+<li><p>Click on a marker to see a popup with point properties. If you used the Toronto locations sample file, you will see <em>name</em> and <em>link</em> features, in addition to the tool’s default <em>marker-color</em>, <em>marker-size</em>, and <em>marker-symbol</em> fields. Note that you can edit and delete properties in the Map view.</p></li>
+<li><p>Click the <em>Table</em> tab to the right of the map to view all of the data at once, rather than individual marker popups, as shown in Figure <a href="geojsonio.html#fig:geojson-io-points">14.6</a>. You can edit and delete properties in the Table view, as well as the JSON code view.</p></li>
+<li><p>If you edited your map data, go to <em>Save &gt; GeoJSON</em> to download the file to your computer, which will automatically be named <code>map.geojson</code>, so rename it to avoid confusion. Optionally, you can also log into GeoJson.io with your GitHub account and save it directly to your repository.</p></li>
 </ol>
-<p>Tip: The popup is interactive, and you can click and edit each property (including property names).
-You can also add a new property by clicking the <em>Add row</em> button. You can delete
-the marker by clicking <em>Delete feature</em> button.</p>
-<ol start="3" style="list-style-type: decimal">
-<li>Click <em>Save</em> to record all marker changes to the GeoJSON. This will close the popup window,
-and you will see updated markers in the JSON tab to the right of the map.</li>
-<li>It may be quicker to view all data as a table instead of dealing with individual marker popups.
-In the <em>Table</em> tab to the right of the map, you can add, rename, and remove columns
-from <em>all</em> features (markers) at once.
-Table cells are also modifiable, so you can edit your data there.</li>
-<li>Once you are happy with your map data, go to <em>Save &gt; GeoJSON</em> to download the result to your computer.
-You can also log into GeoJson.io with your GitHub account and save directly to your repository.</li>
-</ol>
-<div class="figure"><span id="fig:geojsonio-gif"></span>
-<iframe src="images/14-transform/dataviz-geojsonio-640.gif" width="672" height="466px">
-</iframe>
+
+<div class="figure"><span id="fig:geojson-io-points"></span>
+<img src="images/14-transform/geojson-io-points.png" alt="Upload CSV data into GeoJson.io to easily edit it in the Map or Table view."  />
 <p class="caption">
-Figure 14.9: A spreadsheet with coordinates columns can be transformed into a GeoJSON with point features.
+Figure 14.6: Upload CSV data into GeoJson.io to easily edit it in the Map or Table view.
 </p>
 </div>
 </div>
-<div id="create-a-geojson-from-scratch-using-drawing-tools" class="section level4 unnumbered" number="">
-<h4>Create a GeoJSON from scratch using drawing tools</h4>
-<p>GeoJson.io lets you create geospatial files from scratch, using simple drawing
-tools to put markers (points), lines, and polygons to appropriate locations.
-These are useful when you have no original file to work with. The following
-steps will show you how to create a new GeoJSON file and add markers, lines, and polygons
-to it.</p>
+<div id="create-new-geojson-data-with-drawing-tools" class="section level4 unnumbered" number="">
+<h4>Create new GeoJSON data with drawing tools</h4>
+<p>GeoJson.io lets you create geospatial files from scratch by using simple drawing
+tools to place points, polylines, or polygons on the map.
+These are useful when you have no original file to work with. Let’s create some new data.</p>
 <ol style="list-style-type: decimal">
-<li>Open GeoJson.io and in the lower-left corner switch from Mapbox (vector tiles)
-to Satellite.</li>
-<li>In the upper-right corner of the map, use the Search tool to find the area you’re interested in mapping.
-For this exercise, we will use tennis courts at Trinity College, Hartford, as shown in
-Figure <a href="geojsonio.html#fig:geojson-io-draw">14.10</a>.</li>
+<li><p>Click <em>New</em> to clear data from the prior exercise in the GeoJson.io tool.</p></li>
+<li><p>In the lower-left corner, switch from Mapbox (vector tiles) to Satellite (raster data).</p></li>
+<li><p>In the upper-right corner of the map, use the Search tool to find an area of interest.
+For this exercise, we will trace the geography around an athletic field in Toronto, as shown in
+Figure <a href="geojsonio.html#fig:geojson-io-draw">14.7</a>.</p></li>
 </ol>
 
 <div class="figure"><span id="fig:geojson-io-draw"></span>
-<img src="images/14-transform/geojson-io-draw.png" alt="Use drawing tools to create points, lines, and polygons in GeoJson.io."  />
+<img src="images/14-transform/geojson-io-draw.png" alt="Use drawing tools to create points, lines, and polygons in GeoJson.io." width="450" />
 <p class="caption">
-Figure 14.10: Use drawing tools to create points, lines, and polygons in GeoJson.io.
+Figure 14.7: Use drawing tools to create points, lines, and polygons in GeoJson.io.
 </p>
 </div>
-<ol start="3" style="list-style-type: decimal">
-<li>In the toolbar, you have a choice of four drawing tools: a polyline (which is a series
+<ol start="4" style="list-style-type: decimal">
+<li><p>In the toolbar, you have a choice of four drawing tools: a polyline (which is a series
 of points connected by lines, but not closed like a polygon), a polygon, a rectangle
-(which is just an instance of a polygon), and a marker (point). Let’s start by creating a marker.</li>
-<li>Click on the <em>Draw a marker</em> button, and click anywhere on the map to place it.
+(which is just an instance of a polygon), and a point marker.</p></li>
+<li><p>Select the <em>Draw a marker</em> button, and click anywhere on the map to place it.
 You will see a gray marker that is now part of your map. You can modify its properties,
-or delete it in the interactive pop-up.</li>
-<li>Next, choose <em>Draw a polyline</em> and click on multiple locations in the map to see
-connected lines appearing. To finish and create a feature, click again on the final point.
-Polylines are generally used for roads and paths.</li>
-<li>Drawing a polygon is similar to drawing a polyline, except that you need to complete
+or delete it in the interactive pop-up.</p></li>
+<li><p>Select the <em>Draw a polyline</em> button and click on multiple locations in the map to see
+connected lines appearing. Polylines are generally used for roads and paths. To finish and create a feature, click again on the final point.</p></li>
+<li><p>Select the <em>Draw a polygon</em> button, which similar to drawing a polyline, except that you need to complete
 the feature by making your final point at the same location as your initial point.
-Polygons are used to define object boundaries, from continents to buildings, cars, and
-anything that has significant dimensions.</li>
-<li>Use <em>Edit layers</em> tool (the one above <em>Delete</em>) to move a marker to a better position,
-or adjust the shapes of your features.</li>
+Polygons are used to define boundaries, including small and large geographical areas.</p></li>
+<li><p>Use the <em>Edit layers</em> tool (above <em>Delete</em>) to move a marker to a better position,
+or adjust the shapes of your features.</p></li>
 </ol>
-<p>Once you are done creating features and their physical boundaries, it is time to add
+<p>After you have created features and their physical boundaries, add
 meaningful attribution data. Use the interactive popups or the Table view to
-give objects names and other qualities. When finished, save the GeoJSON to your computer.</p>
-<p>Drawing tools can be used to correct your existing GeoJSON files. For example,
+give objects names and other properties. When finished, save the GeoJSON file to your computer.</p>
+<p>You can also use drawing tools to edit existing GeoJSON files. For example,
 if you created a GeoJSON from a CSV file, you might decide to move some markers
 with <em>Edit layers</em> tool instead of modifying their latitude and longitude values.
-Or you might decide that your polygons (eg those representing Hartford parks) are
-too “simplified”, and make them more precise with the satellite imagery.</p>
+Or you might decide to make polygons more precise by tracing around satellite imagery.</p>
 <p>In the next section, we will introduce Mapshaper, another free online tool
 to convert and modify geospatial files.</p>
 </div>

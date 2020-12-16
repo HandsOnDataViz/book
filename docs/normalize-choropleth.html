@@ -272,14 +272,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="14" data-path="transform.html"><a href="transform.html"><i class="fa fa-check"></i><b>14</b> Transform Your Map Data</a>
 <ul>
-<li class="chapter" data-level="" data-path="bulk-geocode.html"><a href="bulk-geocode.html"><i class="fa fa-check"></i>Bulk Geocode with US Census</a></li>
-<li class="chapter" data-level="" data-path="pivot-point-to-polygon.html"><a href="pivot-point-to-polygon.html"><i class="fa fa-check"></i>Pivot Points into Polygon Data</a></li>
 <li class="chapter" data-level="" data-path="geojson.html"><a href="geojson.html"><i class="fa fa-check"></i>Geospatial Data and GeoJSON</a></li>
 <li class="chapter" data-level="" data-path="find-geojson.html"><a href="find-geojson.html"><i class="fa fa-check"></i>Find GeoJSON Boundary Files</a></li>
 <li class="chapter" data-level="" data-path="geojsonio.html"><a href="geojsonio.html"><i class="fa fa-check"></i>Draw and Edit with GeoJson.io</a></li>
 <li class="chapter" data-level="" data-path="mapshaper.html"><a href="mapshaper.html"><i class="fa fa-check"></i>Edit and Join with Mapshaper</a></li>
-<li class="chapter" data-level="" data-path="mapwarper.html"><a href="mapwarper.html"><i class="fa fa-check"></i>Georeference with MapWarper</a></li>
 <li class="chapter" data-level="" data-path="convert-kmz.html"><a href="convert-kmz.html"><i class="fa fa-check"></i>Convert Compressed KMZ to KML</a></li>
+<li class="chapter" data-level="" data-path="mapwarper.html"><a href="mapwarper.html"><i class="fa fa-check"></i>Georeference with MapWarper</a></li>
+<li class="chapter" data-level="" data-path="bulk-geocode.html"><a href="bulk-geocode.html"><i class="fa fa-check"></i>Bulk Geocode with US Census</a></li>
+<li class="chapter" data-level="" data-path="pivot-point-to-polygon.html"><a href="pivot-point-to-polygon.html"><i class="fa fa-check"></i>Pivot Points into Polygon Data</a></li>
 </ul></li>
 <li class="chapter" data-level="15" data-path="detect.html"><a href="detect.html"><i class="fa fa-check"></i><b>15</b> Detect Lies and Reduce Bias</a>
 <ul>
@@ -355,7 +355,6 @@ Figure 8.14: Choropleth maps work best with normalized values.
 <p>What are the worst-hit states according to the map showing total Covid-19 counts (shown in Figure <a href="normalize-choropleth.html#fig:normalize-map-data">8.14</a>a)? If you are familiar with the US geography, you can quickly tell that these are New York, New Jersey, Massachusetts, Florida, Illinois, Texas, and California. But five of these happen to be some of the most populous states in the US,
 so it makes sense that they will also have higher Covid-19 cases.</p>
 <p>Now, how about the map in Figure <a href="normalize-choropleth.html#fig:normalize-map-data">8.14</a>b? You can see that New York and its neighbors, including New Jersey and Massachusetts, have by far the highest rates per capita (per person), which we saw in the first map. But you can also see that in fact California, Texas, and Florida were impacted to a lesser extent than the map on the left had suggested. So the map with per-capita values is a much better illustration to the story about New York being the <em>first</em> epicenter of the Covid-19 crisis in the United States.</p>
-<p>TODO: Include a very simple normalization calculation to demonstrate raw counts versus normalized data (Cases / Population = Cases Per Capita) for two states, such as Texas and New York. Decide whether to show data at a specific moment (May 1 2020 near peak for NYC) or most up-to-date figure at this writing (which will show higher case rates elsewhere). Either way, clearly label the date in the caption.</p>
 <p>At this point, you should have a better idea of key principles in map design, and what makes them work (or not) when communicating data images to our eyes. In the next section, we’ll begin our first hands-on tutorial with creating a point map. Later in the chapter we’ll return to exercises in creating choropleth maps.</p>
 </div>
             </section>

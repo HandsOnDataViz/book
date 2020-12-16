@@ -343,45 +343,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="map-socrata" class="section level2 unnumbered" number="">
 <h2>Current Map with Socrata Open Data</h2>
-<p>TODO update broken map, working on this…</p>
 <p><a href="https://www.tylertech.com/products/socrata">Socrata</a> is a database service that is used by government agencies,
-cities and countries to make open data available to the public. It offers user-friendly ways to view, filter,
-and export data. In addition, the Socrata platform includes built-in support to create interactive charts and maps,
-which can be embedded in other websites (including your own).</p>
+cities and countries to make open data available to the public. It offers user-friendly ways to view, filter, and export data. In addition, the Socrata platform includes built-in support to create interactive charts and maps, which can be embedded in other websites (including your own).</p>
 <p>One advantage of creating data visualizations directly on an open data platform is that the chart
 or map is linked to the data repository. For example, if the Socrata platform administrator updates
-the data table, then a Socrata dataviz based on that data will be automatically updated, too.
-This may be especially useful for “live” data that is continuously updated by agency administrators
-such as fires, crimes, and property data.</p>
-<p>In this section, we will build an interactive point map of hospitals in Texas
-using <a href="https://data.medicare.gov/Hospital-Compare/Hospital-General-Information/xubh-q36u/data">General Hospital Information</a> dataset by Medicare, which you can see in Figure <a href="map-socrata.html#fig:socrata-final">8.60</a>.</p>
+the data table, then a Socrata visualization based on that data will be automatically updated, too. This may be especially useful for “live” data that is continuously updated by agency administrators such as emergency services, public directories, and property data.</p>
+<p>In this section, we will build an interactive point map of fatal crashes involving cars in New York City, which continuously updates to display points over the past 365 days, as shown in Figure <a href="map-socrata.html#fig:socrata-final">8.60</a>. Our interactive map pulls data from the <a href="https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95/data">Motor Vehicle Collisions - Crashes</a> public repository on New York City’s OpenData Portal, and should continue to work as long as administrators continue to update the dataset on this Socrata platform. Learn more about <a href="opendata.html">open data repositories in chapter 4</a>, and search for additional datasets on Socrata’s <a href="https://www.opendatanetwork.com/">Open Data Network</a>.</p>
 
 <div class="figure"><span id="fig:socrata-final"></span>
-<iframe src="https://data.medicare.gov/dataset/Texas-Hospitals/cvhn-bsmn/embed?width=100%25&amp;height=500" width="672" height="500px">
+<iframe src="https://data.cityofnewyork.us/dataset/Fatal-NYC-Crashes/nx4u-jy9t/embed?width=100%25&amp;height=500" width="672" height="500px">
 </iframe>
 <p class="caption">
-Figure 8.60: Point map of hospitals in Texas drawn from current open-data stream in Socrata. View the interactive version TODO.
+Figure 8.60: Map of fatal crashes in NYC during the past year, continuously updated from a Socrata open data repository. See <a href="https://data.cityofnewyork.us/dataset/Fatal-NYC-Crashes/nx4u-jy9t/embed?width=100%25&amp;height=500">interactive version</a>.
 </p>
 </div>
-<p>Generally, in order to create a map in Socrata, you need to be a registered user,
-and the dataset you wish to visualize has to contain a column with location data.
-This is not just an address column (such as <code>3500 Gaston Avenue, Dallas, TX</code>), but
-a geocoded column that contains latitude and longitude values.</p>
-<div id="sign-up-for-socrata-account" class="section level3 unnumbered" number="">
-<h3>Sign Up for Socrata Account</h3>
-<p>Navigate to <a href="https://data.medicare.gov/">Data.Medicare.gov</a> click <em>Sign In</em> button
-in the upper-right corner. Scroll down to <em>Sign Up</em> link. Follow the instructions,
-including setting up two-step authentication (2FA), to create a free account.</p>
-<p>Note: You can still practice creating maps in Socrata without being logged in.
-You won’t be able to save or share your work, however.</p>
-<p>Once you have an account, log in using your credentials (you may find <a href="https://support.socrata.com/hc/en-us/articles/360016843234-Two-Factor-Authentication">this tutorial</a> about logging-in with 2FA useful). Navigate to your profile by clicking your username in the upper-right corner and make sure you <em>Accept Terms and Conditions</em>, otherwise you won’t be able to save your draft map.</p>
-<p>This username and password are only valid for Data.Medicare.gov, not other websites
-that use Socrata.</p>
-</div>
-<div id="create-your-first-socrata-point-map" class="section level3 unnumbered" number="">
-<h3>Create Your First Socrata Point Map</h3>
-<p>Navigate to the <a href="https://data.medicare.gov/Hospital-Compare/Hospital-General-Information/xubh-q36u/data">Hospital General Dataset</a>,
-and in the menu on the right-hand side choose <em>Visualize &gt; Launch New Visualization</em>, as shown in Figure <a href="map-socrata.html#fig:socrata-launch-new-viz">8.61</a>. This will open up a <em>Configure Visualization</em> studio where you can create the map.</p>
+<p>To build your own continuously-updated point map with this Socrata open data repository, follow this tutorial. Anyone can create a map using public data hosted by Socrata, but you need to be a registered Socrata user in order to save and share your map. Only datasets that have a special location column can be mapped, which is different from traditional location columns (such as Address or City) that you see in the dataset. Consider reaching out to dataset administrators if datasets you wish to map are missing geocoded locations.</p>
+<ol style="list-style-type: decimal">
+<li><p>Register for your account on the <a href="https://opendata.cityofnewyork.us/">NYC OpenData</a> by clicking the <em>Sign In</em> button in the upper-right corner. Where it says “Don’t have an account yet? Sign Up”, proceed to sign up. Follow the instructions, including confirming that you are not a robot, and accepting the License Agreement to create your free account. This account, including your username and password, are valid for NYC OpenData portal, but <em>not</em> other websites that use Socrata.</p></li>
+<li><p>Navigate to the <a href="https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95/data">Motor Vehicle Collisions - Crashes</a> dataset. In the menu on the right-hand side choose <em>Visualize &gt; Launch New Visualization</em>, as shown in Figure <a href="map-socrata.html#fig:socrata-launch-new-viz">8.61</a>. This will open a <em>Configure Visualization</em> studio where you can create the map.</p></li>
+</ol>
 
 <div class="figure"><span id="fig:socrata-launch-new-viz"></span>
 <img src="images/08-map/socrata-launch-new-viz-annotated.png" alt="Go to Visualize &gt; Launch New Visualization." width="300" />
@@ -389,7 +369,9 @@ and in the menu on the right-hand side choose <em>Visualize &gt; Launch New Visu
 Figure 8.61: Go to Visualize &gt; Launch New Visualization.
 </p>
 </div>
-<p>In the top menu, click <em>Map</em> (globe icon between a scatter chart icon and a calendar). You will see an updated layout of the studio, with the map in the middle, and <em>Map Layers</em> and <em>Map Settings</em> items in the side menu on the left, as shown in Figure <a href="map-socrata.html#fig:socrata-configure">8.62</a>.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>In the top menu, select <em>Map</em> (the globe icon between a scatter chart icon and a calendar) as the visualization type. In a few seconds a basemap will appear, with <em>Map Layers</em> and <em>Map Settings</em> items in the side menu on the left, as shown in Figure <a href="map-socrata.html#fig:socrata-configure">8.62</a>.</li>
+</ol>
 
 <div class="figure"><span id="fig:socrata-configure"></span>
 <img src="images/08-map/socrata-configure-annotated.png" alt="Your studio should look similar to this once you choose Map as the visualization type." width="500" />
@@ -397,106 +379,61 @@ Figure 8.61: Go to Visualize &gt; Launch New Visualization.
 Figure 8.62: Your studio should look similar to this once you choose Map as the visualization type.
 </p>
 </div>
-<p>Socrata was able to determine which column contains geospatial value, and automatically
-set Geo Column value to <em>Location</em> in the <em>Layer List</em> menu. By default, points are clustered (grouped together),
-so instead of seeing individual hospital locations, you see bubbles with numbers (such as <code>12</code> in Alaska).</p>
-<p>Let’s first select only hospitals that are located in the southern state of Texas.
-To do so, go to <em>Filters &gt; Add filter</em>. The dropdown menu lists all columns (or fields) of the dataset,
-where we should choose <em>State</em>. In the newly appeared State dropdown, choose TX (for Texas) as shown in Figure <a href="map-socrata.html#fig:socrata-filter">8.63</a>, and scroll down
-and click Apply. Socrata should zoom in on the map and center on Texas. Close <em>Filters</em> window to free screen space.</p>
+<p>Socrata was able to determine which column contains geospatial value, and automatically set the <em>Geo Column</em> value to <em>LOCATION</em> (see <em>Layer List &gt; Data Selection</em>). By default, points are clustered together. That’s why instead of individual crashes you see bubbles with numbers, which represent how many points are clustered in that bubble. Clusters will change when you zoom in and out.</p>
+<ol start="4" style="list-style-type: decimal">
+<li><p>We need to limit our map to display only crashes with fatalities. In the upper-right corner, click <em>Filters &gt; Add filter</em>. The dropdown menu lists all columns (or fields) of the dataset, where you should choose <em>Number of persons killed</em>. In the newly appeared dropdown, choose <em>Is greater than</em>, and set the value to 0, as shown in Figure <a href="map-socrata.html#fig:socrata-filter">8.63</a>. Alternatively you can set it to <em>Is greater than or equal to</em>, and set the value to 1.</p></li>
+<li><p>We need to clean up the data. Zoom out and you’ll notice that not all crashes were geocoded properly. Several appear on the imaginary Null Island in the Atlantic Ocean, where the latitude and longitude are both 0. You learned how to recognize and deal with <a href="bad-data.html">bad data in chapter 4</a>. To remove many of these incorrectly geocoded crashes, let’s add another filter on <em>Latitude</em> column and set it to <em>Is greater than</em> with the value of 0. This way we show crashes located in the northern hemisphere, north of the Null Island, where New York City is located. After you correctly set both filters , the map will fly over and focus on New York City. If you wish, you can continue to clean up the data by adding more filters.</p></li>
+<li><p>Instead of showing all recorded crashes since 2012, let’s display crashes that happened over the past year, to be updated continuously. Add a third filter for <em>Crash date</em> column, and set it to <em>Relative Date &gt; Custom &gt; Last 365 day(s)</em>. You will see a lot of points disappearing from the map as they don’t fall in the selected dates range. You can now close <em>Filters</em> window to free up screen space.</p></li>
+</ol>
 
 <div class="figure"><span id="fig:socrata-filter"></span>
-<img src="images/08-map/socrata-filter-annotated.png" alt="Select Texas as the only value for State field." width="300" />
+<img src="images/08-map/socrata-filter-annotated.png" alt="Add filters for number of persons killed (&gt;0), location (latitude &gt; 0), and date (last 365 days)." width="300" />
 <p class="caption">
-Figure 8.63: Select Texas as the only value for State field.
+Figure 8.63: Add filters for number of persons killed (&gt;0), location (latitude &gt; 0), and date (last 365 days).
 </p>
 </div>
-<p>Let’s now <em>disaggregate</em> the map so that we can see individual hospitals instead of clusters.
-Go to <em>Map Settings &gt; Clusters</em>, and bring the <em>Stop Clustering at Zoom Level</em> slider to 1,
-as shown in Figure <a href="map-socrata.html#fig:socrata-uncluster">8.64</a>.
-You will see the map now shows individual points.</p>
+<ol start="7" style="list-style-type: decimal">
+<li>Let’s ensure that crash locations appear as individual points and are never clustered together. Go to <em>Map Settings &gt; Clusters</em>, and bring the <em>Stop Clustering at Zoom Level</em> slider to 1, as shown in Figure <a href="map-socrata.html#fig:socrata-uncluster">8.64</a>. You should now see individual crash locations at all zoom levels.</li>
+</ol>
 
 <div class="figure"><span id="fig:socrata-uncluster"></span>
-<img src="images/08-map/socrata-uncluster-annotated.png" alt="To show individual points instead of clusters, set Stop Clustering at Zoom Level to 1." width="300" />
+<img src="images/08-map/socrata-uncluster-annotated.png" alt="To always show individual points instead of clusters, set Stop Clustering at Zoom Level to 1." width="300" />
 <p class="caption">
-Figure 8.64: To show individual points instead of clusters, set Stop Clustering at Zoom Level to 1.
+Figure 8.64: To always show individual points instead of clusters, set <em>Stop Clustering at Zoom Level</em> to 1.
 </p>
 </div>
-<p>In the same accordion menu, change <em>Basemap &gt; Type</em> to <em>Dark</em> to bring the map a fashionable 2020 look.
-In <em>General</em>, set Title to <em>Texas Hospitals</em>, and hide data table below the map by unchecking the
-<em>Show data table below visualization</em> box. Under <em>Map Controls</em>, uncheck <em>Show Search Bar</em> and <em>Show Locate Button</em>
-to get rid of unnecessary elements. Feel free to experiment with other settings as well.</p>
-<p>Now, let’s return back to the <em>Map Layers</em> menu and choose our <em>Hospitals General Information</em>
-point layer. You can notice that in <em>Data Selection</em> accordion menu, <em>Resize Points by Value</em>
-is grayed out. That is because the dataset doesn’t contain columns with continuous variables
-that can be transformed to point sizes. Instead, we can use <em>Style by Value</em> option to
-classify categorical points. The dataset contains multiple variables that can be effectively visualized,
-such as <em>Hospital Type</em>, <em>Emergency Services</em> (a yes/no category), <em>Mortality national comparison</em> and others.
-Let’s stick with <em>Hospital Type</em>, as is illustrated in Figure <a href="map-socrata.html#fig:socrata-style">8.65</a>.</p>
-
-<div class="figure"><span id="fig:socrata-style"></span>
-<img src="images/08-map/socrata-style-annotated.png" alt="Let’s display different types of hospitals in different colors." width="300" />
-<p class="caption">
-Figure 8.65: Let’s display different types of hospitals in different colors.
-</p>
-</div>
-<p>If you look at the bottom-right corner of the map, you should notice a minimized <em>Legend</em> control.
-Click on it to see what each color represents.</p>
-<p>Change the color palette (in <em>Color</em> menu) from <em>Categorical 1</em> to <em>Categorical 2</em>,
-which includes a wider range of unique colors. You can also use <em>Custom…</em>
-item to set individual colors, as well as change the order of categories in the legend.</p>
-<p>To change what is shown in tooltips when you hover or click on points,
-go to <strong>Flyout Details</strong>, and set Flyout Title to <em>Facility Name</em>,
-adding city and phone number as additional flyout values, as is shown in Figure
-<a href="map-socrata.html#fig:socrata-flyout">8.66</a>.</p>
+<ol start="8" style="list-style-type: decimal">
+<li><p>In the same accordion menu, change <em>Basemap &gt; Type</em> from default <em>Basic</em> to <em>Dark</em> to give points maximum visibility, and to give the map a more fashionable look. In <em>General</em>, set Title to <em>Fatal Crashes in New York City, Last 365 Days</em>, and hide data table below the map by unchecking the <em>Show data table below visualization</em> box. Under <em>Map Controls</em>, uncheck <em>Show Locate Button</em> as it is only relevant for those accessing the map from NYC. Under <em>Legend Options</em>, uncheck <em>Show Legend</em>. Feel free to experiment with other settings.</p></li>
+<li><p>Finally, let’s create meaningful tooltips for points. Return back to the <em>Map Layers</em> menu and choose our <em>Motor Vehicle Collisions - Crashes</em> point layer. To change what is shown in tooltips when you hover or click on points, navigate to <em>Flyout Details</em>, and set <em>Flyout Title</em> to <em>ON STREET NAME</em>, adding <em>CRASH DATE</em>, <em>CRASH DATE</em>, <em>NUMBER OF PERSONS INJURED</em>, and <em>NUMBER OF PERSONS KILLED</em> as additional flyout values, as shown in Figure <a href="map-socrata.html#fig:socrata-flyout">8.65</a>.</p></li>
+</ol>
 
 <div class="figure"><span id="fig:socrata-flyout"></span>
-<img src="images/08-map/socrata-flyout.png" alt="To edit tooltip information, use Flyout Details menu item." width="300" />
+<img src="images/08-map/socrata-flyout.png" alt="To edit tooltip information, use the Flyout Details menu item." width="250" />
 <p class="caption">
-Figure 8.66: To edit tooltip information, use Flyout Details menu item.
+Figure 8.65: To edit tooltip information, use the <em>Flyout Details</em> menu item.
 </p>
 </div>
-<p>At this point you should have a fully-functional interactive map
-showing all hospitals in Texas, colored according to their type.
-Before you can share it, you need to save it as a draft, and publish.</p>
-<div id="save-draft-and-publish" class="section level4 unnumbered" number="">
-<h4>Save Draft and Publish</h4>
-<p>In the lower-right corner, click <em>Save Draft</em> button. Give your map a name,
-and hit <em>Save</em>. The gray ribbon at the top will tell you it is still a draft,
-and you can go ahead and <em>Publish…</em> it.</p>
-<p>Now you can embed the map on your website as an iframe. To do so, click the <em>Share</em> button in the upper-right side of your map (see Figure <a href="map-socrata.html#fig:socrata-share">8.67</a>),
-and copy the generated code from <em>Embed Code</em> text area (Figure <a href="map-socrata.html#fig:socrata-share-embed">8.68</a>).
-Learn more in <a href="embed.html">Chapter 10: Embed on the Web</a>.</p>
+<p>There are more more ways to modify the map that we will not demonstrate in this tutorial. For example, you could use <em>Resize Points by Value</em> functionality in the <em>Data Selection</em> menu to transform your point map into a symbol map, where larger circles represent larger numeric values (such as more people injured in a crash). If you have textual categorical data, such as a contributing crash factor in our dataset (e.g., passing too closely, driver inexperience, etc.), you could use <em>Style by Value</em> functionality to apply different colors to different crash categories.</p>
+<p>At this point you should have a functional interactive point map that continuously updates to show fatal crashes in New York City in the past 365 days, and it should continue to work as long as administrators continue to update the database on this platform. Before you can share the map with others, you need to save it as a draft, and publish.</p>
+<ol start="10" style="list-style-type: decimal">
+<li>In the lower-right corner, click <em>Save Draft</em> button. Give your map a name (which is different from map’s title that users will see), and hit <em>Save</em>. The gray ribbon at the top will tell you it is still a draft. When you are ready to make it public, go ahead and hit <em>Publish…</em>.</li>
+</ol>
+<p>Now you can embed the map on your website as an iframe. To do so, click the <em>Share</em> button in the upper-right side of your map (see Figure <a href="map-socrata.html#fig:socrata-share">8.66</a>), and copy the generated code from <em>Embed Code</em> text area (Figure <a href="map-socrata.html#fig:socrata-share-embed">8.67</a>). We will talk about embedding visualizations in detail in <a href="embed.html">Chapter 10: Embed on the Web</a>.</p>
 
 <div class="figure"><span id="fig:socrata-share"></span>
 <img src="images/08-map/socrata-share-annotated.png" alt="Click Share button to bring up Share and Embed window." width="400" />
 <p class="caption">
-Figure 8.67: Click <em>Share</em> button to bring up <em>Share and Embed</em> window.
+Figure 8.66: Click <em>Share</em> button to bring up <em>Share and Embed</em> window.
 </p>
 </div>
 
 <div class="figure"><span id="fig:socrata-share-embed"></span>
-<img src="images/08-map/socrata-share-embed.png" alt="Copy iframe code to embed this map in another website."  />
+<img src="images/08-map/socrata-share-embed.png" alt="Copy iframe code to embed this map in another website." width="400" />
 <p class="caption">
-Figure 8.68: Copy iframe code to embed this map in another website.
+Figure 8.67: Copy iframe code to embed this map in another website.
 </p>
 </div>
-</div>
-</div>
-<div id="limitations-of-socrata" class="section level3 unnumbered" number="">
-<h3>Limitations of Socrata</h3>
-<p>But there are limitations to creating your chart or map on an open data repository platform.
-First, if the agency stops using the platform, or changes the structure of the underlying data,
-your online map (or chart) may stop functioning. Second, you are generally limited to using datasets
-and geographic boundaries that already exist on that platform.</p>
-<p>If these limitations concern you, a simple alternative is to export data from the
-open repository (which means that any “live” data would become “static”), and
-import it into your preferred dataviz tool, such as Tableau.</p>
-<p>A second, more advanced alternative, is to learn to pull live data from Socrata using
-an API (Application Programming Interface). That requires
-coding skills that are beyond the scope of this book.
-Visit the <a href="https://dev.socrata.com/">official documentation</a> to learn more about Socrata API.</p>
-</div>
+<p>There are limitations to creating your chart or map on an open data repository platform. First, if the agency stops using the platform, or changes the structure of the underlying data, your online map (or chart) may stop functioning. In fact, we had to rewrite this tutorial when it referred to a different Socrata platform that administrators stopped supporting. Second, you are limited to using datasets and geographic boundaries that exist on that platform. If these limitations concern you, a simple alternative is to export data from the open repository (which means that any “live” data would become “static”), and import it into your preferred data visualization tool, such as Datawrapper, Google Sheets, or Tableau. A second, more advanced alternative, is to learn to pull live data from Socrata using an API (Application Programming Interface), as described in the <a href="leaflet-maps-open-data-apis.html">Leaflet Maps with Open Data APIs tutorial in Chapter 13</a>.</p>
 <div id="summary8" class="section level3 unnumbered" number="">
 <h3>Summary</h3>
 <p>In this chapter, we looked at free mapping platforms to create simple point and polygon maps.

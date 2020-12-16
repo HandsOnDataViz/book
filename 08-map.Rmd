@@ -19,6 +19,8 @@ Table: (\#tab:map-types) Basic Map Types, Best Uses, and Tutorials
 | Searchable point map<br> ![](images/08-map/tablemap-searchable.png) | Best to show specific locations for users to search by name or proximity, or filter by category, with optional list view.<br> Power Tool: [Ch 13: Leaflet Searchable Point Map code template](leaflet-searchable-map.html) |
 | Current map from open-data repository<br> ![](images/08-map/tablemap-open-data.png) | Best to show the most current information pulled directly from an open-data repository such as Socrata and others. <br>Easy tool: [Current map with Socrata open data tutorial](map-socrata.html)<br>Power tool: [Ch 13: Leaflet Maps with Open Data API code template](leaflet-maps-open-data-apis.html) |
 
+TODO above: update 3 images
+
 ## Map Design Principles {- #map-design}
 Much of the data collected today includes a spatial component that can be mapped. Whether you look up a city address or take a photo of a tree in the forest, both can be geocoded as points on a map. We also can draw lines and shapes to illustrate geographical boundaries of neighborhoods or nations, and color them to represent different values, such as population and income.  
 
@@ -699,51 +701,26 @@ Now that you know that Tableau can be used not just for charts, but for maps as 
 
 ## Current Map with Socrata Open Data {- #map-socrata}
 
-TODO update broken map, working on this...
-
 [Socrata](https://www.tylertech.com/products/socrata) is a database service that is used by government agencies,
-cities and countries to make open data available to the public. It offers user-friendly ways to view, filter,
-and export data. In addition, the Socrata platform includes built-in support to create interactive charts and maps,
-which can be embedded in other websites (including your own).
+cities and countries to make open data available to the public. It offers user-friendly ways to view, filter, and export data. In addition, the Socrata platform includes built-in support to create interactive charts and maps, which can be embedded in other websites (including your own).
 
 One advantage of creating data visualizations directly on an open data platform is that the chart
 or map is linked to the data repository. For example, if the Socrata platform administrator updates
-the data table, then a Socrata dataviz based on that data will be automatically updated, too.
-This may be especially useful for "live" data that is continuously updated by agency administrators
-such as fires, crimes, and property data.
+the data table, then a Socrata visualization based on that data will be automatically updated, too. This may be especially useful for "live" data that is continuously updated by agency administrators such as emergency services, public directories, and property data.
 
-In this section, we will build an interactive point map of hospitals in Texas
-using [General Hospital Information](https://data.medicare.gov/Hospital-Compare/Hospital-General-Information/xubh-q36u/data) dataset by Medicare, which you can see in Figure \@ref(fig:socrata-final).
+In this section, we will build an interactive point map of fatal crashes involving cars in New York City, which continuously updates to display points over the past 365 days, as shown in Figure \@ref(fig:socrata-final). Our interactive map pulls data from the [Motor Vehicle Collisions - Crashes](https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95/data) public repository on New York City's OpenData Portal, and should continue to work as long as administrators continue to update the dataset on this Socrata platform. Learn more about [open data repositories in chapter 4](opendata.html), and search for additional datasets on Socrata's [Open Data Network](https://www.opendatanetwork.com/).
 
-(ref:socrata-final) Point map of hospitals in Texas drawn from current open-data stream in Socrata. View the interactive version TODO.
+(ref:socrata-final) Map of fatal crashes in NYC during the past year, continuously updated from a Socrata open data repository. See [interactive version](https://data.cityofnewyork.us/dataset/Fatal-NYC-Crashes/nx4u-jy9t/embed?width=100%25&height=500).
 
 ```{r socrata-final, fig.cap="(ref:socrata-final)"}
-if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://data.medicare.gov/dataset/Texas-Hospitals/cvhn-bsmn/embed?width=100%25&height=500", height="500px") else knitr::include_graphics("images/08-map/socrata-final.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://data.cityofnewyork.us/dataset/Fatal-NYC-Crashes/nx4u-jy9t/embed?width=100%25&height=500", height="500px") else knitr::include_graphics("images/08-map/socrata-final.png")
 ```
 
-Generally, in order to create a map in Socrata, you need to be a registered user,
-and the dataset you wish to visualize has to contain a column with location data.
-This is not just an address column (such as `3500 Gaston Avenue, Dallas, TX`), but
-a geocoded column that contains latitude and longitude values.
+To build your own continuously-updated point map with this Socrata open data repository, follow this tutorial. Anyone can create a map using public data hosted by Socrata, but you need to be a registered Socrata user in order to save and share your map. Only datasets that have a special location column can be mapped, which is different from traditional location columns (such as Address or City) that you see in the dataset. Consider reaching out to dataset administrators if datasets you wish to map are missing geocoded locations.
 
-### Sign Up for Socrata Account {-}
+1. Register for your account on the [NYC OpenData](https://opendata.cityofnewyork.us/) by clicking the *Sign In* button in the upper-right corner. Where it says "Don't have an account yet? Sign Up", proceed to sign up. Follow the instructions, including confirming that you are not a robot, and accepting the License Agreement to create your free account. This account, including your username and password, are valid for NYC OpenData portal, but *not* other websites that use Socrata.
 
-Navigate to [Data.Medicare.gov](https://data.medicare.gov/) click *Sign In* button
-in the upper-right corner. Scroll down to *Sign Up* link. Follow the instructions,
-including setting up two-step authentication (2FA), to create a free account.
-
-Note: You can still practice creating maps in Socrata without being logged in.
-You won't be able to save or share your work, however.
-
-Once you have an account, log in using your credentials (you may find [this tutorial](https://support.socrata.com/hc/en-us/articles/360016843234-Two-Factor-Authentication) about logging-in with 2FA useful). Navigate to your profile by clicking your username in the upper-right corner and make sure you *Accept Terms and Conditions*, otherwise you won't be able to save your draft map.
-
-This username and password are only valid for Data.Medicare.gov, not other websites
-that use Socrata.
-
-### Create Your First Socrata Point Map {-}
-
-Navigate to the [Hospital General Dataset](https://data.medicare.gov/Hospital-Compare/Hospital-General-Information/xubh-q36u/data),
-and in the menu on the right-hand side choose *Visualize > Launch New Visualization*, as shown in Figure \@ref(fig:socrata-launch-new-viz). This will open up a *Configure Visualization* studio where you can create the map.
+2. Navigate to the [Motor Vehicle Collisions - Crashes](https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95/data) dataset. In the menu on the right-hand side choose *Visualize > Launch New Visualization*, as shown in Figure \@ref(fig:socrata-launch-new-viz). This will open a *Configure Visualization* studio where you can create the map.
 
 (ref:socrata-launch-new-viz) Go to Visualize > Launch New Visualization.
 
@@ -751,7 +728,7 @@ and in the menu on the right-hand side choose *Visualize > Launch New Visualizat
 knitr::include_graphics("images/08-map/socrata-launch-new-viz-annotated.png")
 ```
 
-In the top menu, click *Map* (globe icon between a scatter chart icon and a calendar). You will see an updated layout of the studio, with the map in the middle, and *Map Layers* and *Map Settings* items in the side menu on the left, as shown in Figure \@ref(fig:socrata-configure).
+3. In the top menu, select *Map* (the globe icon between a scatter chart icon and a calendar) as the visualization type. In a few seconds a basemap will appear, with *Map Layers* and *Map Settings* items in the side menu on the left, as shown in Figure \@ref(fig:socrata-configure).
 
 (ref:socrata-configure) Your studio should look similar to this once you choose Map as the visualization type.
 
@@ -759,82 +736,45 @@ In the top menu, click *Map* (globe icon between a scatter chart icon and a cale
 knitr::include_graphics("images/08-map/socrata-configure-annotated.png")
 ```
 
-Socrata was able to determine which column contains geospatial value, and automatically
-set Geo Column value to *Location* in the *Layer List* menu. By default, points are clustered (grouped together),
-so instead of seeing individual hospital locations, you see bubbles with numbers (such as `12` in Alaska).
+Socrata was able to determine which column contains geospatial value, and automatically set the *Geo Column* value to *LOCATION* (see *Layer List > Data Selection*). By default, points are clustered together. That's why instead of individual crashes you see bubbles with numbers, which represent how many points are clustered in that bubble. Clusters will change when you zoom in and out.
 
-Let's first select only hospitals that are located in the southern state of Texas.
-To do so, go to *Filters > Add filter*. The dropdown menu lists all columns (or fields) of the dataset,
-where we should choose *State*. In the newly appeared State dropdown, choose TX (for Texas) as shown in Figure \@ref(fig:socrata-filter), and scroll down
-and click Apply. Socrata should zoom in on the map and center on Texas. Close *Filters* window to free screen space.
+4. We need to limit our map to display only crashes with fatalities. In the upper-right corner, click *Filters > Add filter*. The dropdown menu lists all columns (or fields) of the dataset, where you should choose *Number of persons killed*. In the newly appeared dropdown, choose *Is greater than*, and set the value to 0, as shown in Figure \@ref(fig:socrata-filter). Alternatively you can set it to *Is greater than or equal to*, and set the value to 1.
 
-(ref:socrata-filter) Select Texas as the only value for State field.
+5. We need to clean up the data. Zoom out and you'll notice that not all crashes were geocoded properly. Several appear on the imaginary Null Island in the Atlantic Ocean, where the latitude and longitude are both 0. You learned how to recognize and deal with [bad data in chapter 4](bad-data.html). To remove many of these incorrectly geocoded crashes, let's add another filter on *Latitude* column and set it to *Is greater than* with the value of 0. This way we show crashes located in the northern hemisphere, north of the Null Island, where New York City is located. After you correctly set both filters , the map will fly over and focus on New York City. If you wish, you can continue to clean up the data by adding more filters.
+
+6. Instead of showing all recorded crashes since 2012, let's display crashes that happened over the past year, to be updated continuously. Add a third filter for *Crash date* column, and set it to *Relative Date > Custom > Last 365 day(s)*. You will see a lot of points disappearing from the map as they don't fall in the selected dates range. You can now close *Filters* window to free up screen space.
+
+(ref:socrata-filter) Add filters for number of persons killed (>0), location (latitude > 0), and date (last 365 days).
 
 ```{r socrata-filter, out.width=300, fig.cap="(ref:socrata-filter)"}
 knitr::include_graphics("images/08-map/socrata-filter-annotated.png")
 ```
 
-Let's now *disaggregate* the map so that we can see individual hospitals instead of clusters.
-Go to *Map Settings > Clusters*, and bring the *Stop Clustering at Zoom Level* slider to 1,
-as shown in Figure \@ref(fig:socrata-uncluster).
-You will see the map now shows individual points.
+7. Let's ensure that crash locations appear as individual points and are never clustered together. Go to *Map Settings > Clusters*, and bring the *Stop Clustering at Zoom Level* slider to 1, as shown in Figure \@ref(fig:socrata-uncluster). You should now see individual crash locations at all zoom levels.
 
-(ref:socrata-uncluster) To show individual points instead of clusters, set Stop Clustering at Zoom Level to 1.
+(ref:socrata-uncluster) To always show individual points instead of clusters, set *Stop Clustering at Zoom Level* to 1.
 
 ```{r socrata-uncluster, out.width=300, fig.cap="(ref:socrata-uncluster)"}
 knitr::include_graphics("images/08-map/socrata-uncluster-annotated.png")
 ```
 
-In the same accordion menu, change *Basemap > Type* to *Dark* to bring the map a fashionable 2020 look.
-In *General*, set Title to *Texas Hospitals*, and hide data table below the map by unchecking the
-*Show data table below visualization* box. Under *Map Controls*, uncheck *Show Search Bar* and *Show Locate Button*
-to get rid of unnecessary elements. Feel free to experiment with other settings as well.
+8. In the same accordion menu, change *Basemap > Type* from default *Basic* to *Dark* to give points maximum visibility, and to give the map a more fashionable look. In *General*, set Title to *Fatal Crashes in New York City, Last 365 Days*, and hide data table below the map by unchecking the *Show data table below visualization* box. Under *Map Controls*, uncheck *Show Locate Button* as it is only relevant for those accessing the map from NYC. Under *Legend Options*, uncheck *Show Legend*. Feel free to experiment with other settings.
 
-Now, let's return back to the *Map Layers* menu and choose our *Hospitals General Information*
-point layer. You can notice that in *Data Selection* accordion menu, *Resize Points by Value*
-is grayed out. That is because the dataset doesn't contain columns with continuous variables
-that can be transformed to point sizes. Instead, we can use *Style by Value* option to
-classify categorical points. The dataset contains multiple variables that can be effectively visualized,
-such as *Hospital Type*, *Emergency Services* (a yes/no category), *Mortality national comparison* and others.
-Let's stick with *Hospital Type*, as is illustrated in Figure \@ref(fig:socrata-style).
+9. Finally, let's create meaningful tooltips for points. Return back to the *Map Layers* menu and choose our *Motor Vehicle Collisions - Crashes* point layer. To change what is shown in tooltips when you hover or click on points, navigate to *Flyout Details*, and set *Flyout Title* to *ON STREET NAME*, adding *CRASH DATE*, *CRASH DATE*, *NUMBER OF PERSONS INJURED*, and *NUMBER OF PERSONS KILLED* as additional flyout values, as shown in Figure \@ref(fig:socrata-flyout).
 
-(ref:socrata-style) Let's display different types of hospitals in different colors.
+(ref:socrata-flyout) To edit tooltip information, use the *Flyout Details* menu item.
 
-```{r socrata-style, out.width=300, fig.cap="(ref:socrata-style)"}
-knitr::include_graphics("images/08-map/socrata-style-annotated.png")
-```
-
-If you look at the bottom-right corner of the map, you should notice a minimized *Legend* control.
-Click on it to see what each color represents.
-
-Change the color palette (in *Color* menu) from *Categorical 1* to *Categorical 2*,
-which includes a wider range of unique colors. You can also use *Custom...*
-item to set individual colors, as well as change the order of categories in the legend.
-
-To change what is shown in tooltips when you hover or click on points,
-go to **Flyout Details**, and set Flyout Title to *Facility Name*,
-adding city and phone number as additional flyout values, as is shown in Figure
-\@ref(fig:socrata-flyout).
-
-(ref:socrata-flyout) To edit tooltip information, use Flyout Details menu item.
-
-```{r socrata-flyout, out.width=300, fig.cap="(ref:socrata-flyout)"}
+```{r socrata-flyout, out.width=250, fig.cap="(ref:socrata-flyout)"}
 knitr::include_graphics("images/08-map/socrata-flyout.png")
 ```
 
-At this point you should have a fully-functional interactive map
-showing all hospitals in Texas, colored according to their type.
-Before you can share it, you need to save it as a draft, and publish.
+There are more more ways to modify the map that we will not demonstrate in this tutorial. For example, you could use *Resize Points by Value* functionality in the *Data Selection* menu to transform your point map into a symbol map, where larger circles represent larger numeric values (such as more people injured in a crash). If you have textual categorical data, such as a contributing crash factor in our dataset (e.g., passing too closely, driver inexperience, etc.), you could use *Style by Value* functionality to apply different colors to different crash categories.
 
-#### Save Draft and Publish {-}
+At this point you should have a functional interactive point map that continuously updates to show fatal crashes in New York City in the past 365 days, and it should continue to work as long as administrators continue to update the database on this platform. Before you can share the map with others, you need to save it as a draft, and publish.
 
-In the lower-right corner, click *Save Draft* button. Give your map a name,
-and hit *Save*. The gray ribbon at the top will tell you it is still a draft,
-and you can go ahead and *Publish...* it.
+10. In the lower-right corner, click *Save Draft* button. Give your map a name (which is different from map's title that users will see), and hit *Save*. The gray ribbon at the top will tell you it is still a draft. When you are ready to make it public, go ahead and hit *Publish...*.
 
-Now you can embed the map on your website as an iframe. To do so, click the *Share* button in the upper-right side of your map (see Figure \@ref(fig:socrata-share)),
-and copy the generated code from *Embed Code* text area (Figure \@ref(fig:socrata-share-embed)).
-Learn more in [Chapter 10: Embed on the Web](embed.html).
+Now you can embed the map on your website as an iframe. To do so, click the *Share* button in the upper-right side of your map (see Figure \@ref(fig:socrata-share)), and copy the generated code from *Embed Code* text area (Figure \@ref(fig:socrata-share-embed)). We will talk about embedding visualizations in detail in [Chapter 10: Embed on the Web](embed.html).
 
 (ref:socrata-share) Click *Share* button to bring up *Share and Embed* window.
 
@@ -844,25 +784,11 @@ knitr::include_graphics("images/08-map/socrata-share-annotated.png")
 
 (ref:socrata-share-embed) Copy iframe code to embed this map in another website.
 
-```{r socrata-share-embed, fig.cap="(ref:socrata-share-embed)"}
+```{r socrata-share-embed, out.width=400, fig.cap="(ref:socrata-share-embed)"}
 knitr::include_graphics("images/08-map/socrata-share-embed.png")
 ```
 
-### Limitations of Socrata {-}
-
-But there are limitations to creating your chart or map on an open data repository platform.
-First, if the agency stops using the platform, or changes the structure of the underlying data,
-your online map (or chart) may stop functioning. Second, you are generally limited to using datasets
-and geographic boundaries that already exist on that platform.
-
-If these limitations concern you, a simple alternative is to export data from the
-open repository (which means that any "live" data would become "static"), and
-import it into your preferred dataviz tool, such as Tableau.
-
-A second, more advanced alternative, is to learn to pull live data from Socrata using
-an API (Application Programming Interface). That requires
-coding skills that are beyond the scope of this book.
-Visit the [official documentation](https://dev.socrata.com/) to learn more about Socrata API.
+There are limitations to creating your chart or map on an open data repository platform. First, if the agency stops using the platform, or changes the structure of the underlying data, your online map (or chart) may stop functioning. In fact, we had to rewrite this tutorial when it referred to a different Socrata platform that administrators stopped supporting. Second, you are limited to using datasets and geographic boundaries that exist on that platform. If these limitations concern you, a simple alternative is to export data from the open repository (which means that any "live" data would become "static"), and import it into your preferred data visualization tool, such as Datawrapper, Google Sheets, or Tableau. A second, more advanced alternative, is to learn to pull live data from Socrata using an API (Application Programming Interface), as described in the [Leaflet Maps with Open Data APIs tutorial in Chapter 13](leaflet-maps-open-data-apis.html).
 
 ### Summary {- #summary8}
 

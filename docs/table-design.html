@@ -237,6 +237,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="table-design.html"><a href="table-design.html"><i class="fa fa-check"></i>Table Design Principles</a></li>
 <li class="chapter" data-level="" data-path="table-datawrapper.html"><a href="table-datawrapper.html"><i class="fa fa-check"></i>Datawrapper Table with Sparklines</a></li>
+<li class="chapter" data-level="" data-path="other-table-tools.html"><a href="other-table-tools.html"><i class="fa fa-check"></i>Other Table-Making Tools</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="embed.html"><a href="embed.html"><i class="fa fa-check"></i><b>10</b> Embed On the Web</a>
 <ul>
@@ -342,13 +343,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="table-design" class="section level2 unnumbered" number="">
 <h2>Table Design Principles</h2>
-<p>Let’s begin with some principles of good table design, similar to how we learned about <a href="chart-design.html">chart design in Chapter 7</a> and <a href="map-design.html">map design in Chapter 8</a>. Jonathan Schwabish, an economist who specializes in creating policy-relevant data visualizations, offers his advice in recent publications about creating tables that communicate well with multiple audiences.<a href="#fn32" class="footnote-ref" id="fnref32"><sup>32</sup></a>. Here’s a summary of several of his key points, which also appear in Figure <a href="table-design.html#fig:table-design">9.1</a>.</p>
+<p>Let’s begin with some principles of good table design, similar to how we learned about <a href="chart-design.html">chart design in Chapter 7</a> and <a href="map-design.html">map design in Chapter 8</a>. Jonathan Schwabish, an economist who specializes in creating policy-relevant data visualizations, offers advice on creating tables that communicate clearly with multiple audiences.<a href="#fn32" class="footnote-ref" id="fnref32"><sup>32</sup></a> Here’s a summary of several of his key points, which also appear in Figure <a href="table-design.html#fig:table-design">9.1</a>.</p>
 <ol style="list-style-type: decimal">
-<li>Make column headers stand out above the data.</li>
-<li>Use light shading to separate rows or columns.</li>
-<li>Left-align text and right-align numbers for easier reading.</li>
-<li>Avoid repetition by placing labels only in the first row.</li>
-<li>Group and sort data to highlight meaningful patterns.</li>
+<li><p>Make column headers stand out above the data.</p></li>
+<li><p>Use light shading to separate rows or columns.</p></li>
+<li><p>Left-align text and right-align numbers for easier reading.</p></li>
+<li><p>Avoid repetition by placing labels only in the first row.</p></li>
+<li><p>Group and sort data to highlight meaningful patterns.</p></li>
 </ol>
 
 <div class="figure"><span id="fig:table-design"></span>
@@ -360,66 +361,66 @@ Figure 9.1: A sample table that illustrates selected design principles.
 <p>In addition, Schwabish and others recommend using color to highlight key items or outliers in your data, a topic we’ll discuss later in <a href="story.html">Chapter 16: Tell and Show Your Data Story</a>.</p>
 <p>When creating cross-tabulations to illustrate data correlations and possible causal relationships, statistician Joel Best offers two more design recommendations.<a href="#fn33" class="footnote-ref" id="fnref33"><sup>33</sup></a></p>
 <ol start="6" style="list-style-type: decimal">
-<li>Place the independent variable (the suspected cause) at the top in the column headers, and the dependent variable (the possible effect) on the side for each row.</li>
-<li>Calculate percentages from the raw numbers in a downward direction, so that each value of the independent variable (the suspected cause) totals 100 percent.</li>
+<li><p>Place the independent variable (the suspected cause) at the top in the column headers, and the dependent variable (the possible effect) on the side for each row.</p></li>
+<li><p>Calculate percentages from raw numbers in a vertical direction going downward, so that each value of the independent variable (the suspected cause) totals 100 percent.</p></li>
 </ol>
-<p>Let’s apply these design principles by constructing two different tables that calculate percentages, the bad way versus the better way, with data from the Pfizer coronavirus vaccine trial study results that were announced in November 2020. In this blind trial, 43,661 volunteers were randomly divided into two groups, about 21,830 each. One group received the vaccine and the other group received a placebo, which were the independent variables, the suspected causal factors. Researchers watched closely and observed these dependent variables (or possible effects): 162 people in the placebo group became infected with the virus, compared to 8 people in the vaccine group.<a href="#fn34" class="footnote-ref" id="fnref34"><sup>34</sup></a>.</p>
-<p>Table <a href="table-design.html#tab:vaccine-bad">9.1</a> calculates the percentages of this trial in the <em>wrong</em> direction—horizontally—and confuses the reader about the relationship between cause and effect, especially in the second row.</p>
+<p>Let’s apply these latter design principles by constructing two different tables that calculate percentages, the bad way versus the better way, with data from the Pfizer coronavirus vaccine trial study results that were reported in November 2020. In this blind trial, 43,661 volunteers were randomly divided into two groups, about 21,830 each. One group received the vaccine and the other group received a placebo, so these were the independent variables (the suspected causal factors). Researchers watched closely and observed these dependent variables (the possible effects): 162 people in the placebo group became infected with the virus, compared to 8 people in the vaccine group.<a href="#fn34" class="footnote-ref" id="fnref34"><sup>34</sup></a>.</p>
+<p>Table <a href="table-design.html#tab:vaccine-bad">9.1</a> calculates the percentages of this trial in the <em>wrong</em> direction—horizontally—and confuses the reader about the relationship between cause and effect, especially in the last row.</p>
 <table>
 <caption><span id="tab:vaccine-bad">Table 9.1: </span> <strong>Bad</strong> Because It Calculates Percentages Horizontally</caption>
 <thead>
 <tr class="header">
 <th></th>
-<th>Vaccine</th>
-<th>Placebo</th>
-<th>Total</th>
+<th align="right">Vaccine</th>
+<th align="right">Placebo</th>
+<th align="right">Total</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Infected</td>
-<td>4.7% (8)</td>
-<td>95.3% (162)</td>
-<td>100% (170)</td>
+<td align="right">4.7% (8)</td>
+<td align="right">95.3% (162)</td>
+<td align="right">100% (170)</td>
 </tr>
 <tr class="even">
 <td>Not infected</td>
-<td>49.8% (21,822)</td>
-<td>50.2% (21,668)</td>
-<td>100% (43,490)</td>
+<td align="right">49.8% (21,822)</td>
+<td align="right">50.2% (21,668)</td>
+<td align="right">100% (43,490)</td>
 </tr>
 </tbody>
 </table>
-<p>But Table <a href="table-design.html#tab:vaccine-better">9.2</a> calculates percentages in the <em>correct</em> direction—vertically—which more clearly shows how the vaccine is correlated with lower infection rates, which researchers determined was a causal relationship.</p>
+<p>But Table <a href="table-design.html#tab:vaccine-better">9.2</a> calculates percentages in the <em>correct</em> direction—vertically—which more clearly shows how the vaccine is correlated with lower infection rates. Researchers determined that this was a strong causal relationship, and received approval to distribute the vaccine.</p>
 <table>
 <caption><span id="tab:vaccine-better">Table 9.2: </span> <strong>Better</strong> Because It Calculates Percentages Vertically</caption>
 <thead>
 <tr class="header">
 <th></th>
-<th>Vaccine</th>
-<th>Placebo</th>
+<th align="right">Vaccine</th>
+<th align="right">Placebo</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Infected</td>
-<td>0.04% (8)</td>
-<td>0.74% (162)</td>
+<td align="right">0.04% (8)</td>
+<td align="right">0.74% (162)</td>
 </tr>
 <tr class="even">
 <td>Not infected</td>
-<td>99.96% (21,822)</td>
-<td>99.27% (21,668)</td>
+<td align="right">99.96% (21,822)</td>
+<td align="right">99.27% (21,668)</td>
 </tr>
 <tr class="odd">
 <td>Total</td>
-<td>100% (21,830)</td>
-<td>100% (21,830)</td>
+<td align="right">100% (21,830)</td>
+<td align="right">100% (21,830)</td>
 </tr>
 </tbody>
 </table>
-<p>Overall, the core principles of table design reflect similar concepts we previously discussed in chart and map design. Organize your presentation of the data with the readers’ eyes in mind, to focus their attention on the most important elements of the story, so that they “take away” the most meaningful interpretation of the information. Do the visualization work for them, so that you don’t have to rely on them to draw the same mental connections in their own minds. Remove any clutter or unnecessary repetition that stands in the way of these goals.</p>
-<p>Now that you understand several key principles of table design, see how some (but not all) are built directly into the Datawrapper tool featured in the next section.</p>
+<p>Overall, the core principles of table design reflect similar concepts we previously discussed in chart and map design. Organize your presentation of the data with the readers’ eyes in mind, to focus their attention on the most important elements of your interpretation, to help them take away the key points. Do the visualization work for them, so that you don’t have to rely on them to draw the same mental connections in their own minds. Remove any clutter or unnecessary repetition that stands in the way of these goals. Most importantly, tell true and meaningful stories about the data.</p>
+<p>Now that you understand several key principles of table design, see how several are built directly into the Datawrapper tool featured in the next section.</p>
 </div>
 <div class="footnotes">
 <hr />

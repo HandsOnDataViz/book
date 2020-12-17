@@ -312,6 +312,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="D" data-path="bookdown.html"><a href="bookdown.html"><i class="fa fa-check"></i><b>D</b> Publishing with Bookdown</a>
 <ul>
+<li class="chapter" data-level="" data-path="collaborative-writing-on-github.html"><a href="collaborative-writing-on-github.html"><i class="fa fa-check"></i>Collaborative Writing on GitHub</a></li>
 <li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images</a></li>
 <li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables</a></li>
@@ -343,7 +344,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="paste-code" class="section level2 unnumbered" number="">
 <h2>Paste Code or iframe to Website</h2>
-<p>In the prior section, you copied the embed code (or created an iframe) for your interactive visualization that is hosted online by the primary site. In this section, we’ll demonstrate ways to properly paste the embed code or iframe to seamlessly display your interactive chart or map in the secondary site.</p>
+<p>In the prior section, you learned how to copy the embed code or create an iframe for your interactive visualization that is hosted online by the primary site. For example, your live chart or map might be hosted on a Google Sheets, Datawrapper, or Tableau Public server. In this section, we’ll demonstrate ways to properly paste the embed code or iframe to seamlessly display your interactive chart or map on a secondary website that you control, and we’ll focus on common web-building platforms such as WordPress, SquareSpace, Wix, and Weebly. Even if your website runs on a different platform, the principles will likely be the same.</p>
 <div id="to-wordpress.com-sites" class="section level3 unnumbered" number="">
 <h3>to WordPress.com sites</h3>
 <p>If you own <em>free</em> or personal or premium <a href="https://wordpress.com">WordPress.com</a> site, with a web address in the format <code>anyone.wordpress.com</code>, you <em>cannot</em> insert an embed code that contains an iframe or Javascript due to security concerns, as described on their <a href="https://wordpress.com/support/troubleshooting-embed-links-and-shortcodes/">support page</a>. This means that if wish to show data visualizations created from this book on a WordPress.com site, you have two options. First, with your free or personal or premium plan, you can still insert a <em>static image</em> of a chart or map and a link to its interactive site, but that’s clearly not ideal. Second, WordPress.com suggests that you can <a href="https://wordpress.com/support/plan-features/">update to their paid Business or eCommerce plan</a>, which supports embed codes that contain iframes or Javascript, following instructions similar to the self-hosted WordPress sites below.</p>
@@ -351,9 +352,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="to-self-hosted-wordpress-sites" class="section level3 unnumbered" number="">
 <h3>to Self-hosted WordPress sites</h3>
 <p>Make sure you <a href="https://wordpress.com/support/com-vs-org/">understand the difference</a> between a WordPress.com site above versus a self-hosted WordPress site. The latter is sometimes called WordPress.org site because anyone can freely download the software from that address and <em>host it on their own webserver</em>, or more commonly, have access to a self-hosted WordPress server through their school or work, or by renting space on a vendor’s webserver. But the web address of a self-hosted WordPress site does <em>not</em> necessarily need to end in <code>.org</code>. It also could be <code>.com</code> or <code>.edu</code> or any other ending, so don’t let that confuse you.</p>
-<p>There are two ways to insert an embed code or iframe in a self-hosted WordPress site, but your success may depend on your WP version, your access level, and the complexity of the code. Let’s compare Method A (with is simpler, but not always reliable) and Method B (which requires a few more steps but works more reliably).</p>
+<p>There are two ways to insert an embed code or iframe in a self-hosted WordPress site, but your success may depend on your WP version, your access level, and the complexity of the code. We’ll show you both Method A (which is simpler, but not always reliable) and Method B (which requires a few more steps, but works more reliably). See which method works best for your self-hosted WordPress site.</p>
 <div id="method-a-simple-but-not-always-reliable" class="section level4 unnumbered" number="">
-<h4>Method A: Simple, but not always reliable</h4>
+<h4>Method A: Simple, But Not Always Reliable</h4>
 <p>Assume that you’re using self-hosted WordPress version 5.0 or above with the newer block editor, and you have editor or administrator access to your site. (This method does not work reliably with author-level access or below.)</p>
 <ol style="list-style-type: decimal">
 <li>In your block editor, select a <em>custom HTML</em> block, and directly insert the embed code or the iframe, as shown in Figure <a href="paste-code.html#fig:wordpress-custom-html">10.16</a>.</li>
@@ -370,7 +371,7 @@ Figure 10.16: Paste an embed code or iframe into a custom HTML block.
 </ol>
 </div>
 <div id="method-b-more-steps-but-more-reliable" class="section level4 unnumbered" number="">
-<h4>Method B: More steps, but more reliable</h4>
+<h4>Method B: More Steps, But More Reliable</h4>
 <p>Assume that you’re using self-hosted WordPress, any version, with either the classic or block editor, and that you have author-level or above access to the site.</p>
 <ol style="list-style-type: decimal">
 <li>First, the site administrator must install and activate the <a href="http://wordpress.org/plugins/iframe/">iframe plugin</a>, as shown in Figure <a href="paste-code.html#fig:wordpress-iframe-plugin">10.17</a>. This plugin allows authors to embed iframe codes in a modified “shortcode” format surrounded by square brackets in this general format: <code>[iframe...]</code>.</li>
@@ -393,14 +394,14 @@ Figure 10.17: Install and activate the <em>iframe</em> plugin on a self-hosted W
 Figure 10.18: Modify the front and back end with square brackets.
 </p>
 </div>
-<p>Tip: For long embed codes from Datawrapper and Tableau Public, you may need to experiment with pasting and trimming down to the most relevant portions of the iframe in the <a href="https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_iframe">W3Schools TryIt iframe page</a>, then pasting into the WordPress editor and modifying the front and back end with square brackets.</p>
+<p>Tip: For long embed codes from Datawrapper and Tableau Public, you may need to experiment with trimming it down to the most relevant portions of the iframe using the <a href="https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_iframe">W3Schools TryIt iframe page</a>, as described in the prior section, then pasting into the WordPress editor and modifying the front and back end with square brackets.</p>
 <ol start="4" style="list-style-type: decimal">
 <li>Preview your WordPress page or post, and if your iframe appears, publish and view it in another browser to test how it appears to your readers.</li>
 </ol>
 </div>
 </div>
-<div id="to-squarespace-wix-or-weebly-web-building-sites" class="section level3 unnumbered" number="">
-<h3>to SquareSpace, Wix, or Weebly web-building sites</h3>
+<div id="to-squarespace-wix-weebly-or-other-web-building-sites" class="section level3 unnumbered" number="">
+<h3>to SquareSpace, Wix, Weebly, or Other Web-Building Sites</h3>
 <p>The concept of pasting your data visualization iframes or embed codes to other web-building sites is similar to WordPress, but details will vary, depending on freemium versus paid subscription level and author-administrator status. Here are details for three of the most popular web-building services:</p>
 <p>See these SquareSpace support pages about <a href="https://support.squarespace.com/hc/en-us/articles/206543617-Embed-Blocks">embed blocks</a> and <a href="https://support.squarespace.com/hc/en-us/articles/205815928-Adding-custom-code-to-your-site#toc-code-blocks-vs--embed-blocks">adding custom code to your site</a>.</p>
 <p>See this Wix support page about <a href="https://support.wix.com/en/article/wix-editor-using-iframes-to-display-visible-content-on-your-site">using iframes to display content on your site</a>.</p>

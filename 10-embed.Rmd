@@ -1,5 +1,5 @@
 # Embed On the Web {#embed}
-So far you've learned how to create [charts in chapter 7](chart.html), [maps in chapter 8](map.html), and [tables in chapter 9](table.html). Our book emphasizes the benefits of designing *interactive* visualizations that engage broad audiences on the internet by inviting them to interact with your data, investigate new patterns, download files if desired, and easily share your work on social media. In this chapter, you'll learn about a computer code tag called an *iframe*. Like a picture frame, an iframe displays a live web page (such as your interactive data visualization) inside a second web page that you control (such as your personal or organizational web site), as shown in Figure \@ref(fig:iframe-illustration). When done correctly, the iframe makes your data visualization appear seamlessly on your web page, so that audiences can explore the content without needing to know that it's coming from a different host. Several of the visualization tools you've learned so far, such as Google Sheets, Datawrapper, and Tableau Public, generate an *embed code* that contains an iframe to the online chart or map you've created on their platform. We will demonstrate how to [get the embed code or link](embed-code.html) from your visualization tool site, and [paste the code into a second website](paste-code.html) to seamlessly display your interactive content. No coding skills are required in this introductory book, but it certainly helps to be *code-curious*.
+So far you've learned how to create [charts in chapter 7](chart.html), [maps in chapter 8](map.html), and [tables in chapter 9](table.html). Our book emphasizes the benefits of designing *interactive* visualizations that engage broad audiences on the internet by inviting them to interact with your data, investigate new patterns, download files if desired, and easily share your work on social media. In this chapter, you'll learn about a computer code tag called an *iframe*, which allows readers to actively explore your data on a different page. Like a picture frame, an iframe displays a live web page (such as your interactive data visualization) inside a second web page that you control (such as your personal or organizational web site), as shown in Figure \@ref(fig:iframe-illustration). When done correctly, the iframe makes your data visualization appear seamlessly on your web page, so that audiences can explore the content without needing to know that it's coming from a different host. Several of the visualization tools you've learned so far, such as Google Sheets, Datawrapper, and Tableau Public, generate an *embed code* that contains an iframe to the online chart or map you've created on their platform. We will demonstrate how to [get the embed code or link](embed-code.html) from your visualization tool site, and [paste the code into a second website](paste-code.html) to seamlessly display your interactive content. No coding skills are required in this introductory book, but it certainly helps to be *code-curious*.
 
 (ref:iframe-illustration) You can use an iframe to embed other web pages in your web page
 
@@ -10,13 +10,13 @@ knitr::include_graphics("images/10-embed/iframe-illustration.png")
 ## Static Image vs Interactive iframe {- #static}
 First, let's clarify the difference between *static* versus *interactive* visualizations. A static picture of a chart or map is a frozen image. Many visualization tools allow you to download static images of your charts or maps in .JPG or .PNG or .PDF format. Static images are useful when that's all that you want to insert in a document, a presentation slide, or even a web page. Another option is to paste a static image, and add a link [or custom shortlink](share.html) with the web address to an interactive chart or map, and invite audiences to explore it online.
 
-Also, you capture a static image of any web page on your computer by taking a [screenshot](https://en.wikipedia.org/wiki/Screenshot) with these built-in commands:
+If you need to capture a static image of any web page on your computer, take a [screenshot](https://en.wikipedia.org/wiki/Screenshot) with these built-in commands:
 
 - Chromebook: *Shift + Ctrl + F5* (the *show windows* button), then click-and-drag the cross-hair cursor.
 - Macintosh: *Shift + Command + 4*, then click-and-drag the cross-hair cursor to capture screenshot.
 - Windows: *Windows logo key + Shift + S* to call up the *Snip & Sketch* tool.
 
-An animated GIF file is a series of static images that captures motion on the screen. You can insert an animated GIF on a web page to illustrate a short sequence of steps while using an interactive visualization, but audiences cannot interact with it, other than to play the animated loop over again. Paid software tools such as [Snagit](https://www.techsmith.com/screen-capture.html) allow you to create screenshots including drop-down menus and cursors, animated GIFs, and more.
+A related strategy is an animated GIF, which is a series of static images that captures motion on the screen. You can insert an animated GIF file on a web page to illustrate a short sequence of steps while using an interactive visualization, but audiences cannot interact with it, other than to play the animated loop over again. Paid software tools such as [Snagit](https://www.techsmith.com/screen-capture.html) allow you to create screenshots including drop-down menus and cursors, animated GIFs, and more.
 
 By contrast, *interactive* visualizations allow audiences to directly engage with your data story through their web browsers. Visitors usually can float their cursor over a chart to view tooltips or underlying information, or zoom into a map and pan around, or search terms or sort columns in an interactive table. Interactive visualizations are usually hosted online, such as a chart or map tool platform, and are primarily designed to be viewed online, though in some cases it's possible for you to download and interact with them on your local computer.
 
@@ -32,23 +32,23 @@ In its simplest form, an iframe instructs the secondary site to display a web pa
 if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://datawrapper.dwcdn.net/LtRbj/") else knitr::include_graphics("images/10-embed/iframe-sample.png")
 ```
 
-Sometimes embed codes or their iframe tags are *much longer* than the simple example above. For example, an iframe tag might include other attributes, such as `width` or `height`, measured in pixels (`px`) or a percentage of its dimensions on the secondary site. Also, you may see other iframe tag elements, such as `seamless` or `frameborder="0"` or `scrolling="no"`, which create a seamless appearance between the iframe content and its surroundings. Finally, you may see *really long* embed codes that contain a dozen or more lines of code that even we don't fully understand. That's okay, because all of these are optional add-ons to improve the appearance of the iframe in the secondary site. The most essential ingredient of an embed code is the iframe and its three core parts: the iframe start tag, source web address, and end tag. When in doubt, look for those key ingredients.
+When you copy an embed code from some of the visualization tools featured in this book, their iframe tags may be *much longer* than the simple example above. For example, an iframe tag might include other attributes, such as `width` or `height`, measured in pixels (`px`) or a percentage of its dimensions on the secondary site. Also, you may see other iframe tag elements, such as `seamless` or `frameborder="0"` or `scrolling="no"`, which create a seamless appearance between the iframe content and its surroundings. Finally, you may see *really long* embed codes that contain a dozen or more lines of code that even we don't fully understand. That's okay, because all of these are optional add-ons to improve the appearance of the iframe in the secondary site. The most essential ingredient of an embed code is the iframe and its three core parts: the iframe start tag, source web address, and end tag. When in doubt, look for those key ingredients.
 
 Now that you have a clearer definition of an interactive visualization, embed codes, and iframe tags, in the next section we'll learn how to copy the embed code from different visualization platforms.
 
 ## Get the Embed Code or iframe Tag {- #embed-code}
 In this section, you'll learn how to copy the embed code or iframe tag that is automatically generated when you publish a chart or map on different visualization platforms featured in this book. Remember that embed codes contain the essential iframe tag, along with other bits of code to display the chart or map from the primary site and make it appear seamlessly on the secondary site.
 
-We'll break this down into three steps for each visualization platform. First, we will demonstrate how to copy your embed code or iframe tag from Google Sheets, Datawrapper, Tableau Public, and other platforms listed below. Second, we'll show you how to *practice paste* the embed code or iframe tag into the [W3Schools TryIt iframe page](https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_iframe), as shown in Figure \@ref(fig:w3schools-tryit-iframe), to help you understand what's happening behind-the-scenes and to modify the code if needed. Third, we'll point you to the next section to learn how to properly paste the embed code in your preferred website, such as WordPress, SquareSpace, Weebly, and Wix.
+We'll break this down into three steps for each visualization platform. First, we will demonstrate how to copy your embed code or iframe tag from Google Sheets, Datawrapper, Tableau Public, and other platforms listed below. Second, we'll show you how to test the embed code or iframe tag in a wonderful assistant called the [W3Schools TryIt iframe page](https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_iframe), as shown in Figure \@ref(fig:w3schools-tryit-iframe). It's a great way to see what happens if you need to trim parts of the embed code before placing it in web page, and test if it still works. Third, we'll point you to the next section to learn how to properly paste the embed code in your preferred website, including common platforms such as WordPress, SquareSpace, Wix, and Weebly.
 
-(ref:w3schools-tryit-iframe) For each embed code below, you will *practice paste* it in place of the selected text of the W3Schools TryIt iframe page to see how it works.
+(ref:w3schools-tryit-iframe) For each embed code below, paste it in place of the selected text of the W3Schools TryIt iframe page to test how it works.
 
 ```{r w3schools-tryit-iframe, out.width=750, fig.cap="(ref:w3schools-tryit-iframe)"}
  knitr::include_graphics("images/10-embed/w3schools-tryit-iframe.png")
 ```
 
 ### from Google Sheets {-}
-1. After you create a [Google Sheets chart in Chapter 7](chart-google.html), click the 3-dot kebab menu in the upper-right corner of the chart to publish it, as shown in Figure \@ref(fig:google-sheets-publish).
+1. After you create a [Google Sheets chart as you did in Chapter 7](chart-google.html), click the 3-dot kebab menu in the upper-right corner of the chart to publish it, as shown in Figure \@ref(fig:google-sheets-publish).
 
 (ref:google-sheets-publish) In your chart, click the three-dot kebab menu to publish it.
 
@@ -77,7 +77,7 @@ At first glance, the Google Sheets embed code may appear long, but it's actually
 4. Now jump to the [paste code to website section](paste-code.html) of this chapter to learn how to properly insert your embed code into your preferred platform.
 
 ### from Datawrapper {-}
-1. After you create a [Datawrapper chart in Chapter 7](chart-datawrapper.html) or [map in Chapter 8](map.html) or [interactive table in Chapter 9](table.html), proceed to the final screen and click the *Publish* button, as shown in Figure \@ref(fig:datawrapper-publish). This publishes the interactive version of your chart or map online. Further down on the same screen you can also export a static image, if desired.
+1. After you create a [Datawrapper chart as you did in Chapter 7](chart-datawrapper.html) or [map as you did in Chapter 8](map.html) or [interactive table as you did Chapter 9](table.html), proceed to the final screen and click the *Publish* button, as shown in Figure \@ref(fig:datawrapper-publish). This publishes the interactive version of your chart or map online. Further down on the same screen you can also export a static image, if desired.
 
 (ref:datawrapper-publish) Proceed to the final screen and click the *Publish* button.
 
@@ -93,7 +93,7 @@ At first glance, the Google Sheets embed code may appear long, but it's actually
  knitr::include_graphics("images/10-embed/datawrapper-embed-code.png")
 ```
 
-3. To better understand how the embed code works, open the [W3Schools TryIt iframe page](https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_iframe). Select the current iframe tag, paste in your embed code to replace it, and press the green *Run* button. The result should be similar to Figure \@ref(fig:datawrapper-tryit), but instead will display your embed code and interactive visualization.
+3. To better understand how the embed code works, open the [W3Schools TryIt iframe page](https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_iframe). Select the current iframe tag, paste in your embed code to replace it, and press the green *Run* button. The result should be similar to Figure \@ref(fig:datawrapper-tryit), but instead will display your unique embed code and interactive visualization.
 
 (ref:datawrapper-tryit) Paste your Datawrapper embed code in place of the current iframe tag in the TryIt page and click *Run*.
 
@@ -105,7 +105,7 @@ The Datawrapper embed code is *long*, but if you look closely, the first half co
 
 4. Always try to paste the *full embed code* in your desired web platform. Jump to the [paste code to website section](paste-code.html) of this chapter to learn how to properly insert your embed code into common websites.
 
-5. But if it doesn't work, go back to step 3 and experiment. Try to edit the embed code down to a *simple iframe*, and run it again to see how it looks, as shown in Figure \@ref(fig:datawrapper-tryit-simple). Sometimes a simple iframe works better on your website than a complex embed code.
+Tip: But if it doesn't work, go back to step 3 and experiment. Try to edit the embed code down to a *simple iframe*, and run it again to see how it looks, as shown in Figure \@ref(fig:datawrapper-tryit-simple). Sometimes a simple iframe works better on your website than a complex embed code.
 
 (ref:datawrapper-tryit-simple) If a complex embed code does not work in your website, go back and try to edit it down into a simple iframe.
 
@@ -142,7 +142,7 @@ Tip: All of your published visualizations appear under your username account pro
  knitr::include_graphics("images/10-embed/tableau-public-embed-code-annotated.png")
 ```
 
-4. To better understand how the embed code works, open the [W3Schools TryIt iframe page](https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_iframe). Select the current iframe tag, paste in your embed code to replace it, and press the green *Run* button. The result should be similar to Figure \@ref(fig:tableau-public-tryit), but instead will display your embed code and interactive visualization.
+4. To better understand how the embed code works, open the [W3Schools TryIt iframe page](https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_iframe). Select the current iframe tag, paste in your embed code to replace it, and press the green *Run* button. The result should be similar to Figure \@ref(fig:tableau-public-tryit), but instead will display your embed code and interactive visualization. Note how the Tableau Public embed code is so long that it does not fit in this image.
 
 (ref:tableau-public-tryit) Paste your Tableau public embed code in place of the current iframe tag in the TryIt page and click *Run*.
 
@@ -150,39 +150,38 @@ Tip: All of your published visualizations appear under your username account pro
  knitr::include_graphics("images/10-embed/tableau-public-tryit.png")
 ```
 
-The Tableau Public embed code is *very long* and does not fit in one image. Even we don't fully understand what's happening in this complex batch of code.
-
 5. Always try to paste the *full embed code* in your desired web platform. Jump to the [paste code to website section](paste-code.html) of this chapter to learn how to properly insert on different common websites.
 
-6. But if it doesn't work, go back to step 3 and 4 and experiment. For example, you can copy the Tableau Public link to your visualization, *instead* of the embed code, try to convert it into a simple iframe tag, and run it again to see how it looks.
 
-Here's some hints from the [Tableau Public support page](https://kb.tableau.com/articles/howto/embedding-tableau-public-views-in-iframes) when trying to create iframes from links like this example:
+However, if your web platform does not accept the *full embed code* for Tableau Public, the next strategy is to try to copy the Tableau Public link to your visualization and convert it into a *simpler iframe tag*, and see how it works in your website. Here's how to copy and convert it.
+
+1. In your published visualization on your Tableau Public online account, scroll down and click on the *Share* symbol in the lower-right corner, as previously shown in Figure \@ref(fig:tableau-public-embed-code). But this time, select and copy its *link*, not the *embed code*. A typical link looks similar to this one:
 
 `https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:language=en&:display_count=y&:origin=viz_share_link`
 
-6. Paste the link into the W3Schools TryIt page, and delete all of the code that appears *after* the question mark (`?`), so that it looks like this:
+2. Paste the link into the [W3Schools TryIt iframe page](https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_iframe), and delete all of the code that appears *after* the question mark (`?`), so that it looks like this:
 
 `https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?`
 
-7. At the end, attach this code snippet to replace what you deleted above:
+3. At the end, attach this code snippet to replace what you deleted above:
 
 `:showVizHome=no&:embed=true`
 
-8. Now your edited link should look like this:
+4. Now your edited link should look like this:
 
 `https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true`
 
-9. Enclose your edit link inside an iframe source tag `src=` with quotes, to make it look similar to this:
+5. Enclose your edit link inside an iframe source tag `src=` with quotes, to make it look similar to this:
 
 `src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true" `
 
-10. Add iframe start and end tags, and also attributes for `width`, `height`, `seamless`, `frameborder="0"`, and `scrolling="no"`, to make it look similar to this:
+6. Add iframe start and end tags, and also attributes for `width`, `height`, `seamless`, `frameborder="0"`, and `scrolling="no"`, to make it look similar to this:
 
 `<iframe src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true" width="90%" height="500" seamless frameborder="0" scrolling="no"></iframe>`
 
 Hint: Insert `width="90%"`, rather than 100%, to help readers to scroll more easily down your web page with a margin.
 
-11. Press *Run* to see how it looks, as shown in Figure \@ref(fig:tableau-public-tryit-simple). Sometimes a simple iframe works better on your website than a complex embed code.
+7. Press *Run* to see how it looks in the W3Schools TryIt iframe page, as shown in Figure \@ref(fig:tableau-public-tryit-simple). Sometimes a simple iframe works better on your website than a complex embed code.
 
 (ref:tableau-public-tryit-simple) If a complex embed code does not work in your website, go back and copy the link to the visualization, and try to convert it into a simple iframe.
 
@@ -190,10 +189,13 @@ Hint: Insert `width="90%"`, rather than 100%, to help readers to scroll more eas
  knitr::include_graphics("images/10-embed/tableau-public-tryit-simple.png")
 ```
 
-Now that you have a better sense of how to copy embed codes, and edit them down to simple iframes if needed, in the next section you'll learn how to paste them into common websites such as WordPress.
+Learn more about [how to embed an iframe on the Tableau Public support page](https://kb.tableau.com/articles/howto/embedding-tableau-public-views-in-iframes).
+
+
+Now that you have a better sense of how to copy embed codes, and edit them down to simpler iframes if needed, in the next section you'll learn how to paste them into common websites to share your interactive visualizations with wider audiences.
 
 ## Paste Code or iframe to Website {- #paste-code}
-In the prior section, you copied the embed code (or created an iframe) for your interactive visualization that is hosted online by the primary site. In this section, we'll demonstrate ways to properly paste the embed code or iframe to seamlessly display your interactive chart or map in the secondary site.
+In the prior section, you learned how to copy the embed code or create an iframe for your interactive visualization that is hosted online by the primary site. For example, your live chart or map might be hosted on a Google Sheets, Datawrapper, or Tableau Public server. In this section, we'll demonstrate ways to properly paste the embed code or iframe to seamlessly display your interactive chart or map on a secondary website that you control, and we'll focus on common web-building platforms such as WordPress, SquareSpace, Wix, and Weebly. Even if your website runs on a different platform, the principles will likely be the same.
 
 ### to WordPress.com sites {-}
 If you own *free* or personal or premium [WordPress.com](https://wordpress.com) site, with a web address in the format `anyone.wordpress.com`, you *cannot* insert an embed code that contains an iframe or Javascript due to security concerns, as described on their [support page](https://wordpress.com/support/troubleshooting-embed-links-and-shortcodes/). This means that if wish to show data visualizations created from this book on a WordPress.com site, you have two options. First, with your free or personal or premium plan, you can still insert a *static image* of a chart or map and a link to its interactive site, but that's clearly not ideal. Second, WordPress.com suggests that you can [update to their paid Business or eCommerce plan](https://wordpress.com/support/plan-features/), which supports embed codes that contain iframes or Javascript, following instructions similar to the self-hosted WordPress sites below.
@@ -201,9 +203,9 @@ If you own *free* or personal or premium [WordPress.com](https://wordpress.com) 
 ### to Self-hosted WordPress sites {-}
 Make sure you [understand the difference](https://wordpress.com/support/com-vs-org/) between a WordPress.com site above versus a self-hosted WordPress site. The latter is sometimes called WordPress.org site because anyone can freely download the software from that address and *host it on their own webserver*, or more commonly, have access to a self-hosted WordPress server through their school or work, or by renting space on a vendor's webserver. But the web address of a self-hosted WordPress site does *not* necessarily need to end in `.org`. It also could be `.com` or `.edu` or any other ending, so don't let that confuse you.
 
-There are two ways to insert an embed code or iframe in a self-hosted WordPress site, but your success may depend on your WP version, your access level, and the complexity of the code. Let's compare Method A (with is simpler, but not always reliable) and Method B (which requires a few more steps but works more reliably).
+There are two ways to insert an embed code or iframe in a self-hosted WordPress site, but your success may depend on your WP version, your access level, and the complexity of the code. We'll show you both Method A (which is simpler, but not always reliable) and Method B (which requires a few more steps, but works more reliably). See which method works best for your self-hosted WordPress site.
 
-#### Method A: Simple, but not always reliable {-}
+#### Method A: Simple, But Not Always Reliable {-}
 Assume that you're using self-hosted WordPress version 5.0 or above with the newer block editor, and you have editor or administrator access to your site. (This method does not work reliably with author-level access or below.)
 
 1. In your block editor, select a *custom HTML* block, and directly insert the embed code or the iframe, as shown in Figure \@ref(fig:wordpress-custom-html).  
@@ -216,7 +218,7 @@ Assume that you're using self-hosted WordPress version 5.0 or above with the new
 
 2. Preview your WordPress page or post, and if your iframe appears, publish and view it in another browser to test how it appears to your readers.
 
-#### Method B: More steps, but more reliable {-}
+#### Method B: More Steps, But More Reliable {-}
 Assume that you're using self-hosted WordPress, any version, with either the classic or block editor, and that you have author-level or above access to the site.
 
 1. First, the site administrator must install and activate the [iframe plugin](http://wordpress.org/plugins/iframe/), as shown in Figure \@ref(fig:wordpress-iframe-plugin). This plugin allows authors to embed iframe codes in a modified "shortcode" format surrounded by square brackets in this general format: `[iframe...]`.
@@ -237,11 +239,11 @@ Assume that you're using self-hosted WordPress, any version, with either the cla
  knitr::include_graphics("images/10-embed/wordpress-insert-brackets.png")
 ```
 
-Tip: For long embed codes from Datawrapper and Tableau Public, you may need to experiment with pasting and trimming down to the most relevant portions of the iframe in the [W3Schools TryIt iframe page](https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_iframe), then pasting into the WordPress editor and modifying the front and back end with square brackets.
+Tip: For long embed codes from Datawrapper and Tableau Public, you may need to experiment with trimming it down to the most relevant portions of the iframe using the [W3Schools TryIt iframe page](https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_iframe), as described in the prior section, then pasting into the WordPress editor and modifying the front and back end with square brackets.
 
 4. Preview your WordPress page or post, and if your iframe appears, publish and view it in another browser to test how it appears to your readers.
 
-### to SquareSpace, Wix, or Weebly web-building sites {-}
+### to SquareSpace, Wix, Weebly, or Other Web-Building Sites {-}
 The concept of pasting your data visualization iframes or embed codes to other web-building sites is similar to WordPress, but details will vary, depending on freemium versus paid subscription level and author-administrator status. Here are details for three of the most popular web-building services:
 
 See these SquareSpace support pages about [embed blocks](https://support.squarespace.com/hc/en-us/articles/206543617-Embed-Blocks) and [adding custom code to your site](https://support.squarespace.com/hc/en-us/articles/205815928-Adding-custom-code-to-your-site#toc-code-blocks-vs--embed-blocks).

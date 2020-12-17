@@ -33,7 +33,7 @@
   
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="peer-3-sample-2-notes.html"/>
-<link rel="next" href="style-guide.html"/>
+<link rel="next" href="collaborative-writing-on-github.html"/>
 <script src="libs/header-attrs-2.5/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -312,6 +312,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="D" data-path="bookdown.html"><a href="bookdown.html"><i class="fa fa-check"></i><b>D</b> Publishing with Bookdown</a>
 <ul>
+<li class="chapter" data-level="" data-path="collaborative-writing-on-github.html"><a href="collaborative-writing-on-github.html"><i class="fa fa-check"></i>Collaborative Writing on GitHub</a></li>
 <li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images</a></li>
 <li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables</a></li>
@@ -346,68 +347,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>This open-access book is built with free-to-use, open-source tools—primarily <a href="https://bookdown.org">Bookdown</a>, <a href="http://github.com">GitHub</a>, and <a href="http://zotero.org">Zotero</a>—and this chapter explains how, so that readers may do it themselves and share their knowledge to improve the process. In addition to our notes below, see also Yihui Xie’s more comprehensive <a href="https://bookdown.org/yihui/bookdown/">Bookdown guide</a>.<a href="#fn51" class="footnote-ref" id="fnref51"><sup>51</sup></a></p>
 <p>Our broad goal is an efficient workflow to compose one document in the easy-to-write <a href="https://en.wikipedia.org/wiki/Markdown">Markdown format</a> that Bookdown generates into multiple book products: an HTML web edition to read online, a PDF print edition for traditional book publishing, a Microsoft Word edition for editors who request it for copyediting, and option for other formats as desired.</p>
 <p>Since Bookdown is an <a href="https://www.r-project.org/">R code package</a>, we composed the book manuscript in R-flavored Markdown, with one file (.Rmd) for each chapter. We use Bookdown to build these files in its GitBook style as a set of static HTML pages, which we upload to our GitHub repository. Readers can view the open-access web edition of the book at our custom domain: <a href="https://HandsOnDataViz" class="uri">https://HandsOnDataViz</a>. Also, we use Bookdown to build additional book outputs (PDF, MS Word, Markdown) and upload these to the <code>docs</code> folder of our GitHub repository, so that our O’Reilly Media editor may download and comment on the manuscript as we revise. Finally, we have arranged with the O’Reilly production team to convert our <em>modified</em> version of the full-book Markdown file into their <a href="https://docs.atlas.oreilly.com/writing_in_asciidoc.html">O’Reilly Atlas platform</a>. See some caveats and workarounds below.</p>
-<div id="file-organization-and-headers" class="section level3 unnumbered" number="">
-<h3>File Organization and Headers</h3>
-<p>We organized the <a href="http://github.com/handsondataviz/book">GitHub repository for this book</a> as a set of .Rmd files, one for each chapter. As co-authors, we are careful to work on different chapters of the book, and to regularly push our commits to the repo. Only one of us regularly builds the book with Bookdown to avoid code merge conflicts.</p>
-<p>Bookdown assigns a default ID to each header, which can be used for cross-references. The default ID for <code># Topic</code> is <code>{#topic}</code>, and the default ID for <code>## Section Name</code> is <code>{#section-name}</code>, where spaces are replaced by dashes. But we do <em>not</em> rely on default IDs because they might change due to editing or contain duplicates across the book.</p>
-<p>Instead, we <em>manually assign a unique ID</em> to each first- and second-level header in the following way. Note that the <code>{-}</code> symbol, used alone or in combination <em>with a space</em> and a unique ID, prevents auto-numbering in the second- thru fourth-level headers:</p>
-<pre><code># Top-level chapter title {#unique-name}
-## Second-level section title {- #unique-name}
-### Third-level subhead {-}
-#### Fourth-level subhead {-}</code></pre>
-<p>Also, we match the unique ID keyword to the file name for top-level chapters this way: <code>01-keyword.Rmd</code> to keep our work organized. Unique names should contain only <em>alphanumeric</em> characters (a-z, A-Z, 0-9) or dashes (-).</p>
-<p>Subheaders must have unique names or IDs to avoid Bookdown errors about duplicated references. To avoid this issue for repeated subheaders (such as “Summary”), at the end of each chapter insert a third-level summary subhead, but insert a unique ID that matches each chapter number, like this: <code>### Summary {- #summary17}</code></p>
-<p>A special header in this book is the unnumbered header beginning with <code>(APPENDIX)</code>, which indicates that all chapters appearing afterwards are appendices. According to <a href="https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html">Bookdown</a>, the numbering style will appear correctly in HTML and LaTeX/PDF output, but not in Word or ebooks.</p>
-<pre><code># Chapter One
-
-# Chapter Two
-
-# (APPENDIX) Appendix {-}
-
-# Appendix A
-
-# Appendix B</code></pre>
-<p>In the Bookdown <code>index.Rmd</code> for the HTML book output and the PDF output, the <code>toc_depth: 2</code> setting displays chapter and section headers down to the second level in the Table of Contents.</p>
-<p>The <code>split_by: section</code> setting divides the HTML pages at the second-level header, which creates shorter web pages with reduced scrolling for readers. For each web page, the unique ID becomes the file name, and is stored in the <code>docs</code> subfolder.</p>
-<p>The <code>number_sections</code> setting is true for the HTML and PDF editions, and given the <code>toc_depth: 2</code>, this means that they will display two-level chapter-section numbering (1.1, 1.2, etc.) in the Table of Contents. Note that <code>number_sections</code> must be true to display Figure and Table numbers in x.x format, which is desired for this book. See relevant settings in this excerpt from <code>index.Rmd</code>:</p>
-<pre><code>output:
-  bookdown::gitbook:
-    ...
-    toc_depth: 2
-    split_by: section
-    number_sections: true
-    split_bib: true
-    ...
-bookdown::pdf_book:
-  toc_depth: 2
-  number_sections: true</code></pre>
-<p>Note that chapter and section numbering do <em>not</em> appear automatically in the MS Word output unless you supply a reference.docx file, as described below:</p>
-<ul>
-<li><a href="https://bookdown.org/yihui/rmarkdown/word-document.html" class="uri">https://bookdown.org/yihui/rmarkdown/word-document.html</a></li>
-<li><a href="https://stackoverflow.com/questions/52924766/numbering-and-referring-sections-in-bookdown" class="uri">https://stackoverflow.com/questions/52924766/numbering-and-referring-sections-in-bookdown</a></li>
-<li><a href="https://stackoverflow.com/questions/50609212/caption-styles-for-word-document2-in-bookdown" class="uri">https://stackoverflow.com/questions/50609212/caption-styles-for-word-document2-in-bookdown</a></li>
-</ul>
-<p>In the <code>_bookdown.yml</code> settings, all book outputs are built into the <code>docs</code> subfolder of our GitHub repo, as shown in this excerpt:</p>
-<pre><code>output_dir: &quot;docs&quot;
-book_filename: &quot;HandsOnDataViz&quot;
-language:
-  label:
-    fig: &quot;Figure &quot;
-chapter_name: &quot;Chapter &quot;</code></pre>
-<p>In our GitHub repo, we set GitHub Pages to publish to the web using <code>main/docs</code>, which means that visitors can browse the source files at the root level, and view the HTML web pages hosted in the <code>docs</code> subfolder. We use the GitHub Pages custom domain setting so that the HTML edition is available at <a href="https://HandsOnDataViz.org" class="uri">https://HandsOnDataViz.org</a>.</p>
-<p>The <code>docs</code> subfolder also may contain the following items, which are <em>not</em> generated by Bookdown and need to be manually created:</p>
-<ul>
-<li><code>CNAME</code> file for the custom domain, generated by GitHub Pages.</li>
-<li><code>.nojekyll</code> invisible empty file to ensure speedy processing of HTML files by GitHub Pages.</li>
-<li><code>404.html</code> custom file to redirects any mistaken web addresses under the domain back to the <code>index.html</code> page.</li>
-</ul>
-<p>One more option is to copy the Google Analytics code for the web book, paste it into an HTML file in the book repo, and include this reference in the <code>index.Rmd</code> code:</p>
-<pre><code>output:
-  bookdown::gitbook:
-  ...
-  includes:
-    in_header: google-analytics.html</code></pre>
-</div>
 </div>
 <div class="footnotes">
 <hr />
@@ -421,7 +360,7 @@ chapter_name: &quot;Chapter &quot;</code></pre>
         </div>
       </div>
 <a href="peer-3-sample-2-notes.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="style-guide.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="collaborative-writing-on-github.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

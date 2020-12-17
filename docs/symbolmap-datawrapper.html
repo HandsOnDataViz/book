@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-12-16" />
+<meta name="date" content="2020-12-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -355,9 +355,8 @@ Figure 8.34: Symbol point map of US city population growth with Datawrapper. Exp
 </div>
 <p>Datawrapper splits the process of creating a map into four steps: select map, add data, visualize, then publish and embed. To create your own symbol point map, follow this tutorial.</p>
 <ol style="list-style-type: decimal">
-<li>Open the <a href="https://docs.google.com/spreadsheets/d/1XOhNtvYWaebP4izr0PDJfToRIbl2vki_1JNMYTKCCn0/edit#gid=1709919231">US Cities Population Change 2010-2019 data in Google Sheets</a>. Read the notes to understand its origin and some data issues. We downloaded <a href="https://www.census.gov/data/tables/time-series/demo/popest/2010s-total-cities-and-towns.html">city population data for 2010-2019 from the US Census</a>. But during this time period, some cities were newly incorporated or merged with outlying areas, which skews their population data over time. Also, we collected data for 5 major cities in Puerto Rico, a US territory, but they do not appear in the Datawrapper map for reasons explained in step 4.</li>
+<li>Open the <a href="https://docs.google.com/spreadsheets/d/1XOhNtvYWaebP4izr0PDJfToRIbl2vki_1JNMYTKCCn0/edit#gid=1709919231">US Cities Population Change 2010-2019 data in Google Sheets</a>. Read the notes to understand its origin and some data issues. We downloaded <a href="https://www.census.gov/data/tables/time-series/demo/popest/2010s-total-cities-and-towns.html">city population data for 2010-2019 from the US Census</a>. But during this time period, some cities were newly incorporated or merged with outlying areas, which skews their population data over time. Note also that we included data for Washington, DC (a major city not located in a US state) and for 5 major cities in Puerto Rico (not a state, but a US territory where residents are US citizens), so we’ll select an appropriate map to include them below.</li>
 </ol>
-<p>TODO: Datawrapper fixed Puerto Rico geocoding issue with their USA &gt; States and Territories map; review text and update images if needed</p>
 <p>Good maps often require <a href="clean.html">cleaning up messy data as described in Chapter 5</a>. In our spreadsheet we narrowed the original list down to about 300 cities with more than 100,000 residents in either 2010 or 2019. Also, since we’re relying on Datawrapper to correctly identify <em>place names</em>, we combined <em>city</em> and <em>state</em> into one column to improve geocoding accuracy. Learn more about <a href="https://academy.datawrapper.de/article/193-symbol-location-accuracy-using-addresses-place-names">place name geocoding at the Datawrapper Academy</a>. Also, we created a new column named <em>Percent Change</em>, which we calculated this way: <code>(2019 - 2010) / 2010 * 100</code>.</p>
 <ol start="2" style="list-style-type: decimal">
 <li><p>In the Google Sheet, go to <em>File &gt; Download</em> and select the Comma-Separated Values (CSV) format to save the data to your local computer.</p></li>
@@ -371,7 +370,7 @@ Figure 8.35: Start to create a symbol map in Datawrapper.
 </p>
 </div>
 <ol start="4" style="list-style-type: decimal">
-<li><p>In the <em>Select your map</em> screen, enter <em>USA</em> and search for options. Note that we selected <em>USA &gt; </em>States* as our best current option, because <em>USA &gt; States and Territories</em> does not yet correctly display geocoded locations for Puerto Rico, a US territory. Proceed to the next screen.</p></li>
+<li><p>In the <em>Select your map</em> screen, search for <em>USA &gt; States and Territories</em> to include Puerto Rico, rather than the <em>USA &gt; </em>States* option that appears closer to the top of the list. Proceed to the next screen.</p></li>
 <li><p>In the <em>Add your data</em> screen, click the <em>Import your dataset</em> button. In the next window, click the <em>Addresses and Place Names</em> button because our data is organized this way. In the <em>Import</em> window, click to <em>Upload a CSV file</em>, and select the file you downloaded above.</p></li>
 <li><p>In the <em>Match your columns</em> screen, select the <em>City-State</em> column to be <em>Matched as Address</em>, then scroll down to click the <em>Next</em> button, as shown in Figure <a href="symbolmap-datawrapper.html#fig:datawrapper-symbolmap-match">8.36</a>. In the next screen click <em>Go</em>, then see your geocoded data displayed on a map in the following screen.</p></li>
 </ol>

@@ -402,7 +402,7 @@ Datawrapper splits the process of creating a map into four steps: select map, ad
 
 1. Open the [US Cities Population Change 2010-2019 data in Google Sheets](https://docs.google.com/spreadsheets/d/1XOhNtvYWaebP4izr0PDJfToRIbl2vki_1JNMYTKCCn0/edit#gid=1709919231). Read the notes to understand its origin and some data issues. We downloaded [city population data for 2010-2019 from the US Census](https://www.census.gov/data/tables/time-series/demo/popest/2010s-total-cities-and-towns.html). But during this time period, some cities were newly incorporated or merged with outlying areas, which skews their population data over time. Also, we collected data for 5 major cities in Puerto Rico, a US territory, but they do not appear in the Datawrapper map for reasons explained in step 4.
 
-TODO: asked Datawrapper to fix Puerto Rico geocoding issue with their USA > States and Territories map
+TODO: Datawrapper fixed Puerto Rico geocoding issue with their USA > States and Territories map; review text and update images if needed
 
 Good maps often require [cleaning up messy data as described in Chapter 5](clean.html). In our spreadsheet we narrowed the original list down to about 300 cities with more than 100,000 residents in either 2010 or 2019. Also, since we're relying on Datawrapper to correctly identify *place names*, we combined *city* and *state* into one column to improve geocoding accuracy. Learn more about [place name geocoding at the Datawrapper Academy](https://academy.datawrapper.de/article/193-symbol-location-accuracy-using-addresses-place-names). Also, we created a new column named *Percent Change*, which we calculated this way: `(2019 - 2010) / 2010 * 100`.
 

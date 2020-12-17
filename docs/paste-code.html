@@ -351,9 +351,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="to-self-hosted-wordpress-sites" class="section level3 unnumbered" number="">
 <h3>to Self-hosted WordPress sites</h3>
 <p>Make sure you <a href="https://wordpress.com/support/com-vs-org/">understand the difference</a> between a WordPress.com site above versus a self-hosted WordPress site. The latter is sometimes called WordPress.org site because anyone can freely download the software from that address and <em>host it on their own webserver</em>, or more commonly, have access to a self-hosted WordPress server through their school or work, or by renting space on a vendor’s webserver. But the web address of a self-hosted WordPress site does <em>not</em> necessarily need to end in <code>.org</code>. It also could be <code>.com</code> or <code>.edu</code> or any other ending, so don’t let that confuse you.</p>
-<p>There are several ways to insert an embed code or iframe in a self-hosted WordPress site, but your success may depend on your WP version, your access level, and the complexity of the code.</p>
-<p>For the first method, assume that you’re using WordPress 5.0 or above with the newer block editor, and you have editor or administrator access to your site. TODO: Check whether less-than-admin privileges strips out iframe codes, as it used to before WP 5.0</p>
-<p>In your block editor, select a <em>custom HTML</em> block, and directly insert the embed code or the iframe, as shown in Figure <a href="paste-code.html#fig:wordpress-custom-html">10.16</a>.</p>
+<p>There are two ways to insert an embed code or iframe in a self-hosted WordPress site, but your success may depend on your WP version, your access level, and the complexity of the code. Let’s compare Method A (with is simpler, but not always reliable) and Method B (which requires a few more steps but works more reliably).</p>
+<div id="method-a-simple-but-not-always-reliable" class="section level4 unnumbered" number="">
+<h4>Method A: Simple, but not always reliable</h4>
+<p>Assume that you’re using self-hosted WordPress version 5.0 or above with the newer block editor, and you have editor or administrator access to your site. (This method does not work reliably with author-level access or below.)</p>
+<ol style="list-style-type: decimal">
+<li>In your block editor, select a <em>custom HTML</em> block, and directly insert the embed code or the iframe, as shown in Figure <a href="paste-code.html#fig:wordpress-custom-html">10.16</a>.</li>
+</ol>
 
 <div class="figure"><span id="fig:wordpress-custom-html"></span>
 <img src="images/10-embed/wordpress-custom-html.png" alt="Paste an embed code or iframe into a custom HTML block." width="700" />
@@ -361,48 +365,51 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 Figure 10.16: Paste an embed code or iframe into a custom HTML block.
 </p>
 </div>
-<p>For the second method, assume that you’re using WordPress with either the classic or block editor, and that you have administrator access to the site.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Preview your WordPress page or post, and if your iframe appears, publish and view it in another browser to test how it appears to your readers.</li>
+</ol>
+</div>
+<div id="method-b-more-steps-but-more-reliable" class="section level4 unnumbered" number="">
+<h4>Method B: More steps, but more reliable</h4>
+<p>Assume that you’re using self-hosted WordPress, any version, with either the classic or block editor, and that you have author-level or above access to the site.</p>
 <ol style="list-style-type: decimal">
-<li>Install and activate the <a href="http://wordpress.org/plugins/iframe/">iframe plugin</a>, as shown in Figure <a href="paste-code.html#fig:wordpress-iframe-plugin">10.17</a>. This plugin allows authors to embed iframe codes in a modified “shortcode” format surrounded by square brackets. Without the plugin, self-hosted WordPress.org sites will usually “strip out” iframe codes for all users except the site administrator. TODO: update this image</li>
+<li>First, the site administrator must install and activate the <a href="http://wordpress.org/plugins/iframe/">iframe plugin</a>, as shown in Figure <a href="paste-code.html#fig:wordpress-iframe-plugin">10.17</a>. This plugin allows authors to embed iframe codes in a modified “shortcode” format surrounded by square brackets in this general format: <code>[iframe...]</code>.</li>
 </ol>
 
 <div class="figure"><span id="fig:wordpress-iframe-plugin"></span>
-<img src="images/10-embed/wordpress-iframe-plugin.jpg" alt="Install and activate the iframe plugin on a self-hosted WP site." width="300" />
+<img src="images/10-embed/wordpress-iframe-plugin.png" alt="Install and activate the iframe plugin on a self-hosted WordPress site." width="287" />
 <p class="caption">
-Figure 10.17: Install and activate the <em>iframe plugin</em> on a self-hosted WP site.
+Figure 10.17: Install and activate the <em>iframe</em> plugin on a self-hosted WordPress site.
 </p>
 </div>
 <ol start="2" style="list-style-type: decimal">
-<li>In the WordPress editor, click to the <em>text</em> tab to view the code, and paste the embed code or iframe, as shown in Figure <a href="paste-code.html#fig:wordpress-text-paste-iframe">10.18</a>. Initially, the code you pasted includes iframe tags at the start (<code>&lt;iframe...</code>) and the end ()<code>...&gt;&lt;/iframe&gt;</code>).</li>
-</ol>
-
-<div class="figure"><span id="fig:wordpress-text-paste-iframe"></span>
-<img src="images/10-embed/wordpress-text-paste-iframe.png" alt="Install and activate the iframe plugin on a self-hosted WP site." width="700" />
-<p class="caption">
-Figure 10.18: Install and activate the <em>iframe plugin</em> on a self-hosted WP site.
-</p>
-</div>
-<ol start="3" style="list-style-type: decimal">
-<li>Modify the start tag by replacing the less-than symbol (<code>&lt;</code>) with a square opening bracket (<code>[</code>). Modify the back end by erasing the greater-than symbol (<code>&gt;</code>) and the entire end tag (<code>&lt;/iframe&gt;</code>), and replace both of them with one square closing bracket (<code>]</code>), as shown in Figure <a href="paste-code.html#fig:wordpress-insert-brackets">10.19</a>.</li>
+<li><p>In the WordPress block editor, click to add a <em>Custom HTML</em> block (or in the classic editor, click the <em>text</em> tab to view the HTML code). Paste the embed code or iframe, which initially should appear similar to the prior Figure <a href="paste-code.html#fig:wordpress-custom-html">10.16</a>.</p></li>
+<li><p>Initially, the code you pasted probably included HTML iframe tags at the start (<code>&lt;iframe...</code>) and the end (<code>...&gt;&lt;/iframe&gt;</code>). Modify the start tag by replacing the less-than symbol (<code>&lt;</code>) with a square opening bracket (<code>[</code>). Modify the back end by erasing the greater-than symbol <em>and</em> the entire end tag (<code>&gt; &lt;/iframe&gt;</code>), and replacing both of them with one square closing bracket (<code>]</code>), as shown in Figure <a href="paste-code.html#fig:wordpress-insert-brackets">10.18</a>. Closely compare the two figures to see what these small code edits look like.</p></li>
 </ol>
 
 <div class="figure"><span id="fig:wordpress-insert-brackets"></span>
 <img src="images/10-embed/wordpress-insert-brackets.png" alt="Modify the front and back end with square brackets." width="700" />
 <p class="caption">
-Figure 10.19: Modify the front and back end with square brackets.
+Figure 10.18: Modify the front and back end with square brackets.
 </p>
 </div>
-<p>TODO ABOVE: check method with more complex embed codes, check with non-admin privileges, and update images</p>
+<p>Tip: For long embed codes from Datawrapper and Tableau Public, you may need to experiment with pasting and trimming down to the most relevant portions of the iframe in the <a href="https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_iframe">W3Schools TryIt iframe page</a>, then pasting into the WordPress editor and modifying the front and back end with square brackets.</p>
+<ol start="4" style="list-style-type: decimal">
+<li>Preview your WordPress page or post, and if your iframe appears, publish and view it in another browser to test how it appears to your readers.</li>
+</ol>
 </div>
-<div id="to-squarespace-wix-or-weebly-sites" class="section level3 unnumbered" number="">
-<h3>to SquareSpace, Wix, or Weebly Sites</h3>
-<p>TODO</p>
-<p>CHANGE TO NOTE?
-Paid version of SquareSpace supports embed code</p>
+</div>
+<div id="to-squarespace-wix-or-weebly-web-building-sites" class="section level3 unnumbered" number="">
+<h3>to SquareSpace, Wix, or Weebly web-building sites</h3>
+<p>The concept of pasting your data visualization iframes or embed codes to other web-building sites is similar to WordPress, but details will vary, depending on freemium versus paid subscription level and author-administrator status. Here are details for three of the most popular web-building services:</p>
+<p>See these SquareSpace support pages about <a href="https://support.squarespace.com/hc/en-us/articles/206543617-Embed-Blocks">embed blocks</a> and <a href="https://support.squarespace.com/hc/en-us/articles/205815928-Adding-custom-code-to-your-site#toc-code-blocks-vs--embed-blocks">adding custom code to your site</a>.</p>
+<p>See this Wix support page about <a href="https://support.wix.com/en/article/wix-editor-using-iframes-to-display-visible-content-on-your-site">using iframes to display content on your site</a>.</p>
+<p>See Weebly support page about <a href="https://www.weebly.com/app/help/us/en/topics/create-widgets-embed-code-and-add-external-content">adding external content and widgets with embedded code</a>.</p>
+<p>Tip: When working with long or complex embed codes, you may need to experiment with pasting and trimming down to the most relevant portion of the iframe in the <a href="https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_iframe">W3Schools TryIt iframe page</a>, then pasting that portion into your web-builder platform.</p>
 </div>
 <div id="summary10" class="section level3 unnumbered" number="">
 <h3>Summary</h3>
-<p>TODO</p>
+<p>In this chapter, you learned about iframes and embed codes, and how they seamlessly display your interactive data visualization from their home site onto a second website that you personally manage. This concept will be valuable in the next chapter, where you will learn how to edit and host open-source code templates on the GitHub platform, because you can also create iframes to make those charts and maps seamlessly appear on your own website.</p>
 
 </div>
 </div>

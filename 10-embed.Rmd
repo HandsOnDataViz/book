@@ -24,7 +24,7 @@ Now let's turn to the central question: how can we make an interactive visualiza
 
 In its simplest form, an iframe instructs the secondary site to display a web page address from the primary site, known as the source, as if it were a seamless picture frame on the wall of a room. The sample iframe code below begins with a start tag `<iframe ... >`, which contains the source `src='https://...'` with either single- or double-quotes around the primary site URL, then concludes with an end tag `</iframe>`. This sample iframe refers to an interactive US income inequality chart on the Datawrapper platform, which first appeared in the [Introduction](introduction.html) to this book, as shown in Figure \@ref(fig:iframe-sample).
 
-`<iframe src='https://https://datawrapper.dwcdn.net/LtRbj/'></iframe>`
+`<iframe src='https://datawrapper.dwcdn.net/LtRbj/'></iframe>`
 
 (ref:iframe-sample) Depending on the format of your book, if a static chart appears above, but you can also [view the interactive version](https://datawrapper.dwcdn.net/LtRbj/).
 
@@ -36,12 +36,10 @@ Sometimes embed codes or their iframe tags are *much longer* than the simple exa
 
 Now that you have a clearer definition of an interactive visualization, embed codes, and iframe tags, in the next section we'll learn how to copy the embed code from different visualization platforms.
 
-TODO above: confirm the screenshot commands for non-Mac platforms and if they are the simplest versions, and if older Windows commands are still needed
-
 ## Get the Embed Code or iframe Tag {- #embed-code}
 In this section, you'll learn how to copy the embed code or iframe tag that is automatically generated when you publish a chart or map on different visualization platforms featured in this book. Remember that embed codes contain the essential iframe tag, along with other bits of code to display the chart or map from the primary site and make it appear seamlessly on the secondary site.
 
-We'll break this down into three steps for each visualization platform. First, we will demonstrate how to copy your embed code or iframe tag from Google Sheets, Datawrapper, Tableau Public, and other platforms listed below. Second, we'll show you how to *practice paste* the embed code or iframe tag into the [W3Schools TryIt iframe page](https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_iframe), as shown in Figure \@ref(fig:w3schools-tryit-iframe), to help you understand what's happening behind-the-scenes and to modify the code if needed. Third, we'll point you to the next section to learn how to properly paste the embed code in your preferred website, such as WordPress [and others TODO].
+We'll break this down into three steps for each visualization platform. First, we will demonstrate how to copy your embed code or iframe tag from Google Sheets, Datawrapper, Tableau Public, and other platforms listed below. Second, we'll show you how to *practice paste* the embed code or iframe tag into the [W3Schools TryIt iframe page](https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_iframe), as shown in Figure \@ref(fig:w3schools-tryit-iframe), to help you understand what's happening behind-the-scenes and to modify the code if needed. Third, we'll point you to the next section to learn how to properly paste the embed code in your preferred website, such as WordPress, SquareSpace, Weebly, and Wix.
 
 (ref:w3schools-tryit-iframe) For each embed code below, you will *practice paste* it in place of the selected text of the W3Schools TryIt iframe page to see how it works.
 
@@ -203,11 +201,12 @@ If you own *free* or personal or premium [WordPress.com](https://wordpress.com) 
 ### to Self-hosted WordPress sites {-}
 Make sure you [understand the difference](https://wordpress.com/support/com-vs-org/) between a WordPress.com site above versus a self-hosted WordPress site. The latter is sometimes called WordPress.org site because anyone can freely download the software from that address and *host it on their own webserver*, or more commonly, have access to a self-hosted WordPress server through their school or work, or by renting space on a vendor's webserver. But the web address of a self-hosted WordPress site does *not* necessarily need to end in `.org`. It also could be `.com` or `.edu` or any other ending, so don't let that confuse you.
 
-There are several ways to insert an embed code or iframe in a self-hosted WordPress site, but your success may depend on your WP version, your access level, and the complexity of the code.
+There are two ways to insert an embed code or iframe in a self-hosted WordPress site, but your success may depend on your WP version, your access level, and the complexity of the code. Let's compare Method A (with is simpler, but not always reliable) and Method B (which requires a few more steps but works more reliably).
 
-For the first method, assume that you're using WordPress 5.0 or above with the newer block editor, and you have editor or administrator access to your site. TODO: Check whether less-than-admin privileges strips out iframe codes, as it used to before WP 5.0
+#### Method A: Simple, but not always reliable {-}
+Assume that you're using self-hosted WordPress version 5.0 or above with the newer block editor, and you have editor or administrator access to your site. (This method does not work reliably with author-level access or below.)
 
-In your block editor, select a *custom HTML* block, and directly insert the embed code or the iframe, as shown in Figure \@ref(fig:wordpress-custom-html).  
+1. In your block editor, select a *custom HTML* block, and directly insert the embed code or the iframe, as shown in Figure \@ref(fig:wordpress-custom-html).  
 
 (ref:wordpress-custom-html) Paste an embed code or iframe into a custom HTML block.
 
@@ -215,25 +214,22 @@ In your block editor, select a *custom HTML* block, and directly insert the embe
  knitr::include_graphics("images/10-embed/wordpress-custom-html.png")
 ```
 
-For the second method, assume that you're using WordPress with either the classic or block editor, and that you have administrator access to the site.
+2. Preview your WordPress page or post, and if your iframe appears, publish and view it in another browser to test how it appears to your readers.
 
-1. Install and activate the [iframe plugin](http://wordpress.org/plugins/iframe/), as shown in Figure \@ref(fig:wordpress-iframe-plugin). This plugin allows authors to embed iframe codes in a modified "shortcode" format surrounded by square brackets. Without the plugin, self-hosted WordPress.org sites will usually "strip out" iframe codes for all users except the site administrator. TODO: update this image
+#### Method B: More steps, but more reliable {-}
+Assume that you're using self-hosted WordPress, any version, with either the classic or block editor, and that you have author-level or above access to the site.
 
-(ref:wordpress-iframe-plugin) Install and activate the *iframe plugin* on a self-hosted WP site.
+1. First, the site administrator must install and activate the [iframe plugin](http://wordpress.org/plugins/iframe/), as shown in Figure \@ref(fig:wordpress-iframe-plugin). This plugin allows authors to embed iframe codes in a modified "shortcode" format surrounded by square brackets in this general format: `[iframe...]`.
 
-```{r wordpress-iframe-plugin, out.width=300, fig.cap="(ref:wordpress-iframe-plugin)"}
- knitr::include_graphics("images/10-embed/wordpress-iframe-plugin.jpg")
+(ref:wordpress-iframe-plugin) Install and activate the *iframe* plugin on a self-hosted WordPress site.
+
+```{r wordpress-iframe-plugin, out.width=287, fig.cap="(ref:wordpress-iframe-plugin)"}
+ knitr::include_graphics("images/10-embed/wordpress-iframe-plugin.png")
 ```
 
-2. In the WordPress editor, click to the *text* tab to view the code, and paste the embed code or iframe, as shown in Figure \@ref(fig:wordpress-text-paste-iframe). Initially, the code you pasted includes iframe tags at the start (`<iframe...`) and the end ()`...></iframe>`).
+2. In the WordPress block editor, click to add a *Custom HTML* block (or in the classic editor, click the *text* tab to view the HTML code). Paste the embed code or iframe, which initially should appear similar to the prior Figure \@ref(fig:wordpress-custom-html).
 
-(ref:wordpress-text-paste-iframe) Install and activate the *iframe plugin* on a self-hosted WP site.
-
-```{r wordpress-text-paste-iframe, out.width=700, fig.cap="(ref:wordpress-text-paste-iframe)"}
- knitr::include_graphics("images/10-embed/wordpress-text-paste-iframe.png")
-```
-
-3. Modify the start tag by replacing the less-than symbol (`<`) with a square opening bracket (`[`). Modify the back end by erasing the greater-than symbol (`>`) and the entire end tag (`</iframe>`), and replace both of them with one square closing bracket (`]`), as shown in Figure \@ref(fig:wordpress-insert-brackets).
+3. Initially, the code you pasted probably included HTML iframe tags at the start (`<iframe...`) and the end (`...></iframe>`). Modify the start tag by replacing the less-than symbol (`<`) with a square opening bracket (`[`). Modify the back end by erasing the greater-than symbol *and* the entire end tag (`> </iframe>`), and replacing both of them with one square closing bracket (`]`), as shown in Figure \@ref(fig:wordpress-insert-brackets). Closely compare the two figures to see what these small code edits look like.
 
 (ref:wordpress-insert-brackets) Modify the front and back end with square brackets.
 
@@ -241,13 +237,21 @@ For the second method, assume that you're using WordPress with either the classi
  knitr::include_graphics("images/10-embed/wordpress-insert-brackets.png")
 ```
 
-TODO ABOVE: check method with more complex embed codes, check with non-admin privileges, and update images
+Tip: For long embed codes from Datawrapper and Tableau Public, you may need to experiment with pasting and trimming down to the most relevant portions of the iframe in the [W3Schools TryIt iframe page](https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_iframe), then pasting into the WordPress editor and modifying the front and back end with square brackets.
 
-### to SquareSpace, Wix, or Weebly Sites {-}
-TODO
+4. Preview your WordPress page or post, and if your iframe appears, publish and view it in another browser to test how it appears to your readers.
 
-CHANGE TO NOTE?
-Paid version of SquareSpace supports embed code
+### to SquareSpace, Wix, or Weebly web-building sites {-}
+The concept of pasting your data visualization iframes or embed codes to other web-building sites is similar to WordPress, but details will vary, depending on freemium versus paid subscription level and author-administrator status. Here are details for three of the most popular web-building services:
+
+See these SquareSpace support pages about [embed blocks](https://support.squarespace.com/hc/en-us/articles/206543617-Embed-Blocks) and [adding custom code to your site](https://support.squarespace.com/hc/en-us/articles/205815928-Adding-custom-code-to-your-site#toc-code-blocks-vs--embed-blocks).
+
+See this Wix support page about [using iframes to display content on your site](https://support.wix.com/en/article/wix-editor-using-iframes-to-display-visible-content-on-your-site).
+
+See Weebly support page about [adding external content and widgets with embedded code](https://www.weebly.com/app/help/us/en/topics/create-widgets-embed-code-and-add-external-content).
+
+Tip: When working with long or complex embed codes, you may need to experiment with pasting and trimming down to the most relevant portion of the iframe in the [W3Schools TryIt iframe page](https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_iframe), then pasting that portion into your web-builder platform.
 
 ### Summary {- #summary10}
-TODO
+
+In this chapter, you learned about iframes and embed codes, and how they seamlessly display your interactive data visualization from their home site onto a second website that you personally manage. This concept will be valuable in the next chapter, where you will learn how to edit and host open-source code templates on the GitHub platform, because you can also create iframes to make those charts and maps seamlessly appear on your own website.

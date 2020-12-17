@@ -3,14 +3,14 @@ Maps draw your readers into data that includes a spatial dimension, while also d
 
 In this chapter, we will examine [principles of map design](map-design.html) and distinguish between good and bad maps. You will learn about rules that apply to all maps, and specific guidelines for creating choropleth maps. While many tools allow you to download maps as *static* images, our book also demonstrates how to construct *interactive* charts that invite readers to zoom in and explore the data in their web browsers. Later you'll learn how to [embed interactive charts on your website in Chapter 10](embed.html).
 
-Learn about different types of maps you can create in this book in Table \@ref(tab:map-types). Decisions about map types are based on two main factors: the format of your data, and the kind of story you wish to tell. For example, point maps work best to show specific locations with colored markers to represent categories (such as hospitals), while choropleth maps are best suited to display relative values for regions (such as birth rates across US states). After selecting your map type, follow our tool recommendations and step-by-step tutorials. This chapter features *Easy Tools* with drag-and-drop menus, such as [Google My Maps](mymaps.html), [Datawrapper](symbolmap-datawrapper.html), and [Tableau Public](map-tableau.html). But the table also points you to *Power Tools* that give you more control to customize and host your visualizations, such as [Leaflet code templates in Chapter 13](leaflet.html). These advanced tools require prior knowledge on how to [edit and host code templates with GitHub in Chapter 11](github.html).
+Decisions about map types are based on two main factors: the format of your data, and the kind of story you wish to tell. Learn about different types of maps you can create in this book in Table \@ref(tab:map-types). For example, point maps work best to show specific locations with colored markers to represent categories (such as hospitals), while choropleth maps are best suited to display relative values for regions (such as birth rates across US states). After selecting your map type, follow our tool recommendations and step-by-step tutorials that appear in the sections that follow. This chapter features *Easy Tools* with drag-and-drop menus, such as [Google My Maps](mymaps.html), [Datawrapper](symbolmap-datawrapper.html), [Tableau Public](map-tableau.html), and the [Socrata Open Data platform](map-socrata.html) to create continually-updated maps. But the table also points you to *Power Tools* that give you more control to customize and host your visualizations, such as [Leaflet code templates in Chapter 13](leaflet.html). These advanced tools require prior knowledge on how to [edit and host code templates with GitHub in Chapter 11](github.html).
 
 Table: (\#tab:map-types) Basic Map Types, Best Uses, and Tutorials
 
 | Map | Best use and tutorials in this book |
 | --- | --- |
 | Point map with custom icons<br> ![](images/08-map/tablemap-point.png) | Best to show specific locations (such as addresses) with customized colored markers for categories, plus text and images in popup windows. <br>Easy tool: [Google My Maps tutorial](mymaps.html). <br>Power tool: [Ch 13: Leaflet Maps with Google Sheets tutorial](leaflet-maps-with-google-sheets.html) |
-| Symbol point map<br> ![](images/08-map/tablemap-symbol.png) | Best to show specific locations (such as cities), with variable-sized shapes or colors to represent data values (such as population growth).<br>Easy tool: [Symbol Point Map with Datawrapper tutorial](symbolmap-datawrapper.html) |
+| Symbol point map<br> ![](images/08-map/tablemap-symbol.png) | Best to show specific locations (such as cities), with variable-sized shapes or colors to represent data values (such as population growth). <br>Easy tool: [Symbol Point Map with Datawrapper tutorial](symbolmap-datawrapper.html) |
 | Choropleth (colored polygon) map <br> ![](images/08-map/tablemap-choropleth.png) | Best to show patterns across geographic areas (such as neighborhoods or nations) by coloring polygons to represent data values. <br>Easy tool: [Choropleth map with Datawrapper tutorial](choropleth-datawrapper.html) or [Choropleth map with Tableau Public tutorial](map-tableau.html) <br>Power tools: [Ch 13: Leaflet Maps with Google Sheets tutorial](leaflet-maps-with-google-sheets.html) |
 | Heat point map <br> ![](images/08-map/tablemap-heat.png) | Best to show clusters of points as colored hotspots to emphasize high frequency or density of cases. <br>Power tool: [Ch 13: Leaflet Heatmap code template](leaflet-heatmap.html) |
 | Story map <br> ![](images/08-map/tablemap-storymap.png) | Best to show a point-by-point guided tour, with a scrolling narrative to display text, images, audio, video, and scanned map backgrounds. <br> Power tool: [Ch 13: Leaflet Storymaps with Google Sheets tutorial](leaflet-storymaps-with-google-sheets.html) |
@@ -19,16 +19,14 @@ Table: (\#tab:map-types) Basic Map Types, Best Uses, and Tutorials
 | Searchable point map<br> ![](images/08-map/tablemap-searchable.png) | Best to show specific locations for users to search by name or proximity, or filter by category, with optional list view.<br> Power Tool: [Ch 13: Leaflet Searchable Point Map code template](leaflet-searchable-map.html) |
 | Current map from open-data repository<br> ![](images/08-map/tablemap-open-data.png) | Best to show the most current information pulled directly from an open-data repository such as Socrata and others. <br>Easy tool: [Current map with Socrata open data tutorial](map-socrata.html)<br>Power tool: [Ch 13: Leaflet Maps with Open Data API code template](leaflet-maps-open-data-apis.html) |
 
-TODO above: update 3 images
-
 ## Map Design Principles {- #map-design}
 Much of the data collected today includes a spatial component that can be mapped. Whether you look up a city address or take a photo of a tree in the forest, both can be geocoded as points on a map. We also can draw lines and shapes to illustrate geographical boundaries of neighborhoods or nations, and color them to represent different values, such as population and income.  
 
 However, just because data *can* be mapped does not always mean it *should* be mapped. Before creating a map, stop and ask yourself: *Does location really matter to your story?* Even when your data includes geographic information, sometimes a chart tells your story better than a map. For example, you can clearly show differences between geographic areas in a bar chart, or trace how they rise and fall on different rates over time with a line chart, or compare two variables for each area in a scatter chart. Sometimes a simple table, or even text alone, communicates your point more effectively to your audience. Since creating a well-designed map requires time and energy, make sure it actually enhances your data story.
 
-As you learned in the previous chapter about charts, data visualization is not a science, but comes with a set of principles and best practices that serve as a foundation for creating true and meaningful maps. In this section, we'll identify a few rules about map design, but you may be surprised to learn that some rules are less rigid than others, and can be "broken" when necessary to emphasize a point, as long as you are honestly interpreting the data. To begin to understand the difference, let's start by establishing a common vocabulary about maps.
+As you learned in the previous chapter about charts, data visualization is not a science, but comes with a set of principles and best practices that serve as a foundation for creating true and meaningful maps. In this section, we'll identify a few rules about map design, but you may be surprised to learn that some rules are less rigid than others, and can be "broken" when necessary to emphasize a point, as long as you are honestly interpreting the data. To begin to understand the difference, let's start by establishing a common vocabulary about maps by breaking one down into its elements.
 
-### Deconstruct a Map {-}
+### Deconstructing a Map {-}
 Our book features how to create *interactive* web maps, also called *tiled maps* or *slippy maps*, because users can zoom into and pan around to explore map data layers on top of a seamless set of basemap tiles. Basemaps that display aerial photo imagery are known as *raster* tiles, while those that display pictorial images of streets and buildings are tiles that are built from *vector* data. Raster map data is limited by the resolution of the original image, which gets fuzzier as we get closer. By contrast, you can zoom in very close to vector map data without diminishing its visual quality, as shown in Figure \@ref(fig:raster-vs-vector-zoom). You'll learn more about these concepts in the [GeoJSON and Geospatial Data](geojson.html) section of Chapter 14.
 
 (ref:raster-vs-vector-zoom) Raster map data from Esri World Imagery (on the left), and vector map data from OpenStreetMap (on the right), both showing co-author Ilyankou's childhood neighborhood in Mogilev, Belarus. Zooming into raster map data makes it fuzzier, while vector map data retains its sharpness.
@@ -49,9 +47,9 @@ Interactive maps usually include *zoom controls* (`+` and `-` buttons) to change
 
 ### Clarify Point versus Polygon Data {-}
 
-Before you start to create a map, make sure you understand your data format and what it represents. Avoid mistakes commonly made by novices by pausing to ask these questions. First, *Can your data be mapped?* Sometimes the information we collect has no geographic component, or no consistent one, which makes it difficult or impossible to place on a map. If the answer is yes, then proceed to the second question: *Can the data be mapped as points or polygons?* These are the two most likely cases (which are sometimes confused), in contrast to the less-common third option, polylines, which represent paths and routes.
+Before you start to create a map, make sure you understand your data format and what it represents. Avoid novice mistakes by pausing to ask these questions. First, *Can your data be mapped?* Sometimes the information we collect has no geographic component, or no consistent one, which makes it difficult or impossible to place on a map. If the answer is yes, then proceed to the second question: *Can the data be mapped as points or polygons?* These are the two most likely cases (which are sometimes confused), in contrast to the less-common third option, polylines, which represent paths and routes.
 
-What type of data do you see listed below: points or polygons?
+To help you understand the difference, let's look at some examples. What type of data do you see listed below: points or polygons?
 
 1. 36.48, -118.56 (latitude and longitude for Joshua Tree National Park, CA)
 2. 2800 E Observatory Rd, Los Angeles, CA
@@ -62,11 +60,11 @@ What type of data do you see listed below: points or polygons?
 7. San Diego County, CA
 8. State of California
 
-In most cases, numbers 1-4 represent *point* data because they usually refer to a *specific locations* that can be displayed as point markers on a map. By contrast, numbers 5-8 generally represent *polygon* data because they usually refer to *geographic boundaries* that can be displayed as closed shapes on a map.
+In most cases, numbers 1-4 represent *point* data because they usually refer to a *specific locations* that can be displayed as point markers on a map. By contrast, numbers 5-8 generally represent *polygon* data because they usually refer to *geographic boundaries* that can be displayed as closed shapes on a map. See examples of both point and polygon maps in previous Table \@ref(tab:map-types).
 
 This point-versus-polygon distinction applies *most* of the time, but not always, with exceptions depending on your data story. First, it is possible, but not common, to represent all items 1-8 as *point* data on a map. For example, to tell a data story about population growth for California cities, it would make sense to create a symbol point map with different-sized circles to represent data for each city. To do this, your map tool would need to find the center-point of the City of Los Angeles polygon boundary in order to place its population circle on a specific point on the map. A second way the point-versus-polygon distinction gets blurry is because some places we normally consider to be specific points *also* have polygon-shaped borders. For example, if you enter "Balboa Park, San Diego CA" into Google Maps, it will display the result as a map marker, which suggests it is point data. But Balboa Park also has a geographic boundary that covers 1.8 square miles (4.8 square kilometers). If you told a data story about how much land in San Diego was devoted to public space, it would make sense to create a choropleth map that displays Balboa Park as a polygon rather than a point. Third, it's also possible to transform points into polygon data with [pivot tables, a topic we introduced in Chapter 3](pivot.html). For example, to tell a data story about the number of hospital beds in each California county, you could obtain point-level data about beds in each hospital, then pivot them to sum up the total number of beds in each county, and display these polygon-level results in a choropleth map. See a more detailed example in the [Pivot Points into Polygon Data section of Chapter 14: Transform Your Map Data](pivot-point-to-polygon.html)
 
-In summary, clarify if your spatial data should represent points or polygons, since those two categories are sometimes confused. If you envision them as points, then create a point-style map; or if polygons, then create a choropleth map. Those are the most common methods used by mapmakers, but there are plenty of exceptions, depending on your data story.
+In summary, clarify if your spatial data should represent points or polygons, since those two categories are sometimes confused. If you envision them as points, then create a point-style map; or if polygons, then create a choropleth map. Those are the most common methods used by mapmakers, but there are plenty of exceptions, depending on your data story. Later in this chapter you'll learn how to make a [basic point map in Google MyMaps](mymaps.html) and a [symbol point map in Datawrapper](symbolmap-datawrapper.html), then we'll demonstrate how to visualize polygon-level data with a [choropleth map in Datawrapper](choropleth-datawrapper.html) and [also in Tableau Public](map-tableau.html).
 
 ### Map One Variable, Not Two {-}
 Newcomers to data visualization sometimes are so proud of placing one variable on a map that they figure two variables must be twice as good. But this usually is not true. Here is the thought process that leads to this mistaken conclusion. Imagine you want to compare the relationship between income and education in eight counties of your state. First, you choose create a choropleth map of income, where darker blue areas represent areas with higher levels in the northwest corner, as shown in Figure \@ref(fig:map-two-variables)(a). Second, you decide to create a symbol point map, where larger circle sizes represents a higher share of the population with a university degree, as shown in Figure \@ref(fig:map-two-variables)(b). Both of those maps are fine, but they still do not highlight the relationship between income and education.
@@ -84,7 +82,7 @@ Instead, if the relationship between two variables is the most important aspect 
 ### Choose Smaller Geographies for Choropleth Maps {-}
 Choropleth maps are best for showing geographic patterns across regions by coloring polygons to represent data values. Therefore, we generally recommend selecting *smaller* geographies to display more *granular* patterns, since larger geographies display aggregated data that may hide what's happening at lower levels. Geographers refer to this concept as the [modifiable aerial unit problem](https://en.wikipedia.org/wiki/Modifiable_areal_unit_problem), which means that the way you slice up your data affects how we analyze its appearance on the map. Stacking together lots of small slices reveals more detail than one big slice.
 
-For example, compare the two choropleth maps of typical home values in the Northeastern United States in according to [Zillow research data](https://www.zillow.com/research/data/) for September 2020. Zillow defines typical values as a smoothed, seasonally adjusted measure of all single-family residences, condos, and coops in the 35th to 65th percentile range, similar to the median value at the 50th percentile, with some additional lower- and higher-value homes. Both choropleth maps use the same scale. The key difference is the size of the geographic units: the first map shows home values at the larger state level, while the second map shows home values at the smaller county level, as shown in Figure \@ref(fig:zillow-northeast).
+For example, compare the two choropleth maps of typical home values in the Northeastern United States, according to [Zillow research data](https://www.zillow.com/research/data/) for September 2020. Zillow defines typical values as a smoothed, seasonally adjusted measure of all single-family residences, condos, and coops in the 35th to 65th percentile range, similar to the median value at the 50th percentile, with some additional lower- and higher-value homes. Both choropleth maps use the same scale. The key difference is the size of the geographic units. In Figure \@ref(fig:zillow-northeast), the map on the left shows home values at the larger state level, while the map on the right shows home values at the smaller county level.
 
 (ref:zillow-northeast) Zillow typical home values in September 2020 shown at the larger state level (left) versus the smaller county level (right).
 
@@ -96,9 +94,9 @@ Which map is best? Since both are truthful depictions of the data, the answer de
 
 ## Design Choropleth Colors & Intervals {- #design-choropleth}
 
-When you build a choropleth map, your choices about how to represent data with colors will determine its overall appearance, so it's important to learn key principles. Good choropleth maps make true and insightful geographic patterns clearly visible to readers, whether they are printed in black-and-white on paper or displayed in color on a computer screen. Furthermore, the best choropleth maps are designed to be interpreted correctly by people with colorblindness. For an excellent overview of visualization colors in general, see Lisa Charlotte Rost's "[A Friendly Guide to Colors in Data Visualization](https://blog.datawrapper.de/colorguide/)" and "[How to Pick More Beautiful Colors for Your Data Visualizations](https://blog.datawrapper.de/beautifulcolors/index.html)," both on the Datawrapper blog.^[@rostYourFriendlyGuide2018; @rostHowPickMore2020]
+This section takes a deeper dive into map design principles for choropleth maps. Your choices about how to represent data with colors dramatically shapes their appearance, so it's very important to learn key concepts to ensure that your maps tell true and meaningful stories. Good choropleth maps make true and insightful geographic patterns clearly visible to readers, whether they are printed in black-and-white on paper or displayed in color on a computer screen. Furthermore, the best choropleth maps are designed to be interpreted correctly by people with colorblindness. For an excellent overview of visualization colors in general, see Lisa Charlotte Rost's "[A Friendly Guide to Colors in Data Visualization](https://blog.datawrapper.de/colorguide/)" and "[How to Pick More Beautiful Colors for Your Data Visualizations](https://blog.datawrapper.de/beautifulcolors/index.html)," both on the Datawrapper blog.^[@rostYourFriendlyGuide2018; @rostHowPickMore2020]
 
-To illustrate key concepts about colors in choropleth maps, let's explore a wonderful design assistant called [ColorBrewer](https://colorbrewer2.org/), created by Cynthia Brewer and Mark Harrower.^[See also @brewerDesigningBetterMaps2016] Since ColorBrewer is a design assistant, you do *not* upload your map data directly into it. Instead, you select the type of data you wish to display in your choropleth map, and ColorBrewer will recommend color palettes that work best with your data story. Then you can export those color codes into your preferred choropleth mapping tool, as shown in the [Datawrapper](choropleth-datawrapper.html) and [Tableau Public](map-tableau.html) tutorials below. See the ColorBrewer interface in Figure \@ref(fig:map-colorbrewer).
+The best way to illustrate how color choices affect choropleth map design is with a wonderful online design assistant called [ColorBrewer](https://colorbrewer2.org/), created by Cynthia Brewer and Mark Harrower.^[See also @brewerDesigningBetterMaps2016] Unlike other tools in this book, you do not upload data directly into ColorBrewer to generate your visualization. Instead, you select the type of data you wish to display in your choropleth map, and ColorBrewer will assist you by recommending color palettes that work best with your data story. Then you can export those color codes into your preferred choropleth mapping tool, as shown in the [Datawrapper](choropleth-datawrapper.html) and [Tableau Public](map-tableau.html) tutorials below. See the ColorBrewer interface in Figure \@ref(fig:map-colorbrewer).
 
 (ref:map-colorbrewer) The ColorBrewer design assistant interface: data classes, type of color scheme, and recommended color codes.
 
@@ -145,7 +143,7 @@ knitr::include_graphics("images/08-map/colorbrewer-export.png")
 
 ### Choose Color Intervals to Group Choropleth Map Data {-}
 
-Another important design choice is color intervals, which determine how you group and display data on your choropleth map. This is a powerful set of decisions that dramatically shapes how your map appears in readers' eyes, and the message conveyed by your data story. You will need to consider several options in this multi-step decision-making process, and although there are few uniform design rules, we will offer guidance and recommendations. Since options for selecting intervals vary across different mapping tools, we will explain broad concepts in this section, with occasional screenshots from Datawrapper and Tableau Public, but will save the details for those specific tutorials later in the chapter.
+Another important design choice is color intervals, which determine how you group and display data on your choropleth map. This powerful set of decisions will dramatically shape how your map appears in readers' eyes, and the message conveyed by your data story. You will need to consider several options in this multi-step decision-making process, and although there are few uniform design rules, we will offer guidance and recommendations. Since options for selecting intervals vary across different mapping tools, we will explain broad concepts in this section, with occasional screenshots from Datawrapper and Tableau Public, but will save the details for those specific tutorials later in the chapter.
 
 Some mapping tools allow you to choose between two different *types of color intervals* to show movement up or down a data scale, as shown in Figure \@ref(fig:intervals-type-combined). *Steps* are clearly-marked color dividers, like a staircase, while *continuous* is a gradual change in color, like a ramp. Both go upward, but take you there in different ways.
 
@@ -165,7 +163,7 @@ If you choose *steps*, how many dividers should you use to slice up your data? O
 knitr::include_graphics("images/08-map/colorbrewer-steps.png")
 ```
 
-Some choropleth mapping tools also allow you to choose how to *interpolate* your data, meaning the mathematical method for grouping numbers to represent similar colors on your map. For example, Datawrapper displays two different sets of drop-down menus for interpolation options, depending on whether you chose steps or continuous, as shown in Figure \@ref(fig:interpolation-datawrapper-combined).
+Some choropleth mapping tools also allow you to choose how to *interpolate* your data, meaning the method for grouping numbers to represent similar colors on your map. For example, Datawrapper displays two different sets of drop-down menus for interpolation options, depending on whether you chose steps or continuous, as shown in Figure \@ref(fig:interpolation-datawrapper-combined).
 
 (ref:interpolation-datawrapper-combined) Interpolation options for steps (left) and continuous (right) in Datawrapper.
 
@@ -183,7 +181,7 @@ knitr::include_graphics("images/08-map/interpolation-histograms.png")
 
 In this introductory book, we can simplify the most common interpolation options in three basic categories:
 
-- *Linear* places your data values in a straight line, from lowest to highest. This method works best when the data are evenly distributed, or if you wish to draw attention to the low and high extremes in your data, which will stand out in light and dark colors.
+- *Linear* places your data values in a straight line, from lowest to highest. This method works best when the data are evenly distributed, or if you wish to draw attention to the low and high extremes in your data, since they will stand out in light and dark colors.
 
 - *Quantiles* divide your data values into groups of an equal number. More specifically, *quartiles*, *quintiles*, and *deciles* divide the values into four, five, or ten groups of equal quantity. This method works best when the data are skewed to one side, because the regrouping allows you to draw attention to diversity inside the data, rather than the extremes. *Rounded values* are similar to quantiles, but the decimals are replaced with rounded numbers that look nicer to readers' eyes.
 
@@ -199,7 +197,7 @@ Overall, [Datawrapper Academy recommends](https://academy.datawrapper.de/article
 knitr::include_graphics("images/08-map/intervals-datawrapper-montage.png")
 ```
 
-Designing true and meaningful choropleth maps is challenging work. You will improve your skills the same way we did, by reading widely, looking at different maps, and testing various ways to visualize your data. Become more aware of how your decisions about color intervals can dramatically alter how the data appears to readers. Most important, create maps that tell truthful and insightful data stories.
+Designing true and meaningful choropleth maps is challenging work. You will improve your skills the same way we did, by reading widely, looking at different maps, and testing various ways to visualize your data. Become more aware of how your decisions about color intervals can dramatically alter how the data appears to readers. Most important, create maps that focus on telling your story and truthfully representing the data.
 
 ## Normalize Choropleth Map Data {- #normalize-choropleth}
 
@@ -219,19 +217,21 @@ What are the worst-hit states according to the map showing total Covid-19 counts
 
 Now, how about the map in Figure \@ref(fig:normalize-map-data)b? You can see that New York and its neighbors, including New Jersey and Massachusetts, have by far the highest rates per capita (per person), which we saw in the first map. But you can also see that in fact California, Texas, and Florida were impacted to a lesser extent than the map on the left had suggested. So the map with per-capita values is a much better illustration to the story about New York being the *first* epicenter of the Covid-19 crisis in the United States.
 
-At this point, you should have a better idea of key principles in map design, and what makes them work (or not) when communicating data images to our eyes. In the next section, we'll begin our first hands-on tutorial with creating a point map. Later in the chapter we'll return to exercises in creating choropleth maps.  
+At this point, you should have a better idea of key principles and best practices in map design. Now that we've covered key concepts for interactive maps in general, and choropleth maps in particular, we will pivot to a series of hands-on tutorials with our recommended tools. In our first tutorial, we will create a [point map with custom icons in Google MyMaps](mymaps.html) to show information about specific locations with pop-up windows. In our second tutorial, we will build a [symbol point map in Datawrapper](symbolmap-datawrapper.html) that uses colored circles of varying sizes to represent population change for specific cities. Our final tutorials in this chapter will return to the topic of designing [choropleth maps in Datawrapper](choropleth-datawrapper.html) and also [in Tableau Public](map-tableau.html) in order to compare these two tools.
 
 ## Point Map with Google My Maps {- #mymaps}
 
 Most people are already familiar with [Google Maps](https://www.google.com/maps/), the web mapping service that allows users to look up locations and directions around the world. In this section you'll learn about [Google My Maps](https://www.google.com/maps/about/mymaps/), a related tool that allows you to display groups of points on top of the Google Maps platform, which users can click on to reveal more data, including photos, websites, or directions. You can customize the colors and icons for your point markers, and all of the map layer content you create will reside in your [Google Drive](https://drive.google.com), where you can edit and collaborate with others. Although Google My Maps has limited features, it's an easy-to-learn tool to build a basic interactive point map, along with simple polylines and polygons if desired. Finally, you can share a public link to your map or embed it on your website, a step that you'll learn more about in [Chapter 10: Embed on the Web](embed.html).
 
-In this section, we will construct a sample point map of museums and parks in North America, with two different groups of styled markers, as shown in Figure \@ref(fig:mymaps-final). Follow the steps below to create your own version.
+In this section, we will construct a point map of museums and parks in North America, with two different groups of styled markers and a custom photo icon. When users click on a marker, additional text, links, and images appear in the pop-up window, as shown in Figure \@ref(fig:mymaps-final).
 
 (ref:mymaps-final) Point map of parks and museums created with Google My Maps. Explore the [interactive version](https://www.google.com/maps/d/u/1/edit?mid=1W6VujVZzB1Y1D1tktLVhO99ZabyOZABr&usp=sharing).
 
 ```{r mymaps-final, fig.cap="(ref:mymaps-final)"}
 if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://www.google.com/maps/d/u/3/embed?mid=1W6VujVZzB1Y1D1tktLVhO99ZabyOZABr", height="500px") else knitr::include_graphics("images/08-map/mymaps-final.png")
 ```
+
+To create your own interactive point map with custom icons, follow this tutorial:
 
 1. Open the [Parks and Museums data in Google Sheets](https://docs.google.com/spreadsheets/d/11nSoyGUxDJiBe5VZflDnaaqgWMdWyIUNnjNLMlGOPLk/edit#gid=312385679), which contains six popular locations in North America. Each row includes a *Group*, *Name*, *Address*, and *URL*. Log into your Google account and go to *File > Make a Copy* to create a version you can edit in your Google Drive.
 
@@ -385,12 +385,12 @@ knitr::include_graphics("images/08-map/mymaps-gdrive.png")
 
 Google My Maps is a good first tool to learn for making interactive maps, especially point maps with custom icons. You can design maps with multiple layers of points, polylines, and basic polygons, if desired. But the overall map design and features are limited to what the Google My Maps platform offers. Learn more at the [Google My Maps support page](https://support.google.com/mymaps).
 
-In the next section, we will explore a more powerful tool called Datawrapper to create symbol point maps, where each the size of each circle (or other shapes) represents the data value for that specific point.
+In the next section, we will explore a more powerful tool called Datawrapper to create symbol point maps, where the size and color of each circle (or other shapes) represents data values for that specific point.
 
 ## Symbol Point Map with Datawrapper {- #symbolmap-datawrapper}
 We first introduced you to the free and easy-to-learn [Datawrapper tool in Chapter 7: Chart Your Data](chart-datawrapper.html). It's also offers powerful features to create different types of maps, with professional-looking design elements. With Datawrapper you can start to work right away in your browser, with no account required unless you wish to save and share your work online.
 
-In this section, you'll learn how to create a symbol point map, which displays specific locations using variable-sized shapes or colors to represent their data values. Our sample symbol map displays about 300 major US cities as point locations with two variables: the 2019 estimated population (using circle size) and the percent change in population since 2010 (using circle color), as shown in Figure \@ref(fig:datawrapper-symbolmap). Remember that we use *point* data to create symbol maps, but *polygon* data to create choropleth maps, and you'll learn how to design those  with Datawrapper in the subsequent section. Later in the book, we'll explain [how to embed your interactive Datawrapper maps on the web in Chapter 10](embed.html).
+In this section, you'll learn how to create a symbol point map. Unlike the [basic point map in the Google MyMaps tutorial](mymaps.html), a symbol point map shows data for specific locations through shapes of varying size or color. In Figure \@ref(fig:datawrapper-symbolmap), sample symbol map displays population change for 300 major US cities as point locations with two variables: circle size (for 2019 population size) and circle color (for percent change since 2010). Remember that we use *point* data to create symbol maps, but *polygon* data to create choropleth maps, which you'll learn how to create in the following sections. Later we'll explain [how to embed your interactive Datawrapper maps on the web in Chapter 10](embed.html).
 
 (ref:datawrapper-symbolmap) Symbol point map of US city population growth with Datawrapper. Explore the [interactive version](https://datawrapper.dwcdn.net/V0V9Y).
 
@@ -416,7 +416,7 @@ knitr::include_graphics("images/08-map/datawrapper-symbolmap-start.png")
 
 4. In the *Select your map* screen, search for *USA > States and Territories* to include Puerto Rico, rather than the *USA > *States* option that appears closer to the top of the list. Proceed to the next screen.
 
-5. In the *Add your data* screen, click the *Import your dataset* button. In the next window, click the *Addresses and Place Names* button because our data is organized this way. In the *Import* window, click to *Upload a CSV file*, and select the file you downloaded above.
+5. In the *Add your data* screen, click the *Import your dataset* button. In the next window, click the *Addresses and Place Names* button to inform Datawrapper that our information is organized this way. In the *Import* window, click to *Upload a CSV file*, and select the file you downloaded above.
 
 6. In the *Match your columns* screen, select the *City-State* column to be *Matched as Address*, then scroll down to click the *Next* button, as shown in Figure \@ref(fig:datawrapper-symbolmap-match). In the next screen click *Go*, then see your geocoded data displayed on a map in the following screen.
 
@@ -434,7 +434,7 @@ knitr::include_graphics("images/08-map/datawrapper-symbolmap-match.png")
 knitr::include_graphics("images/08-map/datawrapper-symbolmap-refine.png")
 ```
 
-8. If you wish to customize the color palette and intervals to match our example, click the *wrench symbol* next to the palette. Click the *Import colors* button and paste in five hexadecimal codes from ColorBrewer, as described in the [Choropleth Design section](design-choropleth.html). The first code is dark pink, followed by a 4-class sequential green: `#d01c8b,#bae4b3,#74c476,#31a354,#006d2c`. See Figure \@ref(fig:datawrapper-symbolmap-colors).
+8. Optionally, to customize the color palette and intervals to match our example, click the *wrench symbol* next to the palette. Click the *Import colors* button and you can paste in the five hexadecimal codes listed below from ColorBrewer, as described in the [Choropleth Design section](design-choropleth.html). The first code is dark pink, followed by a 4-class sequential green: `#d01c8b,#bae4b3,#74c476,#31a354,#006d2c`. See Figure \@ref(fig:datawrapper-symbolmap-colors).
 
 (ref:datawrapper-symbolmap-colors) Create a new color palette by importing five hexadecimal color codes from ColorBrewer.
 
@@ -460,7 +460,7 @@ Now that you've created a symbol point map with Datawrapper, in the next section
 
 ## Choropleth Map with Datawrapper {- #choropleth-datawrapper}
 
-Now that you've learned how to use [Datawrapper to create charts](chart-datawrapper.html) and [symbol maps](datawrapper-symbolmap.html), let's design a choropleth map. These maps are best to show patterns across geographic areas by coloring polygons to represent data values. Datawrapper offers a wide collection of common geographical boundaries, including world regions, states and provinces, and also hexagons (cartograms), counties, congressional districts, and census tracts for the United States.
+Now let's pivot from point maps to polygon maps. Since you've already learned how to use [Datawrapper to design charts](chart-datawrapper.html) and [symbol maps](datawrapper-symbolmap.html), let's use this tool to create a choropleth map, which look like colored polygons. Choropleth maps are best for showing patterns across geographic areas by coloring polygons to represent data values. Datawrapper offers a wide collection of common geographical boundaries, including world regions, states and provinces, and also hexagons (cartograms), counties, congressional districts, and census tracts for the United States.
 
 In this section, you'll create a choropleth map of typical home values for US states in August 2020 according to the [Zillow Home Value Index](https://www.zillow.com/research/data/), as shown in Figure \@ref(fig:datawrapper-map-final). The index reflects typical home values (meaning those in the 35th to 65th percentile range, around the median) for single-family residences, condos, and co-ops, and it is smoothed and seasonally adjusted.
 
@@ -494,9 +494,9 @@ knitr::include_graphics("images/08-map/datawrapper-map-choose-annotated.png")
 knitr::include_graphics("images/08-map/datawrapper-map-us-states-territories.png")
 ```
 
-Hint: If Datawrapper does not list your preferred map outline, you can upload your own custom geography data in GeoJSON or TopoJSON format, which you will learn more about in the [GeoJSON data section of Chapter 14](geojson.html).
+Tip: If Datawrapper does not list your preferred map outline, you can upload your own custom geography data in GeoJSON or TopoJSON format, which you will learn more about in the [GeoJSON data section of Chapter 14](geojson.html).
 
-5. In the *Add your data* screen, you can manually enter data for each area, which would be fine for just a few, but not for 50 states. Instead, scroll down and click the *Import your dataset* button, as shown in Figure \@ref(fig:datawrapper-import-dataset).
+5. In the *Add your data* screen, you can manually enter data for each area, which would be fine for just a few, but not for 50 states. Instead, scroll down below the *add data* table and click the *Import your dataset* button, as shown in Figure \@ref(fig:datawrapper-import-dataset).
 
 (ref:datawrapper-import-dataset) Scroll down below the *add data* table to import your dataset.
 
@@ -568,9 +568,13 @@ Which data columns, colors, and intervals make the best map? There's no easy ans
 
 Let's move on to finalize the labels and styling of the map before we publish and share it with others.
 
-13. Under the *Refine* tab, customize the legend format. For example, to convert long numbers (such as 107762) into abbreviated dollars ($ 108 k), we selected *custom format* and inserted the code `($ 0 a)`.
+13. Under the *Refine* tab, customize the legend format. For example, to convert long numbers (such as 107762) into abbreviated dollars ($ 108 k), we selected *custom format* and inserted the code `($ 0 a)`, as shown in Figure \@ref(fig:datawrapper-map-legend-custom). Learn more about Datawrapper custom formats in their link to the [numeral.js documentation](http://numeraljs.com/#format).
 
-TODO above: Add screenshot of where to enter codes in legend format, as reviewer requested.
+(ref:datawrapper-map-legend-custom) Change how numbers appear in the legend by entering a custom format.
+
+```{r datawrapper-map-legend-custom, out.width=350, fig.cap="(ref:datawrapper-map-legend-custom)"}
+knitr::include_graphics("images/08-map/datawrapper-map-legend-custom.png")
+```
 
 14. Under the *Annotate* tab, add a title, description, and source credits, to add credibility to your work. You can also add map labels and customize tooltips that will display when readers hover their cursor over different states. The easiest way to edit tooltips is to click on blue column names, or format them using their drop-down menus, to make the proper codes appear in double curly brackets, as shown in Figure \@ref(fig:datawrapper-map-tooltip). Learn more about [customizing tooltips from Datawrapper Academy](https://academy.datawrapper.de/article/116-how-to-create-useful-tooltips-for-your-maps).
 
@@ -580,18 +584,17 @@ TODO above: Add screenshot of where to enter codes in legend format, as reviewer
 knitr::include_graphics("images/08-map/datawrapper-map-tooltip.png")
 ```
 
-TODO above: ADD example of how to customize tooltips and add annotations, as reviewer requested here.
-
-
 15. Finally, click *Proceed* or advance to the *Publish & Embed* screen to share your work with others. Follow the prompts, or the more detailed Datawrapper tutorial above, to obtain an embed code to your interactive map, and learn more about your next steps in [Chapter 10: Embed on the Web](embed.html).
 
-Learn more about [choropleth map design in this excellent series of posts by the Datawrapper Academy](https://academy.datawrapper.de/category/93-maps).
+Tip: Learn more about [choropleth map design in this excellent series of posts by the Datawrapper Academy](https://academy.datawrapper.de/category/93-maps).
 
 Now that you've learned how to create a choropleth map using one tool, Datawrapper, let's compare the process using a different tool, Tableau Public.
 
 ## Choropleth Map with Tableau Public {- #map-tableau}
 
-We first introduced you to the free Tableau Public desktop application (for Mac or Windows) when building [scattercharts](scatter-tableau.html) and [filtered line charts](filtered-line-tableau.html) in Chapter 7. Now let's use the same tool to create an interactive choropleth map, and compare the process with the Datawrapper tool we learned in the prior section. Tableau Public can create many different types of map for geographical place names or ISO codes it already recognizes, such as nations, states, counties, and airports. But Tableau Public cannot geocode street addresses by itself, so you'll need to obtain their latitude and longitude with another tool, such as those described in the [geocode section of Chapter 3](geocode.html). Furthermore, if you want to upload customized map boundaries, learn how to [Create Tableau Maps from Spatial Files](https://help.tableau.com/current/pro/desktop/en-us/maps_shapefiles.htm)
+We first introduced you to the free Tableau Public desktop application (for Mac or Windows) when building [scattercharts](scatter-tableau.html) and [filtered line charts](filtered-line-tableau.html) in Chapter 7. Now let's use the same tool to create an interactive choropleth map, and compare the process with the Datawrapper tool we learned in the prior section. We're showing you how to create the same type of map with both tools, in order to show you the difference. On one hand, Datawrapper gives you more control over interpolating data and shaping the appearance of color intervals in your choropleth map. On the other hand, some people prefer Tableau Public because they're already familiar with its interface.
+
+Tableau Public can create many different types of map for geographical place names or ISO codes it already recognizes, such as nations, states, counties, and airports. But Tableau Public cannot geocode street addresses by itself, so you'll need to obtain their latitude and longitude with another tool, such as those described in the [geocode section of Chapter 3](geocode.html). Furthermore, if you want to upload customized map boundaries, learn how to [Create Tableau Maps from Spatial Files](https://help.tableau.com/current/pro/desktop/en-us/maps_shapefiles.htm)
 on the support page.
 
 In this section, we will create a choropleth map of healthcare spending per country as a percentage of their gross domestic product (GDP), as shown in Figure \@ref(fig:tableau-polygon-final). Remember that choropleth maps work best when we [normalize the data](normalize-choropleth.html) to show relative, rather than absolute, numbers. Creating a map of total health spending per country would not be very meaningful, as larger nations tend to have larger economies, so we'll base our map on the percentage of their economy that is spent on healthcare.
@@ -692,20 +695,17 @@ knitr::include_graphics("images/08-map/tableau-dashboard-legend.png")
 
 And we're done! Make sure you position your map's center and zoom level as you want it to be visible by others. In this case, the best would be to have a world view as we are showing data for most countries, although you may want to zoom in to a specific continent. Once you are ready to publish and share the map, go to *File > Save to Tableau Public*. In the pop-up window, log in to your account if requested. Give it a title, such as Healthcare Spending, and click Save. See how to [embed the map as an iframe in Chapter 10](embed-code.html).
 
-Warning: Tableau may not be the best tool to create choropleth maps where you want to have full control of color breaks. By default, Tableau uses a linear color scheme that, as we've learned earlier in the chapter, is prone to highlighting outliers, and there is no straightforward way to change the intervals to non-linear methods such as quantiles. If you are not happy with the way the linear scale represents your data, you can either [filter your data to remove outliers from the map](https://help.tableau.com/current/pro/desktop/en-us/filtering.htm), or see [Andy Kriebel's VizWiz tutorial to use table calculations to group items into quantiles](https://www.vizwiz.com/2018/07/rankpercentile.html).
+Warning: Tableau may not be the best tool to create choropleth maps where you want to have full control of color breaks. By default, Tableau uses a linear color scheme that, as we've learned earlier in the chapter, is prone to highlighting outliers, and there is no straightforward way to change the intervals to non-linear methods such as quantiles. If you are not happy with the way the linear scale represents your data, you can [filter your data to remove outliers from the map](https://help.tableau.com/current/pro/desktop/en-us/filtering.htm), or see [Andy Kriebel's VizWiz tutorial to use table calculations to group items into quantiles](https://www.vizwiz.com/2018/07/rankpercentile.html), or create your [choropleth map in Datawrapper](choropleth-datawrapper.html), which gives you more control over color intervals and interpolation.
 
-Now that you know that Tableau can be used not just for charts, but for maps as well, let's see how to use Socrata's visualization capabilities to build a map that always uses the most current data available.
+In all of the prior tutorials, you created interactive maps using *static data*, meaning it came from a spreadsheet. In the next tutorial, you'll learn how to build a map using *continuously-updated data* from a Socrata open data repository, which will always display the most current information.
 
 ## Current Map with Socrata Open Data {- #map-socrata}
 
-[Socrata](https://www.tylertech.com/products/socrata) is a database service that is used by government agencies,
-cities and countries to make open data available to the public. It offers user-friendly ways to view, filter, and export data. In addition, the Socrata platform includes built-in support to create interactive charts and maps, which can be embedded in other websites (including your own).
+This type of map shows current data because it continuously pulls the most up-to-date from an [open data repository, which you learned about in chapter 4](opendata.html). The advantage of creating visualizations directly on an open data platform is that your chart or map is directly linked to the source. Some government agencies frequently update selected open data repositories where current information matters, such as fire or police calls, property data, or public finances. Whenever an administrator revises the contents of an open data repository, your chart or map will automatically display the most current information. However, if the government agency stops updating the repository or switches to a different platform, your visualization will no longer show current information or it may break entirely.
 
-One advantage of creating data visualizations directly on an open data platform is that the chart
-or map is linked to the data repository. For example, if the Socrata platform administrator updates
-the data table, then a Socrata visualization based on that data will be automatically updated, too. This may be especially useful for "live" data that is continuously updated by agency administrators such as emergency services, public directories, and property data.
+[Socrata](https://www.tylertech.com/products/socrata) is a company that provides an open data repository service that many government agencies use to make open data available to the public. It offers user-friendly ways to view, filter, and export data. In addition, the Socrata platform includes built-in support to create interactive charts and maps, which can be embedded in other websites (including your own). You can search for publicly-available datasets on Socrata's [Open Data Network](https://www.opendatanetwork.com/).
 
-In this section, we will build an interactive point map of fatal crashes involving cars in New York City, which continuously updates to display points over the past 365 days, as shown in Figure \@ref(fig:socrata-final). Our interactive map pulls data from the [Motor Vehicle Collisions - Crashes](https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95/data) public repository on New York City's OpenData Portal, and should continue to work as long as administrators continue to update the dataset on this Socrata platform. Learn more about [open data repositories in chapter 4](opendata.html), and search for additional datasets on Socrata's [Open Data Network](https://www.opendatanetwork.com/).
+In this section, we will build an interactive point map of fatal crashes involving cars in New York City, which continuously updates to display points over the past 365 days, as shown in Figure \@ref(fig:socrata-final). Our interactive map pulls data from the [Motor Vehicle Collisions - Crashes](https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95/data) public repository on New York City's OpenData Portal, based on the Socrata platform. As long as government administrators continue to update this dataset on this platform, your map should always display the most recent data for the past 12 months.
 
 (ref:socrata-final) Map of fatal crashes in NYC during the past year, continuously updated from a Socrata open data repository. See [interactive version](https://data.cityofnewyork.us/dataset/Fatal-NYC-Crashes/nx4u-jy9t/embed?width=100%25&height=500).
 
@@ -789,17 +789,6 @@ There are limitations to creating your chart or map on an open data repository p
 
 ### Summary {- #summary8}
 
-In this chapter, we looked at free mapping platforms to create simple point and polygon maps.
-Google My Maps is a good choice for point maps that can be created in collaboration with others.
-If the data you are interested in lives on Socrata platform, you might be able to create a point
-map within the platform itself, and embed it as an iframe in your own website.
-Tableau is another very powerful tool to build and share polygon and point maps.
+In this chapter, we reviewed map design principles and explored recommended tools and tutorials for telling different types of data stories. When creating maps, think carefully about whether you are working with point or polygon data, the two most common options. If the latter, remember that well-designed choropleth maps required normalized data and careful thought about color intervals.
 
-In reviewing all these tools, we only scratched the surface and showed simple examples
-to get you started quickly. All platforms allow layering data to create powerful exploration
-mapping visualizations.
-
-None of the platforms required special geospatial data, as all were smart enough to perform
-geocoding and know the boundaries and coordinates of objects given to them.
-In [Chapter 14](transform.html), we will talk more about geospatial data,
-how it can be obtained, stored, modified, and shared.
+We only scratched the surface and showed simple examples to help you quickly create some sample maps. See more advanced designs using [Leaflet map code templates in Chapter 13](leaflet.html), and how to [find and transform geospatial data in Chapter 14](transform.html)

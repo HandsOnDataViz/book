@@ -344,7 +344,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="symbolmap-datawrapper" class="section level2 unnumbered" number="">
 <h2>Symbol Point Map with Datawrapper</h2>
 <p>We first introduced you to the free and easy-to-learn <a href="chart-datawrapper.html">Datawrapper tool in Chapter 7: Chart Your Data</a>. It’s also offers powerful features to create different types of maps, with professional-looking design elements. With Datawrapper you can start to work right away in your browser, with no account required unless you wish to save and share your work online.</p>
-<p>In this section, you’ll learn how to create a symbol point map, which displays specific locations using variable-sized shapes or colors to represent their data values. Our sample symbol map displays about 300 major US cities as point locations with two variables: the 2019 estimated population (using circle size) and the percent change in population since 2010 (using circle color), as shown in Figure <a href="symbolmap-datawrapper.html#fig:datawrapper-symbolmap">8.34</a>. Remember that we use <em>point</em> data to create symbol maps, but <em>polygon</em> data to create choropleth maps, and you’ll learn how to design those with Datawrapper in the subsequent section. Later in the book, we’ll explain <a href="embed.html">how to embed your interactive Datawrapper maps on the web in Chapter 10</a>.</p>
+<p>In this section, you’ll learn how to create a symbol point map. Unlike the <a href="mymaps.html">basic point map in the Google MyMaps tutorial</a>, a symbol point map shows data for specific locations through shapes of varying size or color. In Figure <a href="symbolmap-datawrapper.html#fig:datawrapper-symbolmap">8.34</a>, sample symbol map displays population change for 300 major US cities as point locations with two variables: circle size (for 2019 population size) and circle color (for percent change since 2010). Remember that we use <em>point</em> data to create symbol maps, but <em>polygon</em> data to create choropleth maps, which you’ll learn how to create in the following sections. Later we’ll explain <a href="embed.html">how to embed your interactive Datawrapper maps on the web in Chapter 10</a>.</p>
 
 <div class="figure"><span id="fig:datawrapper-symbolmap"></span>
 <iframe src="https://datawrapper.dwcdn.net/V0V9Y" width="672" height="550px">
@@ -371,7 +371,7 @@ Figure 8.35: Start to create a symbol map in Datawrapper.
 </div>
 <ol start="4" style="list-style-type: decimal">
 <li><p>In the <em>Select your map</em> screen, search for <em>USA &gt; States and Territories</em> to include Puerto Rico, rather than the <em>USA &gt; </em>States* option that appears closer to the top of the list. Proceed to the next screen.</p></li>
-<li><p>In the <em>Add your data</em> screen, click the <em>Import your dataset</em> button. In the next window, click the <em>Addresses and Place Names</em> button because our data is organized this way. In the <em>Import</em> window, click to <em>Upload a CSV file</em>, and select the file you downloaded above.</p></li>
+<li><p>In the <em>Add your data</em> screen, click the <em>Import your dataset</em> button. In the next window, click the <em>Addresses and Place Names</em> button to inform Datawrapper that our information is organized this way. In the <em>Import</em> window, click to <em>Upload a CSV file</em>, and select the file you downloaded above.</p></li>
 <li><p>In the <em>Match your columns</em> screen, select the <em>City-State</em> column to be <em>Matched as Address</em>, then scroll down to click the <em>Next</em> button, as shown in Figure <a href="symbolmap-datawrapper.html#fig:datawrapper-symbolmap-match">8.36</a>. In the next screen click <em>Go</em>, then see your geocoded data displayed on a map in the following screen.</p></li>
 </ol>
 
@@ -392,7 +392,7 @@ Figure 8.37: Refine your map by selecting data to display symbol shapes, sizes, 
 </p>
 </div>
 <ol start="8" style="list-style-type: decimal">
-<li>If you wish to customize the color palette and intervals to match our example, click the <em>wrench symbol</em> next to the palette. Click the <em>Import colors</em> button and paste in five hexadecimal codes from ColorBrewer, as described in the <a href="design-choropleth.html">Choropleth Design section</a>. The first code is dark pink, followed by a 4-class sequential green: <code>#d01c8b,#bae4b3,#74c476,#31a354,#006d2c</code>. See Figure <a href="symbolmap-datawrapper.html#fig:datawrapper-symbolmap-colors">8.38</a>.</li>
+<li>Optionally, to customize the color palette and intervals to match our example, click the <em>wrench symbol</em> next to the palette. Click the <em>Import colors</em> button and you can paste in the five hexadecimal codes listed below from ColorBrewer, as described in the <a href="design-choropleth.html">Choropleth Design section</a>. The first code is dark pink, followed by a 4-class sequential green: <code>#d01c8b,#bae4b3,#74c476,#31a354,#006d2c</code>. See Figure <a href="symbolmap-datawrapper.html#fig:datawrapper-symbolmap-colors">8.38</a>.</li>
 </ol>
 
 <div class="figure"><span id="fig:datawrapper-symbolmap-colors"></span>

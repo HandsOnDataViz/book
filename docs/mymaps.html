@@ -344,7 +344,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="mymaps" class="section level2 unnumbered" number="">
 <h2>Point Map with Google My Maps</h2>
 <p>Most people are already familiar with <a href="https://www.google.com/maps/">Google Maps</a>, the web mapping service that allows users to look up locations and directions around the world. In this section you’ll learn about <a href="https://www.google.com/maps/about/mymaps/">Google My Maps</a>, a related tool that allows you to display groups of points on top of the Google Maps platform, which users can click on to reveal more data, including photos, websites, or directions. You can customize the colors and icons for your point markers, and all of the map layer content you create will reside in your <a href="https://drive.google.com">Google Drive</a>, where you can edit and collaborate with others. Although Google My Maps has limited features, it’s an easy-to-learn tool to build a basic interactive point map, along with simple polylines and polygons if desired. Finally, you can share a public link to your map or embed it on your website, a step that you’ll learn more about in <a href="embed.html">Chapter 10: Embed on the Web</a>.</p>
-<p>In this section, we will construct a sample point map of museums and parks in North America, with two different groups of styled markers, as shown in Figure <a href="mymaps.html#fig:mymaps-final">8.15</a>. Follow the steps below to create your own version.</p>
+<p>In this section, we will construct a point map of museums and parks in North America, with two different groups of styled markers and a custom photo icon. When users click on a marker, additional text, links, and images appear in the pop-up window, as shown in Figure <a href="mymaps.html#fig:mymaps-final">8.15</a>.</p>
 
 <div class="figure"><span id="fig:mymaps-final"></span>
 <iframe src="https://www.google.com/maps/d/u/3/embed?mid=1W6VujVZzB1Y1D1tktLVhO99ZabyOZABr" width="672" height="500px">
@@ -353,6 +353,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 Figure 8.15: Point map of parks and museums created with Google My Maps. Explore the <a href="https://www.google.com/maps/d/u/1/edit?mid=1W6VujVZzB1Y1D1tktLVhO99ZabyOZABr&amp;usp=sharing">interactive version</a>.
 </p>
 </div>
+<p>To create your own interactive point map with custom icons, follow this tutorial:</p>
 <ol style="list-style-type: decimal">
 <li><p>Open the <a href="https://docs.google.com/spreadsheets/d/11nSoyGUxDJiBe5VZflDnaaqgWMdWyIUNnjNLMlGOPLk/edit#gid=312385679">Parks and Museums data in Google Sheets</a>, which contains six popular locations in North America. Each row includes a <em>Group</em>, <em>Name</em>, <em>Address</em>, and <em>URL</em>. Log into your Google account and go to <em>File &gt; Make a Copy</em> to create a version you can edit in your Google Drive.</p></li>
 <li><p>Navigate to <a href="https://www.google.com/mymaps/">Google My Maps</a>. In the upper-left corner, click the <em>+ Create a New Map</em> button, as shown in Figure <a href="mymaps.html#fig:mymaps-create-new">8.16</a>. This will create an empty map with familiar Google Maps style.</p></li>
@@ -537,7 +538,7 @@ Figure 8.33: Keep your Google My Maps and Sheets files together in a Google Driv
 </p>
 </div>
 <p>Google My Maps is a good first tool to learn for making interactive maps, especially point maps with custom icons. You can design maps with multiple layers of points, polylines, and basic polygons, if desired. But the overall map design and features are limited to what the Google My Maps platform offers. Learn more at the <a href="https://support.google.com/mymaps">Google My Maps support page</a>.</p>
-<p>In the next section, we will explore a more powerful tool called Datawrapper to create symbol point maps, where each the size of each circle (or other shapes) represents the data value for that specific point.</p>
+<p>In the next section, we will explore a more powerful tool called Datawrapper to create symbol point maps, where the size and color of each circle (or other shapes) represents data values for that specific point.</p>
 </div>
             </section>
 

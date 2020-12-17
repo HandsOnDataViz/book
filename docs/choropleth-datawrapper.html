@@ -343,7 +343,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="choropleth-datawrapper" class="section level2 unnumbered" number="">
 <h2>Choropleth Map with Datawrapper</h2>
-<p>Now that you’ve learned how to use <a href="chart-datawrapper.html">Datawrapper to create charts</a> and <a href="datawrapper-symbolmap.html">symbol maps</a>, let’s design a choropleth map. These maps are best to show patterns across geographic areas by coloring polygons to represent data values. Datawrapper offers a wide collection of common geographical boundaries, including world regions, states and provinces, and also hexagons (cartograms), counties, congressional districts, and census tracts for the United States.</p>
+<p>Now let’s pivot from point maps to polygon maps. Since you’ve already learned how to use <a href="chart-datawrapper.html">Datawrapper to design charts</a> and <a href="datawrapper-symbolmap.html">symbol maps</a>, let’s use this tool to create a choropleth map, which look like colored polygons. Choropleth maps are best for showing patterns across geographic areas by coloring polygons to represent data values. Datawrapper offers a wide collection of common geographical boundaries, including world regions, states and provinces, and also hexagons (cartograms), counties, congressional districts, and census tracts for the United States.</p>
 <p>In this section, you’ll create a choropleth map of typical home values for US states in August 2020 according to the <a href="https://www.zillow.com/research/data/">Zillow Home Value Index</a>, as shown in Figure <a href="choropleth-datawrapper.html#fig:datawrapper-map-final">8.40</a>. The index reflects typical home values (meaning those in the 35th to 65th percentile range, around the median) for single-family residences, condos, and co-ops, and it is smoothed and seasonally adjusted.</p>
 
 <div class="figure"><span id="fig:datawrapper-map-final"></span>
@@ -379,9 +379,9 @@ Figure 8.41: In Datawrapper, click <em>New Map</em>, and choose <em>Choropleth</
 Figure 8.42: Choose <em>USA - States and Territories</em> for your map outline.
 </p>
 </div>
-<p>Hint: If Datawrapper does not list your preferred map outline, you can upload your own custom geography data in GeoJSON or TopoJSON format, which you will learn more about in the <a href="geojson.html">GeoJSON data section of Chapter 14</a>.</p>
+<p>Tip: If Datawrapper does not list your preferred map outline, you can upload your own custom geography data in GeoJSON or TopoJSON format, which you will learn more about in the <a href="geojson.html">GeoJSON data section of Chapter 14</a>.</p>
 <ol start="5" style="list-style-type: decimal">
-<li>In the <em>Add your data</em> screen, you can manually enter data for each area, which would be fine for just a few, but not for 50 states. Instead, scroll down and click the <em>Import your dataset</em> button, as shown in Figure <a href="choropleth-datawrapper.html#fig:datawrapper-import-dataset">8.43</a>.</li>
+<li>In the <em>Add your data</em> screen, you can manually enter data for each area, which would be fine for just a few, but not for 50 states. Instead, scroll down below the <em>add data</em> table and click the <em>Import your dataset</em> button, as shown in Figure <a href="choropleth-datawrapper.html#fig:datawrapper-import-dataset">8.43</a>.</li>
 </ol>
 
 <div class="figure"><span id="fig:datawrapper-import-dataset"></span>
@@ -460,24 +460,29 @@ Figure 8.49: Experiment with other colors, intervals, and data columns to find t
 <p>Which data columns, colors, and intervals make the best map? There’s no easy answer, since there’s more than one way to make a true and meaningful map. But keep two principles in mind. First, make sure that you honestly show the data, rather than hide or disguise it. Second, reflect on what kind of data story you believe is important to tell, since design choices emphasize different interpretations of the data. Review our guidance in the <a href="design-choropleth.html">Design Choropleth Colors &amp; Intervals section</a>.</p>
 <p>Let’s move on to finalize the labels and styling of the map before we publish and share it with others.</p>
 <ol start="13" style="list-style-type: decimal">
-<li>Under the <em>Refine</em> tab, customize the legend format. For example, to convert long numbers (such as 107762) into abbreviated dollars ($ 108 k), we selected <em>custom format</em> and inserted the code <code>($ 0 a)</code>.</li>
+<li>Under the <em>Refine</em> tab, customize the legend format. For example, to convert long numbers (such as 107762) into abbreviated dollars ($ 108 k), we selected <em>custom format</em> and inserted the code <code>($ 0 a)</code>, as shown in Figure <a href="choropleth-datawrapper.html#fig:datawrapper-map-legend-custom">8.50</a>. Learn more about Datawrapper custom formats in their link to the <a href="http://numeraljs.com/#format">numeral.js documentation</a>.</li>
 </ol>
-<p>TODO above: Add screenshot of where to enter codes in legend format, as reviewer requested.</p>
+
+<div class="figure"><span id="fig:datawrapper-map-legend-custom"></span>
+<img src="images/08-map/datawrapper-map-legend-custom.png" alt="Change how numbers appear in the legend by entering a custom format." width="350" />
+<p class="caption">
+Figure 8.50: Change how numbers appear in the legend by entering a custom format.
+</p>
+</div>
 <ol start="14" style="list-style-type: decimal">
-<li>Under the <em>Annotate</em> tab, add a title, description, and source credits, to add credibility to your work. You can also add map labels and customize tooltips that will display when readers hover their cursor over different states. The easiest way to edit tooltips is to click on blue column names, or format them using their drop-down menus, to make the proper codes appear in double curly brackets, as shown in Figure <a href="choropleth-datawrapper.html#fig:datawrapper-map-tooltip">8.50</a>. Learn more about <a href="https://academy.datawrapper.de/article/116-how-to-create-useful-tooltips-for-your-maps">customizing tooltips from Datawrapper Academy</a>.</li>
+<li>Under the <em>Annotate</em> tab, add a title, description, and source credits, to add credibility to your work. You can also add map labels and customize tooltips that will display when readers hover their cursor over different states. The easiest way to edit tooltips is to click on blue column names, or format them using their drop-down menus, to make the proper codes appear in double curly brackets, as shown in Figure <a href="choropleth-datawrapper.html#fig:datawrapper-map-tooltip">8.51</a>. Learn more about <a href="https://academy.datawrapper.de/article/116-how-to-create-useful-tooltips-for-your-maps">customizing tooltips from Datawrapper Academy</a>.</li>
 </ol>
 
 <div class="figure"><span id="fig:datawrapper-map-tooltip"></span>
 <img src="images/08-map/datawrapper-map-tooltip.png" alt="To edit tooltips, click the blue column names or use drop-down menus to format the codes." width="600" />
 <p class="caption">
-Figure 8.50: To edit tooltips, click the blue column names or use drop-down menus to format the codes.
+Figure 8.51: To edit tooltips, click the blue column names or use drop-down menus to format the codes.
 </p>
 </div>
-<p>TODO above: ADD example of how to customize tooltips and add annotations, as reviewer requested here.</p>
 <ol start="15" style="list-style-type: decimal">
 <li>Finally, click <em>Proceed</em> or advance to the <em>Publish &amp; Embed</em> screen to share your work with others. Follow the prompts, or the more detailed Datawrapper tutorial above, to obtain an embed code to your interactive map, and learn more about your next steps in <a href="embed.html">Chapter 10: Embed on the Web</a>.</li>
 </ol>
-<p>Learn more about <a href="https://academy.datawrapper.de/category/93-maps">choropleth map design in this excellent series of posts by the Datawrapper Academy</a>.</p>
+<p>Tip: Learn more about <a href="https://academy.datawrapper.de/category/93-maps">choropleth map design in this excellent series of posts by the Datawrapper Academy</a>.</p>
 <p>Now that you’ve learned how to create a choropleth map using one tool, Datawrapper, let’s compare the process using a different tool, Tableau Public.</p>
 </div>
             </section>

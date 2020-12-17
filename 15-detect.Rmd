@@ -237,7 +237,7 @@ One way to address both map area and projection bias in national or global maps 
  knitr::include_graphics("images/15-detect/conventional-cartogram-combined.png")
 ```
 
-Note: As we write this, Datawrapper offers two different versions of the USA Electoral College map, and only the second version allows users to split up electoral votes by district in Maine and Nebraska. The second version, named *USA > Electoral College*, is a cartogram, although neither that word nor "hexagon" currently appears in its file name.
+Note: To recreate the cartogram map in Figure \@ref(fig:conventional-cartogram-combined) in Datawrapper, select the file named *USA > Electoral College (hexagon)* because it allows users to split up electoral votes by district in Maine and Nebraska.
 
 In the [How to Lie with Maps section of this chapter](how-to-lie-with-maps.html), we created choropleth maps of world inequality data in Datawrapper. To convert one from a conventional world map to a population square map, follow this tutorial:
 

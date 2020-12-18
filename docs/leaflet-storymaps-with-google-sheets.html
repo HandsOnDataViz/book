@@ -344,15 +344,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="leaflet-storymaps-with-google-sheets" class="section level2 unnumbered" number="">
 <h2>Leaflet Storymaps with Google Sheets</h2>
-<p>The Leaflet Storymaps code template is designed to show a point-by-point guided tour, with a scrolling narrative to display text, images, audio, video, and scanned map backgrounds, as shown in Figure <a href="leaflet-storymaps-with-google-sheets.html#fig:storymap-demo">13.13</a>. You enter all of your map data into a linked Google Sheet (or CSV file) or upload it into a GitHub repository, as shown in Figure <a href="leaflet-storymaps-with-google-sheets.html#fig:storymap-sheet">13.14</a>. Although some other story map tools are easier to start using right away, such as the <a href="https://storymap.knightlab.com/">Knight Lab StoryMap</a> and <a href="https://storymaps.arcgis.com/en/">ESRI Story Maps</a>, we do not recommend them because both lack <em>data portability</em>, meaning that you can’t easily export any information you enter. By contrast, all of the information you add to the Leaflet Storymaps linked Google Sheet and GitHub repo can easily be exported and migrated to other platforms as visualization technology continues to evolve in the future, as we described when discussing <a href="choose.html">how to choose tools wisely in Chapter 2</a>. In addition, the Leaflet Storymaps template allows you to customize the appearance of your data, and to add more layers, such as historical maps and geographic boundaries, which you’ll learn how to prepare in <a href="transform.html">Chapter 14: Transform Your Map Data</a>. Furthermore, the storymap design is responsive, so that it appears top-and-bottom on small screens and side-by-side on larger ones. Finally, the Leaflet template is built on flexible open-source software that’s written primarily in JavaScript, a very common coding language for the web, so you can customize it further if you have skills or support from a developer.</p>
-<p>TODO above: DECIDE how to address other storymap tools, with more details in editing notes</p>
-<p>TODO BELOW: Create and insert a new version of the template and demonstrate all features (all media, tricks such as leaving blank chapters and locations to display multiple images of one location, etc.). TODO DISCUSS with Ilya - option to control responsive appearance?: <a href="https://github.com/HandsOnDataViz/leaflet-storymaps-with-google-sheets/issues/75" class="uri">https://github.com/HandsOnDataViz/leaflet-storymaps-with-google-sheets/issues/75</a></p>
+<p>The Leaflet Storymaps code template is designed to show a point-by-point guided tour, with a scrolling narrative to display text, images, audio, video, and scanned map backgrounds, as shown in Figure <a href="leaflet-storymaps-with-google-sheets.html#fig:storymap-demo">13.14</a>. You enter all of your map data into a linked Google Sheet (or CSV file) or upload it into a GitHub repository, as shown in Figure <a href="leaflet-storymaps-with-google-sheets.html#fig:storymap-sheet">13.15</a>. In addition, the Leaflet Storymaps template allows you to customize the appearance of your data, and to add more layers, such as historical maps and geographic boundaries, which you’ll learn how to prepare in <a href="transform.html">Chapter 14: Transform Your Map Data</a>. Furthermore, the storymap design is responsive, so that it appears top-and-bottom on smaller screens (where width is less than 768 pixels), and automatically switches to side-by-side on larger ones. Finally, the Leaflet template is built on flexible open-source software that’s written primarily in JavaScript, a very common coding language for the web, so you can customize it further if you have skills or support from a developer.</p>
 
 <div class="figure"><span id="fig:storymap-demo"></span>
 <iframe src="images/13-leaflet/storymap-demo.gif" width="672" height="475px">
 </iframe>
 <p class="caption">
-Figure 13.13: Explore the <a href="https://handsondataviz.github.io/leaflet-storymaps-with-google-sheets/">interactive Leaflet Storymaps with Google Sheets</a>.
+Figure 13.14: Explore the <a href="https://handsondataviz.github.io/leaflet-storymaps-with-google-sheets/">interactive Leaflet Storymaps with Google Sheets</a>.
 </p>
 </div>
 
@@ -360,10 +358,11 @@ Figure 13.13: Explore the <a href="https://handsondataviz.github.io/leaflet-stor
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSqxGs67j80rAPDZdQaS5jI0avn1qs2y5N8fOaeHUGvyrnIwBmWomlfAuujtvPrxtF-5FBZxi_KdTUm/pubhtml?widget=true&amp;amp;headers=false" width="672" height="500px">
 </iframe>
 <p class="caption">
-Figure 13.14: View the <a href="https://docs.google.com/spreadsheets/d/1AO6XHL_0JafWZF4KEejkdDNqfuZWUk3SlNlQ6MjlRFM/">online Google Sheet template</a> that feeds data into the Leaflet Storymaps demo above.
+Figure 13.15: View the <a href="https://docs.google.com/spreadsheets/d/1AO6XHL_0JafWZF4KEejkdDNqfuZWUk3SlNlQ6MjlRFM/">online Google Sheet template</a> that feeds data into the Leaflet Storymaps demo above.
 </p>
 </div>
-<p>Explore the gallery in Table <a href="leaflet-storymaps-with-google-sheets.html#tab:storymaps-gallery">13.2</a> to see what other people created with the Leaflet Storymaps with Google Sheets template.</p>
+<p>We created Leaflet Storymaps with Google Sheets to fill a gap that was not addressed by other tools. To be clear, other story map platforms are easier for beginners to start using right away, such as the free and open-source <a href="https://storymap.knightlab.com/">Knight Lab StoryMap platform</a>, and also the subscriber-only proprietary <a href="https://storymaps.arcgis.com">ArcGIS StoryMaps platform</a>, successor to the <a href="https://storymaps-classic.arcgis.com/">older Esri Story Maps platform</a>. But we do not recommend either of them because both lack <em>data portability</em>, meaning that you can’t easily export any data or images you enter, something we cautioned you to watch out for when we discussed <a href="choose.html">how to choose tools wisely in Chapter 2</a>. By contrast, all of the data you enter into the Leaflet Storymaps linked Google Sheet and GitHub repo can easily be migrated to other platforms, as visualization technology continues to evolve in the future.</p>
+<p>Explore the Gallery of Leaflet Storymaps with Google Sheets in Table <a href="leaflet-storymaps-with-google-sheets.html#tab:storymaps-gallery">13.2</a> to see what other people created with this template.</p>
 <table>
 <caption><span id="tab:storymaps-gallery">Table 13.2: </span> Gallery of Leaflet Storymaps with Google Sheets</caption>
 <colgroup>
@@ -372,7 +371,7 @@ Figure 13.14: View the <a href="https://docs.google.com/spreadsheets/d/1AO6XHL_0
 </colgroup>
 <tbody>
 <tr class="odd">
-<td><img src="images/13-leaflet/storymaps-gallery-1.png" /><br><a href="https://jhsgh.org/synagogue-map/">Synagogue Map, Past and Present</a> by the Jewish Historical Society of Greater Hartford</td>
+<td><img src="images/13-leaflet/storymaps-gallery-1.png" /><br><a href="https://jhsgh.org/synagogue-map/">Synagogue Map, Past and Present</a> by Elizabeth Rose, Jewish Historical Society of Greater Hartford</td>
 <td><img src="images/13-leaflet/storymaps-gallery-2.png" /><br><a href="https://www.mappingtheuppermissouri.com/">Mapping the Upper Missouri</a> by Jen Andrella</td>
 </tr>
 <tr class="even">
@@ -381,10 +380,11 @@ Figure 13.14: View the <a href="https://docs.google.com/spreadsheets/d/1AO6XHL_0
 </tr>
 </tbody>
 </table>
-<div id="tutorial-outline-1" class="section level3 unnumbered" number="">
-<h3>Tutorial Outline</h3>
-<p>Before beginning this tutorial, you must have a <a href="http://drive.google.com">Google Drive account</a>, and know how to <a href="copy.html">File &gt; Make a Copy in Google Sheets</a>, as described in Chapter 3. Also, you must have a <a href="http://github.com">GitHub account</a>, and know how to <a href="github.html">Edit and Host Code with GitHub</a>, as described in Chapter 11. We have omitted many screenshots below that illustrate steps we previously covered, so if you get lost, go back to that chapter.</p>
-<p>In the first part of the tutorial, you will create and publish your copies of our GitHub and Google Sheets templates:</p>
+<div id="tutorial-requirements-and-overview-1" class="section level3 unnumbered" number="">
+<h3>Tutorial Requirements and Overview</h3>
+<p>Before you begin, you must have a <a href="http://drive.google.com">Google Drive account</a> and know how to <a href="copy.html">Make a Copy in Google Sheets as described in Chapter 3</a>. Also, you must have a <a href="http://github.com">GitHub account</a> and know how to <a href="github.html">Edit and Host Code with GitHub as described in Chapter 11</a>. We omitted some screenshots below that illustrate steps we previously covered, so if you get lost, go back to those chapters.</p>
+<p>Tip: You’ll notice that this tutorial outline is very similar to the one in the previous section, but the links in the first part are different, and several steps in the second part are new.</p>
+<p>Since this tutorial involves multiple steps, we created this outline to provide a broad overview. In the first part, you will create and publish your copies of two templates, one for GitHub and another for its linked Google Sheet.</p>
 <ul>
 <li><ol style="list-style-type: upper-alpha">
 <li>Copy the GitHub template and publish your version with GitHub Pages.</li>
@@ -405,10 +405,10 @@ Figure 13.14: View the <a href="https://docs.google.com/spreadsheets/d/1AO6XHL_0
 <li>Add text, media, markers, and geocode locations in the Google Sheet <em>Chapters</em> tab.</li>
 </ol></li>
 <li><ol start="6" style="list-style-type: upper-alpha">
-<li>Optional: Add georeferenced historical map image or GeoJSON overlays</li>
+<li>Optional: Add georeferenced historical map image or GeoJSON overlays.</li>
 </ol></li>
 </ul>
-<p>In the third part, you have two options to finalize your story map before widely sharing it online:</p>
+<p>In the third part, you have two options to finalize your map before publicly sharing with others:</p>
 <ul>
 <li><ol start="7" style="list-style-type: upper-alpha">
 <li>Save each Google Sheets tab as a CSV file and upload to GitHub.</li>
@@ -419,6 +419,7 @@ Figure 13.14: View the <a href="https://docs.google.com/spreadsheets/d/1AO6XHL_0
 </ol></li>
 </ul>
 <p>If any problems arise, see the <a href="fix.html">Fix Common Mistakes</a> section of the appendix.</p>
+<p>Now that you have a better sense of the big picture, let’s get started with the first part of the tutorial.</p>
 <div id="a-copy-the-github-template-and-publish-your-version-with-github-pages-1" class="section level4 unnumbered" number="">
 <h4>A) Copy the GitHub template and publish your version with GitHub Pages</h4>
 <ol style="list-style-type: decimal">
@@ -428,13 +429,13 @@ Figure 13.14: View the <a href="https://docs.google.com/spreadsheets/d/1AO6XHL_0
 </ol>
 <p><code>https://github.com/USERNAME/leaflet-storymaps-with-google-sheets</code></p>
 <ol start="4" style="list-style-type: decimal">
-<li>In your new copy of the code repo, click the upper-right <em>Settings</em> button and scroll way down to the GitHub Pages area. In the drop-down menu, change <em>Source</em> from <em>None</em> to <em>Main</em>, keep the default <em>/(root)</em> setting, and press <em>Save</em> as shown in Figure <a href="leaflet-storymaps-with-google-sheets.html#fig:leaflet-github-pages-main3">13.15</a>. This step tells GitHub to publish a live version of your map on the public web, where anyone can access it in their browser, if they have the web address.</li>
+<li>In your new copy of the code repo, click the upper-right <em>Settings</em> button and scroll way down to the GitHub Pages area. In the drop-down menu, change <em>Source</em> from <em>None</em> to <em>Main</em>, keep the default <em>/(root)</em> setting, and press <em>Save</em> as shown in Figure <a href="leaflet-storymaps-with-google-sheets.html#fig:leaflet-github-pages-main3">13.16</a>. This step tells GitHub to publish a live version of your map on the public web, where anyone can access it in their browser, if they have the web address.</li>
 </ol>
 
 <div class="figure"><span id="fig:leaflet-github-pages-main3"></span>
 <img src="images/13-leaflet/leaflet-github-pages-main.png" alt="In Settings, go to GitHub Pages, switch the source from None to Main, and Save." width="300" />
 <p class="caption">
-Figure 13.15: In <em>Settings</em>, go to <em>GitHub Pages</em>, switch the source from <em>None</em> to <em>Main</em>, and <em>Save</em>.
+Figure 13.16: In <em>Settings</em>, go to <em>GitHub Pages</em>, switch the source from <em>None</em> to <em>Main</em>, and <em>Save</em>.
 </p>
 </div>
 <ol start="5" style="list-style-type: decimal">
@@ -444,13 +445,13 @@ Figure 13.15: In <em>Settings</em>, go to <em>GitHub Pages</em>, switch the sour
 <ol start="6" style="list-style-type: decimal">
 <li><p>Scroll up to the top, and click on your repo name to go back to its main page.</p></li>
 <li><p>At the top level of your repo main page, click on README.md, and click the pencil icon to edit this file.</p></li>
-<li><p>Delete the link to the <em>our</em> live site, as shown in Figure <a href="leaflet-storymaps-with-google-sheets.html#fig:storymap-readme-link-top">13.16</a>, and paste in the link to <em>your</em> published site. Scroll down to <em>Commit</em> your changes.</p></li>
+<li><p>Delete the link to the <em>our</em> live site, as shown in Figure <a href="leaflet-storymaps-with-google-sheets.html#fig:storymap-readme-link-top">13.17</a>, and paste in the link to <em>your</em> published site. Scroll down to <em>Commit</em> your changes.</p></li>
 </ol>
 
 <div class="figure"><span id="fig:storymap-readme-link-top"></span>
 <img src="images/13-leaflet/storymap-readme-link-top.png" alt="Edit your README file to replace the link to our site with the link to your site."  />
 <p class="caption">
-Figure 13.16: Edit your README file to replace the link to <em>our</em> site with the link to <em>your</em> site.
+Figure 13.17: Edit your README file to replace the link to <em>our</em> site with the link to <em>your</em> site.
 </p>
 </div>
 <ol start="9" style="list-style-type: decimal">
@@ -464,13 +465,13 @@ Figure 13.16: Edit your README file to replace the link to <em>our</em> site wit
 <li><p>Sign into your Google account, and select <em>File &gt; Make a Copy</em> to save your own version of this Google Sheet on your Google Drive.</p></li>
 <li><p>Click the blue <em>Share</em> button, and click <em>Change to anyone with the link</em>, then click <em>Done</em>. This publicly shares your map data, which is required to make this template work.</p></li>
 <li><p>Go to <em>File &gt; Publish to the Web</em>, and click the green <em>Publish</em> button to publish the entire document, so that the Leaflet code can read it. Then click the upper-right <em>X</em> symbol to close this window.</p></li>
-<li><p>At the top of your browser, copy your Google Sheet address or URL (which usually ends in <code>...XYZ/edit#gid=0</code>). Do <em>NOT</em> copy the <em>Published to the web</em> address (which usually ends in <code>...XYZ/pubhtml</code>), as shown in Figure <a href="leaflet-storymaps-with-google-sheets.html#fig:sheets-publish2">13.17</a>.</p></li>
+<li><p>At the top of your browser, copy your Google Sheet address or URL (which usually ends in <code>...XYZ/edit#gid=0</code>), as shown in Figure <a href="leaflet-storymaps-with-google-sheets.html#fig:sheets-publish2">13.18</a>. Do <em>NOT</em> copy the <em>Published to the web</em> address (which usually ends in <code>...XYZ/pubhtml</code>) because that link is slightly different and will not work in this template.</p></li>
 </ol>
 
 <div class="figure"><span id="fig:sheets-publish2"></span>
 <img src="images/13-leaflet/sheets-publish-annotated.png" alt="Copy the Google Sheet address at the top of the browser, NOT the Publish to the web address." width="500" />
 <p class="caption">
-Figure 13.17: Copy the Google Sheet address at the top of the browser, NOT the <em>Publish to the web</em> address.
+Figure 13.18: Copy the Google Sheet address at the top of the browser, NOT the <em>Publish to the web</em> address.
 </p>
 </div>
 </div>
@@ -479,23 +480,23 @@ Figure 13.17: Copy the Google Sheet address at the top of the browser, NOT the <
 <p>Our next task is to link your published Google Sheet to your Leaflet code in GitHub, so that it can pull your data from the Sheet to display on the map.</p>
 <ol style="list-style-type: decimal">
 <li><p>At the top of your GitHub repo, click to open the file named <code>google-doc-url.js</code>, and click the pencil symbol to edit it.</p></li>
-<li><p>Paste <em>your</em> Google Sheet address or URL (which usually ends in <code>...XYZ/edit#gid=0</code>) to replace <em>our</em> existing URL, as shown in Figure <a href="leaflet-storymaps-with-google-sheets.html#fig:google-doc-url2">13.18</a>. Be careful <em>NOT</em> to erase the single quotation marks or the semicolon at the end. Scroll down to <em>Commit</em> your changes. See separate instructions about the Google API key further below.</p></li>
+<li><p>Paste <em>your</em> Google Sheet address or URL (which usually ends in <code>...XYZ/edit#gid=0</code>) to replace <em>our</em> existing URL, as shown in Figure <a href="leaflet-storymaps-with-google-sheets.html#fig:google-doc-url2">13.19</a>. Be careful <em>NOT</em> to erase the single quotation marks or the semicolon at the end. Scroll down to <em>Commit</em> your changes. See separate instructions about the Google API key further below.</p></li>
 </ol>
 
 <div class="figure"><span id="fig:google-doc-url2"></span>
 <img src="images/13-leaflet/google-doc-url.png" alt="Paste in your Google Sheet URL to replace our URL."  />
 <p class="caption">
-Figure 13.18: Paste in <em>your</em> Google Sheet URL to replace <em>our</em> URL.
+Figure 13.19: Paste in <em>your</em> Google Sheet URL to replace <em>our</em> URL.
 </p>
 </div>
 <ol start="3" style="list-style-type: decimal">
-<li>Also, let’s paste your Google Sheet URL in second place to help you keep track of it. In your GitHub repo, click the README.md file to open it, click the pencil symbol to edit it, and paste <em>your</em> Google Sheet URL to replace <em>our</em> existing URL, as shown in Figure <a href="leaflet-storymaps-with-google-sheets.html#fig:storymap-readme-link-bottom">13.19</a>. Scroll down to <em>Commit</em> your changes.</li>
+<li>Also, let’s paste your Google Sheet URL in second place to help you keep track of it. In your GitHub repo, click the README.md file to open it, click the pencil symbol to edit it, and paste <em>your</em> Google Sheet URL to replace <em>our</em> existing URL, as shown in Figure <a href="leaflet-storymaps-with-google-sheets.html#fig:storymap-readme-link-bottom">13.20</a>. Scroll down to <em>Commit</em> your changes.</li>
 </ol>
 
 <div class="figure"><span id="fig:storymap-readme-link-bottom"></span>
 <img src="images/13-leaflet/storymap-readme-link-bottom.png" alt="Edit your README file to replace the link to our site with the link to your site."  />
 <p class="caption">
-Figure 13.19: Edit your README file to replace the link to <em>our</em> site with the link to <em>your</em> site.
+Figure 13.20: Edit your README file to replace the link to <em>our</em> site with the link to <em>your</em> site.
 </p>
 </div>
 <p>Feel free to remove any other content on the README page that you do not wish to keep.</p>
@@ -517,13 +518,13 @@ Figure 13.19: Edit your README file to replace the link to <em>our</em> site wit
 <p>Now we can start to add new content to your map. In the <em>Chapters</em> tab of your Google Sheet, you’ll see column headers to organize and display interactive markers on your map. Replace the demonstration data with your own, but do <em>not</em> delete or rename the column headers, since the Leaflet code looks for these specific names.</p>
 <ul>
 <li><p>Chapter: The title appearing at the top of each section in the scrolling narrative.</p></li>
-<li><p>Media Link: You have several options to display either an image, audio, or video in each chapter. For images, you can insert an external link to an online service (such as Flickr), as long as it begins with <code>https</code> (secure) and ends with either <code>.jpg</code> or <code>.png</code>. You can also insert a Youtube video link. Or you can upload an image file into the <code>media</code> subfolder in your GitHub repo, as shown in Figure <a href="leaflet-storymaps-with-google-sheets.html#fig:storymap-media-upload">13.20</a>, and enter the pathname in the Google Sheet in this format: <code>media/your-file-name.jpg</code> or <code>...png</code>. Similarly, you can upload an audio file in <code>.mp3</code> (recommended) or <code>.ogg</code> or <code>.wav</code> format.</p></li>
+<li><p>Media Link: You have several options to display either an image, audio, or video in each chapter. For images, you can insert an external link to an online service (such as Flickr), as long as it begins with <code>https</code> (secure) and ends with either <code>.jpg</code> or <code>.png</code>. You can also insert a Youtube video link. Or you can upload an image file into the <code>media</code> subfolder in your GitHub repo, as shown in Figure <a href="leaflet-storymaps-with-google-sheets.html#fig:storymap-media-upload">13.21</a>, and enter the pathname in the Google Sheet in this format: <code>media/your-file-name.jpg</code> or <code>...png</code>. Similarly, you can upload an audio file in <code>.mp3</code> (recommended) or <code>.ogg</code> or <code>.wav</code> format.</p></li>
 </ul>
 
 <div class="figure"><span id="fig:storymap-media-upload"></span>
 <img src="images/13-leaflet/storymap-media-upload.png" alt="In GitHub, click to open the media folder and Add file - Upload files." width="400" />
 <p class="caption">
-Figure 13.20: In GitHub, click to open the <code>media</code> folder and <em>Add file - Upload files</em>.
+Figure 13.21: In GitHub, click to open the <code>media</code> folder and <em>Add file - Upload files</em>.
 </p>
 </div>
 <p>Warning: Media file pathnames are case-sensitive, and we recommend using <em>all lowercase characters</em>, including the suffix ending. Also, since the code template automatically resizes images to fit, we recommend that you <em>reduce the size</em> of any images to 600x400 pixels or less prior to uploading, to make sure your storymap scrolls quickly.</p>
@@ -535,13 +536,13 @@ Figure 13.20: In GitHub, click to open the <code>media</code> folder and <em>Add
 <li><p>Zoom: Leaflet’s default zoom levels are between 0 (world view) to 18 (individual buildings), and most free basemap tiles, such as those provided by Stamen or CartoDB are available for each level in this range. There exist more detailed basemaps that allow you to use higher values. Experiment with zoom levels to get the best view for your story, and remember that given the same zoom level, larger screens will show larger areas compared to smaller screens, such as smartphones.</p></li>
 <li><p>Marker: Select either <code>Numbered</code> (the default) or <code>Plain</code> or <code>Hidden</code>. The latter works best when assigning several chapters to one location (to avoid stacking markers on top of each other) or when zooming out for a broader view (without highlighting one specific location).</p></li>
 <li><p>Marker Color: Insert any standard web color name such as <code>blue</code> or <code>darkblue</code>, or insert a web color code such as <code>#775307</code> or <code>rgba(200,100,0,0.5)</code>. See options at <a href="https://www.w3schools.com/colors/colors_names.asp">W3Schools Color Names</a>.</p></li>
-<li><p>Location, Latitude, Longitude: These place your markers at points on the map. Although the code template only requires Latitude and Longitude, it’s wise to paste an address or place name into the Location column as a reminder to correspond with the numerical coordinates. Use the <a href="geocode.html">Geocoding by SmartMonkey Add-on from Chapter 3</a> and select <em>Add-ons &gt; Geocoding by SmartMonkey &gt; Geocode Details</em> to create a new sheet with sample data and display results for three new columns: <em>Latitude</em>, <em>Longitude</em>, and <em>Address found</em>, as shown in Figure <a href="leaflet-storymaps-with-google-sheets.html#fig:geocode-details3">13.21</a>. Paste in your own address data and repeat the step above to geocode it, then copy and paste the results into your <em>Points</em> sheet.</p></li>
+<li><p>Location, Latitude, Longitude: These place your markers at points on the map. Although the code template only requires Latitude and Longitude, it’s wise to paste an address or place name into the Location column as a reminder to correspond with the numerical coordinates. Use the <a href="geocode.html">Geocoding by SmartMonkey Add-on from Chapter 3</a> and select <em>Add-ons &gt; Geocoding by SmartMonkey &gt; Geocode Details</em> to create a new sheet with sample data and display results for three new columns: <em>Latitude</em>, <em>Longitude</em>, and <em>Address found</em>, as shown in Figure <a href="leaflet-storymaps-with-google-sheets.html#fig:geocode-details3">13.22</a>. Paste in your own address data and repeat the step above to geocode it, then copy and paste the results into your <em>Points</em> sheet.</p></li>
 </ul>
 
 <div class="figure"><span id="fig:geocode-details3"></span>
 <img src="images/13-leaflet/geocode-details.png" alt="Select Add-ons–Geocoding by SmartMonkey–Geocode Details to display sample data with results for three new columns: Latitude, Longitude, and Address found."  />
 <p class="caption">
-Figure 13.21: Select <em>Add-ons–Geocoding by SmartMonkey–Geocode Details</em> to display sample data with results for three new columns: <em>Latitude</em>, <em>Longitude</em>, and <em>Address found</em>.
+Figure 13.22: Select <em>Add-ons–Geocoding by SmartMonkey–Geocode Details</em> to display sample data with results for three new columns: <em>Latitude</em>, <em>Longitude</em>, and <em>Address found</em>.
 </p>
 </div>
 <p>Open the browser tab that displays your live map and refresh the page to see your changes. If your changes do not appear within a few seconds, see the <a href="fix.html">Fix Common Problems</a> section of the appendix.</p>
@@ -549,68 +550,65 @@ Figure 13.21: Select <em>Add-ons–Geocoding by SmartMonkey–Geocode Details</e
 <div id="f-optional-add-historical-map-image-or-geojson-overlays" class="section level4 unnumbered" number="">
 <h4>F) Optional: Add historical map image or GeoJSON overlays</h4>
 <p>The code template allows you to enrich your story by placing two different types of layers on top of the background map: georeferenced map images (such as a historical map) and GeoJSON geodata (such as a pathway, boundary lines, or a color-coded choropleth map). You can add both types of layers to specific chapters or the entire story. Also, you can adjust the transparency level to reveal or hide the present-day background map. To prepare both types of layers, you will need to jump ahead to <a href="transform.html">Chapter 14: Transform Your Map Data</a>, but here we’ll explain the steps to insert them in your storymap template.</p>
-<p>To add a historical map overlay to one or more story map chapters, it must be <em>georeferenced</em> (also called georectified), which means to digitally align the static map image with a more precise present-day interactive map. If you have a high-quality static image of a historical map, use the <a href="mapwarper.html">Mapwarper tool</a> as described in Chapter 14 to align several known points with those on a present-day interactive map. Mapwarper transforms the static map image into interactive map tiles, and publicly hosts them online with a link in Google/OpenStreetMap format, similar to <code>https://mapwarper.net/maps/tile/14781/{z}/{x}/{y}.png</code>. Or you can search for historical maps that have already been georeferenced and transformed into tiles (and volunteer for crowdsourcing efforts to align maps) on platforms such as <a href="https://mapwarper.net">Mapwarper</a> and the <a href="http://maps.nypl.org/warper/">New York Public Library Mapwarper</a>. Although map tile links are <em>not</em> viewable in a normal browser, they can be displayed by the Leaflet Storymaps code. Enter the tile link and your desired transparency level into the Overlay columns in the <em>Chapters</em> tab of your Google Sheet template, as shown in Figure <a href="leaflet-storymaps-with-google-sheets.html#fig:storymap-overlay">13.22</a>.</p>
+<p>To add a historical map overlay to one or more story map chapters, it must be <em>georeferenced</em> (also called georectified), which means to digitally align the static map image with a more precise present-day interactive map. If you have a high-quality static image of a historical map, use the <a href="mapwarper.html">Mapwarper tool</a> as described in Chapter 14 to align several known points with those on a present-day interactive map. Mapwarper transforms the static map image into interactive map tiles, and publicly hosts them online with a link in Google/OpenStreetMap format, similar to <code>https://mapwarper.net/maps/tile/14781/{z}/{x}/{y}.png</code>. Or you can search for historical maps that have already been georeferenced and transformed into tiles (and volunteer for crowdsourcing efforts to align maps) on platforms such as <a href="https://mapwarper.net">Mapwarper</a> and the <a href="http://maps.nypl.org/warper/">New York Public Library Mapwarper</a>. Although map tile links are <em>not</em> viewable in a normal browser, they can be displayed by the Leaflet Storymaps code. Enter the tile link and your desired transparency level into the Overlay columns in the <em>Chapters</em> tab of your Google Sheet template, as shown in Figure <a href="leaflet-storymaps-with-google-sheets.html#fig:storymap-overlay">13.23</a>.</p>
 <ul>
 <li>Overlay: Enter a map tile link in Google/OpenStreetMap format, similar to the sample above.</li>
 <li>Overlay Transparency: Enter a number from 0 (transparent) to 1 (opaque). The default is 0.7.</li>
 </ul>
-<p>(ref:storymap-overlay) Enter map tile link and transparency level into the Google Sheet template (on left)
-to display it in one or more storymap chapters (on right).</p>
+
 <div class="figure"><span id="fig:storymap-overlay"></span>
-<img src="images/13-leaflet/storymap-overlay.png" alt="(ref:storymap-overlay)"  />
+<img src="images/13-leaflet/storymap-overlay.png" alt="Enter map tile link and transparency level into the Google Sheet template (on left) to display it in one or more storymap chapters (on right)."  />
 <p class="caption">
-Figure 13.22: (ref:storymap-overlay)
+Figure 13.23: Enter map tile link and transparency level into the Google Sheet template (on left) to display it in one or more storymap chapters (on right).
 </p>
 </div>
-<p>TODO above: Update the image after updating the demo storymap. Confirm if similar format works with georeferenced items from <a href="https://www.davidrumsey.com/view/georeferencer">David Rumsey Map Collection</a>, and check other platforms. Also, decide whether to add this line: Use secure https (ending with <code>s</code>) when available.</p>
-<p>To add a visible path, geographic boundaries, or a filled choropleth map to your story, consider adding a GeoJSON data layer to one or more chapters. Read about <a href="geojson.html">GeoJSON and geospatial data formats</a> in Chapter 14, where you can also learn <a href="find-geojson.html">how to find existing GeoJSON boundary files</a>, or draw or edit your own geodata with the <a href="geojsonio.html">GeoJson.io tool</a> or <a href="mapshaper.html">Mapshaper tool</a>. We recommend that you name your GeoJSON files in lower-case characters with no spaces. Upload the file to your GitHub repository by opening the <code>geojson</code> folder and selecting <em>Add file - Upload files</em>. In your Google Sheet template, enter the pathname in the <em>GeoJSON Overlay</em> column in this format: <code>geojson/your-file-name.geojson</code>, as shown in Figure <a href="leaflet-storymaps-with-google-sheets.html#fig:storymap-geojson">13.23</a>.</p>
+<p>To add a visible path, geographic boundaries, or a filled choropleth map to your story, consider adding a GeoJSON data layer to one or more chapters. Read about <a href="geojson.html">GeoJSON and geospatial data formats</a> in Chapter 14, where you can also learn <a href="find-geojson.html">how to find existing GeoJSON boundary files</a>, or draw or edit your own geodata with the <a href="geojsonio.html">GeoJson.io tool</a> or <a href="mapshaper.html">Mapshaper tool</a>. We recommend that you name your GeoJSON files in lower-case characters with no spaces. Upload the file to your GitHub repository by opening the <code>geojson</code> folder and selecting <em>Add file - Upload files</em>. In your Google Sheet template, enter the pathname in the <em>GeoJSON Overlay</em> column in this format: <code>geojson/your-file-name.geojson</code>, as shown in Figure <a href="leaflet-storymaps-with-google-sheets.html#fig:storymap-geojson">13.24</a>.</p>
 <p>(ref:storymap-geojson) Enter the pathname in the <em>GeoJSON Overlay</em> column (on left)
 to display it in one or more storymap chapters (on right).</p>
 <div class="figure"><span id="fig:storymap-geojson"></span>
 <img src="images/13-leaflet/storymap-geojson.png" alt="(ref:storymap-geojson)"  />
 <p class="caption">
-Figure 13.23: (ref:storymap-geojson)
+Figure 13.24: (ref:storymap-geojson)
 </p>
 </div>
-<p>TODO above: Update demo storymap and update images to match. TODO below: DISCUSS with Ilya if we are using a standardized properties list re: <a href="https://github.com/HandsOnDataViz/leaflet-storymaps-with-google-sheets/issues/74" class="uri">https://github.com/HandsOnDataViz/leaflet-storymaps-with-google-sheets/issues/74</a>. Convert list to a small table, to make it easier to see definitions and storymap default values?</p>
 <p>When you create or edit GeoJSON data with a tool like <a href="geojsonio.html">GeoJson.io</a>, you can directly edit its feature properties. If you wish to display the same properties you assigned to your GeoJSON file in your storymap, we recommend naming them as follows:</p>
 <ul>
 <li>weight (width of line; storymap template default is 1px)</li>
-<li>color (of line; default is white??)</li>
-<li>opacity (of line; default is ???)</li>
-<li>fillColor (of polygon; default is silver)</li>
+<li>color (of line; default is gray)</li>
+<li>opacity (of line; default is 0.5)</li>
+<li>fillColor (of polygon; default is white)</li>
 <li>fillOpacity (of polygon; default is 0.7)</li>
 </ul>
 <p>Or you can enter properties and CSS codes in the <em>GeoJSON Feature Properties</em> template column, in this format, separated by semicolons, with no quotation marks required: <code>weight:3;color:red;opacity:1;fillColor:orange;fillOpacity:0.9</code>. You can assign colors with standard names, hex codes, or RGBA values as described in the <a href="https://www.w3schools.com/colors/colors_picker.asp">W3Schools Colors Picker</a>.</p>
-<p>TODO DISCUSS with Ilya whether to mention additional customizations that are possible here (and are all of them also available in Leaflet Maps with Google Sheets?)</p>
+<p>Inside the template you’ll discover more ways to customize your storymap, such as:</p>
 <ul>
-<li>insert logo – see Options tab of Google Sheets</li>
-<li>insert Google Analytics tracking ID – see how to get one…. and insert in Options tab of Google Sheets</li>
-<li>to insert a horizontal divider line in Description, copy and paste this text to your Google Sheets template: <code>&lt;span style='display:block;width:100%;height:1px;background-color: silver; margin: 20px 0;'&gt;&lt;/span&gt;</code> (is this necessary here? …and make sure that the single-quote marks are not changed into curly apostrophes).</li>
-<li>to adjust title size and font: in GitHub, go to css/styles.css file, scroll down to (specify lines?), and adjust font-size values…</li>
-<li>About the responsive design: On larger screens, the scrolling narrative and map appear side-by-side. On smaller screens where the width is less than 768 pixels, it automatically switches to a top-and-bottom display.</li>
+<li>Insert logo (see Options tab in Google Sheets)</li>
+<li>Insert Google Analytics tracking ID (see Options tab in Google Sheets</li>
+<li>Adjust title size and font (go to css/styles.css file in GitHub)</li>
+<li>To insert a horizontal divider in Chapter text (copy and paste this text into Description field in Google Sheets, and avoid changing single-quote marks into curly apostrophes)
+<code>&lt;span style='display:block;width:100%;height:1px;background-color: silver; margin: 20px 0;'&gt;&lt;/span&gt;</code></li>
 </ul>
 </div>
-<div id="finalize-your-story-map" class="section level4 unnumbered" number="">
-<h4>Finalize Your Story Map</h4>
+</div>
+<div id="finalize-your-story-map-before-sharing-with-the-public" class="section level3 unnumbered" number="">
+<h3>Finalize Your Story Map Before Sharing with the Public</h3>
 <p>Now you’re ready to finalize your map. If you wish to share your map link with the public, read the options below and choose either step G <em>OR</em> step H.</p>
 <p>Warning: We reserve the right to change <em>our</em> Google Sheets API key at any time, especially if other people overuse or abuse it. This means that you <em>must</em> finalize your map using either step G or H below before sharing it publicly, because it will <em>stop working</em> if we change our key.</p>
-</div>
 <div id="g-save-each-google-sheets-tab-as-a-csv-file-and-upload-to-github-1" class="section level4 unnumbered" number="">
 <h4>G) Save each Google Sheets tab as a CSV file and upload to GitHub</h4>
 <p>If you have finished entering most of your data into your Google Sheets, downloading them into separate CSV files and uploading those into your GitHub repo is the <em>best</em> long-term preservation strategy. This approach keeps your map and data together in the same GitHub repo, and removes the risk that your map will break due to an interruption to Google services. Plus, you can still edit your map data. If this approach makes sense, follow these steps:</p>
 <ol style="list-style-type: decimal">
-<li>In your Google Sheets, go to each tab and select <em>File &gt; Download</em> into CSV format, as shown in Figure <a href="leaflet-storymaps-with-google-sheets.html#fig:storymap-download-csv">13.24</a>, to create a separate file for each tab.</li>
+<li>In your Google Sheets, go to each tab and select <em>File &gt; Download</em> into CSV format, as shown in Figure <a href="leaflet-storymaps-with-google-sheets.html#fig:storymap-download-csv">13.25</a>, to create a separate file for each tab.</li>
 </ol>
 
 <div class="figure"><span id="fig:storymap-download-csv"></span>
 <img src="images/13-leaflet/storymap-download-csv.png" alt="Download each Google Sheets tab as a separate CSV file." width="350" />
 <p class="caption">
-Figure 13.24: Download each Google Sheets tab as a separate CSV file.
+Figure 13.25: Download each Google Sheets tab as a separate CSV file.
 </p>
 </div>
 <ol start="2" style="list-style-type: decimal">
-<li>Shorten each file name as shown. The names must be exact, but they are <em>not</em> case-sensitive. The first two files below are below are required, and others are optional.</li>
+<li>Shorten each file name as shown. The names must be exact, but they are <em>not</em> case-sensitive. The first two files below are required, and others are optional.</li>
 </ol>
 <ul>
 <li>Chapters.csv</li>
@@ -618,13 +616,13 @@ Figure 13.24: Download each Google Sheets tab as a separate CSV file.
 <li>Notes.csv (or .txt) Recommended to keep any notes with your data, but not required.</li>
 </ul>
 <ol start="3" style="list-style-type: decimal">
-<li>In your GitHub repo, click the <code>csv</code> subfolder to open it, select <em>Add file &gt; Upload files</em>, and upload all of the CSV files above into this subfolder, as shown in Figure <a href="leaflet-storymaps-with-google-sheets.html#fig:storymap-upload-csv">13.25</a>. The Leaflet template code checks here first for data, and if it finds CSV files with the names above, it will pull the map data directly from them, instead of your Google Sheets. <em>Remember</em> that from this point forward, any edits in your Google Sheet will <em>no longer appear automatically</em> in your map.</li>
+<li>In your GitHub repo, click the <code>csv</code> subfolder to open it, select <em>Add file &gt; Upload files</em>, and upload all of the CSV files above into this subfolder, as shown in Figure <a href="leaflet-storymaps-with-google-sheets.html#fig:storymap-upload-csv">13.26</a>. The Leaflet template code checks here first for data, and if it finds CSV files with the names above, it will pull the map data directly from them, instead of your Google Sheets. <em>Remember</em> that from this point forward, any edits in your Google Sheet will <em>no longer appear automatically</em> in your map.</li>
 </ol>
 
 <div class="figure"><span id="fig:storymap-upload-csv"></span>
 <img src="images/13-leaflet/storymap-upload-csv.png" alt="Upload your map data files into the csv subfolder in GitHub." width="400" />
 <p class="caption">
-Figure 13.25: Upload your map data files into the <em>csv</em> subfolder in GitHub.
+Figure 13.26: Upload your map data files into the <em>csv</em> subfolder in GitHub.
 </p>
 </div>
 <ol start="4" style="list-style-type: decimal">
@@ -633,7 +631,7 @@ Figure 13.25: Upload your map data files into the <em>csv</em> subfolder in GitH
 </div>
 <div id="h-get-your-own-google-sheets-api-key-to-insert-into-the-code-1" class="section level4 unnumbered" number="">
 <h4>H) Get your own Google Sheets API Key to insert into the code</h4>
-<p>As an alternative to step G, if you wish to continue to store your map data in your Google Sheets that is published online, go to the section of this chapter titled <a href="google-sheets-api-key.html">Get Your Own Google Sheets API Key</a>, and insert it into the Leaflet map code as described, to avoid overusing our key. Google Sheets requires an API key to maintain reasonable <a href="https://developers.google.com/sheets/api/limits">usage limits</a> on its service. You can get a free Google Sheets API key if you have a personal Google account, but <em>not</em> a Google Suite account provided by your school or business. TODO: confirm this detail</p>
+<p>As an alternative to step G, if you wish to continue to store your map data in your Google Sheets that is published online, go to the section of this chapter titled <a href="google-sheets-api-key.html">Get Your Own Google Sheets API Key</a>, and insert it into the Leaflet map code as described, to avoid overusing our key. Google Sheets requires an API key to maintain reasonable <a href="https://developers.google.com/sheets/api/limits">usage limits</a> on its service. You can get a free Google Sheets API key if you have a personal Google account, but <em>not</em> a Google Suite account provided by your school or business.</p>
 <p>If problems arise, see the <a href="fix.html">Fix Common Mistakes</a> section of the appendix.</p>
 </div>
 </div>

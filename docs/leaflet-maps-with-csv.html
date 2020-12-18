@@ -344,17 +344,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="leaflet-maps-with-csv" class="section level2 unnumbered" number="">
 <h2>Leaflet Maps with CSV Data</h2>
-<p>Figure <a href="leaflet-maps-with-csv.html#fig:leaflet-map-csv">13.35</a> shows a simple point map of some colleges and universities
-in Connecticut. But instead of individually creating markers in JavaScript using Leaflet’s <code>L.marker()</code>
-function, the point data is stored in a local CSV file (<code>data.csv</code>) that is easy
-to modify in Excel or any text editor. Each time the map is loaded by the browser,
-point data from the CSV file is read and markers are generated “on the fly”.</p>
+<p>This open-source template is designed to improve your coding skills by demonstrating how to create a Leaflet point map that pulls data from a CSV file located in your GitHub repo. While you can make the same type of map on other platforms, such as <a href="mymaps.html">Google My Maps as described in Chapter 8</a>, you’ll more about how the Leaflet code library works by doing it yourself.</p>
+<p>Figure <a href="leaflet-maps-with-csv.html#fig:leaflet-map-csv">13.36</a> shows a simple point map of some colleges and universities
+in Connecticut. But instead of individually creating markers in JavaScript using Leaflet’s <code>L.marker()</code> function, the point data is stored in a local CSV file (<code>data.csv</code>) that is easy
+to modify in any text editor or spreadsheet. Each time the map is loaded by the browser,
+point data from the CSV file is read and markers are generated “on the fly.”"</p>
 
 <div class="figure"><span id="fig:leaflet-map-csv"></span>
 <iframe src="https://handsondataviz.github.io/leaflet-map-csv/" width="672" height="500px">
 </iframe>
 <p class="caption">
-Figure 13.35: Explore the <a href="https://handsondataviz.github.io/leaflet-map-csv/">interactive Leaflet point map with CSV data</a>.
+Figure 13.36: Explore the <a href="https://handsondataviz.github.io/leaflet-map-csv/">interactive Leaflet point map with CSV data</a>.
 </p>
 </div>
 <p>You can adapt this template to create your own point map by following these instructions:</p>
@@ -380,7 +380,7 @@ chunk of code:</li>
 <span id="cb29-4"><a href="leaflet-maps-with-csv.html#cb29-4"></a>  <span class="dt">scrollWheelZoom</span><span class="op">:</span> <span class="kw">false</span></span>
 <span id="cb29-5"><a href="leaflet-maps-with-csv.html#cb29-5"></a>})<span class="op">;</span></span></code></pre></div>
 <p>We used default Leaflet markers for code simplicity, but you may want to use
-custom icons instead. The code snippet below can give you an idea how to</p>
+custom icons instead. The code snippet below can give you an idea how to set it up in your GitHub repository, where you insert your unique pathname to your icon in place of the sample.</p>
 <div class="sourceCode" id="cb30"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb30-1"><a href="leaflet-maps-with-csv.html#cb30-1"></a><span class="kw">var</span> marker <span class="op">=</span> L<span class="op">.</span><span class="fu">marker</span>([row<span class="op">.</span><span class="at">Latitude</span><span class="op">,</span> row<span class="op">.</span><span class="at">Longitude</span>]<span class="op">,</span> {</span>
 <span id="cb30-2"><a href="leaflet-maps-with-csv.html#cb30-2"></a>  <span class="dt">opacity</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span></span>
 <span id="cb30-3"><a href="leaflet-maps-with-csv.html#cb30-3"></a>  <span class="co">// Customize your icon</span></span>
@@ -389,7 +389,7 @@ custom icons instead. The code snippet below can give you an idea how to</p>
 <span id="cb30-6"><a href="leaflet-maps-with-csv.html#cb30-6"></a>    <span class="dt">iconSize</span><span class="op">:</span> [<span class="dv">40</span><span class="op">,</span> <span class="dv">60</span>]</span>
 <span id="cb30-7"><a href="leaflet-maps-with-csv.html#cb30-7"></a>  })</span>
 <span id="cb30-8"><a href="leaflet-maps-with-csv.html#cb30-8"></a>})<span class="op">.</span><span class="fu">bindPopup</span>(row<span class="op">.</span><span class="at">Title</span>)<span class="op">;</span></span></code></pre></div>
-<p>For more information on icon customization, see <a href="https://leafletjs.com/examples/custom-icons/">this helpful Leaflet example</a>.</p>
+<p>To learn more, see <a href="https://leafletjs.com/examples/custom-icons/">this helpful Leaflet documentation example about custom icons</a>.</p>
 </div>
             </section>
 

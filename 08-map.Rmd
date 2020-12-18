@@ -538,7 +538,7 @@ knitr::include_graphics("images/08-map/datawrapper-map-match.png")
 knitr::include_graphics("images/08-map/datawrapper-map-match-values.png")
 ```
 
-10. In the *Visualize* screen, under the *Refine* tab, click the *wrench symbol* next to the color palette to review the *default* map settings, as shown in Figure \@ref(fig:datawrapper-map-default). Never automatically accept the default map, but it's a good place to start and explore how factors shape its appearance.
+10. In the *Visualize* screen, under the *Refine* tab, click the *wrench symbol* next to the color palette to review the *default* map settings, as shown in Figure \@ref(fig:datawrapper-map-default). Do not blindly accept the default map, but it's a good place to start and explore how factors shape its appearance.
 
 (ref:datawrapper-map-default) Under the *Refine* tab, click the *wrench symbol* to see the default map settings.
 

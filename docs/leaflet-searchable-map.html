@@ -344,17 +344,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="leaflet-searchable-map" class="section level2 unnumbered" number="">
 <h2>Leaflet Searchable Point Map</h2>
-<p>Figure <a href="leaflet-searchable-map.html#fig:searchable-map">13.37</a> shows a powerful Leaflet template of a searchable
+<p>A searchable point map works best for showing multiple locations, where users can search by name or proximity to a location, or filter by category, with an optional list view. Figure <a href="leaflet-searchable-map.html#fig:searchable-map">13.38</a> shows a powerful Leaflet template of a searchable
 and filterable point map, which draws from a CSV data file,
-developed by <a href="https://derekeder.com/">Derek Eder</a> from DataMade. This map allows
+developed by <a href="https://derekeder.com/">Derek Eder</a> from DataMade in Chicago. This map allows
 you to show points of interest, filter them by using <em>Search by name</em> functionality,
 and show them as a list instead of points on a map. In addition, the <em>About</em> page
-gives you plenty of space to talk about your map.</p>
+gives you plenty of space to describe the purpose and content of your map.</p>
 
 <div class="figure"><span id="fig:searchable-map"></span>
 <img src="images/13-leaflet/searchable-map.png" alt="Explore the interactive Searchable Map template."  />
 <p class="caption">
-Figure 13.37: Explore the <a href="https://searchable-map-template-csv.netlify.app/">interactive Searchable Map template</a>.
+Figure 13.38: Explore the <a href="https://searchable-map-template-csv.netlify.app/">interactive Searchable Map template</a>.
 </p>
 </div>
 <p>This template uses Leaflet.js in combination with Google Maps API to perform
@@ -372,12 +372,12 @@ chapter to remind yourself about forks).</p>
 <li>Download or clone this project and fire up your text editor of choice. Open up <code>/js/map.js</code> and set your map options in the <code>SearchableMapLib.initialize</code> function:</li>
 </ol>
 <ul>
-<li><code>map_centroid</code> - the lat/long you want your map to center on (<a href="https://getlatlong.net/">find yours here</a>)</li>
+<li><code>map_centroid</code> - the lat/long you want your map to center on.</li>
 <li><code>filePath</code> - Path to your map data file. This file needs to be in csv or geojson format and placed in the <code>data</code> folder. This file’s first line must be the header, and it must have a latitude column and longitude column.</li>
 <li><code>fileType</code> - Set if you are loading in a <code>csv</code> or <code>geojson</code> file</li>
 </ul>
 <ol start="2" style="list-style-type: decimal">
-<li>Edit the templates in the <code>templates</code> folder for how you want your data displayed. These templates use EJS, which allows the display of your variables with HTML, as well as conditional logic. <a href="https://ejs.co/#docs">Documentation is here</a>.</li>
+<li>Edit the templates in the <code>templates</code> folder for how you want your data displayed. These templates use EJS, which allows the display of your variables with HTML, as well as conditional logic. Read more in the <a href="https://ejs.co/#docs">EJS documentation</a>.</li>
 </ol>
 <ul>
 <li><code>/templates/hover.ejs</code> - template for when you hover over a dot on the map</li>

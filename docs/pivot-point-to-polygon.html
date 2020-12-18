@@ -358,23 +358,23 @@ This particular dataset has information on each hospital’s name,
 location (nicely divided into Address, City, State, and ZIP Code columns),
 a phone number and some other indicators, such as mortality and patient experience.</p>
 <p>Now, imagine you are given a task to create a choropleth map of total hospitals by US state.
-Instead of showing individual hospitals as points (as in Figuere <a href="pivot-point-to-polygon.html#fig:pivot-address">14.20</a>a ),
-you want darker shades of blue to represent states with more hospitals (as in Figure <a href="pivot-point-to-polygon.html#fig:pivot-address">14.20</a>b).</p>
+Instead of showing individual hospitals as points (as in Figuere <a href="pivot-point-to-polygon.html#fig:pivot-address">14.21</a>a ),
+you want darker shades of blue to represent states with more hospitals (as in Figure <a href="pivot-point-to-polygon.html#fig:pivot-address">14.21</a>b).</p>
 <p>(ref:pivot-address) You can count addresses by state (or other area) to produce polygon,
 or choropleth, maps instead of point maps.</p>
 <div class="figure"><span id="fig:pivot-address"></span>
 <img src="images/14-transform/pivot-address-annotated.png" alt="(ref:pivot-address)"  />
 <p class="caption">
-Figure 14.20: (ref:pivot-address)
+Figure 14.21: (ref:pivot-address)
 </p>
 </div>
 <p>First, save the database to your local machine by going to <em>Export &gt; Download &gt; CSV</em>
-of Socrata interface. Figure <a href="pivot-point-to-polygon.html#fig:pivot-address-export">14.21</a> shows where you can find the Export button.</p>
+of Socrata interface. Figure <a href="pivot-point-to-polygon.html#fig:pivot-address-export">14.22</a> shows where you can find the Export button.</p>
 
 <div class="figure"><span id="fig:pivot-address-export"></span>
 <img src="images/14-transform/pivot-address-export.png" alt="In Socrata, you can export the entire dataset as a CSV."  />
 <p class="caption">
-Figure 14.21: In Socrata, you can export the entire dataset as a CSV.
+Figure 14.22: In Socrata, you can export the entire dataset as a CSV.
 </p>
 </div>
 <p>Next, open the file in your favorite spreadsheet tool. If you use Google Sheets,
@@ -387,7 +387,7 @@ column that has no missing values—and choose <em>Summarize by: COUNTA</em>. Vo
 <div class="figure"><span id="fig:pivot-address-sheet"></span>
 <img src="images/14-transform/pivot-address-sheet.png" alt="Use pivot tables in any spreadsheet software to count addresses per area (such as state, county, of zip code)."  />
 <p class="caption">
-Figure 14.22: Use pivot tables in any spreadsheet software to count addresses per area (such as state, county, of zip code).
+Figure 14.23: Use pivot tables in any spreadsheet software to count addresses per area (such as state, county, of zip code).
 </p>
 </div>
 <p>Your aggregated dataset is ready, so save it as a CSV. If you use Google Sheets,
@@ -396,10 +396,8 @@ You can now merge this dataset with your polygons manually using editing capabil
 <a href="geojsonio.html">GeoJson.io</a>, or merge it all in one go using powerful <a href="mapshaper.html">Mapshaper</a>.</p>
 <div id="summary14" class="section level3 unnumbered" number="">
 <h3>Summary</h3>
-<p>In this chapter, you learned …… TODO re-summarize this:</p>
-<p>we will delve further into the topic of <a href="geojson.html">geospatial data and its different formats</a>, such as GeoJSON, the open-standard format most commonly used in this book. You’ll learn <a href="find-geojson.html">how to find and extract geographic boundary files in this format</a> from the crowd-sourced OpenStreetMap platform. Also, we’ll show how to convert or create your own top-level map layer data using the <a href="geojsonio.html">GeoJson.io tool</a>, and how to edit these layers with spreadsheet data using the <a href="mapshaper.html">Mapshaper tool</a>. Both of these easy-to-learn web-based tools replace most of the need for harder-to-learn geographic information systems, such as the proprietary ArcGIS and the open-source QGIS desktop applications. Moreover, you’ll also learn how to georeference a high-quality static map image and transform it into interactive map tiles using the <a href="mapwarper.html">the MapWarper tool</a>. Finally, we’ll conclude with strategies to bulk geocode large batches of address data, and to pivot point-level data into polygons to use in choropleth maps. By the end of this chapter, you should feel much more confident navigating the overwhelming world of geospatial data.</p>
-<p>In the following chapter, we will talk detecting bias in charts and maps.
-so that you become a better storyteller and a more critical reader.</p>
+<p>In this chapter, we delved into geospatial data and the GeoJSON format. You also learned how to use various open-source tools to find geodata, convert and create vector data, and edit and join these layers with spreadsheet data. You also “warped” historical raster map images by georeferencing them onto modern maps. Finally, you acquired some additional strategies to bulk geocode large batches of US addresses, and to pivot point-level data into polygons for use in choropleth maps.</p>
+<p>In the next chapter, we will discuss how to detect lies and reduce bias in charts and maps, so that you become a more critical consumer of visualizations as well as a better data storyteller.</p>
 
 </div>
 </div>

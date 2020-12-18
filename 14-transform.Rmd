@@ -586,17 +586,36 @@ Alternatively, you can use any zip-utility to extract a KML file from KMZ, becau
 
 
 ## Georeference with MapWarper {- #mapwarper}
-TODO: write this section about using [MapWarper](http://mapwarper.net), a tool created and hosted by Tim Waters, to upload and georeference a scanned map. This means to properly position a scanned map based on standard coordinates, so that you can place it as an overlay on an interactive map, such as [Leaflet Storymaps with Google Sheets](leaflet-storymaps-with-google-sheets.html).
 
-Anyone can upload and georectify a map on the developer's public site at http://mapwarper.net, and also see how it's used by organizations such as the New York Public Library at http://maps.nypl.org.
+[MapWarper](http://mapwarper.net), an open-source tool created and hosted by Tim Waters, allows users to upload and georeference (also called georectify) a scanned map image. This means to precisely align the static map image on top of a present-day interactive map. As a result of this process, older map images often appear "warped" when updated for the digital age. After your map image is georeferenced and hosted on this site, a special link allows you to place this raster data as an overlay on an interactive map, such as [Leaflet Storymaps with Google Sheets as described in Chapter 13](leaflet-storymaps-with-google-sheets.html). Anyone can create a free account to upload and georeference a map on the developer's public MapWarper site. See also how the tool is used by organizations such as the [New York Public Library's digital maps collection](http://maps.nypl.org).
 
-Warning: MapWarper is a wonderful open-source tool and platform, but service may be interrupted. As of July 2020, the site warns: "Ran out of disk space. Maps older than 2 years will need re-warping to work. Downtime will happen again."
+Warning: While MapWarper is a wonderful open-source platform, service may be unstable. A July 2020 update states: "Ran out of disk space. Maps older than 2 years will need re-warping to work. Downtime will happen again." We recommend that users be mindful of the platform's limitations, but also consider donating funds to the developer to continue this open-source project.
 
-MODIFY TEXT FROM CH 13:
-To add a historical map overlay, it first must be *georeferenced* (also called georectified), which means to digitally align the static map image with a more precise present-day interactive map. If you have a high-quality static image of a historical map, use the [Mapwarper tool](mapwarper.html) as described in Chapter 14 to align several known points with those on a present-day interactive map. Mapwarper transforms the static map image into interactive map tiles, and publicly hosts them online with a link in Google/OpenStreetMap format, similar to `https://mapwarper.net/maps/tile/14781/{z}/{x}/{y}.png`. Or you can search for historical maps that have already been georeferenced and transformed into tiles, or contribute to crowdsourcing efforts to align maps, on platforms such as [Mapwarper](https://mapwarper.net), the [New York Public Library Mapwarper](http://maps.nypl.org/warper/), and the [David Rumsey Map Collection](https://www.davidrumsey.com/view/georeferencer). [TODO: confirm how Rumsey links work] Although map tile links are *not* viewable in a normal browser, they can be displayed by the Leaflet Storymaps code by entering them into these columns in the *Chapters* tab of your Google Sheet template:
+Follow this abbreviated tutorial to create a georeferenced overlay map, based on a [more detailed version by digital librarians Erica Hayes and Mia Partlow](https://github.com/ericayhayes/georeferencingtutorial).^[@hayesTutorialGeoreferencingDisplaying2020]
 
+1. Create a free account on [MapWarper](http://mapwarper.net).
 
+2. Upload a high-quality image or scan of a map that has not yet been georeferenced, such as an image of a paper historical map, and enter metadata for others to find it. Follow guidelines about fair-use copyright or works in the public domain.
 
+3. After you upload the image, click on the *Rectify* tab in the MapWarper interface, and practice moving around the map.
+
+4. Click to add a control point in the historic map window, then click to add a matching control point in the modern map window to align the two images, as shown in Figure \@ref(fig:mapwarper). Good control points are stable locations or landmarks that have not changed during the time period between the two maps. For example, major cities, railroad tracks, or road intersections might be a good way to align maps from the early 1900s to today, depending on the map scale and historical context.
+
+(ref:mapwarper) Add control points to align stable locations or landmarks between the historical map (on the right) and the modern map (on the left).
+
+```{r mapwarper, out.width=750, fig.cap="(ref:mapwarper)"}
+knitr::include_graphics("images/14-transform/mapwarper.png")
+```
+
+5. Add at least 4 or 5 control points to match the two maps and spread them out. When you are satisfied, click the *Warp Image* button at the bottom of the page. MapWarper transforms the static map image into a set of georeferenced map tiles, which now appear as a layer on top of the modern map.
+
+6. Click the *Export* tab, and under *Map Services*, copy the Tiles URL that appears in Google/OpenStreetMap format, similar to this:
+
+`https://mapwarper.net/maps/tile/14781/{z}/{x}/{y}.png`
+
+7. You can copy and paste this special Tiles URL into the [Leaflet Storymaps with Google Sheets template as described in Chapter 13](leaflet-storymaps-with-google-sheets.html), or other web map tools or code templates that display overlay maps in this format. But it will not work if you paste it into a regular web browser.
+
+You can search for historical maps that have already been georeferenced and transformed into tiles, or contribute to crowdsourcing efforts to align maps, on platforms such as [Mapwarper](https://mapwarper.net), the [New York Public Library Mapwarper](http://maps.nypl.org/warper/).
 
 ## Bulk Geocode with US Census {- #bulk-geocode}
 In Chapter 3: Strengthen Your Spreadsheet Skills, you learned [how to geocode addresses with a Google Sheets Add-On](geocode.html) called [Geocoding by SmartMonkey](https://gsuite.google.com/marketplace/app/geocoding_by_smartmonkey/1033231575312). Geocoding converts street addresses to latitude-longitude coordinates (such as *300 Summit St, Hartford CT, USA* to *41.75, -72.69*) that can be placed on maps. While the Geocoding by SmartMonkey Add-On for Google Sheets works well for medium-sized batches of addresses, sometimes you need a faster geocoding service for larger jobs.
@@ -701,9 +720,6 @@ You can now merge this dataset with your polygons manually using editing capabil
 
 ### Summary {- #summary14}
 
-In this chapter, you learned ...... TODO re-summarize this:
+In this chapter, we delved into geospatial data and the GeoJSON format. You also learned how to use various open-source tools to find geodata, convert and create vector data, and edit and join these layers with spreadsheet data. You also "warped" historical raster map images by georeferencing them onto modern maps. Finally, you acquired some additional strategies to bulk geocode large batches of US addresses, and to pivot point-level data into polygons for use in choropleth maps.
 
-we will delve further into the topic of [geospatial data and its different formats](geojson.html), such as GeoJSON, the open-standard format most commonly used in this book. You'll learn [how to find and extract geographic boundary files in this format](find-geojson.html) from the crowd-sourced OpenStreetMap platform. Also, we'll show how to convert or create your own top-level map layer data using the [GeoJson.io tool](geojsonio.html), and how to edit these layers with spreadsheet data using the [Mapshaper tool](mapshaper.html). Both of these easy-to-learn web-based tools replace most of the need for harder-to-learn geographic information systems, such as the proprietary ArcGIS and the open-source QGIS desktop applications. Moreover, you'll also learn how to georeference a high-quality static map image and transform it into interactive map tiles using the [the MapWarper tool](mapwarper.html). Finally, we'll conclude with strategies to bulk geocode large batches of address data, and to pivot point-level data into polygons to use in choropleth maps. By the end of this chapter, you should feel much more confident navigating the overwhelming world of geospatial data.
-
-In the following chapter, we will talk detecting bias in charts and maps.
-so that you become a better storyteller and a more critical reader.
+In the next chapter, we will discuss how to detect lies and reduce bias in charts and maps, so that you become a more critical consumer of visualizations as well as a better data storyteller.

@@ -344,11 +344,37 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="mapwarper" class="section level2 unnumbered" number="">
 <h2>Georeference with MapWarper</h2>
-<p>TODO: write this section about using <a href="http://mapwarper.net">MapWarper</a>, a tool created and hosted by Tim Waters, to upload and georeference a scanned map. This means to properly position a scanned map based on standard coordinates, so that you can place it as an overlay on an interactive map, such as <a href="leaflet-storymaps-with-google-sheets.html">Leaflet Storymaps with Google Sheets</a>.</p>
-<p>Anyone can upload and georectify a map on the developer’s public site at <a href="http://mapwarper.net" class="uri">http://mapwarper.net</a>, and also see how it’s used by organizations such as the New York Public Library at <a href="http://maps.nypl.org" class="uri">http://maps.nypl.org</a>.</p>
-<p>Warning: MapWarper is a wonderful open-source tool and platform, but service may be interrupted. As of July 2020, the site warns: “Ran out of disk space. Maps older than 2 years will need re-warping to work. Downtime will happen again.”</p>
-<p>MODIFY TEXT FROM CH 13:
-To add a historical map overlay, it first must be <em>georeferenced</em> (also called georectified), which means to digitally align the static map image with a more precise present-day interactive map. If you have a high-quality static image of a historical map, use the <a href="mapwarper.html">Mapwarper tool</a> as described in Chapter 14 to align several known points with those on a present-day interactive map. Mapwarper transforms the static map image into interactive map tiles, and publicly hosts them online with a link in Google/OpenStreetMap format, similar to <code>https://mapwarper.net/maps/tile/14781/{z}/{x}/{y}.png</code>. Or you can search for historical maps that have already been georeferenced and transformed into tiles, or contribute to crowdsourcing efforts to align maps, on platforms such as <a href="https://mapwarper.net">Mapwarper</a>, the <a href="http://maps.nypl.org/warper/">New York Public Library Mapwarper</a>, and the <a href="https://www.davidrumsey.com/view/georeferencer">David Rumsey Map Collection</a>. [TODO: confirm how Rumsey links work] Although map tile links are <em>not</em> viewable in a normal browser, they can be displayed by the Leaflet Storymaps code by entering them into these columns in the <em>Chapters</em> tab of your Google Sheet template:</p>
+<p><a href="http://mapwarper.net">MapWarper</a>, an open-source tool created and hosted by Tim Waters, allows users to upload and georeference (also called georectify) a scanned map image. This means to precisely align the static map image on top of a present-day interactive map. As a result of this process, older map images often appear “warped” when updated for the digital age. After your map image is georeferenced and hosted on this site, a special link allows you to place this raster data as an overlay on an interactive map, such as <a href="leaflet-storymaps-with-google-sheets.html">Leaflet Storymaps with Google Sheets as described in Chapter 13</a>. Anyone can create a free account to upload and georeference a map on the developer’s public MapWarper site. See also how the tool is used by organizations such as the <a href="http://maps.nypl.org">New York Public Library’s digital maps collection</a>.</p>
+<p>Warning: While MapWarper is a wonderful open-source platform, service may be unstable. A July 2020 update states: “Ran out of disk space. Maps older than 2 years will need re-warping to work. Downtime will happen again.” We recommend that users be mindful of the platform’s limitations, but also consider donating funds to the developer to continue this open-source project.</p>
+<p>Follow this abbreviated tutorial to create a georeferenced overlay map, based on a <a href="https://github.com/ericayhayes/georeferencingtutorial">more detailed version by digital librarians Erica Hayes and Mia Partlow</a>.<a href="#fn37" class="footnote-ref" id="fnref37"><sup>37</sup></a></p>
+<ol style="list-style-type: decimal">
+<li><p>Create a free account on <a href="http://mapwarper.net">MapWarper</a>.</p></li>
+<li><p>Upload a high-quality image or scan of a map that has not yet been georeferenced, such as an image of a paper historical map, and enter metadata for others to find it. Follow guidelines about fair-use copyright or works in the public domain.</p></li>
+<li><p>After you upload the image, click on the <em>Rectify</em> tab in the MapWarper interface, and practice moving around the map.</p></li>
+<li><p>Click to add a control point in the historic map window, then click to add a matching control point in the modern map window to align the two images, as shown in Figure <a href="mapwarper.html#fig:mapwarper">14.20</a>. Good control points are stable locations or landmarks that have not changed during the time period between the two maps. For example, major cities, railroad tracks, or road intersections might be a good way to align maps from the early 1900s to today, depending on the map scale and historical context.</p></li>
+</ol>
+
+<div class="figure"><span id="fig:mapwarper"></span>
+<img src="images/14-transform/mapwarper.png" alt="Add control points to align stable locations or landmarks between the historical map (on the right) and the modern map (on the left)." width="750" />
+<p class="caption">
+Figure 14.20: Add control points to align stable locations or landmarks between the historical map (on the right) and the modern map (on the left).
+</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li><p>Add at least 4 or 5 control points to match the two maps and spread them out. When you are satisfied, click the <em>Warp Image</em> button at the bottom of the page. MapWarper transforms the static map image into a set of georeferenced map tiles, which now appear as a layer on top of the modern map.</p></li>
+<li><p>Click the <em>Export</em> tab, and under <em>Map Services</em>, copy the Tiles URL that appears in Google/OpenStreetMap format, similar to this:</p></li>
+</ol>
+<p><code>https://mapwarper.net/maps/tile/14781/{z}/{x}/{y}.png</code></p>
+<ol start="7" style="list-style-type: decimal">
+<li>You can copy and paste this special Tiles URL into the <a href="leaflet-storymaps-with-google-sheets.html">Leaflet Storymaps with Google Sheets template as described in Chapter 13</a>, or other web map tools or code templates that display overlay maps in this format. But it will not work if you paste it into a regular web browser.</li>
+</ol>
+<p>You can search for historical maps that have already been georeferenced and transformed into tiles, or contribute to crowdsourcing efforts to align maps, on platforms such as <a href="https://mapwarper.net">Mapwarper</a>, the <a href="http://maps.nypl.org/warper/">New York Public Library Mapwarper</a>.</p>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="37">
+<li id="fn37"><p><span class="citation">Erica Hayes and Mia Partlow, “Tutorial: Georeferencing and Displaying Historical Maps Using Map Warper and StoryMapJS” (Open Science Framework; OSF, November 20, 2020), <a href="https://doi.org/10.17605/OSF.IO/7QD56" role="doc-biblioref">https://doi.org/10.17605/OSF.IO/7QD56</a></span><a href="mapwarper.html#fnref37" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 

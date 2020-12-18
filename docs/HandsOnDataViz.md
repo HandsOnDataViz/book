@@ -6,7 +6,7 @@ Preface
 ![Book cover: Read about the [hoatzin “reptile
 bird”](https://en.wikipedia.org/wiki/Hoatzin)](images/0-preface/cover-400wide.jpg)
 
-**This BOOK-IN-PROGRESS was last updated on: 16 Dec 2020**.
+**This BOOK-IN-PROGRESS was last updated on: 17 Dec 2020**.
 
 Read the open-access web edition at
 <a href="https://HandsOnDataViz.org" class="uri">https://HandsOnDataViz.org</a>,
@@ -1251,14 +1251,13 @@ nicely together, as Datawrapper allows you to directly import and update
 data from Google Sheets.
 
 In addition to the tools featured in Table <a href="#tab:tools">2.1</a>,
-you’ll also see many more useful tool assistants mentioned in the text,
-including [ColorBrewer to select map colors](map-design.html), the
-[Geocoding by SmartMonkey add-on for Google Sheets](geocode.html), [US
-Census Geocoder for bulk addresses and census
-geography](bulk-geocode.html), and the [Socrata open-repository platform
-visualization tools](filtered-point-map-socrata.html). Also, consider
-enhancing your web security by installing the free [Privacy Badger
-browser extension from the Electronic Frontier
+you’ll also see many more useful add-ons and assistants mentioned in the
+text, including [ColorBrewer to select map colors](map-design.html), the
+[Geocoding by SmartMonkey add-on for Google Sheets](geocode.html), and
+the [W3Schools TryIt iframe
+page](https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_iframe).
+Also, consider enhancing your web security by installing the free
+[Privacy Badger browser extension from the Electronic Frontier
 Foundation](https://privacybadger.org/) to view and exercise some
 control over who’s tracking you, and also review the [EFF’s Surveillance
 Self-Defense Guide](https://ssd.eff.org/).
@@ -5094,10 +5093,12 @@ yourself:
     represent death rate? This question is complex as colors carry
     different associations for different social groups and cultures, but
     try to exercise your best sensitivity.
+
 2.  Can people with color blindness interpret your chart? Palettes that
     contain reds and greens, or yellows and blues can be challenging.
     Consider using [Color Oracle](http://www.colororacle.org/) or
     another simulator to make sure your visualization is accessible.
+
 3.  Will the colors be distinguishable in black-and-white? Even if you
     don’t expect viewers printing your chart, they may. You can use
     Color Oracle or another simulator to check that your colors have
@@ -5127,6 +5128,16 @@ values, not bright colors or secondary components like the axes lines.
 <p class="caption">
 Figure 7.11: Make sure important things catch the eye first.
 </p>
+
+In summary, good chart design requires training your eyes and your brain
+to understand what works and what fails when telling data stories. Build
+up your data visualization muscles by looking at lots of different
+charts, both bad and good ones. For example, browse through both the
+[Data Is Beautiful](https://www.reddit.com/r/dataisbeautiful/) and [Data
+is Ugly](https://www.reddit.com/r/dataisugly/) pages on Reddit. Read
+comments by other readers, but develop your own opinions, which may not
+necessarily match those expressed by others. Also, it’s a fun way to
+learn!
 
 Google Sheets Charts
 --------------------
@@ -5755,41 +5766,48 @@ Another free and collaborative tool for creating interactive charts is
 over Google Sheets. First, you can start creating in Datawrapper right
 away in your browser, even without creating an account, and its
 four-step process is intuitive for many new users. Second, you can add
-credit bylines, data sources, and even allow visitors to download your
-data from links inside your Datawrapper visualizations that you publish
-online, which makes your work more credible and accessible. Third,
-Datawrapper supports a wider array of interactive chart types than
-Google Sheets, as well as other visualizations we’ll discuss later, such
-as [maps in chapter 8](map.html) and [tables in chapter 9](table.html).
-You can build all of the basic charts we’ve constructed so far in this
-chapter, as well as three new types where Datawrapper stands out:
+credit bylines, links to data sources, and even allow visitors to
+download the data from a button inside your Datawrapper visualizations
+that you publish online, which makes your work more credible and
+accessible. Third, Datawrapper supports a wider array of interactive
+chart types than Google Sheets, as well as [maps, which we’ll discuss in
+chapter 8](map.html) and [tables, in chapter 9](table.html). With
+Datawrapper, you can build all of the basic charts we’ve constructed so
+far in this chapter, as well as three new types we’ll cover below:
 [annotated charts](annotated-datawrapper.html), [range
 charts](range-datawrapper.html), and [scatter and bubble
 charts](scatter-bubble-datawrapper.html). Later, you’ll learn [how to
 embed interactive Datawrapper charts on your website in Chapter
 10](embed.html).
 
-We highly recommend the [Datawrapper Academy support
-pages](https://academy.datawrapper.de/), the extensive [gallery of
-examples](https://www.datawrapper.de/tables/), and well-designed
-[training materials](https://www.datawrapper.de/training-materials/) to
-help you and others learn beyond the basics covered here. We’re also
-impressed that [Datawrapper Core is open-source
-code](https://github.com/datawrapper/datawrapper), which stands out in
-contrast to larger competitors, though we understand that most of the
-platform’s plugins that create charts and maps are not open-source.
+While no single tool does everything, we recommend that you consider
+using both Google Sheets and Datawrapper, which turns this pair of
+easy-to-use tools into a visualization powerhouse. First, use Google
+Sheets as your spreadsheet to [organize and analyze your data as
+described in Chapter 3](spreadsheet.html), [record your detailed source
+notes and save raw data files as described in Chapter 4](find.html), and
+[clean up your data as described in Chapter 5](clean.html). Although
+Datawrapper can transpose data (swap the rows and columns), it cannot
+create pivot tables or lookup and merge data as spreadsheets can do.
+Second, import your data from Google Sheets to Datawrapper to create
+visualizations, because the latter tool offers you more control over
+their appearance, annotations, and additional features described below.
+You’ll discover that Datawrapper plays nicely with Google Sheets by
+accepting a direct link to data stored there. Together, Google Sheets
+and Datawrapper are a powerful combination.
 
-While Datawrapper is fabulous, it cannot fulfill all of your data
-visualization needs. You’ll still need a spreadsheet tool, such as
-Google Sheets, to [organize and analyze your data as described in
-Chapter 3](spreadsheet.html), [record your detailed source notes and
-save raw data files as described in Chapter 4](find.html), and [clean up
-your data as described in Chapter 5](clean.html). While Datawrapper can
-transpose data (swap the rows and columns), it cannot create pivot
-tables or lookup and merge data from different columns, which Google
-Sheets and other spreadsheet tools can do. The main reason we start this
-chapter with Google Sheets is because it’s simpler for newcomers to use
-one tool for both spreadsheets and basic charts.
+In addition, we strongly recommend the high-quality [Datawrapper Academy
+support pages](https://academy.datawrapper.de/), the extensive [gallery
+of examples](https://www.datawrapper.de/tables/), and well-designed
+[training materials](https://www.datawrapper.de/training-materials/).
+Reading these will not only teach you which buttons to press, but more
+importantly, how to design better visualizations that tell true and
+meaningful stories about your data. While writing this book, we learned
+a great deal from Datawrapper Academy, and we give credit and specific
+links in sections below. Finally, one more plus is that [Datawrapper
+Core is open-source code](https://github.com/datawrapper/datawrapper),
+though that does not apply to most of the platform’s plugins to create
+charts and maps.
 
 Now you’re ready to use Datawrapper to create new types of charts that
 step beyond the basics. But if Datawrapper or the chart types in this
@@ -6692,22 +6710,23 @@ maps as *static* images, our book also demonstrates how to construct
 in their web browsers. Later you’ll learn how to [embed interactive
 charts on your website in Chapter 10](embed.html).
 
-Learn about different types of maps you can create in this book in Table
-<a href="#tab:map-types">8.1</a>. Decisions about map types are based on
-two main factors: the format of your data, and the kind of story you
-wish to tell. For example, point maps work best to show specific
-locations with colored markers to represent categories (such as
-hospitals), while choropleth maps are best suited to display relative
-values for regions (such as birth rates across US states). After
-selecting your map type, follow our tool recommendations and
-step-by-step tutorials. This chapter features *Easy Tools* with
-drag-and-drop menus, such as [Google My Maps](mymaps.html),
-[Datawrapper](symbolmap-datawrapper.html), and [Tableau
-Public](map-tableau.html). But the table also points you to *Power
-Tools* that give you more control to customize and host your
-visualizations, such as [Leaflet code templates in Chapter
-13](leaflet.html). These advanced tools require prior knowledge on how
-to [edit and host code templates with GitHub in Chapter
+Decisions about map types are based on two main factors: the format of
+your data, and the kind of story you wish to tell. Learn about different
+types of maps you can create in this book in Table
+<a href="#tab:map-types">8.1</a>. For example, point maps work best to
+show specific locations with colored markers to represent categories
+(such as hospitals), while choropleth maps are best suited to display
+relative values for regions (such as birth rates across US states).
+After selecting your map type, follow our tool recommendations and
+step-by-step tutorials that appear in the sections that follow. This
+chapter features *Easy Tools* with drag-and-drop menus, such as [Google
+My Maps](mymaps.html), [Datawrapper](symbolmap-datawrapper.html),
+[Tableau Public](map-tableau.html), and the [Socrata Open Data
+platform](map-socrata.html) to create continually-updated maps. But the
+table also points you to *Power Tools* that give you more control to
+customize and host your visualizations, such as [Leaflet code templates
+in Chapter 13](leaflet.html). These advanced tools require prior
+knowledge on how to [edit and host code templates with GitHub in Chapter
 11](github.html).
 
 <table>
@@ -6729,7 +6748,7 @@ to [edit and host code templates with GitHub in Chapter
 </tr>
 <tr class="even">
 <td>Symbol point map<br> <img src="images/08-map/tablemap-symbol.png" /></td>
-<td>Best to show specific locations (such as cities), with variable-sized shapes or colors to represent data values (such as population growth).<br>Easy tool: <a href="symbolmap-datawrapper.html">Symbol Point Map with Datawrapper tutorial</a></td>
+<td>Best to show specific locations (such as cities), with variable-sized shapes or colors to represent data values (such as population growth). <br>Easy tool: <a href="symbolmap-datawrapper.html">Symbol Point Map with Datawrapper tutorial</a></td>
 </tr>
 <tr class="odd">
 <td>Choropleth (colored polygon) map <br> <img src="images/08-map/tablemap-choropleth.png" /></td>
@@ -6762,8 +6781,6 @@ to [edit and host code templates with GitHub in Chapter
 </tbody>
 </table>
 
-TODO above: update 3 images
-
 Map Design Principles
 ---------------------
 
@@ -6793,9 +6810,10 @@ this section, we’ll identify a few rules about map design, but you may
 be surprised to learn that some rules are less rigid than others, and
 can be “broken” when necessary to emphasize a point, as long as you are
 honestly interpreting the data. To begin to understand the difference,
-let’s start by establishing a common vocabulary about maps.
+let’s start by establishing a common vocabulary about maps by breaking
+one down into its elements.
 
-### Deconstruct a Map
+### Deconstructing a Map
 
 Our book features how to create *interactive* web maps, also called
 *tiled maps* or *slippy maps*, because users can zoom into and pan
@@ -6856,16 +6874,17 @@ organizations that helped to create them.
 ### Clarify Point versus Polygon Data
 
 Before you start to create a map, make sure you understand your data
-format and what it represents. Avoid mistakes commonly made by novices
-by pausing to ask these questions. First, *Can your data be mapped?*
-Sometimes the information we collect has no geographic component, or no
-consistent one, which makes it difficult or impossible to place on a
-map. If the answer is yes, then proceed to the second question: *Can the
-data be mapped as points or polygons?* These are the two most likely
-cases (which are sometimes confused), in contrast to the less-common
-third option, polylines, which represent paths and routes.
+format and what it represents. Avoid novice mistakes by pausing to ask
+these questions. First, *Can your data be mapped?* Sometimes the
+information we collect has no geographic component, or no consistent
+one, which makes it difficult or impossible to place on a map. If the
+answer is yes, then proceed to the second question: *Can the data be
+mapped as points or polygons?* These are the two most likely cases
+(which are sometimes confused), in contrast to the less-common third
+option, polylines, which represent paths and routes.
 
-What type of data do you see listed below: points or polygons?
+To help you understand the difference, let’s look at some examples. What
+type of data do you see listed below: points or polygons?
 
 1.  36.48, -118.56 (latitude and longitude for Joshua Tree National
     Park, CA)
@@ -6881,7 +6900,8 @@ In most cases, numbers 1-4 represent *point* data because they usually
 refer to a *specific locations* that can be displayed as point markers
 on a map. By contrast, numbers 5-8 generally represent *polygon* data
 because they usually refer to *geographic boundaries* that can be
-displayed as closed shapes on a map.
+displayed as closed shapes on a map. See examples of both point and
+polygon maps in previous Table <a href="#tab:map-types">8.1</a>.
 
 This point-versus-polygon distinction applies *most* of the time, but
 not always, with exceptions depending on your data story. First, it is
@@ -6914,7 +6934,12 @@ polygons, since those two categories are sometimes confused. If you
 envision them as points, then create a point-style map; or if polygons,
 then create a choropleth map. Those are the most common methods used by
 mapmakers, but there are plenty of exceptions, depending on your data
-story.
+story. Later in this chapter you’ll learn how to make a [basic point map
+in Google MyMaps](mymaps.html) and a [symbol point map in
+Datawrapper](symbolmap-datawrapper.html), then we’ll demonstrate how to
+visualize polygon-level data with a [choropleth map in
+Datawrapper](choropleth-datawrapper.html) and [also in Tableau
+Public](map-tableau.html).
 
 ### Map One Variable, Not Two
 
@@ -6972,16 +6997,16 @@ its appearance on the map. Stacking together lots of small slices
 reveals more detail than one big slice.
 
 For example, compare the two choropleth maps of typical home values in
-the Northeastern United States in according to [Zillow research
+the Northeastern United States, according to [Zillow research
 data](https://www.zillow.com/research/data/) for September 2020. Zillow
 defines typical values as a smoothed, seasonally adjusted measure of all
 single-family residences, condos, and coops in the 35th to 65th
 percentile range, similar to the median value at the 50th percentile,
 with some additional lower- and higher-value homes. Both choropleth maps
 use the same scale. The key difference is the size of the geographic
-units: the first map shows home values at the larger state level, while
-the second map shows home values at the smaller county level, as shown
-in Figure <a href="#fig:zillow-northeast">8.4</a>.
+units. In Figure <a href="#fig:zillow-northeast">8.4</a>, the map on the
+left shows home values at the larger state level, while the map on the
+right shows home values at the smaller county level.
 
 <img src="images/08-map/zillow-northeast.png" alt="Zillow typical home values in September 2020 shown at the larger state level (left) versus the smaller county level (right)." width="500" />
 <p class="caption">
@@ -7010,31 +7035,33 @@ story.
 Design Choropleth Colors & Intervals
 ------------------------------------
 
-When you build a choropleth map, your choices about how to represent
-data with colors will determine its overall appearance, so it’s
-important to learn key principles. Good choropleth maps make true and
-insightful geographic patterns clearly visible to readers, whether they
-are printed in black-and-white on paper or displayed in color on a
-computer screen. Furthermore, the best choropleth maps are designed to
-be interpreted correctly by people with colorblindness. For an excellent
-overview of visualization colors in general, see Lisa Charlotte Rost’s
-“[A Friendly Guide to Colors in Data
-Visualization](https://blog.datawrapper.de/colorguide/)” and “[How to
-Pick More Beautiful Colors for Your Data
+This section takes a deeper dive into map design principles for
+choropleth maps. Your choices about how to represent data with colors
+dramatically shapes their appearance, so it’s very important to learn
+key concepts to ensure that your maps tell true and meaningful stories.
+Good choropleth maps make true and insightful geographic patterns
+clearly visible to readers, whether they are printed in black-and-white
+on paper or displayed in color on a computer screen. Furthermore, the
+best choropleth maps are designed to be interpreted correctly by people
+with colorblindness. For an excellent overview of visualization colors
+in general, see Lisa Charlotte Rost’s “[A Friendly Guide to Colors in
+Data Visualization](https://blog.datawrapper.de/colorguide/)” and “[How
+to Pick More Beautiful Colors for Your Data
 Visualizations](https://blog.datawrapper.de/beautifulcolors/index.html),”
 both on the Datawrapper blog.[30]
 
-To illustrate key concepts about colors in choropleth maps, let’s
-explore a wonderful design assistant called
+The best way to illustrate how color choices affect choropleth map
+design is with a wonderful online design assistant called
 [ColorBrewer](https://colorbrewer2.org/), created by Cynthia Brewer and
-Mark Harrower.[31] Since ColorBrewer is a design assistant, you do *not*
-upload your map data directly into it. Instead, you select the type of
-data you wish to display in your choropleth map, and ColorBrewer will
-recommend color palettes that work best with your data story. Then you
-can export those color codes into your preferred choropleth mapping
-tool, as shown in the [Datawrapper](choropleth-datawrapper.html) and
-[Tableau Public](map-tableau.html) tutorials below. See the ColorBrewer
-interface in Figure <a href="#fig:map-colorbrewer">8.5</a>.
+Mark Harrower.[31] Unlike other tools in this book, you do not upload
+data directly into ColorBrewer to generate your visualization. Instead,
+you select the type of data you wish to display in your choropleth map,
+and ColorBrewer will assist you by recommending color palettes that work
+best with your data story. Then you can export those color codes into
+your preferred choropleth mapping tool, as shown in the
+[Datawrapper](choropleth-datawrapper.html) and [Tableau
+Public](map-tableau.html) tutorials below. See the ColorBrewer interface
+in Figure <a href="#fig:map-colorbrewer">8.5</a>.
 
 <img src="images/08-map/map-colorbrewer-annotated.png" alt="The ColorBrewer design assistant interface: data classes, type of color scheme, and recommended color codes."  />
 <p class="caption">
@@ -7135,16 +7162,15 @@ codes in various formats.
 ### Choose Color Intervals to Group Choropleth Map Data
 
 Another important design choice is color intervals, which determine how
-you group and display data on your choropleth map. This is a powerful
-set of decisions that dramatically shapes how your map appears in
-readers’ eyes, and the message conveyed by your data story. You will
-need to consider several options in this multi-step decision-making
-process, and although there are few uniform design rules, we will offer
-guidance and recommendations. Since options for selecting intervals vary
-across different mapping tools, we will explain broad concepts in this
-section, with occasional screenshots from Datawrapper and Tableau
-Public, but will save the details for those specific tutorials later in
-the chapter.
+you group and display data on your choropleth map. This powerful set of
+decisions will dramatically shape how your map appears in readers’ eyes,
+and the message conveyed by your data story. You will need to consider
+several options in this multi-step decision-making process, and although
+there are few uniform design rules, we will offer guidance and
+recommendations. Since options for selecting intervals vary across
+different mapping tools, we will explain broad concepts in this section,
+with occasional screenshots from Datawrapper and Tableau Public, but
+will save the details for those specific tutorials later in the chapter.
 
 Some mapping tools allow you to choose between two different *types of
 color intervals* to show movement up or down a data scale, as shown in
@@ -7198,11 +7224,10 @@ classes and color palettes.
 </p>
 
 Some choropleth mapping tools also allow you to choose how to
-*interpolate* your data, meaning the mathematical method for grouping
-numbers to represent similar colors on your map. For example,
-Datawrapper displays two different sets of drop-down menus for
-interpolation options, depending on whether you chose steps or
-continuous, as shown in Figure
+*interpolate* your data, meaning the method for grouping numbers to
+represent similar colors on your map. For example, Datawrapper displays
+two different sets of drop-down menus for interpolation options,
+depending on whether you chose steps or continuous, as shown in Figure
 <a href="#fig:interpolation-datawrapper-combined">8.11</a>.
 
 <img src="images/08-map/interpolation-datawrapper-combined.png" alt="Interpolation options for steps (left) and continuous (right) in Datawrapper." width="650" />
@@ -7232,7 +7257,7 @@ options in three basic categories:
 -   *Linear* places your data values in a straight line, from lowest to
     highest. This method works best when the data are evenly
     distributed, or if you wish to draw attention to the low and high
-    extremes in your data, which will stand out in light and dark
+    extremes in your data, since they will stand out in light and dark
     colors.
 
 -   *Quantiles* divide your data values into groups of an equal number.
@@ -7284,7 +7309,8 @@ will improve your skills the same way we did, by reading widely, looking
 at different maps, and testing various ways to visualize your data.
 Become more aware of how your decisions about color intervals can
 dramatically alter how the data appears to readers. Most important,
-create maps that tell truthful and insightful data stories.
+create maps that focus on telling your story and truthfully representing
+the data.
 
 Normalize Choropleth Map Data
 -----------------------------
@@ -7348,11 +7374,19 @@ So the map with per-capita values is a much better illustration to the
 story about New York being the *first* epicenter of the Covid-19 crisis
 in the United States.
 
-At this point, you should have a better idea of key principles in map
-design, and what makes them work (or not) when communicating data images
-to our eyes. In the next section, we’ll begin our first hands-on
-tutorial with creating a point map. Later in the chapter we’ll return to
-exercises in creating choropleth maps.
+At this point, you should have a better idea of key principles and best
+practices in map design. Now that we’ve covered key concepts for
+interactive maps in general, and choropleth maps in particular, we will
+pivot to a series of hands-on tutorials with our recommended tools. In
+our first tutorial, we will create a [point map with custom icons in
+Google MyMaps](mymaps.html) to show information about specific locations
+with pop-up windows. In our second tutorial, we will build a [symbol
+point map in Datawrapper](symbolmap-datawrapper.html) that uses colored
+circles of varying sizes to represent population change for specific
+cities. Our final tutorials in this chapter will return to the topic of
+designing [choropleth maps in Datawrapper](choropleth-datawrapper.html)
+and also [in Tableau Public](map-tableau.html) in order to compare these
+two tools.
 
 Point Map with Google My Maps
 -----------------------------
@@ -7374,10 +7408,11 @@ can share a public link to your map or embed it on your website, a step
 that you’ll learn more about in [Chapter 10: Embed on the
 Web](embed.html).
 
-In this section, we will construct a sample point map of museums and
-parks in North America, with two different groups of styled markers, as
-shown in Figure <a href="#fig:mymaps-final">8.15</a>. Follow the steps
-below to create your own version.
+In this section, we will construct a point map of museums and parks in
+North America, with two different groups of styled markers and a custom
+photo icon. When users click on a marker, additional text, links, and
+images appear in the pop-up window, as shown in Figure
+<a href="#fig:mymaps-final">8.15</a>.
 
 <img src="images/08-map/mymaps-final.png" alt="Point map of parks and museums created with Google My Maps. Explore the [interactive version](https://www.google.com/maps/d/u/1/edit?mid=1W6VujVZzB1Y1D1tktLVhO99ZabyOZABr&usp=sharing)."  />
 <p class="caption">
@@ -7385,6 +7420,9 @@ Figure 8.15: Point map of parks and museums created with Google My Maps.
 Explore the [interactive
 version](https://www.google.com/maps/d/u/1/edit?mid=1W6VujVZzB1Y1D1tktLVhO99ZabyOZABr&usp=sharing).
 </p>
+
+To create your own interactive point map with custom icons, follow this
+tutorial:
 
 1.  Open the [Parks and Museums data in Google
     Sheets](https://docs.google.com/spreadsheets/d/11nSoyGUxDJiBe5VZflDnaaqgWMdWyIUNnjNLMlGOPLk/edit#gid=312385679),
@@ -7618,8 +7656,8 @@ My Maps platform offers. Learn more at the [Google My Maps support
 page](https://support.google.com/mymaps).
 
 In the next section, we will explore a more powerful tool called
-Datawrapper to create symbol point maps, where each the size of each
-circle (or other shapes) represents the data value for that specific
+Datawrapper to create symbol point maps, where the size and color of
+each circle (or other shapes) represents data values for that specific
 point.
 
 Symbol Point Map with Datawrapper
@@ -7632,18 +7670,18 @@ professional-looking design elements. With Datawrapper you can start to
 work right away in your browser, with no account required unless you
 wish to save and share your work online.
 
-In this section, you’ll learn how to create a symbol point map, which
-displays specific locations using variable-sized shapes or colors to
-represent their data values. Our sample symbol map displays about 300
-major US cities as point locations with two variables: the 2019
-estimated population (using circle size) and the percent change in
-population since 2010 (using circle color), as shown in Figure
-<a href="#fig:datawrapper-symbolmap">8.34</a>. Remember that we use
-*point* data to create symbol maps, but *polygon* data to create
-choropleth maps, and you’ll learn how to design those with Datawrapper
-in the subsequent section. Later in the book, we’ll explain [how to
-embed your interactive Datawrapper maps on the web in Chapter
-10](embed.html).
+In this section, you’ll learn how to create a symbol point map. Unlike
+the [basic point map in the Google MyMaps tutorial](mymaps.html), a
+symbol point map shows data for specific locations through shapes of
+varying size or color. In Figure
+<a href="#fig:datawrapper-symbolmap">8.34</a>, sample symbol map
+displays population change for 300 major US cities as point locations
+with two variables: circle size (for 2019 population size) and circle
+color (for percent change since 2010). Remember that we use *point* data
+to create symbol maps, but *polygon* data to create choropleth maps,
+which you’ll learn how to create in the following sections. Later we’ll
+explain [how to embed your interactive Datawrapper maps on the web in
+Chapter 10](embed.html).
 
 <img src="images/08-map/datawrapper-symbolmap.png" alt="Symbol point map of US city population growth with Datawrapper. Explore the [interactive version](https://datawrapper.dwcdn.net/V0V9Y)."  />
 <p class="caption">
@@ -7663,12 +7701,10 @@ symbol point map, follow this tutorial.
     Census](https://www.census.gov/data/tables/time-series/demo/popest/2010s-total-cities-and-towns.html).
     But during this time period, some cities were newly incorporated or
     merged with outlying areas, which skews their population data over
-    time. Also, we collected data for 5 major cities in Puerto Rico, a
-    US territory, but they do not appear in the Datawrapper map for
-    reasons explained in step 4.
-
-TODO: asked Datawrapper to fix Puerto Rico geocoding issue with their
-USA &gt; States and Territories map
+    time. Note also that we included data for Washington, DC (a major
+    city not located in a US state) and for 5 major cities in Puerto
+    Rico (not a state, but a US territory where residents are US
+    citizens), so we’ll select an appropriate map to include them below.
 
 Good maps often require [cleaning up messy data as described in Chapter
 5](clean.html). In our spreadsheet we narrowed the original list down to
@@ -7694,17 +7730,16 @@ calculated this way: `(2019 - 2010) / 2010 * 100`.
 Figure 8.35: Start to create a symbol map in Datawrapper.
 </p>
 
-1.  In the *Select your map* screen, enter *USA* and search for options.
-    Note that we selected *USA &gt; *States\* as our best current
-    option, because *USA &gt; States and Territories* does not yet
-    correctly display geocoded locations for Puerto Rico, a US
-    territory. Proceed to the next screen.
+1.  In the *Select your map* screen, search for *USA &gt; States and
+    Territories* to include Puerto Rico, rather than the *USA &gt;
+    *States\* option that appears closer to the top of the list. Proceed
+    to the next screen.
 
 2.  In the *Add your data* screen, click the *Import your dataset*
     button. In the next window, click the *Addresses and Place Names*
-    button because our data is organized this way. In the *Import*
-    window, click to *Upload a CSV file*, and select the file you
-    downloaded above.
+    button to inform Datawrapper that our information is organized this
+    way. In the *Import* window, click to *Upload a CSV file*, and
+    select the file you downloaded above.
 
 3.  In the *Match your columns* screen, select the *City-State* column
     to be *Matched as Address*, then scroll down to click the *Next*
@@ -7733,12 +7768,12 @@ Figure 8.37: Refine your map by selecting data to display symbol shapes,
 sizes, and colors.
 </p>
 
-1.  If you wish to customize the color palette and intervals to match
+1.  Optionally, to customize the color palette and intervals to match
     our example, click the *wrench symbol* next to the palette. Click
-    the *Import colors* button and paste in five hexadecimal codes from
-    ColorBrewer, as described in the [Choropleth Design
-    section](design-choropleth.html). The first code is dark pink,
-    followed by a 4-class sequential green:
+    the *Import colors* button and you can paste in the five hexadecimal
+    codes listed below from ColorBrewer, as described in the [Choropleth
+    Design section](design-choropleth.html). The first code is dark
+    pink, followed by a 4-class sequential green:
     `#d01c8b,#bae4b3,#74c476,#31a354,#006d2c`. See Figure
     <a href="#fig:datawrapper-symbolmap-colors">8.38</a>.
 
@@ -7794,14 +7829,16 @@ map.
 Choropleth Map with Datawrapper
 -------------------------------
 
-Now that you’ve learned how to use [Datawrapper to create
+Now let’s pivot from point maps to polygon maps. Since you’ve already
+learned how to use [Datawrapper to design
 charts](chart-datawrapper.html) and [symbol
-maps](datawrapper-symbolmap.html), let’s design a choropleth map. These
-maps are best to show patterns across geographic areas by coloring
-polygons to represent data values. Datawrapper offers a wide collection
-of common geographical boundaries, including world regions, states and
-provinces, and also hexagons (cartograms), counties, congressional
-districts, and census tracts for the United States.
+maps](datawrapper-symbolmap.html), let’s use this tool to create a
+choropleth map, which look like colored polygons. Choropleth maps are
+best for showing patterns across geographic areas by coloring polygons
+to represent data values. Datawrapper offers a wide collection of common
+geographical boundaries, including world regions, states and provinces,
+and also hexagons (cartograms), counties, congressional districts, and
+census tracts for the United States.
 
 In this section, you’ll create a choropleth map of typical home values
 for US states in August 2020 according to the [Zillow Home Value
@@ -7863,15 +7900,16 @@ Figure 8.41: In Datawrapper, click *New Map*, and choose *Choropleth*.
 Figure 8.42: Choose *USA - States and Territories* for your map outline.
 </p>
 
-Hint: If Datawrapper does not list your preferred map outline, you can
+Tip: If Datawrapper does not list your preferred map outline, you can
 upload your own custom geography data in GeoJSON or TopoJSON format,
 which you will learn more about in the [GeoJSON data section of Chapter
 14](geojson.html).
 
 1.  In the *Add your data* screen, you can manually enter data for each
     area, which would be fine for just a few, but not for 50 states.
-    Instead, scroll down and click the *Import your dataset* button, as
-    shown in Figure <a href="#fig:datawrapper-import-dataset">8.43</a>.
+    Instead, scroll down below the *add data* table and click the
+    *Import your dataset* button, as shown in Figure
+    <a href="#fig:datawrapper-import-dataset">8.43</a>.
 
 <img src="images/08-map/datawrapper-import-dataset.png" alt="Scroll down below the *add data* table to import your dataset." width="200" />
 <p class="caption">
@@ -7942,7 +7980,7 @@ wish to map.
 1.  In the *Visualize* screen, under the *Refine* tab, click the *wrench
     symbol* next to the color palette to review the *default* map
     settings, as shown in Figure
-    <a href="#fig:datawrapper-map-default">8.47</a>. Never automatically
+    <a href="#fig:datawrapper-map-default">8.47</a>. Do not blindly
     accept the default map, but it’s a good place to start and explore
     how factors shape its appearance.
 
@@ -8006,10 +8044,17 @@ publish and share it with others.
 
 1.  Under the *Refine* tab, customize the legend format. For example, to
     convert long numbers (such as 107762) into abbreviated dollars ($
-    108 k), we selected *custom format* and inserted the code `($ 0 a)`.
+    108 k), we selected *custom format* and inserted the code `($ 0 a)`,
+    as shown in Figure
+    <a href="#fig:datawrapper-map-legend-custom">8.50</a>. Learn more
+    about Datawrapper custom formats in their link to the [numeral.js
+    documentation](http://numeraljs.com/#format).
 
-TODO above: Add screenshot of where to enter codes in legend format, as
-reviewer requested.
+<img src="images/08-map/datawrapper-map-legend-custom.png" alt="Change how numbers appear in the legend by entering a custom format." width="350" />
+<p class="caption">
+Figure 8.50: Change how numbers appear in the legend by entering a
+custom format.
+</p>
 
 1.  Under the *Annotate* tab, add a title, description, and source
     credits, to add credibility to your work. You can also add map
@@ -8018,18 +8063,15 @@ reviewer requested.
     is to click on blue column names, or format them using their
     drop-down menus, to make the proper codes appear in double curly
     brackets, as shown in Figure
-    <a href="#fig:datawrapper-map-tooltip">8.50</a>. Learn more about
+    <a href="#fig:datawrapper-map-tooltip">8.51</a>. Learn more about
     [customizing tooltips from Datawrapper
     Academy](https://academy.datawrapper.de/article/116-how-to-create-useful-tooltips-for-your-maps).
 
 <img src="images/08-map/datawrapper-map-tooltip.png" alt="To edit tooltips, click the blue column names or use drop-down menus to format the codes." width="600" />
 <p class="caption">
-Figure 8.50: To edit tooltips, click the blue column names or use
+Figure 8.51: To edit tooltips, click the blue column names or use
 drop-down menus to format the codes.
 </p>
-
-TODO above: ADD example of how to customize tooltips and add
-annotations, as reviewer requested here.
 
 1.  Finally, click *Proceed* or advance to the *Publish & Embed* screen
     to share your work with others. Follow the prompts, or the more
@@ -8037,7 +8079,7 @@ annotations, as reviewer requested here.
     interactive map, and learn more about your next steps in [Chapter
     10: Embed on the Web](embed.html).
 
-Learn more about [choropleth map design in this excellent series of
+Tip: Learn more about [choropleth map design in this excellent series of
 posts by the Datawrapper
 Academy](https://academy.datawrapper.de/category/93-maps).
 
@@ -8053,20 +8095,27 @@ We first introduced you to the free Tableau Public desktop application
 and [filtered line charts](filtered-line-tableau.html) in Chapter 7. Now
 let’s use the same tool to create an interactive choropleth map, and
 compare the process with the Datawrapper tool we learned in the prior
-section. Tableau Public can create many different types of map for
-geographical place names or ISO codes it already recognizes, such as
-nations, states, counties, and airports. But Tableau Public cannot
-geocode street addresses by itself, so you’ll need to obtain their
-latitude and longitude with another tool, such as those described in the
-[geocode section of Chapter 3](geocode.html). Furthermore, if you want
-to upload customized map boundaries, learn how to [Create Tableau Maps
-from Spatial
+section. We’re showing you how to create the same type of map with both
+tools, in order to show you the difference. On one hand, Datawrapper
+gives you more control over interpolating data and shaping the
+appearance of color intervals in your choropleth map. On the other hand,
+some people prefer Tableau Public because they’re already familiar with
+its interface.
+
+Tableau Public can create many different types of map for geographical
+place names or ISO codes it already recognizes, such as nations, states,
+counties, and airports. But Tableau Public cannot geocode street
+addresses by itself, so you’ll need to obtain their latitude and
+longitude with another tool, such as those described in the [geocode
+section of Chapter 3](geocode.html). Furthermore, if you want to upload
+customized map boundaries, learn how to [Create Tableau Maps from
+Spatial
 Files](https://help.tableau.com/current/pro/desktop/en-us/maps_shapefiles.htm)
 on the support page.
 
 In this section, we will create a choropleth map of healthcare spending
 per country as a percentage of their gross domestic product (GDP), as
-shown in Figure <a href="#fig:tableau-polygon-final">8.51</a>. Remember
+shown in Figure <a href="#fig:tableau-polygon-final">8.52</a>. Remember
 that choropleth maps work best when we [normalize the
 data](normalize-choropleth.html) to show relative, rather than absolute,
 numbers. Creating a map of total health spending per country would not
@@ -8081,14 +8130,14 @@ enter an email address to download the application.
 
 <img src="images/08-map/tableau-polygon-final.png" alt="Choropleth map of healthcare spending with Tableau Public. Explore the [interactive version](https://public.tableau.com/profile/ilya7257#!/vizhome/2017HealthcareSpendingbyCountryasofGDP/Dashboard1). Data from the World Bank."  />
 <p class="caption">
-Figure 8.51: Choropleth map of healthcare spending with Tableau Public.
+Figure 8.52: Choropleth map of healthcare spending with Tableau Public.
 Explore the [interactive
 version](https://public.tableau.com/profile/ilya7257#!/vizhome/2017HealthcareSpendingbyCountryasofGDP/Dashboard1).
 Data from the World Bank.
 </p>
 
 Let’s look at the steps involved to create a choropleth from Figure
-<a href="#fig:tableau-polygon-final">8.51</a> in detail.
+<a href="#fig:tableau-polygon-final">8.52</a> in detail.
 
 1.  Open the [Healthcare Spending by Nation as Percent of GDP data in
     Google
@@ -8127,26 +8176,26 @@ sheet, and connected to it directly.
     automatically, so you need to manually change the data type. To do
     so, click the data type icon (e.g. globe or a green `#` for numeric
     values), and then choose *Geographic Role &gt; Country/Region* as
-    shown in Figure <a href="#fig:tableau-data-geographic">8.52</a>.
+    shown in Figure <a href="#fig:tableau-data-geographic">8.53</a>.
 
 <img src="images/08-map/tableau-data-geographic.png" alt="Make sure Tableau Public knows that the Country Name column contains geographic data." width="400" />
 <p class="caption">
-Figure 8.52: Make sure Tableau Public knows that the Country Name column
+Figure 8.53: Make sure Tableau Public knows that the Country Name column
 contains geographic data.
 </p>
 
 1.  In the bottom-left corner, click the orange *Sheet 1* button to
     create a worksheet with your first visualization, as shown in Figure
-    <a href="#fig:tableau-go-to-worksheet">8.53</a>.
+    <a href="#fig:tableau-go-to-worksheet">8.54</a>.
 
 <img src="images/08-map/tableau-go-to-worksheet.png" alt="Click the orange button to go sheet 1 where you can create your map." width="400" />
 <p class="caption">
-Figure 8.53: Click the orange button to go sheet 1 where you can create
+Figure 8.54: Click the orange button to go sheet 1 where you can create
 your map.
 </p>
 
 1.  In *Sheet 1*, create your choropleth map using a two-step process,
-    as shown in Figure <a href="#fig:tableau-drag">8.54</a>. First,
+    as shown in Figure <a href="#fig:tableau-drag">8.55</a>. First,
     drag-and-drop the *Country Name* field into the middle of the
     worksheet (alternatively to the Detail box of the Marks card) to
     create the map. The default view is the symbol map, which we need to
@@ -8156,7 +8205,7 @@ your map.
 
 <img src="images/08-map/tableau-drag-annotated.png" alt="Drag and drop *Country Name* to the center of the sheet, then *Health Spending As % of GDP* to the *Color* box in the *Marks* card."  />
 <p class="caption">
-Figure 8.54: Drag and drop *Country Name* to the center of the sheet,
+Figure 8.55: Drag and drop *Country Name* to the center of the sheet,
 then *Health Spending As % of GDP* to the *Color* box in the *Marks*
 card.
 </p>
@@ -8168,11 +8217,11 @@ card.
 2.  You can change the color palette by clicking the Color box of the
     Marks card, and then *Edit colors*. Change the palette to *Green*,
     and change it from continuous to steps, as shown in Figure
-    <a href="#fig:tableau-polygon-color">8.55</a>.
+    <a href="#fig:tableau-polygon-color">8.56</a>.
 
 <img src="images/08-map/tableau-polygon-color.png" alt="Change the color scheme to Green with 5 steps." width="400" />
 <p class="caption">
-Figure 8.55: Change the color scheme to Green with 5 steps.
+Figure 8.56: Change the color scheme to Green with 5 steps.
 </p>
 
 1.  When you hover over countries, you will notice a tooltip that tells
@@ -8183,11 +8232,11 @@ Figure 8.55: Change the color scheme to Green with 5 steps.
     to just `Country` (do not change the grayed-out text inside `<` and
     `>` as these are variable names), and add a `%` sign at the end of
     the second row, as shown in Figure
-    <a href="#fig:tableau-polygon-tooltip">8.56</a>.
+    <a href="#fig:tableau-polygon-tooltip">8.57</a>.
 
 <img src="images/08-map/tableau-polygon-tooltip.png" alt="Change tooltip text to make it more user-friendly." width="400" />
 <p class="caption">
-Figure 8.56: Change tooltip text to make it more user-friendly.
+Figure 8.57: Change tooltip text to make it more user-friendly.
 </p>
 
 1.  Let’s make our map title more meaningful. Double-click the default
@@ -8199,7 +8248,7 @@ Figure 8.56: Change tooltip text to make it more user-friendly.
     so we are going to create the final layout that include map’s title
     and credits, the legend, and is appropriate for sharing. At the
     bottom-left of the program, create a *New Dashboard*, as shown in
-    Figure <a href="#fig:tableau-dashboard-create">8.57</a>. Dashboards
+    Figure <a href="#fig:tableau-dashboard-create">8.58</a>. Dashboards
     in Tableau are layouts that can contain visualizations from multiple
     sheets, as well as text boxes, images, and other elements, creating
     rich exploratory interfaces. In this tutorial, we will stick to just
@@ -8207,7 +8256,7 @@ Figure 8.56: Change tooltip text to make it more user-friendly.
 
 <img src="images/08-map/tableau-dashboard-create-annotated.png" alt="Before you publish the map, create a new dashboard to finalize your layout." width="400" />
 <p class="caption">
-Figure 8.57: Before you publish the map, create a new dashboard to
+Figure 8.58: Before you publish the map, create a new dashboard to
 finalize your layout.
 </p>
 
@@ -8215,23 +8264,23 @@ finalize your layout.
     Automatic so that the map is responsive and occupies 100% of the
     width on all devices. Drag and drop Sheet 1 to the *Drop sheets
     here* area, as shown in Figure
-    <a href="#fig:tableau-dashboard">8.58</a>. This will copy the map,
+    <a href="#fig:tableau-dashboard">8.59</a>. This will copy the map,
     the title, and the legend from Sheet 1.
 
 <img src="images/08-map/tableau-dashboard-annotated.png" alt="To create a responsive dashboard, change the Size to Automatic." width="400" />
 <p class="caption">
-Figure 8.58: To create a responsive dashboard, change the Size to
+Figure 8.59: To create a responsive dashboard, change the Size to
 Automatic.
 </p>
 
 1.  Right-click the upper part of the map legend, and select *Floating*,
-    as shown in Figure <a href="#fig:tableau-dashboard-legend">8.59</a>.
+    as shown in Figure <a href="#fig:tableau-dashboard-legend">8.60</a>.
     Now you are able to place your legend directly on top of the map to
     save space. Drag and drop it to one of the map’s corners.
 
 <img src="images/08-map/tableau-dashboard-legend.png" alt="To place the legend on top of the map, make sure it is floating." width="400" />
 <p class="caption">
-Figure 8.59: To place the legend on top of the map, make sure it is
+Figure 8.60: To place the legend on top of the map, make sure it is
 floating.
 </p>
 
@@ -8257,51 +8306,61 @@ uses a linear color scheme that, as we’ve learned earlier in the
 chapter, is prone to highlighting outliers, and there is no
 straightforward way to change the intervals to non-linear methods such
 as quantiles. If you are not happy with the way the linear scale
-represents your data, you can either [filter your data to remove
-outliers from the
+represents your data, you can [filter your data to remove outliers from
+the
 map](https://help.tableau.com/current/pro/desktop/en-us/filtering.htm),
 or see [Andy Kriebel’s VizWiz tutorial to use table calculations to
 group items into
-quantiles](https://www.vizwiz.com/2018/07/rankpercentile.html).
+quantiles](https://www.vizwiz.com/2018/07/rankpercentile.html), or
+create your [choropleth map in
+Datawrapper](choropleth-datawrapper.html), which gives you more control
+over color intervals and interpolation.
 
-Now that you know that Tableau can be used not just for charts, but for
-maps as well, let’s see how to use Socrata’s visualization capabilities
-to build a map that always uses the most current data available.
+In all of the prior tutorials, you created interactive maps using
+*static data*, meaning it came from a spreadsheet. In the next tutorial,
+you’ll learn how to build a map using *continuously-updated data* from a
+Socrata open data repository, which will always display the most current
+information.
 
 Current Map with Socrata Open Data
 ----------------------------------
 
-[Socrata](https://www.tylertech.com/products/socrata) is a database
-service that is used by government agencies, cities and countries to
-make open data available to the public. It offers user-friendly ways to
-view, filter, and export data. In addition, the Socrata platform
-includes built-in support to create interactive charts and maps, which
-can be embedded in other websites (including your own).
+This type of map shows current data because it continuously pulls the
+most up-to-date from an [open data repository, which you learned about
+in chapter 4](opendata.html). The advantage of creating visualizations
+directly on an open data platform is that your chart or map is directly
+linked to the source. Some government agencies frequently update
+selected open data repositories where current information matters, such
+as fire or police calls, property data, or public finances. Whenever an
+administrator revises the contents of an open data repository, your
+chart or map will automatically display the most current information.
+However, if the government agency stops updating the repository or
+switches to a different platform, your visualization will no longer show
+current information or it may break entirely.
 
-One advantage of creating data visualizations directly on an open data
-platform is that the chart or map is linked to the data repository. For
-example, if the Socrata platform administrator updates the data table,
-then a Socrata visualization based on that data will be automatically
-updated, too. This may be especially useful for “live” data that is
-continuously updated by agency administrators such as emergency
-services, public directories, and property data.
+[Socrata](https://www.tylertech.com/products/socrata) is a company that
+provides an open data repository service that many government agencies
+use to make open data available to the public. It offers user-friendly
+ways to view, filter, and export data. In addition, the Socrata platform
+includes built-in support to create interactive charts and maps, which
+can be embedded in other websites (including your own). You can search
+for publicly-available datasets on Socrata’s [Open Data
+Network](https://www.opendatanetwork.com/).
 
 In this section, we will build an interactive point map of fatal crashes
 involving cars in New York City, which continuously updates to display
 points over the past 365 days, as shown in Figure
-<a href="#fig:socrata-final">8.60</a>. Our interactive map pulls data
+<a href="#fig:socrata-final">8.61</a>. Our interactive map pulls data
 from the [Motor Vehicle Collisions -
 Crashes](https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95/data)
-public repository on New York City’s OpenData Portal, and should
-continue to work as long as administrators continue to update the
-dataset on this Socrata platform. Learn more about [open data
-repositories in chapter 4](opendata.html), and search for additional
-datasets on Socrata’s [Open Data
-Network](https://www.opendatanetwork.com/).
+public repository on New York City’s OpenData Portal, based on the
+Socrata platform. As long as government administrators continue to
+update this dataset on this platform, your map should always display the
+most recent data for the past 12 months.
 
 <img src="images/08-map/socrata-final.png" alt="Map of fatal crashes in NYC during the past year, continuously updated from a Socrata open data repository. See [interactive version](https://data.cityofnewyork.us/dataset/Fatal-NYC-Crashes/nx4u-jy9t/embed?width=100%25&height=500)."  />
 <p class="caption">
-Figure 8.60: Map of fatal crashes in NYC during the past year,
+Figure 8.61: Map of fatal crashes in NYC during the past year,
 continuously updated from a Socrata open data repository. See
 [interactive
 version](https://data.cityofnewyork.us/dataset/Fatal-NYC-Crashes/nx4u-jy9t/embed?width=100%25&height=500).
@@ -8329,24 +8388,24 @@ you wish to map are missing geocoded locations.
     Crashes](https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95/data)
     dataset. In the menu on the right-hand side choose *Visualize &gt;
     Launch New Visualization*, as shown in Figure
-    <a href="#fig:socrata-launch-new-viz">8.61</a>. This will open a
+    <a href="#fig:socrata-launch-new-viz">8.62</a>. This will open a
     *Configure Visualization* studio where you can create the map.
 
 <img src="images/08-map/socrata-launch-new-viz-annotated.png" alt="Go to Visualize >
 Launch New Visualization." width=“300” /&gt;
 <p class="caption">
-Figure 8.61: Go to Visualize &gt; Launch New Visualization.
+Figure 8.62: Go to Visualize &gt; Launch New Visualization.
 </p>
 
 1.  In the top menu, select *Map* (the globe icon between a scatter
     chart icon and a calendar) as the visualization type. In a few
     seconds a basemap will appear, with *Map Layers* and *Map Settings*
     items in the side menu on the left, as shown in Figure
-    <a href="#fig:socrata-configure">8.62</a>.
+    <a href="#fig:socrata-configure">8.63</a>.
 
 <img src="images/08-map/socrata-configure-annotated.png" alt="Your studio should look similar to this once you choose Map as the visualization type." width="500" />
 <p class="caption">
-Figure 8.62: Your studio should look similar to this once you choose Map
+Figure 8.63: Your studio should look similar to this once you choose Map
 as the visualization type.
 </p>
 
@@ -8360,9 +8419,9 @@ will change when you zoom in and out.
 1.  We need to limit our map to display only crashes with fatalities. In
     the upper-right corner, click *Filters &gt; Add filter*. The
     dropdown menu lists all columns (or fields) of the dataset, where
-    you should choose *Number of persons killed*. In the newly appeared
+    you should choose *NUMBER OF PERSONS KILLED*. In the newly appeared
     dropdown, choose *Is greater than*, and set the value to 0, as shown
-    in Figure <a href="#fig:socrata-filter">8.63</a>. Alternatively you
+    in Figure <a href="#fig:socrata-filter">8.64</a>. Alternatively you
     can set it to *Is greater than or equal to*, and set the value to 1.
 
 2.  We need to clean up the data. Zoom out and you’ll notice that not
@@ -8370,7 +8429,7 @@ will change when you zoom in and out.
     Null Island in the Atlantic Ocean, where the latitude and longitude
     are both 0. You learned how to recognize and deal with [bad data in
     chapter 4](bad-data.html). To remove many of these incorrectly
-    geocoded crashes, let’s add another filter on *Latitude* column and
+    geocoded crashes, let’s add another filter on *LATITUDE* column and
     set it to *Is greater than* with the value of 0. This way we show
     crashes located in the northern hemisphere, north of the Null
     Island, where New York City is located. After you correctly set both
@@ -8379,7 +8438,7 @@ will change when you zoom in and out.
 
 3.  Instead of showing all recorded crashes since 2012, let’s display
     crashes that happened over the past year, to be updated
-    continuously. Add a third filter for *Crash date* column, and set it
+    continuously. Add a third filter for *CRASH DATE* column, and set it
     to *Relative Date &gt; Custom &gt; Last 365 day(s)*. You will see a
     lot of points disappearing from the map as they don’t fall in the
     selected dates range. You can now close *Filters* window to free up
@@ -8388,19 +8447,19 @@ will change when you zoom in and out.
 <img src="images/08-map/socrata-filter-annotated.png" alt="Add filters for number of persons killed (>0),
 location (latitude &gt; 0), and date (last 365 days)." width=“300” /&gt;
 <p class="caption">
-Figure 8.63: Add filters for number of persons killed (&gt;0), location
+Figure 8.64: Add filters for number of persons killed (&gt;0), location
 (latitude &gt; 0), and date (last 365 days).
 </p>
 
 1.  Let’s ensure that crash locations appear as individual points and
     are never clustered together. Go to *Map Settings &gt; Clusters*,
     and bring the *Stop Clustering at Zoom Level* slider to 1, as shown
-    in Figure <a href="#fig:socrata-uncluster">8.64</a>. You should now
+    in Figure <a href="#fig:socrata-uncluster">8.65</a>. You should now
     see individual crash locations at all zoom levels.
 
 <img src="images/08-map/socrata-uncluster-annotated.png" alt="To always show individual points instead of clusters, set *Stop Clustering at Zoom Level* to 1." width="300" />
 <p class="caption">
-Figure 8.64: To always show individual points instead of clusters, set
+Figure 8.65: To always show individual points instead of clusters, set
 *Stop Clustering at Zoom Level* to 1.
 </p>
 
@@ -8421,11 +8480,11 @@ Figure 8.64: To always show individual points instead of clusters, set
     *Flyout Title* to *ON STREET NAME*, adding *CRASH DATE*, *CRASH
     DATE*, *NUMBER OF PERSONS INJURED*, and *NUMBER OF PERSONS KILLED*
     as additional flyout values, as shown in Figure
-    <a href="#fig:socrata-flyout">8.65</a>.
+    <a href="#fig:socrata-flyout">8.66</a>.
 
 <img src="images/08-map/socrata-flyout.png" alt="To edit tooltip information, use the *Flyout Details* menu item." width="250" />
 <p class="caption">
-Figure 8.65: To edit tooltip information, use the *Flyout Details* menu
+Figure 8.66: To edit tooltip information, use the *Flyout Details* menu
 item.
 </p>
 
@@ -8433,11 +8492,11 @@ There are more more ways to modify the map that we will not demonstrate
 in this tutorial. For example, you could use *Resize Points by Value*
 functionality in the *Data Selection* menu to transform your point map
 into a symbol map, where larger circles represent larger numeric values
-(such as more people injured in a crash). If you have textual
-categorical data, such as a contributing crash factor in our dataset
-(e.g., passing too closely, driver inexperience, etc.), you could use
-*Style by Value* functionality to apply different colors to different
-crash categories.
+(such as more people injured in a crash). You can also visualize textual
+categorical data, such as that stored in *CONTRIBUTING FACTOR VEHICLE 1*
+column of the dataset (with values such as: passing too closely, driver
+inexperience, etc.), by applying *Style by Value* functionality to use
+different colors for different crash categories.
 
 At this point you should have a functional interactive point map that
 continuously updates to show fatal crashes in New York City in the past
@@ -8453,20 +8512,20 @@ the map with others, you need to save it as a draft, and publish.
 
 Now you can embed the map on your website as an iframe. To do so, click
 the *Share* button in the upper-right side of your map (see Figure
-<a href="#fig:socrata-share">8.66</a>), and copy the generated code from
+<a href="#fig:socrata-share">8.67</a>), and copy the generated code from
 *Embed Code* text area (Figure
-<a href="#fig:socrata-share-embed">8.67</a>). We will talk about
+<a href="#fig:socrata-share-embed">8.68</a>). We will talk about
 embedding visualizations in detail in [Chapter 10: Embed on the
 Web](embed.html).
 
 <img src="images/08-map/socrata-share-annotated.png" alt="Click *Share* button to bring up *Share and Embed* window." width="400" />
 <p class="caption">
-Figure 8.66: Click *Share* button to bring up *Share and Embed* window.
+Figure 8.67: Click *Share* button to bring up *Share and Embed* window.
 </p>
 
 <img src="images/08-map/socrata-share-embed.png" alt="Copy iframe code to embed this map in another website." width="400" />
 <p class="caption">
-Figure 8.67: Copy iframe code to embed this map in another website.
+Figure 8.68: Copy iframe code to embed this map in another website.
 </p>
 
 There are limitations to creating your chart or map on an open data
@@ -8486,23 +8545,17 @@ tutorial in Chapter 13](leaflet-maps-open-data-apis.html).
 
 ### Summary
 
-In this chapter, we looked at free mapping platforms to create simple
-point and polygon maps. Google My Maps is a good choice for point maps
-that can be created in collaboration with others. If the data you are
-interested in lives on Socrata platform, you might be able to create a
-point map within the platform itself, and embed it as an iframe in your
-own website. Tableau is another very powerful tool to build and share
-polygon and point maps.
+In this chapter, we reviewed map design principles and explored
+recommended tools and tutorials for telling different types of data
+stories. When creating maps, think carefully about whether you are
+working with point or polygon data, the two most common options. If the
+latter, remember that well-designed choropleth maps required normalized
+data and careful thought about color intervals.
 
-In reviewing all these tools, we only scratched the surface and showed
-simple examples to get you started quickly. All platforms allow layering
-data to create powerful exploration mapping visualizations.
-
-None of the platforms required special geospatial data, as all were
-smart enough to perform geocoding and know the boundaries and
-coordinates of objects given to them. In [Chapter 14](transform.html),
-we will talk more about geospatial data, how it can be obtained, stored,
-modified, and shared.
+We only scratched the surface and showed simple examples to help you
+quickly create some sample maps. See more advanced designs using
+[Leaflet map code templates in Chapter 13](leaflet.html), and how to
+[find and transform geospatial data in Chapter 14](transform.html)
 
 <!--chapter:end:08-map.Rmd-->
 
@@ -8961,8 +9014,9 @@ Our book emphasizes the benefits of designing *interactive*
 visualizations that engage broad audiences on the internet by inviting
 them to interact with your data, investigate new patterns, download
 files if desired, and easily share your work on social media. In this
-chapter, you’ll learn about a computer code tag called an *iframe*. Like
-a picture frame, an iframe displays a live web page (such as your
+chapter, you’ll learn about a computer code tag called an *iframe*,
+which allows readers to actively explore your data on a different page.
+Like a picture frame, an iframe displays a live web page (such as your
 interactive data visualization) inside a second web page that you
 control (such as your personal or organizational web site), as shown in
 Figure <a href="#fig:iframe-illustration">10.1</a>. When done correctly,
@@ -8997,9 +9051,9 @@ static image, and add a link [or custom shortlink](share.html) with the
 web address to an interactive chart or map, and invite audiences to
 explore it online.
 
-Also, you capture a static image of any web page on your computer by
-taking a [screenshot](https://en.wikipedia.org/wiki/Screenshot) with
-these built-in commands:
+If you need to capture a static image of any web page on your computer,
+take a [screenshot](https://en.wikipedia.org/wiki/Screenshot) with these
+built-in commands:
 
 -   Chromebook: *Shift + Ctrl + F5* (the *show windows* button), then
     click-and-drag the cross-hair cursor.
@@ -9008,14 +9062,14 @@ these built-in commands:
 -   Windows: *Windows logo key + Shift + S* to call up the *Snip &
     Sketch* tool.
 
-An animated GIF file is a series of static images that captures motion
-on the screen. You can insert an animated GIF on a web page to
-illustrate a short sequence of steps while using an interactive
-visualization, but audiences cannot interact with it, other than to play
-the animated loop over again. Paid software tools such as
-[Snagit](https://www.techsmith.com/screen-capture.html) allow you to
-create screenshots including drop-down menus and cursors, animated GIFs,
-and more.
+A related strategy is an animated GIF, which is a series of static
+images that captures motion on the screen. You can insert an animated
+GIF file on a web page to illustrate a short sequence of steps while
+using an interactive visualization, but audiences cannot interact with
+it, other than to play the animated loop over again. Paid software tools
+such as [Snagit](https://www.techsmith.com/screen-capture.html) allow
+you to create screenshots including drop-down menus and cursors,
+animated GIFs, and more.
 
 By contrast, *interactive* visualizations allow audiences to directly
 engage with your data story through their web browsers. Visitors usually
@@ -9050,7 +9104,7 @@ Datawrapper platform, which first appeared in the
 [Introduction](introduction.html) to this book, as shown in Figure
 <a href="#fig:iframe-sample">10.2</a>.
 
-`<iframe src='https://https://datawrapper.dwcdn.net/LtRbj/'></iframe>`
+`<iframe src='https://datawrapper.dwcdn.net/LtRbj/'></iframe>`
 
 <img src="images/10-embed/iframe-sample.png" alt="Depending on the format of your book, if a static chart appears above, but you can also [view the interactive version](https://datawrapper.dwcdn.net/LtRbj/)."  />
 <p class="caption">
@@ -9059,7 +9113,8 @@ appears above, but you can also [view the interactive
 version](https://datawrapper.dwcdn.net/LtRbj/).
 </p>
 
-Sometimes embed codes or their iframe tags are *much longer* than the
+When you copy an embed code from some of the visualization tools
+featured in this book, their iframe tags may be *much longer* than the
 simple example above. For example, an iframe tag might include other
 attributes, such as `width` or `height`, measured in pixels (`px`) or a
 percentage of its dimensions on the secondary site. Also, you may see
@@ -9077,10 +9132,6 @@ Now that you have a clearer definition of an interactive visualization,
 embed codes, and iframe tags, in the next section we’ll learn how to
 copy the embed code from different visualization platforms.
 
-TODO above: confirm the screenshot commands for non-Mac platforms and if
-they are the simplest versions, and if older Windows commands are still
-needed
-
 Get the Embed Code or iframe Tag
 --------------------------------
 
@@ -9094,25 +9145,25 @@ appear seamlessly on the secondary site.
 We’ll break this down into three steps for each visualization platform.
 First, we will demonstrate how to copy your embed code or iframe tag
 from Google Sheets, Datawrapper, Tableau Public, and other platforms
-listed below. Second, we’ll show you how to *practice paste* the embed
-code or iframe tag into the [W3Schools TryIt iframe
+listed below. Second, we’ll show you how to test the embed code or
+iframe tag in a wonderful assistant called the [W3Schools TryIt iframe
 page](https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_iframe),
-as shown in Figure <a href="#fig:w3schools-tryit-iframe">10.3</a>, to
-help you understand what’s happening behind-the-scenes and to modify the
-code if needed. Third, we’ll point you to the next section to learn how
-to properly paste the embed code in your preferred website, such as
-WordPress \[and others TODO\].
+as shown in Figure <a href="#fig:w3schools-tryit-iframe">10.3</a>. It’s
+a great way to see what happens if you need to trim parts of the embed
+code before placing it in web page, and test if it still works. Third,
+we’ll point you to the next section to learn how to properly paste the
+embed code in your preferred website, including common platforms such as
+WordPress, SquareSpace, Wix, and Weebly.
 
-<img src="images/10-embed/w3schools-tryit-iframe.png" alt="For each embed code below, you will *practice paste* it in place of the selected text of the W3Schools TryIt iframe page to see how it works." width="750" />
+<img src="images/10-embed/w3schools-tryit-iframe.png" alt="For each embed code below, paste it in place of the selected text of the W3Schools TryIt iframe page to test how it works." width="750" />
 <p class="caption">
-Figure 10.3: For each embed code below, you will *practice paste* it in
-place of the selected text of the W3Schools TryIt iframe page to see how
-it works.
+Figure 10.3: For each embed code below, paste it in place of the
+selected text of the W3Schools TryIt iframe page to test how it works.
 </p>
 
 ### from Google Sheets
 
-1.  After you create a [Google Sheets chart in Chapter
+1.  After you create a [Google Sheets chart as you did in Chapter
     7](chart-google.html), click the 3-dot kebab menu in the upper-right
     corner of the chart to publish it, as shown in Figure
     <a href="#fig:google-sheets-publish">10.4</a>.
@@ -9160,10 +9211,11 @@ closely and you’ll see iframe settings such as `width` and `height`
 
 ### from Datawrapper
 
-1.  After you create a [Datawrapper chart in Chapter
-    7](chart-datawrapper.html) or [map in Chapter 8](map.html) or
-    [interactive table in Chapter 9](table.html), proceed to the final
-    screen and click the *Publish* button, as shown in Figure
+1.  After you create a [Datawrapper chart as you did in Chapter
+    7](chart-datawrapper.html) or [map as you did in Chapter
+    8](map.html) or [interactive table as you did Chapter
+    9](table.html), proceed to the final screen and click the *Publish*
+    button, as shown in Figure
     <a href="#fig:datawrapper-publish">10.7</a>. This publishes the
     interactive version of your chart or map online. Further down on the
     same screen you can also export a static image, if desired.
@@ -9191,7 +9243,7 @@ code.
     Select the current iframe tag, paste in your embed code to replace
     it, and press the green *Run* button. The result should be similar
     to Figure <a href="#fig:datawrapper-tryit">10.9</a>, but instead
-    will display your embed code and interactive visualization.
+    will display your unique embed code and interactive visualization.
 
 <img src="images/10-embed/datawrapper-tryit.png" alt="Paste your Datawrapper embed code in place of the current iframe tag in the TryIt page and click *Run*." width="750" />
 <p class="caption">
@@ -9211,12 +9263,11 @@ responsive depending on the size of the device screen.
     section](paste-code.html) of this chapter to learn how to properly
     insert your embed code into common websites.
 
-2.  But if it doesn’t work, go back to step 3 and experiment. Try to
-    edit the embed code down to a *simple iframe*, and run it again to
-    see how it looks, as shown in Figure
-    <a href="#fig:datawrapper-tryit-simple">10.10</a>. Sometimes a
-    simple iframe works better on your website than a complex embed
-    code.
+Tip: But if it doesn’t work, go back to step 3 and experiment. Try to
+edit the embed code down to a *simple iframe*, and run it again to see
+how it looks, as shown in Figure
+<a href="#fig:datawrapper-tryit-simple">10.10</a>. Sometimes a simple
+iframe works better on your website than a complex embed code.
 
 <img src="images/10-embed/datawrapper-tryit-simple.png" alt="If a complex embed code does not work in your website, go back and try to edit it down into a simple iframe." width="750" />
 <p class="caption">
@@ -9278,7 +9329,9 @@ click the *Share* button, and copy the embed code.
     Select the current iframe tag, paste in your embed code to replace
     it, and press the green *Run* button. The result should be similar
     to Figure <a href="#fig:tableau-public-tryit">10.14</a>, but instead
-    will display your embed code and interactive visualization.
+    will display your embed code and interactive visualization. Note how
+    the Tableau Public embed code is so long that it does not fit in
+    this image.
 
 <img src="images/10-embed/tableau-public-tryit.png" alt="Paste your Tableau public embed code in place of the current iframe tag in the TryIt page and click *Run*." width="750" />
 <p class="caption">
@@ -9286,29 +9339,29 @@ Figure 10.14: Paste your Tableau public embed code in place of the
 current iframe tag in the TryIt page and click *Run*.
 </p>
 
-The Tableau Public embed code is *very long* and does not fit in one
-image. Even we don’t fully understand what’s happening in this complex
-batch of code.
-
 1.  Always try to paste the *full embed code* in your desired web
     platform. Jump to the [paste code to website
     section](paste-code.html) of this chapter to learn how to properly
     insert on different common websites.
 
-2.  But if it doesn’t work, go back to step 3 and 4 and experiment. For
-    example, you can copy the Tableau Public link to your visualization,
-    *instead* of the embed code, try to convert it into a simple iframe
-    tag, and run it again to see how it looks.
+However, if your web platform does not accept the *full embed code* for
+Tableau Public, the next strategy is to try to copy the Tableau Public
+link to your visualization and convert it into a *simpler iframe tag*,
+and see how it works in your website. Here’s how to copy and convert it.
 
-Here’s some hints from the [Tableau Public support
-page](https://kb.tableau.com/articles/howto/embedding-tableau-public-views-in-iframes)
-when trying to create iframes from links like this example:
+1.  In your published visualization on your Tableau Public online
+    account, scroll down and click on the *Share* symbol in the
+    lower-right corner, as previously shown in Figure
+    <a href="#fig:tableau-public-embed-code">10.13</a>. But this time,
+    select and copy its *link*, not the *embed code*. A typical link
+    looks similar to this one:
 
 `https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:language=en&:display_count=y&:origin=viz_share_link`
 
-1.  Paste the link into the W3Schools TryIt page, and delete all of the
-    code that appears *after* the question mark (`?`), so that it looks
-    like this:
+1.  Paste the link into the [W3Schools TryIt iframe
+    page](https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_iframe),
+    and delete all of the code that appears *after* the question mark
+    (`?`), so that it looks like this:
 
 `https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?`
 
@@ -9335,7 +9388,8 @@ when trying to create iframes from links like this example:
 Hint: Insert `width="90%"`, rather than 100%, to help readers to scroll
 more easily down your web page with a margin.
 
-1.  Press *Run* to see how it looks, as shown in Figure
+1.  Press *Run* to see how it looks in the W3Schools TryIt iframe page,
+    as shown in Figure
     <a href="#fig:tableau-public-tryit-simple">10.15</a>. Sometimes a
     simple iframe works better on your website than a complex embed
     code.
@@ -9347,18 +9401,26 @@ back and copy the link to the visualization, and try to convert it into
 a simple iframe.
 </p>
 
+Learn more about [how to embed an iframe on the Tableau Public support
+page](https://kb.tableau.com/articles/howto/embedding-tableau-public-views-in-iframes).
+
 Now that you have a better sense of how to copy embed codes, and edit
-them down to simple iframes if needed, in the next section you’ll learn
-how to paste them into common websites such as WordPress.
+them down to simpler iframes if needed, in the next section you’ll learn
+how to paste them into common websites to share your interactive
+visualizations with wider audiences.
 
 Paste Code or iframe to Website
 -------------------------------
 
-In the prior section, you copied the embed code (or created an iframe)
-for your interactive visualization that is hosted online by the primary
-site. In this section, we’ll demonstrate ways to properly paste the
-embed code or iframe to seamlessly display your interactive chart or map
-in the secondary site.
+In the prior section, you learned how to copy the embed code or create
+an iframe for your interactive visualization that is hosted online by
+the primary site. For example, your live chart or map might be hosted on
+a Google Sheets, Datawrapper, or Tableau Public server. In this section,
+we’ll demonstrate ways to properly paste the embed code or iframe to
+seamlessly display your interactive chart or map on a secondary website
+that you control, and we’ll focus on common web-building platforms such
+as WordPress, SquareSpace, Wix, and Weebly. Even if your website runs on
+a different platform, the principles will likely be the same.
 
 ### to WordPress.com sites
 
@@ -9391,77 +9453,119 @@ webserver. But the web address of a self-hosted WordPress site does
 *not* necessarily need to end in `.org`. It also could be `.com` or
 `.edu` or any other ending, so don’t let that confuse you.
 
-There are several ways to insert an embed code or iframe in a
-self-hosted WordPress site, but your success may depend on your WP
-version, your access level, and the complexity of the code.
+There are two ways to insert an embed code or iframe in a self-hosted
+WordPress site, but your success may depend on your WP version, your
+access level, and the complexity of the code. We’ll show you both Method
+A (which is simpler, but not always reliable) and Method B (which
+requires a few more steps, but works more reliably). See which method
+works best for your self-hosted WordPress site.
 
-For the first method, assume that you’re using WordPress 5.0 or above
-with the newer block editor, and you have editor or administrator access
-to your site. TODO: Check whether less-than-admin privileges strips out
-iframe codes, as it used to before WP 5.0
+#### Method A: Simple, But Not Always Reliable
 
-In your block editor, select a *custom HTML* block, and directly insert
-the embed code or the iframe, as shown in Figure
-<a href="#fig:wordpress-custom-html">10.16</a>.
+Assume that you’re using self-hosted WordPress version 5.0 or above with
+the newer block editor, and you have editor or administrator access to
+your site. (This method does not work reliably with author-level access
+or below.)
+
+1.  In your block editor, select a *custom HTML* block, and directly
+    insert the embed code or the iframe, as shown in Figure
+    <a href="#fig:wordpress-custom-html">10.16</a>.
 
 <img src="images/10-embed/wordpress-custom-html.png" alt="Paste an embed code or iframe into a custom HTML block." width="700" />
 <p class="caption">
 Figure 10.16: Paste an embed code or iframe into a custom HTML block.
 </p>
 
-For the second method, assume that you’re using WordPress with either
-the classic or block editor, and that you have administrator access to
-the site.
+1.  Preview your WordPress page or post, and if your iframe appears,
+    publish and view it in another browser to test how it appears to
+    your readers.
 
-1.  Install and activate the [iframe
+#### Method B: More Steps, But More Reliable
+
+Assume that you’re using self-hosted WordPress, any version, with either
+the classic or block editor, and that you have author-level or above
+access to the site.
+
+1.  First, the site administrator must install and activate the [iframe
     plugin](http://wordpress.org/plugins/iframe/), as shown in Figure
     <a href="#fig:wordpress-iframe-plugin">10.17</a>. This plugin allows
     authors to embed iframe codes in a modified “shortcode” format
-    surrounded by square brackets. Without the plugin, self-hosted
-    WordPress.org sites will usually “strip out” iframe codes for all
-    users except the site administrator. TODO: update this image
+    surrounded by square brackets in this general format: `[iframe...]`.
 
-<img src="images/10-embed/wordpress-iframe-plugin.jpg" alt="Install and activate the *iframe plugin* on a self-hosted WP site." width="300" />
+<img src="images/10-embed/wordpress-iframe-plugin.png" alt="Install and activate the *iframe* plugin on a self-hosted WordPress site." width="287" />
 <p class="caption">
-Figure 10.17: Install and activate the *iframe plugin* on a self-hosted
-WP site.
+Figure 10.17: Install and activate the *iframe* plugin on a self-hosted
+WordPress site.
 </p>
 
-1.  In the WordPress editor, click to the *text* tab to view the code,
-    and paste the embed code or iframe, as shown in Figure
-    <a href="#fig:wordpress-text-paste-iframe">10.18</a>. Initially, the
-    code you pasted includes iframe tags at the start (`<iframe...`) and
-    the end ()`...></iframe>`).
+1.  In the WordPress block editor, click to add a *Custom HTML* block
+    (or in the classic editor, click the *text* tab to view the HTML
+    code). Paste the embed code or iframe, which initially should appear
+    similar to the prior Figure
+    <a href="#fig:wordpress-custom-html">10.16</a>.
 
-<img src="images/10-embed/wordpress-text-paste-iframe.png" alt="Install and activate the *iframe plugin* on a self-hosted WP site." width="700" />
-<p class="caption">
-Figure 10.18: Install and activate the *iframe plugin* on a self-hosted
-WP site.
-</p>
-
-1.  Modify the start tag by replacing the less-than symbol (`<`) with a
-    square opening bracket (`[`). Modify the back end by erasing the
-    greater-than symbol (`>`) and the entire end tag (`</iframe>`), and
-    replace both of them with one square closing bracket (`]`), as shown
-    in Figure <a href="#fig:wordpress-insert-brackets">10.19</a>.
+2.  Initially, the code you pasted probably included HTML iframe tags at
+    the start (`<iframe...`) and the end (`...></iframe>`). Modify the
+    start tag by replacing the less-than symbol (`<`) with a square
+    opening bracket (`[`). Modify the back end by erasing the
+    greater-than symbol *and* the entire end tag (`> </iframe>`), and
+    replacing both of them with one square closing bracket (`]`), as
+    shown in Figure <a href="#fig:wordpress-insert-brackets">10.18</a>.
+    Closely compare the two figures to see what these small code edits
+    look like.
 
 <img src="images/10-embed/wordpress-insert-brackets.png" alt="Modify the front and back end with square brackets." width="700" />
 <p class="caption">
-Figure 10.19: Modify the front and back end with square brackets.
+Figure 10.18: Modify the front and back end with square brackets.
 </p>
 
-TODO ABOVE: check method with more complex embed codes, check with
-non-admin privileges, and update images
+Tip: For long embed codes from Datawrapper and Tableau Public, you may
+need to experiment with trimming it down to the most relevant portions
+of the iframe using the [W3Schools TryIt iframe
+page](https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_iframe),
+as described in the prior section, then pasting into the WordPress
+editor and modifying the front and back end with square brackets.
 
-### to SquareSpace, Wix, or Weebly Sites
+1.  Preview your WordPress page or post, and if your iframe appears,
+    publish and view it in another browser to test how it appears to
+    your readers.
 
-TODO
+### to SquareSpace, Wix, Weebly, or Other Web-Building Sites
 
-CHANGE TO NOTE? Paid version of SquareSpace supports embed code
+The concept of pasting your data visualization iframes or embed codes to
+other web-building sites is similar to WordPress, but details will vary,
+depending on freemium versus paid subscription level and
+author-administrator status. Here are details for three of the most
+popular web-building services:
+
+See these SquareSpace support pages about [embed
+blocks](https://support.squarespace.com/hc/en-us/articles/206543617-Embed-Blocks)
+and [adding custom code to your
+site](https://support.squarespace.com/hc/en-us/articles/205815928-Adding-custom-code-to-your-site#toc-code-blocks-vs--embed-blocks).
+
+See this Wix support page about [using iframes to display content on
+your
+site](https://support.wix.com/en/article/wix-editor-using-iframes-to-display-visible-content-on-your-site).
+
+See Weebly support page about [adding external content and widgets with
+embedded
+code](https://www.weebly.com/app/help/us/en/topics/create-widgets-embed-code-and-add-external-content).
+
+Tip: When working with long or complex embed codes, you may need to
+experiment with pasting and trimming down to the most relevant portion
+of the iframe in the [W3Schools TryIt iframe
+page](https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_iframe),
+then pasting that portion into your web-builder platform.
 
 ### Summary
 
-TODO
+In this chapter, you learned about iframes and embed codes, and how they
+seamlessly display your interactive data visualization from their home
+site onto a second website that you personally manage. This concept will
+be valuable in the next chapter, where you will learn how to edit and
+host open-source code templates on the GitHub platform, because you can
+also create iframes to make those charts and maps seamlessly appear on
+your own website.
 
 <!--chapter:end:10-embed.Rmd-->
 
@@ -10272,6 +10376,27 @@ viewing it locally. But for this simple Leaflet map template, your
 updated map title should appear, allowing you to check its appearance
 before pushing your edits to the web.
 
+Warning: To fully view more complex code templates in your local
+browser, including some [Chart.js or Highcharts templates in Chapter
+12](chartcode.html) or [Leaflet templates in Chapter 13](leaflet.html),
+you may need to temporarily disable [Cross-Origin Resource
+Sharing](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
+(CORS) restrictions, an internet security mechanism that limits how web
+pages access content from other domains. Methods for doing this vary
+across operating systems and browsers. For example, [to disable CORS on
+Safari for
+Mac](https://stackoverflow.com/questions/4556429/disabling-same-origin-policy-in-safari),
+first go to *Preferences &gt; Advanced* to enable the *Developer* menu,
+then in this new menu select *Disable Cross-Origin Restrictions*. After
+you are done testing your code, restart Safari to reset the setting to
+its default safety position. See also ways to [run the Chrome browser
+without CORS on various
+computers](https://alfilatov.com/posts/run-chrome-without-cors/) or this
+[popular Stackoverflow
+page](https://stackoverflow.com/questions/3102819/disable-same-origin-policy-in-chrome).
+If you temporarily disable this safety mechanism in your browser, be
+sure to re-enable it before browsing sites on the public web.
+
 Now let’s transfer your edits from your local computer to your GitHub
 web account, which you previously connected when you set up GitHub
 Desktop.
@@ -10294,9 +10419,6 @@ origin* to save and copy your edits from your local computer to your
 GitHub web account, as shown in this [animated
 GIF](https://handsondataviz.org/images/11-github/desktop-commit-push.gif).
 </p>
-
-TODO above: update the annotated image and GIF to show commit to main,
-not master.
 
 Congratulations! You’ve successfully navigated a round-trip journey of
 code, from your GitHub account to your local computer, and back again to
@@ -10327,37 +10449,36 @@ from executable code to non-executed code comments. Another built-in
 tool is *Edit &gt; Lines &gt; Auto Indent*, which automatically cleans
 up selected text or an entire page of code for easier reading.
 
-GitHub also offers a powerful platform for collaborative projects, such
-as *Hands-On Data Visualization*. As co-authors, we composed the text of
-these book chapters and all of the sample code templates on GitHub. Jack
-started each day by “pulling” the most recent version of the book from
-our shared GitHub account to his local computer using GitHub Desktop,
-where he worked on sections and “pushed” his commits (aka edits) back to
-GitHub. At the same time, Ilya “pulled” the latest version and “pushed”
-his commits back to GitHub as well. Both of us see the commits that each
-other made, line-by-line in green and red (showing additions and
-deletions), by selecting the GitHub repo *Code* tab and clicking on one
-of our commits, as shown in Figure
+GitHub also offers a powerful platform for collaborative projects. When
+two people work on a shared repository, one co-worker can “pull” the
+most recent version of the code to their local computer using GitHub
+Desktop, then “push” their edits (also called commits) back to the
+online GitHub repo. The other co-worker can “pull” and “push” from the
+same repo at the same time, though it’s simpler if they work on
+different files or sections of code. Both can see the changes that the
+other person made by selecting the GitHub repo *Code* tab and selecting
+a specific commit, which can be viewed line-by-line in green (additions)
+or red (deletions), as shown in Figure
 <a href="#fig:compare-commits">11.30</a>.
 
-<img src="images/11-github/compare-commits.png" alt="Drag-and-drop the file to the upload screen."  />
+<img src="images/11-github/compare-commits.png" alt="View commits made by co-workers on a shared GitHub repo." width="750" />
 <p class="caption">
-Figure 11.30: Drag-and-drop the file to the upload screen.
+Figure 11.30: View commits made by co-workers on a shared GitHub repo.
 </p>
 
 Although GitHub does not operate like Google Documents, which displays
 live edits, the platform has several advantages when working
-collaboratively with code. First, since GitHub tracks every commit we
-make, it allows us to go back and restore a very specific past version
-of the code if needed. Second, when GitHub repos are public, anyone can
-view your code and submit an “issue” to notify the owner about an idea
-or problem, or send a “pull request” of suggested code edits, which the
-owner can accept or reject. Third, GitHub allows collaborators to create
-different “branches” of a repo in order to make edits, and then “merge”
-the branches back together if desired. Occasionally, if two or more
-coders attempt to push incompatible commits to the same repo, GitHub
-will warn about a “Merge Conflict,” and ask you to resolve these
-conflicts in order to preserve everyone’s work.
+collaboratively with code. First, since GitHub tracks every commit, it
+allows you to go back and restore a very specific past version of the
+code if needed. Second, when GitHub repos are public, anyone can view
+your code and submit an “issue” to notify the owner about an idea or
+problem, or send a “pull request” of suggested code edits, which the
+owner can accept or reject. Third, GitHub allows you to create different
+“branches” of a repo in order to make edits, and then “merge” the
+branches back together if desired. Occasionally, if two collaborators
+attempt to push incompatible commits to the same repo, GitHub will warn
+about a “Merge Conflict” and ask you to resolve it in order to preserve
+everyone’s work.
 
 Many coders prefer to work on GitHub using its Command Line Interface
 (CLI), which means memorizing and typing specific commands directly into
@@ -10402,8 +10523,8 @@ may seem overwhelming and intimidating at first, it allows for greater
 customization in terms of colors, padding, interactivity, and data
 handling than most third-party tools can offer. In addition, you can
 never be sure that third-party apps will remain free, or at least have a
-free tier, forever, whereas open-source tools are here to stay free of
-charge.
+free tier, forever, whereas open-source tools are here to stay, free of
+charge, as long as someone maintains the code.
 
 Note: Although both libraries are open-source, Highcharts comes [with a
 stricter
@@ -11033,64 +11154,69 @@ your GitHub account and can be shared across the web.
 
 In [Chapter 8: Map Your Data](map.html), we described several
 easy-to-learn drag-and-drop tools, such as [Google My Maps](mymaps.html)
-and [Datawrapper](symbolmap-datawrapper.html). In this chapter, we offer
-more advanced map tutorials using our open-source code templates, which
-you can copy and modify, using skills you learned in [Chapter 11: Edit
-and Host Code with GitHub](github.html). We built all of the templates
-in this chapter with [Leaflet](https://leafletjs.com), a powerful
-open-source code library for creating interactive maps on desktop or
-mobile devices.
+and [Datawrapper](symbolmap-datawrapper.html), to create several basic
+types of interactive maps. But if you want to create more customized or
+advanced maps to stretch beyond the scope of those tool platforms, this
+chapter offers several code templates based on
+[Leaflet](https://leafletjs.com), a powerful open-source library for
+displaying interactive maps on desktop or mobile devices. We first
+introduced you to Leaflet when you learned how to [edit and host code on
+GitHub in Chapter 11](github.html).
 
-No coding skills are required to use our two introductory templates
-because they pull your map data from a linked Google Sheet. The first
-template, [Leaflet Maps with Google
-Sheets](leaflet-maps-with-google-sheets), is a general-purpose tool that
-can display points, polygons, or polylines, using your choice of colors,
-icons, and images, based on data uploaded into your linked Google Sheet
-and GitHub repository. It also includes the option to display a table of
-point markers next to your map. The second template, [Leaflet Storymaps
-with Google Sheets](leaflet-storymaps-with-google-sheets), guides
-readers through a point-by-point tour, with a scrolling narrative to
-display text, images, audio, video, and scanned map backgrounds, all
-loaded into your linked Google Sheet and GitHub repo. With either
-template, look back at Chapter 3 to [geocode addresses with a Google
-Sheets Add-on](geocode.html).
+All of the Leaflet map templates in this chapter are summarized in Table
+<a href="#tab:map-templates">13.1</a>. The first two templates are good
+for beginners, because they pull your map data from a linked Google
+Sheet, and do not require any coding skills, but you need to follow some
+detailed GitHub instructions. The first template, [Leaflet Maps with
+Google Sheets](leaflet-maps-with-google-sheets) is best for showing any
+combination of points, polylines, or polygons, with your choice of
+custom icons and colors, and the option to display a summary table of
+point data below your map. The second template, [Leaflet Storymaps with
+Google Sheets](leaflet-storymaps-with-google-sheets), is best for
+guiding viewers through a point-by-point tour, with a scrolling
+narrative to display text, images, audio, video, or scanned map
+backgrounds. We specifically created both code templates for readers of
+this book, to fill a gap in maps offered on hosted platforms.
 
-Our more advanced Leaflet templates are designed to help users develop
-their map coding skills. Even if you have no prior coding experience,
-but can follow instructions and are *code-curious*, start with the
-[Leaflet Point Map with CSV Data template](leaflet-maps-with-csv.html),
-which introduces you to the basics of Leaflet map coding by pulling
-point data from a generic comma-separated values file. Then move on to
-more advanced coding examples, such as the [Leaflet Heatmap
+The remainder of the Leaflet templates are designed to improve your
+coding skills and apply them to more specialized cases. Even if you have
+no prior coding experience, but can follow instructions and are
+*code-curious*, start with the [Leaflet Point Map with CSV Data
+template](leaflet-maps-with-csv.html) to learn the basics of pulling
+point data from a comma-separated values file. Then move on to more
+advanced examples, such as the [Leaflet Heatmap
 template](leaflet-heatmap.html) to show point clusters as hotspots, the
-[Leaflet Searchable Point Map template](leaflet-searchable-map.html) to
-allow users to search and filter multiple locations, and the [Leaflet
-Maps with Open Data APIs template](leaflet-maps-open-data-apis.html) to
-continuously pull the most current information directly from [open
-repositories, a topic we introduced in Chapter 4](opendata.html). These
-Leaflet templates are written in the three most common coding languages
-on the web: Hypertext Markup Language (HTML) to structure content on a
-web page (typically in a file named `index.html`), Cascading Style
-Sheets (CSS) to shape how content appears on the page (either inside
-`index.html` or a separate file such as `style.css`), and JavaScript to
-create the interactive map using the open-source Leaflet code library
-(either inside `index.html` or a separate file such as `script.js`).
-These Leaflet templates also include links to other online components,
-such as zoomable basemap tiles from [various open-access online
-providers](https://leaflet-extras.github.io/leaflet-providers/preview/),
-such as Carto, Esri, Stamen, and Open Street Map. Also, these code
-templates can place points on a map (typically from a `data.csv` file)
-or polygons or polyline geography (typically from a `map.geojson` file),
-which you’ll learn to create in [Chapter 14: Transform Your Map
-Data](transform.html). If you’re new to coding, creating Leaflet maps
-can be a great place to start and quickly see the results of what you’ve
-learned. To help solve problems that may arise, see how to [Fix Common
-Mistakes](fix.html) in the appendix. Or to delve further into
-JavaScript, the language that Leaflet relies on, we strongly recommend
-Marijn Haverbeke’s *Eloquent JavaScript*, available both in print and as
-an [open-source online book](https://eloquentjavascript.net/) with an
-interactive coding sandbox to try out examples.[36]
+[Leaflet Searchable Point Map template](leaflet-searchable-map.html)
+that allows users to search and filter multiple locations, and the
+[Leaflet Maps with Open Data APIs
+template](leaflet-maps-open-data-apis.html) to continuously pull the
+most current information directly from [open repositories, a topic we
+introduced in Chapter 4](opendata.html) and [raised again in Chapter
+8](map-socrata.html).
+
+These Leaflet templates are written in the three most common coding
+languages on the web: Hypertext Markup Language (HTML) to structure
+content on a web page (typically in a file named `index.html`),
+Cascading Style Sheets (CSS) to shape how content appears on the page
+(either inside `index.html` or a separate file such as `style.css`), and
+JavaScript to create the interactive map using the open-source Leaflet
+code library (either inside `index.html` or a separate file such as
+`script.js`). These Leaflet templates also include links to other online
+components, such as zoomable basemap tiles from [various open-access
+online
+providers](https://leaflet-extras.github.io/leaflet-providers/preview/).
+Also, they pull in geospatial data, such as polygon boundaries from a
+`map.geojson` file, which you’ll learn how create in [Chapter 14:
+Transform Your Map Data](transform.html).
+
+If you’re new to coding, creating Leaflet maps can be a great place to
+start and quickly see the results of what you’ve learned. To help solve
+problems that may arise, see how to [Fix Common Mistakes](fix.html) in
+the appendix. Or to delve further into JavaScript, the language that
+Leaflet relies on, we strongly recommend Marijn Haverbeke’s *Eloquent
+JavaScript*, available both in print and as an [open-source online
+book](https://eloquentjavascript.net/) with an interactive coding
+sandbox to try out examples.[36]
 
 <table>
 <caption>Table 13.1: Map Code Templates, Best Uses, and Tutorials</caption>
@@ -11132,8 +11258,6 @@ interactive coding sandbox to try out examples.[36]
 </tbody>
 </table>
 
-TODO update 2 images above, and corresponding images below
-
 Leaflet Maps with Google Sheets
 -------------------------------
 
@@ -11158,10 +11282,6 @@ built on flexible open-source software that’s written primarily in
 JavaScript, a very common coding language for the web, so you can
 customize it further if you have skills or support from a developer.
 
-TODO: Create and insert a new version of the demo, featuring ECGreenway
-route thru CT or East Coast, points with photos, and pop density of
-towns to highlight how this bike route connects cities.
-
 <img src="images/13-leaflet/lmwgs-map.png" alt="Explore the [interactive Leaflet Maps with Google Sheets](https://handsondataviz.github.io/leaflet-maps-with-google-sheets/)."  />
 <p class="caption">
 Figure 13.1: Explore the [interactive Leaflet Maps with Google
@@ -11175,18 +11295,20 @@ template](https://docs.google.com/spreadsheets/d/1ZxvU8eGyuN9M8GxTU9acKVJv70iC3p
 that feeds data into the Leaflet Maps demo above.
 </p>
 
-### Tutorial Outline
+### Tutorial Requirements and Overview
 
-Before beginning this tutorial, you must have a [Google Drive
-account](http://drive.google.com), and know how to [File &gt; Make a
-Copy in Google Sheets](copy.html), as described in Chapter 3. Also, you
-must have a [GitHub account](http://github.com), and know how to [Edit
-and Host Code with GitHub](github.html), as described in Chapter 11. We
-have omitted many screenshots below that illustrate steps we previously
-covered, so if you get lost, go back to that chapter.
+Before you begin, you must have a [Google Drive
+account](http://drive.google.com) and know how to [Make a Copy in Google
+Sheets as described in Chapter 3](copy.html). Also, you must have a
+[GitHub account](http://github.com) and know how to [Edit and Host Code
+with GitHub as described in Chapter 11](github.html). We omitted some
+screenshots below that illustrate steps we previously covered, so if you
+get lost, go back to those chapters.
 
-In the first part of the tutorial, you will create and publish your
-copies of our GitHub and Google Sheets templates:
+Since this tutorial involves multiple steps, we created this outline to
+provide a broad overview. In the first part, you will create and publish
+your copies of two templates, one for GitHub and another for its linked
+Google Sheet.
 
 -   1.  Copy the GitHub template and publish your version with GitHub
         Pages.
@@ -11210,7 +11332,7 @@ and uploading files to your GitHub repo.
 -   1.  Remove or display point, polygon, or polylines data and legends.
 
 In the third part, you have two options to finalize your map before
-widely sharing it online:
+publicly sharing it with others:
 
 -   1.  Save each Google Sheets tab as a CSV file and upload to GitHub.
 
@@ -11220,6 +11342,9 @@ widely sharing it online:
 
 If any problems arise, see the [Fix Common Mistakes](fix.html) section
 of the appendix.
+
+Now that you have a better sense of the big picture, let’s get started
+with the first part of the tutorial.
 
 #### A) Copy the GitHub template and publish your version with GitHub Pages
 
@@ -11297,10 +11422,10 @@ with the link to *your* site.
     read it. Then click the upper-right *X* symbol to close this window.
 
 5.  At the top of your browser, copy your Google Sheet address or URL
-    (which usually ends in `...XYZ/edit#gid=0`). Do *NOT* copy the
-    *Published to the web* address (which usually ends in
-    `...XYZ/pubhtml`), as shown in Figure
-    <a href="#fig:sheets-publish">13.5</a>.
+    (which usually ends in `...XYZ/edit#gid=0`), as shown in Figure
+    <a href="#fig:sheets-publish">13.5</a>. Do *NOT* copy the *Published
+    to the web* address (which usually ends in `...XYZ/pubhtml`) because
+    that link is slightly different and will not work in this template.
 
 <img src="images/13-leaflet/sheets-publish-annotated.png" alt="Copy the Google Sheet address at the top of the browser, NOT the *Publish to the web* address." width="500" />
 <p class="caption">
@@ -11370,10 +11495,11 @@ Leaflet code looks for these specific names.
 
 -   Group: Create any labels to categorize groups of markers in your
     legend.
--   Marker Icon: Insert any standard icon name such as `school` or `bus`
-    that appears [Font Awesome Icons](http://fontawesome.io/icons), or
-    leave blank for no icon inside the marker. To create your own custom
-    icon, see further below.
+-   Marker Icon: Insert any standard icon name (such as `school` or
+    `bus`) that appears in the [Font Awesome Icons
+    site](http://fontawesome.io/icons), or leave blank for no icon
+    inside the marker. To create your own custom icon, see further
+    below.
 -   Marker Color: Insert any standard web color name such as `blue` or
     `darkblue`, or insert a web color code such as `#775307` or
     `rgba(200,100,0,0.5)`. See options at [W3Schools Color
@@ -11446,19 +11572,20 @@ Figure 13.10: Optional: display interactive table of viewable markers at
 the bottom of your map.
 </p>
 
-TODO above: redo the screenshot after updating the map demo
-
 Optional custom markers: To create your own custom marker, such as a
-thumbnail photo icon, use any image editing tool to reduce a photo to a
-square of 64 x 64 pixels. Save it in PNG format and choose a filename
-using all lower-case characters with no spaces. Upload the image to the
-*media* folder in your GitHub repo as described above. In the Marker
-Icon column, enter the file pathname in this format:
-`media/image-thumbnail.png`. In the Custom Size column, set the
-dimensions to `64x64` or similar, such as `40x40` if desired.
+thumbnail photo icon as shown in Figure
+<a href="#fig:leaflet-map-custom-marker">13.11</a>, use any image
+editing tool to reduce a photo to a square of 64 x 64 pixels. Save it in
+PNG format and choose a filename using all lower-case characters with no
+spaces. Upload the image to the *media* folder in your GitHub repo as
+described above. In the Marker Icon column, enter the file pathname in
+this format: `media/image-thumbnail.png`. In the Custom Size column, set
+the dimensions to `64x64` or similar, such as `40x40` if desired.
 
-TODO: Add screenshot of the sample custom marker here, once we finalize
-the new template
+<img src="images/13-leaflet/leaflet-map-custom-marker.png" alt="Optional: create and upload custom thumbnail map markers." width="600" />
+<p class="caption">
+Figure 13.11: Optional: create and upload custom thumbnail map markers.
+</p>
 
 Open the browser tab that displays your live map and refresh the page to
 see your changes. If your changes do not appear within a few seconds,
@@ -11514,27 +11641,23 @@ To display polygons:
 
 -   In the *Polygons* tab, make sure *Polygon Legend Position* (cell B4)
     is visible by selecting *topleft* or a similar position.
--   Also, in *Polygon GeoJSON URL* (cell B6) enter the pathname to the
-    file you uploaded to your GitHub repo, such as
-    `geodata/map.geojson`.
--   Also, you can change the *Polygon Legend Title* (cell B3) and add an
+-   In *Polygon GeoJSON URL* (cell B6) enter the pathname to the file
+    you uploaded to your GitHub repo, such as `geodata/map.geojson`.
+-   You can change the *Polygon Legend Title* (cell B3) and add an
     optional *Polygon Legend Icon* (cell B5).
--   Also, edit the *Polygon Data* and *Color Settings* sections to
-    modify the labels and ranges to align with the properties of your
-    GeoJSON file. In the *Property Range Color Palette*, you can
-    automatically select a color scheme from the ColorBrewer tool we
-    described in the [Map Design section of Chapter 8](map-design.html),
-    or manually insert colors of your choice in the cell below.
+-   Edit the *Polygon Data* and *Color Settings* sections to modify the
+    labels and ranges to align with the properties of your GeoJSON file.
+    In the *Property Range Color Palette*, you can automatically select
+    a color scheme from the ColorBrewer tool we described in the [Map
+    Design section of Chapter 8](map-design.html), or manually insert
+    colors of your choice in the cell below.
 -   Read the *Hints* column in the *Polygons* sheet for tips on how to
     enter data.
 -   If you wish to display multiple polygon layers, use the *Polygons*
     tab drop-down menu to *Duplicate* the sheet, and name additional
     sheets in this format: *Polygons1*, *Polygons2*, etc.
 
-TODO: after updating the map code, modify the text to match the demo
-file names
-
-#### Finalize Your Map
+### Finalize Your Map Before Sharing with the Public
 
 Now you’re ready to finalize your map. If you wish to share your map
 link with the public, read the options below and choose either step G
@@ -11558,17 +11681,17 @@ sense, follow these steps:
 
 1.  In your Google Sheets, go to each tab and select *File &gt;
     Download* into CSV format, as shown in Figure
-    <a href="#fig:sheets-download-csv">13.11</a>, to create a separate
+    <a href="#fig:sheets-download-csv">13.12</a>, to create a separate
     file for each tab.
 
 <img src="images/13-leaflet/sheets-download-csv.png" alt="Download each Google Sheets tab as a separate CSV file." width="350" />
 <p class="caption">
-Figure 13.11: Download each Google Sheets tab as a separate CSV file.
+Figure 13.12: Download each Google Sheets tab as a separate CSV file.
 </p>
 
 1.  Shorten each file name as shown. The names must be exact, but they
-    are *not* case-sensitive. Only the first file below is required, and
-    others are optional, depending on your data.
+    are *not* case-sensitive. Only the first file below (Options.csv) is
+    required, and others are optional, depending on your data.
 
 -   Options.csv
 -   Points.csv
@@ -11581,7 +11704,7 @@ Figure 13.11: Download each Google Sheets tab as a separate CSV file.
 1.  In your GitHub repo, click the `csv` subfolder to open it, select
     *Add file &gt; Upload files*, and upload all of the CSV files above
     into this subfolder, as shown in Figure
-    <a href="#fig:leaflet-upload-csv">13.12</a>. The Leaflet template
+    <a href="#fig:leaflet-upload-csv">13.13</a>. The Leaflet template
     code checks here first for data, and if it finds CSV files with the
     names above, it will pull the map data directly from them, instead
     of your Google Sheets. *Remember* that from this point forward, any
@@ -11590,7 +11713,7 @@ Figure 13.11: Download each Google Sheets tab as a separate CSV file.
 
 <img src="images/13-leaflet/leaflet-upload-csv.png" alt="Upload your map data files into the *csv* subfolder in GitHub." width="400" />
 <p class="caption">
-Figure 13.12: Upload your map data files into the *csv* subfolder in
+Figure 13.13: Upload your map data files into the *csv* subfolder in
 GitHub.
 </p>
 
@@ -11612,7 +11735,7 @@ API key to maintain reasonable [usage
 limits](https://developers.google.com/sheets/api/limits) on its service.
 You can get a free Google Sheets API key if you have a personal Google
 account, but *not* a Google Suite account provided by your school or
-business. TODO: confirm this detail
+business.
 
 If problems arise, see the [Fix Common Mistakes](fix.html) section of
 the appendix.
@@ -11623,55 +11746,52 @@ Leaflet Storymaps with Google Sheets
 The Leaflet Storymaps code template is designed to show a point-by-point
 guided tour, with a scrolling narrative to display text, images, audio,
 video, and scanned map backgrounds, as shown in Figure
-<a href="#fig:storymap-demo">13.13</a>. You enter all of your map data
+<a href="#fig:storymap-demo">13.14</a>. You enter all of your map data
 into a linked Google Sheet (or CSV file) or upload it into a GitHub
-repository, as shown in Figure <a href="#fig:storymap-sheet">13.14</a>.
-Although some other story map tools are easier to start using right
-away, such as the [Knight Lab StoryMap](https://storymap.knightlab.com/)
-and [ESRI Story Maps](https://storymaps.arcgis.com/en/), we do not
-recommend them because both lack *data portability*, meaning that you
-can’t easily export any information you enter. By contrast, all of the
-information you add to the Leaflet Storymaps linked Google Sheet and
-GitHub repo can easily be exported and migrated to other platforms as
-visualization technology continues to evolve in the future, as we
-described when discussing [how to choose tools wisely in Chapter
-2](choose.html). In addition, the Leaflet Storymaps template allows you
-to customize the appearance of your data, and to add more layers, such
-as historical maps and geographic boundaries, which you’ll learn how to
-prepare in [Chapter 14: Transform Your Map Data](transform.html).
-Furthermore, the storymap design is responsive, so that it appears
-top-and-bottom on small screens and side-by-side on larger ones.
-Finally, the Leaflet template is built on flexible open-source software
-that’s written primarily in JavaScript, a very common coding language
-for the web, so you can customize it further if you have skills or
-support from a developer.
-
-TODO above: DECIDE how to address other storymap tools, with more
-details in editing notes
-
-TODO BELOW: Create and insert a new version of the template and
-demonstrate all features (all media, tricks such as leaving blank
-chapters and locations to display multiple images of one location,
-etc.). TODO DISCUSS with Ilya - option to control responsive
-appearance?:
-<a href="https://github.com/HandsOnDataViz/leaflet-storymaps-with-google-sheets/issues/75" class="uri">https://github.com/HandsOnDataViz/leaflet-storymaps-with-google-sheets/issues/75</a>
+repository, as shown in Figure <a href="#fig:storymap-sheet">13.15</a>.
+In addition, the Leaflet Storymaps template allows you to customize the
+appearance of your data, and to add more layers, such as historical maps
+and geographic boundaries, which you’ll learn how to prepare in [Chapter
+14: Transform Your Map Data](transform.html). Furthermore, the storymap
+design is responsive, so that it appears top-and-bottom on smaller
+screens (where width is less than 768 pixels), and automatically
+switches to side-by-side on larger ones. Finally, the Leaflet template
+is built on flexible open-source software that’s written primarily in
+JavaScript, a very common coding language for the web, so you can
+customize it further if you have skills or support from a developer.
 
 <img src="images/13-leaflet/storymap-demo.png" alt="Explore the [interactive Leaflet Storymaps with Google Sheets](https://handsondataviz.github.io/leaflet-storymaps-with-google-sheets/)."  />
 <p class="caption">
-Figure 13.13: Explore the [interactive Leaflet Storymaps with Google
+Figure 13.14: Explore the [interactive Leaflet Storymaps with Google
 Sheets](https://handsondataviz.github.io/leaflet-storymaps-with-google-sheets/).
 </p>
 
 <img src="images/13-leaflet/storymap-sheet.png" alt="View the [online Google Sheet template](https://docs.google.com/spreadsheets/d/1AO6XHL_0JafWZF4KEejkdDNqfuZWUk3SlNlQ6MjlRFM/) that feeds data into the Leaflet Storymaps demo above."  />
 <p class="caption">
-Figure 13.14: View the [online Google Sheet
+Figure 13.15: View the [online Google Sheet
 template](https://docs.google.com/spreadsheets/d/1AO6XHL_0JafWZF4KEejkdDNqfuZWUk3SlNlQ6MjlRFM/)
 that feeds data into the Leaflet Storymaps demo above.
 </p>
 
-Explore the gallery in Table <a href="#tab:storymaps-gallery">13.2</a>
-to see what other people created with the Leaflet Storymaps with Google
-Sheets template.
+We created Leaflet Storymaps with Google Sheets to fill a gap that was
+not addressed by other tools. To be clear, other story map platforms are
+easier for beginners to start using right away, such as the free and
+open-source [Knight Lab StoryMap
+platform](https://storymap.knightlab.com/), and also the subscriber-only
+proprietary [ArcGIS StoryMaps platform](https://storymaps.arcgis.com),
+successor to the [older Esri Story Maps
+platform](https://storymaps-classic.arcgis.com/). But we do not
+recommend either of them because both lack *data portability*, meaning
+that you can’t easily export any data or images you enter, something we
+cautioned you to watch out for when we discussed [how to choose tools
+wisely in Chapter 2](choose.html). By contrast, all of the data you
+enter into the Leaflet Storymaps linked Google Sheet and GitHub repo can
+easily be migrated to other platforms, as visualization technology
+continues to evolve in the future.
+
+Explore the Gallery of Leaflet Storymaps with Google Sheets in Table
+<a href="#tab:storymaps-gallery">13.2</a> to see what other people
+created with this template.
 
 <table>
 <caption>Table 13.2: Gallery of Leaflet Storymaps with Google Sheets</caption>
@@ -11681,7 +11801,7 @@ Sheets template.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td><img src="images/13-leaflet/storymaps-gallery-1.png" /><br><a href="https://jhsgh.org/synagogue-map/">Synagogue Map, Past and Present</a> by the Jewish Historical Society of Greater Hartford</td>
+<td><img src="images/13-leaflet/storymaps-gallery-1.png" /><br><a href="https://jhsgh.org/synagogue-map/">Synagogue Map, Past and Present</a> by Elizabeth Rose, Jewish Historical Society of Greater Hartford</td>
 <td><img src="images/13-leaflet/storymaps-gallery-2.png" /><br><a href="https://www.mappingtheuppermissouri.com/">Mapping the Upper Missouri</a> by Jen Andrella</td>
 </tr>
 <tr class="even">
@@ -11691,18 +11811,24 @@ Sheets template.
 </tbody>
 </table>
 
-### Tutorial Outline
+### Tutorial Requirements and Overview
 
-Before beginning this tutorial, you must have a [Google Drive
-account](http://drive.google.com), and know how to [File &gt; Make a
-Copy in Google Sheets](copy.html), as described in Chapter 3. Also, you
-must have a [GitHub account](http://github.com), and know how to [Edit
-and Host Code with GitHub](github.html), as described in Chapter 11. We
-have omitted many screenshots below that illustrate steps we previously
-covered, so if you get lost, go back to that chapter.
+Before you begin, you must have a [Google Drive
+account](http://drive.google.com) and know how to [Make a Copy in Google
+Sheets as described in Chapter 3](copy.html). Also, you must have a
+[GitHub account](http://github.com) and know how to [Edit and Host Code
+with GitHub as described in Chapter 11](github.html). We omitted some
+screenshots below that illustrate steps we previously covered, so if you
+get lost, go back to those chapters.
 
-In the first part of the tutorial, you will create and publish your
-copies of our GitHub and Google Sheets templates:
+Tip: You’ll notice that this tutorial outline is very similar to the one
+in the previous section, but the links in the first part are different,
+and several steps in the second part are new.
+
+Since this tutorial involves multiple steps, we created this outline to
+provide a broad overview. In the first part, you will create and publish
+your copies of two templates, one for GitHub and another for its linked
+Google Sheet.
 
 -   1.  Copy the GitHub template and publish your version with GitHub
         Pages.
@@ -11724,10 +11850,10 @@ your GitHub repo, and add scanned background map layers if desired.
         Sheet *Chapters* tab.
 
 -   1.  Optional: Add georeferenced historical map image or GeoJSON
-        overlays
+        overlays.
 
-In the third part, you have two options to finalize your story map
-before widely sharing it online:
+In the third part, you have two options to finalize your map before
+publicly sharing with others:
 
 -   1.  Save each Google Sheets tab as a CSV file and upload to GitHub.
 
@@ -11737,6 +11863,9 @@ before widely sharing it online:
 
 If any problems arise, see the [Fix Common Mistakes](fix.html) section
 of the appendix.
+
+Now that you have a better sense of the big picture, let’s get started
+with the first part of the tutorial.
 
 #### A) Copy the GitHub template and publish your version with GitHub Pages
 
@@ -11760,14 +11889,14 @@ of the appendix.
     button and scroll way down to the GitHub Pages area. In the
     drop-down menu, change *Source* from *None* to *Main*, keep the
     default */(root)* setting, and press *Save* as shown in Figure
-    <a href="#fig:leaflet-github-pages-main3">13.15</a>. This step tells
+    <a href="#fig:leaflet-github-pages-main3">13.16</a>. This step tells
     GitHub to publish a live version of your map on the public web,
     where anyone can access it in their browser, if they have the web
     address.
 
 <img src="images/13-leaflet/leaflet-github-pages-main.png" alt="In *Settings*, go to *GitHub Pages*, switch the source from *None* to *Main*, and *Save*." width="300" />
 <p class="caption">
-Figure 13.15: In *Settings*, go to *GitHub Pages*, switch the source
+Figure 13.16: In *Settings*, go to *GitHub Pages*, switch the source
 from *None* to *Main*, and *Save*.
 </p>
 
@@ -11783,12 +11912,12 @@ from *None* to *Main*, and *Save*.
     click the pencil icon to edit this file.
 
 3.  Delete the link to the *our* live site, as shown in Figure
-    <a href="#fig:storymap-readme-link-top">13.16</a>, and paste in the
+    <a href="#fig:storymap-readme-link-top">13.17</a>, and paste in the
     link to *your* published site. Scroll down to *Commit* your changes.
 
 <img src="images/13-leaflet/storymap-readme-link-top.png" alt="Edit your README file to replace the link to *our* site with the link to *your* site."  />
 <p class="caption">
-Figure 13.16: Edit your README file to replace the link to *our* site
+Figure 13.17: Edit your README file to replace the link to *our* site
 with the link to *your* site.
 </p>
 
@@ -11814,14 +11943,15 @@ with the link to *your* site.
     read it. Then click the upper-right *X* symbol to close this window.
 
 5.  At the top of your browser, copy your Google Sheet address or URL
-    (which usually ends in `...XYZ/edit#gid=0`). Do *NOT* copy the
+    (which usually ends in `...XYZ/edit#gid=0`), as shown in Figure
+    <a href="#fig:sheets-publish2">13.18</a>. Do *NOT* copy the
     *Published to the web* address (which usually ends in
-    `...XYZ/pubhtml`), as shown in Figure
-    <a href="#fig:sheets-publish2">13.17</a>.
+    `...XYZ/pubhtml`) because that link is slightly different and will
+    not work in this template.
 
 <img src="images/13-leaflet/sheets-publish-annotated.png" alt="Copy the Google Sheet address at the top of the browser, NOT the *Publish to the web* address." width="500" />
 <p class="caption">
-Figure 13.17: Copy the Google Sheet address at the top of the browser,
+Figure 13.18: Copy the Google Sheet address at the top of the browser,
 NOT the *Publish to the web* address.
 </p>
 
@@ -11836,26 +11966,26 @@ on the map.
 
 2.  Paste *your* Google Sheet address or URL (which usually ends in
     `...XYZ/edit#gid=0`) to replace *our* existing URL, as shown in
-    Figure <a href="#fig:google-doc-url2">13.18</a>. Be careful *NOT* to
+    Figure <a href="#fig:google-doc-url2">13.19</a>. Be careful *NOT* to
     erase the single quotation marks or the semicolon at the end. Scroll
     down to *Commit* your changes. See separate instructions about the
     Google API key further below.
 
 <img src="images/13-leaflet/google-doc-url.png" alt="Paste in *your* Google Sheet URL to replace *our* URL."  />
 <p class="caption">
-Figure 13.18: Paste in *your* Google Sheet URL to replace *our* URL.
+Figure 13.19: Paste in *your* Google Sheet URL to replace *our* URL.
 </p>
 
 1.  Also, let’s paste your Google Sheet URL in second place to help you
     keep track of it. In your GitHub repo, click the README.md file to
     open it, click the pencil symbol to edit it, and paste *your* Google
     Sheet URL to replace *our* existing URL, as shown in Figure
-    <a href="#fig:storymap-readme-link-bottom">13.19</a>. Scroll down to
+    <a href="#fig:storymap-readme-link-bottom">13.20</a>. Scroll down to
     *Commit* your changes.
 
 <img src="images/13-leaflet/storymap-readme-link-bottom.png" alt="Edit your README file to replace the link to *our* site with the link to *your* site."  />
 <p class="caption">
-Figure 13.19: Edit your README file to replace the link to *our* site
+Figure 13.20: Edit your README file to replace the link to *our* site
 with the link to *your* site.
 </p>
 
@@ -11895,14 +12025,14 @@ Leaflet code looks for these specific names.
     begins with `https` (secure) and ends with either `.jpg` or `.png`.
     You can also insert a Youtube video link. Or you can upload an image
     file into the `media` subfolder in your GitHub repo, as shown in
-    Figure <a href="#fig:storymap-media-upload">13.20</a>, and enter the
+    Figure <a href="#fig:storymap-media-upload">13.21</a>, and enter the
     pathname in the Google Sheet in this format:
     `media/your-file-name.jpg` or `...png`. Similarly, you can upload an
     audio file in `.mp3` (recommended) or `.ogg` or `.wav` format.
 
 <img src="images/13-leaflet/storymap-media-upload.png" alt="In GitHub, click to open the `media` folder and *Add file - Upload files*." width="400" />
 <p class="caption">
-Figure 13.20: In GitHub, click to open the `media` folder and *Add file
+Figure 13.21: In GitHub, click to open the `media` folder and *Add file
 - Upload files*.
 </p>
 
@@ -11958,13 +12088,13 @@ in the first row of the series, and leave it blank for the others.
     SmartMonkey &gt; Geocode Details* to create a new sheet with sample
     data and display results for three new columns: *Latitude*,
     *Longitude*, and *Address found*, as shown in Figure
-    <a href="#fig:geocode-details3">13.21</a>. Paste in your own address
+    <a href="#fig:geocode-details3">13.22</a>. Paste in your own address
     data and repeat the step above to geocode it, then copy and paste
     the results into your *Points* sheet.
 
 <img src="images/13-leaflet/geocode-details.png" alt="Select *Add-ons--Geocoding by SmartMonkey--Geocode Details* to display sample data with results for three new columns: *Latitude*, *Longitude*, and *Address found*."  />
 <p class="caption">
-Figure 13.21: Select *Add-ons–Geocoding by SmartMonkey–Geocode Details*
+Figure 13.22: Select *Add-ons–Geocoding by SmartMonkey–Geocode Details*
 to display sample data with results for three new columns: *Latitude*,
 *Longitude*, and *Address found*.
 </p>
@@ -12003,26 +12133,19 @@ Although map tile links are *not* viewable in a normal browser, they can
 be displayed by the Leaflet Storymaps code. Enter the tile link and your
 desired transparency level into the Overlay columns in the *Chapters*
 tab of your Google Sheet template, as shown in Figure
-<a href="#fig:storymap-overlay">13.22</a>.
+<a href="#fig:storymap-overlay">13.23</a>.
 
 -   Overlay: Enter a map tile link in Google/OpenStreetMap format,
     similar to the sample above.
 -   Overlay Transparency: Enter a number from 0 (transparent) to 1
     (opaque). The default is 0.7.
 
-to display it in one or more storymap chapters (on right).
-
-<img src="images/13-leaflet/storymap-overlay.png" alt="Enter map tile link and transparency level into the Google Sheet template (on left)"  />
+<img src="images/13-leaflet/storymap-overlay.png" alt="Enter map tile link and transparency level into the Google Sheet template (on left) to display it in one or more storymap chapters (on right)."  />
 <p class="caption">
-Figure 13.22: Enter map tile link and transparency level into the Google
-Sheet template (on left)
+Figure 13.23: Enter map tile link and transparency level into the Google
+Sheet template (on left) to display it in one or more storymap chapters
+(on right).
 </p>
-
-TODO above: Update the image after updating the demo storymap. Confirm
-if similar format works with georeferenced items from [David Rumsey Map
-Collection](https://www.davidrumsey.com/view/georeferencer), and check
-other platforms. Also, decide whether to add this line: Use secure https
-(ending with `s`) when available.
 
 To add a visible path, geographic boundaries, or a filled choropleth map
 to your story, consider adding a GeoJSON data layer to one or more
@@ -12036,21 +12159,15 @@ repository by opening the `geojson` folder and selecting *Add file -
 Upload files*. In your Google Sheet template, enter the pathname in the
 *GeoJSON Overlay* column in this format:
 `geojson/your-file-name.geojson`, as shown in Figure
-<a href="#fig:storymap-geojson">13.23</a>.
+<a href="#fig:storymap-geojson">13.24</a>.
 
 to display it in one or more storymap chapters (on right).
 
 <img src="images/13-leaflet/storymap-geojson.png" alt="Enter the pathname in the *GeoJSON Overlay* column (on left)"  />
 <p class="caption">
-Figure 13.23: Enter the pathname in the *GeoJSON Overlay* column (on
+Figure 13.24: Enter the pathname in the *GeoJSON Overlay* column (on
 left)
 </p>
-
-TODO above: Update demo storymap and update images to match. TODO below:
-DISCUSS with Ilya if we are using a standardized properties list re:
-<a href="https://github.com/HandsOnDataViz/leaflet-storymaps-with-google-sheets/issues/74" class="uri">https://github.com/HandsOnDataViz/leaflet-storymaps-with-google-sheets/issues/74</a>.
-Convert list to a small table, to make it easier to see definitions and
-storymap default values?
 
 When you create or edit GeoJSON data with a tool like
 [GeoJson.io](geojsonio.html), you can directly edit its feature
@@ -12058,9 +12175,9 @@ properties. If you wish to display the same properties you assigned to
 your GeoJSON file in your storymap, we recommend naming them as follows:
 
 -   weight (width of line; storymap template default is 1px)
--   color (of line; default is white??)
--   opacity (of line; default is ???)
--   fillColor (of polygon; default is silver)
+-   color (of line; default is gray)
+-   opacity (of line; default is 0.5)
+-   fillColor (of polygon; default is white)
 -   fillOpacity (of polygon; default is 0.7)
 
 Or you can enter properties and CSS codes in the *GeoJSON Feature
@@ -12071,26 +12188,19 @@ assign colors with standard names, hex codes, or RGBA values as
 described in the [W3Schools Colors
 Picker](https://www.w3schools.com/colors/colors_picker.asp).
 
-TODO DISCUSS with Ilya whether to mention additional customizations that
-are possible here (and are all of them also available in Leaflet Maps
-with Google Sheets?)
+Inside the template you’ll discover more ways to customize your
+storymap, such as:
 
--   insert logo – see Options tab of Google Sheets
--   insert Google Analytics tracking ID – see how to get one…. and
-    insert in Options tab of Google Sheets
--   to insert a horizontal divider line in Description, copy and paste
-    this text to your Google Sheets template:
+-   Insert logo (see Options tab in Google Sheets)
+-   Insert Google Analytics tracking ID (see Options tab in Google
+    Sheets
+-   Adjust title size and font (go to css/styles.css file in GitHub)
+-   To insert a horizontal divider in Chapter text (copy and paste this
+    text into Description field in Google Sheets, and avoid changing
+    single-quote marks into curly apostrophes)
     `<span style='display:block;width:100%;height:1px;background-color: silver; margin: 20px 0;'></span>`
-    (is this necessary here? …and make sure that the single-quote marks
-    are not changed into curly apostrophes).
--   to adjust title size and font: in GitHub, go to css/styles.css file,
-    scroll down to (specify lines?), and adjust font-size values…
--   About the responsive design: On larger screens, the scrolling
-    narrative and map appear side-by-side. On smaller screens where the
-    width is less than 768 pixels, it automatically switches to a
-    top-and-bottom display.
 
-#### Finalize Your Story Map
+### Finalize Your Story Map Before Sharing with the Public
 
 Now you’re ready to finalize your map. If you wish to share your map
 link with the public, read the options below and choose either step G
@@ -12114,17 +12224,17 @@ sense, follow these steps:
 
 1.  In your Google Sheets, go to each tab and select *File &gt;
     Download* into CSV format, as shown in Figure
-    <a href="#fig:storymap-download-csv">13.24</a>, to create a separate
+    <a href="#fig:storymap-download-csv">13.25</a>, to create a separate
     file for each tab.
 
 <img src="images/13-leaflet/storymap-download-csv.png" alt="Download each Google Sheets tab as a separate CSV file." width="350" />
 <p class="caption">
-Figure 13.24: Download each Google Sheets tab as a separate CSV file.
+Figure 13.25: Download each Google Sheets tab as a separate CSV file.
 </p>
 
 1.  Shorten each file name as shown. The names must be exact, but they
-    are *not* case-sensitive. The first two files below are below are
-    required, and others are optional.
+    are *not* case-sensitive. The first two files below are required,
+    and others are optional.
 
 -   Chapters.csv
 -   Options.csv
@@ -12134,7 +12244,7 @@ Figure 13.24: Download each Google Sheets tab as a separate CSV file.
 1.  In your GitHub repo, click the `csv` subfolder to open it, select
     *Add file &gt; Upload files*, and upload all of the CSV files above
     into this subfolder, as shown in Figure
-    <a href="#fig:storymap-upload-csv">13.25</a>. The Leaflet template
+    <a href="#fig:storymap-upload-csv">13.26</a>. The Leaflet template
     code checks here first for data, and if it finds CSV files with the
     names above, it will pull the map data directly from them, instead
     of your Google Sheets. *Remember* that from this point forward, any
@@ -12143,7 +12253,7 @@ Figure 13.24: Download each Google Sheets tab as a separate CSV file.
 
 <img src="images/13-leaflet/storymap-upload-csv.png" alt="Upload your map data files into the *csv* subfolder in GitHub." width="400" />
 <p class="caption">
-Figure 13.25: Upload your map data files into the *csv* subfolder in
+Figure 13.26: Upload your map data files into the *csv* subfolder in
 GitHub.
 </p>
 
@@ -12165,7 +12275,7 @@ API key to maintain reasonable [usage
 limits](https://developers.google.com/sheets/api/limits) on its service.
 You can get a free Google Sheets API key if you have a personal Google
 account, but *not* a Google Suite account provided by your school or
-business. TODO: confirm this detail
+business.
 
 If problems arise, see the [Fix Common Mistakes](fix.html) section of
 the appendix.
@@ -12207,99 +12317,101 @@ Before you begin:
 -   If you already created a Google Sheets API key for one template
     above, you can also use that key for another template.
 
+Warning: Your screen instructions may vary from those listed below.
+
 1.  Go to the Google Developers Console at
     <a href="https://console.developers.google.com/" class="uri">https://console.developers.google.com/</a>
     and log in to your Google account. Google may ask you to identify
     your country and agree to its terms of service.
 
 2.  Click on *Create a Project* on the opening screen, as shown in
-    Figure <a href="#fig:google-api-create">13.26</a>. Or alternatively,
+    Figure <a href="#fig:google-api-create">13.27</a>. Or alternatively,
     go to the upper-left drop-down menu to *Select a project &gt; New
     project*.
 
 <img src="images/13-leaflet/google-api-create.png" alt="Select *Create a Project* or use the menu to select a new project." width="600" />
 <p class="caption">
-Figure 13.26: Select *Create a Project* or use the menu to select a new
+Figure 13.27: Select *Create a Project* or use the menu to select a new
 project.
 </p>
 
 1.  In the next screen, give your new project a meaningful short name to
     remind you of its purpose, such as `handsondataviz`. You do not need
     to create an organization or parent folder. Then click *Create*, as
-    shown in Figure <a href="#fig:google-api-name">13.27</a>.
+    shown in Figure <a href="#fig:google-api-name">13.28</a>.
 
 <img src="images/13-leaflet/google-api-name.png" alt="Give your project a meaningful short name." width="450" />
 <p class="caption">
-Figure 13.27: Give your project a meaningful short name.
+Figure 13.28: Give your project a meaningful short name.
 </p>
 
 1.  In the next screen, press the *+ Enable APIs and Services* at the
     top of the menu, as shown in Figure
-    <a href="#fig:google-api-enable">13.28</a>. Make sure that your new
+    <a href="#fig:google-api-enable">13.29</a>. Make sure that your new
     project name appears near the top.
 
 <img src="images/13-leaflet/google-api-enable.png" alt="Press the *+ Enable APIs and Services* button." width="500" />
 <p class="caption">
-Figure 13.28: Press the *+ Enable APIs and Services* button.
+Figure 13.29: Press the *+ Enable APIs and Services* button.
 </p>
 
 1.  In the next screen, enter *Google Sheets* into the search bar, and
     select this result, as shown in Figure
-    <a href="#fig:google-api-search">13.29</a>.
+    <a href="#fig:google-api-search">13.30</a>.
 
 <img src="images/13-leaflet/google-api-search.png" alt="Search for *Google Sheets* and select this result." width="500" />
 <p class="caption">
-Figure 13.29: Search for *Google Sheets* and select this result.
+Figure 13.30: Search for *Google Sheets* and select this result.
 </p>
 
 1.  In the next screen, select the *Enable* button to turn on the Google
     Sheets API for your project, as shown in Figure
-    <a href="#fig:google-api-select">13.30</a>.
+    <a href="#fig:google-api-select">13.31</a>.
 
 <img src="images/13-leaflet/google-api-select.png" alt="Select the *Enable* button for Google Sheets API." width="350" />
 <p class="caption">
-Figure 13.30: Select the *Enable* button for Google Sheets API.
+Figure 13.31: Select the *Enable* button for Google Sheets API.
 </p>
 
 1.  In the left sidebar menu, click *Credentials*, then click *+ Create
     Credentials* and select *API key*, as shown in Figure
-    <a href="#fig:google-api-credentials">13.31</a>.
+    <a href="#fig:google-api-credentials">13.32</a>.
 
 <img src="images/13-leaflet/google-api-credentials.png" alt="Select *Credentials - Create Credentials - API key*."  />
 <p class="caption">
-Figure 13.31: Select *Credentials - Create Credentials - API key*.
+Figure 13.32: Select *Credentials - Create Credentials - API key*.
 </p>
 
 1.  In the next screen, the console will generate your API key. Copy it,
     then press *Restrict key*, as shown in Figure
-    <a href="#fig:google-api-key">13.32</a>.
+    <a href="#fig:google-api-key">13.33</a>.
 
 <img src="images/13-leaflet/google-api-key-annotated.png" alt="Copy your API key and press *Restrict key*." width="500" />
 <p class="caption">
-Figure 13.32: Copy your API key and press *Restrict key*.
+Figure 13.33: Copy your API key and press *Restrict key*.
 </p>
 
 1.  In the new window, under *API restrictions*, choose the *Restrict
     key* radio button. In the dropdown that appears, choose *Google
     Sheets API*, then click *Save*, as shown in Figure
-    <a href="#fig:google-api-restrict">13.33</a>.
+    <a href="#fig:google-api-restrict">13.34</a>.
 
 <img src="images/13-leaflet/google-api-restrict.png" alt="Choose *API restrictions - Restrict key - Google Sheets API*" width="600" />
 <p class="caption">
-Figure 13.33: Choose *API restrictions - Restrict key - Google Sheets
+Figure 13.34: Choose *API restrictions - Restrict key - Google Sheets
 API*
 </p>
 
 1.  In your Leaflet map code on your GitHub repo, open the
     `google-doc-url.js` file, click the pencil symbol to edit it, and
     paste in *your* Google Sheets API key to replace *our* key, as shown
-    in Figure <a href="#fig:google-api-paste">13.34</a>. Be careful not
+    in Figure <a href="#fig:google-api-paste">13.35</a>. Be careful not
     to erase the single-quote marks or the semicolon. Scroll down to
     *Commit* your changes.
 
 <img src="images/13-leaflet/google-api-paste-annotated.png" alt="Paste in *your* Google Sheets API key to replace *our* key."  />
 <p class="caption">
-Figure 13.34: Paste in *your* Google Sheets API key to replace *our*
+Figure 13.35: Paste in *your* Google Sheets API key to replace *our*
 key.
 </p>
 
@@ -12307,18 +12419,6 @@ You might receive a notification from GitHub stating that you have an
 exposed API key, but don’t worry. This key can only be used with Google
 Sheets, you received it for free, and you did not attach any billing
 information to it, so Google cannot charge you for its use.
-
-TODO above: Test our instructions on a new Google account to fix what
-reviewer Erica H. described here: I did notice when you get to Step 7,
-they ask you what kind of credentials you’ll need, where you’ll be
-calling the API from, and the kind of data you will be accessing. [See
-screenshots attached](images/13-leaflet/google-api-add-credentials). You
-might want to add a note about this in your book chapter in case folks
-don’t know what to select if they are taken to this step automatically.
-I ended up clicking refresh accidentally and then I saw the + Create
-Credentials&gt;API key dropdown menu as shown in your chapter
-instructions and I was able to generate my Google API key without
-entering those credential specifications
 
 Now that you’ve learned how to create a Google Sheets API key to use
 with Leaflet Maps with Google Sheets or Leaflet Storymaps with Google
@@ -12328,17 +12428,24 @@ Leaflet map templates.
 Leaflet Maps with CSV Data
 --------------------------
 
-Figure <a href="#fig:leaflet-map-csv">13.35</a> shows a simple point map
+This open-source template is designed to improve your coding skills by
+demonstrating how to create a Leaflet point map that pulls data from a
+CSV file located in your GitHub repo. While you can make the same type
+of map on other platforms, such as [Google My Maps as described in
+Chapter 8](mymaps.html), you’ll more about how the Leaflet code library
+works by doing it yourself.
+
+Figure <a href="#fig:leaflet-map-csv">13.36</a> shows a simple point map
 of some colleges and universities in Connecticut. But instead of
 individually creating markers in JavaScript using Leaflet’s `L.marker()`
 function, the point data is stored in a local CSV file (`data.csv`) that
-is easy to modify in Excel or any text editor. Each time the map is
-loaded by the browser, point data from the CSV file is read and markers
-are generated “on the fly”.
+is easy to modify in any text editor or spreadsheet. Each time the map
+is loaded by the browser, point data from the CSV file is read and
+markers are generated “on the fly.”"
 
 <img src="images/13-leaflet/leaflet-map-csv.png" alt="Explore the [interactive Leaflet point map with CSV data](https://handsondataviz.github.io/leaflet-map-csv/)."  />
 <p class="caption">
-Figure 13.35: Explore the [interactive Leaflet point map with CSV
+Figure 13.36: Explore the [interactive Leaflet point map with CSV
 data](https://handsondataviz.github.io/leaflet-map-csv/).
 </p>
 
@@ -12377,7 +12484,8 @@ Your data can look like the following:
 
 We used default Leaflet markers for code simplicity, but you may want to
 use custom icons instead. The code snippet below can give you an idea
-how to
+how to set it up in your GitHub repository, where you insert your unique
+pathname to your icon in place of the sample.
 
     var marker = L.marker([row.Latitude, row.Longitude], {
       opacity: 1,
@@ -12388,8 +12496,8 @@ how to
       })
     }).bindPopup(row.Title);
 
-For more information on icon customization, see [this helpful Leaflet
-example](https://leafletjs.com/examples/custom-icons/).
+To learn more, see [this helpful Leaflet documentation example about
+custom icons](https://leafletjs.com/examples/custom-icons/).
 
 Leaflet Heatmap Points with CSV Data
 ------------------------------------
@@ -12397,17 +12505,17 @@ Leaflet Heatmap Points with CSV Data
 Heatmaps turn individual points into hotspots or clusters, allowing
 viewers to explore spatial distributions of events, such as areas of
 high and low population density or incidents of crime. Figure
-<a href="#fig:leaflet-heatmap">13.36</a> shows an interactive heatmap of
+<a href="#fig:leaflet-heatmap">13.37</a> shows an interactive heatmap of
 bike theft locations in London between January and July 2020. The
 underlying data are coordinate locations for each reported bike theft,
-which [`Leaflet.heat`](https://github.com/Leaflet/Leaflet.heat) plugin
-transforms into areas of various densities. Red shows areas of highest
-density, or areas where bike theft appeared most often. When you zoom
-in, areas are re-calculated into more distinct clusters.
+which the [`Leaflet.heat`](https://github.com/Leaflet/Leaflet.heat)
+plugin transforms into areas of various densities. Red shows areas of
+highest density, or areas where bike theft appeared most often. When you
+zoom in, areas are re-calculated into more distinct clusters.
 
 <img src="images/13-leaflet/leaflet-heatmap.png" alt="Explore the [interactive Leaflet Heatmap](https://handsondataviz.github.io/leaflet-heatmap/)."  />
 <p class="caption">
-Figure 13.36: Explore the [interactive Leaflet
+Figure 13.37: Explore the [interactive Leaflet
 Heatmap](https://handsondataviz.github.io/leaflet-heatmap/).
 </p>
 
@@ -12456,17 +12564,20 @@ you have few points, try increasing the value of `radius` property of
 Leaflet Searchable Point Map
 ----------------------------
 
-Figure <a href="#fig:searchable-map">13.37</a> shows a powerful Leaflet
+A searchable point map works best for showing multiple locations, where
+users can search by name or proximity to a location, or filter by
+category, with an optional list view. Figure
+<a href="#fig:searchable-map">13.38</a> shows a powerful Leaflet
 template of a searchable and filterable point map, which draws from a
 CSV data file, developed by [Derek Eder](https://derekeder.com/) from
-DataMade. This map allows you to show points of interest, filter them by
-using *Search by name* functionality, and show them as a list instead of
-points on a map. In addition, the *About* page gives you plenty of space
-to talk about your map.
+DataMade in Chicago. This map allows you to show points of interest,
+filter them by using *Search by name* functionality, and show them as a
+list instead of points on a map. In addition, the *About* page gives you
+plenty of space to describe the purpose and content of your map.
 
 <img src="images/13-leaflet/searchable-map.png" alt="Explore the [interactive Searchable Map template](https://searchable-map-template-csv.netlify.app/)."  />
 <p class="caption">
-Figure 13.37: Explore the [interactive Searchable Map
+Figure 13.38: Explore the [interactive Searchable Map
 template](https://searchable-map-template-csv.netlify.app/).
 </p>
 
@@ -12495,8 +12606,7 @@ in chapter 3.
     choice. Open up `/js/map.js` and set your map options in the
     `SearchableMapLib.initialize` function:
 
--   `map_centroid` - the lat/long you want your map to center on ([find
-    yours here](https://getlatlong.net/))
+-   `map_centroid` - the lat/long you want your map to center on.
 -   `filePath` - Path to your map data file. This file needs to be in
     csv or geojson format and placed in the `data` folder. This file’s
     first line must be the header, and it must have a latitude column
@@ -12505,8 +12615,8 @@ in chapter 3.
 
 1.  Edit the templates in the `templates` folder for how you want your
     data displayed. These templates use EJS, which allows the display of
-    your variables with HTML, as well as conditional logic.
-    [Documentation is here](https://ejs.co/#docs).
+    your variables with HTML, as well as conditional logic. Read more in
+    the [EJS documentation](https://ejs.co/#docs).
 
 -   `/templates/hover.ejs` - template for when you hover over a dot on
     the map
@@ -12536,20 +12646,29 @@ in chapter 3.
 Leaflet Maps with Open Data APIs
 --------------------------------
 
-Leaflet maps can pull and display data from various open data
-repositories using APIs. Figure
-<a href="#fig:leaflet-open-data">13.38</a> shows an interactive map of
-North Dakota counties, colored by population density, with hospitals and
-EMS stations locations. Hospital information is pulled directly from
-[Medicare.org Socrata database](https://data.medicare.gov/). County
-boundaries and population density are pulled from [North Dakota
-GIS](https://www.gis.nd.gov/) ArcGIS server. EMS stations are fetched
-from [Homeland Infrastructure Foundation-Level
-Data](https://hifld-geoplatform.opendata.arcgis.com/) ArcGIS server.
+Learn how to code your own Leaflet map with an application programming
+interface (API) that continuously pulls the most current information
+directly from an open-data repository, similar to the [Socrata Open Data
+map you learned about in Chapter 8](map-socrata.html). Leaflet maps can
+pull and display data from various open data repositories using APIs.
+Figure <a href="#fig:leaflet-open-data">13.39</a> shows an interactive
+map of North Dakota counties, colored by population density, with
+hospitals and emergency medical service (EMS) locations.
+
+This map template pulls data from three different open repository
+sources:
+
+-   Hospital information is pulled directly from [Medicare.org Socrata
+    database](https://data.medicare.gov/).
+-   County boundaries and population density are pulled from [North
+    Dakota GIS](https://www.gis.nd.gov/) ArcGIS server.
+-   EMS stations are fetched from [Homeland Infrastructure
+    Foundation-Level
+    Data](https://hifld-geoplatform.opendata.arcgis.com/) ArcGIS server.
 
 <img src="images/13-leaflet/leaflet-open-data.png" alt="Explore the [interactive Leaflet Map with Open Data](https://handsondataviz.github.io/leaflet-maps-open-data-apis/index.html)."  />
 <p class="caption">
-Figure 13.38: Explore the [interactive Leaflet Map with Open
+Figure 13.39: Explore the [interactive Leaflet Map with Open
 Data](https://handsondataviz.github.io/leaflet-maps-open-data-apis/index.html).
 </p>
 
@@ -12563,7 +12682,7 @@ To adapt this template for your own project:
 1.  Visit the [GitHub
     repository](https://github.com/HandsOnDataViz/leaflet-maps-open-data-apis)
     that contains the code for the map in Figure
-    <a href="#fig:leaflet-open-data">13.38</a>, and press the *Use this
+    <a href="#fig:leaflet-open-data">13.39</a>, and press the *Use this
     template* button to copy the repo to your own GitHub account.
 2.  All data is pulled form the code inside the `<script>` tag of
     `index.html`. To pull data from Socrata or another JSON/GeoJSON
@@ -13565,44 +13684,79 @@ KMZ, because KMZ is simply a *zipped* version of a KML file!
 Georeference with MapWarper
 ---------------------------
 
-TODO: write this section about using [MapWarper](http://mapwarper.net),
-a tool created and hosted by Tim Waters, to upload and georeference a
-scanned map. This means to properly position a scanned map based on
-standard coordinates, so that you can place it as an overlay on an
-interactive map, such as [Leaflet Storymaps with Google
-Sheets](leaflet-storymaps-with-google-sheets.html).
+[MapWarper](http://mapwarper.net), an open-source tool created and
+hosted by Tim Waters, allows users to upload and georeference (also
+called georectify) a scanned map image. This means to precisely align
+the static map image on top of a present-day interactive map. As a
+result of this process, older map images often appear “warped” when
+updated for the digital age. After your map image is georeferenced and
+hosted on this site, a special link allows you to place this raster data
+as an overlay on an interactive map, such as [Leaflet Storymaps with
+Google Sheets as described in Chapter
+13](leaflet-storymaps-with-google-sheets.html). Anyone can create a free
+account to upload and georeference a map on the developer’s public
+MapWarper site. See also how the tool is used by organizations such as
+the [New York Public Library’s digital maps
+collection](http://maps.nypl.org).
 
-Anyone can upload and georectify a map on the developer’s public site at
-<a href="http://mapwarper.net" class="uri">http://mapwarper.net</a>, and
-also see how it’s used by organizations such as the New York Public
-Library at
-<a href="http://maps.nypl.org" class="uri">http://maps.nypl.org</a>.
+Warning: While MapWarper is a wonderful open-source platform, service
+may be unstable. A July 2020 update states: “Ran out of disk space. Maps
+older than 2 years will need re-warping to work. Downtime will happen
+again.” We recommend that users be mindful of the platform’s
+limitations, but also consider donating funds to the developer to
+continue this open-source project.
 
-Warning: MapWarper is a wonderful open-source tool and platform, but
-service may be interrupted. As of July 2020, the site warns: “Ran out of
-disk space. Maps older than 2 years will need re-warping to work.
-Downtime will happen again.”
+Follow this abbreviated tutorial to create a georeferenced overlay map,
+based on a [more detailed version by digital librarians Erica Hayes and
+Mia Partlow](https://github.com/ericayhayes/georeferencingtutorial).[37]
 
-MODIFY TEXT FROM CH 13: To add a historical map overlay, it first must
-be *georeferenced* (also called georectified), which means to digitally
-align the static map image with a more precise present-day interactive
-map. If you have a high-quality static image of a historical map, use
-the [Mapwarper tool](mapwarper.html) as described in Chapter 14 to align
-several known points with those on a present-day interactive map.
-Mapwarper transforms the static map image into interactive map tiles,
-and publicly hosts them online with a link in Google/OpenStreetMap
-format, similar to
-`https://mapwarper.net/maps/tile/14781/{z}/{x}/{y}.png`. Or you can
-search for historical maps that have already been georeferenced and
-transformed into tiles, or contribute to crowdsourcing efforts to align
-maps, on platforms such as [Mapwarper](https://mapwarper.net), the [New
-York Public Library Mapwarper](http://maps.nypl.org/warper/), and the
-[David Rumsey Map
-Collection](https://www.davidrumsey.com/view/georeferencer). \[TODO:
-confirm how Rumsey links work\] Although map tile links are *not*
-viewable in a normal browser, they can be displayed by the Leaflet
-Storymaps code by entering them into these columns in the *Chapters* tab
-of your Google Sheet template:
+1.  Create a free account on [MapWarper](http://mapwarper.net).
+
+2.  Upload a high-quality image or scan of a map that has not yet been
+    georeferenced, such as an image of a paper historical map, and enter
+    metadata for others to find it. Follow guidelines about fair-use
+    copyright or works in the public domain.
+
+3.  After you upload the image, click on the *Rectify* tab in the
+    MapWarper interface, and practice moving around the map.
+
+4.  Click to add a control point in the historic map window, then click
+    to add a matching control point in the modern map window to align
+    the two images, as shown in Figure
+    <a href="#fig:mapwarper">14.20</a>. Good control points are stable
+    locations or landmarks that have not changed during the time period
+    between the two maps. For example, major cities, railroad tracks, or
+    road intersections might be a good way to align maps from the early
+    1900s to today, depending on the map scale and historical context.
+
+<img src="images/14-transform/mapwarper.png" alt="Add control points to align stable locations or landmarks between the historical map (on the right) and the modern map (on the left)." width="750" />
+<p class="caption">
+Figure 14.20: Add control points to align stable locations or landmarks
+between the historical map (on the right) and the modern map (on the
+left).
+</p>
+
+1.  Add at least 4 or 5 control points to match the two maps and spread
+    them out. When you are satisfied, click the *Warp Image* button at
+    the bottom of the page. MapWarper transforms the static map image
+    into a set of georeferenced map tiles, which now appear as a layer
+    on top of the modern map.
+
+2.  Click the *Export* tab, and under *Map Services*, copy the Tiles URL
+    that appears in Google/OpenStreetMap format, similar to this:
+
+`https://mapwarper.net/maps/tile/14781/{z}/{x}/{y}.png`
+
+1.  You can copy and paste this special Tiles URL into the [Leaflet
+    Storymaps with Google Sheets template as described in Chapter
+    13](leaflet-storymaps-with-google-sheets.html), or other web map
+    tools or code templates that display overlay maps in this format.
+    But it will not work if you paste it into a regular web browser.
+
+You can search for historical maps that have already been georeferenced
+and transformed into tiles, or contribute to crowdsourcing efforts to
+align maps, on platforms such as [Mapwarper](https://mapwarper.net), the
+[New York Public Library Mapwarper](http://maps.nypl.org/warper/).
 
 Bulk Geocode with US Census
 ---------------------------
@@ -13711,26 +13865,26 @@ other indicators, such as mortality and patient experience.
 
 Now, imagine you are given a task to create a choropleth map of total
 hospitals by US state. Instead of showing individual hospitals as points
-(as in Figuere <a href="#fig:pivot-address">14.20</a>a ), you want
+(as in Figuere <a href="#fig:pivot-address">14.21</a>a ), you want
 darker shades of blue to represent states with more hospitals (as in
-Figure <a href="#fig:pivot-address">14.20</a>b).
+Figure <a href="#fig:pivot-address">14.21</a>b).
 
 or choropleth, maps instead of point maps.
 
 <img src="images/14-transform/pivot-address-annotated.png" alt="You can count addresses by state (or other area) to produce polygon,"  />
 <p class="caption">
-Figure 14.20: You can count addresses by state (or other area) to
+Figure 14.21: You can count addresses by state (or other area) to
 produce polygon,
 </p>
 
 First, save the database to your local machine by going to *Export &gt;
 Download &gt; CSV* of Socrata interface. Figure
-<a href="#fig:pivot-address-export">14.21</a> shows where you can find
+<a href="#fig:pivot-address-export">14.22</a> shows where you can find
 the Export button.
 
 <img src="images/14-transform/pivot-address-export.png" alt="In Socrata, you can export the entire dataset as a CSV."  />
 <p class="caption">
-Figure 14.21: In Socrata, you can export the entire dataset as a CSV.
+Figure 14.22: In Socrata, you can export the entire dataset as a CSV.
 </p>
 
 Next, open the file in your favorite spreadsheet tool. If you use Google
@@ -13744,7 +13898,7 @@ missing values—and choose *Summarize by: COUNTA*. Voila!
 
 <img src="images/14-transform/pivot-address-sheet.png" alt="Use pivot tables in any spreadsheet software to count addresses per area (such as state, county, of zip code)."  />
 <p class="caption">
-Figure 14.22: Use pivot tables in any spreadsheet software to count
+Figure 14.23: Use pivot tables in any spreadsheet software to count
 addresses per area (such as state, county, of zip code).
 </p>
 
@@ -13756,30 +13910,17 @@ merge it all in one go using powerful [Mapshaper](mapshaper.html).
 
 ### Summary
 
-In this chapter, you learned …… TODO re-summarize this:
+In this chapter, we delved into geospatial data and the GeoJSON format.
+You also learned how to use various open-source tools to find geodata,
+convert and create vector data, and edit and join these layers with
+spreadsheet data. You also “warped” historical raster map images by
+georeferencing them onto modern maps. Finally, you acquired some
+additional strategies to bulk geocode large batches of US addresses, and
+to pivot point-level data into polygons for use in choropleth maps.
 
-we will delve further into the topic of [geospatial data and its
-different formats](geojson.html), such as GeoJSON, the open-standard
-format most commonly used in this book. You’ll learn [how to find and
-extract geographic boundary files in this format](find-geojson.html)
-from the crowd-sourced OpenStreetMap platform. Also, we’ll show how to
-convert or create your own top-level map layer data using the
-[GeoJson.io tool](geojsonio.html), and how to edit these layers with
-spreadsheet data using the [Mapshaper tool](mapshaper.html). Both of
-these easy-to-learn web-based tools replace most of the need for
-harder-to-learn geographic information systems, such as the proprietary
-ArcGIS and the open-source QGIS desktop applications. Moreover, you’ll
-also learn how to georeference a high-quality static map image and
-transform it into interactive map tiles using the [the MapWarper
-tool](mapwarper.html). Finally, we’ll conclude with strategies to bulk
-geocode large batches of address data, and to pivot point-level data
-into polygons to use in choropleth maps. By the end of this chapter, you
-should feel much more confident navigating the overwhelming world of
-geospatial data.
-
-In the following chapter, we will talk detecting bias in charts and
-maps. so that you become a better storyteller and a more critical
-reader.
+In the next chapter, we will discuss how to detect lies and reduce bias
+in charts and maps, so that you become a more critical consumer of
+visualizations as well as a better data storyteller.
 
 <!--chapter:end:14-transform.Rmd-->
 
@@ -13860,7 +14001,7 @@ algorithmic, and intergroup—as well as [spatial
 biases](spatial-bias.html) that more specific to working with maps.
 While we may not be able to stop bias entirely, in this chapter you’ll
 learn how to identify it in the works by other people, and strategies to
-reduce its presence in our own visualizations.[37]
+reduce its presence in our own visualizations.[38]
 
 How to Lie with Charts
 ----------------------
@@ -13912,10 +14053,10 @@ the reader’s eye.
     `(21747 - 21540)/21540 = 0.0096 = 0.96%`.
 
 3.  Create a Google Sheets column chart in the same sheet using the
-    *default* settings, although we never automatically accept them as
-    the best representation of the truth. In the *data* sheet, select
-    the two columns, and go to *Insert &gt; Chart*, as you learned when
-    we introduced [charts with Google Sheets in Chapter
+    *default* settings, although we never blindly accept them as the
+    best representation of the truth. In the *data* sheet, select the
+    two columns, and go to *Insert &gt; Chart*, as you learned when we
+    introduced [charts with Google Sheets in Chapter
     7](chart-google.html). The tool should recognize your data and
     automatically produce a column chart, as shown in the left side of
     Figure <a href="#fig:gdp-baseline-merged">15.1</a>. In this default
@@ -13964,7 +14105,7 @@ Celsius (or about 2 degrees Fahrenheit) during the past fifty years, and
 this warming has already begun to cause glacial melt and rising sea
 levels. Your task is to create *misleading* line charts that *diminish*
 the appearance of rising global temperature change in the reader’s
-eye.[38]
+eye.[39]
 
 1.  Open the [global temperature change 1880-2019 data in Google
     Sheets](https://docs.google.com/spreadsheets/d/1Npc7ozRjlsgRLLEV_B5zBvqyRqL6akE2qrEIGegHfGU/edit#gid=0),
@@ -13991,11 +14132,11 @@ eye.[38]
 3.  Create a Google Sheets line chart by selecting the two columns in
     the *data* sheet, then *Insert &gt; Chart*. The tool should
     recognize your time-series data and produce a *default* line chart,
-    though we never automatically accept it as the best representation
-    of the truth. Click on the three-dot kebab menu to open the *Chart
-    editor* and select the *Customize* tab. Add a better title and
-    vertical axis label, using the notes to clarify the source and how
-    temperature change is measured, as shown in Figure
+    though we never blindly accept it as the best representation of the
+    truth. Click on the three-dot kebab menu to open the *Chart editor*
+    and select the *Customize* tab. Add a better title and vertical axis
+    label, using the notes to clarify the source and how temperature
+    change is measured, as shown in Figure
     <a href="#fig:temperature-default">15.2</a>.
 
 <img src="images/15-detect/temperature-default.png" alt="Default line chart of global temperature change. Explore the [interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vRBJy0vWBN1z49hE8c7vxF_ZiTNKF5RjQ2vpJ-aVfsdNpNYgcMu1cH2zAh90v713vcMmrs6kVlSgQkV/pubchart?oid=557710802&format=interactive)."  />
@@ -14037,7 +14178,7 @@ expert Albert Cairo reminds us that line charts represent values in the
 line charts by their shape, rather than their height, so the baseline is
 irrelevant. Therefore, flattening the line chart for temperature change
 may mislead readers, but it’s technically not wrong, as long as it is
-labelled correctly.[39]
+labelled correctly.[40]
 
 #### Widen the chart to warp its aspect ratio
 
@@ -14068,7 +14209,7 @@ chart should roughly match its aspect ratio. For example, if a chart
 represents a 33 percent increase, which is the same as 33/100 or 1/3, he
 recommends an aspect ratio of 3:1 (because the fraction is flipped by
 placing width before height), or in other words, a line chart that is
-three times wider than its height.[40]
+three times wider than its height.[41]
 
 But Cairo does *not* propose his aspect ratio recommendation as a
 universal rule because he recognizes how it fails with very small or
@@ -14107,7 +14248,7 @@ translates into a 12:1 aspect ratio, or a line chart that is twelve
 times wider than it is tall, as shown in Figure
 <a href="#fig:temperature2-aspect-cairo">15.6</a>. Cairo warns that this
 significant global temperature increase looks “deceptively small,” so he
-cautious against using his aspect ratio recommendation in all cases.[41]
+cautious against using his aspect ratio recommendation in all cases.[42]
 
 &lt;img src=“images/15-detect/temperature2-aspect-cairo-annotated.png”
 alt=“Following Cairo’s”recommendation" for an 8% increase results in a
@@ -14124,17 +14265,16 @@ upwards or downwards, in order to distinguish individual segments. But
 this requires statistical software to calculate slopes for all of the
 lines, and still is not a “rule” that fits all cases. Read a [good
 overview by Robert
-Kosara](https://eagereyes.org/basics/banking-45-degrees).[42]
+Kosara](https://eagereyes.org/basics/banking-45-degrees).[43]
 
 Where does all of this leave us? If you feel confused, that’s because
 data visualization has *no universal rule about aspect ratios*. What
-should you do? First, never automatically accept the default chart.
-Second, explore how different aspect ratios affect its appearance.
-Finally, even Cairo argues that you should use your own judgment rather
-than follow his recommendation in every situation, because there is no
-single rule about aspect ratio that fits all circumstances. Make a
-choice that honestly interprets the data and clearly tells a story to
-your reader.
+should you do? First, never blindly accept the default chart. Second,
+explore how different aspect ratios affect its appearance. Finally, even
+Cairo argues that you should use your own judgment rather than follow
+his recommendation in every situation, because there is no single rule
+about aspect ratio that fits all circumstances. Make a choice that
+honestly interprets the data and clearly tells a story to your reader.
 
 #### Add more data and a dual vertical axis
 
@@ -14250,15 +14390,15 @@ several ways that charts can be designed to deceive readers, but did not
 exhaust all of the options. For example, see additional readings on ways
 to create three-dimensional charts and to tilt the reader’s perspective
 below the baseline, which causes readers to misjudge the relative height
-of column or line charts.[43]
+of column or line charts.[44]
 
 You may feel frustrated that data visualization lacks clearly-defined
 design rules for many cases, like we are accustomed to reading in our
 math, science, or grammar textbooks. Instead, remember that the
-important visualization rule is a *three-step process*: never
-automatically accept the default, explore how different designs affect
-the appearance of your interpretation, and use your best judgement to
-tell true and meaningful data stories.
+important visualization rule is a *three-step process*: never blindly
+accept the default, explore how different designs affect the appearance
+of your interpretation, and use your best judgement to tell true and
+meaningful data stories.
 
 Now that you’ve learned about how to lie with charts, in the next
 section you’ll build on these skills to lie with maps.
@@ -14274,7 +14414,7 @@ your own. We’ll focus our attention on choropleth maps that use shading
 or color to represent values in geographic areas, because they are a
 topic of considerable mischief. This exercise was inspired by geographer
 Mark Monmonier’s classic book by the same name, *How to Lie with Maps*,
-originally published in 1991, now in its third edition.[44]
+originally published in 1991, now in its third edition.[45]
 
 Before we get started, review the [map design principles in Chapter
 8](map-design.html) to avoid common mistakes when designing choropleth
@@ -14350,11 +14490,11 @@ Figure 15.11: Click the *wrench symbol* to open the color settings.
 
 ### Modify the map color ranges
 
-While we never automatically accept the default visualization, it’s a
-good place to begin. The default map displays a *continuous* type of
-range, with a *linear* interpolation of data values. This means that the
-map places all of the values in a straight line, from the minimum of 5%
-to the maximum of 31%, and assigns each value to a color along the
+While we never blindly accept the default visualization, it’s a good
+place to begin. The default map displays a *continuous* type of range,
+with a *linear* interpolation of data values. This means that the map
+places all of the values in a straight line, from the minimum of 5% to
+the maximum of 31%, and assigns each value to a color along the
 gradient, as shown in Figure
 <a href="#fig:map-continuous-linear">15.12</a>. Notice that the US
 (20.5%) blends in with a medium blue color, just above the midpoint in
@@ -14501,7 +14641,7 @@ identical. Furthermore, Spiegelhalter observes that when we supplement
 rates with raw counts, it further increases our impression of risks. For
 example, if we told you a surgical procedure had a 5 percent mortality
 rate *and* that 20 out of 400 patients died, it seems worse because we
-begin to imagine real people’s lives, not just abstract percentages.[45]
+begin to imagine real people’s lives, not just abstract percentages.[46]
 Counter framing bias by being aware of its potential effect on our minds
 and calling it out.
 
@@ -14515,12 +14655,12 @@ judges used when deciding on prison sentences or probation. But
 ProPublica investigative journalists found that the algorithm wrongly
 predicted Black defendants to be repeat offenders at almost twice the
 rate as White defendants, even when controlling for the types of prior
-crimes they committed.[46] Algorithms also have added to gender bias in
+crimes they committed.[47] Algorithms also have added to gender bias in
 the financial services industry. When Apple and Goldman Sachs partnered
 to offer a new type of credit card, several customers noticed that the
 software formula to evaluate applications sometimes offered men 10 to 20
 times the amount of credit as women, even if they were married, owned
-the same assets, and had similar prior credit scores.[47] In both cases,
+the same assets, and had similar prior credit scores.[48] In both cases,
 companies denied the charges of algorithmic bias but refused to reveal
 the decision-making process within their software formulas, which they
 argued were proprietary. As a result, we need to be vigilant about the
@@ -14535,7 +14675,7 @@ the field of data visualization, and have advocated for ways to counter
 its impact. For example, Jonathan Schwabish and Alice Feng describe how
 they applied a racial equity lens to revise the [Urban Institute’s Data
 Visualization Style
-Guide](http://urbaninstitute.github.io/graphics-styleguide/).[48] For
+Guide](http://urbaninstitute.github.io/graphics-styleguide/).[49] For
 example, Schwabish and Feng recommend ordering group labels to focus on
 the data story, rather than listing “White” and “Men” at the top by
 default. They also call on us to proactively acknowledge missing groups
@@ -14614,16 +14754,16 @@ on larger regions on a map, and less on smaller ones. A classic example
 arises every four years with choropleth maps of US presidential
 elections, which draw our attention to the geographic area of US states,
 rather than their population size or number of electoral votes, as shown
-in Figure <a href="#fig:cartogram-placeholder">15.17</a>. Conventional
-maps exaggerate the political influence of rural states with larger
-geographic areas (such as spacious Wyoming with less than 600,000
-people), and diminish the role of urban states with small areas (such as
-tiny Rhode Island with over 1,000,000 people). Although Wyoming covers
-80 times more area than Rhode Island, it casts only 3 electoral votes in
-US presidential races, while Rhode Island has 4 electoral votes. But
-when looking at conventional maps, most readers cannot easily make this
-distinction because our eyes are drawn to states with larger geographic
-areas, not population.
+in Figure <a href="#fig:conventional-cartogram-combined">15.17</a>.
+Conventional maps exaggerate the political influence of rural states
+with larger geographic areas (such as spacious Wyoming with less than
+600,000 people), and diminish the role of urban states with small areas
+(such as tiny Rhode Island with over 1,000,000 people). Although Wyoming
+covers 80 times more area than Rhode Island, it casts only 3 electoral
+votes in US presidential races, while Rhode Island has 4 electoral
+votes. But when looking at conventional maps, most readers cannot easily
+make this distinction because our eyes are drawn to states with larger
+geographic areas, not population.
 
 *Projection bias* is a related issue about how maps portray geographic
 areas. Over time, mapmakers have developed different projection systems
@@ -14653,25 +14793,27 @@ relative importance, which in this case is population, but could also be
 the size of the economy or other factors, depending on the data story.
 One advantage is that cartograms can focus our attention more evenly on
 the most relevant aspect of our data story, such as electoral votes in
-as shown in Figure <a href="#fig:cartogram-placeholder">15.17</a>. But
-one drawback is that cartograms require readers to recognize abstract
-shapes in place of familiar boundaries, since these population-based
+as shown in Figure
+<a href="#fig:conventional-cartogram-combined">15.17</a>. But one
+drawback is that cartograms require readers to recognize abstract shapes
+in place of familiar boundaries, since these population-based
 visualizations do not align perfectly with conventional Mercator
 geography-based land maps. See also Lisa Charlotte Rost’s post in
 Datawrapper Academy on [how to visualize US elections
 results](https://blog.datawrapper.de/how-to-visualize-the-us-election-2020-with-datawrapper/).
 
-<img src="images/15-detect/cartogram-placeholder.png" alt="The US 2020 Presidential electoral vote displayed in a conventional US map (left) versus a cartogram (right)."  />
+<img src="images/15-detect/conventional-cartogram-combined.png" alt="The US 2020 Presidential electoral vote displayed in a conventional US map (left) versus a cartogram (right), both created with Datawrapper." width="750" />
 <p class="caption">
 Figure 15.17: The US 2020 Presidential electoral vote displayed in a
-conventional US map (left) versus a cartogram (right).
+conventional US map (left) versus a cartogram (right), both created with
+Datawrapper.
 </p>
 
-Note: Currently, Datawrapper offers two different versions of the USA
-Electoral College map, and only the second version allows users to split
-up electoral votes by district in Maine and Nebraska. The second version
-is named *USA &gt; Electoral College* is a cartogram, although the word
-“hexagon” does not yet appear in its file name.
+Note: To recreate the cartogram map in Figure
+<a href="#fig:conventional-cartogram-combined">15.17</a> in Datawrapper,
+select the file named *USA &gt; Electoral College (hexagon)* because it
+allows users to split up electoral votes by district in Maine and
+Nebraska.
 
 In the [How to Lie with Maps section of this
 chapter](how-to-lie-with-maps.html), we created choropleth maps of world
@@ -14709,7 +14851,7 @@ viewed from anywhere else in the world, Google Maps shows a dotted-line
 border that represents a disputed territory. Although Google claims to
 “remain neutral on geopolitical disputes,” according to the *Washington
 Post*, the corporation clearly took a side by displaying a solid border
-for Russian viewers.[49] Google and several other web map providers have
+for Russian viewers.[50] Google and several other web map providers have
 taken similar actions regarding the contested border between India and
 Pakistan, the waterway between Iran and Saudi Arabia, and the sea
 between Japan and South Korea.
@@ -14784,14 +14926,23 @@ both symbol and choropleth maps.
 
 ### Summary
 
-TODO
+In this chapter, you learned how to distinguish between wrong,
+misleading, and truthful visualizations, and strengthened your
+lie-detector skills to understand the importance of being honest when
+telling your own data stories. You also learned how to recognize and
+ways to reduce four categories of data bias in general, and spatial bias
+in particular.
+
+The next chapter will bring together all of the concepts from different
+parts of the book to emphasize the importance of storytelling in our
+data visualizations.
 
 <!--chapter:end:15-detect.Rmd-->
 
 16 Tell and Show Your Data Story
 ================================
 
-In this concluding chapter, we’ll draw on knowledge and skills you’ve
+For our concluding chapter, we’ll draw on knowledge and skills you’ve
 developed while reading this book and offer some final recommendations
 for creating true and meaningful data stories. Here we emphasize
 *storytelling*. The goal of data visualization is not simply to make
@@ -14820,14 +14971,10 @@ and color, as well as how to [acknowledge sources and
 uncertainty](sources-uncertainty.html). Finally, we’ll discuss decisions
 you will need to make about the [format of your data
 story](story-format.html), with our continual emphasis on sharing
-interactive visualizations rather than static images. Our inspiration
-for this chapter is drawn from excellent books by visualization experts
-Cole Nussbaumer Knaflic and Alberto Cairo.[50]
+interactive visualizations rather than static images.[51]
 
 Build a Narrative on a Storyboard
 ---------------------------------
-
-TODO: Or alternative section title “Build Data into Your Storyboard”
 
 Let’s return to the [Sketch Your Data Story exercise from Chapter
 2](sketch.html). We encouraged you to scribble words and sketch pictures
@@ -14843,18 +14990,18 @@ story:
 Spread out these sheets like a *storyboard* to define the sequence of
 your narrative, as shown in Figure
 <a href="#fig:data-story-panel2">16.1</a>. Imagine them as preliminary
-slides for your presentation desk, or paragraphs and pictures for your
-written report or web page, for how you plan to explain the process to
-your audience. Or if you prefer digital over paper, another option is to
-convert blocks of text and images from your sheets into a [Google Slides
-presentation](https://www.google.com/slides/about/) or a [draft Google
-Document](https://www.google.com/docs/about/), or your preferred tools
-for telling the data story. Of course, it’s perfectly normal to update
-the sheets you created at the beginning of your project to reflect
-changes in your thinking. For example, you may have refined your
-research question, found new sources during your search, and of course,
-turned your imagined visualizations into actual tables, charts, or maps
-with real data.
+slides for your presentation, or paragraphs and pictures for your
+written report or web page, for how you will explain the process to your
+audience. If you prefer to construct your storyboard digitally, another
+option is to convert blocks of text and images from your sheets into a
+[Google Slides presentation](https://www.google.com/slides/about/) or a
+[draft Google Document](https://www.google.com/docs/about/), or your
+preferred tools for telling the data story. Of course, it’s perfectly
+normal to update the sheets you created at the beginning of your project
+to reflect changes in your thinking. For example, you may have refined
+your research question, found new sources during your search, and of
+course, turned your imagined visualizations into actual tables, charts,
+or maps with real data.
 
 <img src="images/02-choose/data-story-panel.png" alt="Sketch out your story idea on four pages: problem, question, find data, visualize." width="750" />
 <p class="caption">
@@ -14867,21 +15014,17 @@ while searching, cleaning, analyzing, and visualizing your data. Select
 only your most meaningful tables, charts, or maps. Print them out on
 separate sheets of paper, or download [static images or capture
 screenshots](static.html) to place them in your draft slides or
-document. Leave room for you to write text at the top and bottom of each
-table, chart, or map in order to tell your data story. Here are the next
-two steps:
+document. Leave room for you to write at the top and bottom of each
+table, chart, or map in order to tell your data story.
 
--   At the top of each key visualization, *summarize* the most important
-    message the data reveals.
-
-Verbalize what your eyes see as the most insightful finding for your
-most important visualizations.
-
-Write a one-sentence summary of the most insightful finding for each
-visualization. Verbalize how it appears in your eyes, like our guide to
-the data forest. Two sentences are acceptable, but one succinct sentence
-is better. If your prose becomes too wordy, try writing the first
-sentence in “headline” style and the second as a more descriptive
+The next step is to *summarize* the most important message the data
+reveals, and write it as a one-sentence summary at the top of each page
+that contains a table, chart, or map. Verbalize what your eyes see as
+the most insightful finding for your most important visualizations.
+Become our guide, and focus our attention on the data forest, rather
+than individual trees. Two sentences are acceptable, but one succinct
+sentence is better. If your prose becomes too wordy, try writing the
+first sentence in “headline” style and the second as a more descriptive
 follow-up. Despite the old saying that a picture is worth a thousand
 words, data visualizations do *not* speak for themselves. Your job is to
 interpret their meaning for your audience. One of the best ways to
@@ -14890,27 +15033,26 @@ your eye as the designer, and communicate this to your reader, who is
 seeing it for the first time and relying on your guidance. In every
 case, you need to decide on the ideal mix of words and images.
 
--   At the bottom of each visualization, tell us *why it matters*, and
-    build up to how audiences should rethink or react.
+At the bottom of each visualization, tell us *why it matters*, and build
+up to how audiences should rethink or react. A good way to discuss the
+significance of your data story is to focus on how this new information
+*changes us*. When you discovered interesting patterns in your data
+visualization, how did it make you feel about the problem you (or your
+organization) were trying to solve? How did your answers to the research
+question make you think about the issue in a new or different way?
+Overall, does your data story inspire you or others to take action in
+some way? Once again, think about these questions from the perspective
+of your audience, and find words that capture how the data story should
+change our mindset, alter our habits, or influence our next steps.
 
-A good way to discuss the significance of your data story is to focus on
-how this new information *changes us*. When you discovered interesting
-patterns in your data visualization, how did it make you feel about the
-problem you (or your organization) were trying to solve? How did your
-answers to the research question make you think about the issue in a new
-or different way? Overall, does your data story inspire you or others to
-take action in some way? Once again, think about these questions from
-the perspective of your audience, and find words that capture how the
-data story should change our mindset, alter our habits, or influence our
-next steps.
-
-For example, we started our own data storyboard in chapter 2 to define
-our problem statement: *To learn more about readers’ backgrounds in
-order to write a better data visualization book that meets their needs.*
-\[TODO: Revise earlier chapter text to match?\] We collected data from
-over 3,000 readers of an earlier draft of this book who responded to our
-[online survey](https://forms.gle/yn5QwTzfQkYcppQn9) and agreed that we
-would [publicly share the survey
+For example, we started to [sketch our own data storyboard in chapter
+2](sketch.html) to define our problem statement: *We need to find out
+our readers’ backgrounds and interests about data visualization, in
+order to write a better introductory guide that meets their needs.* We
+collected data from over 3,000 readers of an earlier draft of this book
+who responded to our [online
+survey](https://forms.gle/yn5QwTzfQkYcppQn9) and agreed that we would
+[publicly share the survey
 results](https://docs.google.com/spreadsheets/d/1egX_akJccnCSzdk1aaDdtrEGe5HcaTrlOW-Yf6mJ3Uo),
 as we discussed in [chapter 3](spreadsheets.html). We [cleaned up the
 data as described in chapter 5](clean.html) because some responses were
@@ -14923,24 +15065,24 @@ in two ways. We created a [scatter chart as described in chapter
 writing short summaries at the top of each visualization, and explaining
 why it matters at the bottom.
 
-What did we discover in our survey? First, over 70 percent of readers
-who responded live outside of North America. Most notably, 35 percent
-reside in Asia, 20 percent in Europe, 6 percent each in Africa and South
-America, and 3 percent in Oceania, as shown in the left side of Figure
-<a href="#fig:survey-combined-annotated">16.2</a>. Our first draft of
-the book mostly included examples from Hartford, Connecticut, where we
-both worked. While we knew that our book had a global audience, we were
-surprised to see how many readers—among those who responded to the
-survey—live outside of the United States. In order to be more inclusive
-and expand our international audience, we have revised the book to add
-more sample charts and maps from other regions where readers live.
-\[TODO: we need to work more on this!\] Second, we learned that readers
-who responded to our survey have relatively high levels of education,
-but limited data visualization experience. In particular, 89 percent
-reported completing the equivalent of a college degree (16 or more years
-of schooling), and 64% of these rated themselves as data visualization
-beginners (either 1 or 2 on the 5-point experiential scale), as shown in
-the right side of Figure
+What did we discover in our reader survey about the earlier draft of
+this book? And how did we respond to the key data findings? First, over
+70 percent of readers who responded live outside of North America. Most
+notably, 35 percent reside in Asia, 20 percent in Europe, 6 percent each
+in Africa and South America, and 3 percent in Oceania, as shown in the
+left side of Figure <a href="#fig:survey-combined-annotated">16.2</a>.
+Our first draft of the book mostly included examples from Hartford,
+Connecticut, where we both worked. While we knew that our book had a
+global audience, we were surprised to see how many readers—among those
+who responded to the survey—live outside of the United States. In order
+to be more inclusive and expand our international audience, we revised
+the book to add more sample charts and maps from other regions around
+the world. Second, we learned that readers who responded to our survey
+have relatively high levels of education, but limited data visualization
+experience. In particular, 89 percent reported completing the equivalent
+of a college degree (16 or more years of schooling), and 64% of these
+rated themselves as data visualization beginners (either 1 or 2 on the
+5-point experiential scale), as shown in the right side of Figure
 <a href="#fig:survey-combined-annotated">16.2</a>. In our earlier draft
 of the book, our primary audience were college undergraduates, and we
 were uncertain about the reading and background levels of other readers.
@@ -14957,9 +15099,10 @@ visualization, and tell why it matters at the bottom, then insert them
 into your storyboard.
 </p>
 
-Insert your new data visualization sheets (or slides, or blocks of text
-and images) into your storyboard. As you complete your work, your layout
-might look something like this:
+Let’s pivot back to your storyboard. Insert your new data visualization
+sheets (or slides, or blocks of text and images) into the pages you’ve
+already assembled. As you complete your work, your layout might look
+something like this:
 
 -   problem statement
 -   research question
@@ -14968,20 +15111,22 @@ might look something like this:
 -   tell 2nd data insight—show evidence—why it matters
 -   …and so forth toward your summary conclusion
 
-But it’s your job to organize your data story in the way that makes
-sense *to your audience*, who most likely will be viewing all of this
-content for the first time. While there is no one way to tell a story,
-consider this advice to avoid making rookie mistakes. First, tell us the
-problem and question *before* you offer an answer, because our brains
-expect to hear them in that order. Second, summarize each insight
-*before* you show us the supporting evidence, because once again,
-reversing the normal sequence makes it harder for us to follow your
-argument. Finally, make sure that your research question and key
-insights are *aligned* with one another, since your audience will be
-confused if you ask one question, but answer a different one. It’s
-perfectly normal to tweak or fully revise the wording of your research
-question after you’ve dug deep into the data, because sometimes you
-don’t really know what you’re looking for until you’ve discovered it.
+As the storyteller, it’s your job to organize your data narrative in the
+way that makes sense *to your audience*, who most likely will be viewing
+all of this content for the first time. While there is no one way to
+tell a story, consider this advice to avoid making rookie mistakes:
+
+-   Tell us the problem and question *before* you offer an answer,
+    because our brains expect to hear them in that order.
+-   Summarize each insight *before* you show us the supporting evidence,
+    because once again, reversing the normal sequence makes it harder
+    for us to follow your argument.
+-   Make sure that your research question and key insights are *aligned*
+    with one another, since your audience will be confused if you ask
+    one question, but answer a different one. It’s perfectly normal to
+    tweak or fully revise the wording of your research question after
+    you’ve dug deep into the data, because sometimes you don’t really
+    know what you’re looking for until you’ve discovered it.
 
 Now you should have a clearer sense of how a storyboard helps you to
 bring together narrative and data. In the next section, you’ll learn how
@@ -14997,9 +15142,8 @@ writing text to accompany your charts and maps, you can also add
 annotations and use colors *inside* some types of visualizations to
 point out what’s most significant in your data story. Let’s demonstrate
 how to use these features to transform your visualization in
-Datawrapper, a tool we first introduced in [Chapter 7: Chart Your
-Data](chart.html). This example was inspired by the [Datawrapper Academy
-site](https://academy.datawrapper.de/article/256-a-collection-of-datawrapper-pro-tips).
+[Datawrapper, a tool we first introduced in Chapter
+7](chart-datawrapper.html).
 
 One of the environmental challenges we face today is the ever-growing
 production of plastics. While these inexpensive and lightweight
@@ -15008,7 +15152,7 @@ mismanaged waste streams that cause them to enter our rivers and oceans.
 To understand the growth of plastics, we consulted [Our World In
 Data](https://ourworldindata.org/plastic-pollution), and you can view
 the [annual global production data from 1950-2015 in Google Sheets
-format](https://docs.google.com/spreadsheets/d/1H3OwmiLQy5DugT-iArhuqHryzcWJi1kLocpGp7v-1VM/edit#gid=339613035).
+format](https://docs.google.com/spreadsheets/d/1H3OwmiLQy5DugT-iArhuqHryzcWJi1kLocpGp7v-1VM/edit#gid=339613035).[52]
 
 First, let’s upload the data in a single-column format to Datawrapper.
 By default, the tool transforms this time-series data into a line chart,
@@ -15027,21 +15171,22 @@ Datawrapper.
 </p>
 
 But Figure <a href="#fig:plastic-line-chart">16.3</a> does not yet focus
-on the bigger story. Our 60 percent of all of the plastics ever
-manufactured in the world have been made since 2000, or the last 15
-years of this chart, according to our analysis of the data. Let’s
-highlight this broader point by editing the chart and building on skills
-you learned in prior chapters. First, divide the data into two columns,
-*before 2000* and *since 2000*, which allows you to apply different
-colors to each data series. Insert the same data for year 2000 in both
-columns to make the new chart look continuous. Second, change the chart
-type from the default *line chart* to an *area chart* to fill the space
-under the curve to draw attention to the total amount of plastics
-manufactured in global history. Third, in the *Refine* tab, since you do
-*not* want a stacked area chart, uncheck the *stack areas* box. Assign a
-dark blue color to draw more attention to the post-2000 data series, and
-a gray color to diminish the appearance of the pre-2000 data series, as
-shown in Figure <a href="#fig:plastic-refine">16.4</a>.
+on the bigger story: the total amount of plastics manufactured in global
+history. Our 60 percent of all of the plastics ever manufactured in the
+world have been made since 2000, or the last 15 years of this chart,
+according to our analysis of the data. Let’s highlight this broader
+point by editing the chart and building on skills you learned in prior
+chapters. First, divide the data into two columns, *before 2000* and
+*since 2000*, which allows you to apply different colors to each data
+series. Insert the same data for year 2000 in both columns to make the
+new chart look continuous. Second, change the chart type from the
+default *line chart* to an *area chart* to fill the space under the
+curve to draw attention to the total amount of plastics manufactured
+over time. Third, in the *Refine* tab, since you do *not* want a stacked
+area chart, uncheck the *stack areas* box. Assign a dark blue color to
+draw more attention to the post-2000 data series, and a gray color to
+diminish the appearance of the pre-2000 data series, as shown in Figure
+<a href="#fig:plastic-refine">16.4</a>.
 
     | year | before 2000 | since 2000 |
     | 1999 |         202 |            |
@@ -15087,8 +15232,9 @@ First, always represent data truthfully. Do not hide or obscure relevant
 evidence, and avoid visualization methods that might mislead your
 audience, as we discussed in [Chapter 15 on detecting lies and reducing
 bias](detect.html). We place our trust in you to fairly interpret the
-meaning of the data, and to warn us against misinterpreting to reading
-too much into it.
+meaning of the data. Warn us if we’re in danger of reading too much into
+the data, or misinterpreting it by seeing something that isn’t really
+there.
 
 Second, [credit and source your data origins](source.html), as we
 described in [Chapter 4: Find and Question Your Data](find.html). Some
@@ -15148,15 +15294,15 @@ visualizations, which invites audiences to engage with your data by
 floating their cursor over the charts and maps, we also encourage you to
 consider more interactive formats for your stories, such as:
 
--   website that combines textual narrative and interactive
-    visualizations
--   online presentation slides that link to live visualizations
--   video that combines live or voiceover narration with interactive
+-   Websites that combine textual narrative and interactive
+    visualizations using iframes.
+-   Online presentation slides that link to live visualizations
+-   Video that combines live or voiceover narration with interactive
     visualization screencast
--   a [data
-    walk](https://www.urban.org/sites/default/files/publication/72906/2000510-data-walks-an-innovative-way-to-share-data-with-communities.pdf)
-    where community stakeholders move around and discuss connections to
-    the story
+-   A [data walk
+    format](https://www.urban.org/sites/default/files/publication/72906/2000510-data-walks-an-innovative-way-to-share-data-with-communities.pdf),
+    where community stakeholders move around and discuss connections
+    between their lived experiences and the data stories.
 
 Of course, different storytelling methods require you to tailor content
 to fit the format. Furthermore, not every format requires interactive
@@ -15165,14 +15311,17 @@ the details are beyond the scope of this book, we encourage you not to
 fall into traditional mindsets and to think differently about ways to
 tell true and meaningful data stories.
 
-TODO: DISCUSS whether this chapter ending is appropriate, or if it makes
-sense to offer more recommendations about ways to design data stories
-for each of these four non-traditional formats. If so, I saved my notes
-in the archive folder…
-
 ### Summary
 
-TODO
+This concluding chapter brought together broad concepts and pragmatic
+skills from the book to reinforce how data visualization is driven by
+truthful and meaningful *storytelling*. While we love to make pictures
+about numbers, our broader mission is to create narratives that convince
+our audiences how and why our data interpretations matter. You learned
+different strategies to achieve this goal, such as building storyboards,
+drawing attention to meaningful data with text and color, acknowledging
+sources and uncertainty, and thinking creatively about storytelling
+formats that fit our audiences.
 
 <!--chapter:end:16-story.Rmd-->
 
@@ -15520,6 +15669,11 @@ You’re Not Using Facebook.” *Washington Post*, January 28, 2020.
 Haverbeke, Marijn. *Eloquent JavaScript: A Modern Introduction to
 Programming, 3rd Edition*, 2018. <https://eloquentjavascript.net/>.
 
+Hayes, Erica, and Mia Partlow. “Tutorial: Georeferencing and Displaying
+Historical Maps Using Map Warper and StoryMapJS.” Open Science
+Framework; OSF, November 20, 2020.
+<https://doi.org/10.17605/OSF.IO/7QD56>.
+
 Huff, Darrell. *How to Lie with Statistics*. W. W. Norton & Company,
 1954. <http://books.google.com/books?isbn=0393070875>.
 
@@ -15838,7 +15992,12 @@ of Vaccine Efficacy” (New York Times Learning Network, December 14,
 [36] Marijn Haverbeke, *Eloquent JavaScript: A Modern Introduction to
 Programming, 3rd Edition*, 2018, <https://eloquentjavascript.net/>
 
-[37] The “how to lie” tutorials were inspired by several excellent works
+[37] Erica Hayes and Mia Partlow, “Tutorial: Georeferencing and
+Displaying Historical Maps Using Map Warper and StoryMapJS” (Open
+Science Framework; OSF, November 20, 2020),
+<https://doi.org/10.17605/OSF.IO/7QD56>
+
+[38] The “how to lie” tutorials were inspired by several excellent works
 in data visualization: Cairo, *The Truthful Art*, 2016; Cairo, *How
 Charts Lie*, 2019; Darrell Huff, *How to Lie with Statistics* (W. W.
 Norton & Company, 1954),
@@ -15851,39 +16010,39 @@ Nathan Yau, “How to Spot Visualization Lies” (FlowingData, February 9,
 NASA JPL, “Educator Guide: Graphing Global Temperature Trends,” 2017,
 <https://www.jpl.nasa.gov/edu/teach/activity/graphing-global-temperature-trends/>
 
-[38] The tutorial on misleading climate change data was inspired by a
+[39] The tutorial on misleading climate change data was inspired by a
 high school classroom activity created by the NASA Jet Propulsion
 Laboratory (JPL), as well as Alberto Cairo’s analysis of charts by
 climate change deniers. NASA JPL; Cairo, *How Charts Lie*, 2019,
 pp. 65-67, 135-141.
 
-[39] Cairo, p. 61.
+[40] Cairo, p. 61.
 
-[40] Cairo, p. 69.
+[41] Cairo, p. 69.
 
-[41] Cairo, p. 70.
+[42] Cairo, p. 70.
 
-[42] Robert Kosara, “Aspect Ratio and Banking to 45 Degrees” (Eagereyes,
+[43] Robert Kosara, “Aspect Ratio and Banking to 45 Degrees” (Eagereyes,
 June 3, 2013), <https://eagereyes.org/basics/banking-45-degrees>
 
-[43] Cairo, *How Charts Lie*, 2019, p. 58.
+[44] Cairo, *How Charts Lie*, 2019, p. 58.
 
-[44] Monmonier, *How to Lie with Maps, Third Edition*.
+[45] Monmonier, *How to Lie with Maps, Third Edition*.
 
-[45] David Spiegelhalter, *The Art of Statistics: Learning from Data*
+[46] David Spiegelhalter, *The Art of Statistics: Learning from Data*
 (Penguin UK, 2019),
 <https://www.google.com/books/edition/The_Art_of_Statistics/CiZeDwAAQBAJ>,
 pp. 22-5
 
-[46] Julia Angwin et al., “Machine Bias” (ProPublica, May 23, 2016),
+[47] Julia Angwin et al., “Machine Bias” (ProPublica, May 23, 2016),
 <https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing?token=pnmZCKup_9SO_Q1DvGQOooKLHsrJG0Fr>
 
-[47] Neil Vigdor, “Apple Card Investigated After Gender Discrimination
+[48] Neil Vigdor, “Apple Card Investigated After Gender Discrimination
 Complaints (Published 2019),” *The New York Times: Business*, November
 10, 2019,
 <https://www.nytimes.com/2019/11/10/business/Apple-credit-card-investigation.html>
 
-[48] Jonathan Schwabish and Alice Feng, “Applying Racial Equity
+[49] Jonathan Schwabish and Alice Feng, “Applying Racial Equity
 Awareness in Data Visualization,” preprint (Open Science Framework,
 August 27, 2020), <https://doi.org/10.31219/osf.io/x8tbw>. See also this
 web post summary of the paper, Jonathan Schwabish and Alice Feng,
@@ -15893,13 +16052,19 @@ accessed October 16, 2020,
 and Urban Institute, “Urban Institute Data Visualization Style Guide,”
 2020, <http://urbaninstitute.github.io/graphics-styleguide/>
 
-[49] Greg Bensinger, “Google Redraws the Borders on Maps Depending on
+[50] Greg Bensinger, “Google Redraws the Borders on Maps Depending on
 Who’s Looking,” *Washington Post*, February 14, 2020,
 <https://www.washingtonpost.com/technology/2020/02/14/google-maps-political-borders/>
 
-[50] Cole Nussbaumer Knaflic, *Storytelling with Data: A Data
-Visualization Guide for Business Professionals*, 1 edition (Hoboken, New
-Jersey: Wiley, 2015); Cole Nussbaumer Knaflic, *Storytelling with Data:
-Let’s Practice!* (John Wiley & Sons, 2019),
+[51] Our inspiration for this chapter is drawn from excellent books by
+visualization experts Cole Nussbaumer Knaflic and Alberto Cairo: Cole
+Nussbaumer Knaflic, *Storytelling with Data: A Data Visualization Guide
+for Business Professionals*, 1 edition (Hoboken, New Jersey: Wiley,
+2015); Cole Nussbaumer Knaflic, *Storytelling with Data: Let’s
+Practice!* (John Wiley & Sons, 2019),
 <https://www.google.com/books/edition/Storytelling_with_Data/aGatDwAAQBAJ>;
 Cairo, *The Truthful Art*, 2016; Cairo, *How Charts Lie*, 2019
+
+[52] This example was inspired by the Datawrapper Academy article on pro
+tips:
+<a href="https://academy.datawrapper.de/article/256-a-collection-of-datawrapper-pro-tips" class="uri">https://academy.datawrapper.de/article/256-a-collection-of-datawrapper-pro-tips</a>.

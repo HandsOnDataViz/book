@@ -6,7 +6,7 @@ Preface
 ![Book cover: Read about the [hoatzin “reptile
 bird”](https://en.wikipedia.org/wiki/Hoatzin)](images/0-preface/cover-400wide.jpg)
 
-**This BOOK-IN-PROGRESS was last updated on: 17 Dec 2020**.
+**This BOOK-IN-PROGRESS was last updated on: 28 Dec 2020**.
 
 Read the open-access web edition at
 <a href="https://HandsOnDataViz.org" class="uri">https://HandsOnDataViz.org</a>,
@@ -10379,18 +10379,20 @@ before pushing your edits to the web.
 Warning: To fully view more complex code templates in your local
 browser, including some [Chart.js or Highcharts templates in Chapter
 12](chartcode.html) or [Leaflet templates in Chapter 13](leaflet.html),
-you may need to temporarily disable [Cross-Origin Resource
-Sharing](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
-(CORS) restrictions, an internet security mechanism that limits how web
-pages access content from other domains. Methods for doing this vary
-across operating systems and browsers. For example, [to disable CORS on
-Safari for
+you may need to temporarily relax [same-origin policy
+restrictions](https://en.wikipedia.org/wiki/Same-origin_policy), an
+internet security mechanism that limits how web pages access content
+from other domains. You can do so by managing your [Cross-Origin
+Resource
+Sharing](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)(CORS)
+settings, and methods for doing this vary across operating systems and
+browsers. For example, [to disable same-origin policy on Safari for
 Mac](https://stackoverflow.com/questions/4556429/disabling-same-origin-policy-in-safari),
 first go to *Preferences &gt; Advanced* to enable the *Developer* menu,
 then in this new menu select *Disable Cross-Origin Restrictions*. After
 you are done testing your code, restart Safari to reset the setting to
 its default safety position. See also ways to [run the Chrome browser
-without CORS on various
+without same-origin restrictions on various
 computers](https://alfilatov.com/posts/run-chrome-without-cors/) or this
 [popular Stackoverflow
 page](https://stackoverflow.com/questions/3102819/disable-same-origin-policy-in-chrome).
@@ -12174,9 +12176,10 @@ When you create or edit GeoJSON data with a tool like
 properties. If you wish to display the same properties you assigned to
 your GeoJSON file in your storymap, we recommend naming them as follows:
 
--   weight (width of line; storymap template default is 1px)
--   color (of line; default is gray)
--   opacity (of line; default is 0.5)
+-   weight (width of line or polygon border; storymap template default
+    is 1px)
+-   color (of line or polygon border; default is gray)
+-   opacity (of line or polygon border; default is 0.5)
 -   fillColor (of polygon; default is white)
 -   fillOpacity (of polygon; default is 0.7)
 
@@ -15502,6 +15505,31 @@ the same location.
 -   On rare occasions, the GitHub service or GitHub Pages feature may be
     down. Check
     <a href="https://status.github.com" class="uri">https://status.github.com</a>.
+
+TODO: add above
+
+To fully view more complex code templates in your local browser,
+including some [Chart.js or Highcharts templates in Chapter
+12](chartcode.html) or [Leaflet templates in Chapter 13](leaflet.html),
+you may need to temporarily relax [same-origin policy
+restrictions](https://en.wikipedia.org/wiki/Same-origin_policy), an
+internet security mechanism that limits how web pages access content
+from other domains. You can do so by managing your [Cross-Origin
+Resource
+Sharing](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)(CORS)
+settings, and methods for doing this vary across operating systems and
+browsers. For example, [to disable same-origin policy on Safari for
+Mac](https://stackoverflow.com/questions/4556429/disabling-same-origin-policy-in-safari),
+first go to *Preferences &gt; Advanced* to enable the *Developer* menu,
+then in this new menu select *Disable Cross-Origin Restrictions*. After
+you are done testing your code, restart Safari to reset the setting to
+its default safety position. See also ways to [run the Chrome browser
+without same-origin restrictions on various
+computers](https://alfilatov.com/posts/run-chrome-without-cors/) or this
+[popular Stackoverflow
+page](https://stackoverflow.com/questions/3102819/disable-same-origin-policy-in-chrome).
+If you temporarily disable this safety mechanism in your browser, be
+sure to re-enable it before browsing sites on the public web.
 
 ##### My simple GitHub web page does not display my iframe
 

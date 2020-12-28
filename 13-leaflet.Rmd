@@ -475,9 +475,9 @@ To add a visible path, geographic boundaries, or a filled choropleth map to your
 
 When you create or edit GeoJSON data with a tool like [GeoJson.io](geojsonio.html), you can directly edit its feature properties. If you wish to display the same properties you assigned to your GeoJSON file in your storymap, we recommend naming them as follows:
 
-- weight (width of line; storymap template default is 1px)
-- color (of line; default is gray)
-- opacity (of line; default is 0.5)
+- weight (width of line or polygon border; storymap template default is 1px)
+- color (of line or polygon border; default is gray)
+- opacity (of line or polygon border; default is 0.5)
 - fillColor (of polygon; default is white)
 - fillOpacity (of polygon; default is 0.7)
 

@@ -99,6 +99,11 @@ If your map does *not* appear right away, wait up to 30 seconds for GitHub Pages
 - Test the link to your published web page in a different browser. If you normally use Chrome, try Firefox.
 - On rare occasions, the GitHub service or GitHub Pages feature may be down. Check <https://status.github.com>.
 
+
+TODO: add above
+
+To fully view more complex code templates in your local browser, including some [Chart.js or Highcharts templates in Chapter 12](chartcode.html) or [Leaflet templates in Chapter 13](leaflet.html), you may need to temporarily relax [same-origin policy restrictions](https://en.wikipedia.org/wiki/Same-origin_policy), an internet security mechanism that limits how web pages access content from other domains. You can do so by managing your [Cross-Origin Resource Sharing](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)(CORS) settings, and methods for doing this vary across operating systems and browsers. For example, [to disable same-origin policy on Safari for Mac](https://stackoverflow.com/questions/4556429/disabling-same-origin-policy-in-safari), first go to *Preferences > Advanced* to enable the *Developer* menu, then in this new menu select *Disable Cross-Origin Restrictions*. After you are done testing your code, restart Safari to reset the setting to its default safety position. See also ways to [run the Chrome browser without same-origin restrictions on various computers](https://alfilatov.com/posts/run-chrome-without-cors/) or this [popular Stackoverflow page](https://stackoverflow.com/questions/3102819/disable-same-origin-policy-in-chrome). If you temporarily disable this safety mechanism in your browser, be sure to re-enable it before browsing sites on the public web.
+
 ##### My simple GitHub web page does not display my iframe {-}
 - If you followed the [Create a Simple Web Page with GitHub Pages tutorial](github-pages) and inserted an iframe in the README.md file, it will appear in your published web page, under these conditions:
   - Ideally, your README.md should be the ONLY file in this GitHub repository

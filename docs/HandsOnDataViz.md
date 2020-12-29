@@ -6,7 +6,7 @@ Preface
 ![Book cover: Read about the [hoatzin “reptile
 bird”](https://en.wikipedia.org/wiki/Hoatzin)](images/0-preface/cover-400wide.jpg)
 
-**This BOOK-IN-PROGRESS was last updated on: 28 Dec 2020**.
+**This BOOK-IN-PROGRESS was last updated on: 29 Dec 2020**.
 
 Read the open-access web edition at
 <a href="https://HandsOnDataViz.org" class="uri">https://HandsOnDataViz.org</a>,
@@ -11929,9 +11929,7 @@ with the link to *your* site.
 
 #### B) File &gt; Make a Copy of Google Sheet template, Share, and Publish
 
-1.  Open the [Google Sheets
-    template](https://docs.google.com/spreadsheets/d/1AO6XHL_0JafWZF4KEejkdDNqfuZWUk3SlNlQ6MjlRFM/)
-    in a new tab.
+1.  Open the [Google Sheets template](13-) in a new tab.
 
 2.  Sign into your Google account, and select *File &gt; Make a Copy* to
     save your own version of this Google Sheet on your Google Drive.
@@ -13076,10 +13074,10 @@ saying it “Could not detect file type.” Instead, try to convert your
 file into GeoJSON format using the [Mapshaper tool](mapshaper.html), as
 described further below.
 
-<img src="images/14-transform/geojson-io-import.png" alt="GeoJson.io successfully imported the Hartford Parks sample KML file." width="600" />
+<img src="images/14-transform/geojson-io-import.png" alt="GeoJson.io successfully imported the Toronto neighborhoods sample KML file." width="600" />
 <p class="caption">
-Figure 14.4: GeoJson.io successfully imported the Hartford Parks sample
-KML file.
+Figure 14.4: GeoJson.io successfully imported the Toronto neighborhoods
+sample KML file.
 </p>
 
 To download a converted GeoJSON file to your computer, go to *Save &gt;
@@ -13260,7 +13258,7 @@ file formats.
 </p>
 
 Tip: Mapshaper doesn’t work with KML or KMZ files, but you can use
-[GeoJson.io](#geojson.html) to first convert them into GeoJSON format,
+[GeoJson.io](geojson.html) to first convert them into GeoJSON format,
 then upload to Mapshaper.
 
 #### Edit data for specific polygons
@@ -13281,7 +13279,7 @@ lines) in Mapshaper, as shown in Figure
 5.  When you are done, export your geospatial file by clicking *Export*
     and choosing the desired file format.
 
-<img src="images/14-transform/mapshaper-edit.png" alt="Use *edit attributes* tool (under Cursor tool) to edit attributes of polygons, lines, and points."  />
+<img src="images/14-transform/mapshaper-edit-annotated.png" alt="Use *edit attributes* tool (under Cursor tool) to edit attributes of polygons, lines, and points."  />
 <p class="caption">
 Figure 14.9: Use *edit attributes* tool (under Cursor tool) to edit
 attributes of polygons, lines, and points.
@@ -13399,7 +13397,7 @@ Mapshaper allows you to do just that using one simple `-clip` command.
     <a href="#fig:mapshaper-clip">14.13</a>. You can now save the file
     on your computer using the *Export* button.
 
-<img src="images/14-transform/mapshaper-clip.png" alt="When clipping, make sure your active layer is the one being clipped (with many features), not the clipping feature itself."  />
+<img src="images/14-transform/mapshaper-clip-annotated.png" alt="When clipping, make sure your active layer is the one being clipped (with many features), not the clipping feature itself."  />
 <p class="caption">
 Figure 14.13: When clipping, make sure your active layer is the one
 being clipped (with many features), not the clipping feature itself.
@@ -13470,7 +13468,7 @@ attribute of the map file, and `town` column of the CSV file.
 3.  You can now save the file to your computer by clicking the *Export*
     button.
 
-<img src="images/14-transform/mapshaper-join.png" alt="In Mapshaper, join spatial and CSV files using common keys, such as town names."  />
+<img src="images/14-transform/mapshaper-join-annotated.png" alt="In Mapshaper, join spatial and CSV files using common keys, such as town names."  />
 <p class="caption">
 Figure 14.14: In Mapshaper, join spatial and CSV files using common
 keys, such as town names.
@@ -13667,7 +13665,7 @@ is a compressed version of a KML file, a native format of Google Earth.
     menu, and select *Save Place As…*, as shown in Figure
     <a href="#fig:kmz-earth">14.18</a>.
 
-<img src="images/14-transform/kmz-earth.png" alt="In Google Earth Pro, right-click the KMZ layer and choose *Save Place As*." width="400px" />
+<img src="images/14-transform/kmz-earth-annotated.png" alt="In Google Earth Pro, right-click the KMZ layer and choose *Save Place As*." width="400px" />
 <p class="caption">
 Figure 14.18: In Google Earth Pro, right-click the KMZ layer and choose
 *Save Place As*.
@@ -13868,9 +13866,9 @@ other indicators, such as mortality and patient experience.
 
 Now, imagine you are given a task to create a choropleth map of total
 hospitals by US state. Instead of showing individual hospitals as points
-(as in Figuere <a href="#fig:pivot-address">14.21</a>a ), you want
-darker shades of blue to represent states with more hospitals (as in
-Figure <a href="#fig:pivot-address">14.21</a>b).
+(as in Figuer <a href="#fig:pivot-address">14.21</a>a ), you want darker
+shades of blue to represent states with more hospitals (as in Figure
+<a href="#fig:pivot-address">14.21</a>b).
 
 or choropleth, maps instead of point maps.
 
@@ -13885,7 +13883,7 @@ Download &gt; CSV* of Socrata interface. Figure
 <a href="#fig:pivot-address-export">14.22</a> shows where you can find
 the Export button.
 
-<img src="images/14-transform/pivot-address-export.png" alt="In Socrata, you can export the entire dataset as a CSV."  />
+<img src="images/14-transform/pivot-address-export-annotated.png" alt="In Socrata, you can export the entire dataset as a CSV."  />
 <p class="caption">
 Figure 14.22: In Socrata, you can export the entire dataset as a CSV.
 </p>
@@ -13899,7 +13897,7 @@ data range is selected, and click *Create*). In the pivot table, set
 pivot table’s *Values* to *State*—or really any other column that has no
 missing values—and choose *Summarize by: COUNTA*. Voila!
 
-<img src="images/14-transform/pivot-address-sheet.png" alt="Use pivot tables in any spreadsheet software to count addresses per area (such as state, county, of zip code)."  />
+<img src="images/14-transform/pivot-address-sheet-annotated.png" alt="Use pivot tables in any spreadsheet software to count addresses per area (such as state, county, of zip code)."  />
 <p class="caption">
 Figure 14.23: Use pivot tables in any spreadsheet software to count
 addresses per area (such as state, county, of zip code).

@@ -131,7 +131,7 @@ the sample Toronto neighborhoods KML file, and these polygons appear in the top 
 Note: If GeoJson.io cannot import your file, you will see a red
 popup saying it "Could not detect file type." Instead, try to convert your file into GeoJSON format using the [Mapshaper tool](mapshaper.html), as described further below.
 
-(ref:geojson-io-import) GeoJson.io successfully imported the Hartford Parks sample KML file.
+(ref:geojson-io-import) GeoJson.io successfully imported the Toronto neighborhoods sample KML file.
 
 ```{r geojson-io-import, out.width=600, fig.cap="(ref:geojson-io-import)"}
 knitr::include_graphics("images/14-transform/geojson-io-import.png")
@@ -267,7 +267,7 @@ all exported layers.
 knitr::include_graphics("images/14-transform/mapshaper-export.png")
 ```
 
-Tip: Mapshaper doesn't work with KML or KMZ files, but you can use [GeoJson.io](#geojson.html) to first convert them into GeoJSON format, then upload to Mapshaper.
+Tip: Mapshaper doesn't work with KML or KMZ files, but you can use [GeoJson.io](geojson.html) to first convert them into GeoJSON format, then upload to Mapshaper.
 
 
 #### Edit data for specific polygons {-}
@@ -289,7 +289,7 @@ choosing the desired file format.
 (ref:mapshaper-edit) Use *edit attributes* tool (under Cursor tool) to edit attributes of polygons, lines, and points.
 
 ```{r mapshaper-edit, fig.cap="(ref:mapshaper-edit)"}
-knitr::include_graphics("images/14-transform/mapshaper-edit.png")
+knitr::include_graphics("images/14-transform/mapshaper-edit-annotated.png")
 ```
 
 #### Simplify map boundaries to reduce file size {-}
@@ -382,7 +382,7 @@ If that is the case, use a related command to remove them, like this:
 (ref:mapshaper-clip) When clipping, make sure your active layer is the one being clipped (with many features), not the clipping feature itself.
 
 ```{r mapshaper-clip, fig.cap="(ref:mapshaper-clip)"}
-knitr::include_graphics("images/14-transform/mapshaper-clip.png")
+knitr::include_graphics("images/14-transform/mapshaper-clip-annotated.png")
 ```
 
 #### Remove unwanted data fields {-}
@@ -435,7 +435,7 @@ of the CSV file.
 (ref:mapshaper-join) In Mapshaper, join spatial and CSV files using common keys, such as town names.
 
 ```{r mapshaper-join, fig.cap="(ref:mapshaper-join)"}
-knitr::include_graphics("images/14-transform/mapshaper-join.png")
+knitr::include_graphics("images/14-transform/mapshaper-join-annotated.png")
 ```
 
 Tip: To avoid confusion, it may be useful to re-name your CSV column that contains key values to match the key attribute name of your map.
@@ -571,7 +571,7 @@ and go to *File > Open* and choose your KMZ file.
 (ref:kmz-earth) In Google Earth Pro, right-click the KMZ layer and choose *Save Place As*.
 
 ```{r kmz-earth, out.width="400px", fig.cap="(ref:kmz-earth)"}
-knitr::include_graphics("images/14-transform/kmz-earth.png")
+knitr::include_graphics("images/14-transform/kmz-earth-annotated.png")
 ```
 
 4. In the dropdown menu of *Save file...* window, choose *KML* format, as shown in Figure \@ref(fig:kmz-save-as).
@@ -680,7 +680,7 @@ location (nicely divided into Address, City, State, and ZIP Code columns),
 a phone number and some other indicators, such as mortality and patient experience.
 
 Now, imagine you are given a task to create a choropleth map of total hospitals by US state.
-Instead of showing individual hospitals as points (as in Figuere \@ref(fig:pivot-address)a ),
+Instead of showing individual hospitals as points (as in Figuer \@ref(fig:pivot-address)a ),
 you want darker shades of blue to represent states with more hospitals (as in Figure \@ref(fig:pivot-address)b).
 
 (ref:pivot-address) You can count addresses by state (or other area) to produce polygon,
@@ -696,7 +696,7 @@ of Socrata interface. Figure \@ref(fig:pivot-address-export) shows where you can
 (ref:pivot-address-export) In Socrata, you can export the entire dataset as a CSV.
 
 ```{r pivot-address-export, fig.cap="(ref:pivot-address-export)"}
-knitr::include_graphics("images/14-transform/pivot-address-export.png")
+knitr::include_graphics("images/14-transform/pivot-address-export-annotated.png")
 ```
 
 Next, open the file in your favorite spreadsheet tool. If you use Google Sheets,
@@ -709,7 +709,7 @@ column that has no missing values—and choose *Summarize by: COUNTA*. Voila!
 (ref:pivot-address-sheet) Use pivot tables in any spreadsheet software to count addresses per area (such as state, county, of zip code).
 
 ```{r pivot-address-sheet, fig.cap="(ref:pivot-address-sheet)"}
-knitr::include_graphics("images/14-transform/pivot-address-sheet.png")
+knitr::include_graphics("images/14-transform/pivot-address-sheet-annotated.png")
 ```
 
 Your aggregated dataset is ready, so save it as a CSV. If you use Google Sheets,

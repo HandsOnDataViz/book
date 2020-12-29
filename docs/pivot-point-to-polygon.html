@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-12-28" />
+<meta name="date" content="2020-12-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -356,7 +356,7 @@ This particular dataset has information on each hospital’s name,
 location (nicely divided into Address, City, State, and ZIP Code columns),
 a phone number and some other indicators, such as mortality and patient experience.</p>
 <p>Now, imagine you are given a task to create a choropleth map of total hospitals by US state.
-Instead of showing individual hospitals as points (as in Figuere <a href="pivot-point-to-polygon.html#fig:pivot-address">14.21</a>a ),
+Instead of showing individual hospitals as points (as in Figuer <a href="pivot-point-to-polygon.html#fig:pivot-address">14.21</a>a ),
 you want darker shades of blue to represent states with more hospitals (as in Figure <a href="pivot-point-to-polygon.html#fig:pivot-address">14.21</a>b).</p>
 <p>(ref:pivot-address) You can count addresses by state (or other area) to produce polygon,
 or choropleth, maps instead of point maps.</p>
@@ -370,7 +370,7 @@ Figure 14.21: (ref:pivot-address)
 of Socrata interface. Figure <a href="pivot-point-to-polygon.html#fig:pivot-address-export">14.22</a> shows where you can find the Export button.</p>
 
 <div class="figure"><span id="fig:pivot-address-export"></span>
-<img src="images/14-transform/pivot-address-export.png" alt="In Socrata, you can export the entire dataset as a CSV."  />
+<img src="images/14-transform/pivot-address-export-annotated.png" alt="In Socrata, you can export the entire dataset as a CSV."  />
 <p class="caption">
 Figure 14.22: In Socrata, you can export the entire dataset as a CSV.
 </p>
@@ -383,7 +383,7 @@ we want to get counts by state. Next, set pivot table’s <em>Values</em> to <em
 column that has no missing values—and choose <em>Summarize by: COUNTA</em>. Voila!</p>
 
 <div class="figure"><span id="fig:pivot-address-sheet"></span>
-<img src="images/14-transform/pivot-address-sheet.png" alt="Use pivot tables in any spreadsheet software to count addresses per area (such as state, county, of zip code)."  />
+<img src="images/14-transform/pivot-address-sheet-annotated.png" alt="Use pivot tables in any spreadsheet software to count addresses per area (such as state, county, of zip code)."  />
 <p class="caption">
 Figure 14.23: Use pivot tables in any spreadsheet software to count addresses per area (such as state, county, of zip code).
 </p>

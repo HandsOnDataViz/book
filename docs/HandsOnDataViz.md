@@ -3719,7 +3719,7 @@ leading zeros (so 06106 will become 6106). To fix that, select the
 column, and go to *Format &gt; Number &gt; Plain text*. Now you can
 manually re-add zeros. If your dataset is large, consider adding zeros
 using the formula introduced in the [following
-section](#combine-separate-columns).
+section](combine-separate-columns.html).
 
 Combine Data into One Column
 ----------------------------
@@ -9950,7 +9950,8 @@ in the [geocoding section in Chapter 3](geocode.html).
       var map = L.map('map', {
         center: [41.77, -72.69], // EDIT latitude, longitude to re-center map
         zoom: 12,  // EDIT from 1 to 18 -- decrease to zoom out, increase to zoom in
-        scrollWheelZoom: false
+        scrollWheelZoom: false,
+        tap: false
       });
 
 The next code block displays the basemap tile layer that serve as the

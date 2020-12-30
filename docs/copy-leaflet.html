@@ -501,7 +501,8 @@ Figure 11.11: Open and edit the <code>README</code> file to paste the link to yo
 <pre><code>  var map = L.map(&#39;map&#39;, {
     center: [41.77, -72.69], // EDIT latitude, longitude to re-center map
     zoom: 12,  // EDIT from 1 to 18 -- decrease to zoom out, increase to zoom in
-    scrollWheelZoom: false
+    scrollWheelZoom: false,
+    tap: false
   });</code></pre>
 <p>The next code block displays the basemap tile layer that serve as the map background. Our template uses a light map with all labels, publicly provided by CARTO, with credit to OpenStreetMap. One simple edit is to change <code>light_all</code> to <code>dark_all</code>, which will substitute a different CARTO basemap with inverted coloring. Or see many other Leaflet basemap code options that you can paste in at <a href="https://leaflet-extras.github.io/leaflet-providers/preview/" class="uri">https://leaflet-extras.github.io/leaflet-providers/preview/</a>. Make sure to attribute the source, and also keep <code>}).addTo(map);</code> at the end of this code block, which displays the basemap.</p>
 <pre><code> L.tileLayer(&#39;https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png&#39;, {

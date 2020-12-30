@@ -6,7 +6,7 @@ Preface
 ![Book cover: Read about the [hoatzin “reptile
 bird”](https://en.wikipedia.org/wiki/Hoatzin)](images/0-preface/cover-400wide.jpg)
 
-**This BOOK-IN-PROGRESS was last updated on: 29 Dec 2020**.
+**This BOOK-IN-PROGRESS was last updated on: 30 Dec 2020**.
 
 Read the open-access web edition at
 <a href="https://HandsOnDataViz.org" class="uri">https://HandsOnDataViz.org</a>,
@@ -14701,20 +14701,22 @@ in separate but adjacent charts, each with its own reference to state or
 national averages and confidence intervals, as shown in Figure
 <a href="#fig:schwabish-feng2">15.16</a>.
 
-<img src="images/15-detect/schwabish-feng1.png" alt="To avoid a deficit-based perspective, Schwabish and Feng argue against combining racial and ethnic data on the same chart. Image by [Data@Urban](https://medium.com/@urban_institute/applying-racial-equity-awareness-in-data-visualization-bd359bf7a7ff)." width="500" />
+<img src="images/15-detect/schwabish-feng1.png" alt="To avoid a deficit-based perspective, Schwabish and Feng argue against combining racial and ethnic data on the same chart. Image by [Urban Institute](https://medium.com/@urban_institute/applying-racial-equity-awareness-in-data-visualization-bd359bf7a7ff), reprinted with permission." width="500" />
 <p class="caption">
 Figure 15.15: To avoid a deficit-based perspective, Schwabish and Feng
 argue against combining racial and ethnic data on the same chart. Image
-by
-[Data@Urban](https://medium.com/@urban_institute/applying-racial-equity-awareness-in-data-visualization-bd359bf7a7ff).
+by [Urban
+Institute](https://medium.com/@urban_institute/applying-racial-equity-awareness-in-data-visualization-bd359bf7a7ff),
+reprinted with permission.
 </p>
 
-<img src="images/15-detect/schwabish-feng2.png" alt="Instead, Schwabish and Feng recommend placing racial and ethnic data in separate charts, with state or national averages as a comparison point. Image by [Data@Urban](https://medium.com/@urban_institute/applying-racial-equity-awareness-in-data-visualization-bd359bf7a7ff)." width="500" />
+<img src="images/15-detect/schwabish-feng2.png" alt="Instead, Schwabish and Feng recommend placing racial and ethnic data in separate charts, with state or national averages as a comparison point. Image by [Urban Institute](https://medium.com/@urban_institute/applying-racial-equity-awareness-in-data-visualization-bd359bf7a7ff), reprinted with permission." width="500" />
 <p class="caption">
 Figure 15.16: Instead, Schwabish and Feng recommend placing racial and
 ethnic data in separate charts, with state or national averages as a
-comparison point. Image by
-[Data@Urban](https://medium.com/@urban_institute/applying-racial-equity-awareness-in-data-visualization-bd359bf7a7ff).
+comparison point. Image by [Urban
+Institute](https://medium.com/@urban_institute/applying-racial-equity-awareness-in-data-visualization-bd359bf7a7ff),
+reprinted with permission.
 </p>
 
 Comparing both sets of charts lead us to wonder about the broad

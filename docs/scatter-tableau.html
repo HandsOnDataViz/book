@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-12-30" />
+<meta name="date" content="2021-01-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -379,7 +379,7 @@ Figure 7.53: Drag <em>data</em> sheet into <em>Drag tables here</em> area.
 for now is just empty space. See Figure <a href="scatter-tableau.html#fig:tableau-scatter-dragging">7.54</a> for this dragging step and the following two steps. Tableau will apply a summation function to it, and you will see <code>SUM(Grade Levels)</code> appear
 in the <em>Rows</em> row, and a blue bar in the charting area. It makes little sense so far, so let’s plot another data field.</p></li>
 <li><p>Drag <em>Median Household Income</em> to the <em>Columns</em> field, just above the <em>Rows</em> field. In general, choosing between Rows and Columns shelves can be challenging, but it is convenient to think of <em>Columns</em> shelf as representing your x-axis, and <em>Rows</em> as y-axis. Once again, Tableau will apply the summation function, so you will see <code>SUM(Median Household Income)</code> in the <em>Columns</em> shelf. The bar chart will automatically transform into a scatter chart with just one data point in the upper-right corner, because the data for both is aggregated (remember the <code>SUM</code> function).</p></li>
-<li><p>We want to tell Tableau to disaggregate the household and grade levels variables. In other words, we want to introduce an extra level of granuality, or <em>deatil</em> to our visualization. To do so, drag the <em>District</em> dimension into the <em>Detail</em> shelf of the <em>Marks</em> card. Now a real scatter chart will appear in the charting area. If you hover over points, you will see all three values associated with these points.</p></li>
+<li><p>We want to tell Tableau to disaggregate the household and grade levels variables. In other words, we want to introduce an extra level of granularity, or <em>detail</em> to our visualization. To do so, drag the <em>District</em> dimension into the <em>Detail</em> shelf of the <em>Marks</em> card. Now a real scatter chart will appear in the charting area. If you hover over points, you will see all three values associated with these points.</p></li>
 </ol>
 
 <div class="figure"><span id="fig:tableau-scatter-dragging"></span>

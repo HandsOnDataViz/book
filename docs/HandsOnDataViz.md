@@ -6,7 +6,7 @@ Preface
 ![Book cover: Read about the [hoatzin “reptile
 bird”](https://en.wikipedia.org/wiki/Hoatzin)](images/0-preface/cover-400wide.jpg)
 
-**This BOOK-IN-PROGRESS was last updated on: 30 Dec 2020**.
+**This BOOK-IN-PROGRESS was last updated on: 03 Jan 2021**.
 
 Read the open-access web edition at
 <a href="https://HandsOnDataViz.org" class="uri">https://HandsOnDataViz.org</a>,
@@ -263,8 +263,8 @@ excellent commentary that helped us to improve the manuscript: Carl
 Allchin, Derek Eder, and Erica Hayes. Thanks also to readers who shared
 kindly shared feedback on the draft text or code templates: Jen
 Andrella, Gared Bard, Alberto Cairo, Fionnuala Darby-Hudgens, Nick
-Klagge, Elizabeth Rose, Lisa Charlotte Rost, Xavier Ruiz, Laura
-Tateosian, Elizabeth von Briesen, and Colleen Wheeler.
+Klagge, Federico Marini, Elizabeth Rose, Lisa Charlotte Rost, Xavier
+Ruiz, Laura Tateosian, Elizabeth von Briesen, and Colleen Wheeler.
 
 <!--chapter:end:index.Rmd-->
 
@@ -6433,7 +6433,7 @@ or numeric labels) or green (for continuous values, mostly numbers).
 
 3.  We want to tell Tableau to disaggregate the household and grade
     levels variables. In other words, we want to introduce an extra
-    level of granuality, or *deatil* to our visualization. To do so,
+    level of granularity, or *detail* to our visualization. To do so,
     drag the *District* dimension into the *Detail* shelf of the *Marks*
     card. Now a real scatter chart will appear in the charting area. If
     you hover over points, you will see all three values associated with

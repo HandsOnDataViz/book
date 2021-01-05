@@ -153,10 +153,16 @@ Open the browser tab that displays your live map and refresh the page to see you
 Now we can start to add new content to your map. In the *Points* tab of your Google Sheet, you'll see column headers to organize and display interactive markers on your map. Replace the demonstration data with your own, but do *not* delete or rename the column headers, since the Leaflet code looks for these specific names.
 
 - Group: Create any labels to categorize groups of markers in your legend.
-- Marker Icon: Insert any standard icon name (such as `school` or `bus`) that appears in the [Font Awesome Icons site](http://fontawesome.io/icons), or leave blank for no icon inside the marker. To create your own custom icon, see further below.
+- Marker Icon: Insert a [Font Awesome free and solid icon name](https://fontawesome.com/icons?d=gallery&s=solid&m=free) such as `fa-ice-cream` or `fa-coffee`, or any [Material Design icon name](https://material.io/resources/icons/?style=baseline) such as `rowing` or `where_to_vote`, as shown in Figure \@ref(fig:icon-combined). Or leave blank for no icon inside the marker. Note that Font Awesome pro or brand icons do not work with this template. To create your own custom icon, see further below.
 - Marker Color: Insert any standard web color name such as `blue` or `darkblue`, or insert a web color code such as `#775307` or `rgba(200,100,0,0.5)`. See options at [W3Schools Color Names](https://www.w3schools.com/colors/colors_names.asp).
 - Icon Color: Set the color of the icon inside the marker. The default is `white`, which looks good inside darker-colored markers.
 - Custom Size: Leave blank, unless you are creating your own custom icon further below.
+
+(ref:icon-combined) For a *Marker Icon*, insert a Font Awesome free and solid icon name such as `fa-ambulance` (on the right), or any Material Icon name such as `accessible` (on the left).
+
+```{r icon-combined, out.width=400, fig.cap="(ref:icon-combined)"}
+knitr::include_graphics("images/13-leaflet/icon-combined-annotated.png")
+```
 
 The next set of columns include items that appear when users click on point markers:
 
@@ -169,6 +175,7 @@ The next set of columns include items that appear when users click on point mark
 ```{r leaflet-media-upload, out.width=400, fig.cap="(ref:leaflet-media-upload)"}
 knitr::include_graphics("images/13-leaflet/leaflet-media-upload.png")
 ```
+
 Warning: Media file pathnames are case-sensitive, and we recommend using *all lowercase characters*, including the suffix ending. Also, since the code template automatically resizes images to fit, we recommend that you *reduce the size* of any images to 600x400 pixels or less prior to uploading, to make sure your map operates smoothly.
 
 - Location, Latitude, Longitude: These place your markers at points on the map. Although the code template only requires Latitude and Longitude, it's wise to paste an address or place name into the Location column as a reminder to correspond with the numerical coordinates. Use the [Geocoding by SmartMonkey Add-on from Chapter 3](geocode.html) and select *Add-ons > Geocoding by SmartMonkey > Geocode Details* to create a new sheet with sample data and display results for three new columns: *Latitude*, *Longitude*, and *Address found*, as shown in Figure \@ref(fig:geocode-details2). Paste in your own address data and repeat the step above to geocode it, then copy and paste the results into your *Points* sheet.
@@ -187,7 +194,7 @@ Optional table of viewable markers: To display an interactive table at the botto
 knitr::include_graphics("images/13-leaflet/leaflet-map-with-table.png")
 ```
 
-Optional custom markers: To create your own custom marker, such as a thumbnail photo icon as shown in Figure \@ref(fig:leaflet-map-custom-marker), use any image editing tool to reduce a photo to a square of 64 x 64 pixels. Save it in PNG format and choose a filename using all lower-case characters with no spaces. Upload the image to the *media* folder in your GitHub repo as described above. In the Marker Icon column, enter the file pathname in this format: `media/image-thumbnail.png`. In the Custom Size column, set the dimensions to `64x64` or similar, such as `40x40` if desired.
+Optional custom markers: To create your own custom marker, such as a thumbnail photo icon as shown in Figure \@ref(fig:leaflet-map-custom-marker), use any image editing tool to reduce a photo to a square of 64 x 64 pixels. Save it in PNG format and choose a filename using all lower-case characters with no spaces. Upload the image to the *media* folder in your GitHub repo as described above. In the *Marker Icon* column, enter the file pathname in this format: `media/imagename-small.png`. In the *Custom Size* column, set the dimensions to `64x64` or similar, such as `40x40` if desired.
 
 (ref:leaflet-map-custom-marker) Optional: create and upload custom thumbnail map markers.
 
@@ -223,12 +230,12 @@ After you've prepared your GeoJSON data, name the files using all lower-case cha
 To display polylines:
 
 - In the *Options* tab, make sure *Polyline Legend Position* (cell B36) is visible by selecting *topleft* or a similar position.
-- In the *Polylines* tab, enter the GeoJSON URL pathname to the file you uploaded to your GitHub repo, such as `geodata/lines.geojson`. Then insert a Display Name, Description, and Color.
+- In the *Polylines* tab, enter the GeoJSON URL pathname to the file you uploaded to your GitHub repo, such as `geodata/polylines.geojson`. Then insert a Display Name, Description, and Color.
 
 To display polygons:
 
 - In the *Polygons* tab, make sure *Polygon Legend Position* (cell B4) is visible by selecting *topleft* or a similar position.
-- In *Polygon GeoJSON URL* (cell B6) enter the pathname to the file you uploaded to your GitHub repo, such as `geodata/map.geojson`.
+- In *Polygon GeoJSON URL* (cell B6) enter the pathname to the file you uploaded to your GitHub repo, such as `geodata/polygons.geojson`.
 - You can change the *Polygon Legend Title* (cell B3) and add an optional *Polygon Legend Icon* (cell B5).
 - Edit the *Polygon Data* and *Color Settings* sections to modify the labels and ranges to align with the properties of your GeoJSON file. In the *Property Range Color Palette*, you can automatically select a color scheme from the ColorBrewer tool we described in the [Map Design section of Chapter 8](map-design.html), or manually insert colors of your choice in the cell below.
 - Read the *Hints* column in the *Polygons* sheet for tips on how to enter data.

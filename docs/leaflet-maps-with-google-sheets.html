@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2021-01-03" />
+<meta name="date" content="2021-01-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -496,49 +496,56 @@ Figure 13.7: Edit your README file to replace the link to <em>our</em> site with
 <p>Now we can start to add new content to your map. In the <em>Points</em> tab of your Google Sheet, you’ll see column headers to organize and display interactive markers on your map. Replace the demonstration data with your own, but do <em>not</em> delete or rename the column headers, since the Leaflet code looks for these specific names.</p>
 <ul>
 <li>Group: Create any labels to categorize groups of markers in your legend.</li>
-<li>Marker Icon: Insert any standard icon name (such as <code>school</code> or <code>bus</code>) that appears in the <a href="http://fontawesome.io/icons">Font Awesome Icons site</a>, or leave blank for no icon inside the marker. To create your own custom icon, see further below.</li>
+<li>Marker Icon: Insert a <a href="https://fontawesome.com/icons?d=gallery&amp;s=solid&amp;m=free">Font Awesome free and solid icon name</a> such as <code>fa-ice-cream</code> or <code>fa-coffee</code>, or any <a href="https://material.io/resources/icons/?style=baseline">Material Design icon name</a> such as <code>rowing</code> or <code>where_to_vote</code>, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:icon-combined">13.8</a>. Or leave blank for no icon inside the marker. Note that Font Awesome pro or brand icons do not work with this template. To create your own custom icon, see further below.</li>
 <li>Marker Color: Insert any standard web color name such as <code>blue</code> or <code>darkblue</code>, or insert a web color code such as <code>#775307</code> or <code>rgba(200,100,0,0.5)</code>. See options at <a href="https://www.w3schools.com/colors/colors_names.asp">W3Schools Color Names</a>.</li>
 <li>Icon Color: Set the color of the icon inside the marker. The default is <code>white</code>, which looks good inside darker-colored markers.</li>
 <li>Custom Size: Leave blank, unless you are creating your own custom icon further below.</li>
 </ul>
+
+<div class="figure"><span id="fig:icon-combined"></span>
+<img src="images/13-leaflet/icon-combined-annotated.png" alt="For a Marker Icon, insert a Font Awesome free and solid icon name such as fa-ambulance (on the right), or any Material Icon name such as accessible (on the left)." width="400" />
+<p class="caption">
+Figure 13.8: For a <em>Marker Icon</em>, insert a Font Awesome free and solid icon name such as <code>fa-ambulance</code> (on the right), or any Material Icon name such as <code>accessible</code> (on the left).
+</p>
+</div>
 <p>The next set of columns include items that appear when users click on point markers:</p>
 <ul>
 <li>Name: Add a title to display in the marker pop-up window.</li>
 <li>Description: Add text to appear in the marker pop-up window. You may insert HTML tags to add line breaks (such as <code>&lt;br&gt;</code>), or to open external links in a new tab, such as <code>&lt;a href='https://www.w3schools.com/' target='_blank'&gt;Visit W3Schools&lt;/a&gt;</code>. Learn about HTML syntax at <a href="https://www.w3schools.com/html/html_links.asp">W3Schools</a>.</li>
-<li>Image: You have two options to display images. You can insert an external link to an image hosted by an online service (such as Flickr), as long as it begins with <code>https</code> (secure) and ends with either <code>.jpg</code> or <code>.png</code>. Or you can upload an image into the <code>media</code> subfolder in your GitHub repo, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:leaflet-media-upload">13.8</a>, and enter the pathname in the Google Sheet in this format: <code>media/image.jpg</code> or <code>...png</code>.</li>
+<li>Image: You have two options to display images. You can insert an external link to an image hosted by an online service (such as Flickr), as long as it begins with <code>https</code> (secure) and ends with either <code>.jpg</code> or <code>.png</code>. Or you can upload an image into the <code>media</code> subfolder in your GitHub repo, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:leaflet-media-upload">13.9</a>, and enter the pathname in the Google Sheet in this format: <code>media/image.jpg</code> or <code>...png</code>.</li>
 </ul>
 
 <div class="figure"><span id="fig:leaflet-media-upload"></span>
 <img src="images/13-leaflet/leaflet-media-upload.png" alt="In GitHub, click to open the media folder and Add file - Upload files." width="400" />
 <p class="caption">
-Figure 13.8: In GitHub, click to open the <code>media</code> folder and <em>Add file - Upload files</em>.
+Figure 13.9: In GitHub, click to open the <code>media</code> folder and <em>Add file - Upload files</em>.
 </p>
 </div>
 <p>Warning: Media file pathnames are case-sensitive, and we recommend using <em>all lowercase characters</em>, including the suffix ending. Also, since the code template automatically resizes images to fit, we recommend that you <em>reduce the size</em> of any images to 600x400 pixels or less prior to uploading, to make sure your map operates smoothly.</p>
 <ul>
-<li>Location, Latitude, Longitude: These place your markers at points on the map. Although the code template only requires Latitude and Longitude, it’s wise to paste an address or place name into the Location column as a reminder to correspond with the numerical coordinates. Use the <a href="geocode.html">Geocoding by SmartMonkey Add-on from Chapter 3</a> and select <em>Add-ons &gt; Geocoding by SmartMonkey &gt; Geocode Details</em> to create a new sheet with sample data and display results for three new columns: <em>Latitude</em>, <em>Longitude</em>, and <em>Address found</em>, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:geocode-details2">13.9</a>. Paste in your own address data and repeat the step above to geocode it, then copy and paste the results into your <em>Points</em> sheet.</li>
+<li>Location, Latitude, Longitude: These place your markers at points on the map. Although the code template only requires Latitude and Longitude, it’s wise to paste an address or place name into the Location column as a reminder to correspond with the numerical coordinates. Use the <a href="geocode.html">Geocoding by SmartMonkey Add-on from Chapter 3</a> and select <em>Add-ons &gt; Geocoding by SmartMonkey &gt; Geocode Details</em> to create a new sheet with sample data and display results for three new columns: <em>Latitude</em>, <em>Longitude</em>, and <em>Address found</em>, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:geocode-details2">13.10</a>. Paste in your own address data and repeat the step above to geocode it, then copy and paste the results into your <em>Points</em> sheet.</li>
 </ul>
 
 <div class="figure"><span id="fig:geocode-details2"></span>
 <img src="images/13-leaflet/geocode-details.png" alt="Select Add-ons–Geocoding by SmartMonkey–Geocode Details to display sample data with results for three new columns: Latitude, Longitude, and Address found."  />
 <p class="caption">
-Figure 13.9: Select <em>Add-ons–Geocoding by SmartMonkey–Geocode Details</em> to display sample data with results for three new columns: <em>Latitude</em>, <em>Longitude</em>, and <em>Address found</em>.
+Figure 13.10: Select <em>Add-ons–Geocoding by SmartMonkey–Geocode Details</em> to display sample data with results for three new columns: <em>Latitude</em>, <em>Longitude</em>, and <em>Address found</em>.
 </p>
 </div>
-<p>Optional table of viewable markers: To display an interactive table at the bottom of your map, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:leaflet-map-with-table">13.10</a>. In the <em>Options</em> tab, set <em>Display Table</em> (cell B30) to <em>On</em>. You can also adjust the <em>Table Height</em>, and modify the display of <em>Table Columns</em> by entering the column headers, separated with commas.</p>
+<p>Optional table of viewable markers: To display an interactive table at the bottom of your map, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:leaflet-map-with-table">13.11</a>. In the <em>Options</em> tab, set <em>Display Table</em> (cell B30) to <em>On</em>. You can also adjust the <em>Table Height</em>, and modify the display of <em>Table Columns</em> by entering the column headers, separated with commas.</p>
 
 <div class="figure"><span id="fig:leaflet-map-with-table"></span>
 <img src="images/13-leaflet/leaflet-map-with-table.png" alt="Optional: display interactive table of viewable markers at the bottom of your map." width="500" />
 <p class="caption">
-Figure 13.10: Optional: display interactive table of viewable markers at the bottom of your map.
+Figure 13.11: Optional: display interactive table of viewable markers at the bottom of your map.
 </p>
 </div>
-<p>Optional custom markers: To create your own custom marker, such as a thumbnail photo icon as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:leaflet-map-custom-marker">13.11</a>, use any image editing tool to reduce a photo to a square of 64 x 64 pixels. Save it in PNG format and choose a filename using all lower-case characters with no spaces. Upload the image to the <em>media</em> folder in your GitHub repo as described above. In the Marker Icon column, enter the file pathname in this format: <code>media/image-thumbnail.png</code>. In the Custom Size column, set the dimensions to <code>64x64</code> or similar, such as <code>40x40</code> if desired.</p>
+<p>Optional custom markers: To create your own custom marker, such as a thumbnail photo icon as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:leaflet-map-custom-marker">13.12</a>, use any image editing tool to reduce a photo to a square of 64 x 64 pixels. Save it in PNG format and choose a filename using all lower-case characters with no spaces. Upload the image to the <em>media</em> folder in your GitHub repo as described above. In the <em>Marker Icon</em> column, enter the file pathname in this format: <code>media/imagename-small.png</code>. In the <em>Custom Size</em> column, set the dimensions to <code>64x64</code> or similar, such as <code>40x40</code> if desired.</p>
 
 <div class="figure"><span id="fig:leaflet-map-custom-marker"></span>
 <img src="images/13-leaflet/leaflet-map-custom-marker.png" alt="Optional: create and upload custom thumbnail map markers." width="600" />
 <p class="caption">
-Figure 13.11: Optional: create and upload custom thumbnail map markers.
+Figure 13.12: Optional: create and upload custom thumbnail map markers.
 </p>
 </div>
 <p>Open the browser tab that displays your live map and refresh the page to see your changes. If your changes do not appear within a few seconds, see the <a href="fix.html">Fix Common Problems</a> section of the appendix.</p>
@@ -567,12 +574,12 @@ Figure 13.11: Optional: create and upload custom thumbnail map markers.
 <p>To display polylines:</p>
 <ul>
 <li>In the <em>Options</em> tab, make sure <em>Polyline Legend Position</em> (cell B36) is visible by selecting <em>topleft</em> or a similar position.</li>
-<li>In the <em>Polylines</em> tab, enter the GeoJSON URL pathname to the file you uploaded to your GitHub repo, such as <code>geodata/lines.geojson</code>. Then insert a Display Name, Description, and Color.</li>
+<li>In the <em>Polylines</em> tab, enter the GeoJSON URL pathname to the file you uploaded to your GitHub repo, such as <code>geodata/polylines.geojson</code>. Then insert a Display Name, Description, and Color.</li>
 </ul>
 <p>To display polygons:</p>
 <ul>
 <li>In the <em>Polygons</em> tab, make sure <em>Polygon Legend Position</em> (cell B4) is visible by selecting <em>topleft</em> or a similar position.</li>
-<li>In <em>Polygon GeoJSON URL</em> (cell B6) enter the pathname to the file you uploaded to your GitHub repo, such as <code>geodata/map.geojson</code>.</li>
+<li>In <em>Polygon GeoJSON URL</em> (cell B6) enter the pathname to the file you uploaded to your GitHub repo, such as <code>geodata/polygons.geojson</code>.</li>
 <li>You can change the <em>Polygon Legend Title</em> (cell B3) and add an optional <em>Polygon Legend Icon</em> (cell B5).</li>
 <li>Edit the <em>Polygon Data</em> and <em>Color Settings</em> sections to modify the labels and ranges to align with the properties of your GeoJSON file. In the <em>Property Range Color Palette</em>, you can automatically select a color scheme from the ColorBrewer tool we described in the <a href="map-design.html">Map Design section of Chapter 8</a>, or manually insert colors of your choice in the cell below.</li>
 <li>Read the <em>Hints</em> column in the <em>Polygons</em> sheet for tips on how to enter data.</li>
@@ -588,13 +595,13 @@ Figure 13.11: Optional: create and upload custom thumbnail map markers.
 <h4>G) Save each Google Sheets tab as a CSV file and upload to GitHub</h4>
 <p>If you have finished entering most of your data into your Google Sheets, downloading them into separate CSV files and uploading those into your GitHub repo is the <em>best</em> long-term preservation strategy. This approach keeps your map and data together in the same GitHub repo, and removes the risk that your map will break due to an interruption to Google services. Plus, you can still edit your map data. If this approach makes sense, follow these steps:</p>
 <ol style="list-style-type: decimal">
-<li>In your Google Sheets, go to each tab and select <em>File &gt; Download</em> into CSV format, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:sheets-download-csv">13.12</a>, to create a separate file for each tab.</li>
+<li>In your Google Sheets, go to each tab and select <em>File &gt; Download</em> into CSV format, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:sheets-download-csv">13.13</a>, to create a separate file for each tab.</li>
 </ol>
 
 <div class="figure"><span id="fig:sheets-download-csv"></span>
 <img src="images/13-leaflet/sheets-download-csv.png" alt="Download each Google Sheets tab as a separate CSV file." width="350" />
 <p class="caption">
-Figure 13.12: Download each Google Sheets tab as a separate CSV file.
+Figure 13.13: Download each Google Sheets tab as a separate CSV file.
 </p>
 </div>
 <ol start="2" style="list-style-type: decimal">
@@ -608,13 +615,13 @@ Figure 13.12: Download each Google Sheets tab as a separate CSV file.
 <li>Notes.csv (or .txt) Recommended to keep any notes with your data, but not required.</li>
 </ul>
 <ol start="3" style="list-style-type: decimal">
-<li>In your GitHub repo, click the <code>csv</code> subfolder to open it, select <em>Add file &gt; Upload files</em>, and upload all of the CSV files above into this subfolder, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:leaflet-upload-csv">13.13</a>. The Leaflet template code checks here first for data, and if it finds CSV files with the names above, it will pull the map data directly from them, instead of your Google Sheets. <em>Remember</em> that from this point forward, any edits in your Google Sheet will <em>no longer appear automatically</em> in your map.</li>
+<li>In your GitHub repo, click the <code>csv</code> subfolder to open it, select <em>Add file &gt; Upload files</em>, and upload all of the CSV files above into this subfolder, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:leaflet-upload-csv">13.14</a>. The Leaflet template code checks here first for data, and if it finds CSV files with the names above, it will pull the map data directly from them, instead of your Google Sheets. <em>Remember</em> that from this point forward, any edits in your Google Sheet will <em>no longer appear automatically</em> in your map.</li>
 </ol>
 
 <div class="figure"><span id="fig:leaflet-upload-csv"></span>
 <img src="images/13-leaflet/leaflet-upload-csv.png" alt="Upload your map data files into the csv subfolder in GitHub." width="400" />
 <p class="caption">
-Figure 13.13: Upload your map data files into the <em>csv</em> subfolder in GitHub.
+Figure 13.14: Upload your map data files into the <em>csv</em> subfolder in GitHub.
 </p>
 </div>
 <ol start="4" style="list-style-type: decimal">

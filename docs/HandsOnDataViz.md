@@ -6,7 +6,7 @@ Preface
 ![Book cover: Read about the [hoatzin “reptile
 bird”](https://en.wikipedia.org/wiki/Hoatzin)](images/0-preface/cover-400wide.jpg)
 
-**This BOOK-IN-PROGRESS was last updated on: 03 Jan 2021**.
+**This BOOK-IN-PROGRESS was last updated on: 05 Jan 2021**.
 
 Read the open-access web edition at
 <a href="https://HandsOnDataViz.org" class="uri">https://HandsOnDataViz.org</a>,
@@ -11498,10 +11498,14 @@ Leaflet code looks for these specific names.
 
 -   Group: Create any labels to categorize groups of markers in your
     legend.
--   Marker Icon: Insert any standard icon name (such as `school` or
-    `bus`) that appears in the [Font Awesome Icons
-    site](http://fontawesome.io/icons), or leave blank for no icon
-    inside the marker. To create your own custom icon, see further
+-   Marker Icon: Insert a [Font Awesome free and solid icon
+    name](https://fontawesome.com/icons?d=gallery&s=solid&m=free) such
+    as `fa-ice-cream` or `fa-coffee`, or any [Material Design icon
+    name](https://material.io/resources/icons/?style=baseline) such as
+    `rowing` or `where_to_vote`, as shown in Figure
+    <a href="#fig:icon-combined">13.8</a>. Or leave blank for no icon
+    inside the marker. Note that Font Awesome pro or brand icons do not
+    work with this template. To create your own custom icon, see further
     below.
 -   Marker Color: Insert any standard web color name such as `blue` or
     `darkblue`, or insert a web color code such as `#775307` or
@@ -11511,6 +11515,13 @@ Leaflet code looks for these specific names.
     is `white`, which looks good inside darker-colored markers.
 -   Custom Size: Leave blank, unless you are creating your own custom
     icon further below.
+
+<img src="images/13-leaflet/icon-combined-annotated.png" alt="For a *Marker Icon*, insert a Font Awesome free and solid icon name such as `fa-ambulance` (on the right), or any Material Icon name such as `accessible` (on the left)." width="400" />
+<p class="caption">
+Figure 13.8: For a *Marker Icon*, insert a Font Awesome free and solid
+icon name such as `fa-ambulance` (on the right), or any Material Icon
+name such as `accessible` (on the left).
+</p>
 
 The next set of columns include items that appear when users click on
 point markers:
@@ -11527,12 +11538,12 @@ point markers:
     Flickr), as long as it begins with `https` (secure) and ends with
     either `.jpg` or `.png`. Or you can upload an image into the `media`
     subfolder in your GitHub repo, as shown in Figure
-    <a href="#fig:leaflet-media-upload">13.8</a>, and enter the pathname
+    <a href="#fig:leaflet-media-upload">13.9</a>, and enter the pathname
     in the Google Sheet in this format: `media/image.jpg` or `...png`.
 
 <img src="images/13-leaflet/leaflet-media-upload.png" alt="In GitHub, click to open the `media` folder and *Add file - Upload files*." width="400" />
 <p class="caption">
-Figure 13.8: In GitHub, click to open the `media` folder and *Add file -
+Figure 13.9: In GitHub, click to open the `media` folder and *Add file -
 Upload files*.
 </p>
 
@@ -11551,43 +11562,43 @@ uploading, to make sure your map operates smoothly.
     SmartMonkey &gt; Geocode Details* to create a new sheet with sample
     data and display results for three new columns: *Latitude*,
     *Longitude*, and *Address found*, as shown in Figure
-    <a href="#fig:geocode-details2">13.9</a>. Paste in your own address
+    <a href="#fig:geocode-details2">13.10</a>. Paste in your own address
     data and repeat the step above to geocode it, then copy and paste
     the results into your *Points* sheet.
 
 <img src="images/13-leaflet/geocode-details.png" alt="Select *Add-ons--Geocoding by SmartMonkey--Geocode Details* to display sample data with results for three new columns: *Latitude*, *Longitude*, and *Address found*."  />
 <p class="caption">
-Figure 13.9: Select *Add-ons–Geocoding by SmartMonkey–Geocode Details*
+Figure 13.10: Select *Add-ons–Geocoding by SmartMonkey–Geocode Details*
 to display sample data with results for three new columns: *Latitude*,
 *Longitude*, and *Address found*.
 </p>
 
 Optional table of viewable markers: To display an interactive table at
 the bottom of your map, as shown in Figure
-<a href="#fig:leaflet-map-with-table">13.10</a>. In the *Options* tab,
+<a href="#fig:leaflet-map-with-table">13.11</a>. In the *Options* tab,
 set *Display Table* (cell B30) to *On*. You can also adjust the *Table
 Height*, and modify the display of *Table Columns* by entering the
 column headers, separated with commas.
 
 <img src="images/13-leaflet/leaflet-map-with-table.png" alt="Optional: display interactive table of viewable markers at the bottom of your map." width="500" />
 <p class="caption">
-Figure 13.10: Optional: display interactive table of viewable markers at
+Figure 13.11: Optional: display interactive table of viewable markers at
 the bottom of your map.
 </p>
 
 Optional custom markers: To create your own custom marker, such as a
 thumbnail photo icon as shown in Figure
-<a href="#fig:leaflet-map-custom-marker">13.11</a>, use any image
+<a href="#fig:leaflet-map-custom-marker">13.12</a>, use any image
 editing tool to reduce a photo to a square of 64 x 64 pixels. Save it in
 PNG format and choose a filename using all lower-case characters with no
 spaces. Upload the image to the *media* folder in your GitHub repo as
-described above. In the Marker Icon column, enter the file pathname in
-this format: `media/image-thumbnail.png`. In the Custom Size column, set
-the dimensions to `64x64` or similar, such as `40x40` if desired.
+described above. In the *Marker Icon* column, enter the file pathname in
+this format: `media/imagename-small.png`. In the *Custom Size* column,
+set the dimensions to `64x64` or similar, such as `40x40` if desired.
 
 <img src="images/13-leaflet/leaflet-map-custom-marker.png" alt="Optional: create and upload custom thumbnail map markers." width="600" />
 <p class="caption">
-Figure 13.11: Optional: create and upload custom thumbnail map markers.
+Figure 13.12: Optional: create and upload custom thumbnail map markers.
 </p>
 
 Open the browser tab that displays your live map and refresh the page to
@@ -11637,15 +11648,17 @@ To display polylines:
 -   In the *Options* tab, make sure *Polyline Legend Position* (cell
     B36) is visible by selecting *topleft* or a similar position.
 -   In the *Polylines* tab, enter the GeoJSON URL pathname to the file
-    you uploaded to your GitHub repo, such as `geodata/lines.geojson`.
-    Then insert a Display Name, Description, and Color.
+    you uploaded to your GitHub repo, such as
+    `geodata/polylines.geojson`. Then insert a Display Name,
+    Description, and Color.
 
 To display polygons:
 
 -   In the *Polygons* tab, make sure *Polygon Legend Position* (cell B4)
     is visible by selecting *topleft* or a similar position.
 -   In *Polygon GeoJSON URL* (cell B6) enter the pathname to the file
-    you uploaded to your GitHub repo, such as `geodata/map.geojson`.
+    you uploaded to your GitHub repo, such as
+    `geodata/polygons.geojson`.
 -   You can change the *Polygon Legend Title* (cell B3) and add an
     optional *Polygon Legend Icon* (cell B5).
 -   Edit the *Polygon Data* and *Color Settings* sections to modify the
@@ -11684,12 +11697,12 @@ sense, follow these steps:
 
 1.  In your Google Sheets, go to each tab and select *File &gt;
     Download* into CSV format, as shown in Figure
-    <a href="#fig:sheets-download-csv">13.12</a>, to create a separate
+    <a href="#fig:sheets-download-csv">13.13</a>, to create a separate
     file for each tab.
 
 <img src="images/13-leaflet/sheets-download-csv.png" alt="Download each Google Sheets tab as a separate CSV file." width="350" />
 <p class="caption">
-Figure 13.12: Download each Google Sheets tab as a separate CSV file.
+Figure 13.13: Download each Google Sheets tab as a separate CSV file.
 </p>
 
 1.  Shorten each file name as shown. The names must be exact, but they
@@ -11707,7 +11720,7 @@ Figure 13.12: Download each Google Sheets tab as a separate CSV file.
 1.  In your GitHub repo, click the `csv` subfolder to open it, select
     *Add file &gt; Upload files*, and upload all of the CSV files above
     into this subfolder, as shown in Figure
-    <a href="#fig:leaflet-upload-csv">13.13</a>. The Leaflet template
+    <a href="#fig:leaflet-upload-csv">13.14</a>. The Leaflet template
     code checks here first for data, and if it finds CSV files with the
     names above, it will pull the map data directly from them, instead
     of your Google Sheets. *Remember* that from this point forward, any
@@ -11716,7 +11729,7 @@ Figure 13.12: Download each Google Sheets tab as a separate CSV file.
 
 <img src="images/13-leaflet/leaflet-upload-csv.png" alt="Upload your map data files into the *csv* subfolder in GitHub." width="400" />
 <p class="caption">
-Figure 13.13: Upload your map data files into the *csv* subfolder in
+Figure 13.14: Upload your map data files into the *csv* subfolder in
 GitHub.
 </p>
 
@@ -11749,9 +11762,9 @@ Leaflet Storymaps with Google Sheets
 The Leaflet Storymaps code template is designed to show a point-by-point
 guided tour, with a scrolling narrative to display text, images, audio,
 video, and scanned map backgrounds, as shown in Figure
-<a href="#fig:storymap-demo">13.14</a>. You enter all of your map data
+<a href="#fig:storymap-demo">13.15</a>. You enter all of your map data
 into a linked Google Sheet (or CSV file) or upload it into a GitHub
-repository, as shown in Figure <a href="#fig:storymap-sheet">13.15</a>.
+repository, as shown in Figure <a href="#fig:storymap-sheet">13.16</a>.
 In addition, the Leaflet Storymaps template allows you to customize the
 appearance of your data, and to add more layers, such as historical maps
 and geographic boundaries, which you’ll learn how to prepare in [Chapter
@@ -11765,13 +11778,13 @@ customize it further if you have skills or support from a developer.
 
 <img src="images/13-leaflet/storymap-demo.png" alt="Explore the [interactive Leaflet Storymaps with Google Sheets](https://handsondataviz.github.io/leaflet-storymaps-with-google-sheets/)."  />
 <p class="caption">
-Figure 13.14: Explore the [interactive Leaflet Storymaps with Google
+Figure 13.15: Explore the [interactive Leaflet Storymaps with Google
 Sheets](https://handsondataviz.github.io/leaflet-storymaps-with-google-sheets/).
 </p>
 
 <img src="images/13-leaflet/storymap-sheet.png" alt="View the [online Google Sheet template](https://docs.google.com/spreadsheets/d/1AO6XHL_0JafWZF4KEejkdDNqfuZWUk3SlNlQ6MjlRFM/) that feeds data into the Leaflet Storymaps demo above."  />
 <p class="caption">
-Figure 13.15: View the [online Google Sheet
+Figure 13.16: View the [online Google Sheet
 template](https://docs.google.com/spreadsheets/d/1AO6XHL_0JafWZF4KEejkdDNqfuZWUk3SlNlQ6MjlRFM/)
 that feeds data into the Leaflet Storymaps demo above.
 </p>
@@ -11892,14 +11905,14 @@ with the first part of the tutorial.
     button and scroll way down to the GitHub Pages area. In the
     drop-down menu, change *Source* from *None* to *Main*, keep the
     default */(root)* setting, and press *Save* as shown in Figure
-    <a href="#fig:leaflet-github-pages-main3">13.16</a>. This step tells
+    <a href="#fig:leaflet-github-pages-main3">13.17</a>. This step tells
     GitHub to publish a live version of your map on the public web,
     where anyone can access it in their browser, if they have the web
     address.
 
 <img src="images/13-leaflet/leaflet-github-pages-main.png" alt="In *Settings*, go to *GitHub Pages*, switch the source from *None* to *Main*, and *Save*." width="300" />
 <p class="caption">
-Figure 13.16: In *Settings*, go to *GitHub Pages*, switch the source
+Figure 13.17: In *Settings*, go to *GitHub Pages*, switch the source
 from *None* to *Main*, and *Save*.
 </p>
 
@@ -11915,12 +11928,12 @@ from *None* to *Main*, and *Save*.
     click the pencil icon to edit this file.
 
 3.  Delete the link to the *our* live site, as shown in Figure
-    <a href="#fig:storymap-readme-link-top">13.17</a>, and paste in the
+    <a href="#fig:storymap-readme-link-top">13.18</a>, and paste in the
     link to *your* published site. Scroll down to *Commit* your changes.
 
 <img src="images/13-leaflet/storymap-readme-link-top.png" alt="Edit your README file to replace the link to *our* site with the link to *your* site."  />
 <p class="caption">
-Figure 13.17: Edit your README file to replace the link to *our* site
+Figure 13.18: Edit your README file to replace the link to *our* site
 with the link to *your* site.
 </p>
 
@@ -11945,14 +11958,14 @@ with the link to *your* site.
 
 5.  At the top of your browser, copy your Google Sheet address or URL
     (which usually ends in `...XYZ/edit#gid=0`), as shown in Figure
-    <a href="#fig:sheets-publish2">13.18</a>. Do *NOT* copy the
+    <a href="#fig:sheets-publish2">13.19</a>. Do *NOT* copy the
     *Published to the web* address (which usually ends in
     `...XYZ/pubhtml`) because that link is slightly different and will
     not work in this template.
 
 <img src="images/13-leaflet/sheets-publish-annotated.png" alt="Copy the Google Sheet address at the top of the browser, NOT the *Publish to the web* address." width="500" />
 <p class="caption">
-Figure 13.18: Copy the Google Sheet address at the top of the browser,
+Figure 13.19: Copy the Google Sheet address at the top of the browser,
 NOT the *Publish to the web* address.
 </p>
 
@@ -11967,26 +11980,26 @@ on the map.
 
 2.  Paste *your* Google Sheet address or URL (which usually ends in
     `...XYZ/edit#gid=0`) to replace *our* existing URL, as shown in
-    Figure <a href="#fig:google-doc-url2">13.19</a>. Be careful *NOT* to
+    Figure <a href="#fig:google-doc-url2">13.20</a>. Be careful *NOT* to
     erase the single quotation marks or the semicolon at the end. Scroll
     down to *Commit* your changes. See separate instructions about the
     Google API key further below.
 
 <img src="images/13-leaflet/google-doc-url.png" alt="Paste in *your* Google Sheet URL to replace *our* URL."  />
 <p class="caption">
-Figure 13.19: Paste in *your* Google Sheet URL to replace *our* URL.
+Figure 13.20: Paste in *your* Google Sheet URL to replace *our* URL.
 </p>
 
 1.  Also, let’s paste your Google Sheet URL in second place to help you
     keep track of it. In your GitHub repo, click the README.md file to
     open it, click the pencil symbol to edit it, and paste *your* Google
     Sheet URL to replace *our* existing URL, as shown in Figure
-    <a href="#fig:storymap-readme-link-bottom">13.20</a>. Scroll down to
+    <a href="#fig:storymap-readme-link-bottom">13.21</a>. Scroll down to
     *Commit* your changes.
 
 <img src="images/13-leaflet/storymap-readme-link-bottom.png" alt="Edit your README file to replace the link to *our* site with the link to *your* site."  />
 <p class="caption">
-Figure 13.20: Edit your README file to replace the link to *our* site
+Figure 13.21: Edit your README file to replace the link to *our* site
 with the link to *your* site.
 </p>
 
@@ -12026,14 +12039,14 @@ Leaflet code looks for these specific names.
     begins with `https` (secure) and ends with either `.jpg` or `.png`.
     You can also insert a Youtube video link. Or you can upload an image
     file into the `media` subfolder in your GitHub repo, as shown in
-    Figure <a href="#fig:storymap-media-upload">13.21</a>, and enter the
+    Figure <a href="#fig:storymap-media-upload">13.22</a>, and enter the
     pathname in the Google Sheet in this format:
     `media/your-file-name.jpg` or `...png`. Similarly, you can upload an
     audio file in `.mp3` (recommended) or `.ogg` or `.wav` format.
 
 <img src="images/13-leaflet/storymap-media-upload.png" alt="In GitHub, click to open the `media` folder and *Add file - Upload files*." width="400" />
 <p class="caption">
-Figure 13.21: In GitHub, click to open the `media` folder and *Add file
+Figure 13.22: In GitHub, click to open the `media` folder and *Add file
 - Upload files*.
 </p>
 
@@ -12089,13 +12102,13 @@ in the first row of the series, and leave it blank for the others.
     SmartMonkey &gt; Geocode Details* to create a new sheet with sample
     data and display results for three new columns: *Latitude*,
     *Longitude*, and *Address found*, as shown in Figure
-    <a href="#fig:geocode-details3">13.22</a>. Paste in your own address
+    <a href="#fig:geocode-details3">13.23</a>. Paste in your own address
     data and repeat the step above to geocode it, then copy and paste
     the results into your *Points* sheet.
 
 <img src="images/13-leaflet/geocode-details.png" alt="Select *Add-ons--Geocoding by SmartMonkey--Geocode Details* to display sample data with results for three new columns: *Latitude*, *Longitude*, and *Address found*."  />
 <p class="caption">
-Figure 13.22: Select *Add-ons–Geocoding by SmartMonkey–Geocode Details*
+Figure 13.23: Select *Add-ons–Geocoding by SmartMonkey–Geocode Details*
 to display sample data with results for three new columns: *Latitude*,
 *Longitude*, and *Address found*.
 </p>
@@ -12134,7 +12147,7 @@ Although map tile links are *not* viewable in a normal browser, they can
 be displayed by the Leaflet Storymaps code. Enter the tile link and your
 desired transparency level into the Overlay columns in the *Chapters*
 tab of your Google Sheet template, as shown in Figure
-<a href="#fig:storymap-overlay">13.23</a>.
+<a href="#fig:storymap-overlay">13.24</a>.
 
 -   Overlay: Enter a map tile link in Google/OpenStreetMap format,
     similar to the sample above.
@@ -12143,7 +12156,7 @@ tab of your Google Sheet template, as shown in Figure
 
 <img src="images/13-leaflet/storymap-overlay.png" alt="Enter map tile link and transparency level into the Google Sheet template (on left) to display it in one or more storymap chapters (on right)."  />
 <p class="caption">
-Figure 13.23: Enter map tile link and transparency level into the Google
+Figure 13.24: Enter map tile link and transparency level into the Google
 Sheet template (on left) to display it in one or more storymap chapters
 (on right).
 </p>
@@ -12160,13 +12173,13 @@ repository by opening the `geojson` folder and selecting *Add file -
 Upload files*. In your Google Sheet template, enter the pathname in the
 *GeoJSON Overlay* column in this format:
 `geojson/your-file-name.geojson`, as shown in Figure
-<a href="#fig:storymap-geojson">13.24</a>.
+<a href="#fig:storymap-geojson">13.25</a>.
 
 to display it in one or more storymap chapters (on right).
 
 <img src="images/13-leaflet/storymap-geojson.png" alt="Enter the pathname in the *GeoJSON Overlay* column (on left)"  />
 <p class="caption">
-Figure 13.24: Enter the pathname in the *GeoJSON Overlay* column (on
+Figure 13.25: Enter the pathname in the *GeoJSON Overlay* column (on
 left)
 </p>
 
@@ -12226,12 +12239,12 @@ sense, follow these steps:
 
 1.  In your Google Sheets, go to each tab and select *File &gt;
     Download* into CSV format, as shown in Figure
-    <a href="#fig:storymap-download-csv">13.25</a>, to create a separate
+    <a href="#fig:storymap-download-csv">13.26</a>, to create a separate
     file for each tab.
 
 <img src="images/13-leaflet/storymap-download-csv.png" alt="Download each Google Sheets tab as a separate CSV file." width="350" />
 <p class="caption">
-Figure 13.25: Download each Google Sheets tab as a separate CSV file.
+Figure 13.26: Download each Google Sheets tab as a separate CSV file.
 </p>
 
 1.  Shorten each file name as shown. The names must be exact, but they
@@ -12246,7 +12259,7 @@ Figure 13.25: Download each Google Sheets tab as a separate CSV file.
 1.  In your GitHub repo, click the `csv` subfolder to open it, select
     *Add file &gt; Upload files*, and upload all of the CSV files above
     into this subfolder, as shown in Figure
-    <a href="#fig:storymap-upload-csv">13.26</a>. The Leaflet template
+    <a href="#fig:storymap-upload-csv">13.27</a>. The Leaflet template
     code checks here first for data, and if it finds CSV files with the
     names above, it will pull the map data directly from them, instead
     of your Google Sheets. *Remember* that from this point forward, any
@@ -12255,7 +12268,7 @@ Figure 13.25: Download each Google Sheets tab as a separate CSV file.
 
 <img src="images/13-leaflet/storymap-upload-csv.png" alt="Upload your map data files into the *csv* subfolder in GitHub." width="400" />
 <p class="caption">
-Figure 13.26: Upload your map data files into the *csv* subfolder in
+Figure 13.27: Upload your map data files into the *csv* subfolder in
 GitHub.
 </p>
 
@@ -12327,93 +12340,93 @@ Warning: Your screen instructions may vary from those listed below.
     your country and agree to its terms of service.
 
 2.  Click on *Create a Project* on the opening screen, as shown in
-    Figure <a href="#fig:google-api-create">13.27</a>. Or alternatively,
+    Figure <a href="#fig:google-api-create">13.28</a>. Or alternatively,
     go to the upper-left drop-down menu to *Select a project &gt; New
     project*.
 
 <img src="images/13-leaflet/google-api-create.png" alt="Select *Create a Project* or use the menu to select a new project." width="600" />
 <p class="caption">
-Figure 13.27: Select *Create a Project* or use the menu to select a new
+Figure 13.28: Select *Create a Project* or use the menu to select a new
 project.
 </p>
 
 1.  In the next screen, give your new project a meaningful short name to
     remind you of its purpose, such as `handsondataviz`. You do not need
     to create an organization or parent folder. Then click *Create*, as
-    shown in Figure <a href="#fig:google-api-name">13.28</a>.
+    shown in Figure <a href="#fig:google-api-name">13.29</a>.
 
 <img src="images/13-leaflet/google-api-name.png" alt="Give your project a meaningful short name." width="450" />
 <p class="caption">
-Figure 13.28: Give your project a meaningful short name.
+Figure 13.29: Give your project a meaningful short name.
 </p>
 
 1.  In the next screen, press the *+ Enable APIs and Services* at the
     top of the menu, as shown in Figure
-    <a href="#fig:google-api-enable">13.29</a>. Make sure that your new
+    <a href="#fig:google-api-enable">13.30</a>. Make sure that your new
     project name appears near the top.
 
 <img src="images/13-leaflet/google-api-enable.png" alt="Press the *+ Enable APIs and Services* button." width="500" />
 <p class="caption">
-Figure 13.29: Press the *+ Enable APIs and Services* button.
+Figure 13.30: Press the *+ Enable APIs and Services* button.
 </p>
 
 1.  In the next screen, enter *Google Sheets* into the search bar, and
     select this result, as shown in Figure
-    <a href="#fig:google-api-search">13.30</a>.
+    <a href="#fig:google-api-search">13.31</a>.
 
 <img src="images/13-leaflet/google-api-search.png" alt="Search for *Google Sheets* and select this result." width="500" />
 <p class="caption">
-Figure 13.30: Search for *Google Sheets* and select this result.
+Figure 13.31: Search for *Google Sheets* and select this result.
 </p>
 
 1.  In the next screen, select the *Enable* button to turn on the Google
     Sheets API for your project, as shown in Figure
-    <a href="#fig:google-api-select">13.31</a>.
+    <a href="#fig:google-api-select">13.32</a>.
 
 <img src="images/13-leaflet/google-api-select.png" alt="Select the *Enable* button for Google Sheets API." width="350" />
 <p class="caption">
-Figure 13.31: Select the *Enable* button for Google Sheets API.
+Figure 13.32: Select the *Enable* button for Google Sheets API.
 </p>
 
 1.  In the left sidebar menu, click *Credentials*, then click *+ Create
     Credentials* and select *API key*, as shown in Figure
-    <a href="#fig:google-api-credentials">13.32</a>.
+    <a href="#fig:google-api-credentials">13.33</a>.
 
 <img src="images/13-leaflet/google-api-credentials.png" alt="Select *Credentials - Create Credentials - API key*."  />
 <p class="caption">
-Figure 13.32: Select *Credentials - Create Credentials - API key*.
+Figure 13.33: Select *Credentials - Create Credentials - API key*.
 </p>
 
 1.  In the next screen, the console will generate your API key. Copy it,
     then press *Restrict key*, as shown in Figure
-    <a href="#fig:google-api-key">13.33</a>.
+    <a href="#fig:google-api-key">13.34</a>.
 
 <img src="images/13-leaflet/google-api-key-annotated.png" alt="Copy your API key and press *Restrict key*." width="500" />
 <p class="caption">
-Figure 13.33: Copy your API key and press *Restrict key*.
+Figure 13.34: Copy your API key and press *Restrict key*.
 </p>
 
 1.  In the new window, under *API restrictions*, choose the *Restrict
     key* radio button. In the dropdown that appears, choose *Google
     Sheets API*, then click *Save*, as shown in Figure
-    <a href="#fig:google-api-restrict">13.34</a>.
+    <a href="#fig:google-api-restrict">13.35</a>.
 
 <img src="images/13-leaflet/google-api-restrict.png" alt="Choose *API restrictions - Restrict key - Google Sheets API*" width="600" />
 <p class="caption">
-Figure 13.34: Choose *API restrictions - Restrict key - Google Sheets
+Figure 13.35: Choose *API restrictions - Restrict key - Google Sheets
 API*
 </p>
 
 1.  In your Leaflet map code on your GitHub repo, open the
     `google-doc-url.js` file, click the pencil symbol to edit it, and
     paste in *your* Google Sheets API key to replace *our* key, as shown
-    in Figure <a href="#fig:google-api-paste">13.35</a>. Be careful not
+    in Figure <a href="#fig:google-api-paste">13.36</a>. Be careful not
     to erase the single-quote marks or the semicolon. Scroll down to
     *Commit* your changes.
 
 <img src="images/13-leaflet/google-api-paste-annotated.png" alt="Paste in *your* Google Sheets API key to replace *our* key."  />
 <p class="caption">
-Figure 13.35: Paste in *your* Google Sheets API key to replace *our*
+Figure 13.36: Paste in *your* Google Sheets API key to replace *our*
 key.
 </p>
 
@@ -12437,7 +12450,7 @@ of map on other platforms, such as [Google My Maps as described in
 Chapter 8](mymaps.html), you’ll more about how the Leaflet code library
 works by doing it yourself.
 
-Figure <a href="#fig:leaflet-map-csv">13.36</a> shows a simple point map
+Figure <a href="#fig:leaflet-map-csv">13.37</a> shows a simple point map
 of some colleges and universities in Connecticut. But instead of
 individually creating markers in JavaScript using Leaflet’s `L.marker()`
 function, the point data is stored in a local CSV file (`data.csv`) that
@@ -12447,7 +12460,7 @@ markers are generated “on the fly.”"
 
 <img src="images/13-leaflet/leaflet-map-csv.png" alt="Explore the [interactive Leaflet point map with CSV data](https://handsondataviz.github.io/leaflet-map-csv/)."  />
 <p class="caption">
-Figure 13.36: Explore the [interactive Leaflet point map with CSV
+Figure 13.37: Explore the [interactive Leaflet point map with CSV
 data](https://handsondataviz.github.io/leaflet-map-csv/).
 </p>
 
@@ -12507,7 +12520,7 @@ Leaflet Heatmap Points with CSV Data
 Heatmaps turn individual points into hotspots or clusters, allowing
 viewers to explore spatial distributions of events, such as areas of
 high and low population density or incidents of crime. Figure
-<a href="#fig:leaflet-heatmap">13.37</a> shows an interactive heatmap of
+<a href="#fig:leaflet-heatmap">13.38</a> shows an interactive heatmap of
 bike theft locations in London between January and July 2020. The
 underlying data are coordinate locations for each reported bike theft,
 which the [`Leaflet.heat`](https://github.com/Leaflet/Leaflet.heat)
@@ -12517,7 +12530,7 @@ zoom in, areas are re-calculated into more distinct clusters.
 
 <img src="images/13-leaflet/leaflet-heatmap.png" alt="Explore the [interactive Leaflet Heatmap](https://handsondataviz.github.io/leaflet-heatmap/)."  />
 <p class="caption">
-Figure 13.37: Explore the [interactive Leaflet
+Figure 13.38: Explore the [interactive Leaflet
 Heatmap](https://handsondataviz.github.io/leaflet-heatmap/).
 </p>
 
@@ -12569,7 +12582,7 @@ Leaflet Searchable Point Map
 A searchable point map works best for showing multiple locations, where
 users can search by name or proximity to a location, or filter by
 category, with an optional list view. Figure
-<a href="#fig:searchable-map">13.38</a> shows a powerful Leaflet
+<a href="#fig:searchable-map">13.39</a> shows a powerful Leaflet
 template of a searchable and filterable point map, which draws from a
 CSV data file, developed by [Derek Eder](https://derekeder.com/) from
 DataMade in Chicago. This map allows you to show points of interest,
@@ -12579,7 +12592,7 @@ plenty of space to describe the purpose and content of your map.
 
 <img src="images/13-leaflet/searchable-map.png" alt="Explore the [interactive Searchable Map template](https://searchable-map-template-csv.netlify.app/)."  />
 <p class="caption">
-Figure 13.38: Explore the [interactive Searchable Map
+Figure 13.39: Explore the [interactive Searchable Map
 template](https://searchable-map-template-csv.netlify.app/).
 </p>
 
@@ -12653,7 +12666,7 @@ interface (API) that continuously pulls the most current information
 directly from an open-data repository, similar to the [Socrata Open Data
 map you learned about in Chapter 8](map-socrata.html). Leaflet maps can
 pull and display data from various open data repositories using APIs.
-Figure <a href="#fig:leaflet-open-data">13.39</a> shows an interactive
+Figure <a href="#fig:leaflet-open-data">13.40</a> shows an interactive
 map of North Dakota counties, colored by population density, with
 hospitals and emergency medical service (EMS) locations.
 
@@ -12670,7 +12683,7 @@ sources:
 
 <img src="images/13-leaflet/leaflet-open-data.png" alt="Explore the [interactive Leaflet Map with Open Data](https://handsondataviz.github.io/leaflet-maps-open-data-apis/index.html)."  />
 <p class="caption">
-Figure 13.39: Explore the [interactive Leaflet Map with Open
+Figure 13.40: Explore the [interactive Leaflet Map with Open
 Data](https://handsondataviz.github.io/leaflet-maps-open-data-apis/index.html).
 </p>
 
@@ -12684,7 +12697,7 @@ To adapt this template for your own project:
 1.  Visit the [GitHub
     repository](https://github.com/HandsOnDataViz/leaflet-maps-open-data-apis)
     that contains the code for the map in Figure
-    <a href="#fig:leaflet-open-data">13.39</a>, and press the *Use this
+    <a href="#fig:leaflet-open-data">13.40</a>, and press the *Use this
     template* button to copy the repo to your own GitHub account.
 2.  All data is pulled form the code inside the `<script>` tag of
     `index.html`. To pull data from Socrata or another JSON/GeoJSON

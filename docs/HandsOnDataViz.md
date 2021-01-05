@@ -13299,24 +13299,75 @@ Figure 14.9: Use *edit attributes* tool (under Cursor tool) to edit
 attributes of polygons, lines, and points.
 </p>
 
+#### Rename data fields
+
+Mapshaper’s most powerful tools are available through the *Console*
+button at the top, which opens a window where you can type commands for
+common map editing tasks.
+
+Sometimes map features (such as points, polylines, and polygons) contain
+*attributes* (data fields or columns) with long or confusing names. In
+the Mapshaper *Console*, you can easily change field names by entering
+the rename command in this generic format:
+
+`-rename-fields NewName=OldName`
+
+First, select the *Inspect Features* arrow symbol in Mapshaper and float
+your cursor over map features to view their field names, then click open
+the *Console* windows, as shown in Figure
+<a href="#fig:mapshaper-rename">14.10</a>. In this example, to change
+the longer field name (`STATE_TITLE`) to a shorter one (`name`), enter
+this command into the console:
+
+`-rename-fields name=STATE_TITLE`
+
+<img src="images/14-transform/mapshaper-rename-annotated.png" alt="Select the *Inspect Features* arrow to view field names, and rename them using the `-rename-fields` command in the console."  />
+<p class="caption">
+Figure 14.10: Select the *Inspect Features* arrow to view field names,
+and rename them using the `-rename-fields` command in the console.
+</p>
+
+#### Remove unwanted data fields
+
+Sometimes map features contain unwanted attributes (data fields or
+columns) that you want to remove, which you can easily do with the
+`-filter-fields` command in the Mapshaper console.
+
+For example, this command removes all fields except *town*:
+
+`-filter-fields town`
+
+If you want to leave more than one field, separate them by a comma, but
+without spaces, like this:
+
+`-filter-fields town,state`
+
+Warning: If you leave a space after a comma, you will get a *Command
+expects a single value* error.
+
 #### Simplify map boundaries to reduce file size
 
-You may not need precise and detailed map boundaries for data
-visualization projects where zoomed-out geographies are shown. Detailed
-boundaries are heavy, and may slow down your web maps.
+When you find GeoJSON maps on the web, they may contain detailed
+boundaries (especially around coastlines) that increase the file size,
+which may slow down the performance of your online web maps. Since you
+do not always need highly-detailed boundaries for data visualization
+projects with zoomed-out geographies, consider using Mapshaper to
+simplify your map boundaries. The result will be less precise, but
+faster to load in user’s browsers.
 
-Consider two maps of the contiguous US states (also known as *the lower
-48*, the term co-author Ilya learned in 2018 while traveling in Alaska),
-as shown in Figure <a href="#fig:mapshaper-simplify-demo">14.10</a>. The
-map in Figure <a href="#fig:mapshaper-simplify-demo">14.10</a>a is more
-detailed and is about 230 kilobytes, but the map in Figure
-<a href="#fig:mapshaper-simplify-demo">14.10</a>b is only 37 kilobytes,
+To understand how to simplify map boundaries, consider two maps of the
+contiguous US states (also known as *the lower 48*, the term co-author
+Ilya learned in 2018 while traveling in Alaska), as shown in Figure
+<a href="#fig:mapshaper-simplify-demo">14.11</a>. The map in Figure
+<a href="#fig:mapshaper-simplify-demo">14.11</a>a is more detailed and
+is about 230 kilobytes, but the map in Figure
+<a href="#fig:mapshaper-simplify-demo">14.11</a>b is only 37 kilobytes,
 or six times smaller! However, be careful not to simplify boundaries so
 much that you remove important features.
 
 <img src="images/14-transform/mapshaper-simplify-demo-annotated.png" alt="Consider simplifying geometries with Mapshaper to make your web maps faster."  />
 <p class="caption">
-Figure 14.10: Consider simplifying geometries with Mapshaper to make
+Figure 14.11: Consider simplifying geometries with Mapshaper to make
 your web maps faster.
 </p>
 
@@ -13331,7 +13382,7 @@ To simplify map boundaries in Mapshaper, follow the steps below.
     the default *Visvalingam / weighted area*. Click *Apply*.
 
 3.  You will see a slider with `100%` appear on top (Figure
-    <a href="#fig:mapshaper-simplify">14.11</a>), replacing the layer
+    <a href="#fig:mapshaper-simplify">14.12</a>), replacing the layer
     selection dropdown. Move the slider to the right and see the map
     simplify its shape as you go. Stop when you think the map looks
     appropriate (when the shapes are still recognizable).
@@ -13343,7 +13394,7 @@ To simplify map boundaries in Mapshaper, follow the steps below.
 
 <img src="images/14-transform/mapshaper-simplify.png" alt="Use Simplify & Repair tools in Mapshaper."  />
 <p class="caption">
-Figure 14.11: Use Simplify & Repair tools in Mapshaper.
+Figure 14.12: Use Simplify & Repair tools in Mapshaper.
 </p>
 
 Tip: You may find the US shape a bit unusual and vertically “shrunk”.
@@ -13352,16 +13403,14 @@ to Web Mercator, which is more common.
 
 #### Dissolve internal polygons to create an outline map
 
-Mapshaper’s most powerful tools are available through the *Console*,
-which allows you to type commands for common map editing tasks. One of
-such tasks is to create an outline map by removing the internal
-boundaries. For example, you can dissolve state boundaries of the US map
-in the previous exercise to get the outline of the country, like is
-shown in Figure <a href="#fig:mapshaper-dissolve">14.12</a>.
+A common map editing task is to create an outline map by removing the
+internal boundaries. For example, you can dissolve state boundaries of
+the US map in the previous exercise to get the outline of the country,
+as shown in Figure <a href="#fig:mapshaper-dissolve">14.13</a>.
 
 <img src="images/14-transform/mapshaper-dissolve.png" alt="Mapshaper lets you dissolve boundaries to create an outline shape."  />
 <p class="caption">
-Figure 14.12: Mapshaper lets you dissolve boundaries to create an
+Figure 14.13: Mapshaper lets you dissolve boundaries to create an
 outline shape.
 </p>
 
@@ -13377,13 +13426,14 @@ outline shape.
 
 #### Clip a map to match an outline layer
 
-The state of Connecticut consists of 8 counties, which in turn are
-divided into towns. There are a total of 169 towns in Connecticut.
-Imagine you are given a [boundary file of all 169
+Another common map editing task is to “clip” out a smaller portion of a
+larger map to obtain only the area you need. For example, the State of
+Connecticut consists of 8 counties, which in turn are divided into a
+total of 169 towns. Imagine you are given a [boundary file of all 169
 towns](data/ct-towns.geojson), and [the outline of Hartford
-county](data/hartfordcounty-outline.geojson). You need to “cut” the
-original towns map to only include those towns that fall within Hartford
-county.
+county](data/hartfordcounty-outline.geojson). You need to “clip” the
+original towns map to only include those towns that fall within a
+specific portion of Connecticut: Hartford County.
 
 Mapshaper allows you to do just that using one simple `-clip` command.
 
@@ -13408,33 +13458,14 @@ Mapshaper allows you to do just that using one simple `-clip` command.
 `-clip hartfordcounty-outline -filter-slivers`
 
 1.  Your Mapshaper state should look like the one pictured in Figure
-    <a href="#fig:mapshaper-clip">14.13</a>. You can now save the file
+    <a href="#fig:mapshaper-clip">14.14</a>. You can now save the file
     on your computer using the *Export* button.
 
 <img src="images/14-transform/mapshaper-clip-annotated.png" alt="When clipping, make sure your active layer is the one being clipped (with many features), not the clipping feature itself."  />
 <p class="caption">
-Figure 14.13: When clipping, make sure your active layer is the one
+Figure 14.14: When clipping, make sure your active layer is the one
 being clipped (with many features), not the clipping feature itself.
 </p>
-
-#### Remove unwanted data fields
-
-Sometimes map features, such as polygons, lines, and points, contain
-unwanted *attributes* (or fields, or columns) that you may want to
-remove. In the *Console*, type the `-filter-fields` editing command to
-remove unnecessary fields.
-
-For example, this command removes all fields except *town*:
-
-`-filter-fields town`
-
-If you want to leave more than one field, separate them by a comma, but
-without spaces, like this:
-
-`-filter-fields town,state`
-
-Warning: If you leave a space after a comma, you will get a *Command
-expects a single value* error.
 
 #### Join spreadsheet data with polygon map
 
@@ -13477,21 +13508,23 @@ attribute of the map file, and `town` column of the CSV file.
 
 2.  Use the *Cursor &gt; inspect attributes* tool to make sure you see
     CSV columns as fields of your polygons, as shown in Figure
-    <a href="#fig:mapshaper-join">14.14</a>.
+    <a href="#fig:mapshaper-join">14.15</a>.
 
 3.  You can now save the file to your computer by clicking the *Export*
     button.
 
 <img src="images/14-transform/mapshaper-join-annotated.png" alt="In Mapshaper, join spatial and CSV files using common keys, such as town names."  />
 <p class="caption">
-Figure 14.14: In Mapshaper, join spatial and CSV files using common
+Figure 14.15: In Mapshaper, join spatial and CSV files using common
 keys, such as town names.
 </p>
 
-Tip: To avoid confusion, it may be useful to re-name your CSV column
-that contains key values to match the key attribute name of your map. In
-our example, you would rename *town* column to *name* column in the CSV,
-and your command would end with `keys=name,name`.
+Tip: To avoid confusion, consider using the `-rename-fields` command on
+your CSV data that contains key values, in order to match the key
+attribute name of your map. In our example, first you would
+`-rename-fields name=town` to your CSV file. Renaming this CSV field to
+`name` avoids confusion in the second step, because your join command
+would end with `keys=name,name`.
 
 #### Count points in polygons with Mapshaper
 
@@ -13520,7 +13553,7 @@ matching, meaning many hospitals per state.
 
 1.  Use the *Cursor &gt; inspect attributes* tool to make sure polygons
     obtained a new field with the recorded count of points, as shown in
-    Figure <a href="#fig:mapshaper-count-points">14.15</a>.
+    Figure <a href="#fig:mapshaper-count-points">14.16</a>.
 
 2.  Save the new file using the *Export* button and chose the desired
     output format. In the section below, we will talk about what happens
@@ -13528,7 +13561,7 @@ matching, meaning many hospitals per state.
 
 <img src="images/14-transform/mapshaper-count-points.png" alt="Mapshaper's *-join* command can count points in polygons."  />
 <p class="caption">
-Figure 14.15: Mapshaper’s *-join* command can count points in polygons.
+Figure 14.16: Mapshaper’s *-join* command can count points in polygons.
 </p>
 
 #### More about joins
@@ -13601,13 +13634,13 @@ let’s extract a list of towns from it.
 
 5.  Pick a few towns, such as *West Hartford* and *Bloomfield*, and
     assign “Bloomfield-West Hartford” to their *merged* column, as shown
-    in Figure <a href="#fig:mapshaper-merge-csv">14.16</a>. You can stop
+    in Figure <a href="#fig:mapshaper-merge-csv">14.17</a>. You can stop
     here and move to the next step, or keep assigning district names to
     a few other neighboring towns.
 
 <img src="images/14-transform/mapshaper-merge-csv.png" alt="Create a two-column crosswalk of town names and their merged health districts." width="350" />
 <p class="caption">
-Figure 14.16: Create a two-column crosswalk of town names and their
+Figure 14.17: Create a two-column crosswalk of town names and their
 merged health districts.
 </p>
 
@@ -13638,11 +13671,11 @@ In our example, only Bloomfield and West Hartford are dissolved into a
 combined “Bloomfield-West Hartford” regional health district, with the
 shared boundary line between those towns becoming grayed out, and all of
 the other polygons remain the same. Figure
-<a href="#fig:mapshaper-merge">14.17</a> shows the final result.
+<a href="#fig:mapshaper-merge">14.18</a> shows the final result.
 
 <img src="images/14-transform/mapshaper-merge.png" alt="Merge polygons based on a predefined crosswalk."  />
 <p class="caption">
-Figure 14.17: Merge polygons based on a predefined crosswalk.
+Figure 14.18: Merge polygons based on a predefined crosswalk.
 </p>
 
 You can inspect attribute data of polygons using *Cursor &gt; inspect
@@ -13677,20 +13710,20 @@ is a compressed version of a KML file, a native format of Google Earth.
 
 3.  Right-click (or control-click) on the KMZ layer under the *Places*
     menu, and select *Save Place As…*, as shown in Figure
-    <a href="#fig:kmz-earth">14.18</a>.
+    <a href="#fig:kmz-earth">14.19</a>.
 
 <img src="images/14-transform/kmz-earth-annotated.png" alt="In Google Earth Pro, right-click the KMZ layer and choose *Save Place As*." width="400px" />
 <p class="caption">
-Figure 14.18: In Google Earth Pro, right-click the KMZ layer and choose
+Figure 14.19: In Google Earth Pro, right-click the KMZ layer and choose
 *Save Place As*.
 </p>
 
 1.  In the dropdown menu of *Save file…* window, choose *KML* format, as
-    shown in Figure <a href="#fig:kmz-save-as">14.19</a>.
+    shown in Figure <a href="#fig:kmz-save-as">14.20</a>.
 
 <img src="images/14-transform/kmz-save-as.png" alt="Save as KML, not KMZ." width="350px" />
 <p class="caption">
-Figure 14.19: Save as KML, not KMZ.
+Figure 14.20: Save as KML, not KMZ.
 </p>
 
 Alternatively, you can use any zip-utility to extract a KML file from
@@ -13738,7 +13771,7 @@ Mia Partlow](https://github.com/ericayhayes/georeferencingtutorial).[37]
 4.  Click to add a control point in the historic map window, then click
     to add a matching control point in the modern map window to align
     the two images, as shown in Figure
-    <a href="#fig:mapwarper">14.20</a>. Good control points are stable
+    <a href="#fig:mapwarper">14.21</a>. Good control points are stable
     locations or landmarks that have not changed during the time period
     between the two maps. For example, major cities, railroad tracks, or
     road intersections might be a good way to align maps from the early
@@ -13746,7 +13779,7 @@ Mia Partlow](https://github.com/ericayhayes/georeferencingtutorial).[37]
 
 <img src="images/14-transform/mapwarper.png" alt="Add control points to align stable locations or landmarks between the historical map (on the right) and the modern map (on the left)." width="750" />
 <p class="caption">
-Figure 14.20: Add control points to align stable locations or landmarks
+Figure 14.21: Add control points to align stable locations or landmarks
 between the historical map (on the right) and the modern map (on the
 left).
 </p>
@@ -13880,26 +13913,26 @@ other indicators, such as mortality and patient experience.
 
 Now, imagine you are given a task to create a choropleth map of total
 hospitals by US state. Instead of showing individual hospitals as points
-(as in Figuer <a href="#fig:pivot-address">14.21</a>a ), you want darker
+(as in Figuer <a href="#fig:pivot-address">14.22</a>a ), you want darker
 shades of blue to represent states with more hospitals (as in Figure
-<a href="#fig:pivot-address">14.21</a>b).
+<a href="#fig:pivot-address">14.22</a>b).
 
 or choropleth, maps instead of point maps.
 
 <img src="images/14-transform/pivot-address-annotated.png" alt="You can count addresses by state (or other area) to produce polygon,"  />
 <p class="caption">
-Figure 14.21: You can count addresses by state (or other area) to
+Figure 14.22: You can count addresses by state (or other area) to
 produce polygon,
 </p>
 
 First, save the database to your local machine by going to *Export &gt;
 Download &gt; CSV* of Socrata interface. Figure
-<a href="#fig:pivot-address-export">14.22</a> shows where you can find
+<a href="#fig:pivot-address-export">14.23</a> shows where you can find
 the Export button.
 
 <img src="images/14-transform/pivot-address-export-annotated.png" alt="In Socrata, you can export the entire dataset as a CSV."  />
 <p class="caption">
-Figure 14.22: In Socrata, you can export the entire dataset as a CSV.
+Figure 14.23: In Socrata, you can export the entire dataset as a CSV.
 </p>
 
 Next, open the file in your favorite spreadsheet tool. If you use Google
@@ -13913,7 +13946,7 @@ missing values—and choose *Summarize by: COUNTA*. Voila!
 
 <img src="images/14-transform/pivot-address-sheet-annotated.png" alt="Use pivot tables in any spreadsheet software to count addresses per area (such as state, county, of zip code)."  />
 <p class="caption">
-Figure 14.23: Use pivot tables in any spreadsheet software to count
+Figure 14.24: Use pivot tables in any spreadsheet software to count
 addresses per area (such as state, county, of zip code).
 </p>
 

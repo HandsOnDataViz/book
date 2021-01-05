@@ -406,20 +406,42 @@ Figure 14.9: Use <em>edit attributes</em> tool (under Cursor tool) to edit attri
 </p>
 </div>
 </div>
+<div id="rename-data-fields" class="section level4 unnumbered" number="">
+<h4>Rename data fields</h4>
+<p>Mapshaper’s most powerful tools are available through the <em>Console</em> button at the top, which opens a window where you can type commands for common map editing tasks.</p>
+<p>Sometimes map features (such as points, polylines, and polygons) contain <em>attributes</em> (data fields or columns) with long or confusing names. In the Mapshaper <em>Console</em>, you can easily change field names by entering the rename command in this generic format:</p>
+<p><code>-rename-fields NewName=OldName</code></p>
+<p>First, select the <em>Inspect Features</em> arrow symbol in Mapshaper and float your cursor over map features to view their field names, then click open the <em>Console</em> windows, as shown in Figure <a href="mapshaper.html#fig:mapshaper-rename">14.10</a>. In this example, to change the longer field name (<code>STATE_TITLE</code>) to a shorter one (<code>name</code>), enter this command into the console:</p>
+<p><code>-rename-fields name=STATE_TITLE</code></p>
+
+<div class="figure"><span id="fig:mapshaper-rename"></span>
+<img src="images/14-transform/mapshaper-rename-annotated.png" alt="Select the Inspect Features arrow to view field names, and rename them using the -rename-fields command in the console."  />
+<p class="caption">
+Figure 14.10: Select the <em>Inspect Features</em> arrow to view field names, and rename them using the <code>-rename-fields</code> command in the console.
+</p>
+</div>
+</div>
+<div id="remove-unwanted-data-fields" class="section level4 unnumbered" number="">
+<h4>Remove unwanted data fields</h4>
+<p>Sometimes map features contain unwanted attributes (data fields or columns) that you want to remove, which you can easily do with the <code>-filter-fields</code> command in the Mapshaper console.</p>
+<p>For example, this command removes all fields except <em>town</em>:</p>
+<p><code>-filter-fields town</code></p>
+<p>If you want to leave more than one field, separate them by a comma, but without spaces, like this:</p>
+<p><code>-filter-fields town,state</code></p>
+<p>Warning: If you leave a space after a comma, you will get a <em>Command expects a single value</em> error.</p>
+</div>
 <div id="simplify-map-boundaries-to-reduce-file-size" class="section level4 unnumbered" number="">
 <h4>Simplify map boundaries to reduce file size</h4>
-<p>You may not need precise and detailed map boundaries for
-data visualization projects where zoomed-out geographies are shown.
-Detailed boundaries are heavy, and may slow down your web maps.</p>
-<p>Consider two maps of the contiguous US states (also known as <em>the lower 48</em>,
-the term co-author Ilya learned in 2018 while traveling in Alaska), as shown in Figure <a href="mapshaper.html#fig:mapshaper-simplify-demo">14.10</a>.
-The map in Figure <a href="mapshaper.html#fig:mapshaper-simplify-demo">14.10</a>a is more detailed and is about 230 kilobytes, but the map in Figure <a href="mapshaper.html#fig:mapshaper-simplify-demo">14.10</a>b
+<p>When you find GeoJSON maps on the web, they may contain detailed boundaries (especially around coastlines) that increase the file size, which may slow down the performance of your online web maps. Since you do not always need highly-detailed boundaries for data visualization projects with zoomed-out geographies, consider using Mapshaper to simplify your map boundaries. The result will be less precise, but faster to load in user’s browsers.</p>
+<p>To understand how to simplify map boundaries, consider two maps of the contiguous US states (also known as <em>the lower 48</em>,
+the term co-author Ilya learned in 2018 while traveling in Alaska), as shown in Figure <a href="mapshaper.html#fig:mapshaper-simplify-demo">14.11</a>.
+The map in Figure <a href="mapshaper.html#fig:mapshaper-simplify-demo">14.11</a>a is more detailed and is about 230 kilobytes, but the map in Figure <a href="mapshaper.html#fig:mapshaper-simplify-demo">14.11</a>b
 is only 37 kilobytes, or six times smaller! However, be careful not to simplify boundaries so much that you remove important features.</p>
 
 <div class="figure"><span id="fig:mapshaper-simplify-demo"></span>
 <img src="images/14-transform/mapshaper-simplify-demo-annotated.png" alt="Consider simplifying geometries with Mapshaper to make your web maps faster."  />
 <p class="caption">
-Figure 14.10: Consider simplifying geometries with Mapshaper to make your web maps faster.
+Figure 14.11: Consider simplifying geometries with Mapshaper to make your web maps faster.
 </p>
 </div>
 <p>To simplify map boundaries in Mapshaper, follow the steps below.</p>
@@ -428,7 +450,7 @@ Figure 14.10: Consider simplifying geometries with Mapshaper to make your web ma
 <li><p>Click the <em>Simplify</em> button in the upper-right corner. The Simplification menu will appear,
 where you can choose one of three methods. We recommend checking <em>prevent shape removal</em>, and leaving
 the default <em>Visvalingam / weighted area</em>. Click <em>Apply</em>.</p></li>
-<li><p>You will see a slider with <code>100%</code> appear on top (Figure <a href="mapshaper.html#fig:mapshaper-simplify">14.11</a>), replacing the layer selection dropdown.
+<li><p>You will see a slider with <code>100%</code> appear on top (Figure <a href="mapshaper.html#fig:mapshaper-simplify">14.12</a>), replacing the layer selection dropdown.
 Move the slider to the right and see the map simplify its shape as you go. Stop when you think
 the map looks appropriate (when the shapes are still recognizable).</p></li>
 <li><p>Mapshaper may suggest to repair line intersections in the upper-left corner. Click <em>Repair</em>.</p></li>
@@ -438,7 +460,7 @@ the map looks appropriate (when the shapes are still recognizable).</p></li>
 <div class="figure"><span id="fig:mapshaper-simplify"></span>
 <img src="images/14-transform/mapshaper-simplify.png" alt="Use Simplify &amp; Repair tools in Mapshaper."  />
 <p class="caption">
-Figure 14.11: Use Simplify &amp; Repair tools in Mapshaper.
+Figure 14.12: Use Simplify &amp; Repair tools in Mapshaper.
 </p>
 </div>
 <p>Tip: You may find the US shape a bit unusual and vertically “shrunk”.
@@ -447,15 +469,14 @@ which is more common.</p>
 </div>
 <div id="dissolve-internal-polygons-to-create-an-outline-map" class="section level4 unnumbered" number="">
 <h4>Dissolve internal polygons to create an outline map</h4>
-<p>Mapshaper’s most powerful tools are available through the <em>Console</em>, which allows you to type commands for common map editing tasks.
-One of such tasks is to create an outline map by removing the internal boundaries. For example, you can dissolve
-state boundaries of the US map in the previous exercise to get the outline of the country, like is shown in
-Figure <a href="mapshaper.html#fig:mapshaper-dissolve">14.12</a>.</p>
+<p>A common map editing task is to create an outline map by removing the internal boundaries. For example, you can dissolve
+state boundaries of the US map in the previous exercise to get the outline of the country, as shown in
+Figure <a href="mapshaper.html#fig:mapshaper-dissolve">14.13</a>.</p>
 
 <div class="figure"><span id="fig:mapshaper-dissolve"></span>
 <img src="images/14-transform/mapshaper-dissolve.png" alt="Mapshaper lets you dissolve boundaries to create an outline shape."  />
 <p class="caption">
-Figure 14.12: Mapshaper lets you dissolve boundaries to create an outline shape.
+Figure 14.13: Mapshaper lets you dissolve boundaries to create an outline shape.
 </p>
 </div>
 <p>Click on <em>Console</em>, which opens a window to type in commands. Enter the <em>dissolve</em> command exactly as shown below, then press the <em>Return</em> or <em>Enter</em> key.</p>
@@ -465,9 +486,9 @@ You can now export your outline shape.</p>
 </div>
 <div id="clip-a-map-to-match-an-outline-layer" class="section level4 unnumbered" number="">
 <h4>Clip a map to match an outline layer</h4>
-<p>The state of Connecticut consists of 8 counties, which in turn are divided into towns. There are a total of 169 towns in Connecticut.
+<p>Another common map editing task is to “clip” out a smaller portion of a larger map to obtain only the area you need. For example, the State of Connecticut consists of 8 counties, which in turn are divided into a total of 169 towns.
 Imagine you are given a <a href="data/ct-towns.geojson">boundary file of all 169 towns</a>, and <a href="data/hartfordcounty-outline.geojson">the outline of Hartford county</a>.
-You need to “cut” the original towns map to only include those towns that fall within Hartford county.</p>
+You need to “clip” the original towns map to only include those towns that fall within a specific portion of Connecticut: Hartford County.</p>
 <p>Mapshaper allows you to do just that using one simple <code>-clip</code> command.</p>
 <ol style="list-style-type: decimal">
 <li><p>Import two boundary files into Mapshaper. One is the larger one that is being clipped (if you use sample files, <em>ct-towns</em>),
@@ -482,25 +503,15 @@ If that is the case, use a related command to remove them, like this:</li>
 </ol>
 <p><code>-clip hartfordcounty-outline -filter-slivers</code></p>
 <ol start="5" style="list-style-type: decimal">
-<li>Your Mapshaper state should look like the one pictured in Figure <a href="mapshaper.html#fig:mapshaper-clip">14.13</a>. You can now save the file on your computer using the <em>Export</em> button.</li>
+<li>Your Mapshaper state should look like the one pictured in Figure <a href="mapshaper.html#fig:mapshaper-clip">14.14</a>. You can now save the file on your computer using the <em>Export</em> button.</li>
 </ol>
 
 <div class="figure"><span id="fig:mapshaper-clip"></span>
 <img src="images/14-transform/mapshaper-clip-annotated.png" alt="When clipping, make sure your active layer is the one being clipped (with many features), not the clipping feature itself."  />
 <p class="caption">
-Figure 14.13: When clipping, make sure your active layer is the one being clipped (with many features), not the clipping feature itself.
+Figure 14.14: When clipping, make sure your active layer is the one being clipped (with many features), not the clipping feature itself.
 </p>
 </div>
-</div>
-<div id="remove-unwanted-data-fields" class="section level4 unnumbered" number="">
-<h4>Remove unwanted data fields</h4>
-<p>Sometimes map features, such as polygons, lines, and points, contain unwanted <em>attributes</em> (or fields, or columns) that you may want to remove.
-In the <em>Console</em>, type the <code>-filter-fields</code> editing command to remove unnecessary fields.</p>
-<p>For example, this command removes all fields except <em>town</em>:</p>
-<p><code>-filter-fields town</code></p>
-<p>If you want to leave more than one field, separate them by a comma, but without spaces, like this:</p>
-<p><code>-filter-fields town,state</code></p>
-<p>Warning: If you leave a space after a comma, you will get a <em>Command expects a single value</em> error.</p>
 </div>
 <div id="join-spreadsheet-data-with-polygon-map" class="section level4 unnumbered" number="">
 <h4>Join spreadsheet data with polygon map</h4>
@@ -524,18 +535,18 @@ For our sample data, these would be town names which are stored in <code>name</c
 of the CSV file.</p>
 <ol start="5" style="list-style-type: decimal">
 <li><p>You will see a message in the console notifying you if join was performed successfully, or if Mapshaper encountered any errors.</p></li>
-<li><p>Use the <em>Cursor &gt; inspect attributes</em> tool to make sure you see CSV columns as fields of your polygons, as shown in Figure <a href="mapshaper.html#fig:mapshaper-join">14.14</a>.</p></li>
+<li><p>Use the <em>Cursor &gt; inspect attributes</em> tool to make sure you see CSV columns as fields of your polygons, as shown in Figure <a href="mapshaper.html#fig:mapshaper-join">14.15</a>.</p></li>
 <li><p>You can now save the file to your computer by clicking the <em>Export</em> button.</p></li>
 </ol>
 
 <div class="figure"><span id="fig:mapshaper-join"></span>
 <img src="images/14-transform/mapshaper-join-annotated.png" alt="In Mapshaper, join spatial and CSV files using common keys, such as town names."  />
 <p class="caption">
-Figure 14.14: In Mapshaper, join spatial and CSV files using common keys, such as town names.
+Figure 14.15: In Mapshaper, join spatial and CSV files using common keys, such as town names.
 </p>
 </div>
-<p>Tip: To avoid confusion, it may be useful to re-name your CSV column that contains key values to match the key attribute name of your map.
-In our example, you would rename <em>town</em> column to <em>name</em> column in the CSV, and your command would end with <code>keys=name,name</code>.</p>
+<p>Tip: To avoid confusion, consider using the <code>-rename-fields</code> command on your CSV data that contains key values, in order to match the key attribute name of your map.
+In our example, first you would <code>-rename-fields name=town</code> to your CSV file. Renaming this CSV field to <code>name</code> avoids confusion in the second step, because your join command would end with <code>keys=name,name</code>.</p>
 </div>
 <div id="count-points-in-polygons-with-mapshaper" class="section level4 unnumbered" number="">
 <h4>Count points in polygons with Mapshaper</h4>
@@ -550,7 +561,7 @@ In our example, you would rename <em>town</em> column to <em>name</em> column in
 The <code>fields=</code> part tells Mapshaper to not copy any fields from the points, because in our case we are performing many-to-one matching, meaning many hospitals per state.</p>
 <ol start="4" style="list-style-type: decimal">
 <li><p>Use the <em>Cursor &gt; inspect attributes</em> tool to make sure polygons obtained a new field with the recorded count of points,
-as shown in Figure <a href="mapshaper.html#fig:mapshaper-count-points">14.15</a>.</p></li>
+as shown in Figure <a href="mapshaper.html#fig:mapshaper-count-points">14.16</a>.</p></li>
 <li><p>Save the new file using the <em>Export</em> button and chose the desired output format. In the section below,
 we will talk about what happens to objects that don’t join.</p></li>
 </ol>
@@ -558,7 +569,7 @@ we will talk about what happens to objects that don’t join.</p></li>
 <div class="figure"><span id="fig:mapshaper-count-points"></span>
 <img src="images/14-transform/mapshaper-count-points.png" alt="Mapshaper’s -join command can count points in polygons."  />
 <p class="caption">
-Figure 14.15: Mapshaper’s <em>-join</em> command can count points in polygons.
+Figure 14.16: Mapshaper’s <em>-join</em> command can count points in polygons.
 </p>
 </div>
 </div>
@@ -594,13 +605,13 @@ but instead a GeoJSON file with town boundaries, let’s extract a list of towns
 file with a <em>name</em> column that lists 169 towns.</p></li>
 <li><p>In your spreadsheet, create a second column titled <em>merged</em> and copy-paste values from the first <em>name</em> column. At this point your spreadsheet contains two columns with the same values.</p></li>
 <li><p>Pick a few towns, such as <em>West Hartford</em> and <em>Bloomfield</em>, and assign “Bloomfield-West Hartford”
-to their <em>merged</em> column, as shown in Figure <a href="mapshaper.html#fig:mapshaper-merge-csv">14.16</a>. You can stop here and move to the next step, or keep assigning district names to a few other neighboring towns.</p></li>
+to their <em>merged</em> column, as shown in Figure <a href="mapshaper.html#fig:mapshaper-merge-csv">14.17</a>. You can stop here and move to the next step, or keep assigning district names to a few other neighboring towns.</p></li>
 </ol>
 
 <div class="figure"><span id="fig:mapshaper-merge-csv"></span>
 <img src="images/14-transform/mapshaper-merge-csv.png" alt="Create a two-column crosswalk of town names and their merged health districts." width="350" />
 <p class="caption">
-Figure 14.16: Create a two-column crosswalk of town names and their merged health districts.
+Figure 14.17: Create a two-column crosswalk of town names and their merged health districts.
 </p>
 </div>
 <ol start="6" style="list-style-type: decimal">
@@ -616,12 +627,12 @@ select <em>ct-towns</em> to get back to your map.</p></li>
 <p>to dissolve polygons of towns according to the <em>merged</em> column of the CSV file.</p>
 <p>In our example, only Bloomfield and West Hartford are dissolved into a combined
 “Bloomfield-West Hartford” regional health district, with the shared boundary line between those towns becoming grayed out,
-and all of the other polygons remain the same. Figure <a href="mapshaper.html#fig:mapshaper-merge">14.17</a> shows the final result.</p>
+and all of the other polygons remain the same. Figure <a href="mapshaper.html#fig:mapshaper-merge">14.18</a> shows the final result.</p>
 
 <div class="figure"><span id="fig:mapshaper-merge"></span>
 <img src="images/14-transform/mapshaper-merge.png" alt="Merge polygons based on a predefined crosswalk."  />
 <p class="caption">
-Figure 14.17: Merge polygons based on a predefined crosswalk.
+Figure 14.18: Merge polygons based on a predefined crosswalk.
 </p>
 </div>
 <p>You can inspect attribute data of polygons using <em>Cursor &gt; inspect attributes</em> tool, and save the resulting file

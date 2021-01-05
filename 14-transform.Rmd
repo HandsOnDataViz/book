@@ -292,13 +292,42 @@ choosing the desired file format.
 knitr::include_graphics("images/14-transform/mapshaper-edit-annotated.png")
 ```
 
+#### Rename data fields {-}
+Mapshaper's most powerful tools are available through the *Console* button at the top, which opens a window where you can type commands for common map editing tasks.
+
+Sometimes map features (such as points, polylines, and polygons) contain *attributes* (data fields or columns) with long or confusing names. In the Mapshaper *Console*, you can easily change field names by entering the rename command in this generic format:
+
+`-rename-fields NewName=OldName`
+
+First, select the *Inspect Features* arrow symbol in Mapshaper and float your cursor over map features to view their field names, then click open the *Console* windows, as shown in Figure \@ref(fig:mapshaper-rename). In this example, to change the longer field name (`STATE_TITLE`) to a shorter one (`name`), enter this command into the console:
+
+`-rename-fields name=STATE_TITLE`
+
+(ref:mapshaper-rename) Select the *Inspect Features* arrow to view field names, and rename them using the `-rename-fields` command in the console.
+
+```{r mapshaper-rename, fig.cap="(ref:mapshaper-rename)"}
+knitr::include_graphics("images/14-transform/mapshaper-rename-annotated.png")
+```
+
+#### Remove unwanted data fields {-}
+
+Sometimes map features contain unwanted attributes (data fields or columns) that you want to remove, which you can easily do with the `-filter-fields` command in the Mapshaper console.
+
+For example, this command removes all fields except *town*:
+
+`-filter-fields town`
+
+If you want to leave more than one field, separate them by a comma, but without spaces, like this:
+
+`-filter-fields town,state`
+
+Warning: If you leave a space after a comma, you will get a *Command expects a single value* error.
+
 #### Simplify map boundaries to reduce file size {-}
 
-You may not need precise and detailed map boundaries for
-data visualization projects where zoomed-out geographies are shown.
-Detailed boundaries are heavy, and may slow down your web maps.
+When you find GeoJSON maps on the web, they may contain detailed boundaries (especially around coastlines) that increase the file size, which may slow down the performance of your online web maps. Since you do not always need highly-detailed boundaries for data visualization projects with zoomed-out geographies, consider using Mapshaper to simplify your map boundaries. The result will be less precise, but faster to load in user's browsers.
 
-Consider two maps of the contiguous US states (also known as *the lower 48*,
+To understand how to simplify map boundaries, consider two maps of the contiguous US states (also known as *the lower 48*,
 the term co-author Ilya learned in 2018 while traveling in Alaska), as shown in Figure \@ref(fig:mapshaper-simplify-demo).
 The map in Figure \@ref(fig:mapshaper-simplify-demo)a is more detailed and is about 230 kilobytes, but the map in Figure \@ref(fig:mapshaper-simplify-demo)b
 is only 37 kilobytes, or six times smaller! However, be careful not to simplify boundaries so much that you remove important features.
@@ -337,9 +366,8 @@ which is more common.
 
 #### Dissolve internal polygons to create an outline map {-}
 
-Mapshaper's most powerful tools are available through the *Console*, which allows you to type commands for common map editing tasks.
-One of such tasks is to create an outline map by removing the internal boundaries. For example, you can dissolve
-state boundaries of the US map in the previous exercise to get the outline of the country, like is shown in
+A common map editing task is to create an outline map by removing the internal boundaries. For example, you can dissolve
+state boundaries of the US map in the previous exercise to get the outline of the country, as shown in
 Figure \@ref(fig:mapshaper-dissolve).
 
 (ref:mapshaper-dissolve) Mapshaper lets you dissolve boundaries to create an outline shape.
@@ -357,9 +385,9 @@ You can now export your outline shape.
 
 #### Clip a map to match an outline layer {-}
 
-The state of Connecticut consists of 8 counties, which in turn are divided into towns. There are a total of 169 towns in Connecticut.
+Another common map editing task is to "clip" out a smaller portion of a larger map to obtain only the area you need. For example, the State of Connecticut consists of 8 counties, which in turn are divided into a total of 169 towns.
 Imagine you are given a [boundary file of all 169 towns](data/ct-towns.geojson), and [the outline of Hartford county](data/hartfordcounty-outline.geojson).
-You need to "cut" the original towns map to only include those towns that fall within Hartford county.
+You need to "clip" the original towns map to only include those towns that fall within a specific portion of Connecticut: Hartford County.
 
 Mapshaper allows you to do just that using one simple `-clip` command.
 
@@ -384,21 +412,6 @@ If that is the case, use a related command to remove them, like this:
 ```{r mapshaper-clip, fig.cap="(ref:mapshaper-clip)"}
 knitr::include_graphics("images/14-transform/mapshaper-clip-annotated.png")
 ```
-
-#### Remove unwanted data fields {-}
-
-Sometimes map features, such as polygons, lines, and points, contain unwanted *attributes* (or fields, or columns) that you may want to remove.
-In the *Console*, type the `-filter-fields` editing command to remove unnecessary fields.
-
-For example, this command removes all fields except *town*:
-
-`-filter-fields town`
-
-If you want to leave more than one field, separate them by a comma, but without spaces, like this:
-
-`-filter-fields town,state`
-
-Warning: If you leave a space after a comma, you will get a *Command expects a single value* error.
 
 #### Join spreadsheet data with polygon map {-}
 
@@ -438,8 +451,8 @@ of the CSV file.
 knitr::include_graphics("images/14-transform/mapshaper-join-annotated.png")
 ```
 
-Tip: To avoid confusion, it may be useful to re-name your CSV column that contains key values to match the key attribute name of your map.
-In our example, you would rename *town* column to *name* column in the CSV, and your command would end with `keys=name,name`.
+Tip: To avoid confusion, consider using the `-rename-fields` command on your CSV data that contains key values, in order to match the key attribute name of your map.
+In our example, first you would `-rename-fields name=town` to your CSV file. Renaming this CSV field to `name` avoids confusion in the second step, because your join command would end with `keys=name,name`.
 
 
 #### Count points in polygons with Mapshaper {-}

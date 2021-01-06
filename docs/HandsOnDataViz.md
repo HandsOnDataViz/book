@@ -6,7 +6,7 @@ Preface
 ![Book cover: Read about the [hoatzin “reptile
 bird”](https://en.wikipedia.org/wiki/Hoatzin)](images/0-preface/cover-400wide.jpg)
 
-**This BOOK-IN-PROGRESS was last updated on: 05 Jan 2021**.
+**This BOOK-IN-PROGRESS was last updated on: 06 Jan 2021**.
 
 Read the open-access web edition at
 <a href="https://HandsOnDataViz.org" class="uri">https://HandsOnDataViz.org</a>,
@@ -11285,10 +11285,14 @@ built on flexible open-source software that’s written primarily in
 JavaScript, a very common coding language for the web, so you can
 customize it further if you have skills or support from a developer.
 
-<img src="images/13-leaflet/lmwgs-map.png" alt="Explore the [interactive Leaflet Maps with Google Sheets](https://handsondataviz.github.io/leaflet-maps-with-google-sheets/)."  />
+<img src="images/13-leaflet/lmwgs-map.png" alt="Explore the [interactive Leaflet Maps with Google Sheets](https://handsondataviz.github.io/leaflet-maps-with-google-sheets/). This demo version shows the East Coast Greenway, a walking-biking route that connects cities between Maine and Florida. Over one-third of the 3,000-mile route is on traffic-free trails as of 2021. To learn more, see the [official Greenway map](https://www.greenway.org/route-map)."  />
 <p class="caption">
 Figure 13.1: Explore the [interactive Leaflet Maps with Google
 Sheets](https://handsondataviz.github.io/leaflet-maps-with-google-sheets/).
+This demo version shows the East Coast Greenway, a walking-biking route
+that connects cities between Maine and Florida. Over one-third of the
+3,000-mile route is on traffic-free trails as of 2021. To learn more,
+see the [official Greenway map](https://www.greenway.org/route-map).
 </p>
 
 <img src="images/13-leaflet/lmwgs-sheet.png" alt="View the [online Google Sheet template](https://docs.google.com/spreadsheets/d/1ZxvU8eGyuN9M8GxTU9acKVJv70iC3px_m3EVFsOHN9g) that feeds data into the Leaflet Maps demo above."  />
@@ -11776,10 +11780,12 @@ is built on flexible open-source software that’s written primarily in
 JavaScript, a very common coding language for the web, so you can
 customize it further if you have skills or support from a developer.
 
-<img src="images/13-leaflet/storymap-demo.png" alt="Explore the [interactive Leaflet Storymaps with Google Sheets](https://handsondataviz.github.io/leaflet-storymaps-with-google-sheets/)."  />
+<img src="images/13-leaflet/storymap-demo.png" alt="Explore the [interactive Leaflet Storymaps with Google Sheets](https://handsondataviz.github.io/leaflet-storymaps-with-google-sheets/). This demo version illustrates features of the code template while telling a brief story about the US National Mall in Washington, DC."  />
 <p class="caption">
 Figure 13.15: Explore the [interactive Leaflet Storymaps with Google
 Sheets](https://handsondataviz.github.io/leaflet-storymaps-with-google-sheets/).
+This demo version illustrates features of the code template while
+telling a brief story about the US National Mall in Washington, DC.
 </p>
 
 <img src="images/13-leaflet/storymap-sheet.png" alt="View the [online Google Sheet template](https://docs.google.com/spreadsheets/d/1AO6XHL_0JafWZF4KEejkdDNqfuZWUk3SlNlQ6MjlRFM/) that feeds data into the Leaflet Storymaps demo above."  />

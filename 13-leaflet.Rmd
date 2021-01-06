@@ -286,7 +286,7 @@ The Leaflet Storymaps code template is designed to show a point-by-point guided 
 (ref:storymap-demo) Explore the [interactive Leaflet Storymaps with Google Sheets](https://handsondataviz.github.io/leaflet-storymaps-with-google-sheets/).
 
 ```{r storymap-demo, fig.cap="(ref:storymap-demo)"}
-if(knitr::is_html_output(excludes="markdown")) knitr::include_url("images/13-leaflet/storymap-demo.gif", height = "475px") else knitr::include_graphics("images/13-leaflet/storymap-demo.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("images/13-leaflet/storymap-demo.gif", height = "400px") else knitr::include_graphics("images/13-leaflet/storymap-demo.png")
 ```
 
 (ref:storymap-sheet) View the [online Google Sheet template](https://docs.google.com/spreadsheets/d/1AO6XHL_0JafWZF4KEejkdDNqfuZWUk3SlNlQ6MjlRFM/) that feeds data into the Leaflet Storymaps demo above.
@@ -467,16 +467,15 @@ To add a historical map overlay to one or more story map chapters, it must be *g
 
 (ref:storymap-overlay) Enter map tile link and transparency level into the Google Sheet template (on left) to display it in one or more storymap chapters (on right).
 
-```{r storymap-overlay, fig.cap="(ref:storymap-overlay)"}
+```{r storymap-overlay, out.width=600, fig.cap="(ref:storymap-overlay)"}
  knitr::include_graphics("images/13-leaflet/storymap-overlay.png")
 ```
 
 To add a visible path, geographic boundaries, or a filled choropleth map to your story, consider adding a GeoJSON data layer to one or more chapters. Read about [GeoJSON and geospatial data formats](geojson.html) in Chapter 14, where you can also learn [how to find existing GeoJSON boundary files](find-geojson.html), or draw or edit your own geodata with the [GeoJson.io tool](geojsonio.html) or [Mapshaper tool](mapshaper.html). We recommend that you name your GeoJSON files in lower-case characters with no spaces. Upload the file to your GitHub repository by opening the `geojson` folder and selecting *Add file - Upload files*. In your Google Sheet template, enter the pathname in the *GeoJSON Overlay* column in this format: `geojson/your-file-name.geojson`, as shown in Figure \@ref(fig:storymap-geojson).
 
-(ref:storymap-geojson) Enter the pathname in the *GeoJSON Overlay* column (on left)
- to display it in one or more storymap chapters (on right).
+(ref:storymap-geojson) Enter the pathname in the *GeoJSON Overlay* column (on left) to display it in one or more storymap chapters (on right).
 
-```{r storymap-geojson, fig.cap="(ref:storymap-geojson)"}
+```{r storymap-geojson, out.width=600, fig.cap="(ref:storymap-geojson)"}
  knitr::include_graphics("images/13-leaflet/storymap-geojson.png")
 ```
 

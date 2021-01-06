@@ -345,7 +345,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>The Leaflet Storymaps code template is designed to show a point-by-point guided tour, with a scrolling narrative to display text, images, audio, video, and scanned map backgrounds, as shown in Figure <a href="leaflet-storymaps-with-google-sheets.html#fig:storymap-demo">13.15</a>. You enter all of your map data into a linked Google Sheet (or CSV file) or upload it into a GitHub repository, as shown in Figure <a href="leaflet-storymaps-with-google-sheets.html#fig:storymap-sheet">13.16</a>. In addition, the Leaflet Storymaps template allows you to customize the appearance of your data, and to add more layers, such as historical maps and geographic boundaries, which you’ll learn how to prepare in <a href="transform.html">Chapter 14: Transform Your Map Data</a>. Furthermore, the storymap design is responsive, so that it appears top-and-bottom on smaller screens (where width is less than 768 pixels), and automatically switches to side-by-side on larger ones. Finally, the Leaflet template is built on flexible open-source software that’s written primarily in JavaScript, a very common coding language for the web, so you can customize it further if you have skills or support from a developer.</p>
 
 <div class="figure"><span id="fig:storymap-demo"></span>
-<iframe src="images/13-leaflet/storymap-demo.gif" width="672" height="475px">
+<iframe src="images/13-leaflet/storymap-demo.gif" width="672" height="400px">
 </iframe>
 <p class="caption">
 Figure 13.15: Explore the <a href="https://handsondataviz.github.io/leaflet-storymaps-with-google-sheets/">interactive Leaflet Storymaps with Google Sheets</a>.
@@ -555,18 +555,17 @@ Figure 13.23: Select <em>Add-ons–Geocoding by SmartMonkey–Geocode Details</e
 </ul>
 
 <div class="figure"><span id="fig:storymap-overlay"></span>
-<img src="images/13-leaflet/storymap-overlay.png" alt="Enter map tile link and transparency level into the Google Sheet template (on left) to display it in one or more storymap chapters (on right)."  />
+<img src="images/13-leaflet/storymap-overlay.png" alt="Enter map tile link and transparency level into the Google Sheet template (on left) to display it in one or more storymap chapters (on right)." width="600" />
 <p class="caption">
 Figure 13.24: Enter map tile link and transparency level into the Google Sheet template (on left) to display it in one or more storymap chapters (on right).
 </p>
 </div>
 <p>To add a visible path, geographic boundaries, or a filled choropleth map to your story, consider adding a GeoJSON data layer to one or more chapters. Read about <a href="geojson.html">GeoJSON and geospatial data formats</a> in Chapter 14, where you can also learn <a href="find-geojson.html">how to find existing GeoJSON boundary files</a>, or draw or edit your own geodata with the <a href="geojsonio.html">GeoJson.io tool</a> or <a href="mapshaper.html">Mapshaper tool</a>. We recommend that you name your GeoJSON files in lower-case characters with no spaces. Upload the file to your GitHub repository by opening the <code>geojson</code> folder and selecting <em>Add file - Upload files</em>. In your Google Sheet template, enter the pathname in the <em>GeoJSON Overlay</em> column in this format: <code>geojson/your-file-name.geojson</code>, as shown in Figure <a href="leaflet-storymaps-with-google-sheets.html#fig:storymap-geojson">13.25</a>.</p>
-<p>(ref:storymap-geojson) Enter the pathname in the <em>GeoJSON Overlay</em> column (on left)
-to display it in one or more storymap chapters (on right).</p>
+
 <div class="figure"><span id="fig:storymap-geojson"></span>
-<img src="images/13-leaflet/storymap-geojson.png" alt="(ref:storymap-geojson)"  />
+<img src="images/13-leaflet/storymap-geojson.png" alt="Enter the pathname in the GeoJSON Overlay column (on left) to display it in one or more storymap chapters (on right)." width="600" />
 <p class="caption">
-Figure 13.25: (ref:storymap-geojson)
+Figure 13.25: Enter the pathname in the <em>GeoJSON Overlay</em> column (on left) to display it in one or more storymap chapters (on right).
 </p>
 </div>
 <p>When you create or edit GeoJSON data with a tool like <a href="geojsonio.html">GeoJson.io</a>, you can directly edit its feature properties. If you wish to display the same properties you assigned to your GeoJSON file in your storymap, we recommend naming them as follows:</p>

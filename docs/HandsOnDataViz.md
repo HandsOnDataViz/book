@@ -12154,7 +12154,7 @@ tab of your Google Sheet template, as shown in Figure
 -   Overlay Transparency: Enter a number from 0 (transparent) to 1
     (opaque). The default is 0.7.
 
-<img src="images/13-leaflet/storymap-overlay.png" alt="Enter map tile link and transparency level into the Google Sheet template (on left) to display it in one or more storymap chapters (on right)."  />
+<img src="images/13-leaflet/storymap-overlay.png" alt="Enter map tile link and transparency level into the Google Sheet template (on left) to display it in one or more storymap chapters (on right)." width="600" />
 <p class="caption">
 Figure 13.24: Enter map tile link and transparency level into the Google
 Sheet template (on left) to display it in one or more storymap chapters
@@ -12175,12 +12175,10 @@ Upload files*. In your Google Sheet template, enter the pathname in the
 `geojson/your-file-name.geojson`, as shown in Figure
 <a href="#fig:storymap-geojson">13.25</a>.
 
-to display it in one or more storymap chapters (on right).
-
-<img src="images/13-leaflet/storymap-geojson.png" alt="Enter the pathname in the *GeoJSON Overlay* column (on left)"  />
+<img src="images/13-leaflet/storymap-geojson.png" alt="Enter the pathname in the *GeoJSON Overlay* column (on left) to display it in one or more storymap chapters (on right)." width="600" />
 <p class="caption">
 Figure 13.25: Enter the pathname in the *GeoJSON Overlay* column (on
-left)
+left) to display it in one or more storymap chapters (on right).
 </p>
 
 When you create or edit GeoJSON data with a tool like

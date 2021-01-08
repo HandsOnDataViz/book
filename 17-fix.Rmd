@@ -59,40 +59,52 @@ If you encounter any issues when using your favorite browser with digital tools 
 - Command + Shift + R (Chrome or Firefox for Mac)
 - Option + Command + R (Safari for Mac)
 
-## Diagnose with browser developer tools (#fix-developer-tools)
+## Diagnose with browser developer tools {#fix-developer-tools}
 
-We recommend learning how to use your browser to diagnose other types of issues discussed later in this chapter, such as [problems with iframes](fix-embed.html) or [code templates](fix-code.html). Most browsers contain *developer tools* that allow you to view the source code of a web page and spot any errors that it flags. Even if you're not a software developer, learning how to open your browser's developer tools allows you to peek under the hood and make a more informed guess about what's not working.
+We recommend learning how to use your browser to diagnose other types of issues discussed later in this chapter, such as [problems with iframes](fix-embed.html) or [code templates](fix-code.html). Most browsers contain *developer tools* that allow you to view the source code of a web page and spot any errors that it flags. Even if you're not a software developer, learning how to open your browser's developer tools allows you to peek under the hood and make a more informed guess about what's not working. To open developer tools in various browsers:
 
-TODO: START AGAIN HERE and show examples of common problems
+- In Chrome, go to *View > Developer > Developer Tools*.
+- In Firefox, go to *Tools > Web Developer > Toggle Tools*.
+- In Microsoft Edge, go to *Settings and more (...) icon > More Tools > Developer Tools*.
+- In Safari for Mac, first go to *Safari > Preferences > Advanced > Show Develop menu in menu bar*, then go to *Develop > Show JavaScript Console*.
 
-In Chrome for Mac, go to View > Developer > Developer Tools
+When you open the browser's developer tools, it displays a *console* window that shows error messages that may help to diagnose problems, particularly with code templates. For example, in Chapter 10, you learned how to [edit the simple Leaflet map template in GitHub](copy-leaflet.html). If you accidentally make a mistake, such as deleting the comma between the latitude and longitude coordinates for map center, your code will "break" and display an empty gray box in your screen. If you turn on the browser developer tools, as shown in Figure \@ref(fig:firefox-dev-tools), the console will display several errors, including one that points you to a problem beginning in the `index.html` file on line 29. While the error does not specifically state that a comma is missing in line 30, it's still the best clue to alert you to a problem in that vicinity of the code. This is just one way to use the developer tools, so explore other features to learn more about its many features, and how they differ across browsers.
 
-![](images/17-fix/Chrome-developer-tools.png)
+(ref:firefox-dev-tools) When you open a browser's developer tools, the console window will display any errors it flags in the code for that web page. In this example, a "broken" map appears as a gray box (top), and the console shows an error in line 29 of the `index.html` file (middle), which offers a clue about a missing comma between the latitude and longitude coordinates in line 30 (bottom).
 
-In Firefox for Mac, go to Tools > Web Developer > Inspector
-
-![](images/17-fix/Firefox-tools-inspector.png)
-
+```{r firefox-dev-tools, out.width=500, fig.cap="(ref:firefox-dev-tools)"}
+ knitr::include_graphics("images/17-fix/firefox-dev-tools-annotated.png")
+```
 
 ## Problem with your Mac computer or Chromebook {#fix-computer}
+
+TODO... START AGAIN HERE...
 
 If you use a Mac computer, make sure you can see the filename extensions, meaning the abbreviated file format that appears after the period, such as `data.csv` or `map.geojson`. Several tools in this book will not work properly if your computer does not display the filename extensions, and the Mac computer operating system hides these by default. Turn them on by going to Finder > Preferences > Advanced, and check the box to *Show all filename extensions*, as shown in Figure \@ref(fig:mac-file-extensions2).
 
 (ref:mac-file-extensions2) On a Mac, go to *Finder* then *Preferences* then *Advanced* and check the box to *Show all filename extensions*.
 
-```{r mac-file-extensions2, fig.cap="(ref:mac-file-extensions2)"}
- knitr::include_graphics("images/03-spreadsheet/mac-file-extensions.png")
+```{r mac-file-extensions2, out.width=400, fig.cap="(ref:mac-file-extensions2)"}
+ knitr::include_graphics("images/17-fix/mac-file-extensions.png")
 ```
+
+Add Chromebook....
 
 ## Problem with your data {#fix-data}
 
 First, review how to Recognize Bad Data in Chapter 4, and ways to Clean Data in Chapter 5....
 
-Avoid typing blank spaces after column headers---or any spreadsheet entries---since some data visualization tools will not match them with headers lacking a blank character.
+Avoid typing blank spaces after column headers---or any spreadsheet entries---since some data visualization tools will not match them with headers lacking a blank character, as shown in Figure \@ref(fig:header-blank).
 
-![](images/17-fix/avoid-header-blank-space.png)
+TODO: IMPROVE image
 
-If you are working with Leaflet code templates, avoid null (empty) fields in your data file, which may throw a `NaN` error code in the browser console...see section above..
+(ref:header-blank) Avoid blank spaces in data headers...
+
+```{r header-blank, out.width=300, fig.cap="(ref:header-blank)"}
+ knitr::include_graphics("images/17-fix/header-blank-annotated.png")
+```
+
+If you are working with Leaflet code templates, avoid null (empty) fields in your data file, which may throw a `NaN` error code in the browser console...see section above...
 
 
 ## Problem with an embed code or iframe {#fix-embed}
@@ -108,13 +120,26 @@ If you followed steps in [Chapter 10: Embed on the Web](embed.html) and the cont
 
   `<iframe src="https://handsondataviz.github.io/leaflet-map-simple" width="90%" height="350"></iframe>`
 
-- Use only `https` (the extra 's' means 'secure'), not `http`. Some web browsers will block content if it mixes http and https resources, and some code templates in this book require https.
+- Use only `https` (the extra 's' means 'secure'), not `http`. Some web browsers will block content if it mixes http and https resources, and some code templates in this book require https, as shown in Figure \@ref(fig:https-vs-http).
 
-![Screenshot: Replace http with https](images/17-fix/http-vs-https.png)
+TODO: IMPROVE image
 
-- Use only straight quotes, not curly quotes. Avoid pasting text from a word-processor into GitHub, which can accidentally carry over curly quotes. Typing directly into the GitHub editor will create straight quotes.
+(ref:https-vs-http) Use https links, not http
 
-![Screenshot: Curly quotes versus straight quotes](images/17-fix/curly-vs-straight-quotes.png)
+```{r https-vs-http, out.width=300, fig.cap="(ref:https-vs-http)"}
+ knitr::include_graphics("images/17-fix/https-vs-http-annotated.png")
+```
+
+
+- Use only straight quotes, not curly quotes. Avoid pasting text from a word-processor into GitHub, which can accidentally carry over curly quotes. Typing directly into the GitHub editor will create straight quotes, as shown in Figure \@ref(fig:straight-vs-curly).
+
+TODO: IMPROVE image
+
+(ref:straight-vs-curly) Use straight quotes, not curly, in code...
+
+```{r straight-vs-curly, fig.cap="(ref:straight-vs-curly)"}
+ knitr::include_graphics("images/17-fix/straight-vs-curly-annotated.png")
+```
 
 Hint: Either single-quote (`'`) marks (also called an apostrophe) or double-quote (`"`) marks are acceptable in your iframe code, but be consistent and avoid accidentally pasting in curly-quotes.
 
@@ -123,7 +148,7 @@ Hint: Either single-quote (`'`) marks (also called an apostrophe) or double-quot
 
 "code dependency" to an online background map or code library is unexpectedly interrupted. But more often it seems that problems arise because we make simple mistakes that break our own code. Whatever the cause, one big drawback of working with code is that you're also responsible for fixing it.
 
-We designed this section as a guide to help new coders diagnose and solve common errors when working with code templates on GitHub. We understand the feeling you experience when a simple typo---such as a misplaced semicolon (;)---makes your data visualization disappear from the screen.
+...Be careful when editing your code. Accidentally removing or adding extra punctuation (such as quotation marks, commas, or semicolons) can stop your map from working....We understand the feeling you experience when a simple typo---such as a misplaced semicolon (;)---makes your data visualization disappear from the screen.
 
 - Test the link to your published web page in a different browser. If you normally use Chrome, try Firefox.
 
@@ -169,11 +194,7 @@ Problems with Leaflet Maps with Google Sheets template ....
 2) Check your Google Sheet for errors:
 - Do NOT rename column headers (in row 1) of any sheet, because the Leaflet Map code looks for these exact words.
 
-![Screenshot: User accidentally renamed column headers in the Points tab](images/17-fix/lmwgs-fix-column-headers.png)
-
 - Do NOT rename row labels (in column A) of any sheet, due to the same reason above.
-
-![Screenshot: Do not rename or delete](images/17-fix/lmwgs-do-not-rename-labels.png)
 
 - In your Points tab, DO NOT leave any blank rows
 
@@ -181,15 +202,10 @@ Problems with Leaflet Maps with Google Sheets template ....
 
 4) If you cannot find the problem, go to the top of this page to Safely Delete Your GitHub Repo and Start Over. Also, make a new copy of the Google Sheet template, give it a new name, and copy data from your old sheet using File > Paste Special > Values Only.
 
-
-
-
-
+Warning: Media file pathnames are case-sensitive, and we recommend using *all lowercase characters*, including the suffix ending. Also, since the code template automatically resizes images to fit, we recommend that you *reduce the size* of any images to 600x400 pixels or less prior to uploading, to make sure your map operates smoothly.
 
 
 To fully view more complex code templates in your local browser, including some [Chart.js or Highcharts templates in Chapter 12](chartcode.html) or [Leaflet templates in Chapter 13](leaflet.html), you may need to temporarily relax [same-origin policy restrictions](https://en.wikipedia.org/wiki/Same-origin_policy), an internet security mechanism that limits how web pages access content from other domains. You can do so by managing your [Cross-Origin Resource Sharing](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)(CORS) settings, and methods for doing this vary across operating systems and browsers. For example, [to disable same-origin policy on Safari for Mac](https://stackoverflow.com/questions/4556429/disabling-same-origin-policy-in-safari), first go to *Preferences > Advanced* to enable the *Developer* menu, then in this new menu select *Disable Cross-Origin Restrictions*. After you are done testing your code, restart Safari to reset the setting to its default safety position. See also ways to [run the Chrome browser without same-origin restrictions on various computers](https://alfilatov.com/posts/run-chrome-without-cors/) or this [popular Stackoverflow page](https://stackoverflow.com/questions/3102819/disable-same-origin-policy-in-chrome). If you temporarily disable this safety mechanism in your browser, be sure to re-enable it before browsing sites on the public web.
-
-
 
 
 If you decide to safely delete one of your GitHub repositories and start over with a code template, here's a simple way to save your work:

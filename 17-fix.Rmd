@@ -3,16 +3,16 @@
 # Fix Common Problems {#fix}
 When creating data visualizations with online tools, public datasets, and code templates, it's not uncommon to encounter some occasional problems that prevent it from working as expected. We understand that finding the source of a problem can feel frustrating. But figuring out why it broke---and how to fix it---can be a great way to learn what's happening behind the scenes. Review these sections below to help you diagnose what type of problem you may be facing, and see our recommended solutions for the most common issues we've seen. Remember that some of the thorniest problems may be caused by two or more separate issues.
 
-- [Problem with tool or service](fix-tool.html)
+- [Tool or platform problems](fix-tool.html)
 - [Try a different browser](fix-browser.html)
 - [Diagnose with developer tools](fix-developer-tools.html)
-- [Mac or Chromebook issues](fix-computer.html)
-- [Beware of bad data](fix-data.html)
-- [Faulty iframe](fix-embed.html)
-- [Code or GitHub issue](fix-code.html)
+- [Mac or Chromebook problems](fix-computer.html)
+- [Watch out for bad data](fix-data.html)
+- [Common iframe errors](fix-iframe.html)
+- [Fix your code on GitHub](fix-code.html)
 - [Where to ask questions](fix-questions.html)
 
-## Problem with tool or service {#fix-tool}
+## Tool or platform problems {#fix-tool}
 
 If you have a problem with one of our recommended digital tools, and have not found the answer in this book, go to the tool's support page (listed in alphabetical order):
 
@@ -33,7 +33,7 @@ If you have a problem with one of our recommended digital tools, and have not fo
 - [Tabula PDF table extractor - how to use](https://tabula.technology)
 - [Tableau Public resources page](https://public.tableau.com/en-us/s/resources).
 
-Of course, if you encounter a problem when using an online tool or web service, always check your internet connection. But on rare occasions, an online tool or web service may be off-line for all users. To clarify if an online platform is down for everyone, and not just you, check for outage reports on sites such as:
+Of course, if you encounter a problem when using an online tool or web platform, always check your internet connection. On rare occasions, online tools and platforms may be off-line for all users. To clarify if an online service down for everyone, and not just you, check for outage reports on sites such as:
 
 - [Downdetector.com](https://downdetector.com)
 - [Down for Everyone or Just Me?](https://downforeveryoneorjustme.com)
@@ -75,7 +75,7 @@ When you open the browser's developer tools, it displays a *console* window that
  knitr::include_graphics("images/17-fix/firefox-dev-tools-annotated.png")
 ```
 
-## Mac or Chromebook issues {#fix-computer}
+## Mac or Chromebook problems {#fix-computer}
 
 If you are using a Mac computer, make sure your settings make visible the filename extensions, meaning the abbreviated file format that appears after the period, such as `data.csv` or `map.geojson`. The Mac operating system hides these extensions by default, and several tools in this book will not work properly if are not visible. Make them visible on a Mac by going to *Finder > Preferences > Advanced*, and check the box to *Show all filename extensions*, as shown in Figure \@ref(fig:mac-file-extensions2).
 
@@ -87,7 +87,7 @@ If you are using a Mac computer, make sure your settings make visible the filena
 
 If you are using a Chromebook computer, beware that it may be difficult or impossible to install and run some of the recommended tools in this book. Tools that are *not* currently supported for Chromebook include most downloadable desktop applications, such as: Atom editor, GitHub Desktop, LibreOffice Calc, OpenRefine data cleaner, Tableau Public, and Tabula PDF table extractor. But Chromebooks can still operate most of the tools that run through the Chrome browser, such as: Google Sheets, Google My Maps, Datawrapper, the GitHub.com web interface, and several others. Also, if you wish to edit code templates on a Chromebook, see the open-source [Caret text editor for Chrome](https://thomaswilburn.net/caret/) by Thomas Wilburn.
 
-## Beware of bad data {#fix-data}
+## Watch out for bad data {#fix-data}
 
 Sometimes a problem with a data visualization tool or service is caused by bad data. Learn how to [Recognize Bad Data in Chapter 4](bad-data.html), and different ways to [Clean Data in Chapter 5](clean.html). In addition, avoid common mistakes that will introduce errors into your data files.
 
@@ -114,104 +114,69 @@ Finally, when working with Leaflet code templates that call GeoJSON data files, 
 To resolve a `NaN` error in the browser console, use the [GeoJson.io tool in Chapter 14](geojsonio.html) to closely inspect your geodata for null fields.
 
 
-## Faulty iframe {#fix-embed}
+## Common iframe errors {#fix-iframe}
+
+If you followed steps in [Chapter 10: Embed on the Web](embed.html) and the contents of your iframe still do not appear in your browser, check for these common problems:
+
+- Items listed in your iframe (such as the URL, width, or height) should be enclosed inside straight single-quote (`'`, also known as an *apostrophe*) or double-quote marks (`"`, also known as *quotation marks*). Choose either type, but be consistent.
+
+- Always use *straight* quote marks, and avoid accidentally entering *curly quotes* (also known as *smart quotes* or *slanted quotes*), which sometimes happens when pasting code from word-processor tools.
+
+- Always use `https` (the extra 's' means 'secure'), not `http` in iframes. Some web browsers will block content if it mixes *https* and *http* resources. All of the code templates in this book require *https*.
+
+Use the [W3Schools TryIt iframe page](https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_iframe) to test your iframe embed codes, especially when you need to edit them, since it's a great way to check for mistaken punctuation. FIG TODO shows three common problems in a simple iframe: a curly double-quote (after `src=`), use of `http` instead of `https`, and mixture of double-quotes and single-quotes. All of these problems are corrected in FIG TODO, which causes the iframe to appear as expected.
+
+(ref:iframe-incorrect) Can you spot three common problems in the iframe code?
+
+```{r header-name, fig.cap="(ref:header-name)"}
+ knitr::include_graphics("images/17-fix/header-name-annotated.png")
+```
+
+(ref:iframe-correct) All three problems are corrected here, which causes the iframe to appear as expected.
+
+```{r header-name, fig.cap="(ref:header-name)"}
+ knitr::include_graphics("images/17-fix/header-name-annotated.png")
+```
+
+## Fix your code on GitHub {#fix-code}
+
+As we discussed in [Chapter 11: Edit and Host Code with GitHub](github.html), working with open-source code templates gives you more control over how your data visualization appears and where it is hosted online. But it also means that when your code breaks, you're also responsible for fixing it, or finding a qualified person to help you fix it, perhaps for a fee. If you encounter problems with fixing your code or hosting it on the free GitHub platform, review the relevant chapter(s) in this book and watch out for common problems listed below.
+
+- Be careful when editing your code. A single typo---such as a missing comma, semicolon, or quotation mark, or parenthesis---can break your visualization. We understand how frustrated you may feel when this happens, because it's also happened to us, so take a short break and come back to your screen a bit later, with fresh eyes to help you find the problem.
+
+- Be patient. If edits to your visualization do *not* appear right away on GitHub Pages, wait up to 60 seconds (perhaps longer during busy periods) for the online platform to finish processing your edits. Then give your browser a "hard refresh" to [bypass any saved content in your cache](https://en.wikipedia.org/wiki/Wikipedia:Bypass_your_cache) and re-download the entire web page from the server, using one of these key combinations:
+
+  - Ctrl + F5 (most Windows or Linux browsers)
+  - Shift + Ctrl + R (Chromebook)
+  - Command + Shift + R (Chrome or Firefox for Mac)
+  - Option + Command + R (Safari for Mac)
+
+- Always test the link to your published visualization in a *different* browser. Sometimes problems are actually caused by a glitch in the browser, not the code itself.
+
+- On occasion, the GitHub platform may experience an outage or report known problems with building GitHub Pages from your code. Check the [GitHub Status site](https://status.github.com).
+
+Over time, code templates require maintenance to ensure that they will continue to work as technology evolves. For example, the code templates featured in this book all have *code dependencies*, which means they rely on other code or online services in order to operate. These dependencies include online code libraries that create charts and maps, such as Chart.js, Highcharts, Leaflet, and others. Also, map code templates depend on online map tiles from providers such as CARTO, Stamen, and OpenStreetMap. *If one of your online code dependencies is no longer operating*, your code template will stop working.
+
+- To check if your code template has a problem with one of its online code dependencies, go back to the original GitHub repository where you made your copy. Check to see if the current demo version is still running online. If yes, then check to see if the original GitHub repo has had recent code updates that may solve your problem. Some code updates are very simple and can be typed directly into your repo through the GitHub web interface. But other code updates are more complex, so review how to "pull" code from a repo to your local computer using tools such as [GitHub Desktop in Chapter 11](github-desktop-atom.html).
+
+- If the original GitHub repo from which you copied the code template does not have an online demo version that is properly functioning, contact the open-source software developer. On GitHub, the best way to do this is to create an *Issue* in the web interface. However, there is no guarantee that an open-source software developer will continue to maintain her code project in the future.
+
+- Another advantage of using GitHub Desktop is that you can *revert* a code commit you previously made, and go back to a prior version of the code as it existed on a certain date. Currently, there is no easy way to revert back to a prior version of the code solely through the GitHub web interface, but you *can download* a prior version of the code to your local computer.
 
 TODO START AGAIN HERE
 
-If you followed steps in [Chapter 10: Embed on the Web](embed.html) and the contents of your iframe do not appear in your browser, check for these common problems:
-
-- Items listed in your iframe (such as the URL, width, or height) should be enclosed inside straight quotation marks (single or double)
-  - BROKEN iframe (missing quotation marks for width and height)
-
-  `<iframe src="https://handsondataviz.github.io/leaflet-map-simple" width=90% height=350></iframe>`
-
-  - FIXED iframe (with correct quotation marks)
-
-  `<iframe src="https://handsondataviz.github.io/leaflet-map-simple" width="90%" height="350"></iframe>`
-
-- Use only `https` (the extra 's' means 'secure'), not `http`. Some web browsers will block content if it mixes http and https resources, and some code templates in this book require https, as shown in Figure \@ref(fig:https-vs-http).
-
-TODO: IMPROVE image
-
-(ref:https-vs-http) Use https links, not http
-
-```{r https-vs-http, out.width=300, fig.cap="(ref:https-vs-http)"}
- knitr::include_graphics("images/17-fix/https-vs-http-annotated.png")
-```
-
-
-- Use only straight quotes, not curly quotes. Avoid pasting text from a word-processor into GitHub, which can accidentally carry over curly quotes. Typing directly into the GitHub editor will create straight quotes, as shown in Figure \@ref(fig:straight-vs-curly).
-
-TODO: IMPROVE image
-
-(ref:straight-vs-curly) Use straight quotes, not curly, in code...
-
-```{r straight-vs-curly, fig.cap="(ref:straight-vs-curly)"}
- knitr::include_graphics("images/17-fix/straight-vs-curly-annotated.png")
-```
-
-Hint: Either single-quote (`'`) marks (also called an apostrophe) or double-quote (`"`) marks are acceptable in your iframe code, but be consistent and avoid accidentally pasting in curly-quotes.
-
-
-## Code or GitHub issue {#fix-code}
-
-"code dependency" to an online background map or code library is unexpectedly interrupted. But more often it seems that problems arise because we make simple mistakes that break our own code. Whatever the cause, one big drawback of working with code is that you're also responsible for fixing it.
-
-...Be careful when editing your code. Accidentally removing or adding extra punctuation (such as quotation marks, commas, or semicolons) can stop your map from working....We understand the feeling you experience when a simple typo---such as a misplaced semicolon (;)---makes your data visualization disappear from the screen.
-
-- Test the link to your published web page in a different browser. If you normally use Chrome, try Firefox.
-
-- On rare occasions, the GitHub service or GitHub Pages feature may be down. Check <https://status.github.com>.
-
-TODO: Test one way to fix GitHub errors by going into the commits and going back to a previous version of the code. Is this possible in the web version?
-
-
-If you upload new data to your Chart.js code template on GitHub Pages, and it does not appear in your browser after refreshing and waiting up to one minute, then GitHub Pages is probably not the cause of the problem. Instead, some browsers continue to show "old" Chart.js in the web cache. The simplest solution is to File > Quit your browser and re-open the link to your Chart.js
-
-
-
-TODO - STILL RELEVANT? If you followed the [Create a Simple Web Page with GitHub Pages tutorial](github-pages.html), it should have created two web links (or URLs):
-
-- your code repository, in this format: `https://github.com/USERNAME/REPOSITORY`
-- your published web page, in this format: `https://USERNAME.github.io/REPOSITORY`
-
-Be sure to insert your GitHub username, and your GitHub repository name, in the general formats above.
-
-These URLs are NOT case-sensitive, which means that `https://github.com/USERNAME` and `https://gitub.com/username` point to the same location.
-
-- Make sure that you are pointing to the correct URL for your published web page, in the format shown above.
-- Be patient. During busy periods on GitHub, it may take up to 1 minute for new content to appear in your browser.
-- **MOVE UP**
-If your map does *not* appear right away, wait up to 30 seconds for GitHub Pages to finish processing your edits. Then give your browser a "hard refresh" to [bypass any saved content in your cache](https://en.wikipedia.org/wiki/Wikipedia:Bypass_your_cache) and re-download the entire web page from the server, using one of these key combinations:
-
-- Ctrl + F5 (most Windows or Linux browsers)
-- Shift + Ctrl + R (Chromebook)
-- Command + Shift + R (Chrome or Firefox for Mac)
-- Option + Command + R (Safari for Mac)
-
-
-
 
 Problems with Leaflet Maps with Google Sheets template ....
-1) Confirm that you have completed all of the key steps in the [Leaflet Maps with Google Sheets](leaflet-with-google-sheets) tutorial in this book, especially these:
-  - Sign in to Google and File > Make a Copy of the Google Sheet to your Google Drive.
-  - File > Publish your Google Sheet (Jack often forgets this key step!)
-  - Copy your Google Sheet web address from top of your browser (usually ends with `...XYZ/edit#gid=0`) and paste into your `google-doc-url.js` file in your GitHub repo. Do NOT copy the *Published* web address (which usually ends with `...XYZ/pubhtml`)
-  - When you paste your Google Sheet web address into `google-doc-url.js`, be careful not to erase single-quote marks or semicolon
-  - Go to your live map link, which should follow this format: `https://USERNAME.github.io/REPOSITORY`, refresh the browser, and wait at least 30 seconds.
 
-2) Check your Google Sheet for errors:
 - Do NOT rename column headers (in row 1) of any sheet, because the Leaflet Map code looks for these exact words.
-
-- Do NOT rename row labels (in column A) of any sheet, due to the same reason above.
 
 - In your Points tab, DO NOT leave any blank rows
 
-3) Confirm on GitHub Status (https://status.github.com/) that all systems are operational.
-
-4) If you cannot find the problem, go to the top of this page to Safely Delete Your GitHub Repo and Start Over. Also, make a new copy of the Google Sheet template, give it a new name, and copy data from your old sheet using File > Paste Special > Values Only.
-
 Warning: Media file pathnames are case-sensitive, and we recommend using *all lowercase characters*, including the suffix ending. Also, since the code template automatically resizes images to fit, we recommend that you *reduce the size* of any images to 600x400 pixels or less prior to uploading, to make sure your map operates smoothly.
+
+
+
+
 
 
 To fully view more complex code templates in your local browser, including some [Chart.js or Highcharts templates in Chapter 12](chartcode.html) or [Leaflet templates in Chapter 13](leaflet.html), you may need to temporarily relax [same-origin policy restrictions](https://en.wikipedia.org/wiki/Same-origin_policy), an internet security mechanism that limits how web pages access content from other domains. You can do so by managing your [Cross-Origin Resource Sharing](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)(CORS) settings, and methods for doing this vary across operating systems and browsers. For example, [to disable same-origin policy on Safari for Mac](https://stackoverflow.com/questions/4556429/disabling-same-origin-policy-in-safari), first go to *Preferences > Advanced* to enable the *Developer* menu, then in this new menu select *Disable Cross-Origin Restrictions*. After you are done testing your code, restart Safari to reset the setting to its default safety position. See also ways to [run the Chrome browser without same-origin restrictions on various computers](https://alfilatov.com/posts/run-chrome-without-cors/) or this [popular Stackoverflow page](https://stackoverflow.com/questions/3102819/disable-same-origin-policy-in-chrome). If you temporarily disable this safety mechanism in your browser, be sure to re-enable it before browsing sites on the public web.
@@ -222,6 +187,8 @@ disable-cors-chrome.png
 
 
 If you decide to safely delete one of your GitHub repositories and start over with a code template, here's a simple way to save your work:
+
+4) If you cannot find the problem, go to the top of this page to Safely Delete Your GitHub Repo and Start Over. Also, make a new copy of the Google Sheet template, give it a new name, and copy data from your old sheet using File > Paste Special > Values Only.
 
 - Go to the top-level of your GitHub repository, similar to `https://github.com/USERNAME/REPOSITORY`
 - Click the green "Clone or Download" button, and select Download Zip to receive a compressed folder of your repo contents on your computer.

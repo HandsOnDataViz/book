@@ -3,19 +3,18 @@
 # Fix Common Problems {#fix}
 When creating data visualizations with online tools, public datasets, and code templates, it's not uncommon to encounter some occasional problems that prevent it from working as expected. We understand that finding the source of a problem can feel frustrating. But figuring out why it broke---and how to fix it---can be a great way to learn what's happening behind the scenes. Review these sections below to help you diagnose what type of problem you may be facing, and see our recommended solutions for the most common issues we've seen. Remember that some of the thorniest problems may be caused by two or more separate issues.
 
-- [Problem with a tool or online service](fix-tool.html)
-- [Problem with an online service](fix-service.html)
-- [Problem with your browser](fix-browser.html)
-- [Diagnose with browser developer tools](fix-developer-tools.html)
-- [Problem with your Mac or Chromebook computer](fix-computer.html)
-- [Problem with your data](fix-data.html)
-- [Problem with an embed code or iframe](fix-embed.html)
-- [Problem with GitHub or code templates](fix-code.html)
-- [Where to ask questions and seek answers](fix-questions.html)
+- [Problem with tool or service](fix-tool.html)
+- [Try a different browser](fix-browser.html)
+- [Diagnose with developer tools](fix-developer-tools.html)
+- [Mac or Chromebook issues](fix-computer.html)
+- [Beware of bad data](fix-data.html)
+- [Faulty iframe](fix-embed.html)
+- [Code or GitHub issue](fix-code.html)
+- [Where to ask questions](fix-questions.html)
 
-## Problem with a tool or online service {#fix-tool}
+## Problem with tool or service {#fix-tool}
 
-If you have a problem with one of our recommended digital tools, and have not found the answer in this book, go to the tool's online support page (listed in alphabetical order):
+If you have a problem with one of our recommended digital tools, and have not found the answer in this book, go to the tool's support page (listed in alphabetical order):
 
 - [Airtable relational database support](https://support.airtable.com)
 - [Atom text editor documentation](https://atom.io/docs)
@@ -34,7 +33,7 @@ If you have a problem with one of our recommended digital tools, and have not fo
 - [Tabula PDF table extractor - how to use](https://tabula.technology)
 - [Tableau Public resources page](https://public.tableau.com/en-us/s/resources).
 
-On rare occasions, a tool platform or web service may be off-line for all users. To clarify whether a site is down for everyone, and not just you, check for outage reports on sites such as:
+Of course, if you encounter a problem when using an online tool or web service, always check your internet connection. But on rare occasions, an online tool or web service may be off-line for all users. To clarify if an online platform is down for everyone, and not just you, check for outage reports on sites such as:
 
 - [Downdetector.com](https://downdetector.com)
 - [Down for Everyone or Just Me?](https://downforeveryoneorjustme.com)
@@ -44,9 +43,9 @@ Also, some online services operate their own status pages:
 - [GitHub Status](https://www.githubstatus.com)
 - [Google Workspace Status](https://www.google.com/appsstatus)
 
-See also how rare outages by large providers, such as the [problems faced by Amazon Web Services in November 2020](https://www.washingtonpost.com/business/economy/amazon-web-services-outage-stymies-businesses/2020/11/25/b54a6106-2f4f-11eb-860d-f7999599cbc2_story.html), can affect other online tool platforms. Finally, always make sure your internet connection is working properly.
+Finally, note that rare outages by large providers, such as the [problems faced by Amazon Web Services in November 2020](https://www.washingtonpost.com/business/economy/amazon-web-services-outage-stymies-businesses/2020/11/25/b54a6106-2f4f-11eb-860d-f7999599cbc2_story.html), can affect other online tool platforms.
 
-## Problem with your browser {#fix-browser}
+## Try a different browser {#fix-browser}
 
 Many problems we encounter with online tools and code templates turn out to be caused by our browser, not the tool or template itself. The *most important advice* we offer in this chapter is to *always try a different browser* to diagnose your problems. If you normally do all of your work in your favorite browser---such as [Chrome](https://www.google.com/chrome/), [Firefox](https://www.mozilla.org/en-US/firefox/), [Microsoft Edge](https://www.microsoft.com/en-us/edge), or [Safari for Mac only](https://www.apple.com/safari/)---download a second browser for testing purposes. But please stop using the defunct Internet Explorer or Edge Legacy browsers, since [Microsoft announced in 2020](https://docs.microsoft.com/en-us/lifecycle/faq/internet-explorer-microsoft-edge) that neither will be supported in the future.
 
@@ -59,7 +58,7 @@ If you encounter any issues when using your favorite browser with digital tools 
 - Command + Shift + R (Chrome or Firefox for Mac)
 - Option + Command + R (Safari for Mac)
 
-## Diagnose with browser developer tools {#fix-developer-tools}
+## Diagnose with developer tools {#fix-developer-tools}
 
 We recommend learning how to use your browser to diagnose other types of issues discussed later in this chapter, such as [problems with iframes](fix-embed.html) or [code templates](fix-code.html). Most browsers contain *developer tools* that allow you to view the source code of a web page and spot any errors that it flags. Even if you're not a software developer, learning how to open your browser's developer tools allows you to peek under the hood and make a more informed guess about what's not working. To open developer tools in various browsers:
 
@@ -76,38 +75,48 @@ When you open the browser's developer tools, it displays a *console* window that
  knitr::include_graphics("images/17-fix/firefox-dev-tools-annotated.png")
 ```
 
-## Problem with your Mac computer or Chromebook {#fix-computer}
+## Mac or Chromebook issues {#fix-computer}
 
-TODO... START AGAIN HERE...
+If you are using a Mac computer, make sure your settings make visible the filename extensions, meaning the abbreviated file format that appears after the period, such as `data.csv` or `map.geojson`. The Mac operating system hides these extensions by default, and several tools in this book will not work properly if are not visible. Make them visible on a Mac by going to *Finder > Preferences > Advanced*, and check the box to *Show all filename extensions*, as shown in Figure \@ref(fig:mac-file-extensions2).
 
-If you use a Mac computer, make sure you can see the filename extensions, meaning the abbreviated file format that appears after the period, such as `data.csv` or `map.geojson`. Several tools in this book will not work properly if your computer does not display the filename extensions, and the Mac computer operating system hides these by default. Turn them on by going to Finder > Preferences > Advanced, and check the box to *Show all filename extensions*, as shown in Figure \@ref(fig:mac-file-extensions2).
-
-(ref:mac-file-extensions2) On a Mac, go to *Finder* then *Preferences* then *Advanced* and check the box to *Show all filename extensions*.
+(ref:mac-file-extensions2) On a Mac, go to *Finder - Preferences - Advanced* and check the box to *Show all filename extensions*.
 
 ```{r mac-file-extensions2, out.width=400, fig.cap="(ref:mac-file-extensions2)"}
  knitr::include_graphics("images/17-fix/mac-file-extensions.png")
 ```
 
-Add Chromebook....
+If you are using a Chromebook computer, beware that it may be difficult or impossible to install and run some of the recommended tools in this book. Tools that are *not* currently supported for Chromebook include most downloadable desktop applications, such as: Atom editor, GitHub Desktop, LibreOffice Calc, OpenRefine data cleaner, Tableau Public, and Tabula PDF table extractor. But Chromebooks can still operate most of the tools that run through the Chrome browser, such as: Google Sheets, Google My Maps, Datawrapper, the GitHub.com web interface, and several others. Also, if you wish to edit code templates on a Chromebook, see the open-source [Caret text editor for Chrome](https://thomaswilburn.net/caret/) by Thomas Wilburn.
 
-## Problem with your data {#fix-data}
+## Beware of bad data {#fix-data}
 
-First, review how to Recognize Bad Data in Chapter 4, and ways to Clean Data in Chapter 5....
+Sometimes a problem with a data visualization tool or service is caused by bad data. Learn how to [Recognize Bad Data in Chapter 4](bad-data.html), and different ways to [Clean Data in Chapter 5](clean.html). In addition, avoid common mistakes that will introduce errors into your data files.
 
-Avoid typing blank spaces after column headers---or any spreadsheet entries---since some data visualization tools will not match them with headers lacking a blank character, as shown in Figure \@ref(fig:header-blank).
+First, avoid typing blank spaces into spreadsheet entries---especially column headers---as shown in Figure \@ref(fig:header-blank). Although blank spaces may seem innocent to human eyes, they may confuse digital tools and code templates that expect to find column headers spelled precisely as promised, without extra spaces.
 
-TODO: IMPROVE image
-
-(ref:header-blank) Avoid blank spaces in data headers...
+(ref:header-blank) Avoid typing blank spaces into spreadsheets, especially column headers.
 
 ```{r header-blank, out.width=300, fig.cap="(ref:header-blank)"}
- knitr::include_graphics("images/17-fix/header-blank-annotated.png")
+ knitr::include_graphics("images/17-fix/header-blank.png")
 ```
 
-If you are working with Leaflet code templates, avoid null (empty) fields in your data file, which may throw a `NaN` error code in the browser console...see section above...
+Second, do not change names of column headers in code templates, unless you know exactly what you are doing. For example, in the Leaflet Maps with Google Sheets code template in Chapter 13, do not change the names at the top of each column, as shown in Figure \@ref(fig:header-name), because the code template looks for these exact names in order to process your data.
+
+(ref:header-name) Do not change header names in code templates.
+
+```{r header-name, out.width=600, fig.cap="(ref:header-name)"}
+ knitr::include_graphics("images/17-fix/header-name-annotated.png")
+```
+
+Finally, when working with Leaflet code templates that call GeoJSON data files, as described in Chapter 13, watch out for null (empty) field errors in your geodata. In the browser console diagnostic window described in the section above, these may show a `NaN` error message similar to this:
+
+`Uncaught Error: Invalid LatLng object: (NaN, NaN)`
+
+To resolve a `NaN` error in the browser console, use the [GeoJson.io tool in Chapter 14](geojsonio.html) to closely inspect your geodata for null fields.
 
 
-## Problem with an embed code or iframe {#fix-embed}
+## Faulty iframe {#fix-embed}
+
+TODO START AGAIN HERE
 
 If you followed steps in [Chapter 10: Embed on the Web](embed.html) and the contents of your iframe do not appear in your browser, check for these common problems:
 
@@ -144,7 +153,7 @@ TODO: IMPROVE image
 Hint: Either single-quote (`'`) marks (also called an apostrophe) or double-quote (`"`) marks are acceptable in your iframe code, but be consistent and avoid accidentally pasting in curly-quotes.
 
 
-## Problem with GitHub or code templates {#fix-code}
+## Code or GitHub issue {#fix-code}
 
 "code dependency" to an online background map or code library is unexpectedly interrupted. But more often it seems that problems arise because we make simple mistakes that break our own code. Whatever the cause, one big drawback of working with code is that you're also responsible for fixing it.
 
@@ -207,6 +216,10 @@ Warning: Media file pathnames are case-sensitive, and we recommend using *all lo
 
 To fully view more complex code templates in your local browser, including some [Chart.js or Highcharts templates in Chapter 12](chartcode.html) or [Leaflet templates in Chapter 13](leaflet.html), you may need to temporarily relax [same-origin policy restrictions](https://en.wikipedia.org/wiki/Same-origin_policy), an internet security mechanism that limits how web pages access content from other domains. You can do so by managing your [Cross-Origin Resource Sharing](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)(CORS) settings, and methods for doing this vary across operating systems and browsers. For example, [to disable same-origin policy on Safari for Mac](https://stackoverflow.com/questions/4556429/disabling-same-origin-policy-in-safari), first go to *Preferences > Advanced* to enable the *Developer* menu, then in this new menu select *Disable Cross-Origin Restrictions*. After you are done testing your code, restart Safari to reset the setting to its default safety position. See also ways to [run the Chrome browser without same-origin restrictions on various computers](https://alfilatov.com/posts/run-chrome-without-cors/) or this [popular Stackoverflow page](https://stackoverflow.com/questions/3102819/disable-same-origin-policy-in-chrome). If you temporarily disable this safety mechanism in your browser, be sure to re-enable it before browsing sites on the public web.
 
+disable-cors-safari.png
+
+disable-cors-chrome.png
+
 
 If you decide to safely delete one of your GitHub repositories and start over with a code template, here's a simple way to save your work:
 
@@ -219,6 +232,6 @@ If you decide to safely delete one of your GitHub repositories and start over wi
   - OR
   - Fork another copy of the original GitHub repository to your account. After you create your copy, if you wish to add selected files that you previously downloaded to your computer, follow directions to [Upload Code with GitHub](create-repo) in the second half of this tutorial in this book
 
-## Where to ask questions and seek answers {#fix-questions}
+## Where to ask questions {#fix-questions}
 
 (describe your problem, computer OS and browser version, and what you have tried so far, and add a screenshot or link to your open-source code when appropriate)

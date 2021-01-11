@@ -6,7 +6,7 @@ Preface
 ![Book cover: Read about the [hoatzin “reptile
 bird”](https://en.wikipedia.org/wiki/Hoatzin)](images/0-preface/cover-400wide.jpg)
 
-**This BOOK-IN-PROGRESS was last updated on: 06 Jan 2021**.
+**This BOOK-IN-PROGRESS was last updated on: 10 Jan 2021**.
 
 Read the open-access web edition at
 <a href="https://HandsOnDataViz.org" class="uri">https://HandsOnDataViz.org</a>,
@@ -10377,7 +10377,7 @@ viewing it locally. But for this simple Leaflet map template, your
 updated map title should appear, allowing you to check its appearance
 before pushing your edits to the web.
 
-Warning: To fully view more complex code templates in your local
+Sidebar: To fully view more complex code templates in your local
 browser, including some [Chart.js or Highcharts templates in Chapter
 12](chartcode.html) or [Leaflet templates in Chapter 13](leaflet.html),
 you may need to temporarily relax [same-origin policy
@@ -10390,15 +10390,30 @@ settings, and methods for doing this vary across operating systems and
 browsers. For example, [to disable same-origin policy on Safari for
 Mac](https://stackoverflow.com/questions/4556429/disabling-same-origin-policy-in-safari),
 first go to *Preferences &gt; Advanced* to enable the *Developer* menu,
-then in this new menu select *Disable Cross-Origin Restrictions*. After
-you are done testing your code, restart Safari to reset the setting to
-its default safety position. See also ways to [run the Chrome browser
+then in this new menu select *Disable Cross-Origin Restrictions*, as
+shown in Figure <a href="#fig:disable-cors-safari">11.29</a>. After you
+are done testing your code, restart Safari to reset the setting to its
+default safety position. See also ways to [run the Chrome browser
 without same-origin restrictions on various
-computers](https://alfilatov.com/posts/run-chrome-without-cors/) or this
+computers](https://alfilatov.com/posts/run-chrome-without-cors/), as
+shown in Figure <a href="#fig:disable-cors-chrome">11.30</a>, or this
 [popular Stackoverflow
 page](https://stackoverflow.com/questions/3102819/disable-same-origin-policy-in-chrome).
 If you temporarily disable this safety mechanism in your browser, be
 sure to re-enable it before browsing sites on the public web.
+
+<img src="images/11-github/disable-cors-safari.png" alt="To view more complex code templates on your local computer with Safari browser, temporarily *Disable Cross-Origin Restrictions*." width="500" />
+<p class="caption">
+Figure 11.29: To view more complex code templates on your local computer
+with Safari browser, temporarily *Disable Cross-Origin Restrictions*.
+</p>
+
+<img src="images/11-github/disable-cors-chrome-annotated.png" alt="To view more complex code templates on your local computer with Chrome browser, use the *Terminal* application command-line (bottom window) to run a version without same-origin safety restrictions." width="500" />
+<p class="caption">
+Figure 11.30: To view more complex code templates on your local computer
+with Chrome browser, use the *Terminal* application command-line (bottom
+window) to run a version without same-origin safety restrictions.
+</p>
 
 Now let’s transfer your edits from your local computer to your GitHub
 web account, which you previously connected when you set up GitHub
@@ -10413,11 +10428,11 @@ Desktop.
     work.) Second, click the blue *Push origin* button to transfer those
     edits to the parent copy of your repo on your GitHub web account.
     Both steps are shown in Figure
-    <a href="#fig:desktop-commit-push">11.29</a>.
+    <a href="#fig:desktop-commit-push">11.31</a>.
 
 <img src="images/11-github/desktop-commit-push-annotated.png" alt="In this two-step process, click *Commit*, then click *Push origin* to save and copy your edits from your local computer to your GitHub web account, as shown in this [animated GIF](https://handsondataviz.org/images/11-github/desktop-commit-push.gif)."  />
 <p class="caption">
-Figure 11.29: In this two-step process, click *Commit*, then click *Push
+Figure 11.31: In this two-step process, click *Commit*, then click *Push
 origin* to save and copy your edits from your local computer to your
 GitHub web account, as shown in this [animated
 GIF](https://handsondataviz.org/images/11-github/desktop-commit-push.gif).
@@ -10462,11 +10477,11 @@ different files or sections of code. Both can see the changes that the
 other person made by selecting the GitHub repo *Code* tab and selecting
 a specific commit, which can be viewed line-by-line in green (additions)
 or red (deletions), as shown in Figure
-<a href="#fig:compare-commits">11.30</a>.
+<a href="#fig:compare-commits">11.32</a>.
 
 <img src="images/11-github/compare-commits.png" alt="View commits made by co-workers on a shared GitHub repo." width="750" />
 <p class="caption">
-Figure 11.30: View commits made by co-workers on a shared GitHub repo.
+Figure 11.32: View commits made by co-workers on a shared GitHub repo.
 </p>
 
 Although GitHub does not operate like Google Documents, which displays
@@ -15382,300 +15397,399 @@ formats that fit our audiences.
 Appendix
 ========
 
-17 Fix Common Mistakes
+17 Fix Common Problems
 ======================
 
-TODO: Rewrite appendix to focus more broadly on “common mistakes” not
-just “code errors”
+When creating data visualizations with online tools, public datasets,
+and code templates, it’s not uncommon to encounter some occasional
+problems that prevent it from working as expected. We understand that
+finding the source of a problem can feel frustrating. But figuring out
+why it broke—and how to fix it—can be a great way to learn what’s
+happening behind the scenes. Review these sections below to help you
+diagnose what type of problem you may be facing, and see our recommended
+solutions for the most common issues we’ve seen. Remember that some of
+the thorniest problems may be caused by two or more separate issues.
 
-Creating your data visualizations through code templates hosted on
-GitHub has multiple advantages over drag-and-drop tools. Coding gives
-you more power to customize their appearance and interactive features,
-and to control where your data and products reside online. But there’s
-also a trade-off. Code can “break” and leave you staring at a blank
-screen. Sometimes problems happens through no fault of your own, such as
-when a “code dependency” to an online background map or code library is
-unexpectedly interrupted. But more often it seems that problems arise
-because we make simple mistakes that break our own code. Whatever the
-cause, one big drawback of working with code is that you’re also
-responsible for fixing it.
+-   [Tool or platform problems](fix-tool.html)
+-   [Try a different browser](fix-browser.html)
+-   [Diagnose with developer tools](fix-developer-tools.html)
+-   [Mac or Chromebook problems](fix-computer.html)
+-   [Watch out for bad data](fix-data.html)
+-   [Common iframe errors](fix-iframe.html)
+-   [Fix your code on GitHub](fix-code.html)
 
-We designed this section as a guide to help new coders diagnose and
-solve common errors when working with code templates on GitHub. We
-understand the feeling you experience when a simple typo—such as a
-misplaced semicolon (;)—makes your data visualization disappear from the
-screen. Finding the source of the problem can be very frustrating. But
-breaking your code—and figuring out how to fix it—also can be a great
-way to learn, because trial-and-error on a computer often provides
-immediate feedback that supports the learning process and develops our
-thinking.
+17.1 Tool or platform problems
+------------------------------
 
-TODO: Reorganize contents, perhaps using this outline?
+If you have a problem with one of our recommended digital tools, and
+have not found the answer in this book, go to the tool’s support page
+(listed in alphabetical order):
 
--   Problem with browser…. try a different browser!
--   Problems with Mac computers
--   Problems with data tables
--   Problems with iframes (since this chapter appears before code
-    templates)
--   Problems with GitHub forking and hosting
--   Problems with code templates
+-   [Airtable relational database support](https://support.airtable.com)
+-   [Atom text editor documentation](https://atom.io/docs)
+-   [Chart.js code library documentation](https://www.chartjs.org/)
+-   [Datawrapper Academy support](https://academy.datawrapper.de/)
+-   [GeoJson.io geodata editor - see Help menu](http://geojson.io/)
+-   [GitHub.com and GitHub Desktop
+    documentation](https://docs.github.com)
+-   [Google My Maps support](https://support.google.com/mymaps)
+-   [Google Sheets support](https://support.google.com/docs)
+-   [Highcharts code library - demo and
+    support](https://www.highcharts.com)
+-   [Leaflet map code library - tutorials and
+    documentation](https://leafletjs.com)
+-   [LibreOffice Calc support](https://help.libreoffice.org)
+-   [Mapshaper geodata editor - documentation
+    wiki](https://github.com/mbloch/mapshaper/wiki)
+-   [MapWarper georectifier help](https://mapwarper.net/help) and [see
+    note about limited disk space](https://mapwarper.net)
+-   [OpenRefine data cleaner - documentation](https://openrefine.org)
+-   [Tabula PDF table extractor - how to use](https://tabula.technology)
+-   [Tableau Public resources
+    page](https://public.tableau.com/en-us/s/resources).
 
-#### Problems with Mac computers: cannot see filename extension
+Of course, if you encounter a problem when using an online tool or web
+platform, always check your internet connection. On rare occasions,
+online tools and platforms may be off-line for all users. To clarify if
+an online service down for everyone, and not just you, check for outage
+reports on sites such as:
 
-Several tools in this book will not work properly if your computer does
-not display the filename extensions, meaning the abbreviated file format
-that appears after the period, such as `data.csv` or `map.geojson`. The
-Mac computer operating system hides these by default, so you need to
-turn them on by going to Finder &gt; Preferences &gt; Advanced, and
-check the box to *Show all filename extensions*, as shown in Figure
-<a href="#fig:mac-file-extensions2">17.1</a>.
+-   [Downdetector.com](https://downdetector.com)
+-   [Down for Everyone or Just Me?](https://downforeveryoneorjustme.com)
 
-<img src="images/03-spreadsheet/mac-file-extensions.png" alt="On a Mac, go to *Finder* then *Preferences* then *Advanced* and check the box to *Show all filename extensions*."  />
+Also, some online services operate their own status pages:
+
+-   [GitHub Status](https://www.githubstatus.com)
+-   [Google Workspace Status](https://www.google.com/appsstatus)
+
+Finally, note that rare outages by large providers, such as the
+[problems faced by Amazon Web Services in November
+2020](https://www.washingtonpost.com/business/economy/amazon-web-services-outage-stymies-businesses/2020/11/25/b54a6106-2f4f-11eb-860d-f7999599cbc2_story.html),
+can affect other online tool platforms.
+
+17.2 Try a different browser
+----------------------------
+
+Many problems we encounter with online tools and code templates turn out
+to be caused by our browser, not the tool or template itself. The *most
+important advice* we offer in this chapter is to *always try a different
+browser* to diagnose your problems. If you normally do all of your work
+in your favorite browser—such as
+[Chrome](https://www.google.com/chrome/),
+[Firefox](https://www.mozilla.org/en-US/firefox/), [Microsoft
+Edge](https://www.microsoft.com/en-us/edge), or [Safari for Mac
+only](https://www.apple.com/safari/)—download a second browser for
+testing purposes. But please stop using the defunct Internet Explorer or
+Edge Legacy browsers, since [Microsoft announced in
+2020](https://docs.microsoft.com/en-us/lifecycle/faq/internet-explorer-microsoft-edge)
+that neither will be supported in the future.
+
+In fact, you should *always* test your data visualization products in a
+second browser, where you are *not* logged in to an online account for
+the tool or service that created it, to check how it appears to regular
+users. On our computers, we installed a second browser, specifically for
+testing, and changed the settings to *Never Remember browsing history*
+so that it acts like a first-time user whenever we open it.
+
+If you encounter any issues when using your favorite browser with
+digital tools or web services, give it a “hard refresh” to [bypass any
+saved content in your
+cache](https://en.wikipedia.org/wiki/Wikipedia:Bypass_your_cache) and
+re-download the entire web page from the server, using one of these key
+combinations:
+
+-   Ctrl + F5 (most Windows or Linux browsers)
+-   Shift + Ctrl + R (Chromebook)
+-   Command + Shift + R (Chrome or Firefox for Mac)
+-   Option + Command + R (Safari for Mac)
+
+17.3 Diagnose with developer tools
+----------------------------------
+
+We recommend learning how to use your browser to diagnose other types of
+issues discussed later in this chapter, such as [problems with
+iframes](fix-embed.html) or [code templates](fix-code.html). Most
+browsers contain *developer tools* that allow you to view the source
+code of a web page and spot any errors that it flags. Even if you’re not
+a software developer, learning how to open your browser’s developer
+tools allows you to peek under the hood and make a more informed guess
+about what’s not working. To open developer tools in various browsers:
+
+-   In Chrome, go to *View &gt; Developer &gt; Developer Tools*.
+-   In Firefox, go to *Tools &gt; Web Developer &gt; Toggle Tools*.
+-   In Microsoft Edge, go to *Settings and more (…) icon &gt; More
+    Tools &gt; Developer Tools*.
+-   In Safari for Mac, first go to *Safari &gt; Preferences &gt;
+    Advanced &gt; Show Develop menu in menu bar*, then go to
+    *Develop &gt; Show JavaScript Console*.
+
+When you open the browser’s developer tools, it displays a *console*
+window that shows error messages that may help to diagnose problems,
+particularly with code templates. For example, in Chapter 10, you
+learned how to [edit the simple Leaflet map template in
+GitHub](copy-leaflet.html). If you accidentally make a mistake, such as
+deleting the comma between the latitude and longitude coordinates for
+map center, your code will “break” and display an empty gray box in your
+screen. If you turn on the browser developer tools, as shown in Figure
+<a href="#fig:firefox-dev-tools">17.1</a>, the console will display
+several errors, including one that points you to a problem beginning in
+the `index.html` file on line 29. While the error does not specifically
+state that a comma is missing in line 30, it’s still the best clue to
+alert you to a problem in that vicinity of the code. This is just one
+way to use the developer tools, so explore other features to learn more
+about its many features, and how they differ across browsers.
+
+&lt;img src=“images/17-fix/firefox-dev-tools-annotated.png” alt=“When
+you open a browser’s developer tools, the console window will display
+any errors it flags in the code for that web page. In this example,
+a”broken" map appears as a gray box (top), and the console shows an
+error in line 29 of the `index.html` file (middle), which offers a clue
+about a missing comma between the latitude and longitude coordinates in
+line 30 (bottom)." width=“500” /&gt;
 <p class="caption">
-Figure 17.1: On a Mac, go to *Finder* then *Preferences* then *Advanced*
-and check the box to *Show all filename extensions*.
+Figure 17.1: When you open a browser’s developer tools, the console
+window will display any errors it flags in the code for that web page.
+In this example, a “broken” map appears as a gray box (top), and the
+console shows an error in line 29 of the `index.html` file (middle),
+which offers a clue about a missing comma between the latitude and
+longitude coordinates in line 30 (bottom).
 </p>
 
-#### Problems with data tables
+17.4 Mac or Chromebook problems
+-------------------------------
 
-Avoid typing blank spaces after column headers—or any spreadsheet
-entries—since some data visualization tools will not match them with
-headers lacking a blank character.
+If you are using a Mac computer, make sure your settings make visible
+the filename extensions, meaning the abbreviated file format that
+appears after the period, such as `data.csv` or `map.geojson`. The Mac
+operating system hides these extensions by default, and several tools in
+this book will not work properly if are not visible. Make them visible
+on a Mac by going to *Finder &gt; Preferences &gt; Advanced*, and check
+the box to *Show all filename extensions*, as shown in Figure
+<a href="#fig:mac-file-extensions2">17.2</a>.
 
-![](images/17-fix/avoid-header-blank-space.png)
+<img src="images/17-fix/mac-file-extensions.png" alt="On a Mac, go to *Finder - Preferences - Advanced* and check the box to *Show all filename extensions*." width="400" />
+<p class="caption">
+Figure 17.2: On a Mac, go to *Finder - Preferences - Advanced* and check
+the box to *Show all filename extensions*.
+</p>
 
-#### Problems with iframes
+If you are using a Chromebook computer, beware that it may be difficult
+or impossible to install and run some of the recommended tools in this
+book. Tools that are *not* currently supported for Chromebook include
+most downloadable desktop applications, such as: Atom editor, GitHub
+Desktop, LibreOffice Calc, OpenRefine data cleaner, Tableau Public, and
+Tabula PDF table extractor. But Chromebooks can still operate most of
+the tools that run through the Chrome browser, such as: Google Sheets,
+Google My Maps, Datawrapper, the GitHub.com web interface, and several
+others. Also, if you wish to edit code templates on a Chromebook, see
+the open-source [Caret text editor for
+Chrome](https://thomaswilburn.net/caret/) by Thomas Wilburn.
 
-##### My iframe does not appear in my web page
+17.5 Watch out for bad data
+---------------------------
 
--   Go back to the [Embed tutorials in this book](embed.html) to
-    double-check the directions
+Sometimes a problem with a data visualization tool or service is caused
+by bad data. Learn how to [Recognize Bad Data in Chapter
+4](bad-data.html), and different ways to [Clean Data in Chapter
+5](clean.html). In addition, avoid common mistakes that will introduce
+errors into your data files, especially when working with [Chart.js and
+Highcharts code templates in Chapter 12](chartcode.html) and [Leaflet
+map code templates in Chapter 13](leaflet.html).
+
+First, avoid typing blank spaces into spreadsheet entries—especially
+column headers—as shown in Figure <a href="#fig:header-blank">17.3</a>.
+Although blank spaces may seem innocent to human eyes, they may confuse
+digital tools and code templates that expect to find column headers
+spelled precisely as promised, without extra spaces.
+
+<img src="images/17-fix/header-blank.png" alt="Avoid typing blank spaces into spreadsheets, especially column headers." width="300" />
+<p class="caption">
+Figure 17.3: Avoid typing blank spaces into spreadsheets, especially
+column headers.
+</p>
+
+Second, avoid blank rows in data files. For example, when using code
+templates such as Leaflet Maps with Google Sheets or Leaflet Storymaps
+with Google Sheets, your online map will break if you leave a blank row
+in the Google Sheets, as shown in Figure
+<a href="#fig:blank-row">17.4</a>.
+
+<img src="images/17-fix/blank-row.png" alt="Avoid leaving blank rows in Google Sheets data files for Leaflet code templates." width="500" />
+<p class="caption">
+Figure 17.4: Avoid leaving blank rows in Google Sheets data files for
+Leaflet code templates.
+</p>
+
+On a related note, in both of the Leaflet code templates described
+above, media file pathnames are case-sensitive. In other words,
+`media/filename.jpg` is not the same as `media/filename.JPG`. Therefore,
+we recommend using *all lowercase characters*, including the suffix
+ending.
+
+Finally, when working with Leaflet code templates that call GeoJSON data
+files, as described in Chapter 13, watch out for null (empty) field
+errors in your geodata. In the browser console diagnostic window
+described in the section above, these may show a `NaN` error message
+similar to this:
+
+`Uncaught Error: Invalid LatLng object: (NaN, NaN)`
+
+To resolve a `NaN` error in the browser console, use the [GeoJson.io
+tool in Chapter 14](geojsonio.html) to closely inspect your geodata for
+null fields.
+
+17.6 Common iframe errors
+-------------------------
+
+If you followed steps in [Chapter 10: Embed on the Web](embed.html) and
+the contents of your iframe still do not appear in your browser, check
+for these common problems:
 
 -   Items listed in your iframe (such as the URL, width, or height)
-    should be enclosed inside straight quotation marks (single or
-    double)
+    should be enclosed inside straight single-quote (`'`, also known as
+    an *apostrophe*) or double-quote marks (`"`, also known as
+    *quotation marks*). Choose either type, but be consistent.
 
-    -   BROKEN iframe (missing quotation marks for width and height)
+-   Always use *straight* quote marks, and avoid accidentally entering
+    *curly quotes* (also known as *smart quotes* or *slanted quotes*),
+    which sometimes happens when pasting code from word-processor tools.
 
-    `<iframe src="https://handsondataviz.github.io/leaflet-map-simple" width=90% height=350></iframe>`
+-   Always use `https` (the extra ‘s’ means ‘secure’), not `http` in
+    iframes. Some web browsers will block content if it mixes *https*
+    and *http* resources. All of the code templates in this book require
+    *https*.
 
-    -   FIXED iframe (with correct quotation marks)
+Use the [W3Schools TryIt iframe
+page](https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_iframe)
+to test your iframe embed codes, especially when you need to edit them,
+since it’s a great way to check for mistaken punctuation. Figure
+<a href="#fig:iframe-incorrect">17.5</a> shows three common problems in
+a simple iframe: a curly double-quote (after `src=`), use of `http`
+instead of `https`, and mixture of double-quotes and single-quotes. All
+of these problems are corrected in Figure
+<a href="#fig:iframe-correct">17.6</a>, which causes the iframe to
+appear as expected.
 
-    `<iframe src="https://handsondataviz.github.io/leaflet-map-simple" width="90%" height="350"></iframe>`
+<img src="images/17-fix/iframe-incorrect.png" alt="Can you spot three common problems in this incorrect iframe code?"  />
+<p class="caption">
+Figure 17.5: Can you spot three common problems in this incorrect iframe
+code?
+</p>
 
--   Use only `https` (the extra ‘s’ means ‘secure’), not `http`. Some
-    web browsers will block content if it mixes http and https
-    resources, and some code templates in this book require https.
+<img src="images/17-fix/iframe-correct.png" alt="All three problems are corrected here, which causes the iframe to appear as expected."  />
+<p class="caption">
+Figure 17.6: All three problems are corrected here, which causes the
+iframe to appear as expected.
+</p>
 
-![Screenshot: Replace http with https](images/17-fix/http-vs-https.png)
+17.7 Fix your code on GitHub
+----------------------------
 
--   Use only straight quotes, not curly quotes. Avoid pasting text from
-    a word-processor into GitHub, which can accidentally carry over
-    curly quotes. Typing directly into the GitHub editor will create
-    straight quotes.
+As we discussed in [Chapter 11: Edit and Host Code with
+GitHub](github.html), working with open-source code templates gives you
+more control over how your data visualization appears and where it is
+hosted online. But it also means that when your code breaks, you’re also
+responsible for fixing it, or finding a qualified person to help you fix
+it, perhaps for a fee. If you encounter problems with fixing your code
+or hosting it on the free GitHub platform, review the relevant
+chapter(s) in this book and watch out for common problems listed below.
 
-![Screenshot: Curly quotes versus straight
-quotes](images/17-fix/curly-vs-straight-quotes.png)
+-   Be careful when editing your code. A single typo—such as a missing
+    comma, semicolon, or quotation mark, or parenthesis—can break your
+    visualization. We understand how frustrated you may feel when this
+    happens, because it’s also happened to us, so take a short break and
+    come back to your screen a bit later, with fresh eyes to help you
+    find the problem.
 
-Hint: Either single-quote (`'`) marks (also called an apostrophe) or
-double-quote (`"`) marks are acceptable in your iframe code, but be
-consistent and avoid accidentally pasting in curly-quotes.
-
-TODO: Test one way to fix GitHub errors by going into the commits and
-going back to a previous version of the code. Is this possible in the
-web version?
-
-#### Safely Delete your GitHub Repo and Start Over
-
-If you need to delete your GitHub repo and start over, here’s a simple
-way to safely save your work:
-
--   Go to the top-level of your GitHub repository, similar to
-    `https://github.com/USERNAME/REPOSITORY`
--   Click the green “Clone or Download” button, and select Download Zip
-    to receive a compressed folder of your repo contents on your
-    computer.
--   In your GitHub repo, click on Settings (upper-right area) and scroll
-    down to Delete This Repository.
--   To prevent accidental deletions, GitHub requires you to type in the
-    REPOSITORY name.
--   Now you can start over in one of these ways:
-    -   If you wish to [Create a Simple Web Page with GitHub
-        Pages](github-pages.html), follow that tutorial again.
-    -   OR
-    -   Fork another copy of the original GitHub repository to your
-        account. After you create your copy, if you wish to add selected
-        files that you previously downloaded to your computer, follow
-        directions to [Upload Code with GitHub](create-repo) in the
-        second half of this tutorial in this book
-
-#### Problems with Creating a Simple Web Page with GitHub Pages
-
-If you followed the [Create a Simple Web Page with GitHub Pages
-tutorial](github-pages.html), it should have created two web links (or
-URLs):
-
--   your code repository, in this format:
-    `https://github.com/USERNAME/REPOSITORY`
--   your published web page, in this format:
-    `https://USERNAME.github.io/REPOSITORY`
-
-Be sure to insert your GitHub username, and your GitHub repository name,
-in the general formats above.
-
-These URLs are NOT case-sensitive, which means that
-`https://github.com/USERNAME` and `https://gitub.com/username` point to
-the same location.
-
-##### My simple GitHub web page does not appear
-
--   Make sure that you are pointing to the correct URL for your
-    published web page, in the format shown above.
-
--   Be patient. During busy periods on GitHub, it may take up to 1
-    minute for new content to appear in your browser.
-
--   **MOVE UP** If your map does *not* appear right away, wait up to 30
-    seconds for GitHub Pages to finish processing your edits. Then give
-    your browser a “hard refresh” to [bypass any saved content in your
+-   Be patient. If edits to your visualization do *not* appear right
+    away on GitHub Pages, wait up to 60 seconds (perhaps longer during
+    busy periods) for the online platform to finish processing your
+    edits. Then give your browser a “hard refresh” to [bypass any saved
+    content in your
     cache](https://en.wikipedia.org/wiki/Wikipedia:Bypass_your_cache)
     and re-download the entire web page from the server, using one of
     these key combinations:
 
--   Ctrl + F5 (most Windows or Linux browsers)
+    -   Ctrl + F5 (most Windows or Linux browsers)
+    -   Shift + Ctrl + R (Chromebook)
+    -   Command + Shift + R (Chrome or Firefox for Mac)
+    -   Option + Command + R (Safari for Mac)
 
--   Shift + Ctrl + R (Chromebook)
+-   Always test the link to your published visualization in a
+    *different* browser. Sometimes problems are actually caused by a
+    glitch in the browser, not the code itself.
 
--   Command + Shift + R (Chrome or Firefox for Mac)
+-   On occasion, the GitHub platform may experience an outage or report
+    known problems with building GitHub Pages from your code. Check the
+    [GitHub Status site](https://status.github.com).
 
--   Option + Command + R (Safari for Mac)
+When working with [Chart.js and Highcharts code templates in Chapter
+12](chartcode.html) and [Leaflet map code templates in Chapter
+13](leaflet.html), be cautious about making edits, especially to the
+structure of the data file. For example, in the Leaflet Maps with Google
+Sheets code template, do not change the names at the top of each column,
+as shown in Figure <a href="#fig:header-name">17.7</a>, unless you know
+what you are doing, because the code template looks for these exact
+names in order to process your data.
 
--   Test the link to your published web page in a different browser. If
-    you normally use Chrome, try Firefox.
+<img src="images/17-fix/header-name-annotated.png" alt="Do not change header names in code templates, unless you know what you are doing." width="600" />
+<p class="caption">
+Figure 17.7: Do not change header names in code templates, unless you
+know what you are doing.
+</p>
 
--   On rare occasions, the GitHub service or GitHub Pages feature may be
-    down. Check
-    <a href="https://status.github.com" class="uri">https://status.github.com</a>.
+Remember that you can edit and test code templates more efficiently on
+your *local* computer, rather than upload every change to view on GitHub
+online. Use the [GitHub Desktop and Atom Editor tools as described in
+Chapter 11](github-desktop-atom.html). To fully view more complex
+Chart.js or Highcharts or Leaflet code templates on your *local*
+computer, you may need to temporarily manage your CORS internet security
+settings in your browser, as shown in Figure
+<a href="#fig:disable-cors-safari">11.29</a> and Figure
+<a href="#fig:disable-cors-chrome">11.30</a>.
 
-TODO: add above
+Over time, code templates require maintenance to ensure that they will
+continue to work as technology evolves. For example, the code templates
+featured in this book all have *code dependencies*, which means they
+rely on other code or online services in order to operate. These
+dependencies include online code libraries that create charts and maps,
+such as Chart.js, Highcharts, Leaflet, and others. Also, map code
+templates depend on online map tiles from providers such as CARTO,
+Stamen, and OpenStreetMap. *If one of your online code dependencies is
+no longer operating*, your code template will stop working.
 
-To fully view more complex code templates in your local browser,
-including some [Chart.js or Highcharts templates in Chapter
-12](chartcode.html) or [Leaflet templates in Chapter 13](leaflet.html),
-you may need to temporarily relax [same-origin policy
-restrictions](https://en.wikipedia.org/wiki/Same-origin_policy), an
-internet security mechanism that limits how web pages access content
-from other domains. You can do so by managing your [Cross-Origin
-Resource
-Sharing](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)(CORS)
-settings, and methods for doing this vary across operating systems and
-browsers. For example, [to disable same-origin policy on Safari for
-Mac](https://stackoverflow.com/questions/4556429/disabling-same-origin-policy-in-safari),
-first go to *Preferences &gt; Advanced* to enable the *Developer* menu,
-then in this new menu select *Disable Cross-Origin Restrictions*. After
-you are done testing your code, restart Safari to reset the setting to
-its default safety position. See also ways to [run the Chrome browser
-without same-origin restrictions on various
-computers](https://alfilatov.com/posts/run-chrome-without-cors/) or this
-[popular Stackoverflow
-page](https://stackoverflow.com/questions/3102819/disable-same-origin-policy-in-chrome).
-If you temporarily disable this safety mechanism in your browser, be
-sure to re-enable it before browsing sites on the public web.
+To check if your code template has an issue with one of its online code
+dependencies, go back to the original GitHub repository where you made
+your copy. Check to see if the current online demo chart or map is
+properly functioning. If yes, then check to see if the original GitHub
+repo has had recent code updates that may solve your problem. Some code
+updates are very simple and can be typed directly into your repo through
+the GitHub web interface. But other code updates are more complex, so
+review how to “pull” code from a repo to your local computer using tools
+such as [GitHub Desktop in Chapter 11](github-desktop-atom.html).
 
-##### My simple GitHub web page does not display my iframe
+If the original GitHub repo from which you copied the code template has
+a non-functional online demo version, contact the open-source software
+developer, and the best way to do this is to create an *Issue* on their
+GitHub repository. There is no guarantee that open-source software
+developers will continue to maintain their code project into the future.
+But one benefit of open-source code is that anyone can create a new fork
+copy and maintain it on their own, or with other collaborators in the
+open-source coding community.
 
--   If you followed the [Create a Simple Web Page with GitHub Pages
-    tutorial](github-pages) and inserted an iframe in the README.md
-    file, it will appear in your published web page, under these
-    conditions:
-    -   Ideally, your README.md should be the ONLY file in this GitHub
-        repository
-    -   Any other files in your repo (such as index.html, default.html,
-        or index.md) will block the iframe HTML code in your README.md
-        from being published on the web. If you accidentally selected a
-        GitHub Pages Theme, you need to delete any extra files it
-        created: click each file, select trash can to delete it, and
-        commit changes.
-
-![Screenshot: Extra files in GitHub repo will block iframe in your
-README](images/17-fix/extra-files-block-readme-iframe.png)
-
-#### Problems with Leaflet Maps with Google Sheets template
-
-##### My map does not appear
-
-1.  Confirm that you have completed all of the key steps in the [Leaflet
-    Maps with Google Sheets](leaflet-with-google-sheets) tutorial in
-    this book, especially these:
-
--   Sign in to Google and File &gt; Make a Copy of the Google Sheet to
-    your Google Drive.
--   File &gt; Publish your Google Sheet (Jack often forgets this key
-    step!)
--   Copy your Google Sheet web address from top of your browser (usually
-    ends with `...XYZ/edit#gid=0`) and paste into your
-    `google-doc-url.js` file in your GitHub repo. Do NOT copy the
-    *Published* web address (which usually ends with `...XYZ/pubhtml`)
--   When you paste your Google Sheet web address into
-    `google-doc-url.js`, be careful not to erase single-quote marks or
-    semicolon
--   Go to your live map link, which should follow this format:
-    `https://USERNAME.github.io/REPOSITORY`, refresh the browser, and
-    wait at least 30 seconds.
-
-1.  Check your Google Sheet for errors:
-
--   Do NOT rename column headers (in row 1) of any sheet, because the
-    Leaflet Map code looks for these exact words.
-
-![Screenshot: User accidentally renamed column headers in the Points
-tab](images/17-fix/lmwgs-fix-column-headers.png)
-
--   Do NOT rename row labels (in column A) of any sheet, due to the same
-    reason above.
-
-![Screenshot: Do not rename or
-delete](images/17-fix/lmwgs-do-not-rename-labels.png)
-
--   In your Points tab, DO NOT leave any blank rows
-
-1.  Confirm on GitHub Status
-    (<a href="https://status.github.com/" class="uri">https://status.github.com/</a>)
-    that all systems are operational.
-
-2.  If you cannot find the problem, go to the top of this page to Safely
-    Delete Your GitHub Repo and Start Over. Also, make a new copy of the
-    Google Sheet template, give it a new name, and copy data from your
-    old sheet using File &gt; Paste Special &gt; Values Only.
-
-#### Problems with Chart.js code templates
-
-##### Chart displays old data
-
-If you upload new data to your Chart.js code template on GitHub Pages,
-and it does not appear in your browser after refreshing and waiting up
-to one minute, then GitHub Pages is probably not the cause of the
-problem. Instead, some browsers continue to show “old” Chart.js in the
-web cache. The simplest solution is to File &gt; Quit your browser and
-re-open the link to your Chart.js
-
-TODO: Our Chart.js templates appear blank (just text, no chart) when
-viewed in the local browser. But Leaflet maps appear mostly or partially
-complete. Why is this, and how should we inform readers about this?
-Discuss with Ilya
-
-#### Solve Problems with Browser Developer Tools
-
-Peek inside any website and view the web code under the hood with the
-browser developer tools.
-
-In Chrome for Mac, go to View &gt; Developer &gt; Developer Tools
-
-![](images/17-fix/Chrome-developer-tools.png)
-
-In Firefox for Mac, go to Tools &gt; Web Developer &gt; Inspector
-
-![](images/17-fix/Firefox-tools-inspector.png)
+Finally, if you do not find the answer to your problem above, consider
+other places to pose your question. Some of our [recommended tools
+support pages](fix-tool.html) include links to community help forums,
+where users can post questions and sometimes receive helpful answers
+from other users. Also, the [StackExchange
+network](https://stackexchange.com) brings together over 170 online
+communities where experts answers questions on specific topics, such as
+[Web Applications Stack Exchange](https://webapps.stackexchange.com) for
+online tools such as Google Sheets and [Stack
+Overflow](https://stackoverflow.com) for software coding. When posting a
+question on any of these public forums, be sure to follow their
+guidelines, clearly describe your problem, and mention the type of
+computer operating system and/or browser version you’re using.
 
 <!--chapter:end:17-fix.Rmd-->
 <!-- Automated list of references generated by Bookdown + Zotero citation keys below. PDF output will appear without "References" at the top, but this seems to be the best solution. See https://bookdown.org/yihui/bookdown/citations.html -->

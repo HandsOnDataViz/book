@@ -10,7 +10,6 @@ When creating data visualizations with online tools, public datasets, and code t
 - [Watch out for bad data](fix-data.html)
 - [Common iframe errors](fix-iframe.html)
 - [Fix your code on GitHub](fix-code.html)
-- [Where to ask questions](fix-questions.html)
 
 ## Tool or platform problems {#fix-tool}
 
@@ -89,7 +88,7 @@ If you are using a Chromebook computer, beware that it may be difficult or impos
 
 ## Watch out for bad data {#fix-data}
 
-Sometimes a problem with a data visualization tool or service is caused by bad data. Learn how to [Recognize Bad Data in Chapter 4](bad-data.html), and different ways to [Clean Data in Chapter 5](clean.html). In addition, avoid common mistakes that will introduce errors into your data files.
+Sometimes a problem with a data visualization tool or service is caused by bad data. Learn how to [Recognize Bad Data in Chapter 4](bad-data.html), and different ways to [Clean Data in Chapter 5](clean.html). In addition, avoid common mistakes that will introduce errors into your data files, especially when working with [Chart.js and Highcharts code templates in Chapter 12](chartcode.html) and [Leaflet map code templates in Chapter 13](leaflet.html).
 
 First, avoid typing blank spaces into spreadsheet entries---especially column headers---as shown in Figure \@ref(fig:header-blank). Although blank spaces may seem innocent to human eyes, they may confuse digital tools and code templates that expect to find column headers spelled precisely as promised, without extra spaces.
 
@@ -99,13 +98,15 @@ First, avoid typing blank spaces into spreadsheet entries---especially column he
  knitr::include_graphics("images/17-fix/header-blank.png")
 ```
 
-Second, do not change names of column headers in code templates, unless you know exactly what you are doing. For example, in the Leaflet Maps with Google Sheets code template in Chapter 13, do not change the names at the top of each column, as shown in Figure \@ref(fig:header-name), because the code template looks for these exact names in order to process your data.
+Second, avoid blank rows in data files. For example, when using code templates such as Leaflet Maps with Google Sheets or Leaflet Storymaps with Google Sheets, your online map will break if you leave a blank row in the Google Sheets, as shown in Figure \@ref(fig:blank-row).
 
-(ref:header-name) Do not change header names in code templates.
+(ref:blank-row) Avoid leaving blank rows in Google Sheets data files for Leaflet code templates.
 
-```{r header-name, out.width=600, fig.cap="(ref:header-name)"}
- knitr::include_graphics("images/17-fix/header-name-annotated.png")
+```{r blank-row, out.width=500, fig.cap="(ref:blank-row)"}
+ knitr::include_graphics("images/17-fix/blank-row.png")
 ```
+
+On a related note, in both of the Leaflet code templates described above, media file pathnames are case-sensitive. In other words, `media/filename.jpg` is not the same as `media/filename.JPG`. Therefore, we recommend using *all lowercase characters*, including the suffix ending.
 
 Finally, when working with Leaflet code templates that call GeoJSON data files, as described in Chapter 13, watch out for null (empty) field errors in your geodata. In the browser console diagnostic window described in the section above, these may show a `NaN` error message similar to this:
 
@@ -124,18 +125,18 @@ If you followed steps in [Chapter 10: Embed on the Web](embed.html) and the cont
 
 - Always use `https` (the extra 's' means 'secure'), not `http` in iframes. Some web browsers will block content if it mixes *https* and *http* resources. All of the code templates in this book require *https*.
 
-Use the [W3Schools TryIt iframe page](https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_iframe) to test your iframe embed codes, especially when you need to edit them, since it's a great way to check for mistaken punctuation. FIG TODO shows three common problems in a simple iframe: a curly double-quote (after `src=`), use of `http` instead of `https`, and mixture of double-quotes and single-quotes. All of these problems are corrected in FIG TODO, which causes the iframe to appear as expected.
+Use the [W3Schools TryIt iframe page](https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_iframe) to test your iframe embed codes, especially when you need to edit them, since it's a great way to check for mistaken punctuation. Figure \@ref(fig:iframe-incorrect) shows three common problems in a simple iframe: a curly double-quote (after `src=`), use of `http` instead of `https`, and mixture of double-quotes and single-quotes. All of these problems are corrected in Figure \@ref(fig:iframe-correct), which causes the iframe to appear as expected.
 
-(ref:iframe-incorrect) Can you spot three common problems in the iframe code?
+(ref:iframe-incorrect) Can you spot three common problems in this incorrect iframe code?
 
-```{r header-name, fig.cap="(ref:header-name)"}
- knitr::include_graphics("images/17-fix/header-name-annotated.png")
+```{r iframe-incorrect, fig.cap="(ref:iframe-incorrect)"}
+ knitr::include_graphics("images/17-fix/iframe-incorrect.png")
 ```
 
 (ref:iframe-correct) All three problems are corrected here, which causes the iframe to appear as expected.
 
-```{r header-name, fig.cap="(ref:header-name)"}
- knitr::include_graphics("images/17-fix/header-name-annotated.png")
+```{r iframe-correct, fig.cap="(ref:iframe-correct)"}
+ knitr::include_graphics("images/17-fix/iframe-correct.png")
 ```
 
 ## Fix your code on GitHub {#fix-code}
@@ -155,50 +156,20 @@ As we discussed in [Chapter 11: Edit and Host Code with GitHub](github.html), wo
 
 - On occasion, the GitHub platform may experience an outage or report known problems with building GitHub Pages from your code. Check the [GitHub Status site](https://status.github.com).
 
+When working with [Chart.js and Highcharts code templates in Chapter 12](chartcode.html) and [Leaflet map code templates in Chapter 13](leaflet.html), be cautious about making edits, especially to the structure of the data file. For example, in the Leaflet Maps with Google Sheets code template, do not change the names at the top of each column, as shown in Figure \@ref(fig:header-name), unless you know what you are doing, because the code template looks for these exact names in order to process your data.
+
+(ref:header-name) Do not change header names in code templates, unless you know what you are doing.
+
+```{r header-name, out.width=600, fig.cap="(ref:header-name)"}
+ knitr::include_graphics("images/17-fix/header-name-annotated.png")
+```
+
+Remember that you can edit and test code templates more efficiently on your *local* computer, rather than upload every change to view on GitHub online. Use the [GitHub Desktop and Atom Editor tools as described in Chapter 11](github-desktop-atom.html). To fully view more complex Chart.js or Highcharts or Leaflet code templates on your *local* computer, you may need to temporarily manage your CORS internet security settings in your browser, as shown in Figure \@ref(fig:disable-cors-safari) and Figure \@ref(fig:disable-cors-chrome).
+
 Over time, code templates require maintenance to ensure that they will continue to work as technology evolves. For example, the code templates featured in this book all have *code dependencies*, which means they rely on other code or online services in order to operate. These dependencies include online code libraries that create charts and maps, such as Chart.js, Highcharts, Leaflet, and others. Also, map code templates depend on online map tiles from providers such as CARTO, Stamen, and OpenStreetMap. *If one of your online code dependencies is no longer operating*, your code template will stop working.
 
-- To check if your code template has a problem with one of its online code dependencies, go back to the original GitHub repository where you made your copy. Check to see if the current demo version is still running online. If yes, then check to see if the original GitHub repo has had recent code updates that may solve your problem. Some code updates are very simple and can be typed directly into your repo through the GitHub web interface. But other code updates are more complex, so review how to "pull" code from a repo to your local computer using tools such as [GitHub Desktop in Chapter 11](github-desktop-atom.html).
+To check if your code template has an issue with one of its online code dependencies, go back to the original GitHub repository where you made your copy. Check to see if the current online demo chart or map is properly functioning. If yes, then check to see if the original GitHub repo has had recent code updates that may solve your problem. Some code updates are very simple and can be typed directly into your repo through the GitHub web interface. But other code updates are more complex, so review how to "pull" code from a repo to your local computer using tools such as [GitHub Desktop in Chapter 11](github-desktop-atom.html).
 
-- If the original GitHub repo from which you copied the code template does not have an online demo version that is properly functioning, contact the open-source software developer. On GitHub, the best way to do this is to create an *Issue* in the web interface. However, there is no guarantee that an open-source software developer will continue to maintain her code project in the future.
+If the original GitHub repo from which you copied the code template has a non-functional online demo version, contact the open-source software developer, and the best way to do this is to create an *Issue* on their GitHub repository. There is no guarantee that open-source software developers will continue to maintain their code project into the future. But one benefit of open-source code is that anyone can create a new fork copy and maintain it on their own, or with other collaborators in the open-source coding community.
 
-- Another advantage of using GitHub Desktop is that you can *revert* a code commit you previously made, and go back to a prior version of the code as it existed on a certain date. Currently, there is no easy way to revert back to a prior version of the code solely through the GitHub web interface, but you *can download* a prior version of the code to your local computer.
-
-TODO START AGAIN HERE
-
-
-Problems with Leaflet Maps with Google Sheets template ....
-
-- Do NOT rename column headers (in row 1) of any sheet, because the Leaflet Map code looks for these exact words.
-
-- In your Points tab, DO NOT leave any blank rows
-
-Warning: Media file pathnames are case-sensitive, and we recommend using *all lowercase characters*, including the suffix ending. Also, since the code template automatically resizes images to fit, we recommend that you *reduce the size* of any images to 600x400 pixels or less prior to uploading, to make sure your map operates smoothly.
-
-
-
-
-
-
-To fully view more complex code templates in your local browser, including some [Chart.js or Highcharts templates in Chapter 12](chartcode.html) or [Leaflet templates in Chapter 13](leaflet.html), you may need to temporarily relax [same-origin policy restrictions](https://en.wikipedia.org/wiki/Same-origin_policy), an internet security mechanism that limits how web pages access content from other domains. You can do so by managing your [Cross-Origin Resource Sharing](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)(CORS) settings, and methods for doing this vary across operating systems and browsers. For example, [to disable same-origin policy on Safari for Mac](https://stackoverflow.com/questions/4556429/disabling-same-origin-policy-in-safari), first go to *Preferences > Advanced* to enable the *Developer* menu, then in this new menu select *Disable Cross-Origin Restrictions*. After you are done testing your code, restart Safari to reset the setting to its default safety position. See also ways to [run the Chrome browser without same-origin restrictions on various computers](https://alfilatov.com/posts/run-chrome-without-cors/) or this [popular Stackoverflow page](https://stackoverflow.com/questions/3102819/disable-same-origin-policy-in-chrome). If you temporarily disable this safety mechanism in your browser, be sure to re-enable it before browsing sites on the public web.
-
-disable-cors-safari.png
-
-disable-cors-chrome.png
-
-
-If you decide to safely delete one of your GitHub repositories and start over with a code template, here's a simple way to save your work:
-
-4) If you cannot find the problem, go to the top of this page to Safely Delete Your GitHub Repo and Start Over. Also, make a new copy of the Google Sheet template, give it a new name, and copy data from your old sheet using File > Paste Special > Values Only.
-
-- Go to the top-level of your GitHub repository, similar to `https://github.com/USERNAME/REPOSITORY`
-- Click the green "Clone or Download" button, and select Download Zip to receive a compressed folder of your repo contents on your computer.
-- In your GitHub repo, click on Settings (upper-right area) and scroll down to Delete This Repository.
-- To prevent accidental deletions, GitHub requires you to type in the REPOSITORY name.
-- Now you can start over in one of these ways:
-  - If you wish to [Create a Simple Web Page with GitHub Pages](github-pages.html), follow that tutorial again.
-  - OR
-  - Fork another copy of the original GitHub repository to your account. After you create your copy, if you wish to add selected files that you previously downloaded to your computer, follow directions to [Upload Code with GitHub](create-repo) in the second half of this tutorial in this book
-
-## Where to ask questions {#fix-questions}
-
-(describe your problem, computer OS and browser version, and what you have tried so far, and add a screenshot or link to your open-source code when appropriate)
+Finally, if you do not find the answer to your problem above, consider other places to pose your question. Some of our [recommended tools support pages](fix-tool.html) include links to community help forums, where users can post questions and sometimes receive helpful answers from other users. Also, the [StackExchange network](https://stackexchange.com) brings together over 170 online communities where experts answers questions on specific topics, such as [Web Applications Stack Exchange](https://webapps.stackexchange.com) for online tools such as Google Sheets and [Stack Overflow](https://stackoverflow.com) for software coding. When posting a question on any of these public forums, be sure to follow their guidelines, clearly describe your problem, and mention the type of computer operating system and/or browser version you're using.

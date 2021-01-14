@@ -6,7 +6,7 @@ Preface
 ![Book cover: Read about the [hoatzin “reptile
 bird”](https://en.wikipedia.org/wiki/Hoatzin)](images/0-preface/cover-400wide.jpg)
 
-**This BOOK-IN-PROGRESS was last updated on: 10 Jan 2021**.
+**This BOOK-IN-PROGRESS was last updated on: 14 Jan 2021**.
 
 Read the open-access web edition at
 <a href="https://HandsOnDataViz.org" class="uri">https://HandsOnDataViz.org</a>,
@@ -627,8 +627,8 @@ this popular open-source coding platform. Then you’ll build using
 [Chapter 13: Leaflet Map Templates](leaflet.html), and discover more
 advanced spatial tools in [Chapter 14: Transform Your Map
 Data](transform.html). At the end of the book we include an [Appendix:
-How to Fix Common Problems](fix.html) to consult when you accidentally
-break your code, which is also a great way to learn how it works.
+Fix Common Problems](fix.html) to consult when you accidentally break
+your code, which is also a great way to learn how it works.
 
 In part four, we’ll wrap up all of the visualization skills you’ve
 developed by returning to the central theme of this introduction:
@@ -9653,7 +9653,7 @@ tools, such as [GitHub Desktop and Atom
 Editor](github-desktop-atom.html), to work more efficiently with code
 repos on your personal computer.
 
-If problems arise, turn to the [Fix Common Mistakes](fix.html) section
+If problems arise, turn to the [Fix Common Problems](fix.html) section
 in the appendix. All of us make mistakes and accidentally “break our
 code” from time to time, and it’s a great way to learn how things
 work—and what to do when it doesn’t work!
@@ -9987,7 +9987,7 @@ fixing it—can also be a great way to learn.
     map, and do a hard-refresh to view changes. If your map edits do not
     appear right away, remember that GitHub Pages sometimes requires up
     to 30 seconds to process code edits. If you have problems, see the
-    [Fix Common Mistakes](fix.html) section in the appendix.
+    [Fix Common Problems](fix.html) section in the appendix.
 
 Congratulations! If this is the first time that you’ve edited computer
 code and hosted it online, you can now call yourself a “coder”. The
@@ -11229,7 +11229,7 @@ Transform Your Map Data](transform.html).
 
 If you’re new to coding, creating Leaflet maps can be a great place to
 start and quickly see the results of what you’ve learned. To help solve
-problems that may arise, see how to [Fix Common Mistakes](fix.html) in
+problems that may arise, see how to [Fix Common Problems](fix.html) in
 the appendix. Or to delve further into JavaScript, the language that
 Leaflet relies on, we strongly recommend Marijn Haverbeke’s *Eloquent
 JavaScript*, available both in print and as an [open-source online
@@ -11362,7 +11362,7 @@ publicly sharing it with others:
 
 -   1.  Get your own Google Sheets API Key to insert into the code.
 
-If any problems arise, see the [Fix Common Mistakes](fix.html) section
+If any problems arise, see the [Fix Common Problems](fix.html) section
 of the appendix.
 
 Now that you have a better sense of the big picture, let’s get started
@@ -11772,7 +11772,7 @@ You can get a free Google Sheets API key if you have a personal Google
 account, but *not* a Google Suite account provided by your school or
 business.
 
-If problems arise, see the [Fix Common Mistakes](fix.html) section of
+If problems arise, see the [Fix Common Problems](fix.html) section of
 the appendix.
 
 Leaflet Storymaps with Google Sheets
@@ -11898,7 +11898,7 @@ publicly sharing with others:
 
 -   1.  Get your own Google Sheets API Key to insert into the code.
 
-If any problems arise, see the [Fix Common Mistakes](fix.html) section
+If any problems arise, see the [Fix Common Problems](fix.html) section
 of the appendix.
 
 Now that you have a better sense of the big picture, let’s get started
@@ -12311,7 +12311,7 @@ You can get a free Google Sheets API key if you have a personal Google
 account, but *not* a Google Suite account provided by your school or
 business.
 
-If problems arise, see the [Fix Common Mistakes](fix.html) section of
+If problems arise, see the [Fix Common Problems](fix.html) section of
 the appendix.
 
 Get Your Google Sheets API Key

@@ -7,7 +7,7 @@ The remainder of the Leaflet templates are designed to improve your coding skill
 
 These Leaflet templates are written in the three most common coding languages on the web: Hypertext Markup Language (HTML) to structure content on a web page (typically in a file named `index.html`), Cascading Style Sheets (CSS) to shape how content appears on the page (either inside `index.html` or a separate file such as `style.css`), and JavaScript to create the interactive map using the open-source Leaflet code library (either inside `index.html` or a separate file such as `script.js`). These Leaflet templates also include links to other online components, such as zoomable basemap tiles from [various open-access online providers](https://leaflet-extras.github.io/leaflet-providers/preview/). Also, they pull in geospatial data, such as polygon boundaries from a `map.geojson` file, which you'll learn how create in [Chapter 14: Transform Your Map Data](transform.html).
 
-If you're new to coding, creating Leaflet maps can be a great place to start and quickly see the results of what you've learned. To help solve problems that may arise, see how to [Fix Common Mistakes](fix.html) in the appendix. Or to delve further into JavaScript, the language that Leaflet relies on, we strongly recommend Marijn Haverbeke's *Eloquent JavaScript*, available both in print and as an [open-source online book](https://eloquentjavascript.net/) with an interactive coding sandbox to try out examples.^[@haverbekeEloquentJavaScriptModern2018]
+If you're new to coding, creating Leaflet maps can be a great place to start and quickly see the results of what you've learned. To help solve problems that may arise, see how to [Fix Common Problems](fix.html) in the appendix. Or to delve further into JavaScript, the language that Leaflet relies on, we strongly recommend Marijn Haverbeke's *Eloquent JavaScript*, available both in print and as an [open-source online book](https://eloquentjavascript.net/) with an interactive coding sandbox to try out examples.^[@haverbekeEloquentJavaScriptModern2018]
 
 Table: (\#tab:map-templates) Map Code Templates, Best Uses, and Tutorials
 
@@ -56,7 +56,7 @@ In the third part, you have two options to finalize your map before publicly sha
 - OR
 - H) Get your own Google Sheets API Key to insert into the code.
 
-If any problems arise, see the [Fix Common Mistakes](fix.html) section of the appendix.
+If any problems arise, see the [Fix Common Problems](fix.html) section of the appendix.
 
 Now that you have a better sense of the big picture, let's get started with the first part of the tutorial.
 
@@ -278,7 +278,7 @@ If you have finished entering most of your data into your Google Sheets, downloa
 #### H) Get your own Google Sheets API Key to insert into the code {-}
 As an alternative to step G, if you wish to continue to store your map data in your Google Sheets that is published online, go to the section of this chapter titled [Get Your Own Google Sheets API Key](google-sheets-api-key.html), and insert it into the Leaflet map code as described, to avoid overusing our key. Google Sheets requires an API key to maintain reasonable [usage limits](https://developers.google.com/sheets/api/limits) on its service. You can get a free Google Sheets API key if you have a personal Google account, but *not* a Google Suite account provided by your school or business.
 
-If problems arise, see the [Fix Common Mistakes](fix.html) section of the appendix.
+If problems arise, see the [Fix Common Problems](fix.html) section of the appendix.
 
 ## Leaflet Storymaps with Google Sheets {- #leaflet-storymaps-with-google-sheets}
 The Leaflet Storymaps code template is designed to show a point-by-point guided tour, with a scrolling narrative to display text, images, audio, video, and scanned map backgrounds, as shown in Figure \@ref(fig:storymap-demo). You enter all of your map data into a linked Google Sheet (or CSV file) or upload it into a GitHub repository, as shown in Figure \@ref(fig:storymap-sheet). In addition, the Leaflet Storymaps template allows you to customize the appearance of your data, and to add more layers, such as historical maps and geographic boundaries, which you'll learn how to prepare in [Chapter 14: Transform Your Map Data](transform.html). Furthermore, the storymap design is responsive, so that it appears top-and-bottom on smaller screens (where width is less than 768 pixels), and automatically switches to side-by-side on larger ones. Finally, the Leaflet template is built on flexible open-source software that's written primarily in JavaScript, a very common coding language for the web, so you can customize it further if you have skills or support from a developer.
@@ -329,7 +329,7 @@ In the third part, you have two options to finalize your map before publicly sha
 - OR
 - H) Get your own Google Sheets API Key to insert into the code.
 
-If any problems arise, see the [Fix Common Mistakes](fix.html) section of the appendix.
+If any problems arise, see the [Fix Common Problems](fix.html) section of the appendix.
 
 Now that you have a better sense of the big picture, let's get started with the first part of the tutorial.
 
@@ -532,7 +532,7 @@ If you have finished entering most of your data into your Google Sheets, downloa
 #### H) Get your own Google Sheets API Key to insert into the code {-}
 As an alternative to step G, if you wish to continue to store your map data in your Google Sheets that is published online, go to the section of this chapter titled [Get Your Own Google Sheets API Key](google-sheets-api-key.html), and insert it into the Leaflet map code as described, to avoid overusing our key. Google Sheets requires an API key to maintain reasonable [usage limits](https://developers.google.com/sheets/api/limits) on its service. You can get a free Google Sheets API key if you have a personal Google account, but *not* a Google Suite account provided by your school or business.
 
-If problems arise, see the [Fix Common Mistakes](fix.html) section of the appendix.
+If problems arise, see the [Fix Common Problems](fix.html) section of the appendix.
 
 ## Get Your Google Sheets API Key {- #google-sheets-api-key}
 After you've created your own version of [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets.html) or [Leaflet Storymaps with Google Sheets](leaflet-storymaps-with-google-sheets.html), there are two ways to finalize your map, as described above: either save your Google Sheet tabs in CSV format, or get your own Google Sheets API key and paste it into your Leaflet code on GitHub. You'll learn about the latter method in this section.

@@ -91,7 +91,7 @@ Even if individual-level data is legally and publicly accessible, each of us is 
 Imagine that you're exploring crime data and wish to create an interactive map about the frequency of different types of 911 police calls across several neighborhoods. If you search for [public data about police calls](http://www.opendatanetwork.com/search?q=police), as described in the [Open Data section in this chapter](open-data.html), you'll see different policies and practices for sharing individual-level data published by police call centers. In many US states, information about victims of sexual crimes or child abuse (such as the address where police were sent) is considered confidential and exempt from public release, so it's not included in the open data. But some police departments publish open data about calls with the full address for other types of crimes, in a format like this:
 
 ```
-| Date | Full Address | Category |
+| Date  | Full Address | Category           |
 | Jan 1 | 1234 Main St | Aggravated Assault |
 ```
 
@@ -100,8 +100,8 @@ While this information is publicly available, it's possible that you could cause
 One alternative is to *mask* details in sensitive data. For example, some police departments hide the last few digits of street addresses in their open data reports to protect individual privacy, while still showing the general location, in a format like this:
 
 ```
-| Date | Masked Address | Category |
-| Jan 1 | 1XXX Main St | Aggravated Assault |
+| Date  | Masked Address | Category           |
+| Jan 1 | 1XXX Main St   | Aggravated Assault |
 ```
 
 You can also mask individual-level data when appropriate, using methods similar to the Find and Replace method with your spreadsheet tool as in [Chapter 5: Clean Up Messy Data](clean.html).
@@ -109,9 +109,9 @@ You can also mask individual-level data when appropriate, using methods similar 
 Another strategy is to *aggregate* individual-level data into larger groups, which can protect privacy while showing broader patterns. In the example above, if you're exploring crime data across different neighborhoods, grouping individual 911 calls into larger geographic areas, such as census tracts or area names, in a format like this:
 
 ```
-| Neighborhood | Crime Category | Frequency |
-| East Side | Aggravated Assault | 13 |
-| West Side | Aggravated Assault | 21 |
+| Neighborhood | Crime Category     | Frequency |
+| East Side    | Aggravated Assault | 13        |
+| West Side    | Aggravated Assault | 21        |
 ```
 
 Aggregating individual-level details into larger, yet meaningful categories, is also a better way to tell data stories about the bigger picture. To aggregate simple spreadsheet data, see the [summarizing with pivot tables section in Chapter 3](pivot.html). To [geocode US addresses into census areas](bulk-geocode.html), or to [pivot address points into a polygon map](pivot-point-to-polygon.html), or to [normalize data](normalize.html) to create more meaningful maps, see [Chapter 14: Transform Your Map Data](transform.html).

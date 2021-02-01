@@ -185,7 +185,7 @@ Now, let's look at a slightly more complicated example. Each cell contains a ful
 knitr::include_graphics("images/05-clean/sheets-split-complex.png")
 ```
 
-Tip: Google Sheets will treat zip codes as numbers and will delete leading zeros (so 06106 will become 6106). To fix that, select the column, and go to *Format > Number > Plain text*. Now you can manually re-add zeros. If your dataset is large, consider adding zeros using the formula introduced in the [following section](combine-separate-columns.html).
+Tip: Google Sheets will treat zip codes as numbers and will delete leading zeros (so 06106 will become 6106). To fix that, select the column, and go to *Format > Number > Plain text*. Now you can manually re-add zeros. If your dataset is large, consider adding zeros using the formula introduced in the [following section](combine-data.html).
 
 ## Combine Data into One Column {- #combine-data}
 Let's perform the reverse action by combining data into one column with a spreadsheet formula, also called concatenation, using the ampersand symbol (`&`). Imagine you receive address data in four separate columns: street address, city, state, and zip code.

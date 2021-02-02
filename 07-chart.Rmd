@@ -275,15 +275,15 @@ To create your own interactive grouped column (or bar) chart, use our template a
  knitr::include_graphics("images/07-chart/file-make-copy2.png")
 ```
 
-2. To remove the current chart from your copy of the spreadsheet, float your cursor to the top-right corner of the chart to make the 3-dot kebab menu appear, and select *Delete*, as shown in Figure \@ref(fig:delete-chart).
+2. To remove the current chart from your copy of the spreadsheet, float your cursor to the top-right corner of the chart to make the three-dot kebab menu appear, and select *Delete*, as shown in Figure \@ref(fig:delete-chart).
 
-(ref:delete-chart) Float cursor in top-right corner of the chart to make the 3-dot kebab menu appear, and select Delete.
+(ref:delete-chart) Float cursor in top-right corner of the chart to make the three-dot kebab menu appear, and select Delete.
 
 ```{r delete-chart, out.width="180px", fig.cap="(ref:delete-chart)"}
  knitr::include_graphics("images/07-chart/delete-chart.png")
 ```
 
-Note: Another name for the 3-dot menu symbol is the "kebab menu" because it resembles Middle Eastern
+Note: Another name for the three-dot menu symbol is the "kebab menu" because it resembles Middle Eastern
 food cooked on a skewer, in contrast to the three-line "hamburger menu" on many mobile devices,
 as shown in Figure \@ref(fig:menu-hamburger-kebab). Software developers must be hungry.
 

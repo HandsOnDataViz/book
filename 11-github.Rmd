@@ -62,7 +62,7 @@ The upper-left corner of the next screen will say `USERNAME/leaflet-map-simple` 
 
 - `LICENSE` shows that we've selected the MIT License, which allows anyone to copy and modify the code as they wish.
 - `README.md` provides a simple description and link to the live demo, which we'll come back to later.
-- `index.html` is the key file in this particular, because it contains the map code.
+- `index.html` is the key file in this particular template, because it contains the map code.
 
 5. Click on the `index.html` file to view the code, as shown in Figure \@ref(fig:leaflet-simple-index).
 
@@ -134,11 +134,11 @@ The second tab contains your GitHub Pages live website, where your edited code a
 
 `https://USERNAME.github.io/REPOSITORY`
 
+Note: The live version of your code points to the `index.html` page by default, so it's not necessary to include it in the web address.
+
 Remember how we told you not to create your account with a username like `DrunkBrownieChef6789`? GitHub automatically places your username automatically in the public web address.
 
 Keep both tabs open so you can easily go back and forth between editing your code and viewing the live results online.
-
-Note: The live version of your code points to the `index.html` page by default, so it's not necessary to include it in the web address. Also, web addresses are *not* case sensitive, meaning you can save time by typing all of it in lower-case.
 
 Tip: If your live map does *not* appear right away, wait up to 30 seconds for GitHub Pages to finish processing your edits. Then give your browser a "hard refresh" to [bypass any saved content in your cache](https://en.wikipedia.org/wiki/Wikipedia:Bypass_your_cache) and re-download the entire web page from the server, using one of these key combinations:
 
@@ -175,8 +175,8 @@ Wherever you see the `EDIT` code comment, this points out a line that you can ea
 
 ```
   var map = L.map('map', {
-    center: [41.77, -72.69], // EDIT latitude, longitude to re-center map
-    zoom: 12,  // EDIT from 1 to 18 -- decrease to zoom out, increase to zoom in
+    center: [41.77, -72.69], // EDIT coordinates to re-center map
+    zoom: 12,  // EDIT from 1 (zoomed out) to 18 (zoomed in)
     scrollWheelZoom: false,
     tap: false
   });
@@ -186,7 +186,7 @@ The next code block displays the basemap tile layer that serve as the map backgr
 
 ```
  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>,
+   attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a>,
    &copy; <a href="https://carto.com/attribution">CARTO</a>'
  }).addTo(map);
 ```
@@ -194,7 +194,7 @@ The next code block displays the basemap tile layer that serve as the map backgr
 The last code block displays a single point marker on the map, colored blue by default in Leaflet, with a pop-up message when users click it. You can edit the marker coordinates, insert the pop-up text, or copy and paste the code block to create a second marker.
 
 ```
-L.marker([41.77, -72.69]).addTo(map) // EDIT latitude, longitude to re-position marker
+L.marker([41.77, -72.69]).addTo(map) // EDIT coordinates to re-position marker
 .bindPopup("Insert pop-up text here"); // EDIT pop-up text message
 ```
 

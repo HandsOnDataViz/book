@@ -29,7 +29,7 @@ As you learned in the previous chapter about charts, data visualization is not a
 ### Deconstructing a Map {-}
 Our book features how to create *interactive* web maps, also called *tiled maps* or *slippy maps*, because users can zoom into and pan around to explore map data layers on top of a seamless set of basemap tiles. Basemaps that display aerial photo imagery are known as *raster* tiles, while those that display pictorial images of streets and buildings are tiles that are built from *vector* data. Raster map data is limited by the resolution of the original image, which gets fuzzier as we get closer. By contrast, you can zoom in very close to vector map data without diminishing its visual quality, as shown in Figure \@ref(fig:raster-vs-vector-zoom). You'll learn more about these concepts in the [GeoJSON and Geospatial Data](geojson.html) section of Chapter 14.
 
-(ref:raster-vs-vector-zoom) Raster map data from Esri World Imagery (on the left), and vector map data from OpenStreetMap (on the right), both showing co-author Ilyankou's childhood neighborhood in Mogilev, Belarus. Zooming into raster map data makes it fuzzier, while vector map data retains its sharpness.
+(ref:raster-vs-vector-zoom) Raster map data from Esri World Imagery (on the left), and vector map data from OpenStreetMap (on the right), both showing Ilya's childhood neighborhood in Mogilev, Belarus. Zooming into raster map data makes it fuzzier, while vector map data retains its sharpness.
 
 ```{r raster-vs-vector-zoom, out.width=750, fig.cap="(ref:raster-vs-vector-zoom)"}
 knitr::include_graphics("images/08-map/raster-vs-vector-zoom.png")
@@ -289,7 +289,7 @@ Google My Maps will automatically [geocode your address data as we discussed in 
 
 8. Click the three-dot kebab menu next to the *Museums and Parks...* layer to *Rename* and shorten its name, since the full name of the file is imported by default, as shown in Figure \@ref(fig:mymaps-rename-layer).
 
-(ref:mymaps-rename-layer) Click the 3-dot kebab menu next to the layer to shorten its name.
+(ref:mymaps-rename-layer) Click the three-dot kebab menu next to the layer to shorten its name.
 
 ```{r mymaps-rename-layer, out.width=300, fig.cap="(ref:mymaps-rename-layer)"}
 knitr::include_graphics("images/08-map/mymaps-rename-layer.png")
@@ -414,7 +414,7 @@ Good maps often require [cleaning up messy data as described in Chapter 5](clean
 knitr::include_graphics("images/08-map/datawrapper-symbolmap-start.png")
 ```
 
-4. In the *Select your map* screen, search for *USA > States and Territories* to include Puerto Rico, rather than the *USA > *States* option that appears closer to the top of the list. Proceed to the next screen.
+4. In the *Select your map* screen, search for *USA > States and Territories* to include Puerto Rico, rather than the *USA > States* option that appears closer to the top of the list. Proceed to the next screen.
 
 5. In the *Add your data* screen, click the *Import your dataset* button. In the next window, click the *Addresses and Place Names* button to inform Datawrapper that our information is organized this way. In the *Import* window, click to *Upload a CSV file*, and select the file you downloaded above.
 
@@ -507,7 +507,7 @@ knitr::include_graphics("images/08-map/datawrapper-import-dataset.png")
 Datawrapper will explain that when uploading data to the *USA > States and Territories map*, your data must include one of these columns:
 
 - Names, such as `California`.
-- FIPS-Codes, the Federal Information Processing Series numeric codes for US states and smaller geographies, where California is `06`.
+- FIPS-Codes, the Federal Information Processing Standards numeric codes for US states and smaller geographies, where California is `06`.
 - ANSI-Codes, the American National Standards Institute alphabetical or numeric codes for US states and smaller geographies, where California is `CA`. Learn more from the [US Census Bureau about ANSI and FIPS codes](https://www.census.gov/library/reference/code-lists/ansi.html).
 
 Codes vary by the type of map. For example, a world map may accept country names (which vary in spelling) or [ISO three-letter codes](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes). To view all of the codes for your selected geography, go back one screen in Datawrapper and select the Geo-code drop-down menu, as shown in Figure \@ref(fig:datawrapper-import-codes). If necessary, you could copy and paste names and their code equivalents into your spreadsheet to prepare your data. Learn more about [place name geocoding at the Datawrapper Academy](https://academy.datawrapper.de/article/193-symbol-location-accuracy-using-addresses-place-names).

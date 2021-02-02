@@ -26,7 +26,7 @@ In its simplest form, an iframe instructs the secondary site to display a web pa
 
 `<iframe src='https://datawrapper.dwcdn.net/LtRbj/'></iframe>`
 
-(ref:iframe-sample) Depending on the format of your book, if a static chart appears above, but you can also [view the interactive version](https://datawrapper.dwcdn.net/LtRbj/).
+(ref:iframe-sample) Depending on the format of your book, if a static chart appears above, you can also [view the interactive version](https://datawrapper.dwcdn.net/LtRbj/).
 
 ```{r iframe-sample, fig.cap="(ref:iframe-sample)"}
 if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://datawrapper.dwcdn.net/LtRbj/") else knitr::include_graphics("images/10-embed/iframe-sample.png")
@@ -48,7 +48,7 @@ We'll break this down into three steps for each visualization platform. First, w
 ```
 
 ### from Google Sheets {-}
-1. After you create a [Google Sheets chart as you did in Chapter 7](chart-google.html), click the 3-dot kebab menu in the upper-right corner of the chart to publish it, as shown in Figure \@ref(fig:google-sheets-publish).
+1. After you create a [Google Sheets chart as you did in Chapter 7](chart-google.html), click the three-dot kebab menu in the upper-right corner of the chart to publish it, as shown in Figure \@ref(fig:google-sheets-publish).
 
 (ref:google-sheets-publish) In your chart, click the three-dot kebab menu to publish it.
 
@@ -101,7 +101,7 @@ At first glance, the Google Sheets embed code may appear long, but it's actually
  knitr::include_graphics("images/10-embed/datawrapper-tryit.png")
 ```
 
-The Datawrapper embed code is *long*, but if you look closely, the first half contains a relatively straightforward iframe tag that includes familiar-looking attributes such `src`,`scrolling`, and `frameborder`, and `width` and `height` inside a style tag. The second half of the embed code contains JavaScript instructions to make the iframe appear responsive depending on the size of the device screen.
+The Datawrapper embed code is *long*, but if you look closely, the first half contains a relatively straightforward iframe tag that includes familiar-looking attributes such `src`, `scrolling`, and `frameborder`, and `width` and `height` inside a style tag. The second half of the embed code contains JavaScript instructions to make the iframe appear responsive depending on the size of the device screen.
 
 4. Always try to paste the *full embed code* in your desired web platform. Jump to the [paste code to website section](paste-code.html) of this chapter to learn how to properly insert your embed code into common websites.
 

@@ -5233,17 +5233,17 @@ Figure 7.14: Make your own copy of the Google Sheet template.
 </p>
 
 1.  To remove the current chart from your copy of the spreadsheet, float
-    your cursor to the top-right corner of the chart to make the 3-dot
+    your cursor to the top-right corner of the chart to make the three-dot
     kebab menu appear, and select *Delete*, as shown in Figure
     <a href="#fig:delete-chart">7.15</a>.
 
-<img src="images/07-chart/delete-chart.png" alt="Float cursor in top-right corner of the chart to make the 3-dot kebab menu appear, and select Delete." width="180px" />
+<img src="images/07-chart/delete-chart.png" alt="Float cursor in top-right corner of the chart to make the three-dot kebab menu appear, and select Delete." width="180px" />
 <p class="caption">
 Figure 7.15: Float cursor in top-right corner of the chart to make the
-3-dot kebab menu appear, and select Delete.
+three-dot kebab menu appear, and select Delete.
 </p>
 
-Note: Another name for the 3-dot menu symbol is the “kebab menu” because
+Note: Another name for the three-dot menu symbol is the “kebab menu” because
 it resembles Middle Eastern food cooked on a skewer, in contrast to the
 three-line “hamburger menu” on many mobile devices, as shown in Figure
 <a href="#fig:menu-hamburger-kebab">7.16</a>. Software developers must
@@ -7506,9 +7506,9 @@ blue markers, and center the map to fit all of the points.
     file is imported by default, as shown in Figure
     <a href="#fig:mymaps-rename-layer">8.22</a>.
 
-<img src="images/08-map/mymaps-rename-layer.png" alt="Click the 3-dot kebab menu next to the layer to shorten its name." width="300" />
+<img src="images/08-map/mymaps-rename-layer.png" alt="Click the three-dot kebab menu next to the layer to shorten its name." width="300" />
 <p class="caption">
-Figure 8.22: Click the 3-dot kebab menu next to the layer to shorten its
+Figure 8.22: Click the three-dot kebab menu next to the layer to shorten its
 name.
 </p>
 
@@ -9164,7 +9164,7 @@ selected text of the W3Schools TryIt iframe page to test how it works.
 ### from Google Sheets
 
 1.  After you create a [Google Sheets chart as you did in Chapter
-    7](chart-google.html), click the 3-dot kebab menu in the upper-right
+    7](chart-google.html), click the three-dot kebab menu in the upper-right
     corner of the chart to publish it, as shown in Figure
     <a href="#fig:google-sheets-publish">10.4</a>.
 

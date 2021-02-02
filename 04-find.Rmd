@@ -22,7 +22,7 @@ If a governmental organization may have been involved, then at what level: local
 
 Is information disaggregated into individual cases or aggregated into larger groups? Smaller units of data allow you to make more granular interpretations, while larger units can help you to identify broader patterns. Librarians can help us to decipher how and why organizations publish data at different levels. For example, the US Census collects data every ten years about each person residing in the nation. Under law, individual-level data about each person is confidential for 72 years, then released to the public. Currently, you can search for specific individuals in the 1940 Census and earlier decades at the [US National Archives](https://www.archives.gov/research/genealogy/census/about) and other websites, as shown in Figure \@ref(fig:census-1940-excerpt).
 
-(ref:census-1940-excerpt) Excerpt of individual-level 1940 US Census data for co-author Dougherty's father's family.
+(ref:census-1940-excerpt) Excerpt of individual-level 1940 US Census data for Jack's father's family.
 
 ```{r census-1940-excerpt, out.width=350, fig.cap="(ref:census-1940-excerpt)"}
  knitr::include_graphics("images/04-find/census-1940-excerpt.png")

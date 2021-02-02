@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2021-02-01" />
+<meta name="date" content="2021-02-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -397,7 +397,7 @@ Figure 11.3: Name your copied repo <code>leaflet-map-simple</code>.
 <ul>
 <li><code>LICENSE</code> shows that we’ve selected the MIT License, which allows anyone to copy and modify the code as they wish.</li>
 <li><code>README.md</code> provides a simple description and link to the live demo, which we’ll come back to later.</li>
-<li><code>index.html</code> is the key file in this particular, because it contains the map code.</li>
+<li><code>index.html</code> is the key file in this particular template, because it contains the map code.</li>
 </ul>
 <ol start="5" style="list-style-type: decimal">
 <li>Click on the <code>index.html</code> file to view the code, as shown in Figure <a href="copy-leaflet.html#fig:leaflet-simple-index">11.4</a>.</li>
@@ -470,9 +470,9 @@ Figure 11.9: In <em>Settings</em> for <em>GitHub Pages</em>, right-click your pu
 <p><code>https://github.com/USERNAME/REPOSITORY</code></p>
 <p>The second tab contains your GitHub Pages live website, where your edited code appears online. GitHub Pages automatically generates a public web address in this format:</p>
 <p><code>https://USERNAME.github.io/REPOSITORY</code></p>
+<p>Note: The live version of your code points to the <code>index.html</code> page by default, so it’s not necessary to include it in the web address.</p>
 <p>Remember how we told you not to create your account with a username like <code>DrunkBrownieChef6789</code>? GitHub automatically places your username automatically in the public web address.</p>
 <p>Keep both tabs open so you can easily go back and forth between editing your code and viewing the live results online.</p>
-<p>Note: The live version of your code points to the <code>index.html</code> page by default, so it’s not necessary to include it in the web address. Also, web addresses are <em>not</em> case sensitive, meaning you can save time by typing all of it in lower-case.</p>
 <p>Tip: If your live map does <em>not</em> appear right away, wait up to 30 seconds for GitHub Pages to finish processing your edits. Then give your browser a “hard refresh” to <a href="https://en.wikipedia.org/wiki/Wikipedia:Bypass_your_cache">bypass any saved content in your cache</a> and re-download the entire web page from the server, using one of these key combinations:</p>
 <ul>
 <li>Ctrl + F5 (most browsers for Windows or Linux)</li>
@@ -508,18 +508,18 @@ Figure 11.11: Open and edit the <code>README</code> file to paste the link to yo
 </ol>
 <p>Wherever you see the <code>EDIT</code> code comment, this points out a line that you can easily modify. For example, look for the code block shown below that sets up the initial center point of the map and its zoom level. Insert a new latitude and longitude coordinate to set a new center point. To find coordinates, right-click on any point in <a href="https://google.com/maps">Google Maps</a> and select <em>What’s here?</em>, as described in the <a href="geocode.html">geocoding section in Chapter 3</a>.</p>
 <pre><code>  var map = L.map(&#39;map&#39;, {
-    center: [41.77, -72.69], // EDIT latitude, longitude to re-center map
-    zoom: 12,  // EDIT from 1 to 18 -- decrease to zoom out, increase to zoom in
+    center: [41.77, -72.69], // EDIT coordinates to re-center map
+    zoom: 12,  // EDIT from 1 (zoomed out) to 18 (zoomed in)
     scrollWheelZoom: false,
     tap: false
   });</code></pre>
 <p>The next code block displays the basemap tile layer that serve as the map background. Our template uses a light map with all labels, publicly provided by CARTO, with credit to OpenStreetMap. One simple edit is to change <code>light_all</code> to <code>dark_all</code>, which will substitute a different CARTO basemap with inverted coloring. Or see many other Leaflet basemap code options that you can paste in at <a href="https://leaflet-extras.github.io/leaflet-providers/preview/" class="uri">https://leaflet-extras.github.io/leaflet-providers/preview/</a>. Make sure to attribute the source, and also keep <code>}).addTo(map);</code> at the end of this code block, which displays the basemap.</p>
 <pre><code> L.tileLayer(&#39;https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png&#39;, {
-   attribution: &#39;&amp;copy; &lt;a href=&quot;http://www.openstreetmap.org/copyright&quot;&gt;OpenStreetMap&lt;/a&gt;,
+   attribution: &#39;&amp;copy; &lt;a href=&quot;http://osm.org/copyright&quot;&gt;OpenStreetMap&lt;/a&gt;,
    &amp;copy; &lt;a href=&quot;https://carto.com/attribution&quot;&gt;CARTO&lt;/a&gt;&#39;
  }).addTo(map);</code></pre>
 <p>The last code block displays a single point marker on the map, colored blue by default in Leaflet, with a pop-up message when users click it. You can edit the marker coordinates, insert the pop-up text, or copy and paste the code block to create a second marker.</p>
-<pre><code>L.marker([41.77, -72.69]).addTo(map) // EDIT latitude, longitude to re-position marker
+<pre><code>L.marker([41.77, -72.69]).addTo(map) // EDIT coordinates to re-position marker
 .bindPopup(&quot;Insert pop-up text here&quot;); // EDIT pop-up text message</code></pre>
 <p>Warning: Be careful when editing your code. Accidentally removing or adding extra punctuation (such as quotation marks, commas, or semicolons) can stop your map from working. But breaking your code—and fixing it—can also be a great way to learn.</p>
 <ol start="15" style="list-style-type: decimal">

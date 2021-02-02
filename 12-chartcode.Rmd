@@ -1,8 +1,8 @@
 # Chart.js and Highcharts Templates {#chartcode}
 
 In [Chapter 7: Chart Your Data](chart.html), we looked at powerful drag-and-drop tools,
-such as [Google Sheets](chart-google.html), [Datawrapper](chart-tableau-public.html)
-and [Tableau Public](chart-tableau-public.html) to build interactive charts.
+such as [Google Sheets](chart-google.html), [Datawrapper](chart-datawrapper.html)
+and [Tableau Public](chart-tableau.html) to build interactive charts.
 
 In this chapter, we will look into creating interactive charts using two popular
 JavaScript libraries, [Chart.js](https://www.chartjs.org/) and [Highcharts](https://www.highcharts.com/).
@@ -240,7 +240,7 @@ var SHOW_GRID = true;
 var SHOW_LEGEND = true;
 ```
 
-Note: To change a Chart.js line chart into a stacked area chart, make sure each `dataset` comes with a `fill: true` property, and that yAxis `stacked` property is set to `true`.
+Note: To change a Chart.js line chart into a stacked area chart, see the [Chart.js Stacked Area documentation](https://www.chartjs.org/docs/latest/charts/line.html?h=stacked). Make sure each `dataset` comes with a `fill: true` property, and also make sure that `yAxes` has its `stacked` property set to `true`.
 
 Remember to look at the official [Chart.js documentation](https://www.chartjs.org/docs/latest/) if you want to add more features. If something isn't working as desired, visit [StackOverflow](https://stackoverflow.com/search?q=chartjs) to see if anyone had already solved your problem.
 
@@ -352,7 +352,7 @@ You may want to show an additional third variable, such as enrollment in each sc
 
 ## Bubble Chart with Chart.js {- #chartjs-bubble}
 
-Bubble charts are similar to [scatter plots](chartjs-scatter-csv.html), but it adds one more variable (also known as dimension): the size of each point (marker) also represents a value.
+Bubble charts are similar to [scatter plots](chartjs-scatter.html), but it adds one more variable (also known as dimension): the size of each point (marker) also represents a value.
 
 The bubble chart in Figure \@ref(fig:chartjs-demo-bubble) shows how median household income (x-axis) and test performance (y-axis) in 6 school districts in Connecticut are related. The size of data point corresponds to the number of students enrolled in the school district: bigger circles represent larger school districts.
 
@@ -405,7 +405,7 @@ var Y_AXIS = 'Grade, Relative to Average'; // y-axis label, label in tooltip
 var SHOW_GRID = true; // `true` to show the grid, `false` to hide
 ```
 
-Tip: To display smaller data points that may be hidden behind larger neighbors, use semi-transparent circles with RGBA color codes. The first three characters represent red, green, and blue, while the `a` stands for `alpha` and represents the level of transparency on a scale from 0.0 (full transparent) to 1.0 (fully opaque). For example, `rgba(160, 0, 0, 0.5)` creates a red color that is semi-transparent. Learn more by playing with [RGBA color values at W3Schools](https://www.w3schools.com/css/css_colors_rgb.asp).
+Tip: To display smaller data points that may be hidden behind larger neighbors, use semi-transparent circles with RGBA color codes. The first three characters represent red, green, and blue, while the `a` stands for `alpha` and represents the level of transparency on a scale from 0.0 (fully transparent) to 1.0 (fully opaque). For example, `rgba(160, 0, 0, 0.5)` creates a red color that is semi-transparent. Learn more by playing with [RGBA color values at W3Schools](https://www.w3schools.com/css/css_colors_rgb.asp).
 
 If you have more than three variables that you would like to show in your bubble chart, you can use *color* and *glyphs* (instead of simple dots) to represent two extra dimentions. For example, you may want to use the blue color to only show school districts in Fairfield County (generally a richer part of CT) and gray color to represent all other districts. You may want to use circles, squares, and triangles to represent results for males, females, and non-binary students. We won't be showing you how to achieve this, but we can assure you that it can be done in 5-10 extra lines of code.
 

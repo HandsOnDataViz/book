@@ -121,7 +121,7 @@ Table: (\#tab:tools) Recommended Tools and Uses, with Chapter References
 | GitHub Desktop & Atom code editor |  |  |  |  |  |  | [Ch11](github-desktop-atom.html) |  |
 | GeoJson.io edit  & draw geodata |  |  |  |  |  |  |  | [Ch14](geojsonio.html) |
 | Mapshaper  edit & join geodata |  |  |  |  |  |  |  | [Ch14](mapshaper.html) |
-| MapWarper  georeference images |  |  |  |  |  |  |  | [Ch14](mapwarper.html) |
+| Map Warper  georeference images |  |  |  |  |  |  |  | [Ch14](mapwarper.html) |
 
 If this list initially looks overwhelming, don't worry! Newer users can complete most of the twelve introductory-level chapters in this book with only two easy-to-learn tools. Begin with [Google Sheets for spreadsheets and basic charts](https://handsondataviz.org/spreadsheet-tools.html), then move up to [Datawrapper for more advanced charts and maps](https://handsondataviz.org/chart-datawrapper.html). You can create amazing data visualizations with just these two tools. Also, they play nicely together, as Datawrapper allows you to directly import and update data from Google Sheets.
 

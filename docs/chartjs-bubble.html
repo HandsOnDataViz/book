@@ -276,7 +276,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="geojsonio.html"><a href="geojsonio.html"><i class="fa fa-check"></i>Draw and Edit with GeoJson.io</a></li>
 <li class="chapter" data-level="" data-path="mapshaper.html"><a href="mapshaper.html"><i class="fa fa-check"></i>Edit and Join with Mapshaper</a></li>
 <li class="chapter" data-level="" data-path="convert-kmz.html"><a href="convert-kmz.html"><i class="fa fa-check"></i>Convert Compressed KMZ to KML</a></li>
-<li class="chapter" data-level="" data-path="mapwarper.html"><a href="mapwarper.html"><i class="fa fa-check"></i>Georeference with MapWarper</a></li>
+<li class="chapter" data-level="" data-path="mapwarper.html"><a href="mapwarper.html"><i class="fa fa-check"></i>Georeference with Map Warper</a></li>
 <li class="chapter" data-level="" data-path="bulk-geocode.html"><a href="bulk-geocode.html"><i class="fa fa-check"></i>Bulk Geocode with US Census</a></li>
 <li class="chapter" data-level="" data-path="pivot-point-to-polygon.html"><a href="pivot-point-to-polygon.html"><i class="fa fa-check"></i>Pivot Points into Polygon Data</a></li>
 </ul></li>
@@ -351,7 +351,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="chartjs-bubble" class="section level2 unnumbered" number="">
 <h2>Bubble Chart with Chart.js</h2>
-<p>Bubble charts are similar to <a href="chartjs-scatter-csv.html">scatter plots</a>, but it adds one more variable (also known as dimension): the size of each point (marker) also represents a value.</p>
+<p>Bubble charts are similar to <a href="chartjs-scatter.html">scatter plots</a>, but it adds one more variable (also known as dimension): the size of each point (marker) also represents a value.</p>
 <p>The bubble chart in Figure <a href="chartjs-bubble.html#fig:chartjs-demo-bubble">12.6</a> shows how median household income (x-axis) and test performance (y-axis) in 6 school districts in Connecticut are related. The size of data point corresponds to the number of students enrolled in the school district: bigger circles represent larger school districts.</p>
 
 <div class="figure"><span id="fig:chartjs-demo-bubble"></span>
@@ -398,7 +398,7 @@ Figure 12.6: Interactive bubble chart with Chart.js. Explore the <a href="https:
 <span id="cb27-23"><a href="chartjs-bubble.html#cb27-23"></a><span class="kw">var</span> Y_AXIS <span class="op">=</span> <span class="st">&#39;Grade, Relative to Average&#39;</span><span class="op">;</span> <span class="co">// y-axis label, label in tooltip</span></span>
 <span id="cb27-24"><a href="chartjs-bubble.html#cb27-24"></a></span>
 <span id="cb27-25"><a href="chartjs-bubble.html#cb27-25"></a><span class="kw">var</span> SHOW_GRID <span class="op">=</span> <span class="kw">true</span><span class="op">;</span> <span class="co">// `true` to show the grid, `false` to hide</span></span></code></pre></div>
-<p>Tip: To display smaller data points that may be hidden behind larger neighbors, use semi-transparent circles with RGBA color codes. The first three characters represent red, green, and blue, while the <code>a</code> stands for <code>alpha</code> and represents the level of transparency on a scale from 0.0 (full transparent) to 1.0 (fully opaque). For example, <code>rgba(160, 0, 0, 0.5)</code> creates a red color that is semi-transparent. Learn more by playing with <a href="https://www.w3schools.com/css/css_colors_rgb.asp">RGBA color values at W3Schools</a>.</p>
+<p>Tip: To display smaller data points that may be hidden behind larger neighbors, use semi-transparent circles with RGBA color codes. The first three characters represent red, green, and blue, while the <code>a</code> stands for <code>alpha</code> and represents the level of transparency on a scale from 0.0 (fully transparent) to 1.0 (fully opaque). For example, <code>rgba(160, 0, 0, 0.5)</code> creates a red color that is semi-transparent. Learn more by playing with <a href="https://www.w3schools.com/css/css_colors_rgb.asp">RGBA color values at W3Schools</a>.</p>
 <p>If you have more than three variables that you would like to show in your bubble chart, you can use <em>color</em> and <em>glyphs</em> (instead of simple dots) to represent two extra dimentions. For example, you may want to use the blue color to only show school districts in Fairfield County (generally a richer part of CT) and gray color to represent all other districts. You may want to use circles, squares, and triangles to represent results for males, females, and non-binary students. We won’t be showing you how to achieve this, but we can assure you that it can be done in 5-10 extra lines of code.</p>
 <p>Chart.js is pretty limitless when it comes to customization, but remember not to overwhelm the viewer and communicate only the data that are necessary to prove or illustrate your idea.</p>
 <div id="summary12" class="section level3 unnumbered" number="">

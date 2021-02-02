@@ -2,7 +2,7 @@
 
 In [Chapter 8: Map Your Data](map.html), we introduced basic concepts about interactive web maps, which are made up of different data layers. When users explore an interactive map, they usually click on the upper layer, which often displays some combination of points, polylines, and polygons, on top of a seamless set of basemap tiles that are built from raster or vector data. Whether you [create maps with drag-and-drop tools such Datawrapper](choropleth-datawrapper.html) or [customize Leaflet map code templates](leaflet.html), you may need to transform data to work with one of these types of map layers.
 
-In this chapter, we will delve further into the topic of [geospatial data and its different formats](geojson.html), such as GeoJSON, the open-standard format most commonly used in this book. You'll learn [how to find and extract geographic boundary files in this format](find-geojson.html) from the crowd-sourced OpenStreetMap platform. Also, we'll show how to convert or create your own top-level map layer data using the [GeoJson.io tool](geojsonio.html), and how to edit these layers with spreadsheet data using the [Mapshaper tool](mapshaper.html).  Moreover, you'll also learn how to georeference a high-quality static map image and transform it into interactive map tiles using the [the MapWarper tool](mapwarper.html). All of these free, web-based geodata tools are easy to learn, and in many cases they replace the need for more costly or complex geographic information systems, such as the proprietary ArcGIS and the open-source QGIS desktop applications. Finally, we'll conclude with strategies to [bulk geocode large batches of address data](bulk-geocode.html), and to [pivot points into polygon data](pivot-point-to-polygon.html), which enables you to display this information in choropleth maps. By the end of this chapter, you should feel much more confident in navigating the somewhat-overwhelming world of geospatial data.
+In this chapter, we will delve further into the topic of [geospatial data and its different formats](geojson.html), such as GeoJSON, the open-standard format most commonly used in this book. You'll learn [how to find and extract geographic boundary files in this format](find-geojson.html) from the crowd-sourced OpenStreetMap platform. Also, we'll show how to convert or create your own top-level map layer data using the [GeoJson.io tool](geojsonio.html), and how to edit these layers with spreadsheet data using the [Mapshaper tool](mapshaper.html).  Moreover, you'll also learn how to georeference a high-quality static map image and transform it into interactive map tiles using the [the Map Warper tool](mapwarper.html). All of these free, web-based geodata tools are easy to learn, and in many cases they replace the need for more costly or complex geographic information systems, such as the proprietary ArcGIS and the open-source QGIS desktop applications. Finally, we'll conclude with strategies to [bulk geocode large batches of address data](bulk-geocode.html), and to [pivot points into polygon data](pivot-point-to-polygon.html), which enables you to display this information in choropleth maps. By the end of this chapter, you should feel much more confident in navigating the somewhat-overwhelming world of geospatial data.
 
 Let's start with a general overview of geospatial data, and introduce you to various file formats to ensure you are ready to create, use, and share map data.
 
@@ -90,7 +90,7 @@ In the next section, we will describe how to find GeoJSON boundary files for man
 ## Find GeoJSON Boundary Files {- #find-geojson}
 You may be searching for geographic boundary files in GeoJSON format to create a customized map. For example, both the [Datawrapper tool described in Chapter 8](choropleth-datawrapper.html) and the [Leaflet map code code templates described in Chapter 13](leaflet.html) allow you to upload your own GeoJSON files. Since GeoJSON is an open-data standard, you may [find these files in several open data repositories listed in Chapter 4](opendata.html).
 
-Another way to find and download GeoJSON files is the clever [Gimme Geodata tool](http://hanshack.com/geotools/), developed by Hans Hack, which provides quick access to multiple layers of [OpenStreetMap](https:openstreetmap.org) boundary files. When you open the tool, search for a location and click a specific point on the map. The tool displays the names and outlines of different geographic boundaries around that point that have been uploaded into OpenStreetMap, which you can select and download in GeoJSON format. For example, when you search and click on Toronto Centre, the tool displays several neighborhood-level boundaries, the Old Toronto city boundary, the present-day Toronto city boundary, and regional and provincial boundaries, as shown in Figure \@ref(fig:gimme-geodata). Read more details about each layer to evaluate their accuracy, then select any layer to download in GeoJSON format. The tool also includes an editor (the scissors symbol) to remove water areas from the boundary file (such as deleting Lake Ontario from Toronto). When using any type of data that you downloaded from OpenStreetMap, always credit the source in your final product like this: `© OpenStreetMap contributors`.
+Another way to find and download GeoJSON files is the clever [Gimme Geodata tool](http://hanshack.com/geotools/), developed by Hans Hack, which provides quick access to multiple layers of [OpenStreetMap](https://openstreetmap.org) boundary files. When you open the tool, search for a location and click a specific point on the map. The tool displays the names and outlines of different geographic boundaries around that point that have been uploaded into OpenStreetMap, which you can select and download in GeoJSON format. For example, when you search and click on Toronto Centre, the tool displays several neighborhood-level boundaries, the Old Toronto city boundary, the present-day Toronto city boundary, and regional and provincial boundaries, as shown in Figure \@ref(fig:gimme-geodata). Read more details about each layer to evaluate their accuracy, then select any layer to download in GeoJSON format. The tool also includes an editor (the scissors symbol) to remove water areas from the boundary file (such as deleting Lake Ontario from Toronto). When using any type of data that you downloaded from OpenStreetMap, always credit the source in your final product like this: `© OpenStreetMap contributors`.
 
 (ref:gimme-geodata) Use the Gimme Geodata tool to select a point and download surrounding geographic boundaries from Open Street Map.
 
@@ -360,9 +360,7 @@ the map looks appropriate (when the shapes are still recognizable).
 knitr::include_graphics("images/14-transform/mapshaper-simplify.png")
 ```
 
-Tip: You may find the US shape a bit unusual and vertically "shrunk".
-Click open the *Console* and type `-proj EPSG:3857` to change projection to Web Mercator,
-which is more common.
+Tip: Tip: When you upload a geographic file to Mapshaper, you may need to change its projection to align with your visualization tools or related geodata. Click to open the *Console* and type `-proj webmercator` (or `-proj EPSG:3857`) to change the projection to Web Mercator, the format commonly used by Google Maps and other web mapping tools. 
 
 #### Dissolve internal polygons to create an outline map {-}
 
@@ -598,19 +596,19 @@ knitr::include_graphics("images/14-transform/kmz-save-as.png")
 Alternatively, you can use any zip-utility to extract a KML file from KMZ, because KMZ is simply a *zipped* version of a KML file!
 
 
-## Georeference with MapWarper {- #mapwarper}
+## Georeference with Map Warper {- #mapwarper}
 
-[MapWarper](http://mapwarper.net), an open-source tool created and hosted by Tim Waters, allows users to upload and georeference (also called georectify) a scanned map image. This means to precisely align the static map image on top of a present-day interactive map. As a result of this process, older map images often appear "warped" when updated for the digital age. After your map image is georeferenced and hosted on this site, a special link allows you to place this raster data as an overlay on an interactive map, such as [Leaflet Storymaps with Google Sheets as described in Chapter 13](leaflet-storymaps-with-google-sheets.html). Anyone can create a free account to upload and georeference a map on the developer's public MapWarper site. See also how the tool is used by organizations such as the [New York Public Library's digital maps collection](http://maps.nypl.org).
+[Map Warper](http://mapwarper.net), an open-source tool created and hosted by Tim Waters, allows users to upload and georeference (also called georectify) a scanned map image. This means to precisely align the static map image on top of a present-day interactive map. As a result of this process, older map images often appear "warped" when updated for the digital age. After your map image is georeferenced and hosted on this site, a special link allows you to place this raster data as an overlay on an interactive map, such as [Leaflet Storymaps with Google Sheets as described in Chapter 13](leaflet-storymaps-with-google-sheets.html). Anyone can create a free account to upload and georeference a map on the developer's public Map Warper site. See also how the tool is used by organizations such as the [New York Public Library's digital maps collection](http://maps.nypl.org).
 
-Warning: While MapWarper is a wonderful open-source platform, service may be unstable. A July 2020 update states: "Ran out of disk space. Maps older than 2 years will need re-warping to work. Downtime will happen again." We recommend that users be mindful of the platform's limitations, but also consider donating funds to the developer to continue this open-source project.
+Warning: While Map Warper is a wonderful open-source platform, service may be unstable. A July 2020 update states: "Ran out of disk space. Maps older than 2 years will need re-warping to work. Downtime will happen again." We recommend that users be mindful of the platform's limitations, but also consider donating funds to the developer to continue this open-source project.
 
 Follow this abbreviated tutorial to create a georeferenced overlay map, based on a [more detailed version by digital librarians Erica Hayes and Mia Partlow](https://github.com/ericayhayes/georeferencingtutorial).^[@hayesTutorialGeoreferencingDisplaying2020]
 
-1. Create a free account on [MapWarper](http://mapwarper.net).
+1. Create a free account on [Map Warper](http://mapwarper.net).
 
 2. Upload a high-quality image or scan of a map that has not yet been georeferenced, such as an image of a paper historical map, and enter metadata for others to find it. Follow guidelines about fair-use copyright or works in the public domain.
 
-3. After you upload the image, click on the *Rectify* tab in the MapWarper interface, and practice moving around the map.
+3. After you upload the image, click on the *Rectify* tab in the Map Warper interface, and practice moving around the map.
 
 4. Click to add a control point in the historic map window, then click to add a matching control point in the modern map window to align the two images, as shown in Figure \@ref(fig:mapwarper). Good control points are stable locations or landmarks that have not changed during the time period between the two maps. For example, major cities, railroad tracks, or road intersections might be a good way to align maps from the early 1900s to today, depending on the map scale and historical context.
 
@@ -620,7 +618,7 @@ Follow this abbreviated tutorial to create a georeferenced overlay map, based on
 knitr::include_graphics("images/14-transform/mapwarper.png")
 ```
 
-5. Add at least 4 or 5 control points to match the two maps and spread them out. When you are satisfied, click the *Warp Image* button at the bottom of the page. MapWarper transforms the static map image into a set of georeferenced map tiles, which now appear as a layer on top of the modern map.
+5. Add at least 4 or 5 control points to match the two maps and spread them out. When you are satisfied, click the *Warp Image* button at the bottom of the page. Map Warper transforms the static map image into a set of georeferenced map tiles, which now appear as a layer on top of the modern map.
 
 6. Click the *Export* tab, and under *Map Services*, copy the Tiles URL that appears in Google/OpenStreetMap format, similar to this:
 
@@ -628,7 +626,7 @@ knitr::include_graphics("images/14-transform/mapwarper.png")
 
 7. You can copy and paste this special Tiles URL into the [Leaflet Storymaps with Google Sheets template as described in Chapter 13](leaflet-storymaps-with-google-sheets.html), or other web map tools or code templates that display overlay maps in this format. But it will not work if you paste it into a regular web browser.
 
-You can search for historical maps that have already been georeferenced and transformed into tiles, or contribute to crowdsourcing efforts to align maps, on platforms such as [Mapwarper](https://mapwarper.net), the [New York Public Library Mapwarper](http://maps.nypl.org/warper/).
+You can search for historical maps that have already been georeferenced and transformed into tiles, or contribute to crowdsourcing efforts to align maps, on platforms such as [Map warper](https://mapwarper.net), the [New York Public Library Map Warper](http://maps.nypl.org/warper/).
 
 ## Bulk Geocode with US Census {- #bulk-geocode}
 In Chapter 3: Strengthen Your Spreadsheet Skills, you learned [how to geocode addresses with a Google Sheets Add-On](geocode.html) called [Geocoding by SmartMonkey](https://gsuite.google.com/marketplace/app/geocoding_by_smartmonkey/1033231575312). Geocoding converts street addresses to latitude-longitude coordinates (such as *300 Summit St, Hartford CT, USA* to *41.75, -72.69*) that can be placed on maps. While the Geocoding by SmartMonkey Add-On for Google Sheets works well for medium-sized batches of addresses, sometimes you need a faster geocoding service for larger jobs.
@@ -693,7 +691,7 @@ location (nicely divided into Address, City, State, and ZIP Code columns),
 a phone number and some other indicators, such as mortality and patient experience.
 
 Now, imagine you are given a task to create a choropleth map of total hospitals by US state.
-Instead of showing individual hospitals as points (as in Figuer \@ref(fig:pivot-address)a ),
+Instead of showing individual hospitals as points (as in Figure \@ref(fig:pivot-address)a ),
 you want darker shades of blue to represent states with more hospitals (as in Figure \@ref(fig:pivot-address)b).
 
 (ref:pivot-address) You can count addresses by state (or other area) to produce polygon,

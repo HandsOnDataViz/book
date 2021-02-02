@@ -27,7 +27,7 @@ If you have a problem with one of our recommended digital tools, and have not fo
 - [Leaflet map code library - tutorials and documentation](https://leafletjs.com)
 - [LibreOffice Calc support](https://help.libreoffice.org)
 - [Mapshaper geodata editor - documentation wiki](https://github.com/mbloch/mapshaper/wiki)
-- [MapWarper georectifier help](https://mapwarper.net/help) and [see note about limited disk space](https://mapwarper.net)
+- [Map Warper georectifier help](https://mapwarper.net/help) and [see note about limited disk space](https://mapwarper.net)
 - [OpenRefine data cleaner - documentation](https://openrefine.org)
 - [Tabula PDF table extractor - how to use](https://tabula.technology)
 - [Tableau Public resources page](https://public.tableau.com/en-us/s/resources).
@@ -59,7 +59,7 @@ If you encounter any issues when using your favorite browser with digital tools 
 
 ## Diagnose with developer tools {#fix-developer-tools}
 
-We recommend learning how to use your browser to diagnose other types of issues discussed later in this chapter, such as [problems with iframes](fix-embed.html) or [code templates](fix-code.html). Most browsers contain *developer tools* that allow you to view the source code of a web page and spot any errors that it flags. Even if you're not a software developer, learning how to open your browser's developer tools allows you to peek under the hood and make a more informed guess about what's not working. To open developer tools in various browsers:
+We recommend learning how to use your browser to diagnose other types of issues discussed later in this appendix, such as [common iframe errors](fix-iframe.html) or [code template issues](fix-code.html). Most browsers contain *developer tools* that allow you to view the source code of a web page and spot any errors that it flags. Even if you're not a software developer, learning how to open your browser's developer tools allows you to peek under the hood and make a more informed guess about what's not working. To open developer tools in various browsers:
 
 - In Chrome, go to *View > Developer > Developer Tools*.
 - In Firefox, go to *Tools > Web Developer > Toggle Tools*.
@@ -123,7 +123,7 @@ If you followed steps in [Chapter 10: Embed on the Web](embed.html) and the cont
 
 - Always use *straight* quote marks, and avoid accidentally entering *curly quotes* (also known as *smart quotes* or *slanted quotes*), which sometimes happens when pasting code from word-processor tools.
 
-- Always use `https` (the extra 's' means 'secure'), not `http` in iframes. Some web browsers will block content if it mixes *https* and *http* resources. All of the code templates in this book require *https*.
+- Always use `https` (the extra "s" means "secure"), not `http` in iframes. Some web browsers will block content if it mixes *https* and *http* resources. All of the code templates in this book require *https*.
 
 Use the [W3Schools TryIt iframe page](https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_iframe) to test your iframe embed codes, especially when you need to edit them, since it's a great way to check for mistaken punctuation. Figure \@ref(fig:iframe-incorrect) shows three common problems in a simple iframe: a curly double-quote (after `src=`), use of `http` instead of `https`, and mixture of double-quotes and single-quotes. All of these problems are corrected in Figure \@ref(fig:iframe-correct), which causes the iframe to appear as expected.
 

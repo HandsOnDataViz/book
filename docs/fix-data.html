@@ -352,20 +352,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="fix-data" class="section level2" number="17.5">
 <h2><span class="header-section-number">A.5</span> Watch out for bad data</h2>
 <p>Sometimes a problem with a data visualization tool or service is caused by bad data. Learn how to <a href="bad-data.html">Recognize Bad Data in Chapter 4</a>, and different ways to <a href="clean.html">Clean Data in Chapter 5</a>. In addition, avoid common mistakes that will introduce errors into your data files, especially when working with <a href="chartcode.html">Chart.js and Highcharts code templates in Chapter 12</a> and <a href="leaflet.html">Leaflet map code templates in Chapter 13</a>.</p>
-<p>First, avoid typing blank spaces into spreadsheet entries—especially column headers—as shown in Figure <a href="fix-data.html#fig:header-blank">A.3</a>. Although blank spaces may seem innocent to human eyes, they may confuse digital tools and code templates that expect to find column headers spelled precisely as promised, without extra spaces.</p>
+<p>First, avoid typing blank spaces into spreadsheet entries—especially column headers—as shown in Figure <a href="fix-data.html#fig:header-blank">A.4</a>. Although blank spaces may seem innocent to human eyes, they may confuse digital tools and code templates that expect to find column headers spelled precisely as promised, without extra spaces.</p>
 
 <div class="figure"><span id="fig:header-blank"></span>
 <img src="images/17-fix/header-blank.png" alt="Avoid typing blank spaces into spreadsheets, especially column headers." width="300" />
 <p class="caption">
-Figure A.3: Avoid typing blank spaces into spreadsheets, especially column headers.
+Figure A.4: Avoid typing blank spaces into spreadsheets, especially column headers.
 </p>
 </div>
-<p>Second, avoid blank rows in data files. For example, when using code templates such as Leaflet Maps with Google Sheets or Leaflet Storymaps with Google Sheets, your online map will break if you leave a blank row in the Google Sheets, as shown in Figure <a href="fix-data.html#fig:blank-row">A.4</a>.</p>
+<p>Second, avoid blank rows in data files. For example, when using code templates such as Leaflet Maps with Google Sheets or Leaflet Storymaps with Google Sheets, your online map will break if you leave a blank row in the Google Sheets, as shown in Figure <a href="fix-data.html#fig:blank-row">A.5</a>.</p>
 
 <div class="figure"><span id="fig:blank-row"></span>
 <img src="images/17-fix/blank-row.png" alt="Avoid leaving blank rows in Google Sheets data files for Leaflet code templates." width="500" />
 <p class="caption">
-Figure A.4: Avoid leaving blank rows in Google Sheets data files for Leaflet code templates.
+Figure A.5: Avoid leaving blank rows in Google Sheets data files for Leaflet code templates.
 </p>
 </div>
 <p>On a related note, in both of the Leaflet code templates described above, media file pathnames are case-sensitive. In other words, <code>media/filename.jpg</code> is not the same as <code>media/filename.JPG</code>. Therefore, we recommend using <em>all lowercase characters</em>, including the suffix ending.</p>
@@ -421,7 +421,7 @@ gitbook.start({
 "link": "https://github.com/handsondataviz/book/blob/master/17-fix.Rmd",
 "text": null
 },
-"download": ["HandsOnDataViz.pdf"],
+"download": null,
 "toc": {
 "collapse": "section",
 "scroll_highlight": true

@@ -3,11 +3,17 @@
 # Fix Common Problems {#fix}
 When creating data visualizations with online tools, public datasets, and code templates, it's not uncommon to encounter some occasional problems that prevent it from working as expected. We understand that finding the source of a problem can feel frustrating. But figuring out why it broke---and how to fix it---can be a great way to learn what's happening behind the scenes.
 
-Reach out to ask others for advice on solving problems, and make it easier for them to help you. Clearly describe your issue, mention your computer operating system and/or browser version, and consider including a [screenshot](https://en.wikipedia.org/wiki/Screenshot) using these built-in commands:
+Reach out to ask others for advice on solving problems, and make it easier for them to help you. Clearly describe your issue, mention your computer operating system and/or browser version, and consider including a [screenshot](https://en.wikipedia.org/wiki/Screenshot) using these built-in commands, as shown in Figure \@ref(fig:screenshot-mac):
 
 - Chromebook: *Shift + Ctrl + F5* (the *show windows* button), then click-and-drag the cross-hair cursor.
 - Macintosh: *Shift + Command + 4*, then click-and-drag the cross-hair cursor to capture screenshot.
 - Windows: *Windows logo key + Shift + S* to call up the *Snip & Sketch* tool.
+
+(ref:screenshot-mac) How to create a screenshot on a Mac.
+
+```{r screenshot-mac, fig.cap="(ref:screenshot-mac)"}
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("images/17-fix/screenshot-mac.gif", height = "360px") else knitr::include_graphics("images/17-fix/screenshot-mac.png")
+```
 
 Review these sections below to help you diagnose what type of problem you may be facing, and see our recommended solutions for the most common issues we've seen. Remember that some of the thorniest problems may be caused by two or more separate issues.
 

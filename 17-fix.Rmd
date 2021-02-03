@@ -1,7 +1,15 @@
 # (APPENDIX) Appendix {-}
 
 # Fix Common Problems {#fix}
-When creating data visualizations with online tools, public datasets, and code templates, it's not uncommon to encounter some occasional problems that prevent it from working as expected. We understand that finding the source of a problem can feel frustrating. But figuring out why it broke---and how to fix it---can be a great way to learn what's happening behind the scenes. Review these sections below to help you diagnose what type of problem you may be facing, and see our recommended solutions for the most common issues we've seen. Remember that some of the thorniest problems may be caused by two or more separate issues.
+When creating data visualizations with online tools, public datasets, and code templates, it's not uncommon to encounter some occasional problems that prevent it from working as expected. We understand that finding the source of a problem can feel frustrating. But figuring out why it broke---and how to fix it---can be a great way to learn what's happening behind the scenes.
+
+Reach out to ask others for advice on solving problems, and make it easier for them to help you. Clearly describe your issue, mention your computer operating system and/or browser version, and consider including a [screenshot](https://en.wikipedia.org/wiki/Screenshot) using these built-in commands:
+
+- Chromebook: *Shift + Ctrl + F5* (the *show windows* button), then click-and-drag the cross-hair cursor.
+- Macintosh: *Shift + Command + 4*, then click-and-drag the cross-hair cursor to capture screenshot.
+- Windows: *Windows logo key + Shift + S* to call up the *Snip & Sketch* tool.
+
+Review these sections below to help you diagnose what type of problem you may be facing, and see our recommended solutions for the most common issues we've seen. Remember that some of the thorniest problems may be caused by two or more separate issues.
 
 - [Tool or platform problems](fix-tool.html)
 - [Try a different browser](fix-browser.html)

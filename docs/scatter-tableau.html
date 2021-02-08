@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2021-02-03" />
+<meta name="date" content="2021-02-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -351,13 +351,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="scatter-tableau" class="section level2 unnumbered" number="">
 <h2>- Scatter Chart</h2>
-<p>Scatter charts are best to show the relationship between two datasets, placed on the x- and y-axis, to reveal possible correlations. With Tableau Public, you can create an interactive scatter chart, where you can hover your cursor over points to view more details about the data. Organize your data in three columns, the same way as the <a href="scatter-bubble-datawrapper.html">Datawrapper scatter chart tutorial</a>: the first column for data labels, the second column for the x-axis, and the third column for the y-axis. Then you can create an interactive scatter chart as shown in Figure <a href="scatter-tableau.html#fig:tableau-scatter">7.52</a>, which illustrates a strong relationship between household income and test scores (above or below the national average for 6th grade math and English) in Connecticut public school districts. To learn more about the data and related visualizations, see Sean Reardon et al. at the <a href="http://purl.stanford.edu/db586ns4974">Stanford Education Data Archive</a>, Motoko Rich et al. at <a href="http://www.nytimes.com/interactive/2016/04/29/upshot/money-race-and-success-how-your-school-district-compares.html">The New York Times</a>, Andrew Ba Tran at <a href="https://web.archive.org/web/20190129101923/http://trendct.org/2016/05/06/wealth-and-grades-compare-connecticuts-school-districts/">CT Mirror/TrendCT</a>, and this <a href="https://github.com/trendct-data/stanford-cepa">TrendCT GitHub repo</a>.</p>
+<p>Scatter charts are best to show the relationship between two datasets, placed on the x- and y-axis, to reveal possible correlations. With Tableau Public, you can create an interactive scatter chart, where you can hover your cursor over points to view more details about the data. Organize your data in three columns, the same way as the <a href="scatter-bubble-datawrapper.html">Datawrapper scatter chart tutorial</a>: the first column for data labels, the second column for the x-axis, and the third column for the y-axis. Then you can create an interactive scatter chart as shown in Figure <a href="scatter-tableau.html#fig:tableau-scatter">7.51</a>, which illustrates a strong relationship between household income and test scores (above or below the national average for 6th grade math and English) in Connecticut public school districts. To learn more about the data and related visualizations, see Sean Reardon et al. at the <a href="http://purl.stanford.edu/db586ns4974">Stanford Education Data Archive</a>, Motoko Rich et al. at <a href="http://www.nytimes.com/interactive/2016/04/29/upshot/money-race-and-success-how-your-school-district-compares.html">The New York Times</a>, Andrew Ba Tran at <a href="https://web.archive.org/web/20190129101923/http://trendct.org/2016/05/06/wealth-and-grades-compare-connecticuts-school-districts/">CT Mirror/TrendCT</a>, and this <a href="https://github.com/trendct-data/stanford-cepa">TrendCT GitHub repo</a>.</p>
 
 <div class="figure"><span id="fig:tableau-scatter"></span>
 <iframe src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&amp;:embed=true" width="672" height="500px">
 </iframe>
 <p class="caption">
-Figure 7.52: Scatter chart in Tableau Public: Explore the <a href="https://public.tableau.com/profile/jackdougherty#!/vizhome/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1">interactive version</a>. Data by <a href="https://github.com/trendct-data/stanford-cepa">CT Mirror/TrendCT and Stanford CEPA</a>.
+Figure 7.51: Scatter chart in Tableau Public: Explore the <a href="https://public.tableau.com/profile/jackdougherty#!/vizhome/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1">interactive version</a>. Data by <a href="https://github.com/trendct-data/stanford-cepa">CT Mirror/TrendCT and Stanford CEPA</a>.
 </p>
 </div>
 <p>To create your own scatter chart using this sample data in Tableau Public, follow this tutorial.</p>
@@ -367,13 +367,13 @@ Figure 7.52: Scatter chart in Tableau Public: Explore the <a href="https://publi
 <li><p>Download the <a href="data/ct-districts-income-grades-2009-13.xlsx">CT Districts-Income-Grades sample data in Excel format</a>, or <a href="https://docs.google.com/spreadsheets/d/1mfZymUnbEQ8I1YUzqXWeiqA5JS1PIhnX7zdhwwvMmsk/edit#gid=840790465">view and download the Google Sheets version</a>. The data file consists of three columns: district, median household income, and test score levels.</p></li>
 <li><p>Install and start up the free <a href="https://public.tableau.com">Tableau Public</a> desktop application for Mac or Windows. It may require several minutes to complete this process. Tableau Public’s welcome page includes three sections: Connect, Open, and Discover.</p></li>
 <li><p>Under <em>Connect</em>, you can choose to upload a Microsoft Excel file, or choose <em>Text file</em> to upload a CSV file, or other options. Or to connect to a server, such as Google Sheets, click <em>More…</em> to connect to your account. After you successfully connect to your data source, you will see it under <em>Connections</em> in the <em>Data Source</em> tab. Under <em>Sheets</em>, you will see two tables, <em>data</em> and <em>notes</em>.</p></li>
-<li><p>Drag the <em>data</em> sheet into <em>Drag tables here</em> area, as shown in Figure <a href="scatter-tableau.html#fig:tableau-connect">7.53</a>. You will see the preview of the table under the drag-and-drop area. You have successfully connected one data source to Tableau Public, and you are ready to build your first chart.</p></li>
+<li><p>Drag the <em>data</em> sheet into <em>Drag tables here</em> area, as shown in Figure <a href="scatter-tableau.html#fig:tableau-connect">7.52</a>. You will see the preview of the table under the drag-and-drop area. You have successfully connected one data source to Tableau Public, and you are ready to build your first chart.</p></li>
 </ol>
 
 <div class="figure"><span id="fig:tableau-connect"></span>
 <img src="images/07-chart/tableau-connect-annotated.png" alt="Drag data sheet into Drag tables here area."  />
 <p class="caption">
-Figure 7.53: Drag <em>data</em> sheet into <em>Drag tables here</em> area.
+Figure 7.52: Drag <em>data</em> sheet into <em>Drag tables here</em> area.
 </p>
 </div>
 </div>
@@ -385,7 +385,7 @@ Figure 7.53: Drag <em>data</em> sheet into <em>Drag tables here</em> area.
 <p>Although it may feel overwhelming at first, the key is learning where to drag items from the Data pane (left) into the main worksheet. Tableau marks all data fields in blue (for discrete values, mostly text fields or numeric labels) or green (for continuous values, mostly numbers).</p>
 <ol start="2" style="list-style-type: decimal">
 <li><p>In your worksheet, drag the <em>Grade Levels</em> field into the <em>Rows</em> field above the charting area, which
-for now is just empty space. See Figure <a href="scatter-tableau.html#fig:tableau-scatter-dragging">7.54</a> for this dragging step and the following two steps. Tableau will apply a summation function to it, and you will see <code>SUM(Grade Levels)</code> appear
+for now is just empty space. See Figure <a href="scatter-tableau.html#fig:tableau-scatter-dragging">7.53</a> for this dragging step and the following two steps. Tableau will apply a summation function to it, and you will see <code>SUM(Grade Levels)</code> appear
 in the <em>Rows</em> row, and a blue bar in the charting area. It makes little sense so far, so let’s plot another data field.</p></li>
 <li><p>Drag <em>Median Household Income</em> to the <em>Columns</em> field, just above the <em>Rows</em> field. In general, choosing between Rows and Columns shelves can be challenging, but it is convenient to think of <em>Columns</em> shelf as representing your x-axis, and <em>Rows</em> as y-axis. Once again, Tableau will apply the summation function, so you will see <code>SUM(Median Household Income)</code> in the <em>Columns</em> shelf. The bar chart will automatically transform into a scatter chart with just one data point in the upper-right corner, because the data for both is aggregated (remember the <code>SUM</code> function).</p></li>
 <li><p>We want to tell Tableau to disaggregate the household and grade levels variables. In other words, we want to introduce an extra level of granularity, or <em>detail</em> to our visualization. To do so, drag the <em>District</em> dimension into the <em>Detail</em> shelf of the <em>Marks</em> card. Now a real scatter chart will appear in the charting area. If you hover over points, you will see all three values associated with these points.</p></li>
@@ -394,7 +394,7 @@ in the <em>Rows</em> row, and a blue bar in the charting area. It makes little s
 <div class="figure"><span id="fig:tableau-scatter-dragging"></span>
 <img src="images/07-chart/tableau-scatter-dragging-annotated.png" alt="Drag data fields to the right locations in Tableau Public."  />
 <p class="caption">
-Figure 7.54: Drag data fields to the right locations in Tableau Public.
+Figure 7.53: Drag data fields to the right locations in Tableau Public.
 </p>
 </div>
 </div>
@@ -402,12 +402,12 @@ Figure 7.54: Drag data fields to the right locations in Tableau Public.
 <h4>Add Title and Caption, and Publish</h4>
 <p>Give your scatter chart a meaningful title by double-clicking on the default <em>Sheet 1</em> title
 above the charting area. Add more information about the chart, such as source of the data, who built the visualization and when, and other details to add credibility to your work. You can do so inside a <em>Caption</em>, a text block that accompanies your Tableau chart. In the menu, go to <em>Worksheet &gt; Show Caption</em>. Double-click
-the Caption block that appears, and edit the text. As a result, your final worksheet will look like shown in Figure <a href="scatter-tableau.html#fig:tableau-scatter-final">7.55</a>.</p>
+the Caption block that appears, and edit the text. As a result, your final worksheet will look like shown in Figure <a href="scatter-tableau.html#fig:tableau-scatter-final">7.54</a>.</p>
 
 <div class="figure"><span id="fig:tableau-scatter-final"></span>
 <img src="images/07-chart/tableau-scatter-final-annotated.png" alt="This scatter chart is ready to be published."  />
 <p class="caption">
-Figure 7.55: This scatter chart is ready to be published.
+Figure 7.54: This scatter chart is ready to be published.
 </p>
 </div>
 <p>Tip: In the dropdown above the <em>Columns</em> shelf, change <em>Standard</em> to <em>Fit Width</em> to ensure your chart occupies 100 percent of available horizontal space.</p>
@@ -416,13 +416,13 @@ Figure 7.55: This scatter chart is ready to be published.
 <li><p>After signing in, a window to set the workbook title will appear. Change the default <em>Book1</em> title
 to something meaningful, as this name will appear in the public web address for your published work. Click <em>Save</em>.</p></li>
 <li><p>After saving your workbook on the public web, Tableau Public will open up a window in your default browser
-with the visualization. In the green banner above the chart, click <em>Edit Details</em> to edit the title or description. Under <em>Toolbar Settings</em>, see the checkbox to <em>Allow others to download or explore and copy this workbook and its data</em>, and select the setting you wish, as shown in Figure <a href="scatter-tableau.html#fig:tableau-toolbar-settings">7.56</a>. If you are publishing your visualization on the web, we also recommend that you keep this box checked so that others can download your data and see how you constructed it, to improve data accessibility for all.</p></li>
+with the visualization. In the green banner above the chart, click <em>Edit Details</em> to edit the title or description. Under <em>Toolbar Settings</em>, see the checkbox to <em>Allow others to download or explore and copy this workbook and its data</em>, and select the setting you wish, as shown in Figure <a href="scatter-tableau.html#fig:tableau-toolbar-settings">7.55</a>. If you are publishing your visualization on the web, we also recommend that you keep this box checked so that others can download your data and see how you constructed it, to improve data accessibility for all.</p></li>
 </ol>
 
 <div class="figure"><span id="fig:tableau-toolbar-settings"></span>
 <img src="images/07-chart/tableau-toolbar-settings-annotated.png" alt="This scatter chart is ready to be published."  />
 <p class="caption">
-Figure 7.56: This scatter chart is ready to be published.
+Figure 7.55: This scatter chart is ready to be published.
 </p>
 </div>
 <p>Tip: Your entire portfolio of Tableau Public visualizations is online at <code>https://public.tableau.com/profile/USERNAME</code>,

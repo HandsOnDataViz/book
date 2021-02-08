@@ -113,7 +113,7 @@ Tip: But if it doesn't work, go back to step 3 and experiment. Try to edit the e
  knitr::include_graphics("images/10-embed/datawrapper-tryit-simple.png")
 ```
 
-Hint: The Datawrapper iframe tag source follows this general format: `https://datawrapper.dwcdn.net/abcdef/1/`, where the `1` refers to the first version of the chart or map you published. If you make edits and re-publish your visualization, Datawrapper will increase the last digit (to `2` and so forth), and *automatically redirect* older links to the *current version*, which keeps your work up-to-date for your audience.
+Tip: The Datawrapper iframe tag source follows this general format: `https://datawrapper.dwcdn.net/abcdef/1/`, where the `1` refers to the first version of the chart or map you published. If you make edits and re-publish your visualization, Datawrapper will increase the last digit (to `2` and so forth), and *automatically redirect* older links to the *current version*, which keeps your work up-to-date for your audience.
 
 ### from Tableau Public {-}
 1. After you create a [Tableau Public chart in Chapter 7](chart-tableau.html) or [map in Chapter 8](map-tableau.html), publish your worksheet, dashboard, or story online by selecting *File > Save to Tableau Public* in the desktop application menu, as shown in Figure \@ref(fig:tableau-public-publish).
@@ -179,7 +179,7 @@ However, if your web platform does not accept the *full embed code* for Tableau 
 
 `<iframe src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true" width="90%" height="500" seamless frameborder="0" scrolling="no"></iframe>`
 
-Hint: Insert `width="90%"`, rather than 100%, to help readers to scroll more easily down your web page with a margin.
+Tip: Insert `width="90%"`, rather than 100%, to help readers to scroll more easily down your web page with a margin.
 
 7. Press *Run* to see how it looks in the W3Schools TryIt iframe page, as shown in Figure \@ref(fig:tableau-public-tryit-simple). Sometimes a simple iframe works better on your website than a complex embed code.
 

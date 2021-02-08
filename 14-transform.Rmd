@@ -77,7 +77,7 @@ The KML format rose in popularity during the late 2000s, when it was developed f
 with maps powered by Google Fusion Tables, but that [tool was dropped by Google in late 2019](https://killedbygoogle.com/).
  You can convert your KML file into GeoJSON format with the [GeoJson.io tool](geojsonio.html) described later in this chapter.
 
-Hint: Sometimes `.kml` files are distributed in a compressed `.kmz` format. To learn how to transform them, see the [Converting from KMZ to KML format](convert-kmz.html) section of this chapter.
+Tip: Sometimes `.kml` files are distributed in a compressed `.kmz` format. To learn how to transform them, see the [Converting from KMZ to KML format](convert-kmz.html) section of this chapter.
 
 #### MapInfo TAB {-}
 The proprietary TAB format is created and supported by MapInfo, Esri's competitor, and is designed to work well with MapInfo Pro

@@ -108,7 +108,7 @@ This tutorial demonstrates how to insert a basic checkbox filter, using the [sam
 | 2    | green  | Private    |
 | 3    | red    | Hazardous  |
 
-Hint: In Part B above, if you forked [Jack's version of the searchable map template](https://github.com/jackdougherty/fusion-map-point), it already includes the basic checkbox code.
+Tip: In Part B above, if you forked [Jack's version of the searchable map template](https://github.com/jackdougherty/fusion-map-point), it already includes the basic checkbox code.
 
 ####Set up Fusion Table data column and map point colors
 1. Confirm the values in the "type" column of your Google Fusion Table.

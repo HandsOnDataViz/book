@@ -68,7 +68,7 @@ The upper-left corner of the next screen will say `USERNAME/leaflet-map-simple` 
 
 (ref:leaflet-simple-index) Click the index.html file to view the code.
 
-```{r leaflet-simple-index, out.width=200, fig.cap="(ref:leaflet-simple-index)"}
+```{r leaflet-simple-index, out.width=600, fig.cap="(ref:leaflet-simple-index)"}
  knitr::include_graphics("images/11-github/leaflet-simple-index.png")
 ```
 
@@ -221,7 +221,7 @@ The same concept applies to GitHub Pages. When you publish a code template for a
 
 `<iframe src="https://USERNAME.github.io/RESPOSITORY" width="100%" height="400" seamless frameborder="0" scrolling="no"></iframe>`
 
-Hint: Either single-quote (`'`) marks (also called an apostrophe) or double-quote (`"`) marks are acceptable in your iframe code, but be consistent and avoid accidentally pasting in curly-quotes.
+Tip: Either single-quote (`'`) marks (also called an apostrophe) or double-quote (`"`) marks are acceptable in your iframe code, but be consistent and avoid accidentally pasting in curly-quotes.
 
 Now you are ready to [paste your iframe into your preferred website](paste-code.html), using methods described in Chapter 10, to display your interactive chart or map template from published repository using GitHub Pages.
 

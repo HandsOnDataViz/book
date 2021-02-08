@@ -31,7 +31,7 @@ Let's build a simple point map with sample data, using Carto Builder <https:/car
 
 2) Open Carto in your browser <https://carto.com>.
 
-3) The Carto Dashboard displays two views: Maps and Datasets. Always begin with Datasets, then move to Maps. (Hint: If your dashboard looks very different than mine, then you might still be using the older Carto Editor, rather than the newer Carto Builder.)
+3) The Carto Dashboard displays two views: Maps and Datasets. Always begin with Datasets, then move to Maps. (Tip: If your dashboard looks very different than mine, then you might still be using the older Carto Editor, rather than the newer Carto Builder.)
 
 ![Image: Carto Builder dashboard: Begin with Datasets](images/08-map/carto-dashboard-maps-datasets.png)
 
@@ -62,13 +62,13 @@ Let's build a simple point map with sample data, using Carto Builder <https:/car
 - select Fill Number to change circle sizes
 - enter a larger size, such as 13, to make our sample points more visible
 - select Fill Color to change circle color
-- switch from Solid (all points are same color) to By Value, and scroll down to Group (at the bottom) to automatically color by categories for this sample data. (Hint: If you don't see Group in the menu, click somewhere else and try it again.)
+- switch from Solid (all points are same color) to By Value, and scroll down to Group (at the bottom) to automatically color by categories for this sample data. (Tip: If you don't see Group in the menu, click somewhere else and try it again.)
 
 ![Image: Style points by value](images/08-map/carto-point-style-value.png)
 
 16) In the Pop-up tab, select a Window Style, then select boxes in Show Items to display.
 
-17) In the Legend tab, click Select a Style to display information, and your color-coded groups from above should automatically appear on your map. (Hint: A legend may automatically appear after styling your markers by color.)
+17) In the Legend tab, click Select a Style to display information, and your color-coded groups from above should automatically appear on your map. (Tip: A legend may automatically appear after styling your markers by color.)
 
 18) Before publishing your map: If you wish to rename it, do it now by selecting the three vertical dots next to the file name, and select Rename.
 

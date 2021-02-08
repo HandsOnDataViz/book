@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2021-02-03" />
+<meta name="date" content="2021-02-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -352,12 +352,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="filtered-line-tableau" class="section level2 unnumbered" number="">
 <h2>- Filtered Line Chart</h2>
 <p>Now that you’ve learned how to create a scatter chart in Tableau Public, let’s move on to a new type of chart that highlights the tool’s strengths. Instead of <em>static</em> charts, such as those found in print or PDFs, this book features <em>interactive</em> charts for their ability to display more data. But you can also design interactive charts to show only the amount of data you desire. In other words, your interactive visualization can become a data-exploration tool that allows users to “dig” and find specific data points and patterns, without overwhelming them with too much information at once.</p>
-<p>In this tutorial, we will build an interactive filtered line chart with Tableau Public, to visualize how internet access has changed in different nations over time. Organize the data in three columns, as shown in Figure <a href="filtered-line-tableau.html#fig:tableau-filtered-data">7.57</a>. The first column, <em>Country Name</em>, are the data labels that become the colored lines. The second column, <em>Year</em>, will appear on the horizontal x-axis. The third column, <em>Percent Internet Users</em>, are numeric values that appear on the vertical y-axis. Now you can create a filtered line chart with checkboxes, to show only selected lines on startup to avoid overwhelming users, while allowing them to toggle on other lines, and hover over each one for more details, as shown in Figure <a href="filtered-line-tableau.html#fig:tableau-filtered">7.58</a>.</p>
+<p>In this tutorial, we will build an interactive filtered line chart with Tableau Public, to visualize how internet access has changed in different nations over time. Organize the data in three columns, as shown in Figure <a href="filtered-line-tableau.html#fig:tableau-filtered-data">7.56</a>. The first column, <em>Country Name</em>, are the data labels that become the colored lines. The second column, <em>Year</em>, will appear on the horizontal x-axis. The third column, <em>Percent Internet Users</em>, are numeric values that appear on the vertical y-axis. Now you can create a filtered line chart with checkboxes, to show only selected lines on startup to avoid overwhelming users, while allowing them to toggle on other lines, and hover over each one for more details, as shown in Figure <a href="filtered-line-tableau.html#fig:tableau-filtered">7.57</a>.</p>
 
 <div class="figure"><span id="fig:tableau-filtered-data"></span>
 <img src="images/07-chart/tableau-filtered-data.png" alt="In a filtered line chart, organize the data in three columns, data labels, year, and numeric values." width="350" />
 <p class="caption">
-Figure 7.57: In a filtered line chart, organize the data in three columns, data labels, year, and numeric values.
+Figure 7.56: In a filtered line chart, organize the data in three columns, data labels, year, and numeric values.
 </p>
 </div>
 
@@ -365,7 +365,7 @@ Figure 7.57: In a filtered line chart, organize the data in three columns, data 
 <iframe src="https://public.tableau.com/views/InternetAccessbyCountry/Sheet1?:showVizHome=no&amp;:embed=true" width="672" height="500px">
 </iframe>
 <p class="caption">
-Figure 7.58: Filtered Line chart: Explore the <a href="https://public.tableau.com/profile/ilya7257#!/vizhome/InternetAccessbyCountry/Sheet1">interactive version</a>. Data from <a href="https://docs.google.com/spreadsheets/d/1nrfd8Cr-wpm5N9WGA2YO6d1XLuwk-VK8kCvDwoTdeWM/edit#gid=600173793">World Bank</a>.
+Figure 7.57: Filtered Line chart: Explore the <a href="https://public.tableau.com/profile/ilya7257#!/vizhome/InternetAccessbyCountry/Sheet1">interactive version</a>. Data from <a href="https://docs.google.com/spreadsheets/d/1nrfd8Cr-wpm5N9WGA2YO6d1XLuwk-VK8kCvDwoTdeWM/edit#gid=600173793">World Bank</a>.
 </p>
 </div>
 <p>To create your own filtered line chart using this sample data in Tableau Public, follow this tutorial. We assume that you have already installed the free <a href="https://public.tableau.com">Tableau Public</a> desktop application for Mac or Windows, and have already become familiar with the tool by completing the previous <a href="scatter-tableau.html">Scatter Chart with Tableau Public tutorial</a>, since the steps below are abbreviated.</p>
@@ -383,20 +383,20 @@ Figure 7.58: Filtered Line chart: Explore the <a href="https://public.tableau.co
 <ol style="list-style-type: decimal">
 <li><p>Drag the <em>Year</em> variable to <em>Columns</em> shelf. This will place years along the x-axis.</p></li>
 <li><p>Drag the <em>Percent Internet Users</em> variable to <em>Rows</em> shelf to place them on the y-axis. The value in the shelf will change to <code>SUM(Percent Internet Users)</code>. You should see a single line chart that sums up percentages for each year. That is completely incorrect, so let’s fix it.</p></li>
-<li><p>In order to “break” aggregation, drag-and-drop <em>Country Name</em> to the <em>Color</em> shelf of the <em>Marks</em> card, as shown in Figure <a href="filtered-line-tableau.html#fig:tableau-filtered-filters">7.59</a>. Tableau will warn you that the recommended number of colors should not exceed 20. Since we will be adding checkbox filtering, ignore this warning, and go ahead and press the <em>Add all members</em> button.</p></li>
+<li><p>In order to “break” aggregation, drag-and-drop <em>Country Name</em> to the <em>Color</em> shelf of the <em>Marks</em> card, as shown in Figure <a href="filtered-line-tableau.html#fig:tableau-filtered-filters">7.58</a>. Tableau will warn you that the recommended number of colors should not exceed 20. Since we will be adding checkbox filtering, ignore this warning, and go ahead and press the <em>Add all members</em> button.</p></li>
 </ol>
 
 <div class="figure"><span id="fig:tableau-filtered-filters"></span>
 <img src="images/07-chart/tableau-filtered-filters.png" alt="Drag Country Name to the Color shelf of the Marks card to break up the aggregated data." width="220" />
 <p class="caption">
-Figure 7.59: Drag <em>Country Name</em> to the <em>Color</em> shelf of the <em>Marks</em> card to break up the aggregated data.
+Figure 7.58: Drag <em>Country Name</em> to the <em>Color</em> shelf of the <em>Marks</em> card to break up the aggregated data.
 </p>
 </div>
 <ol start="4" style="list-style-type: decimal">
 <li><p>At first, everything will look like a spaghetti plate of lines and colors! To add filtering,
 drag <em>Country Name</em> to the <em>Filters</em> card. In the Filter window, make sure all countries
 are checked, and click <em>OK</em>.</p></li>
-<li><p>In the <em>Filters</em> card, click the dropdown arrow of the <em>Country Name</em> symbol, then scroll down and select Show Filter, as shown in Figure <a href="filtered-line-tableau.html#fig:tableau-filtered-show-filter">7.60</a>.</p></li>
+<li><p>In the <em>Filters</em> card, click the dropdown arrow of the <em>Country Name</em> symbol, then scroll down and select Show Filter, as shown in Figure <a href="filtered-line-tableau.html#fig:tableau-filtered-show-filter">7.59</a>.</p></li>
 <li><p>You will see a list of options with all checkboxes to appear on the right side of the chart.
 Click <em>(All)</em> to add/remove all options, and select a few countries to see
 how the interactive filtering works. The checkboxes you select at this stage will appear “on” in the published map.
@@ -406,7 +406,7 @@ You may notice that some countries from your “on” selection got assigned the
 <div class="figure"><span id="fig:tableau-filtered-show-filter"></span>
 <img src="images/07-chart/tableau-filtered-show-filter.png" alt="After you drag Country Name to the Filters card, make sure the Filter is displayed." width="220" />
 <p class="caption">
-Figure 7.60: After you drag <em>Country Name</em> to the <em>Filters</em> card, make sure the Filter is displayed.
+Figure 7.59: After you drag <em>Country Name</em> to the <em>Filters</em> card, make sure the Filter is displayed.
 </p>
 </div>
 <ol start="7" style="list-style-type: decimal">
@@ -417,14 +417,14 @@ the author of this visualization.</p></li>
 although our data is for 1995–2018. Double-click on the x-axis, and change
 <em>Range</em> from <em>Automatic</em> to <em>Fixed</em>, with the Fixed start of <em>1995</em>, and the Fixed end of <em>2018</em>.
 Close the window and see that the empty space on the edges has disappeared.</p></li>
-<li><p>Once your filtered line chart looks like the one shown in Figure <a href="filtered-line-tableau.html#fig:tableau-filtered-ready">7.61</a>,
+<li><p>Once your filtered line chart looks like the one shown in Figure <a href="filtered-line-tableau.html#fig:tableau-filtered-ready">7.60</a>,
 you are ready to publish. Go to <em>File &gt; Save to Tableau Public As…</em>, and log into your account, or create one if you haven’t yet done so. Follow the prompts to publish your chart on the public web, or see the previous <a href="scatter-tableau.html">Scatter Chart in Tableau Public tutorial</a> for more details.</p></li>
 </ol>
 
 <div class="figure"><span id="fig:tableau-filtered-ready"></span>
 <img src="images/07-chart/tableau-filtered-ready-annotated.png" alt="This workbook is ready to be published."  />
 <p class="caption">
-Figure 7.61: This workbook is ready to be published.
+Figure 7.60: This workbook is ready to be published.
 </p>
 </div>
 <p>See the <a href="embed-code.html">Get the Embed Code</a> section of Chapter 10 to insert the interactive version of your chart on a web page that you control.</p>

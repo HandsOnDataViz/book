@@ -59,7 +59,7 @@ Export the project table into your preferred format.
 
 <a href="http://epress.trincoll.edu/dataviz/wp-content/uploads/sites/11/2014/03/GeocodeOpenRefineExport.png"><img class="aligncenter size-full wp-image-220" alt="GeocodeOpenRefineExport" src="http://epress.trincoll.edu/dataviz/wp-content/uploads/sites/11/2014/03/GeocodeOpenRefineExport.png" width="272" height="331" /></a>
 
-Hint: In some cases, you may wish to write one expression that extracts the lat and long coordinates into one column:
+Tip: In some cases, you may wish to write one expression that extracts the lat and long coordinates into one column:
 
 <code>value.parseJson().results[0].geometry.location.lat + ',' + value.parseJson().results[0].geometry.location.lng</code>
 

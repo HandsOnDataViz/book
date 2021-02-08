@@ -283,16 +283,6 @@ To create your own interactive grouped column (or bar) chart, use our template a
  knitr::include_graphics("images/07-chart/delete-chart.png")
 ```
 
-Note: Another name for the three-dot menu symbol is the "kebab menu" because it resembles Middle Eastern
-food cooked on a skewer, in contrast to the three-line "hamburger menu" on many mobile devices,
-as shown in Figure \@ref(fig:menu-hamburger-kebab). Software developers must be hungry.
-
-(ref:menu-hamburger-kebab) Distinguish between the hamburger versus kebab menu icons.
-
-```{r menu-hamburger-kebab, fig.cap="(ref:menu-hamburger-kebab)"}
-knitr::include_graphics("images/07-chart/menu-hamburger-kebab.png")
-```
-
 3. Format your data to make each column a data series (such as male and female), as shown in Figure \@ref(fig:column-grouped-data), which means it will display as a separate color in the chart. Feel free to add more than two columns.
 
 4. Use your cursor to select only the data you wish to chart, then go to the *Insert* menu and select *Chart*, as shown in Figure \@ref(fig:column-grouped-insert).
@@ -572,7 +562,7 @@ knitr::include_graphics("images/07-chart/datawrapper-annotated-range.png")
 
 9. Click *Proceed* or advance to the *Publish & Embed* screen to share your work with others. If you logged into your free Datawrapper account, your work is automatically saved online in the *My Charts* menu in the top-right corner of the screen. Also, you can click the blue *Publish* button to generate the code to embed your interactive chart on your website, as you'll learn about in [Chapter 10: Embed on the Web](embed.html). In addition, you can *add your chart to River* if you wish to share your work more widely by allowing other Datawrapper users to adapt and reuse your chart. Furthermore, scroll all the way down and click the *Download PNG* button to export a static image of your chart. Additional exporting and publishing options require a paid Datawrapper account. Or, if you prefer not to create an account, you can enter your email to receive the embed code.
 
-Hint: See this [Datawrapper Academy article to create a line chart with confidence intervals](https://academy.datawrapper.de/article/205-how-to-show-confidence-intervals-in-datawrapper-line-charts), which are similar to error bars.
+Tip: See this [Datawrapper Academy article to create a line chart with confidence intervals](https://academy.datawrapper.de/article/205-how-to-show-confidence-intervals-in-datawrapper-line-charts), which are similar to error bars.
 
 Congratulations on creating your first interactive Datawrapper chart. Now let's use Datawrapper to create a new type of chart, called a range chart.
 

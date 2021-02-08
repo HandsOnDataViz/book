@@ -275,7 +275,7 @@ knitr::include_graphics("images/08-map/mymaps-import-gdrive.png")
 knitr::include_graphics("images/08-map/mymaps-placemarks.png")
 ```
 
-Hint: You can select multiple boxes if your address is split across several columns, such as *Address*, *City*, *State*, *Zipcode*. Also, if your point data is already geocoded, you can upload latitude and longitude pairs, such as `41.76, -72.69`.
+Tip: You can select multiple boxes if your address is split across several columns, such as *Address*, *City*, *State*, *Zipcode*. Also, if your point data is already geocoded, you can upload latitude and longitude pairs, such as `41.76, -72.69`.
 
 7. In the *Choose a column to title your markers* window, select the *Name* column to title your point markers, as shown in Figure \@ref(fig:mymaps-marker-titles). Then click *Finish*.
 

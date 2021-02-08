@@ -233,7 +233,15 @@ Give each question a very short title, since these will appear as column headers
 
 ```{r forms-description, out.width=700, fig.cap="(ref:forms-description)"}
  knitr::include_graphics("images/03-spreadsheet/forms-description.png")
- ```
+```
+
+Note: Another name for the three-dot menu symbol is the "kebab menu" because it resembles Middle Eastern food cooked on a skewer, in contrast to the three-line "hamburger menu" on many mobile devices, as shown in Figure \@ref(fig:menu-hamburger-kebab). Software developers must be hungry.
+
+(ref:menu-hamburger-kebab) Distinguish between the hamburger versus kebab menu icons.
+
+```{r menu-hamburger-kebab, fig.cap="(ref:menu-hamburger-kebab)"}
+knitr::include_graphics("images/03-spreadsheet/menu-hamburger-kebab.png")
+```
 
 To preview how your online will appear to recipients, click the *Eyeball symbol* near the top of the page, as shown in Figure \@ref(fig:forms-preview). When your form is complete, click the *Send* button to distribute it via email, a link, or to embed the live form as an iframe on a web page. Learn more about the latter option in [Chapter 10: Embed on the Web](embed.html).
 

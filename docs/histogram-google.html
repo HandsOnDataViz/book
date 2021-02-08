@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2021-02-03" />
+<meta name="date" content="2021-02-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -357,36 +357,36 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3>Quick Histograms with Google Sheets Column Stats</h3>
 <ol style="list-style-type: decimal">
 <li><p>Open the sample data on <a href="https://docs.google.com/spreadsheets/d/1V-r1bOWpvyCRhmJa0gRZ1TEchXvrr7UTZ97rKOU1WRo/edit#gid=1132930452">Average Daily Calorie Supply per capita by country 2017 in Google Sheets</a>, log in with your account, and go to <em>File &gt; Make a Copy</em> to create a version you can edit in your Google Drive.</p></li>
-<li><p>To create a quick histogram in Google Sheets, select any column, then go to <em>Data &gt; Column stats</em>, and click the <em>Distribution</em> button in the sidebar to view a histogram for that column, as shown in Figure <a href="histogram-google.html#fig:histogram-quick">7.28</a>. The advantage is that this method is very fast, and you can quickly create histograms for other columns in the same sheet using the arrows near the top of the sidebar (<code>&lt; &gt;</code>). However, you cannot manually adjust the bucket ranges or make other edits to these quick histograms, and you cannot embed them on the web as you can with regular charts in Google Sheets.</p></li>
+<li><p>To create a quick histogram in Google Sheets, select any column, then go to <em>Data &gt; Column stats</em>, and click the <em>Distribution</em> button in the sidebar to view a histogram for that column, as shown in Figure <a href="histogram-google.html#fig:histogram-quick">7.27</a>. The advantage is that this method is very fast, and you can quickly create histograms for other columns in the same sheet using the arrows near the top of the sidebar (<code>&lt; &gt;</code>). However, you cannot manually adjust the bucket ranges or make other edits to these quick histograms, and you cannot embed them on the web as you can with regular charts in Google Sheets.</p></li>
 </ol>
 
 <div class="figure"><span id="fig:histogram-quick"></span>
 <img src="images/07-chart/histogram-quick.png" alt="To create a quick histogram in a Google Sheet, select a column, then go to Data - Column stats - Distribution." width="500" />
 <p class="caption">
-Figure 7.28: To create a quick histogram in a Google Sheet, select a column, then go to <em>Data - Column stats - Distribution</em>.
+Figure 7.27: To create a quick histogram in a Google Sheet, select a column, then go to <em>Data - Column stats - Distribution</em>.
 </p>
 </div>
-<p>Histograms are designed to show broad patterns of data distribution, not individual values. The histogram in Figure <a href="histogram-google.html#fig:histogram-quick">7.28</a> shows that while most nations have an average daily supply around 2,800 calories per capita, 8 nations have fewer than 2,000, and 11 nations have more than 3,500. Without annotations, histograms don’t tell us the names of those outlier countries. But they do offer a better sense of the shape of the data distribution.</p>
+<p>Histograms are designed to show broad patterns of data distribution, not individual values. The histogram in Figure <a href="histogram-google.html#fig:histogram-quick">7.27</a> shows that while most nations have an average daily supply around 2,800 calories per capita, 8 nations have fewer than 2,000, and 11 nations have more than 3,500. Without annotations, histograms don’t tell us the names of those outlier countries. But they do offer a better sense of the shape of the data distribution.</p>
 </div>
 <div id="regular-histograms-with-google-sheets-charts" class="section level3 unnumbered" number="">
 <h3>Regular Histograms with Google Sheets Charts</h3>
-<p>Compare the quick histogram created with <em>Column stats</em> in Figure <a href="histogram-google.html#fig:histogram-quick">7.28</a> with the regular histogram created with <em>Charts</em> in Figure <a href="histogram-google.html#fig:histogram">7.29</a>. You’ll notice that in the regular histogram, you can define the bucket ranges, display dividers, and add titles and labels to provide more context to readers. Also, the interactive version of the regular histogram allows users to float their cursor to see underlying data on the count for each column.</p>
+<p>Compare the quick histogram created with <em>Column stats</em> in Figure <a href="histogram-google.html#fig:histogram-quick">7.27</a> with the regular histogram created with <em>Charts</em> in Figure <a href="histogram-google.html#fig:histogram">7.28</a>. You’ll notice that in the regular histogram, you can define the bucket ranges, display dividers, and add titles and labels to provide more context to readers. Also, the interactive version of the regular histogram allows users to float their cursor to see underlying data on the count for each column.</p>
 
 <div class="figure"><span id="fig:histogram"></span>
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=480820223&amp;amp;format=interactive" width="672" height="400px">
 </iframe>
 <p class="caption">
-Figure 7.29: Regular histogram chart: Explore the full-screen <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=480820223&amp;format=interactive">interactive version</a>.
+Figure 7.28: Regular histogram chart: Explore the full-screen <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=480820223&amp;format=interactive">interactive version</a>.
 </p>
 </div>
 <ol style="list-style-type: decimal">
-<li>To create a regular histogram in Google Sheets, select a column with values and go to <em>Insert &gt; Chart</em>. If Google Sheets does not automatically select <em>Histogram chart</em> as the <em>Chart type</em> in Chart editor, use the dropdown and select it manually, near the bottom of the list in the <em>Other</em> category, as shown in Figure <a href="histogram-google.html#fig:histogram-chart-type">7.30</a></li>
+<li>To create a regular histogram in Google Sheets, select a column with values and go to <em>Insert &gt; Chart</em>. If Google Sheets does not automatically select <em>Histogram chart</em> as the <em>Chart type</em> in Chart editor, use the dropdown and select it manually, near the bottom of the list in the <em>Other</em> category, as shown in Figure <a href="histogram-google.html#fig:histogram-chart-type">7.29</a></li>
 </ol>
 
 <div class="figure"><span id="fig:histogram-chart-type"></span>
 <img src="images/07-chart/histogram-chart-type.png" alt="If not shown automatically, go to the Chart Editor sidebar and select Setup - Chart type - Other - Histogram." width="300" />
 <p class="caption">
-Figure 7.30: If not shown automatically, go to the Chart Editor sidebar and select <em>Setup - Chart type - Other - Histogram</em>.
+Figure 7.29: If not shown automatically, go to the Chart Editor sidebar and select <em>Setup - Chart type - Other - Histogram</em>.
 </p>
 </div>
 <ol start="2" style="list-style-type: decimal">

@@ -61,11 +61,11 @@ Commit your change to the README file in the gh-pages branch by pressing the gre
 
 ![](images/11-github/GitHub-EditReadMe.png)
 
-Hint: If you named your file "index.html" then you don't need to add anything else to the web address, because the site will automatically point to this default file. But if you entered a different file name, such as "sample.html", then you need to add it to the web address in this way:  `http://Username.github.io/Repositoryname/sample.html`
+Tip: If you named your file "index.html" then you don't need to add anything else to the web address, because the site will automatically point to this default file. But if you entered a different file name, such as "sample.html", then you need to add it to the web address in this way:  `http://Username.github.io/Repositoryname/sample.html`
 
 9) Select the repository name to go to the upper-most file in the gh-pages branch.
 
-10) To view your live index.html code on the public web, click the link you created in your README file. (Hint: use the right-click feature to open in a new tab/window). Important: The very first time you create a gh-pages branch, it may take up to 10 minutes for its content to appear on the open web. Afterwards, when you add or edit files in this branch, they should appear nearly instantly on the web, though you may need to refresh your browser to view any changes you have made.
+10) To view your live index.html code on the public web, click the link you created in your README file. (Tip: use the right-click feature to open in a new tab/window). Important: The very first time you create a gh-pages branch, it may take up to 10 minutes for its content to appear on the open web. Afterwards, when you add or edit files in this branch, they should appear nearly instantly on the web, though you may need to refresh your browser to view any changes you have made.
 
 ![](images/11-github/GitHub-SelectRepoName2.png)
 

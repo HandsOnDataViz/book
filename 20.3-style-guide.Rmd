@@ -1,0 +1,119 @@
+## Style Guide for *Hands-On Data Visualization* {- #style-guide}
+View the underlying source code to understand how this page was composed at: https://github.com/HandsOnDataViz/book/blob/main/20-bookdown.Rmd
+
+This book is composed in R-flavored Markdown (.Rmd), and each paragraph begins on a separate line. O'Reilly style guide prefers *italics* rather than bold. Use single back tics to display a monospaced `code` word.
+
+O'Reilly guidelines recommend making your writing as conversational as possible. Imagine you're speaking to someone one on one, not giving a formal lecture to a large group. Refer to the reader as "you" and to yourself as "I" for a single-author book, and refer to yourselves as "we" for a co-authored book. Use active voice, not passive voice.
+
+More from O'Reilly about chapter structure: Each chapter should begin with a paragraph or two that summarizes what the chapter is about and why that information is important to the overall topic of your book. Subsequent sections should walk readers through the information you're presenting. Keep readers oriented by including signposts like "As you learned in Chapter 4" and "I'll discuss this topic in more detail later in this chapter."
+
+More from O'Reilly about transitions: End section X by saying something like, "Now that you understand X, you're ready to dig into topic Y," and start section Y by explaining how it relates to topic X. Daisy-chaining helps readers understand how concepts are connected and why you're covering them in this order. Finally, at the end of each chapter, summarize what you discussed in that chapter, and mention what the following chapter is going to cover.
+
+O'Reilly encourages the use of tips, notes, and warnings, and assigns each of them an animal icon in their books (lemur, crow, and scorpion, respectively). In this book manuscript, simply start each with a paragraph beginning with the keyword, followed by a colon, to simplify find-and-replace at a later date:
+
+- Tip: A couple of sentences that convey a helpful bit of information, a quick way to do things better.
+- Note: A couple of sentences of supplemental information. It describes something you want readers to keep in mind as they work, so you use a note to set it apart and make sure they see it.
+- Warning: Similar to a note or tip, but specifically focused on a way to help readers avoid making a mistake or getting into trouble.
+
+Also:
+
+- Sidebar: Use this to note where the editor has requested a boxed sidebar. If longer than one paragraph, add "End Sidebar" to close it.
+
+Insert an embedded external link to [O'Reilly](https://www.oreilly.com/). This appears as a colored clickable link in HTML and Word editions, and a non-colored but clickable link in the PDF edition. According to O'Reilly Atlas documentation, the AsciiDoc version should automatically unfurl for the printed edition.
+
+Insert an embedded internal link to the book, using the short pathname, such as [download this sample CSV file](data/data.csv), to ensure that Bookdown copies the file from the `data` subfolder over to the `docs` subfolder.
+
+Embed links directly in the sentence, such as [download this sample PDF](data/ct-dph-covid-2020-05-31.pdf). Avoid linking words such as "here" or "this web page." Also, avoid writing "Click on this..." in the main text, such as when downloading a sample file, since readers cannot click on the print edition. However, it is acceptable to write "click on" or "right-click on" in a tutorial on interacting with software.
+
+When instructions refer to software menu items, use italics. Example: Select *File > Make a Copy* to save your own version to your Google Drive.
+
+For lists, always insert a blank line *before* the items, unless they appear directly after hashtag header.
+
+- unordered
+- list
+
+1. ordered
+2. list
+
+Dashes:
+
+- Use a hyphen (1 dash) for hyphenated words, such as two-thirds or dog-friendly hotel.
+- Use an en-dash (2 dashes) for ranges, such as the May--September magazine issue.
+- Use an em-dash (3 dashes) to insert an additional thought---like this---in a sentence.
+
+Insert `TODO` to note items to finish or review with co-author or editor.
+
+Use single back tics to designate `code`.
+
+Insert three back tics to insert a code block, limited to 81 character line length for Animal style book body in [O'Reilly style guide](http://oreillymedia.github.io/production-resources/styleguide/#line-length). TODO: Check to see if triple back tics render correctly in the Markdown full-book output.
+
+```
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+```
+
+### Conditional Formatting {-}
+Conditional formatting offers the option to display text or images in some editions, but not other editions. Options:
+
+1. Insert a HTML code comment `<!-- Comment -->` in the .Rmd file to hide a few lines of text. This appears as commented-out text in the HTML and .md formats, is not displayed in the HTML browser, and does not appear in any way in the PDF or MS Word formats.
+
+Demo:
+
+<!-- This comment is visible in the .MD source text, but not visible in the HTML browser, nor PDF or MSWord outputs. -->
+
+2. R package function `is_[html/latex]_output` allows conditional output for different book products, such as text that should appear in the HTML edition but not the PDF edition, or vice versa.
+
+Demos:
+
+`r if (knitr::is_html_output()) '<!--'`
+This line appears in the PDF and Word versions, and is commented-out in the HTML and Markdown versions.
+`r if (knitr::is_html_output()) '-->'`
+
+`r if (knitr::is_latex_output()) '<!--'`
+This line appears in the HTML, Word, Markdown versions, and is commented-out in the PDF version.
+`r if (knitr::is_latex_output()) '-->'`
+
+TODO: Create conditional formatting that displays *only* in the HTML edition, and allows the inclusion of R code-chunks to conditionally display images. See links for more complex conditional formatting:
+
+- https://stackoverflow.com/questions/56808355/how-to-conditionally-process-sections-in-rmarkdown
+- https://bookdown.org/yihui/rmarkdown-cookbook/latex-html.html
+- https://blog.earo.me/2019/10/26/reduce-frictions-rmd/
+- https://stackoverflow.com/questions/53861244/html-specific-section-in-bookdown
+- https://stackoverflow.com/questions/41084020/add-a-html-block-above-each-chapter-header
+- https://stackoverflow.com/questions/45360998/code-folding-in-bookdown
+
+3. Option to customize the `style.css` code for the HTML book.
+
+4. Option to add headers, footers, preambles to the HTML or LaTeX versions.
+
+5. Build different versions of the HTML and LaTeX (PDF) books using different chapters by listing them in order in the `_bookdown.yml` file:
+
+```
+rmd_files:
+  html: ["index.Rmd", "abstract.Rmd", "intro.Rmd"]
+  latex: ["abstract.Rmd", "intro.Rmd"]
+```
+
+### Cross-references {-}
+In order to cross-reference in Bookdown, assign a unique name or R code-chunk label to each chapter, section, figure, and table. Unique names and labels should contain only _alphanumeric_ characters (a-z, A-Z, 0-9) or dashes (-).
+
+To cross-reference any *chapter or section*, and allow readers to jump there, use a HTML link with the unique name, such as `index.html` or `style-guide.html`. Demos:
+
+- See [Introduction](index.html)
+- See ["Style Guide" in Chapter x](style-guide.html).
+
+
+Contrary to the [Bookdown manual](https://bookdown.org/yihui/bookdown/cross-references.html), *avoid* using Bookdown unique ID links to cross-reference chapters or sections, because these create extraneous and imprecise URLs, such as this [bad example](#style-guide).
+
+To cross-reference figures and tables, and display their auto-number and allow readers to jump there, write a call-out with a Bookdown reference to a code-chunk label, such as `See Figure \@ref(fig:sample-map)` or `See Table \@ref(tab:left-table)`. Demos:
+
+- See Figure \@ref(fig:tiger).
+- See Table \@ref(tab:left-table).
+
+Cross-reference interactivity varies by output:
+
+- In HTML, all cross-refs are clickable.
+- In PDF, all cross-refs are clickable (except chapter-level HTML links).
+- In Word, no cross-refs are clickable (unless this varies with reference.docx).
+
+When writing cross-references in the text, the [O'Reilly Style Guide](http://oreillymedia.github.io/production-resources/styleguide/#considering_electronic_formats) prefers live cross references (e.g., "see Figure 2-1"), but if not feasible, use "preceding" or "following" because physical placement of elements may vary across print and digital formats. *Avoid* using "above" or "below."

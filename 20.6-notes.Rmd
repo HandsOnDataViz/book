@@ -9,10 +9,10 @@ After you've installed the tools, here's an overview of the workflow:
 - For each source, Better BibTeX generates a unique citation key, similar to `tyackOneBestSystem1974`, which you can paste with formatting to create a note in the book manuscript.
 - Each time before you build your book inside Bookdown, export your Zotero library or collection in `.bib` format into your Bookdown repository, which supplies the reference data to match your citation keys in the text.
 
-### Installation and Settings for Zotero and Better BibTeX {-}
-Here are more detailed instructions on installing, setting up, and using Zotero and Better BibTeX in a Bookdown workflow. Remember that this workflow may not be ideal for novice computer users.
 
-1. Download and install [Zotero](http://zotero.org) for Mac, Windows, Linux, and add connectors to your preferred browsers.
+Here are more detailed instructions to install, set up, and use Zotero and Better BibTeX in a Bookdown workflow. Remember that this workflow may not be ideal for novice computer users. But if you have multiple citations, it will save you time in the long run.
+
+1. Download and install [Zotero](http://zotero.org) for Mac, Windows, or Linux. Add connectors to your preferred browsers to automatically upload bibliographic data for your sources.
 
 2. Install the [Better BibTeX extension](https://retorque.re/zotero-better-bibtex/installation/) and follow all of the site's instructions for initial setup.
 
@@ -20,14 +20,32 @@ Here are more detailed instructions on installing, setting up, and using Zotero 
 
 4. Copy and paste the citation code into your Markdown text, and add a caret, square brackets, and the at symbol `^[@tyackOneBestSystem1974]`. See more options in the Style Guide. Or you can set Zotero preferences > Export > Better BibTeX Quick Copy to use Zotero's drag-and-drop quick copy feature.
 
-5. Go to the [Zotero Style Repository](https://www.zotero.org/styles) to find your preferred citation style (such as `chicago-fullnote-bibliography.csl`), upload it to your Bookdown repository, and add it to your book's `index.Rmd` settings for both the HTML and PDF editions.
+Tip: If you use R Studio's built-in text editor, see this [blog post on how it supports Zotero citations](https://blog.rstudio.com/2020/11/09/rstudio-1-4-preview-citations/).
+
+5. Go to the [Zotero Style Repository](https://www.zotero.org/styles) to find your preferred citation style (such as `chicago-fullnote-bibliography.csl`). Upload this file to your Bookdown repository, and also add it to your book's `index.Rmd` settings for both the HTML and PDF editions.
 
 6. Each time before your build your book in Bookdown, export an updated Zotero bibliography (in `.bib` format) from your Zotero library or collection, and upload into your Bookdown repo, following these steps:
-  - Select Library > Right-click to export the collection
-  - Select format > Better BibLaTeX (*IMPORTANT*: We use this setting, rather than "Better BibTex", because "Better BibLaTex" includes full dates in newspaper citations, and URLs). Also, we leave all of the checkboxes blank during the export, and do *not* select "keep updated". This means that if your Better BibTex citation codes suddenly change in Zotero because the author, title, or year changed, then you are responsible for running find-and-replace to make these edits in the text of the book.
-  - Save the output as FILENAME.bib, save into your book repo, and be sure to match the settings in `index.Rmd`.
 
-In our Bookdown workflow, which uses the Chicago full-note bibliography style, this Zotero source type entries appear correctly formatted in the book manuscript:
+  - A. Select Library > Right-click to export the collection
+  - B. Select format > Better BibLaTeX (*IMPORTANT*: We use this setting, rather than "Better BibTex", because "Better BibLaTex" includes full dates in newspaper citations, and URLs). Also, we leave all of the checkboxes blank during the export, and do *not* select "keep updated". This means that if your Better BibTex citation codes suddenly change in Zotero because the author, title, or year changed, then you are responsible for running find-and-replace to make these edits in the text of the book.
+  - C. Save the output in `.bib` format, save into your book repo, and be sure to add the same filename to your settings in `index.Rmd`, as shown in these excerpts:
+
+```
+  bibliography: dataviz.bib
+  citation-style: chicago-fullnote-bibliography.csl
+  ...
+  output:
+    bookdown::gitbook:
+      ...
+      pandoc_args: [ "--csl", "chicago-fullnote-bibliography.csl" ]
+
+    bookdown::pdf_book:
+      ...
+      citation_package: none
+      pandoc_args: [ "--csl", "chicago-fullnote-bibliography.csl" ]
+```
+
+In our Bookdown workflow, which uses the Chicago full-note bibliography style, this Zotero source type entries appear correctly formatted:
 
 - Book
 - Book chapter
@@ -43,29 +61,7 @@ To help other researchers find items cited in this book, include URLs in Zotero 
 
 Reminder: Chicago full-note works exactly as it was designed, meaning that the second instance of a citation currently appears as an abbreviated note (author, with title when appropriate).
 
-
-
-TODO -- compare above with below
-
-
-
-To create notes, insert citation keys in the text, such as `@huffHowLieStatistics1954`, which are generated by [Zotero bibliographic database](http://zotero.org) with the [Better BibTex extension](https://retorque.re/zotero-better-bibtex/), and export these in the *Better BibLaTeX* format into the `dataviz.bib` in the book repo. The repo also contains `.csl` file to generate the notes and bibliography in a specific Chicago-style format, downloaded from the [Zotero Styles Repository](https://www.zotero.org/styles). These instructions are referenced in the `index.Rmd` file for both the HTML and PDF formats, as shown in these excerpts:
-
-```
-bibliography: dataviz.bib
-citation-style: chicago-fullnote-bibliography.csl
-...
-output:
-  bookdown::gitbook:
-    ...
-    pandoc_args: [ "--csl", "chicago-fullnote-bibliography.csl" ]
-
-  bookdown::pdf_book:
-    ...
-    citation_package: none
-    pandoc_args: [ "--csl", "chicago-fullnote-bibliography.csl" ]
-```
-
+Demo: 
 Here's a text-only note, with no Zotero citation.^[This is a note, with no bibliographic reference.]
 
 To create a note with citations only, separate Zotero/BibTeX citation keys with semi-colons: ^[@huffHowLieStatistics1954; @monmonierHowLieMaps1996]

@@ -1,71 +1,68 @@
-## Images {- #images}
+## Images and R Code-chunk Formatting {- #images}
 View the underlying source code to understand how this page was composed at: https://github.com/HandsOnDataViz/book/blob/main/20.4-images.Rmd
 
-Create high-resolution color screenshots and other static images in .png or .jpg format, with tight cropping on a high-resolution Retina monitor, typically at 144 ppi. Save items into the `images` subfolder by chapter. Make sure that color images include high contrast and/or shading, because they will be converted to grayscale by the publisher for the print book. Write file names in lowercase with dashes (not spaces) and begin with keyword of relevant section to keep related images grouped together. Despite being in separate folders, avoid duplicate image file names across the book. Avoid numbering images since they may not match the final sequence.
+In general, create high-resolution color screenshots with the paid SnagIt tool (to capture cursors) on a high-resolution Retina monitor (144 ppi) with tight cropping, and save in PNG format (preferred over JPG due to image loss). Save items into the `images` subfolder that corresponds with each chapter. Make sure that color images include high contrast and/or shading, because they will be converted to grayscale by the publisher for the print book. Write file names in lowercase with dashes (not spaces) and begin with keyword of relevant section to keep related images grouped together. Despite being in separate folders, avoid duplicate image file names across the book. Avoid numbering images since they may not match the final sequence.
 
-If a screenshot requires additional artwork or text for the HTML edition, make a copy of the original and add `-annotated` to note that this version is annotated, save into the same folder with the same root file name, and use in the code-chunk image pathnames. The publisher will use the original image and add their own artwork for their editions.
+If we need to create side-by-side images, save each element using the root file name plus a suffix, and use Photoshop or http://Photopea.com to combine images and also save in Photoshop format (.psd) in the images subfolder.
 
-Typically, we need to convert PNG images into smaller PDF images to fit them in the PDF edition. To batch process this for a folder of images:
+If a screenshot requires additional artwork or text for the HTML edition, make a copy of the original, modify using a graphics tool, and add the suffix `-annotated` to note that this version is annotated, save into the same folder with the same root file name, and use in the code-chunk image pathnames. In the publisher's Figure Log we will point to the original image, and add a note to the annotated version as a guide for any artwork that they wish to redraw.
+
+Since large PNG images sometimes appear too large in the PDF edition, convert a copy into a smaller PDF image to fit better. To batch process several PNG images:
 
 - create duplicates of all PNGs and drag to a separate folder
 - select all of the duplicated PNG files and open with Mac Preview to view all
-- select all image thumbnails in Preview, reduce image size for all by 50% (or more)
+- select all image thumbnails in Preview, reduce image size for all by 50% (or more), and save
 - select all image thumbnails in Preview again, and File > Export, with Option to change file format to PDF, but keep same file name as PNG
 - move all reduced-size PDFs back to the original images folder
 
-Overall, sometimes the folder will contain only one version of a simple image, but in other cases it may contain up to 3-4 versions of an image:
+As a result, a simple image may have only one file in the the images folder, but large and complex images may consist of multiple files:
 
 ```
-images/07-chart/design-setup.png
-images/07-chart/design-setup-annotated.png
-images/07-chart/design-setup-annotated.pdf
-```
-
-If creating images to appear as the same size in sequence, add a code-comment with the image width, height, and resolution as a reminder to make others match up, like this:
-
-`<!-- Images below are 200x200 at 300 resolution -->`
-
-In this book, use *Markdown formatting only for images that appear inside tables* or *do not require captions or figure numbering*, and leave the caption field blank, like this example:
-
-<!-- Images below are 200x200 at 300 resolution do not follow style guide due to placement in a table -->
-
-| Co-Authors      | About Us      |
-| --------------- | ------------- |
-| ![](images/20-bookdown/dougherty-jack.jpg) | About [Jack Dougherty](http://jackdougherty.org) |
-| ![](images/20-bookdown/ilyankou-ilya.jpg) | About [Ilya Ilyankou](https://github.com/ilyankou) |   
-
-Although Markdown formatting offers a simple syntax that easily converts into other formats with Bookdown/Pandoc, there is no auto-numbering in the HTML edition, while auto-numbering appears in the PDF edition, and numbered figures are required by the publisher. Furthermore, Markdown formatting does not allow conditional output.
-
-### Images with R code-chunks for auto-numbering and conditional formatting {-}
-For these reasons, this book *primarily uses R code-chunk formatting for images*. The syntax is more complex but supports auto-numbering in HTML and PDF. Also, the syntax supports conditional output for interactive images in HTML versus static images in PDF and full-length Markdown, which we accomplish using this *general* format:
+images/07-chart/image.png
+images/07-chart/image-annotated.png
+images/07-chart/image-annotated.pdf
+images/07-chart/image-combined.psd
+images/07-chart/image-part1.png
+images/07-chart/image-part2.png
 
 ```
-if(knitr::is_html_output(excludes="markdown")) knitr::include_url("PATHNAME-TO-INTERACTIVE")
-else knitr::include_graphics("PATHNAME-TO-STATIC")
-```
 
-We need to exclude `markdown` because it is considered an HTML format, as described here:
-https://bookdown.org/yihui/rmarkdown-cookbook/latex-html.html
+In writing this book, one of key goals was to create R Markdown syntax to display different versions of images for different Bookdown editions. For each image, we wanted one set of instructions to display an interactive chart/map/video using an embedded iframe in the HTML web edition, but display a static PNG image in the full-length Markdown edition, or to substitute a smaller PDF static image when available in the PDF book edition. Also, we wanted auto-numbering of images by chapter.
 
-Auto-numbering appears in `Figure x.x` format in HTML and PDF, but `Figure x` format in MS Word and Markdown. Note that Word formatting can be changed with reference.docx.
-
-Note that images in PDF output will "float" by design and may appear before or after the desired page, so always add a cross-reference call-out.
-
-Write R code-chunk labels that follow the image file name, and avoid duplicate labels across the book:
+Our solution relies on R code-chunk formatting for *most* images, with some exceptions. This R Markdown/Bookdown syntax is more complex than basic Markdown image formatting, but supports conditional formatting and captions in all of our editions, and auto-numbering in HMTL and LaTeX/PDF editions. Our *general* R code-chunk image format looks *roughly* like this, minus some code tics that have been removed for simplicity:
 
 ```
-ref:design-setup
+...as shown in Figure \@ref(fig:keyword).
 
-images/07-chart/design-setup.png
+(ref:keyword) Caption, with optional Markdown links, but no endnotes.
+
+{r keyword, fig.cap="(ref:keyword)"}
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("http://pathname-to-interactive-version-keyword.html")
+else knitr::include_graphics("pathname-to-static-version-keyword.png")
 ```
 
-Do not insert spaces inside the `ref:chunk-label` for the caption, but add a blank line to separate it from the code-chunk. After the code-chunk, add *another* blank line to avoid "undefined reference" Bookdown errors.
+The first line generates an auto-numbered and clickable figure cross-reference call-out. Auto-numbering appears in `Figure x.x` format in HTML and PDF, but `Figure x` format in MS Word and Markdown. (Word auto-number formatting can be changed with a reference.docx file.) This call-out is important because images in PDF output will "float" by design and may appear before or after the desired page.
+
+The second line contains the caption, with optional links in Markdown format. But do not insert endnotes with Zotero citation keys, since those will cause errors in the PDF edition. Insert detailed endnotes about sources for images in the body of the text, and use the caption for only a brief "Source: " mention.
+
+The third block is the R code-chunk. (In practice, the code-chunk is set off from the other two lines using 3 code tic marks, as shown in later demos, which we omitted here for simplicity.) The first portion references keyword in the call-out and also the caption above. The latter portion may simply instruct Bookdown to include a static image (when there is no interactive version), or it may include an if-else statement for conditional formatting when both interactive and static versions exist.
+
+The if statement for HTML output contains `(excludes="markdown")` because `markdown` is considered an HTML format, as described in the [R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/latex-html.html). Since the publisher's platform will accept a full-length Markdown version of the book, which displays static images rather than interactive visualizations, we need to generate the "markdown" file differently than the HTML web edition.
+
+
+Write R code-chunk labels that use the same keywords as the image file name, and avoid duplicate labels across the book:
+
+```
+ref:keywords-with-hyphens
+
+images/07-chart/keywords-with-hyphens.png
+```
+
+Do not insert spaces inside the `ref:chunk-label` for the caption. But do add a blank line to separate it from the code-chunk. After the code-chunk, add *another* blank line to avoid "undefined reference" Bookdown errors.
 
 Inside the R code-chunk ref caption, do NOT use mischievous characters (such as `<` or `>` or `"`) that will throw HTML errors into the Markdown output images. Instead, use safe characters such as (`*` and `-`) to designate computer instructions, such as *File - Make a Copy*.
 
-For each figure, manually add a cross-reference call-out and optionally, insert `fig.pos='h'` to place the image "here" on the page in the PDF output, to *attempt* to avoid PDF floating. Ignore the Bookdown LaTeX warning message "h float specifier changed to ht." See more at https://bookdown.org/yihui/bookdown/figures.html and https://bookdown.org/yihui/rmarkdown-cookbook/figure-placement.html
-
-This Bookdown `index.Rmd` file includes two global R code-chunk settings immediately after the first header. One setting displays each code-chunk image without a code echo. The other setting automatically inserts the PDF version of an PNG/JPG image, whenever it exists, in the PDF output, which allows us to manually reduce the image sizes for the PDF book. Read more about these options in this Bookdown chapter: https://bookdown.org/yihui/bookdown/figures.html.
+Our Bookdown `index.Rmd` file includes global R code-chunk settings immediately after the first header. One setting displays each code-chunk image without a code echo, meaning that only the image is displayed, and not the code used to generate that image. The other setting automatically inserts the PDF version of an PNG/JPG image, whenever it exists, in the PDF output, which allows us to manually reduce the size of large images displayed in the PDF book. Read more about these options in this Bookdown chapter: https://bookdown.org/yihui/bookdown/figures.html.
 
 ```
 {r setup, include=FALSE}
@@ -73,60 +70,78 @@ knitr::opts_chunk$set(echo = FALSE)
 options(knitr.graphics.auto_pdf = TRUE)
 ```
 
-### Demo: R code-chunk for small static image for HTML, PDF, full-length Markdown editions {-}
-Small is defined as each side less than 300px, as shown in Figure \@ref(fig:tiger).
+### Demo: R code-chunk for static image for all editions: HTML, PDF, DOCX, MD {-}
+...as shown in Figure \@ref(fig:sample-image).
 
-(ref:tiger) Caption here. Markdown embedded links are acceptable, but no footnotes in captions due to error when generating PDF edition.
+(ref:sample-image) Caption with optional Markdown links but no endnotes. Source: "Hippo and crocodile" by [Stig Nygaard](https://www.flickr.com/photos/10259776@N00), CC-BY.
 
-```{r tiger, fig.cap="(ref:tiger)"}
- knitr::include_graphics("images/20-bookdown/tiger.png")
+```{r sample-image, fig.cap="(ref:sample-image)"}
+ knitr::include_graphics("images/20-bookdown/sample-image.png")
 ```
 
-### R code-chunk for larger static image using out.width and PDF img {-}
-For larger images, where one side is greater than 300px, set the out.width to a pixel number for ideal display in the HTML edition. Also optional to reduce float in PDF: `fig.pos='h',`. If necessary, copy the image, use Photoshop to create a smaller image size, and save with same file name and a .pdf extension for auto-substitution in the PDF output ...as shown in Figure \@ref(fig:screenshot-tall).
+### Demo: R code-chunk to reduce size of static image for all editions {-}
+First, create a copy of the original PNG image. Use Preview or any image editor to reduce size by 50 percent or more, and if needed, increase the resolution (from 72 to 144 dpi or higher), and save. Export as PDF image with same filename as PNG file, to produce two image files: keyword.png (original) and keyword.pdf (smaller size). The global setting will auto-substitute the smaller PDF image in place of the original PNG image.
 
-(ref:screenshot-tall) Using out.width=200 and smaller PDF image size.
+Second, insert an `out.width=...` in the second line to reduce the PNG display size as needed in the HTML edition. Note that this method keeps the original PNG image intact, which is ideal when working with historical images of a reasonable file size. Images larger than 3MB may be delayed in the HTML web edition for readers with slow internet connections.
 
-```{r screenshot-tall, out.width=200, fig.cap="(ref:screenshot-tall)"}
- knitr::include_graphics("images/20-bookdown/screenshot-tall.png")
+...as shown in Figure \@ref(fig:sample-image2).
+
+(ref:sample-image2) This version reduces HTML display size using `out.width=300` and auto-substitutes a smaller PDF image. Source: "Hippo and crocodile" by [Stig Nygaard](https://www.flickr.com/photos/10259776@N00), CC-BY.
+
+```{r sample-image2, out.width=300, fig.cap="(ref:sample-image2)"}
+ knitr::include_graphics("images/20-bookdown/sample-image2.png")
 ```
 
-R code-chunks allow more complex conditional formatting, where an interactive map or animated GIF or YouTube video clip appears in the HTML version, and a static image with an embedded link appears in the PDF, MS Word, and full-length Markdown outputs. To change the height of the default 400px iframe, add the new height to `include_url` as shown in the examples. However, to change the width of the default 675px iframe to less than 100 percent, add a line in a `custom-scripts.html` file.
+R code-chunks allow more complex conditional formatting, where an interactive map or animated GIF or streaming video clip appears in the HTML version, and a manually-produced static image with an embedded link appears in the PDF, MS Word, and full-length Markdown outputs. To change the height of the default 400px iframe, add the new height to `include_url` as shown in the examples. (Note: Changing the width of the default 675px iframe to less than 100 percent requires adding a line in a `custom-scripts.html` file, and including this in the `index.Rmd` file).
 
-### Demo: R code-chunk for iframe in HTML and static image in PDF and Markdown{-}
+### Demo: R code-chunk for iframe in HTML, static image in PDF, DOCX, MD {-}
 ...as shown in Figure \@ref(fig:sample-map).
 
-(ref:sample-map) Caption here, and add embedded link to explore the [full-screen interactive map](https://handsondataviz.github.io/leaflet-maps-with-google-sheets/).
+(ref:sample-map) Explore the [interactive map](https://handsondataviz.github.io/leaflet-map-simple/), which enables readers of non-HTML editions to view it.
 
 ```{r sample-map, fig.cap="(ref:sample-map)"}
-if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://handsondataviz.github.io/leaflet-maps-with-google-sheets/", height = "600px") else knitr::include_graphics("images/20-bookdown/sample-map.jpg")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://handsondataviz.github.io/leaflet-map-simple/", height = "375px") else knitr::include_graphics("images/20-bookdown/sample-map.png")
 ```
 
-### Demo: R code-chunk for animated GIF in HTML and static image in PDF and Markdown {-}
-When appropriate, create animated GIF files using Camtasia, and add fade-to-black to mark the end-point in the looped version. Add ...as shown in Figure \@ref(fig:sheets-option-drag).
+### Demo: R code-chunk for animated GIF in HTML, static image in PDF, DOCX, MD {-}
+When appropriate, create animated GIF files using the free [Giphy Capture](https://giphy.com/apps/giphycapture) or the paid [Camtasia](https://www.techsmith.com/video-editor.html) application, which allows the option to add fade-to-black to mark the end-point in the looped version.
 
-(ref:sheets-option-drag) Caption here, with embedded link to the [animated GIF](https://handsondataviz.org/images/20-bookdown/sheets-option-drag.gif).
+...as shown in Figure \@ref(fig:sample-gif).
 
-```{r sheets-option-drag, fig.cap="(ref:sheets-option-drag)"}
-if(knitr::is_html_output(excludes="markdown")) knitr::include_url("images/20-bookdown/sheets-option-drag.gif", height = "250px") else knitr::include_graphics("images/20-bookdown/sheets-option-drag.png")
+(ref:sample-gif) View the [animated GIF](https://handsondataviz.org/images/20-bookdown/sample.gif), which enables readers of non-HTML editions to view it.
+
+```{r sample-gif, fig.cap="(ref:sample-gif)"}
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("images/20-bookdown/sample-gif.gif", height = "250px") else knitr::include_graphics("images/20-bookdown/sample-gif.png")
 ```
 
-### Demo: R code-chunk for Youtube video in HTML and static image in PDF and Markdown {-}
-Be sure to use the *embed* link from the YouTube *share* button.
+### Demo: R code-chunk for streaming video in HTML, static image in PDF, DOCX, MD {-}
+Be sure to use the *embed* link from a YouTube or Vimeo *share* button.
 
-...as shown in the video \@ref(fig:video-sample).
+...as shown in the video \@ref(fig:sample-video).
 
-(ref:video-sample) Caption here, with embedded link to the [YouTube video](https://youtu.be/-nGdrzMuUnI).
+(ref:sample-video) View the [YouTube video](https://youtu.be/M3_TWyva5yc), which enables readers of non-HTML editions to view it.
 
-```{r video-sample, fig.cap="(ref:video-sample)"}
-if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://www.youtube.com/embed/-nGdrzMuUnI") else knitr::include_graphics("images/20-bookdown/video-sample.png")
+```{r sample-video, fig.cap="(ref:sample-video)"}
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://www.youtube.com/embed/M3_TWyva5yc") else knitr::include_graphics("images/20-bookdown/sample-video.png")
 ```
 
-### Demo: R code-chunk for YouTube video in HTML, with NO static image in PDF or Markdown {-}
-This option may be relevant when you wish to display a video only in the html edition, with no screenshot of it in the PDF edition. Note that this will alter figure-numbering between the HTML and PDF editions.
+### Demo: R code-chunk for streaming video ONLY in HTML {-}
+This option is useful if you wish to display a video only in the HTML edition, with no screenshot in the other editions. Note that this will alter figure auto-numbering between the HTML and other editions. To avoid auto-numbering issues, use conventional iframe formatting without the R code-chunk.
 
-(ref:video-sample2) Caption **only** for HTML version, with embedded link to the [YouTube video](https://youtu.be/w6dQ-RIQ5bc).
+(ref:sample-video2) Caption only appears in HTML version. View link to [YouTube video](https://youtu.be/_hmhEr1s7F0).
 
-```{r video-sample2, fig.cap="(ref:video-sample2)"}
-if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://www.youtube.com/embed/w6dQ-RIQ5bc")
+```{r sample-video2, fig.cap="(ref:sample-video2)"}
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://www.youtube.com/embed/_hmhEr1s7F0")
 ```
+
+### Demo: Markdown image formatting without auto-numbering, for all editions {-}
+While we normally use R code-chunk image formatting, there are some exceptions. For example, we use Markdown formatting for tables or grids of images that are relatively small and do not require captions or auto-numbering.
+
+When creating images to appear as the same size in sequence, temporarily add a code-comment with the image width, height, and resolution as a reminder to match up with others, as shown below. Use PNG images (rather than JPG), and if appropriate, add a numerical suffix to the filename (image-200.png) to distinguish this 200px-wide version from the larger original.
+
+`<!-- Images below are 200x200 at 300 resolution -->`
+
+| Co-Authors      | About Us      |
+| --------------- | ------------- |
+| ![](images/20-bookdown/dougherty-jack-200.png) | About [Jack Dougherty](http://jackdougherty.org) |
+| ![](images/20-bookdown/ilyankou-ilya-200.png) | About [Ilya Ilyankou](https://github.com/ilyankou) |   

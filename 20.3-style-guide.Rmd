@@ -1,7 +1,10 @@
 ## Style Guide for *Hands-On Data Visualization* {- #style-guide}
-View the underlying source code to understand how this page was composed at: https://github.com/HandsOnDataViz/book/blob/main/20-bookdown.Rmd
+View the underlying source code to understand how this page was composed at: https://github.com/HandsOnDataViz/book/blob/main/20.3-style-guide.Rmd
 
-This book is composed in R-flavored Markdown (.Rmd), and each paragraph begins on a separate line. O'Reilly style guide prefers *italics* rather than bold. Use single back tics to display a monospaced `code` word.
+We built *Hands-On Data Visualization* based largely on the [O'Reilly Style Guide](http://oreillymedia.github.io/production-resources/styleguide/), and also to match our needs for composing in R-flavored Markdown (.Rmd) and generating multiple book products through Bookdown. While we drafted chapters, we wanted to produce an HTML edition for the web that would display our embedded iframes to online charts and maps. We also needed to produce a PDF or Word version that displayed only static images, for our developmental editor to markup and provide feedback. Finally, we needed to produce a full-length Markdown file (.md) of the entire book that would easily convert all of our text, captions, and pathnames to static images for O'Reilly's publishing platform. Some of the notes below are stylistic or technical reminders to ourselves to write consistently as we worked on 16 chapters and more than 400 images.
+
+
+In general, each chapter is a separate R-flavored Markdown (.Rmd) file. Each paragraphs begins on a separate line. O'Reilly style guide prefers *italics* rather than bold. Use single back tics to display a monospaced `code` word. Insert `TODO` to note items to finish or review with co-author or editor.
 
 O'Reilly guidelines recommend making your writing as conversational as possible. Imagine you're speaking to someone one on one, not giving a formal lecture to a large group. Refer to the reader as "you" and to yourself as "I" for a single-author book, and refer to yourselves as "we" for a co-authored book. Use active voice, not passive voice.
 
@@ -19,9 +22,9 @@ Also:
 
 - Sidebar: Use this to note where the editor has requested a boxed sidebar. If longer than one paragraph, add "End Sidebar" to close it.
 
-Insert an embedded external link to [O'Reilly](https://www.oreilly.com/). This appears as a colored clickable link in HTML and Word editions, and a non-colored but clickable link in the PDF edition. According to O'Reilly Atlas documentation, the AsciiDoc version should automatically unfurl for the printed edition.
+Sample embedded external link: [O'Reilly](https://www.oreilly.com/). This appears as a colored clickable link in HTML and Word editions, and a non-colored but clickable link in the PDF edition. According to O'Reilly Atlas documentation, the AsciiDoc version should automatically unfurl for the printed edition.
 
-Insert an embedded internal link to the book, using the short pathname, such as [download this sample CSV file](data/data.csv), to ensure that Bookdown copies the file from the `data` subfolder over to the `docs` subfolder.
+Sample embedded internal link to the book, using the short pathname, such as [download this sample CSV file](data/data.csv), to ensure that Bookdown copies the file from the `data` subfolder over to the `docs` subfolder.
 
 Embed links directly in the sentence, such as [download this sample PDF](data/ct-dph-covid-2020-05-31.pdf). Avoid linking words such as "here" or "this web page." Also, avoid writing "Click on this..." in the main text, such as when downloading a sample file, since readers cannot click on the print edition. However, it is acceptable to write "click on" or "right-click on" in a tutorial on interacting with software.
 
@@ -41,19 +44,15 @@ Dashes:
 - Use an en-dash (2 dashes) for ranges, such as the May--September magazine issue.
 - Use an em-dash (3 dashes) to insert an additional thought---like this---in a sentence.
 
-Insert `TODO` to note items to finish or review with co-author or editor.
-
-Use single back tics to designate `code`.
-
-Insert three back tics to insert a code block, limited to 81 character line length for Animal style book body in [O'Reilly style guide](http://oreillymedia.github.io/production-resources/styleguide/#line-length). TODO: Check to see if triple back tics render correctly in the Markdown full-book output.
+Insert three back tics to insert a code block, limited to 81 character line length for Animal style book body in [O'Reilly style guide](http://oreillymedia.github.io/production-resources/styleguide/#line-length), like this:
 
 ```
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
-<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 ```
 
 ### Conditional Formatting {-}
-Conditional formatting offers the option to display text or images in some editions, but not other editions. Options:
+Conditional formatting offers the option to display text or images in some Bookdown editions, but not others. Here are several ways to use conditional formatting:
 
 1. Insert a HTML code comment `<!-- Comment -->` in the .Rmd file to hide a few lines of text. This appears as commented-out text in the HTML and .md formats, is not displayed in the HTML browser, and does not appear in any way in the PDF or MS Word formats.
 
@@ -73,41 +72,50 @@ This line appears in the PDF and Word versions, and is commented-out in the HTML
 This line appears in the HTML, Word, Markdown versions, and is commented-out in the PDF version.
 `r if (knitr::is_latex_output()) '-->'`
 
-TODO: Create conditional formatting that displays *only* in the HTML edition, and allows the inclusion of R code-chunks to conditionally display images. See links for more complex conditional formatting:
-
-- https://stackoverflow.com/questions/56808355/how-to-conditionally-process-sections-in-rmarkdown
-- https://bookdown.org/yihui/rmarkdown-cookbook/latex-html.html
-- https://blog.earo.me/2019/10/26/reduce-frictions-rmd/
-- https://stackoverflow.com/questions/53861244/html-specific-section-in-bookdown
-- https://stackoverflow.com/questions/41084020/add-a-html-block-above-each-chapter-header
-- https://stackoverflow.com/questions/45360998/code-folding-in-bookdown
-
 3. Option to customize the `style.css` code for the HTML book.
 
 4. Option to add headers, footers, preambles to the HTML or LaTeX versions.
 
-5. Build different versions of the HTML and LaTeX (PDF) books using different chapters by listing them in order in the `_bookdown.yml` file:
+5. Build different versions of the HTML and LaTeX/PDF books using different chapters by listing them in order in the `_bookdown.yml` file. In this way, we published all chapters/subchapters for the HTML version, but published only selected chapters for the PDF and full-length Markdown versions for O'Reilly, as shown below:
 
 ```
-rmd_files:
-  html: ["index.Rmd", "abstract.Rmd", "intro.Rmd"]
-  latex: ["abstract.Rmd", "intro.Rmd"]
+# comment-out below when building HTML book, un-comment for PDF and full-length Markdown for ORM
+# rmd_files: [
+#   "index.Rmd",
+#   "01-introduction.Rmd",
+#   "02-choose.Rmd",
+#   "03-spreadsheet.Rmd",
+#   "04-find.Rmd",
+#   "05-clean.Rmd",
+#   "06-comparisons.Rmd",
+#   "07-chart.Rmd",
+#   "08-map.Rmd",
+#   "09-table.Rmd",
+#   "10-embed.Rmd",
+#   "11-github.Rmd",
+#   "12-chartcode.Rmd",
+#   "13-leaflet.Rmd",
+#   "14-transform.Rmd",
+#   "15-detect.Rmd",
+#   "16-story.Rmd",
+#   "17-fix.Rmd",
+#   "21-references.Rmd"
+# ]
 ```
 
 ### Cross-references {-}
 In order to cross-reference in Bookdown, assign a unique name or R code-chunk label to each chapter, section, figure, and table. Unique names and labels should contain only _alphanumeric_ characters (a-z, A-Z, 0-9) or dashes (-).
+
+Contrary to the [Bookdown manual](https://bookdown.org/yihui/bookdown/cross-references.html), *avoid* using Bookdown unique ID links to cross-reference chapters or sections, because these create imprecise URLs with extraneous hashtags for sections/subchapters.
 
 To cross-reference any *chapter or section*, and allow readers to jump there, use a HTML link with the unique name, such as `index.html` or `style-guide.html`. Demos:
 
 - See [Introduction](index.html)
 - See ["Style Guide" in Chapter x](style-guide.html).
 
+To cross-reference figures and tables, and display their auto-number and allow readers to jump there, write a call-out with a Bookdown reference to a code-chunk label, such as `See Figure \@ref(fig:sample-image)` or `See Table \@ref(tab:left-table)`. Demos:
 
-Contrary to the [Bookdown manual](https://bookdown.org/yihui/bookdown/cross-references.html), *avoid* using Bookdown unique ID links to cross-reference chapters or sections, because these create extraneous and imprecise URLs, such as this [bad example](#style-guide).
-
-To cross-reference figures and tables, and display their auto-number and allow readers to jump there, write a call-out with a Bookdown reference to a code-chunk label, such as `See Figure \@ref(fig:sample-map)` or `See Table \@ref(tab:left-table)`. Demos:
-
-- See Figure \@ref(fig:tiger).
+- See Figure \@ref(fig:sample-image).
 - See Table \@ref(tab:left-table).
 
 Cross-reference interactivity varies by output:

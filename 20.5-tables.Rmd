@@ -1,9 +1,7 @@
-## Tables {- #tables}
-View the underlying source code to understand how this page was composed at: https://github.com/HandsOnDataViz/book/blob/main/20-bookdown.Rmd
+## Tables in Markdown Format {- #tables}
+View the underlying source code to understand how this page was composed at: https://github.com/HandsOnDataViz/book/blob/main/20.5-tables.Rmd
 
 Create tables in Markdown format, since it produces good output for HTML, PDF, Word, and Markdown. Use a tool such as [Tables Generator](https://www.tablesgenerator.com/markdown_tables) to import significant table data in CSV format, format the column alignment as desired, and press Generate button to create table in Markdown format. For significant table data, save the CSV version in a GitHub repo for potential later use.
-
-TODO: Check if any un-numbered Markdown tables in the chapter affect table auto-numbering.
 
 Add the Markdown table code shown below to auto-number (Table x) in HTML, PDF, Word.
 
@@ -24,4 +22,4 @@ Table: (\#tab:right-table) Right-justify content, remember blank line
 | Right-justify | numerical content  | with right-colons |
 | Use equal hyphens | to make equal space | for all columns |
 
-Currently, Bookdown creates the Markdown file with tables in HTML format, not Markdown format. Our workaround is to paste the individual Markdown-formatted tables directly from the .Rmd into the *modified* full-book .md file.
+Note that Bookdown creates the Markdown file with tables in HTML format, not Markdown format. If necessary, one workaround is to paste the individual Markdown-formatted tables directly from the .Rmd into a *modified* full-book .md file.

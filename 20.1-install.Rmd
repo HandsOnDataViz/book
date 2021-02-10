@@ -1,36 +1,60 @@
-## Install Bookdown  {-}
-Below are steps we followed to set up the publishing platform for this book, using our Macintosh OS 10.14 computers. The same general principles also should apply to Windows computers. No special knowledge is required, but this may not be recommended for novice computer users. Installation steps---and inevitable problems that pop up---will be easier if users are willing to feel adventurous with their computers, or already have some familiarity with text editors, GitHub, or R Studio.
+## Install and Set Up Bookdown {- #install}
+Below are steps we followed to set up the Bookdown publishing platform and related tools for this book, using our Macintosh OS 10.14 computers. The same general principles also should apply to Windows computers. No special knowledge is required, but these tools may not be ideal for novice computer users. Installation steps---and inevitable problems that pop up---will be easier if you are comfortable with exploring your computer, or already have some familiarity with text editors, GitHub, or R Studio.
 
-- Install R Project statistical programming language <https://www.r-project.org>, which is required by Bookdown. [See screenshot](images/bookdown/1-r-download.png)
-- Install the free version of RStudio Desktop to make R easier to use with a visual editor. [See screenshot](images/bookdown/2-download-rstudio.png). Some authors compose their books in RStudio, but you may use any text editor; our personal preference is the [Atom editor](https://atom.io/) from GitHub.
-- Inside RStudio, select the Packages tab, and select Install. [See screenshot](images/bookdown/3-packages-install.png)
-- Inside RStudio, install the "bookdown" package to build your book, and select Install Dependencies. [See screenshot](images/bookdown/4-install-bookdown.png)
-- Bookdown now should be successfully installed in RStudio. [See screenshot](images/bookdown/5-installed.png)
-- For Bookdown to create a PDF edition of your book, you need to install a [LaTeX](https://en.wikipedia.org/wiki/LaTeX) engine to prepare your Markdown plain text, citations, and images into stylized pages. Since the full-sized [LaTeX project](https://www.latex-project.org/get/) is very large, Bookdown recommends the smaller TinyTeX package. Inside RStudio, select the Packages tab, select Install, and enter "tinytex" to find and upload the package. [See screenshot](images/bookdown/6-install-tinytex.png)
-- To finish installing tinytex, in the RStudio console, type `tinytex::install_tinytex()` and press return. [See screenshot](images/bookdown/7-finish-install-tinytex.png)
-- When you installed RStudio, it also should have installed its own version of Pandoc, the package that converts files from Markdown format to HMTL and other formats. To confirm the Pandoc installation and version number, in the RStudio console, type `rmarkdown::pandoc_version()` and press return. The resulting version number should be `2.3.1` or higher. To learn more about Pandoc or to install a newer version, go to <https://pandoc.org>.
+1. Install R Project statistical programming language <https://www.r-project.org>, which is required by Bookdown. [See screenshot](images/20-bookdown/1-r-download.png)
 
-### Download and Build a Sample Bookdown Book {-}
-- Create a free GitHub account <https://github.com> to simplify steps for the next two sections. While Bookdown does not require you to use GitHub, the workflow described below features GitHub to copy a sample Bookdown template and to host your own Bookdown editions online.
-- In your web browser, log into your GitHub account, go to the Bookdown developer's `bookdown-minimal` repo <https://github.com/yihui/bookdown-minimal>, and fork a copy to your GitHub account. To learn about forking in GitHub, see this chapter <http://datavizforall.org/github.html> in the *Data Visualization for All* book.
-- Install GitHub Desktop <https://desktop.github.com> to transfer files between your online GitHub repo and local computer. While software developers may prefer to access GitHub by typing commands in their terminal, GitHub Desktop provides easier point-and-click access for most users.
-- In your web browser, go to your forked copy of `bookdown-minimal`, click the green `Clone or Download` button, and select `Open in Desktop`. This should automatically open the GitHub Desktop application, and you can navigate where you wish to store a copy of your code repo on a folder in your local computer.
-- In RStudio in the upper-right corner, select Project > Open Project to open the `bookdown-minimal` folder on your local computer. [See screenshot](images/bookdown/8-project-open.png)
-- In RStudio, open the `index.Rmd` file and make some simple edits to the text of this minimal book. For example, remove the hashtag `#` comment symbol in line 8 to "uncomment" and activate the PDF book option. Save your edits. [See screenshot](images/bookdown/9-edit-book.png)
-- Optional: If you wish, you can modify your `bookdown-minimal` files outside of RStudio, by using your preferred text editor, such as Atom editor <https://atom.io>.
-- In RStudio, upper-right corner, select the Build tab, select Build Book, and choose All Formats to build both the gitbook-style static web edition and PDF edition.
-- If RStudio successfully builds both editions of your minimal book, the output will be saved into your `bookdown-minimal` folder, in a subfolder named `_book`, because that's how this sample is configured. The RStudio internal browser should automatically open your web edition (but it's not a very good browser, so we typically close it and manually open the `index.html` file with Firefox or Chrome browser.)
-- Also, open the subfolder and inspect the PDF edition of your book. If any errors were generated in the process, error messages will appear in red type in the RStudio Build viewer, which may require you to debug errors and delete temporary files as instructed. [See screenshot](images/bookdown/11-successful-build.png)
-- Hint: In future sessions with RStudio, you should select the Packages tab and click Update to keep Bookdown and other software packages up to date. [See screenshot](images/bookdown/12-packages-update.png)
-- Close your project, and quit RStudio.
+2. Install the free version of RStudio Desktop to make R easier to use with a visual editor. [See screenshot](images/20-bookdown/2-download-rstudio.png). Some authors compose their books in RStudio, but you may use any text editor. Our personal preference is the [Atom editor](https://atom.io/) from GitHub.
 
-### Host Your Sample Book Online with GitHub Pages {-}
-- Open GitHub Desktop and navigate to the `bookdown-minimal` folder on your local computer. Write a quick summary to commit (or save) the changes you made above to your master branch, and push this version to your online GitHub repo.
-- In your web browser, go to your online GitHub repo, with a web address similar to `https://github.com/USERNAME/bookdown-minimal` (insert your own GitHub username).
-- In your GitHub repo, select Settings, and scroll down to the GitHub Pages section, which is a free web hosting service to publish your code and book editions on the public web. Select Master Branch as your source, and Save.
-- Scroll down to this section again, and the web address of your published site should appear. Copy this address.
-- In a new browser tab, paste the web address from above, and at the end add `_book/index.html` because this sample is configured to store all web and PDF editions in your `_book` subfolder. Your web address should be similar to: `https://USERNAME.github.io/bookdown-minimal/_book/index.html`
-- Reminder: You may need to wait up to one minute for edits to your GitHub online repo to appear live at your GitHub Pages web address. Also, after waiting for GitHub Pages to make changes, be sure to "force reload" or "hard refresh" your web browser to update directly from the GitHub Pages server, not the browser's internal cache. On Mac, press shift + command + R. On Windows, press ctrl + F5.
+3. Inside RStudio, select the Packages tab, and select Install. [See screenshot](images/bookdown/3-packages-install.png)
+
+4. Inside RStudio, install the "bookdown" package to build your book, and select Install Dependencies. [See screenshot](images/20-bookdown/4-install-bookdown.png)
+
+5. Bookdown now should be successfully installed in RStudio. [See screenshot](images/20-bookdown/5-installed.png)
+
+6. For Bookdown to create a PDF edition of your book, you need to install a [LaTeX](https://en.wikipedia.org/wiki/LaTeX) engine to prepare your Markdown plain text, citations, and images into stylized pages. Since the full-sized [LaTeX project](https://www.latex-project.org/get/) is very large, Bookdown recommends the smaller TinyTeX package. Inside RStudio, select the Packages tab, select Install, and enter "tinytex" to find and upload the package. [See screenshot](images/20-bookdown/6-install-tinytex.png)
+
+7. To finish installing tinytex, in the RStudio console, type `tinytex::install_tinytex()` and press return. [See screenshot](images/20-bookdown/7-finish-install-tinytex.png)
+
+8. When you installed RStudio, it also should have installed its own version of Pandoc, the package that converts files from Markdown format to HMTL and other formats. To confirm the Pandoc installation and version number, in the RStudio console, type `rmarkdown::pandoc_version()` and press return. The resulting version number should be `2.3.1` or higher. To install a newer version of Pandoc, which is highly recommended, go to <https://pandoc.org>.
+
+### Download, Build, and Host a Sample Bookdown Book {-}
+While Bookdown does not require you to use GitHub, these steps show how to integrate these tools to make your own copy of a sample Bookdown book.
+
+1. Create a free [GitHub](https://github.com) account to simplify steps for the next two sections. While Bookdown does not require you to use GitHub, the workflow described below features GitHub to copy a sample Bookdown template and to host your own Bookdown editions online. To learn more about the basics of this tool, see [Chapter 11: Edit and Host Code with GitHub](github.html).
+
+2. In your web browser, log into your GitHub account, go to the Bookdown developer's `bookdown-minimal` repo <https://github.com/yihui/bookdown-minimal>, and fork a copy to your GitHub account.
+
+3. Install GitHub Desktop <https://desktop.github.com> to transfer files between your online GitHub repo and local computer. While software developers may prefer to access GitHub by typing commands in their terminal, GitHub Desktop provides easier point-and-click access for most users.
+
+4. In your web browser, go to your forked copy of `bookdown-minimal`, click the green `Code` button, and select `Open in Desktop`. This should automatically open the GitHub Desktop application, and you can navigate where you wish to store a copy of your code repo on a folder in your local computer.
+
+5. In RStudio in the upper-right corner, select Project > Open Project to open the `bookdown-minimal` folder on your local computer. [See screenshot](images/20-bookdown/8-project-open.png)
+
+6. In RStudio, open the `index.Rmd` file and make some simple edits to the text of this minimal book. For example, remove the hashtag `#` comment symbol in line 8 to "uncomment" and activate the PDF book option. Save your edits. [See screenshot](images/20-bookdown/9-edit-book.png)
+
+7. Optional: If you wish, you can modify your `bookdown-minimal` files outside of RStudio, by using your preferred text editor, such as Atom editor <https://atom.io>.
+
+8. In RStudio, upper-right corner, select the Build tab, select Build Book, and choose All Formats to build both the gitbook-style static web edition and PDF edition.
+
+9. If RStudio successfully builds both editions of your minimal book, the output will be saved into your `bookdown-minimal` folder, in a subfolder named `_book`, because that's how this sample is configured. The RStudio internal browser should automatically open your web edition (but it's not a very good browser, so we typically close it and manually open the `index.html` file with our regular browser.)
+
+10. Also, open the subfolder and inspect the PDF edition of your book. If any errors were generated in the process, error messages will appear in red type in the RStudio Build viewer, which may require you to debug errors and delete temporary files as instructed. [See screenshot](images/20-bookdown/11-successful-build.png).
+
+Tip: In future sessions with RStudio, you should select the Packages tab and click Update to keep Bookdown and other software packages up to date. [See screenshot](images/20-bookdown/12-packages-update.png)
+
+11. Close your project, and quit RStudio. The next set of steps will focus on pushing your edited book to your GitHub repository using the GitHub Desktop tool.
+
+12. Open GitHub Desktop and navigate to the `bookdown-minimal` folder on your local computer. Write a quick summary to commit (or save) the changes you made above to your master branch, and push this version to your online GitHub repo.
+
+13. In your web browser, go to your online GitHub repo, with a web address similar to `https://github.com/USERNAME/bookdown-minimal`.
+
+14. In your GitHub repo, select Settings, and scroll down to the GitHub Pages section, which is a free web hosting service to publish your code and book editions on the public web. Change the Source from None to Main, keep the default */root* option in the middle, and press Save.
+
+15. Scroll down to the GitHub Pages section again, and the web address of your published site should appear similar to `https://USERNAME.github.io/bookdown-minimal`.
+
+16. Copy your published web address from above, paste into a new browser tab, and at the end add `_book/index.html`. The reason is because your sample book is configured by default to store all web and PDF editions in your `_book` subfolder, with `index.html` serving as the home page. Therefore, the full web address in your new browser tab should be similar to: `https://USERNAME.github.io/bookdown-minimal/_book/index.html`
+
+Tip: You may need to wait up to one minute for edits to your GitHub online repo to appear live at your GitHub Pages web address. Also, after waiting for GitHub Pages to make changes, be sure to "force reload" or "hard refresh" your web browser to update directly from the GitHub Pages server, not the browser's internal cache.
 
 ### Customize Bookdown and GitHub Settings and Domain Name {-}
 To see the file structure, settings, and content for this *On The Line* book, view its online repository at <https://github.com/ontheline/ontheline-bookdown>. See more details about configuration settings, see Yihui Xie's [Bookdown technical guide](https://bookdown.org/yihui/bookdown).
@@ -108,39 +132,3 @@ Also in this book, the `index.Rmd` file includes R global options to display eac
 knitr::opts_chunk$set(echo = FALSE)
 options(knitr.graphics.auto_pdf = TRUE)
 ```
-
-### Zotero and Better BibTeX for Notes and Bibliography {-}
-This workflow uses the open-source Zotero bibliography manager (http://zotero.org), with the Better BibTeX extension (https://retorque.re/zotero-better-bibtex/) to work more easily with Markdown and Bookdown. Rather than typing full references directly into the text, authors can insert a short citation key to each source, and the tools will automatically generate the desired references (such as Chicago-style footnotes, which historians love) and an alphabetized bibliography for the book. Furthermore, since authoring this *On The Line* book has been a multi-year process with multimedia sources whose web addresses have changed over time, this workflow ensures that the most up-to-date information in your Zotero database also appears in all editions of your book.
-
-With these tools installed, here's an outline of the author's workflow:
-- An entry for each source (book, journal article, document, etc.) must be created in the author's Zotero library (or a specific collection), either automatically from the web or manually.
-- Better BibTex generates a unique citation key for each source (example: `^[@tyackOneBestSystem1974]`), which authors insert into the Markdown text to create a full reference (such as a footnote) and a bibliography.
-- The author identifies their preferred citation style at <https://www.zotero.org/styles>, uploads the file (example: chicago-fullnote-bibliography.csl) to the local book repo, and lists it in the `index.Rmd` settings for both the Web edition and the PDF edition.
-- Before each build in Bookdown, the author sets their Zotero preferences, and exports the Zotero library or specific collection to the root level of the local book repo (example: ontheline.bib).
-
-### Zotero and Better BibTeX Installation and Settings {-}
-- Download and install [Zotero](http://zotero.org) for Mac, Windows, Linux, and add connectors to your browsers.
-- Install the [Better BibTeX extension](https://retorque.re/zotero-better-bibtex/installation/) and follow all of the site's instructions for initial setup.
-- At the top of each entry in Zotero, the extension will generate a unique citation code (example: tyackOneBestSystem1974).
-- You can copy and paste the citation code into your Markdown text, and add a caret, square brackets, and the at symbol `^[@tyackOneBestSystem1974]`, as described in the Style Guide in this book.)
-- Also, you can set Zotero preferences > Export > Better BibTeX Quick Copy to use Zotero's drag-and-drop quick copy feature.
-- To export a bibliography (.bib) from Zotero library or collection into the local Bookdown repo:
-  - Select Library > Right-click to export the collection
-  - Select format > Better BibLaTeX (*IMPORTANT* I use this setting, rather than "Better BibTex", because "Better BibLaTex" includes full dates in newspaper citations, and urls). Also, I leave all of the checkboxes blank during the export, and do NOT select "keep updated". This means that if my Better BibTex citation codes suddenly change in Zotero because the author, title, or year changed, then I'm responsible for running find-and-replace to make these edits in the text of the book.
-  - Save the output as FILENAME.bib, save into your book repo, and be sure to match the settings in `index.Rmd`.
-
-These Zotero types appear correctly with this Bookdown workflow:
-
-- Book
-- Book chapter
-- Journal article
-- Newspaper
-- Thesis
-- Report
-- Web page
-- Blog post -- Avoid because Zotero Chicago-style entry inserts "(blog)" into citation title. Instead, use Web page.
-- Document -- Use this all-purpose entry in place of other types: Law case, Presentation, Interview, Video recording, Television broadcast, etc. Insert important details (such as the archival location information) in the Publisher field.
-
-To help other researchers find items cited in this book, URLs should be included in Zotero entries whenever feasible, even if not required by convention. For example, some print-only books and documents are hard to locate, so include an OCLC WorldCat permalink to make them easier to find (example: http://www.worldcat.org/oclc/20683509). Also, if a print source has been digitized by HathiTrust, Google Books, or the Internet Archive, add one of these URLs to the Zotero entry.
-
-Reminder: Chicago full-note works exactly as it was designed, meaning that the second instance of a citation currently appears as an abbreviated note (author, with title when appropriate). TODO: Find or create a modified .CSL file to display the full footnote entry in *every* instance in the web version, so that users do not need to scroll to find the complete source info.

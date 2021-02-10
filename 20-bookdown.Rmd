@@ -6,7 +6,7 @@ Why did we need a better workflow? Why not just author the book in a conventiona
 (ref:0-workflow) Simplified workflow to compose, compile, and publish in multiple formats with Bookdown. Images from [Daniel Hendricks](https://fileicons.org), [RStudio](https://github.com/rstudio/hex-stickers/), and [Zotero](https://www.zotero.org/support/brand).
 
 ```{r 0-workflow, fig.cap="(ref:0-workflow)"}
- knitr::include_graphics("images/bookdown/0-workflow.png")
+ knitr::include_graphics("images/20-bookdown/0-workflow.png")
 ```
 
 ## Overview {- #overview}
@@ -19,12 +19,12 @@ We based our solution around [Bookdown](https://bookdown.org), an open-source pa
 - We used the free [GitHub Pages](https://pages.github.com) feature to host the open-access HTML web edition of our book, as permitted by our agreement with the publisher. The open web edition is linked to a custom domain name (https://HandsOnDataViz.org) we purchased and set up through [Reclaim Hosting](http://reclaimhosting.com). We push all of our book's source files into the root level of the GitHub repo, and all of the Bookdown-generated editions (HTML and others) into the `docs` subfolder to enable easier web hosting.
 - While we worked on the book manuscript, our developmental editor requested PDF or MS Word editions to mark up with feedback. Finally, when we were ready to submit the completed manuscript, we created a full-length Markdown file to upload into the publisher's [Atlas production platform](https://docs.atlas.oreilly.com/writing_in_asciidoc.html). However, this is a one-time file conversion, and edits we make to our Bookdown workflow will not appear in the publisher's platform, unless they request a new edition.
 
-TODO... transition here...
+Screenshots of two variations of the basic workflow appear in Figure \@ref(fig:0-workflow2-desktop) and Figure \@ref(fig:0-workflow3-atom). The latter version displays how to compose the book using [Atom](http://atom.io), a different text editor than the one built into R Studio desktop. Learn more about [GitHub Desktop and Atom text editor in Chapter 11](github-desktop-atom.html).
 
-(ref:0-workflow2-desktop) Overview of the workflow on a Mac desktop: Compose and build the book in RStudio with Bookdown (top left), manage sources and insert citation keys with Zotero + BetterBibTex (bottom left), and push the built book files to GitHub Pages with settings shown via web browser to share online (right).
+(ref:0-workflow2-desktop) Workflow on a Mac desktop: Compose and build the book in RStudio with Bookdown (top left), manage sources and insert citation keys with Zotero + BetterBibTex (bottom left), and push the built book files to GitHub Pages with settings shown via web browser to share online (right).
 
 ```{r 0-workflow2-desktop, fig.cap="(ref:0-workflow2-desktop)"}
- knitr::include_graphics("images/bookdown/0-workflow2-desktop.png")
+ knitr::include_graphics("images/20-bookdown/0-workflow2-desktop.png")
 ```
 
 (ref:0-workflow3-atom) Optional variation on the workflow above: Use your preferred text editor, such as Atom, to compose Bookdown files in .Rmd format, as shown on the left side of the screen, and save all files on your local drive. Then use RStudio only to build the book products, as shown in the bottom-right corner of the screen, into the `docs` subfolder of your local drive. All changes saved with Atom editor to the local drive automatically appear in the RStudio pre-build files.  
@@ -33,10 +33,10 @@ TODO... transition here...
  knitr::include_graphics("images/bookdown/0-workflow3-atom.png")
 ```
 
-See more detailed notes in the sections that follow, and also in these Bookdown publications:
+Beware that our Bookdown workflow may not be ideal for novice computer users. Installation and setup requires several steps, as described in the next section. Before leaping into Bookdown or any software tool, read more about [Alternative Publishing Platforms](alternative.html) later in this chapter.
+
+If you wish to explore Bookdown, see our detailed notes in subsequent sections of this chapter, and also explore these open-access Bookdown publications:
 
 - Xie, Yihui. *Bookdown: Authoring Books and Technical Documents with R Markdown*. Chapman & Hall/CRC, 2018. https://bookdown.org/yihui/bookdown/.
 - Xie, Yihui, J. J. Allaire, and Garrett Grolemund. *R Markdown: The Definitive Guide*. Chapman & Hall/CRC, 2020. https://bookdown.org/yihui/rmarkdown/.
 - Xie, Yihui, Christophe Dervieux, and Emily Riederer. *R Markdown Cookbook*. Chapman & Hall/CRC, 2020. https://bookdown.org/yihui/rmarkdown-cookbook/.
-
-Before leaping into Bookdown or any software tool, see [Alternative Publishing Platforms](alternative.html) in this book.

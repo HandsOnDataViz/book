@@ -2,6 +2,14 @@
 
 Before leaping into [Bookdown](https://bookdown.org) or any other tools for authoring and/or publishing book-length works, clarify your goals and consider the costs and benefits of different approaches. Here's a short list of alternatives we considered, and our notes on how they addressed our specific goals. Your experience may differ from ours, and tools are continually evolving, so we encourage feedback [on Twitter](https://twitter.com/doughertyjack).
 
+ See how *Hands-On Data Visualization* migrated across different platforms, domain names, and titles during its early years, with shapshots stored on the Internet Archive:
+
+- [2014 *Data Visualization: book-in-progress* on Pressbooks](https://web.archive.org/web/20140418093523/http://epress.trincoll.edu/dataviz)
+- [2015 *Data Visualization for All* on GitBook](https://web.archive.org/web/20150608174937/http://www.datavizbook.org/)
+- [2016 *Data Visualization for All* on GitBook, with a different domain name](https://web.archive.org/web/20160331084618/http://www.datavizforall.org/)
+- somewhere around 2018? we shifted GitBook to Bookdown... TODO
+- [2020 *Hands-On Data Visualization*, a new title requested by the publisher, built with Bookdown](https://web.archive.org/web/20200605005118/https://handsondataviz.org/)
+
 - Conventional word processors: Most authors work primarily with text, and are satisfied with a traditional book-publishing workflow that begins with composing in Microsoft Word or LibreOffice, then handing it off to a publisher for review, copyediting, layout, and distribution. But our book is designed to blend text and interactive digital media, and to publish book products in multiple formats: HTML, PDF, DOCX, and Markdown. Traditional word processors do not efficiently achieve this goal.
 
 - Advanced word processors: [Scrivener](https://www.literatureandlatte.com/scrivener) by Literature & Latte is a powerful word processor and outlining tool designed to help authors see both "the forest and the trees" of book-length manuscripts. Although Scrivener supports a different version of Markdown, the tool was not designed to integrate interactive maps and charts into text, nor does it support multi-author collaboration, or sharing files on a public repository.

@@ -63,9 +63,17 @@ options(knitr.graphics.auto_pdf = TRUE)
 ```
 ![Book cover: Read about the [hoatzin "reptile bird"](https://en.wikipedia.org/wiki/Hoatzin)](images/0-preface/cover-400wide.jpg)
 
+Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You'll also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub.
+
+*Hands-On Data Visualization* takes you step-by-step through tutorials, real-world examples, and online resources. This book is ideal for students, educators, community activists, non-profit organizations, small business owners, local governments, journalists, researchers, or anyone who wants to take data out of spreadsheets and turn it into lively interactive stories. No coding experience is required.
+
 **Last updated on: `r format (Sys.Date(), '%d %b %Y')`**.
 
-Read the open-access web edition of the book at https://HandsOnDataViz.org, and access the open-source code templates at https://github.com/handsondataviz. Or purchase a print or ebook edition from O'Reilly Media, Inc., available in March 2021.
+This open-access web edition is based largely on the book manuscript we submitted to our publisher, O'Reilly Media, Inc., which we have permission to publicly share under the terms of our contract. Learn more [about this open-access web edition](open-access.html).
+
+Readers may purchase the publisher's improved and copyedited version, in print or ebook editions, available in Spring 2021.
+
+**Buy the book** at [Amazon](https://www.amazon.com/Hands-Data-Visualization-Storytelling-Spreadsheets/dp/1492086002/)--[Barnes & Noble](https://www.barnesandnoble.com/w/hands-on-data-visualization-jack-dougherty/1137725933)--[Bookshop](https://bookshop.org/books/hands-on-data-visualization-interactive-storytelling-from-spreadsheets-to-code/9781492086000)--[O'Reilly](https://learning.oreilly.com/library/view/hands-on-data-visualization/9781492085997/)--[Powell's Books](https://www.powells.com/book/hands-on-data-visualization-9781492086000)--your local bookstore
 
 <div style="text-align:center">
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
@@ -77,9 +85,8 @@ by <a href="https://handsondataviz.org/authors">Jack Dougherty and Ilya Ilyankou
 and distributed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.
 You may freely share this content for non-commercial purposes, with a source credit to <a href="http://HandsOnDataViz.org">http://HandsOnDataViz.org</a>.
 
-Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You'll also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub.
-
-*Hands-On Data Visualization* takes you step-by-step through tutorials, real-world examples, and online resources. This book is ideal for students, educators, community activists, non-profit organizations, small business owners, local governments, journalists, researchers, or anyone who wants to take data out of spreadsheets and turn it into lively interactive stories. No coding experience is required.
+#### Disclaimer {-}
+The information is this book is provided without warranty. The authors and publisher have neither liability nor responsibility to any person or entity related to any loss or damages arising from the information contained in this book.
 
 ## Audience and Overview {- #audience-overview}
 As educators, we designed this book to be accessible for new learners, to introduce key concepts in data visualization and reinforce them with hands-on examples. We assume no prior knowledge other than a basic familiarity with computers and some vague memories of secondary school mathematics. Based on feedback we've received from an earlier draft, many readers across the globe have taught themselves with this book, and others educators are already using it as a textbook to teach their students.

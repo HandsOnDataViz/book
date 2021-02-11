@@ -1,15 +1,43 @@
 ## About Open-Access Web Edition {- #open-access}
-This open-access web edition of the book is freely available to read at https://HandsOnDataViz.org. You can access our open-source code templates on our GitHub organizational account at https://github.com/handsondataviz. To suggest any corrections or updates for the book, you can open an issue or submit a pull request on our book's GitHub repository at https://github.com/handsondataviz/book. See the [appendix](bookdown.html) to learn how we built this open-access book with free-to-use, open-source tools, primarily [Bookdown](https://bookdown.org), [GitHub](http://github.com), and [Zotero](http://zotero.org).
+This open-access web edition displays the book manuscript we submitted to our publisher, O'Reilly Media, Inc., which we publicly shared under the terms of our contract, and is freely available to read at https://HandsOnDataViz.org. Also, you can access our open-source code templates that we featured in this book on our GitHub organizational account at https://github.com/handsondataviz. To suggest any corrections or updates for future editions, you can open an issue or submit a pull request on our book's GitHub repository at https://github.com/handsondataviz/book. See also [Appendix: Publishing with Bookdown](bookdown.html) to learn why and how we built our workflow around [Bookdown](https://bookdown.org), [GitHub](http://github.com), and [Zotero](http://zotero.org).
 
-TODO: Add deeper explanation about why open access matters, and our positive experiences with it. 
+Why did we publicly share this open-access edition of our book? Why not maximize our profits and try to pocket all of the cash instead? Our answer is a combination of philosophical values and pragmatic realities.
 
-Reading this book on the web is the ideal way to explore our interactive charts and maps, and also to click on internal cross-references or external links to additional sources. In your web browser, also try these toolbar features near the top of the page:
+First, we believe that knowledge becomes more valuable when shared widely, rather than hidden behind a paywall. If our book makes a small improvement to the world by helping a thousand readers to communicate more clearly with data, then reaching ten thousand or more readers is even better. Originally, this book began as a compilation of tutorials for a data visualization course, which educated many college students and Hartford community partners in face-to-face settings, and thousands more in a free online course.^[@doughertyToughQuestionsAsk2017] An open-access book is more likely to share knowledge than a closed one.^[For another perspective that asks whether writing a book is "worth" it, see @kleppmannWritingBookIt2020]
+
+Second, the quality of our final product improved as a result of reader feedback on the early open-access editions. Years before we even considered approaching a publisher, we publicly shared early drafts on the web, and interactions with readers, both face-to-face and via email, eventually persuaded us to pitch it to a publisher as a full-fledged book. During our extended writing and revising process, we intentionally made all of the chapters visible as we wrote them, including incomplete sections with lots of "TODO" notes. Readers sent us thoughtful questions, helpful suggestions, and told us how they were using the draft book to teach students or coworkers. Some readers pointed out errors we had missed, and a few even submitted corrections via GitHub pull requests. Thanks to their input, this open-access book is much stronger than a closed one would have been.
+
+Third, money was not our primary motivator. Both of us earn salaries through our regular employment: Jack as a college professor and Ilya as a civic technologist. Writing this book to teach readers about data visualization, and creating open-source code templates to enhance our tool options, aligns with expectations in our professions. Moreover, authors and other knowledge-creators also operate in a *reputation economy*, where readers' abilities to make informed judgments about the value of our work depends on whether or not they can easily access it.Openly sharing our book is more likely to fulfill this objective than hiding it behind a paywall.^[On reputation capital in academic life, see @doughertyConclusionsWhatWe2013]
+
+Finally, while we're not uninterested in money and its ability to fund more time for writing, our recent experience suggests that open-access publishing *might* contribute to book sales in some contexts. As we shared our draft chapters online and occasionally posted about them on social media, we developed an audience of interested readers.
+
+
+ to educat---and writing a bookhow to visualize data is compatible with both of our professions. Money is not our primary motivation. Furthermore, as Jack has written elsewhere.... reputation economy
+
+Third, while we're not motivated solely by book royalties, we're not ignorant of their influence in creating time for us to write more books. Based on positive past experiences with open-access publishing, we understand that this web edition is highly discoverable
+
+https://www.google.com/search?hl=en&as_q=hands+on+data+visualization
+
+Tweet by Alberto Cairo...
+
+
+Of course, our approach to book publishing may not match your ideals or realities. Most authors and publishers still prefer to let readers preview only a chapter or two on the public web, in order to maximize revenue from conventional book sales. Some authors will consider open-access publishing, but prefer to share their drafts only with a very small circle of friends and editors. Some take the opposite approach and widely circulate their early drafts online as individual blog posts, but do not share the final cohesive book in the same way. Still others have never considered any of these options, nor realize that some publishers are more amendable than others.
+
+
+Some authors prefer to circulate their draft chapters within a small circle, then openly publish the final edition. Other authors favor the opposite, by circulating drafts widely online, and then taking them down ()
+
+
+#### How to read {-}
+
+Reading this book on the web is the ideal way to explore our interactive charts and maps, and also to click on internal cross-references or external links to additional sources.
+
+In your web browser, also try these toolbar features near the top of the page:
 
 - Menu
 - Search
 - Font to adjust text size and display
 - View source code on GitHub
-- Download the PDF version
+- Download book files (if available)
 - Shortcuts (arrow keys to navigate; `s` to toggle sidebar; `f` to toggle search)
 - Social Media
 - Share
@@ -41,6 +69,3 @@ Float your cursor over any section header to reveal a hashtag anchor symbol: `#`
 by <a href="https://handsondataviz.org/authors">Jack Dougherty and Ilya Ilyankou</a>
 and distributed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.
 You may freely share this content for non-commercial purposes, with a source credit to <a href="http://HandsOnDataViz.org">http://HandsOnDataViz.org</a>.
-
-#### Disclaimer {-}
-The information is this book is provided without warranty. The authors and publisher have neither liability nor responsibility to any person or entity related to any loss or damages arising from the information contained in this book.

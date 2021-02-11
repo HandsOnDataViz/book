@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2021-02-08" />
+<meta name="date" content="2021-02-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -52,7 +52,6 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -68,6 +67,7 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -319,12 +319,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="D" data-path="bookdown.html"><a href="bookdown.html"><i class="fa fa-check"></i><b>D</b> Publishing with Bookdown</a>
 <ul>
-<li class="chapter" data-level="" data-path="collaborative-writing-on-github.html"><a href="collaborative-writing-on-github.html"><i class="fa fa-check"></i>Collaborative Writing on GitHub</a></li>
+<li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
+<li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
 <li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
-<li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images</a></li>
-<li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables</a></li>
-<li class="chapter" data-level="" data-path="notes.html"><a href="notes.html"><i class="fa fa-check"></i>Notes and Bibliography</a></li>
-<li class="chapter" data-level="" data-path="modify-markdown.html"><a href="modify-markdown.html"><i class="fa fa-check"></i>Manually Modify Markdown Output</a></li>
+<li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
+<li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
+<li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
+<li class="chapter" data-level="" data-path="alternative.html"><a href="alternative.html"><i class="fa fa-check"></i>Alternative Book Authoring-Publishing Tools</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -349,13 +350,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="chart-design" class="section level2 unnumbered" number="">
+<div id="chart-design" class="section level2 unnumbered">
 <h2>Chart Design Principles</h2>
 <p>There are <em>so</em> many different types of charts. However, just because data <em>can</em> be made into a chart does not necessarily mean that it <em>should</em> be turned into one. Before creating a chart, stop and ask: <em>Does a visualized data pattern really matter to your story?</em> Sometimes a simple table, or even text alone, can communicate the idea more effectively to your audience. Since creating a well-designed chart requires time and effort, make sure it enhances your data story.</p>
 <p>Although not a science, data visualization comes with a set of principles and best practices that serve as a foundation for creating truthful and eloquent charts. In this section, we’ll identify some important rules about chart design. But you may be surprised to learn that some rules are less rigid than others, and can be “broken” when necessary to emphasize a point, as long as you honestly interpret the data.</p>
 <p>To better understand this tension between following and breaking rules in data visualization, see Lisa Charlotte Rost’s thoughtful reflection on “<a href="https://lisacharlotterost.de/datavisrules">What To Consider When Considering Data Vis Rules</a>.” By articulating the unspoken rules behind good chart design, Rost argues that we all benefit by moving them into the public realm, where we can openly discuss and improve on them, as she had done in many <a href="https://academy.datawrapper.de">Datawrapper Academy</a>, which also beautifully visualize each rule. But Rost reminds us that rules also have a downside. First, following rules too closely can block creativity and innovation, especially when we look for ways to overcome challenges in design work. Second, since rules have emerged from different “theories of data visualization,” they sometimes contradict one another. One example of colliding rules is the tension between creating easy-to-grasp data stories versus those that reveal the complexity of the data, as it often feels impossible to do both. Rost concludes that the rules we follow reflect our values, and each of us needs to ask, “What do you want your data visualizations to be judged for?”<a href="#fn26" class="footnote-ref" id="fnref26"><sup>26</sup></a></p>
 <p>To delve further into chart design, let’s start by establishing a common vocabulary about charts.</p>
-<div id="deconstruct-a-chart" class="section level3 unnumbered" number="">
+<div id="deconstruct-a-chart" class="section level3 unnumbered">
 <h3>Deconstruct a Chart</h3>
 <p>Let’s take a look at Figure <a href="chart-design.html#fig:design-principles-chart-components">7.1</a>.
 It shows basic chart components that are shared among most chart types.</p>
@@ -367,7 +368,7 @@ Figure 7.1: Common chart components.
 </p>
 </div>
 <p>A <em>title</em> is perhaps the most important element of any chart. A good title is short, clear,
-and tells a story on its own. For example, “Pandemic Hits Black and Latino Population Hardest”,
+and tells a story on its own. For example, “Pandemic Hits Black and Latino Population Hardest,”
 or “Millions of Tons of Plastic Enter the Ocean Every Year” are both clear titles that quickly convey a larger story.</p>
 <p>Sometimes your editor or audience will prefer a more technical title for your chart. If so, the two titles above could be changed, respectively, to “Covid-19 Deaths by Race in New York City, Spring 2020” and “Tons of Plastic Entering the Ocean, 1950–2020.”</p>
 <p>A hybrid strategy is to combine a story-oriented title with a more technical subtitle, such as: “Pandemic Hits Black and Latino Population Hardest: Covid-19 Deaths by Race in New York City, Spring 2020.” If you follow this model, make your subtitle less prominent than your title by decreasing its font size, or changing its font style or color, or both.</p>
@@ -385,8 +386,8 @@ with bar charts. In that case, a relevant axis can be hidden and the chart will 
 where the data came from, how it was processed and analyzed, and who created the visualization.
 Remember that being open about these things helps build credibility and accountability.</p>
 <p>If your data comes with uncertainty (or margins of error), use <em>error bars</em> to show it, if possible.
-If not, accompany your chart with a statement like “the data comes with uncertainty of up to 20% of the value”,
-or “for geographies X and Y, margins of error exceed 10%”. This will help readers assess the reliability of the data source.</p>
+If not, accompany your chart with a statement like “the data comes with uncertainty of up to 20% of the value,”
+or “for geographies X and Y, margins of error exceed 10%.” This will help readers assess the reliability of the data source.</p>
 <p>In interactive charts, a <em>tooltip</em> is often used to provide more data or context
 once a user clicks or hovers over a data point or a data series.
 Tooltips are great for complex visualizations with multiple layers of data,
@@ -395,10 +396,10 @@ such as phones and tablets, and are invisible when the chart is printed, only re
 additional, nice-to-have information. Make sure all essential information
 is visible without any user interaction.</p>
 </div>
-<div id="some-rules-are-more-important-than-others" class="section level3 unnumbered" number="">
+<div id="some-rules-are-more-important-than-others" class="section level3 unnumbered">
 <h3>Some Rules are More Important than Others</h3>
 <p>Although the vast majority of rules in data visualization are open to interpretation, as long as you honestly interpret the data, here are two rules that cannot be bent: zero-baselines for bar and column charts, and 100-percent baselines for pie charts.</p>
-<div id="bar-and-column-charts-must-begin-at-zero" class="section level4 unnumbered" number="">
+<div id="bar-and-column-charts-must-begin-at-zero" class="section level4 unnumbered">
 <h4>Bar and Column Charts Must Begin at Zero</h4>
 <p>Bar and column charts use <em>length</em> and <em>height</em> to represent value, therefore their value axis <em>must start at the zero baseline</em>. This ensures that a bar twice the length of another bar represents twice its value. Figure <a href="chart-design.html#fig:design-principles-start-at-zero">7.2</a> contrasts a good and a bad example. The same rule applies to area charts, which display filled-in area underneath the line to represent value. Starting the baseline at a number other than zero is a trick commonly used to exaggerate differences in opinion polls and election results, as we describe later in <a href="detect.html">Chapter 15: Detect Lies and Reduce Bias</a></p>
 
@@ -425,7 +426,7 @@ Figure 7.4: While the line chart with the zero baseline is acceptable, the line 
 </p>
 </div>
 </div>
-<div id="pie-charts-represent-100" class="section level4 unnumbered" number="">
+<div id="pie-charts-represent-100" class="section level4 unnumbered">
 <h4>Pie Charts Represent 100%</h4>
 <p>Pie charts is one of the most contentious issues in data visualization.
 Most dataviz practitioners will recommend avoiding them entirely, saying that
@@ -439,12 +440,12 @@ titled <em>Are you a cat or a dog person?</em> and include <em>I am both</em> as
 forget about putting the results into a pie chart.</p>
 </div>
 </div>
-<div id="chart-aesthetics" class="section level3 unnumbered" number="">
+<div id="chart-aesthetics" class="section level3 unnumbered">
 <h3>Chart Aesthetics</h3>
 <p>Remember that you create a chart to help the reader understand the story, not to confuse them.
 Decide if you want to show raw counts, percentages, or percent changes,
 and do the math for your readers.</p>
-<div id="avoid-chart-junk" class="section level4 unnumbered" number="">
+<div id="avoid-chart-junk" class="section level4 unnumbered">
 <h4>Avoid chart junk</h4>
 <p>Start with a white background and add elements as you see appropriate.
 You should be able to justify each element you add. To do so, ask yourself:
@@ -472,7 +473,7 @@ where x and y values represent latitude and longitude. In most cases, however,
 three dimensions are best represented in a bubble chart, or a scatterplot
 with varying shapes and/or colors.</p>
 </div>
-<div id="beware-of-pie-charts" class="section level4 unnumbered" number="">
+<div id="beware-of-pie-charts" class="section level4 unnumbered">
 <h4>Beware of pie charts</h4>
 <p>Remember that pie charts only show part-to-whole relationship, so all slices need to add up to 100%. Generally, the fewer slices—the better. Arrange slices from largest
 to smallest, clockwise, and put the largest slice at 12 o’clock.
@@ -493,7 +494,7 @@ Figure 7.7: Consider using bar charts instead of pies.
 </p>
 </div>
 </div>
-<div id="dont-make-people-turn-their-heads-to-read-labels" class="section level4 unnumbered" number="">
+<div id="dont-make-people-turn-their-heads-to-read-labels" class="section level4 unnumbered">
 <h4>Don’t make people turn their heads to read labels</h4>
 <p>When your column chart has long x-axis labels that have to be rotated (often 90 degrees) to fit, consider turning the chart 90 degrees so that it becomes a horizontal bar chart. Take a look at Figure <a href="chart-design.html#fig:design-principles-turn-bar">7.8</a> to see how much easier it is to read horizontally-oriented labels.</p>
 
@@ -504,7 +505,7 @@ Figure 7.8: For long labels, use horizontal bar charts.
 </p>
 </div>
 </div>
-<div id="arrange-elements-logically" class="section level4 unnumbered" number="">
+<div id="arrange-elements-logically" class="section level4 unnumbered">
 <h4>Arrange elements logically</h4>
 <p>If your bar chart shows different categories, consider ordering them, like is shown in Figure <a href="chart-design.html#fig:design-principles-order-categories">7.9</a>. You might want to sort them alphabetically, which can be useful if you want the reader to be able to quickly look up an item, such as their town. Ordering categories by value is another common technique that makes comparisons possible. If your columns represent a value of something at a particular time, they have to be ordered sequentially, of course.</p>
 
@@ -515,13 +516,13 @@ Figure 7.9: For long labels, use horizontal bar charts.
 </p>
 </div>
 </div>
-<div id="do-not-overload-your-chart" class="section level4 unnumbered" number="">
+<div id="do-not-overload-your-chart" class="section level4 unnumbered">
 <h4>Do not overload your chart</h4>
 <p>When labelling axes, choose natural increments that space equally, such as [0, 20, 40, 60, 80, 100], or [1, 10, 100, 1000] for a logarithmic scale. Do not overload your scales.
 Keep your typography simple, and use (but do not overuse) <strong>bold type</strong> to highlight major insights.
 Consider using commas as thousands separators for readability (<code>1,000,000</code> is much easier to read than <code>1000000</code>).</p>
 </div>
-<div id="be-careful-with-colors" class="section level4 unnumbered" number="">
+<div id="be-careful-with-colors" class="section level4 unnumbered">
 <h4>Be careful with colors</h4>
 <p>In this section, we would like to briefly introduce three important rules about colors. First, remember that in most cases monochromatic (single-hue) charts suffice, and there may be no need to introduce the extra dimension of color at all.</p>
 <p>Second, refer to the color wheel and standard <a href="https://en.wikipedia.org/wiki/Harmony_color">harmony rules</a> when choosing your palette. Consider the rule of complementary colors—opposites in the color wheel—to find color pairs, such as blue and orange or yellow and purple. Analogous colors, or neighbors in the color wheel, make good palettes, such as orange, red, and pink.</p>
@@ -556,9 +557,9 @@ Figure 7.11: Make sure important things catch the eye first.
 <div class="footnotes">
 <hr />
 <ol start="26">
-<li id="fn26"><p><span class="citation">Lisa Charlotte Rost, “What to Consider When Considering Data Vis Rules” (Lisa Charlotte Rost, November 27, 2020), <a href="https://lisacharlotterost.de/datavisrules" role="doc-biblioref">https://lisacharlotterost.de/datavisrules</a></span><a href="chart-design.html#fnref26" class="footnote-back">↩︎</a></p></li>
-<li id="fn27"><p><span class="citation">Cairo, <em>How Charts Lie</em>, 2019</span>, p. 61.<a href="chart-design.html#fnref27" class="footnote-back">↩︎</a></p></li>
-<li id="fn28"><p><span class="citation">Lisa Charlotte Rost, “Your Friendly Guide to Colors in Data Visualisation” (Datawrapper Blog, July 31, 2018), <a href="https://blog.datawrapper.de/colorguide/" role="doc-biblioref">https://blog.datawrapper.de/colorguide/</a></span>; <span class="citation">Lisa Charlotte Rost, “How to Pick More Beautiful Colors for Your Data Visualizations” (DataWrapper Blog), accessed October 21, 2020, <a href="https://blog.datawrapper.de/beautifulcolors/index.html" role="doc-biblioref">https://blog.datawrapper.de/beautifulcolors/index.html</a></span><a href="chart-design.html#fnref28" class="footnote-back">↩︎</a></p></li>
+<li id="fn26"><p><span class="citation">Lisa Charlotte Rost, <span>“What to <span>Consider When Considering Data Vis Rules</span>”</span> (<span>Lisa Charlotte Rost</span>, November 27, 2020), <a href="https://lisacharlotterost.de/datavisrules" role="doc-biblioref">https://lisacharlotterost.de/datavisrules</a>.</span><a href="chart-design.html#fnref26" class="footnote-back">↩︎</a></p></li>
+<li id="fn27"><p><span class="citation">Cairo, <em>How <span>Charts Lie</span></em></span>, p. 61.<a href="chart-design.html#fnref27" class="footnote-back">↩︎</a></p></li>
+<li id="fn28"><p><span class="citation">Lisa Charlotte Rost, <span>“Your <span>Friendly Guide</span> to <span>Colors</span> in <span>Data Visualisation</span>”</span> (<span>Datawrapper Blog</span>, July 31, 2018), <a href="https://blog.datawrapper.de/colorguide/" role="doc-biblioref">https://blog.datawrapper.de/colorguide/</a></span>; <span class="citation">Lisa Charlotte Rost, <span>“How to <span>Pick More Beautiful Colors</span> for <span>Your Data Visualizations</span>”</span> (<span>DataWrapper Blog</span>, September 4, 2020), <a href="https://blog.datawrapper.de/beautifulcolors/index.html" role="doc-biblioref">https://blog.datawrapper.de/beautifulcolors/index.html</a>.</span><a href="chart-design.html#fnref28" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

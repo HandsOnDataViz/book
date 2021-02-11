@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2021-02-08" />
+<meta name="date" content="2021-02-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -52,7 +52,6 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -68,6 +67,7 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -319,12 +319,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="D" data-path="bookdown.html"><a href="bookdown.html"><i class="fa fa-check"></i><b>D</b> Publishing with Bookdown</a>
 <ul>
-<li class="chapter" data-level="" data-path="collaborative-writing-on-github.html"><a href="collaborative-writing-on-github.html"><i class="fa fa-check"></i>Collaborative Writing on GitHub</a></li>
+<li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
+<li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
 <li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
-<li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images</a></li>
-<li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables</a></li>
-<li class="chapter" data-level="" data-path="notes.html"><a href="notes.html"><i class="fa fa-check"></i>Notes and Bibliography</a></li>
-<li class="chapter" data-level="" data-path="modify-markdown.html"><a href="modify-markdown.html"><i class="fa fa-check"></i>Manually Modify Markdown Output</a></li>
+<li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
+<li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
+<li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
+<li class="chapter" data-level="" data-path="alternative.html"><a href="alternative.html"><i class="fa fa-check"></i>Alternative Book Authoring-Publishing Tools</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -349,7 +350,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="annotated-datawrapper" class="section level2 unnumbered" number="">
+<div id="annotated-datawrapper" class="section level2 unnumbered">
 <h2>- Annotated Charts</h2>
 <p>An annotated chart is best to highlight specific data or add contextual notes inside the visualization. Well-designed annotations can help answer the “so what?” question by briefly noting the significance of data in the chart, with greater detail in the sentences or paragraphs that follow. Be cautious with annotations, because it’s important to avoid adding unnecessary “chart junk,” as described in <a href="chart-design.html">Chart Design Principles section of this chapter</a>.</p>
 <p>You can add annotations to any chart created with Datawrapper, and we’ll illustrate how with a line chart about US unemployment data from 2000-2020, since adding a bit of historical context often helps readers to better understand data stories about change over time. To create a line chart in Datawrapper, organize your data the same way you did in the <a href="pie-line-area-google.html">Google Sheets line chart tutorial</a> above. Place units of time (such as months-years) in the first column, and numerical data values (such as the unemployment rate) in the second column. Now you’re ready to create an interactive line chart with annotations, as shown in Figure <a href="annotated-datawrapper.html#fig:datawrapper-annotated">7.35</a>. Since 2000, the unemployment rate has peaked three times, but the tallest peak occurred during the 2020 economic crisis sparked by the Covid pandemic.</p>
@@ -380,7 +381,7 @@ Figure 7.36: To upload data from a shared Google Sheet, click the button and pas
 <p>Tip: If needed, at the bottom of the <em>Check and Describe</em> screen there is a button that will transpose your data (swap rows and columns), which is useful in cases where the data you receive is organized in the opposite direction from what Datawrapper expects. But our sample data does not need to be transposed, since it’s organized correctly.</p>
 <ol start="5" style="list-style-type: decimal">
 <li><p>In the <em>Visualize</em> screen, Datawrapper will attempt to guess the chart type you desire, based on the data format. If you entered our sample data correctly, it will correctly display a line chart. But if not, you can select a different chart type.</p></li>
-<li><p>Click the <em>Annotate</em> tab near the top-left of the <em>Visualize</em> screen. Type in a meaningful title, such as “US Unemployment Rate, Seasonally Adjusted, 2000-2020.” Also, add a data source, such as “US Federal Reserve Open Data”, and a link to the source, such as the <a href="https://docs.google.com/spreadsheets/d/1mjUu4OfMjWfFP-miPiObi6vXzJUIMi1TSuoaT61FU6U/edit#gid=821851972">shared Google Sheet</a> or the <a href="https://fred.stlouisfed.org/series/UNRATE">Federal Reserve Open Data web page</a>. Finally, in the byline line, add your name or organization to credit the people who created this chart. You’ll see all of these details and links appear automatically at the bottom of your chart, to add credibility to your work.</p></li>
+<li><p>Click the <em>Annotate</em> tab near the top-left of the <em>Visualize</em> screen. Type in a meaningful title, such as “US Unemployment Rate, Seasonally Adjusted, 2000-2020.” Also, add a data source, such as “US Federal Reserve Open Data,” and a link to the source, such as the <a href="https://docs.google.com/spreadsheets/d/1mjUu4OfMjWfFP-miPiObi6vXzJUIMi1TSuoaT61FU6U/edit#gid=821851972">shared Google Sheet</a> or the <a href="https://fred.stlouisfed.org/series/UNRATE">Federal Reserve Open Data web page</a>. Finally, in the byline line, add your name or organization to credit the people who created this chart. You’ll see all of these details and links appear automatically at the bottom of your chart, to add credibility to your work.</p></li>
 <li><p>Scroll down further in the <em>Annotate</em> tab to the <em>Text annotations</em> section, and click the button to add one. Draw a pink rectangle to place your annotation on the chart, where unemployment rose sharply from 2008 to 2010, and type “Great Recession” into the text field, as shown in Figure <a href="annotated-datawrapper.html#fig:datawrapper-annotated-text">7.37</a>. This helps readers to place the <a href="https://en.wikipedia.org/wiki/Great_Recession_in_the_United_States">Great Recession</a> in historical context. Click the button a second time to add another text annotation, place it around the second unemployment peak in 2020, and type “Covid Pandemic” into the text field to offer readers a comparison. You can fine-tune the style and position of annotations with additional options further down on the screen.</p></li>
 </ol>
 

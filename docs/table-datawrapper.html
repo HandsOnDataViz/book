@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2021-02-08" />
+<meta name="date" content="2021-02-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -52,7 +52,6 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -68,6 +67,7 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -319,12 +319,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="D" data-path="bookdown.html"><a href="bookdown.html"><i class="fa fa-check"></i><b>D</b> Publishing with Bookdown</a>
 <ul>
-<li class="chapter" data-level="" data-path="collaborative-writing-on-github.html"><a href="collaborative-writing-on-github.html"><i class="fa fa-check"></i>Collaborative Writing on GitHub</a></li>
+<li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
+<li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
 <li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
-<li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images</a></li>
-<li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables</a></li>
-<li class="chapter" data-level="" data-path="notes.html"><a href="notes.html"><i class="fa fa-check"></i>Notes and Bibliography</a></li>
-<li class="chapter" data-level="" data-path="modify-markdown.html"><a href="modify-markdown.html"><i class="fa fa-check"></i>Manually Modify Markdown Output</a></li>
+<li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
+<li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
+<li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
+<li class="chapter" data-level="" data-path="alternative.html"><a href="alternative.html"><i class="fa fa-check"></i>Alternative Book Authoring-Publishing Tools</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -349,7 +350,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="table-datawrapper" class="section level2 unnumbered" number="">
+<div id="table-datawrapper" class="section level2 unnumbered">
 <h2>Datawrapper Table with Sparklines</h2>
 <p>In this section, you’ll learn how to create an interactive table with <a href="https://datawrapper.de">Datawrapper</a>, the free online drag-and-drop visualization tool we previously introduced <a href="chart-design.html">to create charts in Chapter 7</a> and <a href="map-design.html">maps in Chapter 8</a>. You can start creating in Datawrapper right away in your browser, even without an account, but signing up for a free one will help you to keep your visualizations organized. Remember that you’ll probably still need a spreadsheet tool, such as Google Sheets, to compile and clean up data for large tables, but Datawrapper is the best tool to create and publish the interactive table online.</p>
 <p>You’ll also learn how to create sparklines, or tiny line charts that quickly summarize data trends. This chart type was refined by Edward Tufte, a Yale professor and data visualization pioneer, who described sparklines as “datawords… intense, simple, word-sized graphics.”<a href="#fn35" class="footnote-ref" id="fnref35"><sup>35</sup></a> While Tufte envisioned sparklines on a static sheet of paper or PDF document, you’ll create them inside an interactive table, as shown in Figure <a href="table-datawrapper.html#fig:datawrapper-table">9.2</a>. Readers can search by keyword, sort columns in ascending or descending order, and scroll through pages of sparklines to quickly identify data trends that would be difficult to spot in a traditional numbers-only table.</p>
@@ -438,7 +439,7 @@ Figure 9.7: Select the <em>Difference</em> column and <em>Show as bar chart</em>
 <div class="footnotes">
 <hr />
 <ol start="35">
-<li id="fn35"><p><span class="citation">Edward R. Tufte, <em>Beautiful Evidence</em> (Graphics Press, 2006), <a href="http://books.google.com/books?isbn=0961392177" role="doc-biblioref">http://books.google.com/books?isbn=0961392177</a></span>, pp. 46-63.<a href="table-datawrapper.html#fnref35" class="footnote-back">↩︎</a></p></li>
+<li id="fn35"><p><span class="citation">Edward R. Tufte, <em>Beautiful <span>Evidence</span></em> (<span>Graphics Press</span>, 2006), <a href="http://books.google.com/books?isbn=0961392177" role="doc-biblioref">http://books.google.com/books?isbn=0961392177</a></span>, pp. 46-63.<a href="table-datawrapper.html#fnref35" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

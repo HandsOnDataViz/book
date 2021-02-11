@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2021-02-08" />
+<meta name="date" content="2021-02-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -52,7 +52,6 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -68,6 +67,7 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -319,12 +319,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="D" data-path="bookdown.html"><a href="bookdown.html"><i class="fa fa-check"></i><b>D</b> Publishing with Bookdown</a>
 <ul>
-<li class="chapter" data-level="" data-path="collaborative-writing-on-github.html"><a href="collaborative-writing-on-github.html"><i class="fa fa-check"></i>Collaborative Writing on GitHub</a></li>
+<li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
+<li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
 <li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
-<li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images</a></li>
-<li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables</a></li>
-<li class="chapter" data-level="" data-path="notes.html"><a href="notes.html"><i class="fa fa-check"></i>Notes and Bibliography</a></li>
-<li class="chapter" data-level="" data-path="modify-markdown.html"><a href="modify-markdown.html"><i class="fa fa-check"></i>Manually Modify Markdown Output</a></li>
+<li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
+<li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
+<li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
+<li class="chapter" data-level="" data-path="alternative.html"><a href="alternative.html"><i class="fa fa-check"></i>Alternative Book Authoring-Publishing Tools</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -349,7 +350,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="open-refine" class="section level2 unnumbered" number="">
+<div id="open-refine" class="section level2 unnumbered">
 <h2>Clean Data with OpenRefine</h2>
 <p>Open the <a href="https://docs.google.com/spreadsheets/d/19BilYJxd0fgi7MTAa2y9NUF65Xqf2_y_dVr1jPbmWeg/edit#gid=1983762503">US Foreign Aid sample dataset in Google Sheets format</a> as shown in Figure <a href="open-refine.html#fig:openrefine-dataset">5.11</a>. Can you spot any problems with it? This data excerpt is from <a href="https://catalog.data.gov/dataset/u-s-overseas-loans-and-grants-greenbook">US Overseas Loans and Grants (Greenbook) dataset</a>, which shows US economic and military assistance to various countries.
 We chose to only include assistance to South Korea and North Korea for the years between 2000 and 2018. We added deliberate misspellings and formatting issues for demonstration purposes, but we did not alter values.</p>
@@ -361,7 +362,7 @@ Figure 5.11: Can you spot any problems with this sample data?
 </p>
 </div>
 <p>Notice how the <em>Country</em> column various spellings of North and South Korea. Also note how the <em>FundingAmount</em> column is not standardized. Some amounts use commas to separate thousands, while some uses spaces. Some amounts start with a dollar sign, and some do not. Datasets like this can be an absolute nightmare to analyze. Luckily, OpenRefine provides powerful tools to clean up and standardize data.</p>
-<div id="set-up-openrefine" class="section level3 unnumbered" number="">
+<div id="set-up-openrefine" class="section level3 unnumbered">
 <h3>Set up OpenRefine</h3>
 <p>Let’s use OpenRefine to clean up this messy data. Download <a href="https://openrefine.org/download.html">OpenRefine</a> for Windows, Mac, or Linux. Just like Tabula, it runs in your browser and no
 data leaves your local machine, which is great for confidentiality.</p>
@@ -383,7 +384,7 @@ Figure 5.13: The OpenRefine welcome page.
 </p>
 </div>
 </div>
-<div id="load-data-and-start-a-new-project" class="section level3 unnumbered" number="">
+<div id="load-data-and-start-a-new-project" class="section level3 unnumbered">
 <h3>Load Data and Start a New Project</h3>
 <p>To start cleaning up messy dataset, we need to load it into a new project. OpenRefine lets you upload a dataset from your local machine, or a remote web address (such as a Google Sheet). OpenRefine also can extract data directly from SQL databases, but this is beyond the scope of this book.</p>
 <ol style="list-style-type: decimal">
@@ -403,7 +404,7 @@ Figure 5.14: OpenRefine parsing options.
 the fun part: converting text into numbers, removing unnecessary characters,
 and fixing the spellings for North and South Koreas.</p>
 </div>
-<div id="convert-dollar-amounts-from-text-to-numbers" class="section level3 unnumbered" number="">
+<div id="convert-dollar-amounts-from-text-to-numbers" class="section level3 unnumbered">
 <h3>Convert Dollar Amounts from Text to Numbers</h3>
 <p>Once your project is created, you will see the first 10 rows of the dataset.
 You can change it to 5, 10, 25, or 50 by clicking the appropriate number in the header</p>
@@ -448,7 +449,7 @@ Figure 5.17: Manually edit to remove spaces and extra characters, and change dat
 <p>At this point, all funding amounts should be clean numbers, right-aligned and colored in green.
 We’re ready to move on to the <em>Country</em> column and fix different spellings of Koreas.</p>
 </div>
-<div id="cluster-similar-spellings" class="section level3 unnumbered" number="">
+<div id="cluster-similar-spellings" class="section level3 unnumbered">
 <h3>Cluster Similar Spellings</h3>
 <p>When you combine different data sources, or process survey data where respondents
 wrote down their answers as opposed to selecting them from a dropdown menu, you might end up
@@ -492,7 +493,7 @@ You can choose your format (we recommend CSV, or comma-separated value).
 Now you have a clean dataset that is ready to be analyzed and visualized.</li>
 </ol>
 </div>
-<div id="summary5" class="section level3 unnumbered" number="">
+<div id="summary5" class="section level3 unnumbered">
 <h3>Summary</h3>
 <p>In this chapter, we looked at cleaning up tables in Google Sheets,
 liberating tabular data trapped in PDFs using Tabula, and using

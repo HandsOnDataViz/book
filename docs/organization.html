@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2021-02-08" />
+<meta name="date" content="2021-02-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -52,7 +52,6 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -68,6 +67,7 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -319,12 +319,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="D" data-path="bookdown.html"><a href="bookdown.html"><i class="fa fa-check"></i><b>D</b> Publishing with Bookdown</a>
 <ul>
-<li class="chapter" data-level="" data-path="collaborative-writing-on-github.html"><a href="collaborative-writing-on-github.html"><i class="fa fa-check"></i>Collaborative Writing on GitHub</a></li>
+<li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
+<li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
 <li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
-<li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images</a></li>
-<li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables</a></li>
-<li class="chapter" data-level="" data-path="notes.html"><a href="notes.html"><i class="fa fa-check"></i>Notes and Bibliography</a></li>
-<li class="chapter" data-level="" data-path="modify-markdown.html"><a href="modify-markdown.html"><i class="fa fa-check"></i>Manually Modify Markdown Output</a></li>
+<li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
+<li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
+<li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
+<li class="chapter" data-level="" data-path="alternative.html"><a href="alternative.html"><i class="fa fa-check"></i>Alternative Book Authoring-Publishing Tools</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -349,14 +350,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="organization" class="section level2 unnumbered" number="">
+<div id="organization" class="section level2 unnumbered">
 <h2>Organization of the Book</h2>
 <p>We’ve organized the chapters of this book to serve as an introductory hands-on guide to data visualization, from spreadsheets to code. Also, we assume no prior skills other than general familiarity with operating a computer and a vague memory of secondary school mathematics, along with an innate curiosity about telling stories with data. Imagine the book in four parts.</p>
 <p>In part one, you’ll develop foundational skills about envisioning your data story, along with the tools and data you’ll need to tell it. We’ll gradually move from <a href="choose.html">Chapter 2: Choose Tools to Tell Your Data Story</a> to <a href="spreadsheet.html">Chapter 3: Strengthen Your Spreadsheet Skills</a> to <a href="find.html">Chapter 4: Find and Question Your Data</a> to <a href="clean.html">Chapter 5: Clean Up Messy Data</a> to <a href="comparisons.html">Chapter 6: Make Meaningful Comparisons</a>. These chapters feature hands-on tutorials to enrich learning by doing.</p>
 <p>In part two, you’ll build lots of visualizations with easy-to-learn drag-and-drop tools, and find out which types work best with different data stories. We’ll start with <a href="chart.html">Chapter 7: Chart Your Data</a>, <a href="map.html">Chapter 8: Map Your Data</a>, and <a href="table.html">Chapter 9: Table Your Data</a> and develop your understanding of the interpretive style that each one emphasizes. In <a href="embed.html">Chapter 10: Embed on the Web</a>, you’ll learn how to insert all of these interactive visualizations on common web platforms, to invite readers to explore your data and share your work more widely.</p>
 <p>In part three, you’ll advance to working with more powerful tools, specifically code templates, that give you more control over customizing the appearance of your visualizations and where you host them online. We’ll start with <a href="github.html">Chapter 11: Edit and Host Code with GitHub</a>, and walk you through the easy web interface for this popular open-source coding platform. Then you’ll build using <a href="chartcode.html">Chapter 12: Chart.js and Highcharts Templates</a> and <a href="leaflet.html">Chapter 13: Leaflet Map Templates</a>, and discover more advanced spatial tools in <a href="transform.html">Chapter 14: Transform Your Map Data</a>. At the end of the book we include an <a href="fix.html">Appendix: Fix Common Problems</a> to consult when you accidentally break your code, which is also a great way to learn how it works.</p>
 <p>In part four, we’ll wrap up all of the visualization skills you’ve developed by returning to the central theme of this introduction: telling true and meaningful stories with data. In <a href="detect.html">Chapter 15: Detect Lies and Reduce Bias</a>, you’ll learn how to lie with charts and maps in order to do a better job of telling the truth. Finally, <a href="story.html">Chapter 16: Tell and Show Your Data Story</a> emphasizes how the goal of data visualization is not simply to make pictures about numbers, but to craft a truthful narrative that convinces readers how and why your interpretation matters.</p>
-<div id="summary1" class="section level3 unnumbered" number="">
+<div id="summary1" class="section level3 unnumbered">
 <h3>Summary</h3>
 <p>Now you have a clearer sense of our primary goal for this book. We aim for you to learn how to tell true and meaningful stories with interactive data visualizations, while being mindful of the ways that people can use them to mislead. In the next chapter, let’s get started on clarifying the data story you wish to tell, and factors to consider when choosing tools to do the job.</p>
 

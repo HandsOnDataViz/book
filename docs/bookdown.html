@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2021-02-08" />
+<meta name="date" content="2021-02-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,7 @@
   
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="peer-3-sample-2-notes.html"/>
-<link rel="next" href="collaborative-writing-on-github.html"/>
+<link rel="next" href="install.html"/>
 <script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -52,7 +52,6 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -68,6 +67,7 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -319,12 +319,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="D" data-path="bookdown.html"><a href="bookdown.html"><i class="fa fa-check"></i><b>D</b> Publishing with Bookdown</a>
 <ul>
-<li class="chapter" data-level="" data-path="collaborative-writing-on-github.html"><a href="collaborative-writing-on-github.html"><i class="fa fa-check"></i>Collaborative Writing on GitHub</a></li>
+<li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
+<li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
 <li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
-<li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images</a></li>
-<li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables</a></li>
-<li class="chapter" data-level="" data-path="notes.html"><a href="notes.html"><i class="fa fa-check"></i>Notes and Bibliography</a></li>
-<li class="chapter" data-level="" data-path="modify-markdown.html"><a href="modify-markdown.html"><i class="fa fa-check"></i>Manually Modify Markdown Output</a></li>
+<li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
+<li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
+<li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
+<li class="chapter" data-level="" data-path="alternative.html"><a href="alternative.html"><i class="fa fa-check"></i>Alternative Book Authoring-Publishing Tools</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -351,15 +352,68 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="bookdown" class="section level1" number="20">
 <h1><span class="header-section-number">D</span> Publishing with Bookdown</h1>
-<p>This open-access book is built with free-to-use, open-source tools—primarily <a href="https://bookdown.org">Bookdown</a>, <a href="http://github.com">GitHub</a>, and <a href="http://zotero.org">Zotero</a>—and this chapter explains how, so that readers may do it themselves and share their knowledge to improve the process. In addition to our notes below, see also Yihui Xie’s more comprehensive <a href="https://bookdown.org/yihui/bookdown/">Bookdown guide</a>.<a href="#fn53" class="footnote-ref" id="fnref53"><sup>53</sup></a></p>
-<p>Our broad goal is an efficient workflow to compose one document in the easy-to-write <a href="https://en.wikipedia.org/wiki/Markdown">Markdown format</a> that Bookdown generates into multiple book products: an HTML web edition to read online, a PDF print edition for traditional book publishing, a Microsoft Word edition for editors who request it for copyediting, and option for other formats as desired.</p>
-<p>Since Bookdown is an <a href="https://www.r-project.org/">R code package</a>, we composed the book manuscript in R-flavored Markdown, with one file (.Rmd) for each chapter. We use Bookdown to build these files in its GitBook style as a set of static HTML pages, which we upload to our GitHub repository. Readers can view the open-access web edition of the book at our custom domain: <a href="https://HandsOnDataViz" class="uri">https://HandsOnDataViz</a>. Also, we use Bookdown to build additional book outputs (PDF, MS Word, Markdown) and upload these to the <code>docs</code> folder of our GitHub repository, so that our O’Reilly Media editor may download and comment on the manuscript as we revise. Finally, we have arranged with the O’Reilly production team to convert our <em>modified</em> version of the full-book Markdown file into their <a href="https://docs.atlas.oreilly.com/writing_in_asciidoc.html">O’Reilly Atlas platform</a>. See some caveats and workarounds below.</p>
+<p>We built this book with free-to-use, open-source tools, primarily <a href="https://bookdown.org">Bookdown</a>, <a href="http://github.com">GitHub</a>, and <a href="http://zotero.org">Zotero</a>. This chapter explains why and how we combined these tools and developed our publishing workflow, so that others can build their own books and share their knowledge about how to improve the process.</p>
+<p>Why not just write the book in a conventional word processor? We desired an efficient workflow to co-author one manuscript that could continuously generate multiple book products for different purposes, as shown in Figure <a href="bookdown.html#fig:workflow">D.1</a>.</p>
+<ul>
+<li>HMTL web edition for the open-access book, with embedded iframes for interactive charts and maps</li>
+<li>PDF print edition with static images and book-style layout</li>
+<li>Microsoft Word edition with static images for editors who prefer to provide feedback this way</li>
+<li>Markdown file of the full-length book with pathnames to static images for easy conversion into the publisher’s platform</li>
+</ul>
+<p>A conventional word processor could not continuously generate all of these products, which likely would have resulted in creating entirely separate files and code for different editions. But with our unified Bookdown workflow, all of our writing is done in one manuscript. Whenever we make edits, we push a couple of buttons to publish our updated book products in the HTML, PDF, MS Word, and Markdown formats.</p>
+
+<div class="figure"><span id="fig:workflow"></span>
+<img src="images/20-bookdown/workflow.png" alt="Simplified workflow to compose, compile, and publish in multiple formats with Bookdown. Images from Daniel Hendricks, RStudio, and Zotero."  />
+<p class="caption">
+Figure D.1: Simplified workflow to compose, compile, and publish in multiple formats with Bookdown. Images from <a href="https://fileicons.org">Daniel Hendricks</a>, <a href="https://github.com/rstudio/hex-stickers/">RStudio</a>, and <a href="https://www.zotero.org/support/brand">Zotero</a>.
+</p>
 </div>
-<div class="footnotes">
-<hr />
-<ol start="53">
-<li id="fn53"><p><span class="citation">Yihui Xie, <em>Bookdown: Authoring Books and Technical Documents with R Markdown</em>, 2018, <a href="https://bookdown.org/yihui/bookdown/" role="doc-biblioref">https://bookdown.org/yihui/bookdown/</a></span><a href="bookdown.html#fnref53" class="footnote-back">↩︎</a></p></li>
-</ol>
+<div id="bookdown-overview-why-and-how" class="section level3 unnumbered">
+<h3>Bookdown Overview: Why and How?</h3>
+<p>We based our solution around <a href="https://bookdown.org">Bookdown</a>, an open-source package for the <a href="https://www.r-project.org/">R code project</a> created by Yihui Xie at RStudio. Although many people use R for statistical analysis, the free <a href="https://rstudio.com/">RStudio desktop application</a> also supports several innovative publishing solutions. Here’s an overview of our workflow:</p>
+<ul>
+<li>We set up the Bookdown files and composed the manuscript in <a href="https://rmarkdown.rstudio.com">R Markdown</a>, the R-flavored version of the easy-to-write <a href="https://en.wikipedia.org/wiki/Markdown">Markdown syntax</a>. Each chapter consisted of one .Rmd file, with links to static images and interactive visualizations.</li>
+<li>We uploaded our files to a free <a href="http://github.com">GitHub</a> repository, which allowed both of us to work simultaneously on <em>different</em> chapters of the book and “push” our revisions (called commits) to our shared online repository, where we could view each other’s edits. Alternatively, you could simultaneously write and comment on the <em>same</em> chapter in Google Documents, and use the <a href="https://github.com/evbacher/gd2md-html/wiki">Docs to Markdown add-on</a> to convert one-time into Markdown format, which is similar to R Markdown.</li>
+<li>We organized our sources using the free <a href="https://zotero.org">Zotero bibliography manager</a> by the Roy Rosenzweig Center for History and New Media at George Mason University. Also, we installed the free <a href="https://github.com/retorquere/zotero-better-bibtex">Better BibTeX</a> extension by Emiliano Heynes to create Zotero citation keys that work smoothly with Bookdown.</li>
+<li>After each day’s writing, we used Bookdown to automatically “knit” and compile the book products. Behind the scenes, Bookdown builds the editions using the <a href="https://pandoc.org/">PanDoc</a> universal document converter and the <a href="https://www.latex-project.org">LaTeX</a> document preparation software, without requiring you to learn these complex formats.</li>
+<li>Under our open-access agreement with the publisher, we made our book public as we wrote it to develop our audience and address reader feedback. With each day’s revisions, we rebuilt the book and published all of the editions to our public GitHub repository, and used its free <a href="https://pages.github.com">GitHub Pages</a> feature to host the open-access HTML web edition. (Alternatively, you can choose to keep your GitHub repo private.)</li>
+<li>We hosted our open-access web edition on GitHub using a custom domain name (<a href="https://HandsOnDataViz.org" class="uri">https://HandsOnDataViz.org</a>), which we purchased and set up through <a href="http://reclaimhosting.com">Reclaim Hosting</a>.</li>
+<li>As we worked on the book manuscript, our developmental editor downloaded the PDF edition from our public GitHub repo to mark up with feedback. (Alternatively, some editors prefer to insert track-changes comments in the MS Word edition.)</li>
+<li>When we were ready to submit the final manuscript, we used Bookdown to create one full-length Markdown file of the entire book, which was compatible with the publisher’s <a href="https://docs.atlas.oreilly.com/writing_in_asciidoc.html">Atlas production platform</a>. However, this was a one-time file conversion, and edits we make to our Bookdown workflow will not appear in the publisher’s platform, unless they request a new file and convert it.</li>
+</ul>
+<p>Screenshots of two variations of the basic workflow appear in Figure <a href="bookdown.html#fig:workflow-desktop">D.2</a> and Figure <a href="bookdown.html#fig:workflow-atom">D.3</a>. The first displays how to compose the book using the R Studio built-in editor, and the second shows a very similar process using the <a href="http://atom.io">Atom text editor</a>, which we prefer. Learn more about <a href="github-desktop-atom.html">GitHub Desktop and Atom text editor in Chapter 11</a>.</p>
+
+<div class="figure"><span id="fig:workflow-desktop"></span>
+<img src="images/20-bookdown/workflow-desktop.png" alt="Workflow on a Mac desktop: Compose the text in RStudio and build books with Bookdown (top left), manage sources and insert citation keys with Zotero + BetterBibTex (bottom left), push book products to your GitHub repository to host online (right)."  />
+<p class="caption">
+Figure D.2: Workflow on a Mac desktop: Compose the text in RStudio and build books with Bookdown (top left), manage sources and insert citation keys with Zotero + BetterBibTex (bottom left), push book products to your GitHub repository to host online (right).
+</p>
+</div>
+
+<div class="figure"><span id="fig:workflow-atom"></span>
+<img src="images/20-bookdown/workflow-atom.png" alt="Variation on the workflow above: Compose the text in your preferred editor (such as Atom), and use RStudio only to build the book products."  />
+<p class="caption">
+Figure D.3: Variation on the workflow above: Compose the text in your preferred editor (such as Atom), and use RStudio only to build the book products.
+</p>
+</div>
+<p>Our Bookdown workflow met our goal to efficiently and continuously produce multiple book products. But it may not be ideal for everyone, especially novice computer users. Installation and setup requires several steps, as described in the following sections:</p>
+<ul>
+<li><a href="install.html">Install and Set Up Bookdown</a></li>
+<li><a href="structure.html">File Structure and Headers</a></li>
+<li><a href="style-guide.html">Style Guide for <em>Hands-On Data Visualization</em></a></li>
+<li><a href="images.html">Images and R Code-chunk Formatting</a></li>
+<li><a href="tables.html">Tables in Markdown Format</a></li>
+<li><a href="zotero.html">Zotero and Better BibTeX for Notes and Biblio</a></li>
+</ul>
+<p>Before leaping into Bookdown or any related tool, see also this section on <a href="alternative.html">Alternative Book Authoring-Publishing Tools</a>.</p>
+<p>For more technical details about Bookdown, and examples of other publications built with this tool, see <a href="https://bookdown.org" class="uri">https://bookdown.org</a>:</p>
+<ul>
+<li>Xie, Yihui. <em>Bookdown: Authoring Books and Technical Documents with R Markdown</em>. Chapman &amp; Hall/CRC, 2018. <a href="https://bookdown.org/yihui/bookdown/" class="uri">https://bookdown.org/yihui/bookdown/</a>.</li>
+<li>Xie, Yihui, J. J. Allaire, and Garrett Grolemund. <em>R Markdown: The Definitive Guide</em>. Chapman &amp; Hall/CRC, 2020. <a href="https://bookdown.org/yihui/rmarkdown/" class="uri">https://bookdown.org/yihui/rmarkdown/</a>.</li>
+<li>Xie, Yihui, Christophe Dervieux, and Emily Riederer. <em>R Markdown Cookbook</em>. Chapman &amp; Hall/CRC, 2020. <a href="https://bookdown.org/yihui/rmarkdown-cookbook/" class="uri">https://bookdown.org/yihui/rmarkdown-cookbook/</a>.</li>
+</ul>
+
+</div>
 </div>
             </section>
 
@@ -367,7 +421,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         </div>
       </div>
 <a href="peer-3-sample-2-notes.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="collaborative-writing-on-github.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="install.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2021-02-08" />
+<meta name="date" content="2021-02-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -52,7 +52,6 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -68,6 +67,7 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -319,12 +319,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="D" data-path="bookdown.html"><a href="bookdown.html"><i class="fa fa-check"></i><b>D</b> Publishing with Bookdown</a>
 <ul>
-<li class="chapter" data-level="" data-path="collaborative-writing-on-github.html"><a href="collaborative-writing-on-github.html"><i class="fa fa-check"></i>Collaborative Writing on GitHub</a></li>
+<li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
+<li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
 <li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
-<li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images</a></li>
-<li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables</a></li>
-<li class="chapter" data-level="" data-path="notes.html"><a href="notes.html"><i class="fa fa-check"></i>Notes and Bibliography</a></li>
-<li class="chapter" data-level="" data-path="modify-markdown.html"><a href="modify-markdown.html"><i class="fa fa-check"></i>Manually Modify Markdown Output</a></li>
+<li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
+<li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
+<li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
+<li class="chapter" data-level="" data-path="alternative.html"><a href="alternative.html"><i class="fa fa-check"></i>Alternative Book Authoring-Publishing Tools</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -349,7 +350,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="filtered-line-tableau" class="section level2 unnumbered" number="">
+<div id="filtered-line-tableau" class="section level2 unnumbered">
 <h2>- Filtered Line Chart</h2>
 <p>Now that you’ve learned how to create a scatter chart in Tableau Public, let’s move on to a new type of chart that highlights the tool’s strengths. Instead of <em>static</em> charts, such as those found in print or PDFs, this book features <em>interactive</em> charts for their ability to display more data. But you can also design interactive charts to show only the amount of data you desire. In other words, your interactive visualization can become a data-exploration tool that allows users to “dig” and find specific data points and patterns, without overwhelming them with too much information at once.</p>
 <p>In this tutorial, we will build an interactive filtered line chart with Tableau Public, to visualize how internet access has changed in different nations over time. Organize the data in three columns, as shown in Figure <a href="filtered-line-tableau.html#fig:tableau-filtered-data">7.56</a>. The first column, <em>Country Name</em>, are the data labels that become the colored lines. The second column, <em>Year</em>, will appear on the horizontal x-axis. The third column, <em>Percent Internet Users</em>, are numeric values that appear on the vertical y-axis. Now you can create a filtered line chart with checkboxes, to show only selected lines on startup to avoid overwhelming users, while allowing them to toggle on other lines, and hover over each one for more details, as shown in Figure <a href="filtered-line-tableau.html#fig:tableau-filtered">7.57</a>.</p>
@@ -369,7 +370,7 @@ Figure 7.57: Filtered Line chart: Explore the <a href="https://public.tableau.co
 </p>
 </div>
 <p>To create your own filtered line chart using this sample data in Tableau Public, follow this tutorial. We assume that you have already installed the free <a href="https://public.tableau.com">Tableau Public</a> desktop application for Mac or Windows, and have already become familiar with the tool by completing the previous <a href="scatter-tableau.html">Scatter Chart with Tableau Public tutorial</a>, since the steps below are abbreviated.</p>
-<div id="connect-data-to-tableau-public" class="section level4 unnumbered" number="">
+<div id="connect-data-to-tableau-public" class="section level4 unnumbered">
 <h4>Connect Data to Tableau Public</h4>
 <ol style="list-style-type: decimal">
 <li><p>Download the <a href="data/world-bank-internet-users-1995-2018.xlsx">World Bank Internet Users 1995-2018 sample data in Excel format</a>, or <a href="https://docs.google.com/spreadsheets/d/1nrfd8Cr-wpm5N9WGA2YO6d1XLuwk-VK8kCvDwoTdeWM/edit#gid=600173793">view and download the Google Sheets version</a>. The file consists of three columns: data labels, year, and numeric values.</p></li>
@@ -378,7 +379,7 @@ Figure 7.57: Filtered Line chart: Explore the <a href="https://public.tableau.co
 </ol>
 <p>In your worksheet, your variables will be listed under <em>Tables</em> in the left-hand side. The original variables are displayed in normal font, the <em>generated</em> variables will be shown in <em>italics</em> (such as <em>Latitude</em> and <em>Longitude</em>, which Tableau guessed from the country names). Now you are ready to begin building your interactive chart.</p>
 </div>
-<div id="build-and-publish-a-filtered-line-chart" class="section level4 unnumbered" number="">
+<div id="build-and-publish-a-filtered-line-chart" class="section level4 unnumbered">
 <h4>Build and Publish a Filtered Line Chart</h4>
 <ol style="list-style-type: decimal">
 <li><p>Drag the <em>Year</em> variable to <em>Columns</em> shelf. This will place years along the x-axis.</p></li>
@@ -429,7 +430,7 @@ Figure 7.60: This workbook is ready to be published.
 </div>
 <p>See the <a href="embed-code.html">Get the Embed Code</a> section of Chapter 10 to insert the interactive version of your chart on a web page that you control.</p>
 </div>
-<div id="summary7" class="section level3 unnumbered" number="">
+<div id="summary7" class="section level3 unnumbered">
 <h3>Summary</h3>
 <p>Congratulations on creating interactive charts that pull readers deeper into your story, and encourage them to explore the underlying data! As you continue to create more, always match the chart type to your data format and the story you wish to emphasize. Also, design your charts based on the principles and aesthetic guidelines outlined near the top of this chapter. While anyone can click a few buttons to quickly create a chart nowadays, your audiences will greatly appreciate well-designed charts that thoughtfully call their attention to meaningful patterns in the data.</p>
 <p>In this chapter you learned how to create different types of interactive charts with Google Sheets, Datawrapper, and Tableau Public. For more advanced chart design with open-source code, see <a href="chartcode.html">Chapter 12: Chart.js and Highcharts templates</a>, which give you ever more control over how your design and display your data, but also requires learning how to <a href="github.html">edit and host code templates with GitHub</a> in Chapter 11.</p>

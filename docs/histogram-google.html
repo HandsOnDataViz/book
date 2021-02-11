@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2021-02-08" />
+<meta name="date" content="2021-02-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -52,7 +52,6 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -68,6 +67,7 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -319,12 +319,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="D" data-path="bookdown.html"><a href="bookdown.html"><i class="fa fa-check"></i><b>D</b> Publishing with Bookdown</a>
 <ul>
-<li class="chapter" data-level="" data-path="collaborative-writing-on-github.html"><a href="collaborative-writing-on-github.html"><i class="fa fa-check"></i>Collaborative Writing on GitHub</a></li>
+<li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
+<li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
 <li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
-<li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images</a></li>
-<li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables</a></li>
-<li class="chapter" data-level="" data-path="notes.html"><a href="notes.html"><i class="fa fa-check"></i>Notes and Bibliography</a></li>
-<li class="chapter" data-level="" data-path="modify-markdown.html"><a href="modify-markdown.html"><i class="fa fa-check"></i>Manually Modify Markdown Output</a></li>
+<li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
+<li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
+<li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
+<li class="chapter" data-level="" data-path="alternative.html"><a href="alternative.html"><i class="fa fa-check"></i>Alternative Book Authoring-Publishing Tools</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -349,11 +350,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="histogram-google" class="section level2 unnumbered" number="">
+<div id="histogram-google" class="section level2 unnumbered">
 <h2>- Histograms</h2>
 <p>Histograms are best to show the distribution of raw data, by displaying the number of values that fall within defined ranges, often called <em>buckets</em> or <em>bins</em>. Creating a histogram can be a great way to better understand what your data looks like to inform your decision-making when designing more advanced visualizations, such as <a href="design-choropleth.html">choropleth maps, as you’ll learn in Chapter 8</a>. Although histograms may look similar to column charts, the two are different. First, histograms show <em>continuous</em> data, and usually you can adjust the bucket ranges to explore frequency patterns. For example, you can shift histogram buckets from 0-1, 1-2, 2-3, etc. to 0-2, 2-4, etc. By contrast, column charts show <em>categorical</em> data, such as the number of apples, bananas, carrots, etc. Second, histograms do not usually show spaces between buckets because these are continuous values, while column charts show spaces to separate each category.</p>
 <p>In this section, you’ll create two types of histograms in Google Sheets: quick histograms using the <em>Column stats</em> menu versus regular histograms using the <em>Chart</em> menu, and the advantages of each method. For both tutorials we’ll use the same data: the average calorie supply per capita for 174 countries in 2017, compiled by the <a href="http://www.fao.org/faostat/en/#data/FBS">United Nations Food and Agriculture Organization</a>, accessed through <a href="https://ourworldindata.org/food-supply">Our World In Data</a>. Note that methods for measuring food supply vary across nations and over time, and estimate the amount of food availability, rather than actual consumption.</p>
-<div id="quick-histograms-with-google-sheets-column-stats" class="section level3 unnumbered" number="">
+<div id="quick-histograms-with-google-sheets-column-stats" class="section level3 unnumbered">
 <h3>Quick Histograms with Google Sheets Column Stats</h3>
 <ol style="list-style-type: decimal">
 <li><p>Open the sample data on <a href="https://docs.google.com/spreadsheets/d/1V-r1bOWpvyCRhmJa0gRZ1TEchXvrr7UTZ97rKOU1WRo/edit#gid=1132930452">Average Daily Calorie Supply per capita by country 2017 in Google Sheets</a>, log in with your account, and go to <em>File &gt; Make a Copy</em> to create a version you can edit in your Google Drive.</p></li>
@@ -368,7 +369,7 @@ Figure 7.27: To create a quick histogram in a Google Sheet, select a column, the
 </div>
 <p>Histograms are designed to show broad patterns of data distribution, not individual values. The histogram in Figure <a href="histogram-google.html#fig:histogram-quick">7.27</a> shows that while most nations have an average daily supply around 2,800 calories per capita, 8 nations have fewer than 2,000, and 11 nations have more than 3,500. Without annotations, histograms don’t tell us the names of those outlier countries. But they do offer a better sense of the shape of the data distribution.</p>
 </div>
-<div id="regular-histograms-with-google-sheets-charts" class="section level3 unnumbered" number="">
+<div id="regular-histograms-with-google-sheets-charts" class="section level3 unnumbered">
 <h3>Regular Histograms with Google Sheets Charts</h3>
 <p>Compare the quick histogram created with <em>Column stats</em> in Figure <a href="histogram-google.html#fig:histogram-quick">7.27</a> with the regular histogram created with <em>Charts</em> in Figure <a href="histogram-google.html#fig:histogram">7.28</a>. You’ll notice that in the regular histogram, you can define the bucket ranges, display dividers, and add titles and labels to provide more context to readers. Also, the interactive version of the regular histogram allows users to float their cursor to see underlying data on the count for each column.</p>
 

@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2021-02-08" />
+<meta name="date" content="2021-02-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -52,7 +52,6 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -68,6 +67,7 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -319,12 +319,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="D" data-path="bookdown.html"><a href="bookdown.html"><i class="fa fa-check"></i><b>D</b> Publishing with Bookdown</a>
 <ul>
-<li class="chapter" data-level="" data-path="collaborative-writing-on-github.html"><a href="collaborative-writing-on-github.html"><i class="fa fa-check"></i>Collaborative Writing on GitHub</a></li>
+<li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
+<li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
 <li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
-<li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images</a></li>
-<li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables</a></li>
-<li class="chapter" data-level="" data-path="notes.html"><a href="notes.html"><i class="fa fa-check"></i>Notes and Bibliography</a></li>
-<li class="chapter" data-level="" data-path="modify-markdown.html"><a href="modify-markdown.html"><i class="fa fa-check"></i>Manually Modify Markdown Output</a></li>
+<li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
+<li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
+<li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
+<li class="chapter" data-level="" data-path="alternative.html"><a href="alternative.html"><i class="fa fa-check"></i>Alternative Book Authoring-Publishing Tools</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -349,7 +350,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="biased-comparisons" class="section level2 unnumbered" number="">
+<div id="biased-comparisons" class="section level2 unnumbered">
 <h2>Beware of Biased Comparisons</h2>
 <p>Everyone knows not to <em>cherry-pick</em> your data, which means to select only the evidence that supports a pre-determined conclusion, while ignoring the remainder. When we make a commitment to tell true and meaningful data stories, we agree to keep an open mind, examine all of the relevant evidence, and weigh the merits of competing interpretations. If you agree to these principles, then also watch out for biased data comparisons, especially <em>sampling biases</em>, which refers to data collection procedures that may appear legitimate on the surface, but actually include partially-hidden factors that skew the results. While we may believe we’re operating with open minds, we might overlook methods that effectively cherry-pick our evidence without our knowledge.</p>
 <p>First, look out for <em>selection bias</em>, which means that the sample chosen for your study differs systematically from the larger population. “What you see depends on where you look,” cautions professors Carl Bergstrom and Jevin West, authors of a book with an unforgettable title, <em>Calling Bullshit</em>.<a href="#fn24" class="footnote-ref" id="fnref24"><sup>24</sup></a> If you randomly measured the height of people who happened to be leaving the gym after basketball practice, your artificially taller results would be due to selection bias, as shown in Figure <a href="biased-comparisons.html#fig:selection-bias">6.2</a>.</p>
@@ -371,7 +372,7 @@ Figure 6.3: To evaluate program effectiveness, do not compare program non-partic
 </p>
 </div>
 <p>Bias warnings appear in several chapters of this book, because we continually need to be aware of different types that negatively influence our work at various stages of the data visualization process. Later in <a href="data-bias.html">Chapter 15 you’ll learn how to recognize and reduce other types of biases</a> when working with data, such as cognitive biases, algorithmic biases, intergroup biases, and mapping biases.</p>
-<div id="summary6" class="section level3 unnumbered" number="">
+<div id="summary6" class="section level3 unnumbered">
 <h3>Summary</h3>
 <p>Although we do not claim to teach you statistical data analysis in this book, in this chapter we discussed several common-sense strategies to make meaningful comparisons while analyzing your data. You learned how to use words more precisely for comparing data, why and how to normalize data, and advice on watching out for biased comparisons. In prior chapters you built up your skills on refining your data story, working with spreadsheets, finding and questioning data, and cleaning up messy data. Now you can combine all of this knowledge and begin to create interactive charts and maps in the next few chapters.</p>
 
@@ -381,8 +382,8 @@ Figure 6.3: To evaluate program effectiveness, do not compare program non-partic
 <div class="footnotes">
 <hr />
 <ol start="24">
-<li id="fn24"><p><span class="citation">Carl T. Bergstrom and Jevin D. West, <em>Calling Bullshit: The Art of Skepticism in a Data-Driven World</em> (Random House, 2020), <a href="https://www.google.com/books/edition/Calling_Bullshit/Plu9DwAAQBAJ" role="doc-biblioref">https://www.google.com/books/edition/Calling_Bullshit/Plu9DwAAQBAJ</a></span>, pp. 79, 104-133<a href="biased-comparisons.html#fnref24" class="footnote-back">↩︎</a></p></li>
-<li id="fn25"><p><span class="citation">Jonathan Rothbaum and Adam Bee, “Coronavirus Infects Surveys, Too: Nonresponse Bias During the Pandemic in the CPS ASEC” (US Census Bureau), accessed December 8, 2020, <a href="https://www.census.gov/library/working-papers/2020/demo/SEHSD-WP2020-10.html" role="doc-biblioref">https://www.census.gov/library/working-papers/2020/demo/SEHSD-WP2020-10.html</a></span><a href="biased-comparisons.html#fnref25" class="footnote-back">↩︎</a></p></li>
+<li id="fn24"><p><span class="citation">Carl T. Bergstrom and Jevin D. West, <em>Calling <span>Bullshit</span>: <span>The Art</span> of <span>Skepticism</span> in a <span>Data</span>-<span>Driven World</span></em> (<span>Random House</span>, 2020), <a href="https://www.google.com/books/edition/Calling_Bullshit/Plu9DwAAQBAJ" role="doc-biblioref">https://www.google.com/books/edition/Calling_Bullshit/Plu9DwAAQBAJ</a></span>, pp. 79, 104-133<a href="biased-comparisons.html#fnref24" class="footnote-back">↩︎</a></p></li>
+<li id="fn25"><p><span class="citation">Jonathan Rothbaum and Adam Bee, <span>“Coronavirus <span>Infects Surveys</span>, <span>Too</span>: <span>Nonresponse Bias During</span> the <span>Pandemic</span> in the <span>CPS ASEC</span>”</span> (<span>US Census Bureau</span>, Setember 15, 2020), <a href="https://www.census.gov/library/working-papers/2020/demo/SEHSD-WP2020-10.html" role="doc-biblioref">https://www.census.gov/library/working-papers/2020/demo/SEHSD-WP2020-10.html</a>.</span><a href="biased-comparisons.html#fnref25" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

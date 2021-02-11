@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2021-02-08" />
+<meta name="date" content="2021-02-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -52,7 +52,6 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -68,6 +67,7 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -319,12 +319,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="D" data-path="bookdown.html"><a href="bookdown.html"><i class="fa fa-check"></i><b>D</b> Publishing with Bookdown</a>
 <ul>
-<li class="chapter" data-level="" data-path="collaborative-writing-on-github.html"><a href="collaborative-writing-on-github.html"><i class="fa fa-check"></i>Collaborative Writing on GitHub</a></li>
+<li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
+<li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
 <li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
-<li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images</a></li>
-<li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables</a></li>
-<li class="chapter" data-level="" data-path="notes.html"><a href="notes.html"><i class="fa fa-check"></i>Notes and Bibliography</a></li>
-<li class="chapter" data-level="" data-path="modify-markdown.html"><a href="modify-markdown.html"><i class="fa fa-check"></i>Manually Modify Markdown Output</a></li>
+<li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
+<li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
+<li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
+<li class="chapter" data-level="" data-path="alternative.html"><a href="alternative.html"><i class="fa fa-check"></i>Alternative Book Authoring-Publishing Tools</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -349,7 +350,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="embed-code" class="section level2 unnumbered" number="">
+<div id="embed-code" class="section level2 unnumbered">
 <h2>Get the Embed Code or iframe Tag</h2>
 <p>In this section, you’ll learn how to copy the embed code or iframe tag that is automatically generated when you publish a chart or map on different visualization platforms featured in this book. Remember that embed codes contain the essential iframe tag, along with other bits of code to display the chart or map from the primary site and make it appear seamlessly on the secondary site.</p>
 <p>We’ll break this down into three steps for each visualization platform. First, we will demonstrate how to copy your embed code or iframe tag from Google Sheets, Datawrapper, Tableau Public, and other platforms listed below. Second, we’ll show you how to test the embed code or iframe tag in a wonderful assistant called the <a href="https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_iframe">W3Schools TryIt iframe page</a>, as shown in Figure <a href="embed-code.html#fig:w3schools-tryit-iframe">10.3</a>. It’s a great way to see what happens if you need to trim parts of the embed code before placing it in web page, and test if it still works. Third, we’ll point you to the next section to learn how to properly paste the embed code in your preferred website, including common platforms such as WordPress, SquareSpace, Wix, and Weebly.</p>
@@ -360,7 +361,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 Figure 10.3: For each embed code below, paste it in place of the selected text of the W3Schools TryIt iframe page to test how it works.
 </p>
 </div>
-<div id="from-google-sheets" class="section level3 unnumbered" number="">
+<div id="from-google-sheets" class="section level3 unnumbered">
 <h3>from Google Sheets</h3>
 <ol style="list-style-type: decimal">
 <li>After you create a <a href="chart-google.html">Google Sheets chart as you did in Chapter 7</a>, click the three-dot kebab menu in the upper-right corner of the chart to publish it, as shown in Figure <a href="embed-code.html#fig:google-sheets-publish">10.4</a>.</li>
@@ -397,7 +398,7 @@ Figure 10.6: Paste your Google Sheets embed code to place of the current iframe 
 <li>Now jump to the <a href="paste-code.html">paste code to website section</a> of this chapter to learn how to properly insert your embed code into your preferred platform.</li>
 </ol>
 </div>
-<div id="from-datawrapper" class="section level3 unnumbered" number="">
+<div id="from-datawrapper" class="section level3 unnumbered">
 <h3>from Datawrapper</h3>
 <ol style="list-style-type: decimal">
 <li>After you create a <a href="chart-datawrapper.html">Datawrapper chart as you did in Chapter 7</a> or <a href="map.html">map as you did in Chapter 8</a> or <a href="table.html">interactive table as you did Chapter 9</a>, proceed to the final screen and click the <em>Publish</em> button, as shown in Figure <a href="embed-code.html#fig:datawrapper-publish">10.7</a>. This publishes the interactive version of your chart or map online. Further down on the same screen you can also export a static image, if desired.</li>
@@ -443,7 +444,7 @@ Figure 10.10: If a complex embed code does not work in your website, go back and
 </div>
 <p>Tip: The Datawrapper iframe tag source follows this general format: <code>https://datawrapper.dwcdn.net/abcdef/1/</code>, where the <code>1</code> refers to the first version of the chart or map you published. If you make edits and re-publish your visualization, Datawrapper will increase the last digit (to <code>2</code> and so forth), and <em>automatically redirect</em> older links to the <em>current version</em>, which keeps your work up-to-date for your audience.</p>
 </div>
-<div id="from-tableau-public" class="section level3 unnumbered" number="">
+<div id="from-tableau-public" class="section level3 unnumbered">
 <h3>from Tableau Public</h3>
 <ol style="list-style-type: decimal">
 <li>After you create a <a href="chart-tableau.html">Tableau Public chart in Chapter 7</a> or <a href="map-tableau.html">map in Chapter 8</a>, publish your worksheet, dashboard, or story online by selecting <em>File &gt; Save to Tableau Public</em> in the desktop application menu, as shown in Figure <a href="embed-code.html#fig:tableau-public-publish">10.11</a>.</li>

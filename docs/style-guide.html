@@ -25,14 +25,14 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2021-02-08" />
+<meta name="date" content="2021-02-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
-<link rel="prev" href="collaborative-writing-on-github.html"/>
+<link rel="prev" href="structure.html"/>
 <link rel="next" href="images.html"/>
 <script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
@@ -52,7 +52,6 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -68,6 +67,7 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -319,12 +319,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="D" data-path="bookdown.html"><a href="bookdown.html"><i class="fa fa-check"></i><b>D</b> Publishing with Bookdown</a>
 <ul>
-<li class="chapter" data-level="" data-path="collaborative-writing-on-github.html"><a href="collaborative-writing-on-github.html"><i class="fa fa-check"></i>Collaborative Writing on GitHub</a></li>
+<li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
+<li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
 <li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
-<li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images</a></li>
-<li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables</a></li>
-<li class="chapter" data-level="" data-path="notes.html"><a href="notes.html"><i class="fa fa-check"></i>Notes and Bibliography</a></li>
-<li class="chapter" data-level="" data-path="modify-markdown.html"><a href="modify-markdown.html"><i class="fa fa-check"></i>Manually Modify Markdown Output</a></li>
+<li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
+<li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
+<li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
+<li class="chapter" data-level="" data-path="alternative.html"><a href="alternative.html"><i class="fa fa-check"></i>Alternative Book Authoring-Publishing Tools</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -349,10 +350,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="style-guide" class="section level2 unnumbered" number="">
+<div id="style-guide" class="section level2 unnumbered">
 <h2>Style Guide for <em>Hands-On Data Visualization</em></h2>
-<p>View the underlying source code to understand how this page was composed at: <a href="https://github.com/HandsOnDataViz/book/blob/main/20-bookdown.Rmd" class="uri">https://github.com/HandsOnDataViz/book/blob/main/20-bookdown.Rmd</a></p>
-<p>This book is composed in R-flavored Markdown (.Rmd), and each paragraph begins on a separate line. O’Reilly style guide prefers <em>italics</em> rather than bold. Use single back tics to display a monospaced <code>code</code> word.</p>
+<p>View the underlying source code to understand how this page was composed at: <a href="https://github.com/HandsOnDataViz/book/blob/main/20.3-style-guide.Rmd" class="uri">https://github.com/HandsOnDataViz/book/blob/main/20.3-style-guide.Rmd</a></p>
+<p>We built <em>Hands-On Data Visualization</em> based largely on the <a href="http://oreillymedia.github.io/production-resources/styleguide/">O’Reilly Style Guide</a>, and also to match our needs for composing in R-flavored Markdown (.Rmd) and generating multiple book products through Bookdown. While we drafted chapters, we wanted to produce an HTML edition for the web that would display our embedded iframes to online charts and maps. We also needed to produce a PDF or Word version that displayed only static images, for our developmental editor to markup and provide feedback. Finally, we needed to produce a full-length Markdown file (.md) of the entire book that would easily convert all of our text, captions, and pathnames to static images for O’Reilly’s publishing platform. Some of the notes below are stylistic or technical reminders to ourselves to write consistently as we worked on 16 chapters and more than 400 images.</p>
+<p>In general, each chapter is a separate R-flavored Markdown (.Rmd) file. Each paragraphs begins on a separate line. O’Reilly style guide prefers <em>italics</em> rather than bold. Use single back tics to display a monospaced <code>code</code> word. Insert <code>TODO</code> to note items to finish or review with co-author or editor.</p>
 <p>O’Reilly guidelines recommend making your writing as conversational as possible. Imagine you’re speaking to someone one on one, not giving a formal lecture to a large group. Refer to the reader as “you” and to yourself as “I” for a single-author book, and refer to yourselves as “we” for a co-authored book. Use active voice, not passive voice.</p>
 <p>More from O’Reilly about chapter structure: Each chapter should begin with a paragraph or two that summarizes what the chapter is about and why that information is important to the overall topic of your book. Subsequent sections should walk readers through the information you’re presenting. Keep readers oriented by including signposts like “As you learned in Chapter 4” and “I’ll discuss this topic in more detail later in this chapter.”</p>
 <p>More from O’Reilly about transitions: End section X by saying something like, “Now that you understand X, you’re ready to dig into topic Y,” and start section Y by explaining how it relates to topic X. Daisy-chaining helps readers understand how concepts are connected and why you’re covering them in this order. Finally, at the end of each chapter, summarize what you discussed in that chapter, and mention what the following chapter is going to cover.</p>
@@ -366,8 +368,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>Sidebar: Use this to note where the editor has requested a boxed sidebar. If longer than one paragraph, add “End Sidebar” to close it.</li>
 </ul>
-<p>Insert an embedded external link to <a href="https://www.oreilly.com/">O’Reilly</a>. This appears as a colored clickable link in HTML and Word editions, and a non-colored but clickable link in the PDF edition. According to O’Reilly Atlas documentation, the AsciiDoc version should automatically unfurl for the printed edition.</p>
-<p>Insert an embedded internal link to the book, using the short pathname, such as <a href="data/data.csv">download this sample CSV file</a>, to ensure that Bookdown copies the file from the <code>data</code> subfolder over to the <code>docs</code> subfolder.</p>
+<p>Sample embedded external link: <a href="https://www.oreilly.com/">O’Reilly</a>. This appears as a colored clickable link in HTML and Word editions, and a non-colored but clickable link in the PDF edition. According to O’Reilly Atlas documentation, the AsciiDoc version should automatically unfurl for the printed edition.</p>
+<p>Sample embedded internal link to the book, using the short pathname, such as <a href="data/data.csv">download this sample CSV file</a>, to ensure that Bookdown copies the file from the <code>data</code> subfolder over to the <code>docs</code> subfolder.</p>
 <p>Embed links directly in the sentence, such as <a href="data/ct-dph-covid-2020-05-31.pdf">download this sample PDF</a>. Avoid linking words such as “here” or “this web page.” Also, avoid writing “Click on this…” in the main text, such as when downloading a sample file, since readers cannot click on the print edition. However, it is acceptable to write “click on” or “right-click on” in a tutorial on interacting with software.</p>
 <p>When instructions refer to software menu items, use italics. Example: Select <em>File &gt; Make a Copy</em> to save your own version to your Google Drive.</p>
 <p>For lists, always insert a blank line <em>before</em> the items, unless they appear directly after hashtag header.</p>
@@ -385,14 +387,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Use an en-dash (2 dashes) for ranges, such as the May–September magazine issue.</li>
 <li>Use an em-dash (3 dashes) to insert an additional thought—like this—in a sentence.</li>
 </ul>
-<p>Insert <code>TODO</code> to note items to finish or review with co-author or editor.</p>
-<p>Use single back tics to designate <code>code</code>.</p>
-<p>Insert three back tics to insert a code block, limited to 81 character line length for Animal style book body in <a href="http://oreillymedia.github.io/production-resources/styleguide/#line-length">O’Reilly style guide</a>. TODO: Check to see if triple back tics render correctly in the Markdown full-book output.</p>
-<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/leaflet@1.6.0/dist/leaflet.css&quot; /&gt;
-&lt;script src=&quot;https://unpkg.com/leaflet@1.6.0/dist/leaflet.js&quot;&gt;&lt;/script&gt;</code></pre>
-<div id="conditional-formatting" class="section level3 unnumbered" number="">
+<p>Insert three back tics to insert a code block, limited to 81 character line length for Animal style book body in <a href="http://oreillymedia.github.io/production-resources/styleguide/#line-length">O’Reilly style guide</a>, like this:</p>
+<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/leaflet@1.7.1/dist/leaflet.css&quot; /&gt;
+&lt;script src=&quot;https://unpkg.com/leaflet@1.7.1/dist/leaflet.js&quot;&gt;&lt;/script&gt;</code></pre>
+<div id="conditional-formatting" class="section level3 unnumbered">
 <h3>Conditional Formatting</h3>
-<p>Conditional formatting offers the option to display text or images in some editions, but not other editions. Options:</p>
+<p>Conditional formatting offers the option to display text or images in some Bookdown editions, but not others. Here are several ways to use conditional formatting:</p>
 <ol style="list-style-type: decimal">
 <li>Insert a HTML code comment <code>&lt;!-- Comment --&gt;</code> in the .Rmd file to hide a few lines of text. This appears as commented-out text in the HTML and .md formats, is not displayed in the HTML browser, and does not appear in any way in the PDF or MS Word formats.</li>
 </ol>
@@ -406,36 +406,46 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 This line appears in the PDF and Word versions, and is commented-out in the HTML and Markdown versions.
 -->
 <p>This line appears in the HTML, Word, Markdown versions, and is commented-out in the PDF version.</p>
-<p>TODO: Create conditional formatting that displays <em>only</em> in the HTML edition, and allows the inclusion of R code-chunks to conditionally display images. See links for more complex conditional formatting:</p>
-<ul>
-<li><a href="https://stackoverflow.com/questions/56808355/how-to-conditionally-process-sections-in-rmarkdown" class="uri">https://stackoverflow.com/questions/56808355/how-to-conditionally-process-sections-in-rmarkdown</a></li>
-<li><a href="https://bookdown.org/yihui/rmarkdown-cookbook/latex-html.html" class="uri">https://bookdown.org/yihui/rmarkdown-cookbook/latex-html.html</a></li>
-<li><a href="https://blog.earo.me/2019/10/26/reduce-frictions-rmd/" class="uri">https://blog.earo.me/2019/10/26/reduce-frictions-rmd/</a></li>
-<li><a href="https://stackoverflow.com/questions/53861244/html-specific-section-in-bookdown" class="uri">https://stackoverflow.com/questions/53861244/html-specific-section-in-bookdown</a></li>
-<li><a href="https://stackoverflow.com/questions/41084020/add-a-html-block-above-each-chapter-header" class="uri">https://stackoverflow.com/questions/41084020/add-a-html-block-above-each-chapter-header</a></li>
-<li><a href="https://stackoverflow.com/questions/45360998/code-folding-in-bookdown" class="uri">https://stackoverflow.com/questions/45360998/code-folding-in-bookdown</a></li>
-</ul>
 <ol start="3" style="list-style-type: decimal">
 <li><p>Option to customize the <code>style.css</code> code for the HTML book.</p></li>
 <li><p>Option to add headers, footers, preambles to the HTML or LaTeX versions.</p></li>
-<li><p>Build different versions of the HTML and LaTeX (PDF) books using different chapters by listing them in order in the <code>_bookdown.yml</code> file:</p></li>
+<li><p>Build different versions of the HTML and LaTeX/PDF books using different chapters by listing them in order in the <code>_bookdown.yml</code> file. In this way, we published all chapters/subchapters for the HTML version, but published only selected chapters for the PDF and full-length Markdown versions for O’Reilly, as shown below:</p></li>
 </ol>
-<pre><code>rmd_files:
-  html: [&quot;index.Rmd&quot;, &quot;abstract.Rmd&quot;, &quot;intro.Rmd&quot;]
-  latex: [&quot;abstract.Rmd&quot;, &quot;intro.Rmd&quot;]</code></pre>
+<pre><code># comment-out below when building HTML book, un-comment for PDF and full-length Markdown for ORM
+# rmd_files: [
+#   &quot;index.Rmd&quot;,
+#   &quot;01-introduction.Rmd&quot;,
+#   &quot;02-choose.Rmd&quot;,
+#   &quot;03-spreadsheet.Rmd&quot;,
+#   &quot;04-find.Rmd&quot;,
+#   &quot;05-clean.Rmd&quot;,
+#   &quot;06-comparisons.Rmd&quot;,
+#   &quot;07-chart.Rmd&quot;,
+#   &quot;08-map.Rmd&quot;,
+#   &quot;09-table.Rmd&quot;,
+#   &quot;10-embed.Rmd&quot;,
+#   &quot;11-github.Rmd&quot;,
+#   &quot;12-chartcode.Rmd&quot;,
+#   &quot;13-leaflet.Rmd&quot;,
+#   &quot;14-transform.Rmd&quot;,
+#   &quot;15-detect.Rmd&quot;,
+#   &quot;16-story.Rmd&quot;,
+#   &quot;17-fix.Rmd&quot;,
+#   &quot;21-references.Rmd&quot;
+# ]</code></pre>
 </div>
-<div id="cross-references" class="section level3 unnumbered" number="">
+<div id="cross-references" class="section level3 unnumbered">
 <h3>Cross-references</h3>
 <p>In order to cross-reference in Bookdown, assign a unique name or R code-chunk label to each chapter, section, figure, and table. Unique names and labels should contain only <em>alphanumeric</em> characters (a-z, A-Z, 0-9) or dashes (-).</p>
+<p>Contrary to the <a href="https://bookdown.org/yihui/bookdown/cross-references.html">Bookdown manual</a>, <em>avoid</em> using Bookdown unique ID links to cross-reference chapters or sections, because these create imprecise URLs with extraneous hashtags for sections/subchapters.</p>
 <p>To cross-reference any <em>chapter or section</em>, and allow readers to jump there, use a HTML link with the unique name, such as <code>index.html</code> or <code>style-guide.html</code>. Demos:</p>
 <ul>
 <li>See <a href="index.html">Introduction</a></li>
 <li>See <a href="style-guide.html">“Style Guide” in Chapter x</a>.</li>
 </ul>
-<p>Contrary to the <a href="https://bookdown.org/yihui/bookdown/cross-references.html">Bookdown manual</a>, <em>avoid</em> using Bookdown unique ID links to cross-reference chapters or sections, because these create extraneous and imprecise URLs, such as this <a href="style-guide.html#style-guide">bad example</a>.</p>
-<p>To cross-reference figures and tables, and display their auto-number and allow readers to jump there, write a call-out with a Bookdown reference to a code-chunk label, such as <code>See Figure \@ref(fig:sample-map)</code> or <code>See Table \@ref(tab:left-table)</code>. Demos:</p>
+<p>To cross-reference figures and tables, and display their auto-number and allow readers to jump there, write a call-out with a Bookdown reference to a code-chunk label, such as <code>See Figure \@ref(fig:sample-image)</code> or <code>See Table \@ref(tab:left-table)</code>. Demos:</p>
 <ul>
-<li>See Figure <a href="images.html#fig:tiger">D.1</a>.</li>
+<li>See Figure <a href="images.html#fig:sample-image">D.4</a>.</li>
 <li>See Table <a href="tables.html#tab:left-table">D.1</a>.</li>
 </ul>
 <p>Cross-reference interactivity varies by output:</p>
@@ -445,6 +455,7 @@ This line appears in the PDF and Word versions, and is commented-out in the HTML
 <li>In Word, no cross-refs are clickable (unless this varies with reference.docx).</li>
 </ul>
 <p>When writing cross-references in the text, the <a href="http://oreillymedia.github.io/production-resources/styleguide/#considering_electronic_formats">O’Reilly Style Guide</a> prefers live cross references (e.g., “see Figure 2-1”), but if not feasible, use “preceding” or “following” because physical placement of elements may vary across print and digital formats. <em>Avoid</em> using “above” or “below.”</p>
+
 </div>
 </div>
             </section>
@@ -452,7 +463,7 @@ This line appears in the PDF and Word versions, and is commented-out in the HTML
           </div>
         </div>
       </div>
-<a href="collaborative-writing-on-github.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="structure.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="images.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
@@ -492,7 +503,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/handsondataviz/book/blob/master/20-bookdown.Rmd",
+"link": "https://github.com/handsondataviz/book/blob/master/20.3-style-guide.Rmd",
 "text": null
 },
 "download": null,

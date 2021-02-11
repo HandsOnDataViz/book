@@ -16,7 +16,7 @@ A conventional word processor could not continuously generate all of these produ
  knitr::include_graphics("images/20-bookdown/workflow.png")
 ```
 
-## Overview {- #overview}
+### Bookdown Overview: Why and How? {-}
 We based our solution around [Bookdown](https://bookdown.org), an open-source package for the [R code project](https://www.r-project.org/) created by Yihui Xie at RStudio. Although many people use R for statistical analysis, the free [RStudio desktop application](https://rstudio.com/) also supports several innovative publishing solutions. Here's an overview of our workflow:
 
 - We set up the Bookdown files and composed the manuscript in [R Markdown](https://rmarkdown.rstudio.com), the R-flavored version of the easy-to-write [Markdown syntax](https://en.wikipedia.org/wiki/Markdown). Each chapter consisted of one .Rmd file, with links to static images and interactive visualizations.
@@ -39,7 +39,7 @@ Screenshots of two variations of the basic workflow appear in Figure \@ref(fig:w
 (ref:workflow-atom) Variation on the workflow above: Compose the text in your preferred editor (such as Atom), and use RStudio only to build the book products.
 
 ```{r workflow-atom, fig.cap="(ref:workflow-atom)"}
- knitr::include_graphics("images/bookdown/workflow-atom.png")
+ knitr::include_graphics("images/20-bookdown/workflow-atom.png")
 ```
 
 Our Bookdown workflow met our goal to efficiently and continuously produce multiple book products. But it may not be ideal for everyone, especially novice computer users. Installation and setup requires several steps, as described in the following sections:

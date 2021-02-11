@@ -1,19 +1,19 @@
 ## Install and Set Up Bookdown {- #install}
 Below are steps we followed to set up the Bookdown publishing platform and related tools for this book, using our Macintosh OS 10.14 computers. The same general principles also should apply to Windows computers. No special knowledge is required, but these tools may not be ideal for novice computer users. Installation steps---and inevitable problems that pop up---will be easier if you are comfortable with exploring your computer, or already have some familiarity with text editors, GitHub, or R Studio.
 
-1. Install R Project statistical programming language <https://www.r-project.org>, which is required by Bookdown. [See screenshot](images/20-bookdown/1-r-download.png)
+1. Install R Project statistical programming language <https://www.r-project.org>, which is required by Bookdown. [See screenshot](images/20-bookdown/r-download.png)
 
-2. Install the free version of RStudio Desktop to make R easier to use with a visual editor. [See screenshot](images/20-bookdown/2-download-rstudio.png). Some authors compose their books in RStudio, but you may use any text editor. Our personal preference is the [Atom editor](https://atom.io/) from GitHub.
+2. Install the free version of RStudio Desktop to make R easier to use with a visual editor. [See screenshot](images/20-bookdown/rstudio-download.png). Some authors compose their books in RStudio, but you may use any text editor. Our personal preference is the [Atom editor](https://atom.io/) from GitHub.
 
-3. Inside RStudio, select the Packages tab, and select Install. [See screenshot](images/bookdown/3-packages-install.png)
+3. Inside RStudio, select the Packages tab, and select Install. [See screenshot](images/20-bookdown/packages-install.png)
 
-4. Inside RStudio, install the "bookdown" package to build your book, and select Install Dependencies. [See screenshot](images/20-bookdown/4-install-bookdown.png)
+4. Inside RStudio, install the "bookdown" package to build your book, and select Install Dependencies. [See screenshot](images/20-bookdown/bookdown-install.png)
 
-5. Bookdown now should be successfully installed in RStudio. [See screenshot](images/20-bookdown/5-installed.png)
+5. Bookdown now should be successfully installed in RStudio. [See screenshot](images/20-bookdown/bookdown-installed.png)
 
-6. For Bookdown to create a PDF edition of your book, you need to install a [LaTeX](https://en.wikipedia.org/wiki/LaTeX) engine to prepare your Markdown plain text, citations, and images into stylized pages. Since the full-sized [LaTeX project](https://www.latex-project.org/get/) is very large, Bookdown recommends the smaller TinyTeX package. Inside RStudio, select the Packages tab, select Install, and enter "tinytex" to find and upload the package. [See screenshot](images/20-bookdown/6-install-tinytex.png)
+6. For Bookdown to create a PDF edition of your book, you need to install a [LaTeX](https://en.wikipedia.org/wiki/LaTeX) engine to prepare your Markdown plain text, citations, and images into stylized pages. Since the full-sized [LaTeX project](https://www.latex-project.org/get/) is very large, Bookdown recommends the smaller TinyTeX package. Inside RStudio, select the Packages tab, select Install, and enter "tinytex" to find and upload the package. [See screenshot](images/20-bookdown/tinytex-install.png)
 
-7. To finish installing tinytex, in the RStudio console, type `tinytex::install_tinytex()` and press return. [See screenshot](images/20-bookdown/7-finish-install-tinytex.png)
+7. To finish installing tinytex, in the RStudio console, type `tinytex::install_tinytex()` and press return. [See screenshot](images/20-bookdown/tinytex-finish.png)
 
 8. When you installed RStudio, it also should have installed its own version of Pandoc, the package that converts files from Markdown format to HMTL and other formats. To confirm the Pandoc installation and version number, in the RStudio console, type `rmarkdown::pandoc_version()` and press return. The resulting version number should be `2.3.1` or higher. To install a newer version of Pandoc, which is highly recommended, go to <https://pandoc.org>.
 
@@ -28,9 +28,9 @@ While Bookdown does not require you to use GitHub, these steps show how to integ
 
 4. In your web browser, go to your forked copy of `bookdown-minimal`, click the green `Code` button, and select `Open in Desktop`. This should automatically open the GitHub Desktop application, and you can navigate where you wish to store a copy of your code repo on a folder in your local computer.
 
-5. In RStudio in the upper-right corner, select Project > Open Project to open the `bookdown-minimal` folder on your local computer. [See screenshot](images/20-bookdown/8-project-open.png)
+5. In RStudio in the upper-right corner, select Project > Open Project to open the `bookdown-minimal` folder on your local computer. [See screenshot](images/20-bookdown/project-open.png)
 
-6. In RStudio, open the `index.Rmd` file and make some simple edits to the text of this minimal book. For example, remove the hashtag `#` comment symbol in line 8 to "uncomment" and activate the PDF book option. Save your edits. [See screenshot](images/20-bookdown/9-edit-book.png)
+6. In RStudio, open the `index.Rmd` file and make some simple edits to the text of this minimal book. For example, remove the hashtag `#` comment symbol in line 8 to "uncomment" and activate the PDF book option. Save your edits. [See screenshot](images/20-bookdown/edit-book.png)
 
 7. Optional: If you wish, you can modify your `bookdown-minimal` files outside of RStudio, by using your preferred text editor, such as Atom editor <https://atom.io>.
 
@@ -38,9 +38,9 @@ While Bookdown does not require you to use GitHub, these steps show how to integ
 
 9. If RStudio successfully builds both editions of your minimal book, the output will be saved into your `bookdown-minimal` folder, in a subfolder named `_book`, because that's how this sample is configured. The RStudio internal browser should automatically open your web edition (but it's not a very good browser, so we typically close it and manually open the `index.html` file with our regular browser.)
 
-10. Also, open the subfolder and inspect the PDF edition of your book. If any errors were generated in the process, error messages will appear in red type in the RStudio Build viewer, which may require you to debug errors and delete temporary files as instructed. [See screenshot](images/20-bookdown/11-successful-build.png).
+10. Also, open the subfolder and inspect the PDF edition of your book. If any errors were generated in the process, error messages will appear in red type in the RStudio Build viewer, which may require you to debug errors and delete temporary files as instructed. [See screenshot](images/20-bookdown/build-successful.png).
 
-Tip: In future sessions with RStudio, you should select the Packages tab and click Update to keep Bookdown and other software packages up to date. [See screenshot](images/20-bookdown/12-packages-update.png)
+Tip: In future sessions with RStudio, you should select the Packages tab and click Update to keep Bookdown and other software packages up to date. [See screenshot](images/20-bookdown/update-packages.png)
 
 11. Close your project, and quit RStudio. The next set of steps will focus on pushing your edited book to your GitHub repository using the GitHub Desktop tool.
 

@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2021-02-08" />
+<meta name="date" content="2021-02-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -52,7 +52,6 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -68,6 +67,7 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -319,12 +319,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="D" data-path="bookdown.html"><a href="bookdown.html"><i class="fa fa-check"></i><b>D</b> Publishing with Bookdown</a>
 <ul>
-<li class="chapter" data-level="" data-path="collaborative-writing-on-github.html"><a href="collaborative-writing-on-github.html"><i class="fa fa-check"></i>Collaborative Writing on GitHub</a></li>
+<li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
+<li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
 <li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
-<li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images</a></li>
-<li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables</a></li>
-<li class="chapter" data-level="" data-path="notes.html"><a href="notes.html"><i class="fa fa-check"></i>Notes and Bibliography</a></li>
-<li class="chapter" data-level="" data-path="modify-markdown.html"><a href="modify-markdown.html"><i class="fa fa-check"></i>Manually Modify Markdown Output</a></li>
+<li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
+<li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
+<li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
+<li class="chapter" data-level="" data-path="alternative.html"><a href="alternative.html"><i class="fa fa-check"></i>Alternative Book Authoring-Publishing Tools</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -349,18 +350,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="audience-overview" class="section level2 unnumbered" number="">
+<div id="audience-overview" class="section level2 unnumbered">
 <h2>Audience and Overview</h2>
 <p>As educators, we designed this book to be accessible for new learners, to introduce key concepts in data visualization and reinforce them with hands-on examples. We assume no prior knowledge other than a basic familiarity with computers and some vague memories of secondary school mathematics. Based on feedback we’ve received from an earlier draft, many readers across the globe have taught themselves with this book, and others educators are already using it as a textbook to teach their students.</p>
 <p>Our subtitle, “Interactive Storytelling from Spreadsheets to Code,” reflects how the scope of the book progresses from strengthening basic skills to editing open-source code templates, while continually maintaining our focus on telling true and meaningful data stories. We explain both the <em>why</em> and the <em>how</em> of visualization, and encourage critical thinking about how data is socially constructed, and whose interests are served or ignored.</p>
 <p>Unlike many computer books that focus on selling you a specific software application, this book introduces you to over twenty different visualization tools, all of them free and easy-to-learn. We also offer guiding principles on how to make wise choices among digital tools as they continue to evolve in the future. By working through the sample datasets and tutorials, you will create more than a dozen different interactive charts, maps, and tables, and share these data stories with other readers on the public web.</p>
 <p>Although our introductory book is comprehensive, we do not address certain advanced topics. For example, while we discuss ways to make meaningful data comparisons, we do not delve into the field of statistical data analysis. Also, we focus primarily on software tools with a friendly graphical user interface, rather than those that require you to memorize and enter command-line instructions, such as the powerful <a href="https://www.r-project.org">R statistics packages</a>. Finally, while we teach readers how to modify HTML-CSS-JavaScript code templates with the Leaflet, Chart.js, and Highcharts libraries, we do not explore more advanced visualization code libraries such as <a href="https://d3js.org">D3</a>. Nevertheless, we believe that nearly everyone who reads this book will discover something new and valuable.</p>
-<div id="advice-for-hands-on-learning" class="section level3 unnumbered" number="">
+<div id="advice-for-hands-on-learning" class="section level3 unnumbered">
 <h3>Advice for Hands-On Learning</h3>
 <p>Learn by following our step-by-step tutorials on a laptop or desktop computer with an internet connection. Most of the tools introduced in the book are web-based, and we recommend you use an up-to-date version of Firefox, Chrome, Safari, or Edge browsers. We advise against using Internet Explorer as this older browser is no longer correctly supported by many web services. A Mac or a Windows computer will allow you to complete all tutorials, but if you use a Chromebook or Linux computer, you still should be able to complete most of them, and we’ll point out any limitations in specific sections. While it may be possible to complete some tutorials on a tablet or smartphone device, we do not recommend it because these smaller devices will prevent you from completing several key steps.</p>
 <p>If you’re working on a laptop, consider buying or borrowing an external mouse that plugs into your computer. We’ve met several people who find it much easier to click, hover, and scroll with an external mouse than a laptop’s built-in trackpad. If you’re new to working with computers–or teaching newer users with this book—consider starting with <a href="https://edu.gcfglobal.org/en/subjects/basic-skills/">basic computer and mouse tutorial skills from the Goodwill Community Foundation</a>. Also, if you’re reading a digital version of this book on a laptop, consider connecting a second computer monitor, or working with a tablet or second computer alongside you. This allows you to read the book in one screen and build data visualizations in the other screen.</p>
 </div>
-<div id="chapter-outline" class="section level3 unnumbered" number="">
+<div id="chapter-outline" class="section level3 unnumbered">
 <h3>Chapter Outline</h3>
 <p>The chapters in this book build up toward our central goal: telling true and meaningful stories with data.</p>
 <ul>

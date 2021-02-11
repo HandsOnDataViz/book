@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2021-02-08" />
+<meta name="date" content="2021-02-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -52,7 +52,6 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -68,6 +67,7 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -319,12 +319,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="D" data-path="bookdown.html"><a href="bookdown.html"><i class="fa fa-check"></i><b>D</b> Publishing with Bookdown</a>
 <ul>
-<li class="chapter" data-level="" data-path="collaborative-writing-on-github.html"><a href="collaborative-writing-on-github.html"><i class="fa fa-check"></i>Collaborative Writing on GitHub</a></li>
+<li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
+<li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
 <li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
-<li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images</a></li>
-<li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables</a></li>
-<li class="chapter" data-level="" data-path="notes.html"><a href="notes.html"><i class="fa fa-check"></i>Notes and Bibliography</a></li>
-<li class="chapter" data-level="" data-path="modify-markdown.html"><a href="modify-markdown.html"><i class="fa fa-check"></i>Manually Modify Markdown Output</a></li>
+<li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
+<li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
+<li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
+<li class="chapter" data-level="" data-path="alternative.html"><a href="alternative.html"><i class="fa fa-check"></i>Alternative Book Authoring-Publishing Tools</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -349,7 +350,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="tool-factors" class="section level2 unnumbered" number="">
+<div id="tool-factors" class="section level2 unnumbered">
 <h2>Ten Factors When Considering Tools</h2>
 <p>Making decisions between the seemingly endless number of digital tools can feel overwhelming. To help you navigate your decision-making process, below we list ten key factors that we consider when evaluating new visualization tools or online services. When comparing options, many decisions involve some type of tradeoff, a balance between competing wants and needs, such as ease-of-use versus extensive features. By identifying key factors, we believe that each reader can make a more informed decision about which tools offer the best tradeoff for you, since all of us are different. Furthermore, we worded our categories broadly, because the concepts can be applied to other areas of your digital life, but followed up with more context about data visualization in particular.</p>
 <p><em>1. Easy-to-learn</em></p>
@@ -386,7 +387,7 @@ Figure 2.3: On the left, the Datawrapper built-in check for colorblindness. On t
 <div class="footnotes">
 <hr />
 <ol start="5">
-<li id="fn5"><p><span class="citation">Lisa Charlotte Rost, “What I Learned Recreating One Chart Using 24 Tools” (Source, December 8, 2016), <a href="https://source.opennews.org/en-US/articles/what-i-learned-recreating-one-chart-using-24-tools/" role="doc-biblioref">https://source.opennews.org/en-US/articles/what-i-learned-recreating-one-chart-using-24-tools/</a></span>; <span class="citation">Lincoln Mullen, “How to Make Prudent Choices About Your Tools” (ProfHacker, August 14, 2013), <a href="https://lincolnmullen.com/blog/how-to-make-prudent-choices-about-your-tools/" role="doc-biblioref">https://lincolnmullen.com/blog/how-to-make-prudent-choices-about-your-tools/</a></span>. See also criteria for educational tools by <span class="citation">Audrey Watters, “’The Audrey Test’: Or, What Should Every Techie Know About Education?” (Hack Education, March 17, 2012), <a href="http://hackeducation.com/2012/03/17/what-every-techie-should-know-about-education" role="doc-biblioref">http://hackeducation.com/2012/03/17/what-every-techie-should-know-about-education</a></span><a href="tool-factors.html#fnref5" class="footnote-back">↩︎</a></p></li>
+<li id="fn5"><p><span class="citation">Lisa Charlotte Rost, <span>“What <span>I Learned Recreating One Chart Using</span> 24 <span>Tools</span>”</span> (<span>Source</span>, December 8, 2016), <a href="https://source.opennews.org/en-US/articles/what-i-learned-recreating-one-chart-using-24-tools/" role="doc-biblioref">https://source.opennews.org/en-US/articles/what-i-learned-recreating-one-chart-using-24-tools/</a></span>; <span class="citation">Lincoln Mullen, <span>“How to <span>Make Prudent Choices About Your Tools</span>”</span> (<span>ProfHacker</span>, August 14, 2013), <a href="https://lincolnmullen.com/blog/how-to-make-prudent-choices-about-your-tools/" role="doc-biblioref">https://lincolnmullen.com/blog/how-to-make-prudent-choices-about-your-tools/</a></span>. See also criteria for educational tools by <span class="citation">Audrey Watters, <span>“’<span>The Audrey Test</span>’: <span>Or</span>, <span>What Should Every Techie Know About Education</span>?”</span> (<span>Hack Education</span>, March 17, 2012), <a href="http://hackeducation.com/2012/03/17/what-every-techie-should-know-about-education" role="doc-biblioref">http://hackeducation.com/2012/03/17/what-every-techie-should-know-about-education</a>.</span><a href="tool-factors.html#fnref5" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

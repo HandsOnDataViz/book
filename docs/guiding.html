@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2021-02-08" />
+<meta name="date" content="2021-02-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -52,7 +52,6 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -68,6 +67,7 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -319,12 +319,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="D" data-path="bookdown.html"><a href="bookdown.html"><i class="fa fa-check"></i><b>D</b> Publishing with Bookdown</a>
 <ul>
-<li class="chapter" data-level="" data-path="collaborative-writing-on-github.html"><a href="collaborative-writing-on-github.html"><i class="fa fa-check"></i>Collaborative Writing on GitHub</a></li>
+<li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
+<li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
 <li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
-<li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images</a></li>
-<li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables</a></li>
-<li class="chapter" data-level="" data-path="notes.html"><a href="notes.html"><i class="fa fa-check"></i>Notes and Bibliography</a></li>
-<li class="chapter" data-level="" data-path="modify-markdown.html"><a href="modify-markdown.html"><i class="fa fa-check"></i>Manually Modify Markdown Output</a></li>
+<li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
+<li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
+<li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
+<li class="chapter" data-level="" data-path="alternative.html"><a href="alternative.html"><i class="fa fa-check"></i>Alternative Book Authoring-Publishing Tools</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -349,7 +350,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="guiding" class="section level2 unnumbered" number="">
+<div id="guiding" class="section level2 unnumbered">
 <h2>Guiding Questions for Your Search</h2>
 <p>For many people, a data search is simply googling some keywords on the web. Sometimes that works, sometimes not. When that approach flounders, we reflect on the many lessons we’ve learned about data-hunting while working alongside talented librarians, journalists, and researchers. Collectively, they taught us a set of guiding questions that outline a more thoughtful process about <em>how to search</em> for data:</p>
 <p><em>What exactly is the question you’re seeking to answer with data?</em></p>
@@ -393,9 +394,9 @@ Figure 4.2: Common US census geographies around Hartford, Connecticut, 2019. Zoo
 <div class="footnotes">
 <hr />
 <ol start="7">
-<li id="fn7"><p><span class="citation">“Drilling into the DEA’s Pain Pill Database” (Washington Post, July 16, 2019), <a href="https://www.washingtonpost.com/graphics/2019/investigations/dea-pain-pill-database/" role="doc-biblioref">https://www.washingtonpost.com/graphics/2019/investigations/dea-pain-pill-database/</a></span><a href="guiding.html#fnref7" class="footnote-back">↩︎</a></p></li>
-<li id="fn8"><p>Jack Dougherty et al., “School Choice in Suburbia: Test Scores, Race, and Housing Markets,” <em>American Journal of Education</em> 115, no. 4 (August 2009): 523–48, <a href="http://digitalrepository.trincoll.edu/cssp_papers/1" role="doc-biblioref">http://digitalrepository.trincoll.edu/cssp_papers/1</a>.<a href="guiding.html#fnref8" class="footnote-back">↩︎</a></p></li>
-<li id="fn9"><p>D’Ignazio and Klein, <em>Data Feminism</em>, chap. 1.<a href="guiding.html#fnref9" class="footnote-back">↩︎</a></p></li>
+<li id="fn7"><p><span class="citation">, <span>“Drilling into the <span>DEA</span>’s <span>Pain Pill Database</span>”</span> (<span>Washington Post</span>, July 16, 2019), <a href="https://www.washingtonpost.com/graphics/2019/investigations/dea-pain-pill-database/" role="doc-biblioref">https://www.washingtonpost.com/graphics/2019/investigations/dea-pain-pill-database/</a>.</span><a href="guiding.html#fnref7" class="footnote-back">↩︎</a></p></li>
+<li id="fn8"><p>Jack Dougherty et al., <span>“School <span>Choice</span> in <span>Suburbia</span>: <span>Test Scores</span>, <span>Race</span>, and <span>Housing Markets</span>,”</span> <em>American Journal of Education</em> 115, no. 4 (August 2009): 523–48, <a href="http://digitalrepository.trincoll.edu/cssp_papers/1" role="doc-biblioref">http://digitalrepository.trincoll.edu/cssp_papers/1</a>.<a href="guiding.html#fnref8" class="footnote-back">↩︎</a></p></li>
+<li id="fn9"><p>D’Ignazio and Klein, <em>Data <span>Feminism</span></em>, chap. 1.<a href="guiding.html#fnref9" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

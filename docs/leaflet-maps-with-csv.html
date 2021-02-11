@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2021-02-08" />
+<meta name="date" content="2021-02-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -52,7 +52,6 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -68,6 +67,7 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -319,12 +319,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="D" data-path="bookdown.html"><a href="bookdown.html"><i class="fa fa-check"></i><b>D</b> Publishing with Bookdown</a>
 <ul>
-<li class="chapter" data-level="" data-path="collaborative-writing-on-github.html"><a href="collaborative-writing-on-github.html"><i class="fa fa-check"></i>Collaborative Writing on GitHub</a></li>
+<li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
+<li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
 <li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
-<li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images</a></li>
-<li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables</a></li>
-<li class="chapter" data-level="" data-path="notes.html"><a href="notes.html"><i class="fa fa-check"></i>Notes and Bibliography</a></li>
-<li class="chapter" data-level="" data-path="modify-markdown.html"><a href="modify-markdown.html"><i class="fa fa-check"></i>Manually Modify Markdown Output</a></li>
+<li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
+<li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
+<li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
+<li class="chapter" data-level="" data-path="alternative.html"><a href="alternative.html"><i class="fa fa-check"></i>Alternative Book Authoring-Publishing Tools</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -349,7 +350,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="leaflet-maps-with-csv" class="section level2 unnumbered" number="">
+<div id="leaflet-maps-with-csv" class="section level2 unnumbered">
 <h2>Leaflet Maps with CSV Data</h2>
 <p>This open-source template is designed to improve your coding skills by demonstrating how to create a Leaflet point map that pulls data from a CSV file located in your GitHub repo. While you can make the same type of map on other platforms, such as <a href="mymaps.html">Google My Maps as described in Chapter 8</a>, you’ll more about how the Leaflet code library works by doing it yourself.</p>
 <p>Figure <a href="leaflet-maps-with-csv.html#fig:leaflet-map-csv">13.37</a> shows a simple point map of some colleges and universities
@@ -381,21 +382,21 @@ Wesleyan University,41.55709,-72.65691</code></pre>
 of the map on start. In <code>index.html</code>, find the <code>&lt;script&gt;</code> tag, and edit the following
 chunk of code:</li>
 </ol>
-<div class="sourceCode" id="cb29"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb29-1"><a href="leaflet-maps-with-csv.html#cb29-1"></a><span class="kw">var</span> map <span class="op">=</span> L<span class="op">.</span><span class="fu">map</span>(<span class="st">&#39;map&#39;</span><span class="op">,</span> {</span>
-<span id="cb29-2"><a href="leaflet-maps-with-csv.html#cb29-2"></a>  <span class="dt">center</span><span class="op">:</span> [<span class="fl">41.57</span><span class="op">,</span> <span class="fl">-72.69</span>]<span class="op">,</span> <span class="co">// Default latitude and longitude on start</span></span>
-<span id="cb29-3"><a href="leaflet-maps-with-csv.html#cb29-3"></a>  <span class="dt">zoom</span><span class="op">:</span> <span class="dv">9</span><span class="op">,</span>  <span class="co">// Between 1 and 18; decrease to zoom out, increase to zoom in</span></span>
-<span id="cb29-4"><a href="leaflet-maps-with-csv.html#cb29-4"></a>  <span class="dt">scrollWheelZoom</span><span class="op">:</span> <span class="kw">false</span></span>
-<span id="cb29-5"><a href="leaflet-maps-with-csv.html#cb29-5"></a>})<span class="op">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb29-1"><a href="leaflet-maps-with-csv.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> map <span class="op">=</span> L<span class="op">.</span><span class="fu">map</span>(<span class="st">&#39;map&#39;</span><span class="op">,</span> {</span>
+<span id="cb29-2"><a href="leaflet-maps-with-csv.html#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">center</span><span class="op">:</span> [<span class="fl">41.57</span><span class="op">,</span> <span class="op">-</span><span class="fl">72.69</span>]<span class="op">,</span> <span class="co">// Default latitude and longitude on start</span></span>
+<span id="cb29-3"><a href="leaflet-maps-with-csv.html#cb29-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">zoom</span><span class="op">:</span> <span class="dv">9</span><span class="op">,</span>  <span class="co">// Between 1 and 18; decrease to zoom out, increase to zoom in</span></span>
+<span id="cb29-4"><a href="leaflet-maps-with-csv.html#cb29-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">scrollWheelZoom</span><span class="op">:</span> <span class="kw">false</span></span>
+<span id="cb29-5"><a href="leaflet-maps-with-csv.html#cb29-5" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div>
 <p>We used default Leaflet markers for code simplicity, but you may want to use
 custom icons instead. The code snippet below can give you an idea how to set it up in your GitHub repository, where you insert your unique pathname to your icon in place of the sample.</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb30-1"><a href="leaflet-maps-with-csv.html#cb30-1"></a><span class="kw">var</span> marker <span class="op">=</span> L<span class="op">.</span><span class="fu">marker</span>([row<span class="op">.</span><span class="at">Latitude</span><span class="op">,</span> row<span class="op">.</span><span class="at">Longitude</span>]<span class="op">,</span> {</span>
-<span id="cb30-2"><a href="leaflet-maps-with-csv.html#cb30-2"></a>  <span class="dt">opacity</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span></span>
-<span id="cb30-3"><a href="leaflet-maps-with-csv.html#cb30-3"></a>  <span class="co">// Customize your icon</span></span>
-<span id="cb30-4"><a href="leaflet-maps-with-csv.html#cb30-4"></a>  <span class="dt">icon</span><span class="op">:</span> L<span class="op">.</span><span class="fu">icon</span>({</span>
-<span id="cb30-5"><a href="leaflet-maps-with-csv.html#cb30-5"></a>    <span class="dt">iconUrl</span><span class="op">:</span> <span class="st">&#39;path/to/your/icon.png&#39;</span><span class="op">,</span></span>
-<span id="cb30-6"><a href="leaflet-maps-with-csv.html#cb30-6"></a>    <span class="dt">iconSize</span><span class="op">:</span> [<span class="dv">40</span><span class="op">,</span> <span class="dv">60</span>]</span>
-<span id="cb30-7"><a href="leaflet-maps-with-csv.html#cb30-7"></a>  })</span>
-<span id="cb30-8"><a href="leaflet-maps-with-csv.html#cb30-8"></a>})<span class="op">.</span><span class="fu">bindPopup</span>(row<span class="op">.</span><span class="at">Title</span>)<span class="op">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb30-1"><a href="leaflet-maps-with-csv.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> marker <span class="op">=</span> L<span class="op">.</span><span class="fu">marker</span>([row<span class="op">.</span><span class="at">Latitude</span><span class="op">,</span> row<span class="op">.</span><span class="at">Longitude</span>]<span class="op">,</span> {</span>
+<span id="cb30-2"><a href="leaflet-maps-with-csv.html#cb30-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">opacity</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span></span>
+<span id="cb30-3"><a href="leaflet-maps-with-csv.html#cb30-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Customize your icon</span></span>
+<span id="cb30-4"><a href="leaflet-maps-with-csv.html#cb30-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">icon</span><span class="op">:</span> L<span class="op">.</span><span class="fu">icon</span>({</span>
+<span id="cb30-5"><a href="leaflet-maps-with-csv.html#cb30-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">iconUrl</span><span class="op">:</span> <span class="st">&#39;path/to/your/icon.png&#39;</span><span class="op">,</span></span>
+<span id="cb30-6"><a href="leaflet-maps-with-csv.html#cb30-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">iconSize</span><span class="op">:</span> [<span class="dv">40</span><span class="op">,</span> <span class="dv">60</span>]</span>
+<span id="cb30-7"><a href="leaflet-maps-with-csv.html#cb30-7" aria-hidden="true" tabindex="-1"></a>  })</span>
+<span id="cb30-8"><a href="leaflet-maps-with-csv.html#cb30-8" aria-hidden="true" tabindex="-1"></a>})<span class="op">.</span><span class="fu">bindPopup</span>(row<span class="op">.</span><span class="at">Title</span>)<span class="op">;</span></span></code></pre></div>
 <p>To learn more, see <a href="https://leafletjs.com/examples/custom-icons/">this helpful Leaflet documentation example about custom icons</a>.</p>
 </div>
             </section>

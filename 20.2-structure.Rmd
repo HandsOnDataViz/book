@@ -1,5 +1,7 @@
 ## File Structure and Headers {- #structure}
-To understand our file structure, see the GitHub repository for this book at <http://github.com/handsondataviz/book>. In general, each chapter is a separate .Rmd file. As co-authors, we are careful to work on different chapters of the book, and to regularly push our commits to the repo. Only one of us regularly builds the book with Bookdown to avoid code merge conflicts.
+To understand our file structure, see the GitHub repository for this book at <http://github.com/handsondataviz/book>.
+
+In general, each chapter is a separate .Rmd file. As co-authors, we are careful to work on different chapters of the book, and to regularly push our commits to the repo. Only one of us regularly builds the book with Bookdown to avoid code merge conflicts.
 
 Here is a simplified outline of the root file structure in the GitHub repo for this book:
 

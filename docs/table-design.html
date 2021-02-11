@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2021-02-08" />
+<meta name="date" content="2021-02-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -52,7 +52,6 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -68,6 +67,7 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -319,12 +319,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="D" data-path="bookdown.html"><a href="bookdown.html"><i class="fa fa-check"></i><b>D</b> Publishing with Bookdown</a>
 <ul>
-<li class="chapter" data-level="" data-path="collaborative-writing-on-github.html"><a href="collaborative-writing-on-github.html"><i class="fa fa-check"></i>Collaborative Writing on GitHub</a></li>
+<li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
+<li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
 <li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
-<li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images</a></li>
-<li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables</a></li>
-<li class="chapter" data-level="" data-path="notes.html"><a href="notes.html"><i class="fa fa-check"></i>Notes and Bibliography</a></li>
-<li class="chapter" data-level="" data-path="modify-markdown.html"><a href="modify-markdown.html"><i class="fa fa-check"></i>Manually Modify Markdown Output</a></li>
+<li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
+<li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
+<li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
+<li class="chapter" data-level="" data-path="alternative.html"><a href="alternative.html"><i class="fa fa-check"></i>Alternative Book Authoring-Publishing Tools</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -349,7 +350,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="table-design" class="section level2 unnumbered" number="">
+<div id="table-design" class="section level2 unnumbered">
 <h2>Table Design Principles</h2>
 <p>Let’s begin with some principles of good table design, similar to how we learned about <a href="chart-design.html">chart design in Chapter 7</a> and <a href="map-design.html">map design in Chapter 8</a>. Jonathan Schwabish, an economist who specializes in creating policy-relevant data visualizations, offers advice on creating tables that communicate clearly with multiple audiences.<a href="#fn32" class="footnote-ref" id="fnref32"><sup>32</sup></a> Here’s a summary of several of his key points, which also appear in Figure <a href="table-design.html#fig:table-design">9.1</a>.</p>
 <ol style="list-style-type: decimal">
@@ -433,9 +434,9 @@ Figure 9.1: A sample table that illustrates selected design principles.
 <div class="footnotes">
 <hr />
 <ol start="32">
-<li id="fn32"><p><span class="citation">Jon Schwabish, “Thread Summarizing ’Ten Guidelines for Better Tables’” (Twitter, August 3, 2020), <a href="https://twitter.com/jschwabish/status/1290323581881266177" role="doc-biblioref">https://twitter.com/jschwabish/status/1290323581881266177</a></span>; <span class="citation">Jonathan A. Schwabish, “Ten Guidelines for Better Tables,” <em>Journal of Benefit-Cost Analysis</em> 11, no. 2: 151–78, accessed August 25, 2020, <a href="https://doi.org/10.1017/bca.2020.11" role="doc-biblioref">https://doi.org/10.1017/bca.2020.11</a></span>; <span class="citation">Jonathan Schwabish, <em>Better Data Visualizations: A Guide for Scholars, Researchers, and Wonks</em> (Columbia University Press, 2021), <a href="https://cup.columbia.edu/book/better-data-visualizations/9780231193115" role="doc-biblioref">https://cup.columbia.edu/book/better-data-visualizations/9780231193115</a></span><a href="table-design.html#fnref32" class="footnote-back">↩︎</a></p></li>
-<li id="fn33"><p><span class="citation">Joel Best, <em>More Damned Lies and Statistics: How Numbers Confuse Public Issues</em> (Berkeley, CA: University of California Press, 2004), <a href="https://www.google.com/books/edition/More_Damned_Lies_and_Statistics/SWBr7D6VavoC" role="doc-biblioref">https://www.google.com/books/edition/More_Damned_Lies_and_Statistics/SWBr7D6VavoC</a></span>, pp. 31-35.<a href="table-design.html#fnref33" class="footnote-back">↩︎</a></p></li>
-<li id="fn34"><p><span class="citation">Carl Zimmer, “2 Companies Say Their Vaccines Are 95% Effective. What Does That Mean?” <em>The New York Times: Health</em>, November 20, 2020, <a href="https://www.nytimes.com/2020/11/20/health/covid-vaccine-95-effective.html" role="doc-biblioref">https://www.nytimes.com/2020/11/20/health/covid-vaccine-95-effective.html</a></span>, <span class="citation">Dashiell Young-Saver, “What Does 95% Effective Mean? Teaching the Math of Vaccine Efficacy” (New York Times Learning Network, December 14, 2020), <a href="https://int.nyt.com/data/documenttools/teaching-the-math-of-vaccine-effectiveness/190b272f891868c7/full.pdf" role="doc-biblioref">https://int.nyt.com/data/documenttools/teaching-the-math-of-vaccine-effectiveness/190b272f891868c7/full.pdf</a></span><a href="table-design.html#fnref34" class="footnote-back">↩︎</a></p></li>
+<li id="fn32"><p><span class="citation">Jon Schwabish, <span>“Thread <span>Summarizing</span> ’<span>Ten Guidelines</span> for <span>Better Tables</span>’”</span> (<span>Twitter</span>, August 3, 2020), <a href="https://twitter.com/jschwabish/status/1290323581881266177" role="doc-biblioref">https://twitter.com/jschwabish/status/1290323581881266177</a></span>; <span class="citation">Jonathan A. Schwabish, <span>“Ten <span>Guidelines</span> for <span>Better Tables</span>,”</span> <em>Journal of Benefit-Cost Analysis</em> 11, no. 2 (2020/ed): 151–78, <a href="https://doi.org/10.1017/bca.2020.11" role="doc-biblioref">https://doi.org/10.1017/bca.2020.11</a></span>; <span class="citation">Jonathan Schwabish, <em>Better <span>Data Visualizations</span>: <span>A Guide</span> for <span>Scholars</span>, <span>Researchers</span>, and <span>Wonks</span></em> (<span>Columbia University Press</span>, 2021), <a href="https://cup.columbia.edu/book/better-data-visualizations/9780231193115" role="doc-biblioref">https://cup.columbia.edu/book/better-data-visualizations/9780231193115</a>.</span><a href="table-design.html#fnref32" class="footnote-back">↩︎</a></p></li>
+<li id="fn33"><p><span class="citation">Joel Best, <em>More <span>Damned Lies</span> and <span>Statistics</span>: <span>How Numbers Confuse Public Issues</span></em> (<span>Berkeley, CA</span>: <span>University of California Press</span>, 2004), <a href="https://www.google.com/books/edition/More_Damned_Lies_and_Statistics/SWBr7D6VavoC" role="doc-biblioref">https://www.google.com/books/edition/More_Damned_Lies_and_Statistics/SWBr7D6VavoC</a></span>, pp. 31-35.<a href="table-design.html#fnref33" class="footnote-back">↩︎</a></p></li>
+<li id="fn34"><p><span class="citation">Carl Zimmer, <span>“2 <span>Companies Say Their Vaccines Are</span> 95% <span>Effective</span>. <span>What Does That Mean</span>?”</span> <em>The New York Times: Health</em>, November 20, 2020, <a href="https://www.nytimes.com/2020/11/20/health/covid-vaccine-95-effective.html" role="doc-biblioref">https://www.nytimes.com/2020/11/20/health/covid-vaccine-95-effective.html</a></span>, <span class="citation">Dashiell Young-Saver, <span>“What <span>Does</span> 95% <span>Effective Mean</span>? <span>Teaching</span> the <span>Math</span> of <span>Vaccine Efficacy</span>”</span> (<span>New York Times Learning Network</span>, December 14, 2020), <a href="https://int.nyt.com/data/documenttools/teaching-the-math-of-vaccine-effectiveness/190b272f891868c7/full.pdf" role="doc-biblioref">https://int.nyt.com/data/documenttools/teaching-the-math-of-vaccine-effectiveness/190b272f891868c7/full.pdf</a>.</span><a href="table-design.html#fnref34" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

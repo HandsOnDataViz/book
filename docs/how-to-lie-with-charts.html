@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2021-02-08" />
+<meta name="date" content="2021-02-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -52,7 +52,6 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -68,6 +67,7 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -319,12 +319,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="D" data-path="bookdown.html"><a href="bookdown.html"><i class="fa fa-check"></i><b>D</b> Publishing with Bookdown</a>
 <ul>
-<li class="chapter" data-level="" data-path="collaborative-writing-on-github.html"><a href="collaborative-writing-on-github.html"><i class="fa fa-check"></i>Collaborative Writing on GitHub</a></li>
+<li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
+<li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
 <li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
-<li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images</a></li>
-<li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables</a></li>
-<li class="chapter" data-level="" data-path="notes.html"><a href="notes.html"><i class="fa fa-check"></i>Notes and Bibliography</a></li>
-<li class="chapter" data-level="" data-path="modify-markdown.html"><a href="modify-markdown.html"><i class="fa fa-check"></i>Manually Modify Markdown Output</a></li>
+<li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
+<li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
+<li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
+<li class="chapter" data-level="" data-path="alternative.html"><a href="alternative.html"><i class="fa fa-check"></i>Alternative Book Authoring-Publishing Tools</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -349,10 +350,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="how-to-lie-with-charts" class="section level2 unnumbered" number="">
+<div id="how-to-lie-with-charts" class="section level2 unnumbered">
 <h2>How to Lie with Charts</h2>
 <p>In this section, you’ll learn how to avoid being fooled by misleading charts, and also how to make your own charts more honest, by intentionally manipulating the same data to tell opposing stories. First you will <em>exaggerate</em> small differences in a column chart to make them seem larger. Second you will <em>diminish</em> the rate of growth in a line chart to make it appear more gradual. Together, these tutorials will teach you to watch out for key details when reading other people’s charts, such as the vertical axis and aspect ratio. Paradoxically, by demonstrating <em>how to lie</em>, our goal is to teach you to <em>tell the truth</em> and to think more carefully about the ethics of designing your data stories.</p>
-<div id="exaggerate-change-in-charts" class="section level3 unnumbered" number="">
+<div id="exaggerate-change-in-charts" class="section level3 unnumbered">
 <h3>Exaggerate Change in Charts</h3>
 <p>First we’ll examine data about the economy, a topic that’s often twisted by politicians to portray it more favorably for their perspective. The Gross Domestic Product (GDP) measures the market value of the final goods and services produced in a nation, which many economists consider to be the primary indicator of economic health. (Interestingly, not everyone agrees because GDP does not count unpaid household labor such as caring for one’s children, nor does it consider the distribution of wealth across a nation’s population.) We downloaded US GDP data from the <a href="https://fred.stlouisfed.org/series/GDP">US Federal Reserve open-data repository</a>, which is measured in billions of dollars and published quarterly, with seasonal adjustments to allow for better comparisons across industries that vary during the year, such as summer-time farming and tourism versus winter-time holiday shopping. Your task is create a deceptive column chart that <em>exaggerates</em> small differences to make them appear larger in the reader’s eye.</p>
 <ol style="list-style-type: decimal">
@@ -370,7 +371,7 @@ Figure 15.1: The Zero baseline GDP line chart (left), and the Truncated baseline
 </div>
 <p>As you can see, the truncated baseline chart is <em>wrong</em> because you’ve violated one of the <a href="chart-design.html">cardinal rules about chart design in Chapter 7</a>. Column (and bar) charts <em>must</em> start at the zero baseline, because they represent value using <em>height</em> (and <em>length</em>). Readers cannot determine if a column is twice as high as another column unless both begin at the zero baseline. By contrast, the default chart with the zero baseline is truthful. But let’s move on to a different example where the rules are not as clear.</p>
 </div>
-<div id="diminish-change-in-charts" class="section level3 unnumbered" number="">
+<div id="diminish-change-in-charts" class="section level3 unnumbered">
 <h3>Diminish Change in Charts</h3>
 <p>Next we’ll examine data about climate change, one of the most pressing issues we face on our planet, yet deniers continue to resist the new reality, and some of them twist the facts. In this tutorial, we’ll examine global temperature data from 1880 to the present, <a href="https://climate.nasa.gov/vital-signs/global-temperature/">downloaded from the NASA, the US National Aeronautics and Space Administration</a>. It shows that the mean global temperature has risen about 1 degree Celsius (or about 2 degrees Fahrenheit) during the past fifty years, and this warming has already begun to cause glacial melt and rising sea levels. Your task is to create <em>misleading</em> line charts that <em>diminish</em> the appearance of rising global temperature change in the reader’s eye.<a href="#fn39" class="footnote-ref" id="fnref39"><sup>39</sup></a></p>
 <ol style="list-style-type: decimal">
@@ -387,7 +388,7 @@ Figure 15.2: Default line chart of global temperature change. Explore the <a hre
 </p>
 </div>
 <p>Now let’s create three more charts using the same data but different methods, and discuss why they are <em>not wrong</em> from a technical perspective, but nevertheless <em>very misleading</em>.</p>
-<div id="lengthen-the-vertical-axis-to-flatten-the-line" class="section level4 unnumbered" number="">
+<div id="lengthen-the-vertical-axis-to-flatten-the-line" class="section level4 unnumbered">
 <h4>Lengthen the vertical axis to flatten the line</h4>
 <p>We’ll use the same method as shown in the <a href="how-to-lie-with-charts.html">Exaggerate Change in Charts section</a> above, but in the opposite direction. In the Google Sheets chart editor, customize the vertical axis by changing the minimum value to negative 5 and the maximum to positive 5, as shown in Figure <a href="how-to-lie-with-charts.html#fig:temperature-axis-annotated">15.3</a>. By increasing the length of the vertical scale, you flattened our perception of the rising line, and cancelled our climate emergency…but not really.</p>
 
@@ -399,7 +400,7 @@ Figure 15.3: Misleading chart with a lengthened vertical axis.
 </div>
 <p>What makes this flattened line chart <em>misleading</em> rather than <em>wrong</em>? In the first half of the tutorial, when you reduced the vertical axis of the US GDP chart, you violated the zero-baseline rule, because column and bar charts <em>must</em> begin at zero since they require readers to judge <em>height</em> and <em>length</em>, as described in the <a href="chart-design.html">chart design section of Chapter 7</a>. But you may be surprised to learn that the zero-baseline rule does <em>not</em> apply to line charts. Visualization expert Albert Cairo reminds us that line charts represent values in the <em>position</em> and <em>angle</em> of the line. Readers interpret the meaning of line charts by their shape, rather than their height, so the baseline is irrelevant. Therefore, flattening the line chart for temperature change may mislead readers, but it’s technically not wrong, as long as it is labelled correctly.<a href="#fn40" class="footnote-ref" id="fnref40"><sup>40</sup></a></p>
 </div>
-<div id="widen-the-chart-to-warp-its-aspect-ratio" class="section level4 unnumbered" number="">
+<div id="widen-the-chart-to-warp-its-aspect-ratio" class="section level4 unnumbered">
 <h4>Widen the chart to warp its aspect ratio</h4>
 <p>In your Google Sheet, click the chart and drag the sides to make it very short and wide, as shown in Figure <a href="how-to-lie-with-charts.html#fig:temperature-aspect-annotated">15.4</a>. Image measurements as listed in width by height, and we calculate the aspect ratio as width divided by height. Since the default chart is 600 x 370 pixels, its aspect ratio is about 1.6 to 1. But the stretched-out chart is 1090 x 191 pixels, and its ratio is about 5.7 to 1. By increasing the aspect ratio, you have flattened our perception of the rising line, and cancelled our climate crisis once again…but not really.</p>
 
@@ -429,7 +430,7 @@ Figure 15.6: Following Cairo’s “recommendation” for an 8% increase results
 <p>Note: Some experts advise that aspect ratios for line charts should follow the <em>banking to 45 degrees</em> principle, which states that the average orientation of line segments should be equal to 45 degrees, upwards or downwards, in order to distinguish individual segments. But this requires statistical software to calculate slopes for all of the lines, and still is not a “rule” that fits all cases. Read a <a href="https://eagereyes.org/basics/banking-45-degrees">good overview by Robert Kosara</a>.<a href="#fn43" class="footnote-ref" id="fnref43"><sup>43</sup></a></p>
 <p>Where does all of this leave us? If you feel confused, that’s because data visualization has <em>no universal rule about aspect ratios</em>. What should you do? First, never blindly accept the default chart. Second, explore how different aspect ratios affect its appearance. Finally, even Cairo argues that you should use your own judgment rather than follow his recommendation in every situation, because there is no single rule about aspect ratio that fits all circumstances. Make a choice that honestly interprets the data and clearly tells a story to your reader.</p>
 </div>
-<div id="add-more-data-and-a-dual-vertical-axis" class="section level4 unnumbered" number="">
+<div id="add-more-data-and-a-dual-vertical-axis" class="section level4 unnumbered">
 <h4>Add more data and a dual vertical axis</h4>
 <p>Another common way to mislead is to add more data, such as a second data series that corresponds to a second vertical axis on the right side of a line chart. While it’s technically possible to construct a dual-axis chart, we strongly advise against them because they can easily be manipulated to mislead readers. Let’s illustrate how with an example that combines two prior datasets—global temperature change and US Gross Domestic Product—in one dual-axis chart. In the Google Sheet, go to the <em>temp+GDP</em> sheet, where you will see temperature change plus a new column: US Gross Domestic Product (GDP) in billions of dollars from 1929 to 2019, downloaded from the <a href="https://fred.stlouisfed.org/series/GDPA">US Federal Reserve</a>. To simplify this example, we deleted pre-1929 temperature data to match it up more neatly with available GDP data.</p>
 <ol style="list-style-type: decimal">
@@ -482,12 +483,12 @@ Figure 15.10: Connected scatter chart of relationship between US real GDP and gl
 <div class="footnotes">
 <hr />
 <ol start="39">
-<li id="fn39"><p>The tutorial on misleading climate change data was inspired by a high school classroom activity created by the NASA Jet Propulsion Laboratory (JPL), as well as Alberto Cairo’s analysis of charts by climate change deniers. <span class="citation">NASA JPL</span>; <span class="citation">Cairo, <em>How Charts Lie</em>, 2019</span>, pp. 65-67, 135-141.<a href="how-to-lie-with-charts.html#fnref39" class="footnote-back">↩︎</a></p></li>
-<li id="fn40"><p><span class="citation">Cairo</span>, p. 61.<a href="how-to-lie-with-charts.html#fnref40" class="footnote-back">↩︎</a></p></li>
-<li id="fn41"><p><span class="citation">Cairo</span>, p. 69.<a href="how-to-lie-with-charts.html#fnref41" class="footnote-back">↩︎</a></p></li>
-<li id="fn42"><p><span class="citation">Cairo</span>, p. 70.<a href="how-to-lie-with-charts.html#fnref42" class="footnote-back">↩︎</a></p></li>
-<li id="fn43"><p><span class="citation">Robert Kosara, “Aspect Ratio and Banking to 45 Degrees” (Eagereyes, June 3, 2013), <a href="https://eagereyes.org/basics/banking-45-degrees" role="doc-biblioref">https://eagereyes.org/basics/banking-45-degrees</a></span><a href="how-to-lie-with-charts.html#fnref43" class="footnote-back">↩︎</a></p></li>
-<li id="fn44"><p><span class="citation">Cairo, <em>How Charts Lie</em>, 2019</span>, p. 58.<a href="how-to-lie-with-charts.html#fnref44" class="footnote-back">↩︎</a></p></li>
+<li id="fn39"><p>The tutorial on misleading climate change data was inspired by a high school classroom activity created by the NASA Jet Propulsion Laboratory (JPL), as well as Alberto Cairo’s analysis of charts by climate change deniers. <span class="citation">NASA JPL, <span>“Educator <span>Guide</span>”</span></span>; <span class="citation">Cairo, <em>How <span>Charts Lie</span></em></span>, pp. 65-67, 135-141.<a href="how-to-lie-with-charts.html#fnref39" class="footnote-back">↩︎</a></p></li>
+<li id="fn40"><p><span class="citation">Cairo, <em>How <span>Charts Lie</span></em></span>, p. 61.<a href="how-to-lie-with-charts.html#fnref40" class="footnote-back">↩︎</a></p></li>
+<li id="fn41"><p><span class="citation">Cairo, </span>, p. 69.<a href="how-to-lie-with-charts.html#fnref41" class="footnote-back">↩︎</a></p></li>
+<li id="fn42"><p><span class="citation">Cairo, </span>, p. 70.<a href="how-to-lie-with-charts.html#fnref42" class="footnote-back">↩︎</a></p></li>
+<li id="fn43"><p><span class="citation">Robert Kosara, <span>“Aspect <span>Ratio</span> and <span>Banking</span> to 45 <span>Degrees</span>”</span> (<span>Eagereyes</span>, June 3, 2013), <a href="https://eagereyes.org/basics/banking-45-degrees" role="doc-biblioref">https://eagereyes.org/basics/banking-45-degrees</a>.</span><a href="how-to-lie-with-charts.html#fnref43" class="footnote-back">↩︎</a></p></li>
+<li id="fn44"><p><span class="citation">Cairo, <em>How <span>Charts Lie</span></em></span>, p. 58.<a href="how-to-lie-with-charts.html#fnref44" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

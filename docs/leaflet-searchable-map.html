@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2021-02-08" />
+<meta name="date" content="2021-02-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -52,7 +52,6 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -68,6 +67,7 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -319,12 +319,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="D" data-path="bookdown.html"><a href="bookdown.html"><i class="fa fa-check"></i><b>D</b> Publishing with Bookdown</a>
 <ul>
-<li class="chapter" data-level="" data-path="collaborative-writing-on-github.html"><a href="collaborative-writing-on-github.html"><i class="fa fa-check"></i>Collaborative Writing on GitHub</a></li>
+<li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
+<li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
 <li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
-<li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images</a></li>
-<li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables</a></li>
-<li class="chapter" data-level="" data-path="notes.html"><a href="notes.html"><i class="fa fa-check"></i>Notes and Bibliography</a></li>
-<li class="chapter" data-level="" data-path="modify-markdown.html"><a href="modify-markdown.html"><i class="fa fa-check"></i>Manually Modify Markdown Output</a></li>
+<li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
+<li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
+<li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
+<li class="chapter" data-level="" data-path="alternative.html"><a href="alternative.html"><i class="fa fa-check"></i>Alternative Book Authoring-Publishing Tools</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -349,7 +350,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="leaflet-searchable-map" class="section level2 unnumbered" number="">
+<div id="leaflet-searchable-map" class="section level2 unnumbered">
 <h2>Leaflet Searchable Point Map</h2>
 <p>A searchable point map works best for showing multiple locations, where users can search by name or proximity to a location, or filter by category, with an optional list view. Figure <a href="leaflet-searchable-map.html#fig:searchable-map">13.39</a> shows a powerful Leaflet template of a searchable
 and filterable point map, which draws from a CSV data file,
@@ -369,11 +370,11 @@ address search.</p>
 <p>To begin using the template for your own project, visit the <a href="https://github.com/HandsOnDataViz/searchable-map-template-csv">template’s GitHub page</a>,
 and fork it so that you get your own copy (see <a href="github.html">Edit and Host Code with GitHub</a>
 chapter to remind yourself about forks).</p>
-<div id="step-1-prepare-your-data" class="section level3 unnumbered" number="">
+<div id="step-1-prepare-your-data" class="section level3 unnumbered">
 <h3>Step 1: Prepare your data</h3>
 <p>This template will work with data in <a href="csv.html">CSV</a> and <a href="geojson.html">GeoJSON</a> formats. If you have an Excel file, save it in CSV format with any spreadsheet tool. The CSV file must have a latitude column and longitude column and all rows must be geocoded. If you only have street-address or location data, learn how to <a href="geocode.html">geocode</a> it in chapter 3.</p>
 </div>
-<div id="step-2-download-and-edit-this-template" class="section level3 unnumbered" number="">
+<div id="step-2-download-and-edit-this-template" class="section level3 unnumbered">
 <h3>Step 2: Download and edit this template</h3>
 <ol style="list-style-type: decimal">
 <li>Download or clone this project and fire up your text editor of choice. Open up <code>/js/map.js</code> and set your map options in the <code>SearchableMapLib.initialize</code> function:</li>
@@ -399,7 +400,7 @@ chapter to remind yourself about forks).</p>
 <li><code>/js/searchable_map_lib.js</code> - logic for custom filters starts around line 265</li>
 </ul>
 </div>
-<div id="step-3-publish-your-map" class="section level3 unnumbered" number="">
+<div id="step-3-publish-your-map" class="section level3 unnumbered">
 <h3>Step 3: Publish your map</h3>
 <ol style="list-style-type: decimal">
 <li>Before you publish, you’ll need to get a <a href="https://developers.google.com/maps/documentation/javascript/get-api-key">free Google Maps API key</a>, which is similar but different from the <a href="google-sheets-api-key.html">Get Your Google Sheets API Key section in this chapter</a>. Replace the Google Maps API key on this line of <code>index.html</code> with yours: <code>&lt;script type="text/javascript" src="https://maps.google.com/maps/api/js?libraries=places&amp;key=[YOUR KEY HERE]"&gt;&lt;/script&gt;</code></li>

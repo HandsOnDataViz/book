@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2021-02-08" />
+<meta name="date" content="2021-02-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -52,7 +52,6 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -68,6 +67,7 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -319,12 +319,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="D" data-path="bookdown.html"><a href="bookdown.html"><i class="fa fa-check"></i><b>D</b> Publishing with Bookdown</a>
 <ul>
-<li class="chapter" data-level="" data-path="collaborative-writing-on-github.html"><a href="collaborative-writing-on-github.html"><i class="fa fa-check"></i>Collaborative Writing on GitHub</a></li>
+<li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
+<li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
 <li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
-<li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images</a></li>
-<li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables</a></li>
-<li class="chapter" data-level="" data-path="notes.html"><a href="notes.html"><i class="fa fa-check"></i>Notes and Bibliography</a></li>
-<li class="chapter" data-level="" data-path="modify-markdown.html"><a href="modify-markdown.html"><i class="fa fa-check"></i>Manually Modify Markdown Output</a></li>
+<li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
+<li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
+<li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
+<li class="chapter" data-level="" data-path="alternative.html"><a href="alternative.html"><i class="fa fa-check"></i>Alternative Book Authoring-Publishing Tools</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -349,7 +350,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="design-choropleth" class="section level2 unnumbered" number="">
+<div id="design-choropleth" class="section level2 unnumbered">
 <h2>Design Choropleth Colors &amp; Intervals</h2>
 <p>This section takes a deeper dive into map design principles for choropleth maps. Your choices about how to represent data with colors dramatically shapes their appearance, so it’s very important to learn key concepts to ensure that your maps tell true and meaningful stories. Good choropleth maps make true and insightful geographic patterns clearly visible to readers, whether they are printed in black-and-white on paper or displayed in color on a computer screen. Furthermore, the best choropleth maps are designed to be interpreted correctly by people with colorblindness. For an excellent overview of visualization colors in general, see Lisa Charlotte Rost’s “<a href="https://blog.datawrapper.de/colorguide/">Your Friendly Guide to Colors in Data Visualization</a>” and “<a href="https://blog.datawrapper.de/beautifulcolors/index.html">How to Pick More Beautiful Colors for Your Data Visualizations</a>,” both on the Datawrapper blog.<a href="#fn30" class="footnote-ref" id="fnref30"><sup>30</sup></a></p>
 <p>The best way to illustrate how color choices affect choropleth map design is with a wonderful online design assistant called <a href="https://colorbrewer2.org/">ColorBrewer</a>, created by Cynthia Brewer and Mark Harrower.<a href="#fn31" class="footnote-ref" id="fnref31"><sup>31</sup></a> Unlike other tools in this book, you do not upload data directly into ColorBrewer to generate your visualization. Instead, you select the type of data you wish to display in your choropleth map, and ColorBrewer will assist you by recommending color palettes that work best with your data story. Then you can export those color codes into your preferred choropleth mapping tool, as shown in the <a href="choropleth-datawrapper.html">Datawrapper</a> and <a href="map-tableau.html">Tableau Public</a> tutorials below. See the ColorBrewer interface in Figure <a href="design-choropleth.html#fig:map-colorbrewer">8.5</a>.</p>
@@ -362,7 +363,7 @@ Figure 8.5: The ColorBrewer design assistant interface: data classes, type of co
 </div>
 <p>In this section, we’ll focus on two important decisions that ColorBrewer can assist you with when designing choropleth maps: choosing the type of color palette (sequential, divergent, or qualitative) and the intervals to group together similar-colored data points.</p>
 <p>When you open <a href="https://colorbrewer2.org/">ColorBrewer</a>, the top row asks you to select the number of data classes (also known as intervals or steps) in the color range of your choropleth map. ColorBrewer can recommend distinct colors for up to twelve data classes, depending on the type of scheme you select. But for now, use the default setting of 3, and we’ll return to this topic later when we discuss intervals in more detail further below.</p>
-<div id="choose-choropleth-palettes-to-match-your-data" class="section level3 unnumbered" number="">
+<div id="choose-choropleth-palettes-to-match-your-data" class="section level3 unnumbered">
 <h3>Choose Choropleth Palettes to Match Your Data</h3>
 <p>One of the most important decisions you’ll make when designing a choropleth map is to select the type of palette. You’re not simply choosing a color, but the <em>arrangement of colors</em> to help readers correctly interpret your information. The rule is straightforward: choose an appropriate color palette that matches your data format, and the story you wish to tell.</p>
 <p>ColorBrewer groups palettes into three types—sequential, diverging, and qualitative—as shown in Figure <a href="design-choropleth.html#fig:map-principles-color-schemes">8.6</a>.</p>
@@ -393,7 +394,7 @@ Figure 8.8: Click open the <em>Export</em> tab to display your color palette cod
 </p>
 </div>
 </div>
-<div id="choose-color-intervals-to-group-choropleth-map-data" class="section level3 unnumbered" number="">
+<div id="choose-color-intervals-to-group-choropleth-map-data" class="section level3 unnumbered">
 <h3>Choose Color Intervals to Group Choropleth Map Data</h3>
 <p>Another important design choice is color intervals, which determine how you group and display data on your choropleth map. This powerful set of decisions will dramatically shape how your map appears in readers’ eyes, and the message conveyed by your data story. You will need to consider several options in this multi-step decision-making process, and although there are few uniform design rules, we will offer guidance and recommendations. Since options for selecting intervals vary across different mapping tools, we will explain broad concepts in this section, with occasional screenshots from Datawrapper and Tableau Public, but will save the details for those specific tutorials later in the chapter.</p>
 <p>Some mapping tools allow you to choose between two different <em>types of color intervals</em> to show movement up or down a data scale, as shown in Figure <a href="design-choropleth.html#fig:intervals-type-combined">8.9</a>. <em>Steps</em> are clearly-marked color dividers, like a staircase, while <em>continuous</em> is a gradual change in color, like a ramp. Both go upward, but take you there in different ways.</p>
@@ -450,8 +451,8 @@ Figure 8.13: Use the full color range to show all of the differences in the data
 <div class="footnotes">
 <hr />
 <ol start="30">
-<li id="fn30"><p><span class="citation">Rost, “Your Friendly Guide to Colors in Data Visualisation.”</span>; <span class="citation">Rost, “How to Pick More Beautiful Colors for Your Data Visualizations.”</span><a href="design-choropleth.html#fnref30" class="footnote-back">↩︎</a></p></li>
-<li id="fn31"><p>See also <span class="citation">Cynthia A. Brewer, <em>Designing Better Maps: A Guide for GIS Users</em> (Esri Press, 2016), <a href="https://www.google.com/books/edition/Designing_Better_Maps/gFErrgEACAAJ" role="doc-biblioref">https://www.google.com/books/edition/Designing_Better_Maps/gFErrgEACAAJ</a></span><a href="design-choropleth.html#fnref31" class="footnote-back">↩︎</a></p></li>
+<li id="fn30"><p><span class="citation">Rost, <span>“Your <span>Friendly Guide</span> to <span>Colors</span> in <span>Data Visualisation</span>”</span></span>; <span class="citation">Rost, <span>“How to <span>Pick More Beautiful Colors</span> for <span>Your Data Visualizations</span>.”</span></span><a href="design-choropleth.html#fnref30" class="footnote-back">↩︎</a></p></li>
+<li id="fn31"><p>See also <span class="citation">Cynthia A. Brewer, <em>Designing <span>Better Maps</span>: <span>A Guide</span> for <span>GIS Users</span></em> (<span>Esri Press</span>, 2016), <a href="https://www.google.com/books/edition/Designing_Better_Maps/gFErrgEACAAJ" role="doc-biblioref">https://www.google.com/books/edition/Designing_Better_Maps/gFErrgEACAAJ</a>.</span><a href="design-choropleth.html#fnref31" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

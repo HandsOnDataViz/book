@@ -1,14 +1,14 @@
-## Alternative Book Authoring-Publishing Tools {- #alternative}
+## Alternative Book Publishing Tools {- #alternative}
 
-Before leaping into [Bookdown](https://bookdown.org) or any other tools for authoring and/or publishing book-length works, clarify your goals and consider the costs and benefits of different approaches. Here's a short list of alternatives we considered, and our notes on how they addressed our specific goals. Your experience may differ from ours, and tools are continually evolving, so we encourage feedback [on Twitter](https://twitter.com/doughertyjack).
+We gained some experience with book publishing tools while writing *Hands-On Data Visualization*. During its early years, we migrated the book across different platforms, using different titles and domain names, with shapshots and code commits stored on the Internet Archive and on GitHub:
 
- See how *Hands-On Data Visualization* migrated across different platforms, domain names, and titles during its early years, with shapshots stored on the Internet Archive:
+- [2014 *Data Visualization: book-in-progress* on self-hosted Pressbooks](https://web.archive.org/web/20140418093523/http://epress.trincoll.edu/dataviz)
+- [2015 *Data Visualization for All* moved to GitBook](https://web.archive.org/web/20150608174937/http://www.datavizbook.org/)
+- [2016 *Data Visualization for All* on GitBook, moved to different domain](https://web.archive.org/web/20160331084618/http://www.datavizforall.org/)
+- [2019 *Data Visualization for All* moved to Bookdown on GitHub](https://github.com/HandsOnDataViz/book/commit/46cedda17941d42020b4e0ff3bc6336bc9e3da92)
+- [2020 *Hands-On Data Visualization*, a new title requested by the publisher, moved to our new domain name](https://web.archive.org/web/20200605005118/https://handsondataviz.org/)
 
-- [2014 *Data Visualization: book-in-progress* on Pressbooks](https://web.archive.org/web/20140418093523/http://epress.trincoll.edu/dataviz)
-- [2015 *Data Visualization for All* on GitBook](https://web.archive.org/web/20150608174937/http://www.datavizbook.org/)
-- [2016 *Data Visualization for All* on GitBook, with a different domain name](https://web.archive.org/web/20160331084618/http://www.datavizforall.org/)
-- somewhere around 2018? we shifted GitBook to Bookdown... TODO
-- [2020 *Hands-On Data Visualization*, a new title requested by the publisher, built with Bookdown](https://web.archive.org/web/20200605005118/https://handsondataviz.org/)
+Before leaping into [Bookdown](https://bookdown.org) or any other tools for authoring and/or publishing book-length works, clarify your goals and consider the costs and benefits of different approaches. Here's a short list of alternatives we tested or considered, and our notes on how they addressed our specific goals. Your experience may differ, and tools are continually evolving, so we welcome [feedback to the authors](authors.html).
 
 - Conventional word processors: Most authors work primarily with text, and are satisfied with a traditional book-publishing workflow that begins with composing in Microsoft Word or LibreOffice, then handing it off to a publisher for review, copyediting, layout, and distribution. But our book is designed to blend text and interactive digital media, and to publish book products in multiple formats: HTML, PDF, DOCX, and Markdown. Traditional word processors do not efficiently achieve this goal.
 
@@ -27,3 +27,5 @@ Before leaping into [Bookdown](https://bookdown.org) or any other tools for auth
 - [Manifold](https://manifoldapp.org) is an open-source scholarly publishing platform created through a collaboration by the University of Minnesota Press, the Graduate Center at the City University of New York, and Cast Iron Coding, with funding from the Mellon Foundation. The platform was designed primarily for authors to integrate digital media into their texts, and also for readers to view and annotate drafts and finished books online. It appears that print book production is handled separately. Since installing Manifold on a server requires developer skills, most authors will need to work directly with a participating publisher to access the tool. The Manifold platform can ingest texts written in Markdown, Microsoft Word, and other formats.
 
 - [Fulcrum](https://www.fulcrum.org/) is an open-source scholarly publishing platform created University of Michigan Library and Press in collaboration with several partners, with initial funding from the Mellon Foundation. The platform was designed primarily for authors to integrate digital media into book-length works, which readers can view online or in e-book formats or print formats. Since the Fulcrum platform is hosted on the publisher's server, authors will need to work directly with a participating publisher to access the tool.
+
+Once again, your experience may differ from ours, and tools are continually evolving, so we welcome [feedback to the authors](authors.html).

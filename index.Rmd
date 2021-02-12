@@ -139,7 +139,9 @@ The chapters in this book build up toward our central goal: telling true and mea
 
 - [Chapter 16: Tell and Show Your Data Story](story.html) brings together all of the prior chapters to emphasize how data visualization is not simply about numbers, but truthful narratives that persuade readers how and why your interpretation matters.
 
-- [Appendix: How to Fix Common Problems](fix.html) serves as a guide for when your visualization tool or code does not work, which is also a great way to learn how it works.
+- [Appendix A: How to Fix Common Problems](fix.html) serves as a guide for when your visualization tool or code does not work, which is also a great way to learn how it works.
+
+- [Appendix B: Publishing with Bookdown](bookdown.html) describes our workflow for creating this book using Bookdown, GitHub, and Zotero.
 
 ## Authors & Acknowledgements {- #authors}
 

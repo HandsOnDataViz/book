@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2021-02-10" />
+<meta name="date" content="2021-02-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -305,19 +305,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="A.6" data-path="fix-iframe.html"><a href="fix-iframe.html"><i class="fa fa-check"></i><b>A.6</b> Common iframe errors</a></li>
 <li class="chapter" data-level="A.7" data-path="fix-code.html"><a href="fix-code.html"><i class="fa fa-check"></i><b>A.7</b> Fix your code on GitHub</a></li>
 </ul></li>
-<li class="chapter" data-level="B" data-path="ct.html"><a href="ct.html"><i class="fa fa-check"></i><b>B</b> Find Connecticut Data</a></li>
-<li class="chapter" data-level="C" data-path="peer.html"><a href="peer.html"><i class="fa fa-check"></i><b>C</b> Peer Review Samples</a>
-<ul>
-<li class="chapter" data-level="" data-path="peer-2-chart-1.html"><a href="peer-2-chart-1.html"><i class="fa fa-check"></i>Section 2 Chart 1 Peer Review Sample</a></li>
-<li class="chapter" data-level="" data-path="peer-2-chart-1-notes.html"><a href="peer-2-chart-1-notes.html"><i class="fa fa-check"></i>Section 2 Chart 1 Peer Review Sample with Notes</a></li>
-<li class="chapter" data-level="" data-path="peer-2-chart-2.html"><a href="peer-2-chart-2.html"><i class="fa fa-check"></i>Section 2 Chart 2 Peer Review Sample</a></li>
-<li class="chapter" data-level="" data-path="peer-2-chart-2-notes.html"><a href="peer-2-chart-2-notes.html"><i class="fa fa-check"></i>Section 2 Chart 2 Peer Review Sample with Notes</a></li>
-<li class="chapter" data-level="" data-path="peer-3-sample-1.html"><a href="peer-3-sample-1.html"><i class="fa fa-check"></i>Section 3 Peer Review Sample 1</a></li>
-<li class="chapter" data-level="" data-path="peer-3-sample-1-notes.html"><a href="peer-3-sample-1-notes.html"><i class="fa fa-check"></i>Section 3 Peer Review Sample 1 with Notes</a></li>
-<li class="chapter" data-level="" data-path="peer-3-sample-2.html"><a href="peer-3-sample-2.html"><i class="fa fa-check"></i>Section 3 Peer Review Sample 2</a></li>
-<li class="chapter" data-level="" data-path="peer-3-sample-2-notes.html"><a href="peer-3-sample-2-notes.html"><i class="fa fa-check"></i>Section 3 Peer Review Sample 2 with Notes</a></li>
-</ul></li>
-<li class="chapter" data-level="D" data-path="bookdown.html"><a href="bookdown.html"><i class="fa fa-check"></i><b>D</b> Publishing with Bookdown</a>
+<li class="chapter" data-level="B" data-path="bookdown.html"><a href="bookdown.html"><i class="fa fa-check"></i><b>B</b> Publishing with Bookdown</a>
 <ul>
 <li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
 <li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
@@ -325,7 +313,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
 <li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
 <li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
-<li class="chapter" data-level="" data-path="alternative.html"><a href="alternative.html"><i class="fa fa-check"></i>Alternative Book Authoring-Publishing Tools</a></li>
+<li class="chapter" data-level="" data-path="alternative.html"><a href="alternative.html"><i class="fa fa-check"></i>Alternative Book Publishing Tools</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -359,7 +347,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><em>How exactly was the data collected?</em></p>
 <p>For example, was <em>Elevation</em> for a specific location measured by a GPS unit on the ground? Or was the location geocoded on a digital map that contains elevation data? In most cases the two methods will yield different results, and whether that matters depends on the degree of precision required in your work. Similarly, when the US Census reports data from its annual American Community Survey (ACS) estimates for <em>Income</em> and other variables, these are drawn from small samples of respondents for lower levels of geography, such as a census tract with roughly 4,000 residents, which can generate very high margins of error. For example, it’s <a href="data/ct-tract-income-moe-acs2018.xlsx">not uncommon to see ACS estimates</a> for a census tract with a mean family income of $50,000—but also with a $25,000 margin of error—which tells you that the actual value is somewhere between $25,000 and $75,000. As a result, some ACS estimates for small geographic units are effectively meaningless. Check how data was recorded, and note any reported margins of error, in the source notes. See also <a href="chart.html">how to create error bars in Chapter 7: Chart Your Data</a>.</p>
 <p><em>To what extent is the data socially constructed?</em></p>
-<p>What do the data labels reveal or hide about how people defined categories in different social and political contexts, which differ across place and time? For example, we designed an <a href="https://ontheline.github.io/otl-racial-change/index-caption.html">interactive historical map of racial change</a> for Hartford County, Connecticut using over 100 years of US Census data. But Census categories for race and ethnicity shifted dramatically during those decades because people in power redefined these contested terms and reassigned people to different groups.<a href="#fn15" class="footnote-ref" id="fnref15"><sup>15</sup></a> Into the 1930s, US Census officials separated “Native White” and “Foreign-born White” in reports, then combined and generally reported these as “White” in later decades. Also, Census officials classified “Mexican” as “Other races” in 1930, then moved this group back to “White” in 1940, then reported “Puerto Rican or Spanish surname” data in 1960, followed by “Hispanic or Latino” as an ethnic category distinct from race in later decades. Finally, the Census replaced “Negro” with “Black” in 1980, and finally dropped mutually-exclusive racial categories in 2000, so that people could choose more than one. As a result, these historical changes in the social construction of race and ethnicity influenced how we designed our map to display “White” or “White alone” over time, with additional census categories relevant to each decade shown in the pop-up window, with our explanation about these decisions in the caption and source notes. There is no single definitive way to visualize socially-constructed data when definitions change across decades. But when you make choices about data, describe your thought process in the notes or companion text.</p>
+<p>What do the data labels reveal or hide about how people defined categories in different social and political contexts, which differ across place and time? For example, we designed an <a href="https://ontheline.github.io/otl-racial-change/index-caption.html">interactive historical map of racial change</a> for Hartford County, Connecticut using over 100 years of US Census data. But Census categories for race and ethnicity shifted dramatically during those decades because people in power redefined these contested terms and reassigned people to different groups.<a href="#fn18" class="footnote-ref" id="fnref18"><sup>18</sup></a> Into the 1930s, US Census officials separated “Native White” and “Foreign-born White” in reports, then combined and generally reported these as “White” in later decades. Also, Census officials classified “Mexican” as “Other races” in 1930, then moved this group back to “White” in 1940, then reported “Puerto Rican or Spanish surname” data in 1960, followed by “Hispanic or Latino” as an ethnic category distinct from race in later decades. Finally, the Census replaced “Negro” with “Black” in 1980, and finally dropped mutually-exclusive racial categories in 2000, so that people could choose more than one. As a result, these historical changes in the social construction of race and ethnicity influenced how we designed our map to display “White” or “White alone” over time, with additional census categories relevant to each decade shown in the pop-up window, with our explanation about these decisions in the caption and source notes. There is no single definitive way to visualize socially-constructed data when definitions change across decades. But when you make choices about data, describe your thought process in the notes or companion text.</p>
 <p><em>What aspects of the data remain unclear or uncertain?</em></p>
 <p>Here’s a paradox about working with data: some of these deep questions may not be fully answerable if the data was collected by someone other than yourself, especially if that person came from a distant place, or time period, or a different position in a social hierarchy. But even if you cannot fully answer these questions, don’t let that stop you from asking good questions about the origins, context, and underlying meaning of your data. Our job is to tell true and meaningful stories with data, but that process begins by clarifying what we know—and what we don’t know—about the information we’ve gathered. Sometimes we can visually depict its limitations through error bars, as you’ll learn in the <a href="chart-design.html">chart design in Chapter 7</a>, and sometimes we need to <a href="sources-uncertainty.html">acknowledge uncertainty in our data stories, as we’ll discuss in Chapter 16</a>.</p>
 <div id="summary4" class="section level3 unnumbered">
@@ -371,8 +359,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <!-- </div> -->
 <div class="footnotes">
 <hr />
-<ol start="15">
-<li id="fn15"><p>For a deeper analysis, see <span class="citation">Margo J. Anderson, <em>The <span>American Census</span>: <span>A Social History</span>, <span>Second Edition</span></em> (<span>Yale University Press</span>, 2015), <a href="https://www.google.com/books/edition/The_American_Census/NzNOCgAAQBAJ" role="doc-biblioref">https://www.google.com/books/edition/The_American_Census/NzNOCgAAQBAJ</a>.</span><a href="question.html#fnref15" class="footnote-back">↩︎</a></p></li>
+<ol start="18">
+<li id="fn18"><p>For a deeper analysis, see <span class="citation">Margo J. Anderson, <em>The <span>American Census</span>: <span>A Social History</span>, <span>Second Edition</span></em> (<span>Yale University Press</span>, 2015), <a href="https://www.google.com/books/edition/The_American_Census/NzNOCgAAQBAJ" role="doc-biblioref">https://www.google.com/books/edition/The_American_Census/NzNOCgAAQBAJ</a>.</span><a href="question.html#fnref18" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

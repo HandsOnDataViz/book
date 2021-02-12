@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2021-02-10" />
+<meta name="date" content="2021-02-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -305,19 +305,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="A.6" data-path="fix-iframe.html"><a href="fix-iframe.html"><i class="fa fa-check"></i><b>A.6</b> Common iframe errors</a></li>
 <li class="chapter" data-level="A.7" data-path="fix-code.html"><a href="fix-code.html"><i class="fa fa-check"></i><b>A.7</b> Fix your code on GitHub</a></li>
 </ul></li>
-<li class="chapter" data-level="B" data-path="ct.html"><a href="ct.html"><i class="fa fa-check"></i><b>B</b> Find Connecticut Data</a></li>
-<li class="chapter" data-level="C" data-path="peer.html"><a href="peer.html"><i class="fa fa-check"></i><b>C</b> Peer Review Samples</a>
-<ul>
-<li class="chapter" data-level="" data-path="peer-2-chart-1.html"><a href="peer-2-chart-1.html"><i class="fa fa-check"></i>Section 2 Chart 1 Peer Review Sample</a></li>
-<li class="chapter" data-level="" data-path="peer-2-chart-1-notes.html"><a href="peer-2-chart-1-notes.html"><i class="fa fa-check"></i>Section 2 Chart 1 Peer Review Sample with Notes</a></li>
-<li class="chapter" data-level="" data-path="peer-2-chart-2.html"><a href="peer-2-chart-2.html"><i class="fa fa-check"></i>Section 2 Chart 2 Peer Review Sample</a></li>
-<li class="chapter" data-level="" data-path="peer-2-chart-2-notes.html"><a href="peer-2-chart-2-notes.html"><i class="fa fa-check"></i>Section 2 Chart 2 Peer Review Sample with Notes</a></li>
-<li class="chapter" data-level="" data-path="peer-3-sample-1.html"><a href="peer-3-sample-1.html"><i class="fa fa-check"></i>Section 3 Peer Review Sample 1</a></li>
-<li class="chapter" data-level="" data-path="peer-3-sample-1-notes.html"><a href="peer-3-sample-1-notes.html"><i class="fa fa-check"></i>Section 3 Peer Review Sample 1 with Notes</a></li>
-<li class="chapter" data-level="" data-path="peer-3-sample-2.html"><a href="peer-3-sample-2.html"><i class="fa fa-check"></i>Section 3 Peer Review Sample 2</a></li>
-<li class="chapter" data-level="" data-path="peer-3-sample-2-notes.html"><a href="peer-3-sample-2-notes.html"><i class="fa fa-check"></i>Section 3 Peer Review Sample 2 with Notes</a></li>
-</ul></li>
-<li class="chapter" data-level="D" data-path="bookdown.html"><a href="bookdown.html"><i class="fa fa-check"></i><b>D</b> Publishing with Bookdown</a>
+<li class="chapter" data-level="B" data-path="bookdown.html"><a href="bookdown.html"><i class="fa fa-check"></i><b>B</b> Publishing with Bookdown</a>
 <ul>
 <li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
 <li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
@@ -325,7 +313,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
 <li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
 <li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
-<li class="chapter" data-level="" data-path="alternative.html"><a href="alternative.html"><i class="fa fa-check"></i>Alternative Book Authoring-Publishing Tools</a></li>
+<li class="chapter" data-level="" data-path="alternative.html"><a href="alternative.html"><i class="fa fa-check"></i>Alternative Book Publishing Tools</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -362,7 +350,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Dates similar to <code>43891</code>: When you type <code>March 1</code> during the year 2020 into Microsoft Excel, it automatically displays as <code>1-Mar</code>, but is saved using Excel’s internal date system as <code>43891</code>. If someone converts this column from date to text format, you’ll see Excel’s 5-digit number, not the dates you’re expecting.</li>
 </ul>
 <p>Other ways to review the quality of data entry in any spreadsheet column are to <a href="sort.html">sort</a> or <a href="pivot.html">pivot</a> the data as described in Chapter 3, or to create a <a href="histogram-google.html">histogram</a> as you will learn in Chapter 7. These methods enable you to quickly inspect the range of values that appear in a column and to help you identify bad data.</p>
-<p>Also beware of bad data due to poor <a href="geocode.html">geocoding</a>, when locations have been translated into latitude and longitude coordinates that cannot be trusted. For example, visualization expert Alberto Cairo describes how data <em>appeared</em> to show that Kansas residents viewed more online pornography than other US states. But on closer examination, the internet protocol (IP) addresses of many viewers could not be accurately geocoded, perhaps because they sought to maintain their privacy by using virtual private networks (VPN) to disguise their location. As a result, the geocoding tool automatically placed large numbers of users in the geographic center of the contiguous US, which happens to be in Kansas.<a href="#fn14" class="footnote-ref" id="fnref14"><sup>14</sup></a> Similarly, when global data is poorly geocoded, the population booms on imaginary “<a href="https://en.wikipedia.org/wiki/Null_Island">Null Island</a>,” which is actually a weather buoy located in the Atlantic Ocean at the intersection of the prime meridian and the equator, where the latitude and longitude coordinates are 0,0. For these reasons, carefully inspect geocoded data for errors caused by tools that mistakenly place results in the exact center of your geography, as shown in Figure <a href="bad-data.html#fig:bad-geocoding">4.4</a>.</p>
+<p>Also beware of bad data due to poor <a href="geocode.html">geocoding</a>, when locations have been translated into latitude and longitude coordinates that cannot be trusted. For example, visualization expert Alberto Cairo describes how data <em>appeared</em> to show that Kansas residents viewed more online pornography than other US states. But on closer examination, the internet protocol (IP) addresses of many viewers could not be accurately geocoded, perhaps because they sought to maintain their privacy by using virtual private networks (VPN) to disguise their location. As a result, the geocoding tool automatically placed large numbers of users in the geographic center of the contiguous US, which happens to be in Kansas.<a href="#fn17" class="footnote-ref" id="fnref17"><sup>17</sup></a> Similarly, when global data is poorly geocoded, the population booms on imaginary “<a href="https://en.wikipedia.org/wiki/Null_Island">Null Island</a>,” which is actually a weather buoy located in the Atlantic Ocean at the intersection of the prime meridian and the equator, where the latitude and longitude coordinates are 0,0. For these reasons, carefully inspect geocoded data for errors caused by tools that mistakenly place results in the exact center of your geography, as shown in Figure <a href="bad-data.html#fig:bad-geocoding">4.4</a>.</p>
 
 <div class="figure"><span id="fig:bad-geocoding"></span>
 <img src="images/04-find/bad-geocoding.png" alt="Beware of bad geocoding that automatically places data in the geographic center of the contiguous United States (in northern Kansas), or on imaginary Null Island in the Atlantic Ocean (the location of coordinates 0,0)." width="600" />
@@ -376,8 +364,8 @@ Figure 4.4: Beware of bad geocoding that automatically places data in the geogra
 </div>
 <div class="footnotes">
 <hr />
-<ol start="14">
-<li id="fn14"><p><span class="citation">Cairo, <em>How <span>Charts Lie</span></em></span>, pp. 99-102<a href="bad-data.html#fnref14" class="footnote-back">↩︎</a></p></li>
+<ol start="17">
+<li id="fn17"><p><span class="citation">Cairo, <em>How <span>Charts Lie</span></em></span>, pp. 99-102<a href="bad-data.html#fnref17" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

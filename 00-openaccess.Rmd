@@ -9,34 +9,19 @@ Second, the quality of our final product improved as a result of reader feedback
 
 Third, money was not our primary motivator. Both of us earn salaries through our regular employment: Jack as a college professor and Ilya as a civic technologist. Writing this book to teach readers about data visualization, and creating open-source code templates to enhance our tool options, aligns with expectations in our professions. Moreover, authors and other knowledge-creators also operate in a *reputation economy*, where readers' abilities to make informed judgments about the value of our work depends on whether or not they can easily access it.Openly sharing our book is more likely to fulfill this objective than hiding it behind a paywall.^[On reputation capital in academic life, see @doughertyConclusionsWhatWe2013]
 
-Finally, while we're not uninterested in money and its ability to fund more time for writing, our recent experience suggests that open-access publishing *might* contribute to book sales in some contexts. As we shared our draft chapters online and occasionally posted about them on social media, we developed an audience of interested readers.
+Finally, we're not uninterested in money and its ability to fund more time for writing. Our recent experience suggests that open-access publishing *might* contribute to book sales. By sharing our draft chapters online as we wrote and revised them, we developed an audience of interested readers. Our open-access web edition, with its clearly-labeled chapters, is easy to find in [a Google search](https://www.google.com/search?hl=en&as_q=hands+on+data+visualization).  Prior to signing our contract with the publisher, Google Analytics tells us that 41,000 users visited our book during the 2019 calendar year. We pitched our proposal to the publisher in early 2020 and began significant rewriting and revisions. 60,000 users visited our book during the 2020 calendar year. Occasionally we tweeted about our book-in-progress and thanked readers for feedback. Sometimes others posted about our book, such as [Alberto Cairo's widely-circulated tweet in December 2020](https://twitter.com/AlbertoCairo/status/1338134036758335495), which would not have happened if our book had not been open access.
 
+Clearly, our approach to open-access book publishing may not match your ideals or realities. Perhaps you rely on book sales as your sole source of income. Many authors and publishers still prefer to let readers preview only a chapter online in order to maximize revenue. Some authors will consider open-access publishing, but dare not share their drafts until the work is completed. Others take the opposite approach and widely circulate pieces of their early writing online in blog posts or social media, but do not share the comprehensive final work in the same manner. Still others have never considered any of these options, nor do they realize that the knowledge-production industry is slowly changing, and some book publishers are growing more comfortable with open-access agreements. While our approach may not suit your situation, we hope that our reasoning will nudge you to think differently about why and how we publish books.
 
- to educat---and writing a bookhow to visualize data is compatible with both of our professions. Money is not our primary motivation. Furthermore, as Jack has written elsewhere.... reputation economy
+### How to read the web edition {-}
+Reading the open-access edition of *Hands-On Data Visualization* in your web browser the ideal way to explore our interactive charts and maps. Most are embedded in the web pages as iframes using the same principles illustrated in [Chapter 10: Embed on the Web](embed.html). Also, the web edition enables readers to easily click on internal cross-references and follow our links to external sources.
 
-Third, while we're not motivated solely by book royalties, we're not ignorant of their influence in creating time for us to write more books. Based on positive past experiences with open-access publishing, we understand that this web edition is highly discoverable
-
-https://www.google.com/search?hl=en&as_q=hands+on+data+visualization
-
-Tweet by Alberto Cairo...
-
-
-Of course, our approach to book publishing may not match your ideals or realities. Most authors and publishers still prefer to let readers preview only a chapter or two on the public web, in order to maximize revenue from conventional book sales. Some authors will consider open-access publishing, but prefer to share their drafts only with a very small circle of friends and editors. Some take the opposite approach and widely circulate their early drafts online as individual blog posts, but do not share the final cohesive book in the same way. Still others have never considered any of these options, nor realize that some publishers are more amendable than others.
-
-
-Some authors prefer to circulate their draft chapters within a small circle, then openly publish the final edition. Other authors favor the opposite, by circulating drafts widely online, and then taking them down ()
-
-
-#### How to read {-}
-
-Reading this book on the web is the ideal way to explore our interactive charts and maps, and also to click on internal cross-references or external links to additional sources.
-
-In your web browser, also try these toolbar features near the top of the page:
+Try these toolbar features located near the top of your browser:
 
 - Menu
 - Search
 - Font to adjust text size and display
-- View source code on GitHub
+- View source code on GitHub (if available)
 - Download book files (if available)
 - Shortcuts (arrow keys to navigate; `s` to toggle sidebar; `f` to toggle search)
 - Social Media
@@ -58,14 +43,3 @@ Keep your place when reading online and moving between pages.
 Float your cursor over any section header to reveal a hashtag anchor symbol: `#`. Click the symbol to view the section link in your browser bar, and copy it to share with others.
 
 ![Screenshot: Share section links](images/0-preface/section-links.png)
-
-#### Copyright with Creative Commons {-}
-<div style="text-align:center">
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
-  <img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png" />
-</a></div>
-<div style="text-align:left">
-<strong>Hands-On Data Visualization</strong> is copyrighted
-by <a href="https://handsondataviz.org/authors">Jack Dougherty and Ilya Ilyankou</a>
-and distributed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.
-You may freely share this content for non-commercial purposes, with a source credit to <a href="http://HandsOnDataViz.org">http://HandsOnDataViz.org</a>.

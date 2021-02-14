@@ -79,7 +79,7 @@ This line appears in the HTML, Word, Markdown versions, and is commented-out in 
 5. Build different versions of the HTML and LaTeX/PDF books using different chapters by listing them in order in the `_bookdown.yml` file. In this way, we published all chapters/subchapters for the HTML version, but published only selected chapters for the PDF and full-length Markdown versions for O'Reilly, as shown below:
 
 ```
-# comment-out below when building HTML book, un-comment for PDF and full-length Markdown for ORM
+# comment-out below when building all chapters for HTML book, un-comment to skip chapters not listed below for PDF and full-length Markdown for ORM
 # rmd_files: [
 #   "index.Rmd",
 #   "01-introduction.Rmd",

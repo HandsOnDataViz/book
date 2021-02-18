@@ -18,12 +18,12 @@ Since large PNG images sometimes appear too large in the PDF edition, convert a 
 As a result, a simple image may have only one file in the the images folder, but large and complex images may consist of multiple files:
 
 ```
-images/07-chart/image.png
-images/07-chart/image-annotated.png
-images/07-chart/image-annotated.pdf
-images/07-chart/image-combined.psd
-images/07-chart/image-part1.png
-images/07-chart/image-part2.png
+images/chapter/image.png
+images/chapter/image-annotated.png
+images/chapter/image-annotated.pdf
+images/chapter/image-combined.psd
+images/chapter/image-part1.png
+images/chapter/image-part2.png
 
 ```
 
@@ -41,7 +41,7 @@ if(knitr::is_html_output(excludes="markdown")) knitr::include_url("http://pathna
 else knitr::include_graphics("pathname-to-static-version-keyword.png")
 ```
 
-The first line generates an auto-numbered and clickable figure cross-reference call-out. Auto-numbering appears in `Figure x.x` format in HTML and PDF, but `Figure x` format in MS Word and Markdown. (Word auto-number formatting can be changed with a reference.docx file.) This call-out is important because images in PDF output will "float" by design and may appear before or after the desired page.
+The first line generates an auto-numbered and clickable figure cross-reference call-out. Auto-numbering appears in `Figure x.x` format in HTML, PDF, and Word, but `Figure x` format in Markdown. (Word auto-number formatting can be changed with a reference.docx file.) This call-out is important because images in PDF output will "float" by design and may appear before or after the desired page.
 
 The second line contains the caption, with optional links in Markdown format. But do not insert endnotes with Zotero citation keys, since those will cause errors in the PDF edition. Insert detailed endnotes about sources for images in the body of the text, and use the caption for only a brief "Source: " mention.
 
@@ -49,8 +49,7 @@ The third block is the R code-chunk. (In practice, the code-chunk is set off fro
 
 The if statement for HTML output contains `(excludes="markdown")` because `markdown` is considered an HTML format, as described in the [R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/latex-html.html). Since the publisher's platform will accept a full-length Markdown version of the book, which displays static images rather than interactive visualizations, we need to generate the "markdown" file differently than the HTML web edition.
 
-
-Write R code-chunk labels that use the same keywords as the image file name, and avoid duplicate labels across the book:
+Write R code-chunk labels that use the same year and keywords as the image file name. Avoid duplicate labels across the book. Use only letters, numbers, and hyphens (not underscores):
 
 ```
 ref:keywords-with-hyphens

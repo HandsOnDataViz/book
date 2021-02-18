@@ -3,8 +3,7 @@ View the underlying source code to understand how this page was composed at: htt
 
 We built *Hands-On Data Visualization* based largely on the [O'Reilly Style Guide](http://oreillymedia.github.io/production-resources/styleguide/), and also to match our needs for composing in R-flavored Markdown (.Rmd) and generating multiple book products through Bookdown. While we drafted chapters, we wanted to produce an HTML edition for the web that would display our embedded iframes to online charts and maps. We also needed to produce a PDF or Word version that displayed only static images, for our developmental editor to markup and provide feedback. Finally, we needed to produce a full-length Markdown file (.md) of the entire book that would easily convert all of our text, captions, and pathnames to static images for O'Reilly's publishing platform. Some of the notes below are stylistic or technical reminders to ourselves to write consistently as we worked on 16 chapters and more than 400 images.
 
-
-In general, each chapter is a separate R-flavored Markdown (.Rmd) file. Each paragraphs begins on a separate line. O'Reilly style guide prefers *italics* rather than bold. Use single back tics to display a monospaced `code` word. Insert `TODO` to note items to finish or review with co-author or editor.
+In general, each chapter is a separate R-flavored Markdown (.Rmd) file. Each paragraph begins on a separate line. O'Reilly style guide prefers *italics* rather than bold. Use single back tics to display a monospaced `code` word. Insert `TODO` to note items to finish or review with co-author or editor.
 
 O'Reilly guidelines recommend making your writing as conversational as possible. Imagine you're speaking to someone one on one, not giving a formal lecture to a large group. Refer to the reader as "you" and to yourself as "I" for a single-author book, and refer to yourselves as "we" for a co-authored book. Use active voice, not passive voice.
 
@@ -76,29 +75,29 @@ This line appears in the HTML, Word, Markdown versions, and is commented-out in 
 
 4. Option to add headers, footers, preambles to the HTML or LaTeX versions.
 
-5. Build different versions of the HTML and LaTeX/PDF books using different chapters by listing them in order in the `_bookdown.yml` file. In this way, we published all chapters/subchapters for the HTML version, but published only selected chapters for the PDF and full-length Markdown versions for O'Reilly, as shown below:
+5. Option to build different versions of the HTML and LaTeX/PDF books using different chapters by listing them in order in the `_bookdown.yml` file. In this way, we published all chapters/subchapters for the HTML version, but published only selected chapters for the PDF and full-length Markdown versions for O'Reilly, as shown below:
 
 ```
 # comment-out below when building all chapters for HTML book, un-comment to skip chapters not listed below for PDF and full-length Markdown for ORM
 # rmd_files: [
 #   "index.Rmd",
-#   "01-introduction.Rmd",
-#   "02-choose.Rmd",
-#   "03-spreadsheet.Rmd",
-#   "04-find.Rmd",
-#   "05-clean.Rmd",
-#   "06-comparisons.Rmd",
-#   "07-chart.Rmd",
-#   "08-map.Rmd",
-#   "09-table.Rmd",
-#   "10-embed.Rmd",
-#   "11-github.Rmd",
-#   "12-chartcode.Rmd",
-#   "13-leaflet.Rmd",
-#   "14-transform.Rmd",
-#   "15-detect.Rmd",
-#   "16-story.Rmd",
-#   "17-fix.Rmd",
+#   "0.0-introduction.Rmd",
+#   "01-choose.Rmd",
+#   "02-spreadsheet.Rmd",
+#   "03-find.Rmd",
+#   "04-clean.Rmd",
+#   "05-comparisons.Rmd",
+#   "06-chart.Rmd",
+#   "07-map.Rmd",
+#   "08-table.Rmd",
+#   "09-embed.Rmd",
+#   "10-github.Rmd",
+#   "11-chartcode.Rmd",
+#   "12-leaflet.Rmd",
+#   "13-transform.Rmd",
+#   "14-detect.Rmd",
+#   "15-story.Rmd",
+#   "16-fix.Rmd",
 #   "21-references.Rmd"
 # ]
 ```

@@ -61,11 +61,11 @@ To help other researchers find items cited in this book, include URLs in Zotero 
 
 Reminder: Chicago full-note works exactly as it was designed, meaning that the second instance of a citation currently appears as an abbreviated note (author, with title when appropriate).
 
-Demo: 
+Demo:
 Here's a text-only note, with no Zotero citation.^[This is a note, with no bibliographic reference.]
 
 To create a note with citations only, separate Zotero/BibTeX citation keys with semi-colons: ^[@huffHowLieStatistics1954; @monmonierHowLieMaps1996]
 
 Since notes also may include text and punctuation in Markdown syntax, always insert a caret symbol prior to the brackets to demarcate a note:^[Compare how "lying" is justified by @huffHowLieStatistics1954, pp. 10-11 and @monmonierHowLieMaps1996, pp. 11-12.]
 
-Note that the `chicago-fullnote-bibliography.csl` format automatically shortens the note after it its first reference.
+Remember that the `chicago-fullnote-bibliography.csl` format is designed to automatically shorten the note after it its first reference.

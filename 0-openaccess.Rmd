@@ -1,0 +1,45 @@
+## About Open-Access Web Edition {- #open-access}
+This open-access web edition displays the book manuscript we submitted to our publisher, O'Reilly Media, Inc., which we publicly shared under the terms of our contract, and is freely available to read at https://HandsOnDataViz.org. Also, you can access our open-source code templates that we featured in this book on our GitHub organizational account at https://github.com/handsondataviz. To suggest any corrections or updates for future editions, you can open an issue or submit a pull request on our book's GitHub repository at https://github.com/handsondataviz/book. See also [Appendix: Publishing with Bookdown](bookdown.html) to learn why and how we built our workflow around [Bookdown](https://bookdown.org), [GitHub](http://github.com), and [Zotero](http://zotero.org).
+
+Why did we publicly share this open-access edition of our book? Why not maximize our profits and try to pocket all of the cash instead? Our answer is a combination of philosophical values and pragmatic realities.
+
+First, we believe that knowledge becomes more valuable when shared widely, rather than hidden behind a paywall. If our book makes a small improvement to the world by helping a thousand readers to communicate more clearly with data, then reaching ten thousand or more readers is even better. Originally, this book began as a compilation of tutorials for a data visualization course, which educated many college students and Hartford community partners in face-to-face settings, and thousands more in a free online course.^[@doughertyToughQuestionsAsk2017] An open-access book is more likely to share knowledge than a closed one.^[For another perspective that asks whether writing a book is "worth" it, see @kleppmannWritingBookIt2020]
+
+Second, the quality of our final product improved as a result of reader feedback on the early open-access editions. Years before we even considered approaching a publisher, we publicly shared early drafts on the web, and interactions with readers, both face-to-face and via email, eventually persuaded us to pitch it to a publisher as a full-fledged book. During our extended writing and revising process, we intentionally made all of the chapters visible as we wrote them, including incomplete sections with lots of "TODO" notes. Readers sent us thoughtful questions, helpful suggestions, and told us how they were using the draft book to teach students or coworkers. Some readers pointed out errors we had missed, and a few even submitted corrections via GitHub pull requests. Thanks to their input, this open-access book is much stronger than a closed one would have been.
+
+Third, money was not our primary motivator. Both of us earn salaries through our regular employment: Jack as a college professor and Ilya as a civic technologist. Writing this book to teach readers about data visualization, and creating open-source code templates to enhance our tool options, aligns with expectations in our professions. Moreover, authors and other knowledge-creators also operate in a *reputation economy*, where readers' abilities to make informed judgments about the value of our work depends on whether or not they can easily access it.Openly sharing our book is more likely to fulfill this objective than hiding it behind a paywall.^[On reputation capital in academic life, see @doughertyConclusionsWhatWe2013]
+
+Finally, we're not uninterested in money and its ability to fund more time for writing. Our recent experience suggests that open-access publishing *might* contribute to book sales. By sharing our draft chapters online as we wrote and revised them, we developed an audience of interested readers. Our open-access web edition, with its clearly-labeled chapters, is easy to find in [a Google search](https://www.google.com/search?hl=en&as_q=hands+on+data+visualization).  Prior to signing our contract with the publisher, Google Analytics tells us that 41,000 users visited our book during the 2019 calendar year. We pitched our proposal to the publisher in early 2020 and began significant rewriting and revisions. 60,000 users visited our book during the 2020 calendar year. Occasionally we tweeted about our book-in-progress and thanked readers for feedback. Sometimes others posted about our book, such as [Alberto Cairo's widely-circulated tweet in December 2020](https://twitter.com/AlbertoCairo/status/1338134036758335495), which would not have happened if our book had not been open access.
+
+Clearly, our approach to open-access book publishing may not match your ideals or realities. Perhaps you rely on book sales as your sole source of income. Many authors and publishers still prefer to let readers preview only a chapter online in order to maximize revenue. Some authors will consider open-access publishing, but dare not share their drafts until the work is completed. Others take the opposite approach and widely circulate pieces of their early writing online in blog posts or social media, but do not share the comprehensive final work in the same manner. Still others have never considered any of these options, nor do they realize that the knowledge-production industry is slowly changing, and some book publishers are growing more comfortable with open-access agreements. While our approach may not suit your situation, we hope that our reasoning will nudge you to think differently about why and how we publish books.
+
+### How to read the web edition {-}
+Reading the open-access edition of *Hands-On Data Visualization* in your web browser the ideal way to explore our interactive charts and maps. Most are embedded in the web pages as iframes using the same principles illustrated in [Chapter 9: Embed on the Web](embed.html). Also, the web edition enables readers to easily click on internal cross-references and follow our links to external sources.
+
+Try these toolbar features located near the top of your browser:
+
+- Menu
+- Search
+- Font to adjust text size and display
+- View source code on GitHub (if available)
+- Download book files (if available)
+- Shortcuts (arrow keys to navigate; `s` to toggle sidebar; `f` to toggle search)
+- Social Media
+- Share
+
+![Screenshot: toolbar features](images/0-preface/toolbar-features.png)
+
+#### Open links in new tabs {-}
+Keep your place when reading online and moving between pages.  
+
+- Two-finger trackpad click
+- or Control + click (Mac)
+- or Alt + click (Chromebook)
+- or right-click (Windows and others)
+
+![Screenshot: Open link in new tab (on Mac)](images/0-preface/contextual-menu.png)
+
+#### Share section links {-}
+Float your cursor over any section header to reveal a hashtag anchor symbol: `#`. Click the symbol to view the section link in your browser bar, and copy it to share with others.
+
+![Screenshot: Share section links](images/0-preface/section-links.png)

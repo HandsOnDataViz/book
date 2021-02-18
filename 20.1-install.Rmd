@@ -20,7 +20,7 @@ Below are steps we followed to set up the Bookdown publishing platform and relat
 ### Download, Build, and Host a Sample Bookdown Book {-}
 While Bookdown does not require you to use GitHub, these steps show how to integrate these tools to make your own copy of a sample Bookdown book.
 
-1. Create a free [GitHub](https://github.com) account to simplify steps for the next two sections. While Bookdown does not require you to use GitHub, the workflow described below features GitHub to copy a sample Bookdown template and to host your own Bookdown editions online. To learn more about the basics of this tool, see [Chapter 11: Edit and Host Code with GitHub](github.html).
+1. Create a free [GitHub](https://github.com) account to simplify steps for the next two sections. While Bookdown does not require you to use GitHub, the workflow described below features GitHub to copy a sample Bookdown template and to host your own Bookdown editions online. To learn more about the basics of this tool, see [Chapter 10: Edit and Host Code with GitHub](github.html).
 
 2. In your web browser, log into your GitHub account, go to the Bookdown developer's `bookdown-minimal` repo <https://github.com/yihui/bookdown-minimal>, and fork a copy to your GitHub account.
 

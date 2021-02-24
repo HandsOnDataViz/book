@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2021-02-23" />
+<meta name="date" content="2021-02-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -381,7 +381,7 @@ Figure 9.5: Click <em>Embed</em> and <em>Interactive</em> and <em>Publish</em>, 
 Figure 9.6: Paste your Google Sheets embed code to place of the current iframe tag in the TryIt page and click <em>Run</em>.
 </p>
 </div>
-<p>At first glance, the Google Sheets embed code may appear long, but it’s actually a straightforward iframe tag with a long source link. Look closely and you’ll see iframe settings such as <code>width</code> and <code>height</code> (measured here in pixels), and <code>seamless</code> and <code>frameborder='0'</code> and <code>scrolling='no'</code> to improve its appearance.</p>
+<p>At first glance, the Google Sheets embed code may appear long, but it’s actually a straightforward iframe tag with a long source link. Look closely and you’ll see iframe settings such as <code>width</code> and <code>height</code> (measured here in pixels), and <code>frameborder='0'</code> and <code>scrolling='no'</code> to improve its appearance.</p>
 <ol start="4" style="list-style-type: decimal">
 <li>Now jump to the <a href="paste-code.html">paste code to website section</a> of this chapter to learn how to properly insert your embed code into your preferred platform.</li>
 </ol>
@@ -500,9 +500,9 @@ Figure 9.14: Paste your Tableau public embed code in place of the current iframe
 </ol>
 <p><code>src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&amp;:embed=true"</code></p>
 <ol start="6" style="list-style-type: decimal">
-<li>Add iframe start and end tags, and also attributes for <code>width</code>, <code>height</code>, <code>seamless</code>, <code>frameborder="0"</code>, and <code>scrolling="no"</code>, to make it look similar to this:</li>
+<li>Add iframe start and end tags, and also attributes for <code>width</code>, <code>height</code>, <code>frameborder="0"</code>, and <code>scrolling="no"</code>, to make it look similar to this:</li>
 </ol>
-<p><code>&lt;iframe src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&amp;:embed=true" width="90%" height="500" seamless frameborder="0" scrolling="no"&gt;&lt;/iframe&gt;</code></p>
+<p><code>&lt;iframe src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&amp;:embed=true" width="90%" height="500" frameborder="0" scrolling="no"&gt;&lt;/iframe&gt;</code></p>
 <p>Tip: Insert <code>width="90%"</code>, rather than 100%, to help readers to scroll more easily down your web page with a margin.</p>
 <ol start="7" style="list-style-type: decimal">
 <li>Press <em>Run</em> to see how it looks in the W3Schools TryIt iframe page, as shown in Figure <a href="embed-code.html#fig:tableau-public-tryit-simple">9.15</a>. Sometimes a simple iframe works better on your website than a complex embed code.</li>

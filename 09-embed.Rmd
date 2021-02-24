@@ -32,7 +32,7 @@ In its simplest form, an iframe instructs the secondary site to display a web pa
 if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://datawrapper.dwcdn.net/LtRbj/") else knitr::include_graphics("images/09-embed/iframe-sample.png")
 ```
 
-When you copy an embed code from some of the visualization tools featured in this book, their iframe tags may be *much longer* than the simple example above. For example, an iframe tag might include other attributes, such as `width` or `height`, measured in pixels (`px`) or a percentage of its dimensions on the secondary site. Also, you may see other iframe tag elements, such as `seamless` or `frameborder="0"` or `scrolling="no"`, which create a seamless appearance between the iframe content and its surroundings. Finally, you may see *really long* embed codes that contain a dozen or more lines of code that even we don't fully understand. That's okay, because all of these are optional add-ons to improve the appearance of the iframe in the secondary site. The most essential ingredient of an embed code is the iframe and its three core parts: the iframe start tag, source web address, and end tag. When in doubt, look for those key ingredients.
+When you copy an embed code from some of the visualization tools featured in this book, their iframe tags may be *much longer* than the simple example above. For example, an iframe tag might include other attributes, such as `width` or `height`, measured in pixels (`px`) or a percentage of its dimensions on the secondary site. Also, you may see other iframe tag elements, such as `frameborder="0"` or `scrolling="no"`, which create a seamless appearance between the iframe content and its surroundings. Finally, you may see *really long* embed codes that contain a dozen or more lines of code that even we don't fully understand. That's okay, because all of these are optional add-ons to improve the appearance of the iframe in the secondary site. The most essential ingredient of an embed code is the iframe and its three core parts: the iframe start tag, source web address, and end tag. When in doubt, look for those key ingredients.
 
 Now that you have a clearer definition of an interactive visualization, embed codes, and iframe tags, in the next section we'll learn how to copy the embed code from different visualization platforms.
 
@@ -72,7 +72,7 @@ We'll break this down into three steps for each visualization platform. First, w
  knitr::include_graphics("images/09-embed/google-sheets-tryit.png")
 ```
 
-At first glance, the Google Sheets embed code may appear long, but it's actually a straightforward iframe tag with a long source link. Look closely and you'll see iframe settings such as `width` and `height` (measured here in pixels), and `seamless` and `frameborder='0'` and `scrolling='no'` to improve its appearance.
+At first glance, the Google Sheets embed code may appear long, but it's actually a straightforward iframe tag with a long source link. Look closely and you'll see iframe settings such as `width` and `height` (measured here in pixels), and `frameborder='0'` and `scrolling='no'` to improve its appearance.
 
 4. Now jump to the [paste code to website section](paste-code.html) of this chapter to learn how to properly insert your embed code into your preferred platform.
 
@@ -175,9 +175,9 @@ However, if your web platform does not accept the *full embed code* for Tableau 
 
 `src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true" `
 
-6. Add iframe start and end tags, and also attributes for `width`, `height`, `seamless`, `frameborder="0"`, and `scrolling="no"`, to make it look similar to this:
+6. Add iframe start and end tags, and also attributes for `width`, `height`, `frameborder="0"`, and `scrolling="no"`, to make it look similar to this:
 
-`<iframe src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true" width="90%" height="500" seamless frameborder="0" scrolling="no"></iframe>`
+`<iframe src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true" width="90%" height="500" frameborder="0" scrolling="no"></iframe>`
 
 Tip: Insert `width="90%"`, rather than 100%, to help readers to scroll more easily down your web page with a margin.
 

@@ -200,7 +200,7 @@ L.marker([41.77, -72.69]).addTo(map) // EDIT coordinates to re-position marker
 
 Warning: Be careful when editing your code. Accidentally removing or adding extra punctuation (such as quotation marks, commas, or semicolons) can stop your map from working. But breaking your code---and fixing it---can also be a great way to learn.
 
-15. After making edits, remember to scroll down and press the *Commit* button to save changes. Then go to your browser tab with the live map, and do a hard-refresh to view changes. If your map edits do not appear right away, remember that GitHub Pages sometimes requires up to 30 seconds to process code edits. If you have problems, see the [Fix Common Problems](fix.html) section in the appendix.
+15. After making edits, remember to scroll down and press the *Commit* button to save changes. Then go to your browser tab with the live map, and do a "hard refresh" to view changes. If your map edits do not appear right away, remember that GitHub Pages sometimes requires up to 30 seconds to process code edits. If you have problems, see the [Fix Common Problems](fix.html) section in the appendix.
 
 Congratulations! If this is the first time that you've edited computer code and hosted it online, you can now call yourself a "coder". The process is similar to following and modifying a cookbook recipe, just like you also can call yourself a "chef" after baking your first batch of brownies! Although no one is likely to hire you as a full-time paid coder (or chef) at this early stage, you now understand several of the basic skills needed to copy, edit, and host code online, and you're ready to dive into the more advanced versions, such as [Chart.js and Highcharts templates in Chapter 11](chartcode.html) and [Leaflet map templates in Chapter 12](leaflet.html).
 
@@ -217,9 +217,9 @@ The same concept applies to GitHub Pages. When you publish a code template for a
 
 `<iframe src="https://USERNAME.github.io/RESPOSITORY"></iframe>`
 
-3. If desired, improve the iframe appearance on the secondary site by adding any of these optional attributes, such as `width` or `height` (measured in pixels by default, or percentages), or `seamless` or `frameborder="0"` or `scrolling="no"`, in this general format:
+3. If desired, improve the iframe appearance on the secondary site by adding any of these optional attributes, such as `width` or `height` (measured in pixels by default, or percentages), or `frameborder="0"` or `scrolling="no"`, in this general format:
 
-`<iframe src="https://USERNAME.github.io/RESPOSITORY" width="100%" height="400" seamless frameborder="0" scrolling="no"></iframe>`
+`<iframe src="https://USERNAME.github.io/RESPOSITORY" width="100%" height="400" frameborder="0" scrolling="no"></iframe>`
 
 Tip: Either single-quote (`'`) marks (also called an apostrophe) or double-quote (`"`) marks are acceptable in your iframe code, but be consistent and avoid accidentally pasting in curly-quotes.
 
@@ -387,16 +387,6 @@ Let's use GitHub Desktop to pull a copy of your `leaflet-map-simple` template to
  knitr::include_graphics("images/10-github/atom-remove-project-annotated.png")
 ```
 
-11. Now that you've edited the code for your map on your local computer, let's test how it looks before uploading it to GitHub. Go to the location where you saved the repo on your local computer, and right-click the `index.html` file, select Open With, and choose your preferred web browser, as shown in Figure \@ref(fig:finder-open-with).  
-
-(ref:finder-open-with) Right-click the index.html file on your local computer and open with a browser to check your edits.
-
-```{r finder-open-with, fig.cap="(ref:finder-open-with)"}
- knitr::include_graphics("images/10-github/finder-open-with.png")
-```
-
-Note: Since your browser is displaying only the *local computer* version of your code, the web address will begin with `file:///...` rather than `https://...`, as appears in your GitHub Pages online map. Also, if your code depends on online elements, those features may not function when viewing it locally. But for this simple Leaflet map template, your updated map title should appear, allowing you to check its appearance before pushing your edits to the web.
-
 Sidebar: To fully view more complex code templates in your local browser, including some [Chart.js or Highcharts templates in Chapter 11](chartcode.html) or [Leaflet templates in Chapter 12](leaflet.html), you may need to temporarily relax [same-origin policy restrictions](https://en.wikipedia.org/wiki/Same-origin_policy), an internet security mechanism that limits how web pages access content from other domains. You can do so by managing your [Cross-Origin Resource Sharing](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)(CORS) settings, and methods for doing this vary across operating systems and browsers. For example, [to disable same-origin policy on Safari for Mac](https://stackoverflow.com/questions/4556429/disabling-same-origin-policy-in-safari), first go to *Preferences > Advanced* to enable the *Developer* menu, then in this new menu select *Disable Cross-Origin Restrictions*, as shown in Figure \@ref(fig:disable-cors-safari). After you are done testing your code, restart Safari to reset the setting to its default safety position. See also ways to [run the Chrome browser without same-origin restrictions on various computers](https://alfilatov.com/posts/run-chrome-without-cors/), as shown in Figure \@ref(fig:disable-cors-chrome), or this [popular Stackoverflow page](https://stackoverflow.com/questions/3102819/disable-same-origin-policy-in-chrome). If you temporarily disable this safety mechanism in your browser, be sure to re-enable it before browsing sites on the public web.
 
 (ref:disable-cors-safari) To view more complex code templates on your local computer with Safari browser, temporarily *Disable Cross-Origin Restrictions*.
@@ -411,9 +401,19 @@ Sidebar: To fully view more complex code templates in your local browser, includ
  knitr::include_graphics("images/10-github/disable-cors-chrome-annotated.png")
 ```
 
+Note: Since your browser is displaying only the *local computer* version of your code, the web address will begin with `file:///...` rather than `https://...`, as appears in your GitHub Pages online map. Also, if your code depends on online elements, those features may not function when viewing it locally. But for this simple Leaflet map template, your updated map title should appear, allowing you to check its appearance before pushing your edits to the web.
+
+11. Now that you've edited the code for your map on your local computer, let's test how it looks before uploading it to GitHub. Go to the location where you saved the repo on your local computer, and right-click the `index.html` file, select Open With, and choose your preferred web browser, as shown in Figure \@ref(fig:finder-open-with).  
+
+(ref:finder-open-with) Right-click the index.html file on your local computer and open with a browser to check your edits.
+
+```{r finder-open-with, fig.cap="(ref:finder-open-with)"}
+ knitr::include_graphics("images/10-github/finder-open-with.png")
+```
+
 Now let's transfer your edits from your local computer to your GitHub web account, which you previously connected when you set up GitHub Desktop.
 
-11. Go to GitHub Desktop, confirm that your Current Repo is `leaflet-map-simple`, and you will see your code edits summarized on the screen. In this two-step process, first click the blue *Commit* button at the bottom of the page to save your edits to your local copy of your repo. (If you edit multiple files, GitHub Desktop will ask you write a summary of your edit, to help you keep track of your work.) Second, click the blue *Push origin* button to transfer those edits to the parent copy of your repo on your GitHub web account. Both steps are shown in Figure \@ref(fig:desktop-commit-push).
+12. Go to GitHub Desktop, confirm that your Current Repo is `leaflet-map-simple`, and you will see your code edits summarized on the screen. In this two-step process, first click the blue *Commit* button at the bottom of the page to save your edits to your local copy of your repo. (If you edit multiple files, GitHub Desktop will ask you write a summary of your edit, to help you keep track of your work.) Second, click the blue *Push origin* button to transfer those edits to the parent copy of your repo on your GitHub web account. Both steps are shown in Figure \@ref(fig:desktop-commit-push).
 
 (ref:desktop-commit-push) In this two-step process, click *Commit*, then click *Push origin* to save and copy your edits from your local computer to your GitHub web account, as shown in this [animated GIF](https://handsondataviz.org/images/10-github/desktop-commit-push.gif).
 

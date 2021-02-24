@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2021-02-23" />
+<meta name="date" content="2021-02-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -443,34 +443,34 @@ Figure 10.26: Atom Editor opens your repo as a <em>project</em>, where you can c
 Figure 10.27: To clean up your Atom Editor workspace, right-click to <em>Remove Project Folder</em>.
 </p>
 </div>
-<ol start="11" style="list-style-type: decimal">
-<li>Now that you’ve edited the code for your map on your local computer, let’s test how it looks before uploading it to GitHub. Go to the location where you saved the repo on your local computer, and right-click the <code>index.html</code> file, select Open With, and choose your preferred web browser, as shown in Figure <a href="github-desktop-atom.html#fig:finder-open-with">10.28</a>.</li>
-</ol>
-
-<div class="figure"><span id="fig:finder-open-with"></span>
-<img src="images/10-github/finder-open-with.png" alt="Right-click the index.html file on your local computer and open with a browser to check your edits."  />
-<p class="caption">
-Figure 10.28: Right-click the index.html file on your local computer and open with a browser to check your edits.
-</p>
-</div>
-<p>Note: Since your browser is displaying only the <em>local computer</em> version of your code, the web address will begin with <code>file:///...</code> rather than <code>https://...</code>, as appears in your GitHub Pages online map. Also, if your code depends on online elements, those features may not function when viewing it locally. But for this simple Leaflet map template, your updated map title should appear, allowing you to check its appearance before pushing your edits to the web.</p>
-<p>Sidebar: To fully view more complex code templates in your local browser, including some <a href="chartcode.html">Chart.js or Highcharts templates in Chapter 11</a> or <a href="leaflet.html">Leaflet templates in Chapter 12</a>, you may need to temporarily relax <a href="https://en.wikipedia.org/wiki/Same-origin_policy">same-origin policy restrictions</a>, an internet security mechanism that limits how web pages access content from other domains. You can do so by managing your <a href="https://en.wikipedia.org/wiki/Cross-origin_resource_sharing">Cross-Origin Resource Sharing</a>(CORS) settings, and methods for doing this vary across operating systems and browsers. For example, <a href="https://stackoverflow.com/questions/4556429/disabling-same-origin-policy-in-safari">to disable same-origin policy on Safari for Mac</a>, first go to <em>Preferences &gt; Advanced</em> to enable the <em>Developer</em> menu, then in this new menu select <em>Disable Cross-Origin Restrictions</em>, as shown in Figure <a href="github-desktop-atom.html#fig:disable-cors-safari">10.29</a>. After you are done testing your code, restart Safari to reset the setting to its default safety position. See also ways to <a href="https://alfilatov.com/posts/run-chrome-without-cors/">run the Chrome browser without same-origin restrictions on various computers</a>, as shown in Figure <a href="github-desktop-atom.html#fig:disable-cors-chrome">10.30</a>, or this <a href="https://stackoverflow.com/questions/3102819/disable-same-origin-policy-in-chrome">popular Stackoverflow page</a>. If you temporarily disable this safety mechanism in your browser, be sure to re-enable it before browsing sites on the public web.</p>
+<p>Sidebar: To fully view more complex code templates in your local browser, including some <a href="chartcode.html">Chart.js or Highcharts templates in Chapter 11</a> or <a href="leaflet.html">Leaflet templates in Chapter 12</a>, you may need to temporarily relax <a href="https://en.wikipedia.org/wiki/Same-origin_policy">same-origin policy restrictions</a>, an internet security mechanism that limits how web pages access content from other domains. You can do so by managing your <a href="https://en.wikipedia.org/wiki/Cross-origin_resource_sharing">Cross-Origin Resource Sharing</a>(CORS) settings, and methods for doing this vary across operating systems and browsers. For example, <a href="https://stackoverflow.com/questions/4556429/disabling-same-origin-policy-in-safari">to disable same-origin policy on Safari for Mac</a>, first go to <em>Preferences &gt; Advanced</em> to enable the <em>Developer</em> menu, then in this new menu select <em>Disable Cross-Origin Restrictions</em>, as shown in Figure <a href="github-desktop-atom.html#fig:disable-cors-safari">10.28</a>. After you are done testing your code, restart Safari to reset the setting to its default safety position. See also ways to <a href="https://alfilatov.com/posts/run-chrome-without-cors/">run the Chrome browser without same-origin restrictions on various computers</a>, as shown in Figure <a href="github-desktop-atom.html#fig:disable-cors-chrome">10.29</a>, or this <a href="https://stackoverflow.com/questions/3102819/disable-same-origin-policy-in-chrome">popular Stackoverflow page</a>. If you temporarily disable this safety mechanism in your browser, be sure to re-enable it before browsing sites on the public web.</p>
 
 <div class="figure"><span id="fig:disable-cors-safari"></span>
 <img src="images/10-github/disable-cors-safari.png" alt="To view more complex code templates on your local computer with Safari browser, temporarily Disable Cross-Origin Restrictions." width="500" />
 <p class="caption">
-Figure 10.29: To view more complex code templates on your local computer with Safari browser, temporarily <em>Disable Cross-Origin Restrictions</em>.
+Figure 10.28: To view more complex code templates on your local computer with Safari browser, temporarily <em>Disable Cross-Origin Restrictions</em>.
 </p>
 </div>
 
 <div class="figure"><span id="fig:disable-cors-chrome"></span>
 <img src="images/10-github/disable-cors-chrome-annotated.png" alt="To view more complex code templates on your local computer with Chrome browser, use the Terminal application command-line (bottom window) to run a version without same-origin safety restrictions." width="500" />
 <p class="caption">
-Figure 10.30: To view more complex code templates on your local computer with Chrome browser, use the <em>Terminal</em> application command-line (bottom window) to run a version without same-origin safety restrictions.
+Figure 10.29: To view more complex code templates on your local computer with Chrome browser, use the <em>Terminal</em> application command-line (bottom window) to run a version without same-origin safety restrictions.
+</p>
+</div>
+<p>Note: Since your browser is displaying only the <em>local computer</em> version of your code, the web address will begin with <code>file:///...</code> rather than <code>https://...</code>, as appears in your GitHub Pages online map. Also, if your code depends on online elements, those features may not function when viewing it locally. But for this simple Leaflet map template, your updated map title should appear, allowing you to check its appearance before pushing your edits to the web.</p>
+<ol start="11" style="list-style-type: decimal">
+<li>Now that you’ve edited the code for your map on your local computer, let’s test how it looks before uploading it to GitHub. Go to the location where you saved the repo on your local computer, and right-click the <code>index.html</code> file, select Open With, and choose your preferred web browser, as shown in Figure <a href="github-desktop-atom.html#fig:finder-open-with">10.30</a>.</li>
+</ol>
+
+<div class="figure"><span id="fig:finder-open-with"></span>
+<img src="images/10-github/finder-open-with.png" alt="Right-click the index.html file on your local computer and open with a browser to check your edits."  />
+<p class="caption">
+Figure 10.30: Right-click the index.html file on your local computer and open with a browser to check your edits.
 </p>
 </div>
 <p>Now let’s transfer your edits from your local computer to your GitHub web account, which you previously connected when you set up GitHub Desktop.</p>
-<ol start="11" style="list-style-type: decimal">
+<ol start="12" style="list-style-type: decimal">
 <li>Go to GitHub Desktop, confirm that your Current Repo is <code>leaflet-map-simple</code>, and you will see your code edits summarized on the screen. In this two-step process, first click the blue <em>Commit</em> button at the bottom of the page to save your edits to your local copy of your repo. (If you edit multiple files, GitHub Desktop will ask you write a summary of your edit, to help you keep track of your work.) Second, click the blue <em>Push origin</em> button to transfer those edits to the parent copy of your repo on your GitHub web account. Both steps are shown in Figure <a href="github-desktop-atom.html#fig:desktop-commit-push">10.31</a>.</li>
 </ol>
 

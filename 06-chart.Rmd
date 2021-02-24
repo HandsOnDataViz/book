@@ -813,7 +813,7 @@ Now that you've learned how to create a scatter chart in Tableau Public, let's m
 
 In this tutorial, we will build an interactive filtered line chart with Tableau Public, to visualize how internet access has changed in different nations over time. Organize the data in three columns, as shown in Figure \@ref(fig:tableau-filtered-data). The first column, *Country Name*, are the data labels that become the colored lines. The second column, *Year*, will appear on the horizontal x-axis. The third column, *Percent Internet Users*, are numeric values that appear on the vertical y-axis. Now you can create a filtered line chart with checkboxes, to show only selected lines on startup to avoid overwhelming users, while allowing them to toggle on other lines, and hover over each one for more details, as shown in Figure \@ref(fig:tableau-filtered).
 
-(ref:tableau-filtered-data) In a filtered line chart, organize the data in three columns, data labels, year, and numeric values.
+(ref:tableau-filtered-data) In a filtered line chart, organize the data in three columns: data labels, year, and numeric values.
 
 ```{r tableau-filtered-data, out.width=350, fig.cap="(ref:tableau-filtered-data)"}
 knitr::include_graphics("images/06-chart/tableau-filtered-data.png")

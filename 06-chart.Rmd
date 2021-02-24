@@ -293,7 +293,7 @@ To create your own interactive grouped column (or bar) chart, use our template a
  knitr::include_graphics("images/06-chart/column-grouped-insert.png")
 ```
 
-7. In the Chart Editor, change the default selection to *Column chart*, with *Stacking none*, to display Grouped Columns, as shown in Figure \@ref(fig:column-grouped-editor). Or select *Horizontal bar chart* if you have longer labels.
+5. In the Chart Editor, change the default selection to *Column chart*, with *Stacking none*, to display Grouped Columns, as shown in Figure \@ref(fig:column-grouped-editor). Or select *Horizontal bar chart* if you have longer labels.
 
 (ref:column-grouped-editor) Change the default to Column chart, with Stacking none.
 
@@ -301,7 +301,7 @@ To create your own interactive grouped column (or bar) chart, use our template a
  knitr::include_graphics("images/06-chart/column-grouped-editor.png")
 ```
 
-8. To customize title, labels, and more, in the Chart Editor select *Customize*, as shown in Figure \@ref(fig:chart-editor-customize). Also, you can select the chart and axis titles to edit them.
+6. To customize title, labels, and more, in the Chart Editor select *Customize*, as shown in Figure \@ref(fig:chart-editor-customize). Also, you can select the chart and axis titles to edit them.
 
 (ref:chart-editor-customize) Select Customize to edit title, labels, and more.
 
@@ -309,7 +309,7 @@ To create your own interactive grouped column (or bar) chart, use our template a
  knitr::include_graphics("images/06-chart/chart-editor-customize.png")
 ```
 
-9. To make your data public, go to the upper-right corner of your sheet to click the Share button, and in the next screen, click the words "Change to anyone with the link," as shown in Figure \@ref(fig:share-button-sheet). This means your sheet is no longer Restricted to only you, but can be viewed by anyone with the link. See additional options.
+7. To make your data public, go to the upper-right corner of your sheet to click the Share button, and in the next screen, click the words "Change to anyone with the link," as shown in Figure \@ref(fig:share-button-sheet). This means your sheet is no longer Restricted to only you, but can be viewed by anyone with the link. See additional options.
 
 (ref:share-button-sheet) Click the Share button and then click *Change to anyone with the link* to make your data public.
 
@@ -317,7 +317,7 @@ To create your own interactive grouped column (or bar) chart, use our template a
  knitr::include_graphics("images/06-chart/share-button-sheet-annotated.png")
 ```
 
-10. To embed an interactive version of your chart in another web page, click the kebab menu in the upper-right corner of your chart, and select Publish Chart, as shown in Figure \@ref(fig:chart-publish). In the next screen, select Embed and press the Publish button. See [Chapter 9: Embed on the Web](embed.html) to learn what to do with the iframe code.
+8. To embed an interactive version of your chart in another web page, click the kebab menu in the upper-right corner of your chart, and select Publish Chart, as shown in Figure \@ref(fig:chart-publish). In the next screen, select Embed and press the Publish button. See [Chapter 9: Embed on the Web](embed.html) to learn what to do with the iframe code.
 
 (ref:chart-publish) Select Publish Chart to embed an interactive chart on another web page.
 

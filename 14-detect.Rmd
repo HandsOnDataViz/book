@@ -74,7 +74,7 @@ What makes this warped line chart *misleading* rather than *wrong*? Once again, 
 
 But Cairo does *not* propose his aspect ratio recommendation as a universal rule because he recognizes how it fails with very small or very large values. For example, if we apply Cairo's recommendation to our global temperature change chart, the difference between the lowest and highest values (-0.5° to 1°C) represents a 300% increase. In this case, we calculate the percent change using the lowest value of -0.5°C, rather than the initial value of 0°C, because dividing by zero is not defined, so `(1°C- -0.5°C) / |-0.5°C| = 3 = 300%`). Following Cairo's general recommendation, a 300% increase suggests a 1:3 aspect ratio, or a line chart three times taller than its width, as shown in Figure \@ref(fig:temperature-aspect-cairo). While this very tall chart is technically correct, it's *misleading* because it *exaggerates change*, which is contrary to Cairo's main message. The aspect ratio recommendation becomes ridiculous when we divide by numbers that are very close to zero.
 
-(ref:temperature-aspect-cairo) Following Cairo's "recommendation" for a 300% increase results in a 1:3 aspect ratio that exaggerates change.
+(ref:temperature-aspect-cairo) Rules of thumb do not always work. Cairo’s recommendation to use 1:3 aspect ratio to represent 300% change results in a misleading chart in this particular example.
 
 ```{r temperature-aspect-cairo, fig.cap="(ref:temperature-aspect-cairo)"}
  knitr::include_graphics("images/14-detect/temperature-aspect-cairo-annotated.png")
@@ -82,7 +82,7 @@ But Cairo does *not* propose his aspect ratio recommendation as a universal rule
 
 Cairo acknowledges that his aspect ratio recommendation also can result in *misleading* charts in the opposite way that *diminish change*. For example, instead of *global temperature change*, which increased from 0° to 1°C, imagine a chart that displays *global temperature*, which increased from about 13° to 14°C (or about 55° to 57°F) over time. Even though a 1°C difference in average global temperature may not *feel* very significant to our bodies, it has dramatic consequences for the Earth. We can calculate the percent change as: `(14°C - 13°C) / 13°C = 0.08 = 8% percent increase`, or about 1/12. This translates into a 12:1 aspect ratio, or a line chart that is twelve times wider than it is tall, as shown in Figure \@ref(fig:temperature2-aspect-cairo). Cairo warns that this significant global temperature increase looks "deceptively small," so he cautious against using his aspect ratio recommendation in all cases.^[@cairoHowChartsLie2019, p. 70.]
 
-(ref:temperature2-aspect-cairo) Following Cairo's "recommendation" for an 8% increase results in a 12:1 aspect ratio that diminishes change.
+(ref:temperature2-aspect-cairo) Once again, rules of thumb do not always work. Cairo’s recommendation for an 8% increase results in a 12:1 aspect ratio that produces a misleading chart in this particular example.
 
 ```{r temperature2-aspect-cairo, fig.cap="(ref:temperature2-aspect-cairo)"}
  knitr::include_graphics("images/14-detect/temperature2-aspect-cairo-annotated.png")

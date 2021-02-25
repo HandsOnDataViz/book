@@ -135,7 +135,7 @@ If you followed steps in [Chapter 9: Embed on the Web](embed.html) and the conte
 
 - Items listed in your iframe (such as the URL, width, or height) should be enclosed inside straight single-quote (`'`, also known as an *apostrophe*) or double-quote marks (`"`, also known as *quotation marks*). Choose either type, but be consistent.
 
-- Always use *straight* quote marks, and avoid accidentally entering *curly quotes* (also known as *smart quotes* or *slanted quotes*), which sometimes happens when pasting code from word-processor tools.
+- Always use *straight* quote marks, and avoid entering *curly quotes*, also known as *smart quotes* or *slanted quotes*, which sometimes happens accidentally when pasting code from a word processor. Avoid curly quotes such as the opening single quote (`‘`), the closing single quote (`’`), the opening double quote (`“`), and the closing double quote (`”`).
 
 - Always use `https` (the extra "s" means "secure"), not `http` in iframes. Some web browsers will block content if it mixes *https* and *http* resources. All of the code templates in this book require *https*.
 

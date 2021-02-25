@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2021-02-24" />
+<meta name="date" content="2021-02-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -409,13 +409,13 @@ Figure 13.9: Use <em>edit attributes</em> tool (under Cursor tool) to edit attri
 <p>Mapshaper’s most powerful tools are available through the <em>Console</em> button at the top, which opens a window where you can type commands for common map editing tasks.</p>
 <p>Sometimes map features (such as points, polylines, and polygons) contain <em>attributes</em> (data fields or columns) with long or confusing names. In the Mapshaper <em>Console</em>, you can easily change field names by entering the rename command in this generic format:</p>
 <p><code>-rename-fields NewName=OldName</code></p>
-<p>First, select the <em>Inspect Features</em> arrow symbol in Mapshaper and float your cursor over map features to view their field names, then click open the <em>Console</em> windows, as shown in Figure <a href="mapshaper.html#fig:mapshaper-rename">13.10</a>. In this example, to change the longer field name (<code>STATE_TITLE</code>) to a shorter one (<code>name</code>), enter this command into the console:</p>
+<p>First, select the <em>inspect features</em> arrow symbol in Mapshaper and float your cursor over map features to view their field names, then click open the <em>Console</em> windows, as shown in Figure <a href="mapshaper.html#fig:mapshaper-rename">13.10</a>. In this example, to change the longer field name (<code>STATE_TITLE</code>) to a shorter one (<code>name</code>), enter this command into the console:</p>
 <p><code>-rename-fields name=STATE_TITLE</code></p>
 
 <div class="figure"><span id="fig:mapshaper-rename"></span>
-<img src="images/13-transform/mapshaper-rename-annotated.png" alt="Select the Inspect Features arrow to view field names, and rename them using the -rename-fields command in the console."  />
+<img src="images/13-transform/mapshaper-rename-annotated.png" alt="Select the inspect features arrow to view field names, and rename them using the -rename-fields command in the console."  />
 <p class="caption">
-Figure 13.10: Select the <em>Inspect Features</em> arrow to view field names, and rename them using the <code>-rename-fields</code> command in the console.
+Figure 13.10: Select the <em>inspect features</em> arrow to view field names, and rename them using the <code>-rename-fields</code> command in the console.
 </p>
 </div>
 </div>
@@ -519,7 +519,7 @@ numbers belong to which polygons.</p>
 <ol style="list-style-type: decimal">
 <li><p>Import both the GeoJSON file and the CSV file you downloaded above into Mapshaper using its Quick import box.</p></li>
 <li><p>Make sure both files appear in the drop-down list of layers.
-Your CSV data will appear to resemble a table. Use the <em>Cursor &gt; inspect attributes</em> tool
+Your CSV data will appear to resemble a table. Use the <em>Cursor &gt; inspect features</em> tool
 to make sure the data is imported correctly. If you use the sample Connecticut data, note that the <em>ct-towns</em> layer
 has <em>name</em> attribute with the name of the town, and <em>ct-towns-popdensity</em> has town names in the <em>town</em> column.</p></li>
 <li><p>Make your geospatial layer (<em>ct-towns</em>) the active layer.</p></li>
@@ -531,7 +531,7 @@ For our sample data, these would be town names which are stored in <code>name</c
 of the CSV file.</p>
 <ol start="5" style="list-style-type: decimal">
 <li><p>You will see a message in the console notifying you if join was performed successfully, or if Mapshaper encountered any errors.</p></li>
-<li><p>Use the <em>Cursor &gt; inspect attributes</em> tool to make sure you see CSV columns as fields of your polygons, as shown in Figure <a href="mapshaper.html#fig:mapshaper-join">13.15</a>.</p></li>
+<li><p>Use the <em>Cursor &gt; inspect features</em> tool to make sure you see CSV columns as fields of your polygons, as shown in Figure <a href="mapshaper.html#fig:mapshaper-join">13.15</a>.</p></li>
 <li><p>You can now save the file to your computer by clicking the <em>Export</em> button.</p></li>
 </ol>
 
@@ -556,7 +556,7 @@ In our example, first you would <code>-rename-fields name=town</code> to your CS
 <p>This command tells Mapshaper to count points inside the <em>hospitals-points</em> layer and record them as the <em>hospitals</em> attribute of the polygons.
 The <code>fields=</code> part tells Mapshaper to not copy any fields from the points, because in our case we are performing many-to-one matching, meaning many hospitals per state.</p>
 <ol start="4" style="list-style-type: decimal">
-<li><p>Use the <em>Cursor &gt; inspect attributes</em> tool to make sure polygons obtained a new field with the recorded count of points,
+<li><p>Use the <em>Cursor &gt; inspect features</em> tool to make sure polygons obtained a new field with the recorded count of points,
 as shown in Figure <a href="mapshaper.html#fig:mapshaper-count-points">13.16</a>.</p></li>
 <li><p>Save the new file using the <em>Export</em> button and chose the desired output format. In the section below,
 we will talk about what happens to objects that don’t join.</p></li>
@@ -596,7 +596,7 @@ of a town and its district, each on a new line. Because your boss didn’t give 
 but instead a GeoJSON file with town boundaries, let’s extract a list of towns from it.</p>
 <ol style="list-style-type: decimal">
 <li><p>Import <a href="data/ct-towns.geojson">ct-towns.geojson</a> to Mapshaper using Quick import box.</p></li>
-<li><p>Use the <em>Cursor &gt; inspect attributes</em> tool to see that each polygon has a <em>name</em> attribute with the name of the town.</p></li>
+<li><p>Use the <em>Cursor &gt; inspect features</em> tool to see that each polygon has a <em>name</em> attribute with the name of the town.</p></li>
 <li><p>Save attribute data as a CSV file using <em>Export</em> button. Open the file in any spreadsheet tool. You will see that your data is a one-column
 file with a <em>name</em> column that lists 169 towns.</p></li>
 <li><p>In your spreadsheet, create a second column titled <em>merged</em> and copy-paste values from the first <em>name</em> column. At this point your spreadsheet contains two columns with the same values.</p></li>
@@ -631,7 +631,7 @@ and all of the other polygons remain the same. Figure <a href="mapshaper.html#fi
 Figure 13.18: Merge polygons based on a predefined crosswalk.
 </p>
 </div>
-<p>You can inspect attribute data of polygons using <em>Cursor &gt; inspect attributes</em> tool, and save the resulting file
+<p>You can inspect attribute data of polygons using <em>Cursor &gt; inspect features</em> tool, and save the resulting file
 using the <em>Export</em> button.</p>
 <p>Overall, Mapshaper is a powerful geodata editing tool with many more commands that are worth exploring. Some of these include changing projections, filtering features using JavaScript expressions, assigning colors to polygons based on values, and many more. Explore the <a href="https://github.com/mbloch/mapshaper/wiki/Command-Reference">MapShaper Wiki on GitHub</a> to learn more commands and see more examples.</p>
 </div>

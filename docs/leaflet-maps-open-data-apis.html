@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2021-02-24" />
+<meta name="date" content="2021-02-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -359,7 +359,7 @@ Figure 12.40: Explore the <a href="https://handsondataviz.github.io/leaflet-maps
 </div>
 <p>You can enable Leaflet to pull data from ArcGIS servers using a free <a href="https://github.com/Esri/esri-leaflet"><code>esri-leaflet</code></a> plugin.
 Data from Socrata can be pulled using jQuery’s <code>$.getJSON()</code> function,
-and then passed to Leaflet directly using <code>L.GeoJson()</code> function.</p>
+and then passed to Leaflet directly using <code>L.geoJSON()</code> function.</p>
 <p>To adapt this template for your own project:</p>
 <ol style="list-style-type: decimal">
 <li>Visit the <a href="https://github.com/HandsOnDataViz/leaflet-maps-open-data-apis">GitHub repository</a> that contains the code for the map in Figure <a href="leaflet-maps-open-data-apis.html#fig:leaflet-open-data">12.40</a>,
@@ -378,7 +378,7 @@ with the appropriate URL and icon:</li>
 <span id="cb34-8"><a href="leaflet-maps-open-data-apis.html#cb34-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb34-9"><a href="leaflet-maps-open-data-apis.html#cb34-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">function</span>(data) {</span>
 <span id="cb34-10"><a href="leaflet-maps-open-data-apis.html#cb34-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb34-11"><a href="leaflet-maps-open-data-apis.html#cb34-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">var</span> hospitals <span class="op">=</span> L<span class="op">.</span><span class="fu">geoJson</span>(data<span class="op">,</span> {</span>
+<span id="cb34-11"><a href="leaflet-maps-open-data-apis.html#cb34-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">var</span> hospitals <span class="op">=</span> L<span class="op">.</span><span class="fu">geoJSON</span>(data<span class="op">,</span> {</span>
 <span id="cb34-12"><a href="leaflet-maps-open-data-apis.html#cb34-12" aria-hidden="true" tabindex="-1"></a>      <span class="dt">pointToLayer</span><span class="op">:</span> <span class="kw">function</span>(feature<span class="op">,</span> latlng) {</span>
 <span id="cb34-13"><a href="leaflet-maps-open-data-apis.html#cb34-13" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> L<span class="op">.</span><span class="fu">marker</span>(latlng<span class="op">,</span> {</span>
 <span id="cb34-14"><a href="leaflet-maps-open-data-apis.html#cb34-14" aria-hidden="true" tabindex="-1"></a>          <span class="dt">icon</span><span class="op">:</span> L<span class="op">.</span><span class="fu">icon</span>({</span>

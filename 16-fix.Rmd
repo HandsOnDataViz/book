@@ -33,7 +33,7 @@ If you have a problem with one of our recommended digital tools, and have not fo
 - [Atom text editor documentation](https://atom.io/docs)
 - [Chart.js code library documentation](https://www.chartjs.org/)
 - [Datawrapper Academy support](https://academy.datawrapper.de/)
-- [GeoJson.io geodata editor - see Help menu](http://geojson.io/)
+- [GeoJson.io geodata editor - see Help menu](https://geojson.io/)
 - [GitHub.com and GitHub Desktop documentation](https://docs.github.com)
 - [Google My Maps support](https://support.google.com/mymaps)
 - [Google Sheets support](https://support.google.com/docs)
@@ -159,7 +159,7 @@ As we discussed in [Chapter 10: Edit and Host Code with GitHub](github.html), wo
 
 - Be careful when editing your code. A single typo---such as a missing comma, semicolon, or quotation mark, or parenthesis---can break your visualization. We understand how frustrated you may feel when this happens, because it's also happened to us, so take a short break and come back to your screen a bit later, with fresh eyes to help you find the problem.
 
-- Be patient. If edits to your visualization do *not* appear right away on GitHub Pages, wait up to 60 seconds (perhaps longer during busy periods) for the online platform to finish processing your edits. Then give your browser a "hard refresh" to [bypass any saved content in your cache](https://en.wikipedia.org/wiki/Wikipedia:Bypass_your_cache) and re-download the entire web page from the server, using one of these key combinations:
+- Be patient. GitHub Pages normally will process edits to your visualization within 30 seconds, but sometimes may require several minutes. Give your browser a "hard refresh" to [bypass any saved content in your cache](https://en.wikipedia.org/wiki/Wikipedia:Bypass_your_cache) and re-download the entire web page from the server, using one of these key combinations:
 
   - Ctrl + F5 (most Windows or Linux browsers)
   - Shift + Ctrl + R (Chromebook)

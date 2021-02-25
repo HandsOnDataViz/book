@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2021-02-24" />
+<meta name="date" content="2021-02-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -340,7 +340,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="table-datawrapper" class="section level2 unnumbered">
 <h2>Datawrapper Table with Sparklines</h2>
-<p>In this section, you’ll learn how to create an interactive table with <a href="https://datawrapper.de">Datawrapper</a>, the free online drag-and-drop visualization tool we previously introduced <a href="chart-design.html">to create charts in Chapter 6</a> and <a href="map-design.html">maps in Chapter 7</a>. You can start creating in Datawrapper right away in your browser, even without an account, but signing up for a free one will help you to keep your visualizations organized. Remember that you’ll probably still need a spreadsheet tool, such as Google Sheets, to compile and clean up data for large tables, but Datawrapper is the best tool to create and publish the interactive table online.</p>
+<p>In this section, you’ll learn how to create an interactive table with <a href="https://www.datawrapper.de">Datawrapper</a>, the free online drag-and-drop visualization tool we previously introduced <a href="chart-design.html">to create charts in Chapter 6</a> and <a href="map-design.html">maps in Chapter 7</a>. You can start creating in Datawrapper right away in your browser, even without an account, but signing up for a free one will help you to keep your visualizations organized. Remember that you’ll probably still need a spreadsheet tool, such as Google Sheets, to compile and clean up data for large tables, but Datawrapper is the best tool to create and publish the interactive table online.</p>
 <p>You’ll also learn how to create sparklines, or tiny line charts that quickly summarize data trends. This chart type was refined by Edward Tufte, a Yale professor and data visualization pioneer, who described sparklines as “datawords… intense, simple, word-sized graphics.”<a href="#fn39" class="footnote-ref" id="fnref39"><sup>39</sup></a> While Tufte envisioned sparklines on a static sheet of paper or PDF document, you’ll create them inside an interactive table, as shown in Figure <a href="table-datawrapper.html#fig:datawrapper-table">8.2</a>. Readers can search by keyword, sort columns in ascending or descending order, and scroll through pages of sparklines to quickly identify data trends that would be difficult to spot in a traditional numbers-only table.</p>
 
 <div class="figure"><span id="fig:datawrapper-table"></span>
@@ -358,7 +358,7 @@ Figure 8.2: Table with sparklines. Explore the <a href="https://datawrapper.dwcd
 </ol>
 <p>To simplify this tutorial, we downloaded <a href="https://data.worldbank.org/indicator/SP.DYN.LE00.IN">life expectancy at birth from 1960 to 2018 by nation, in CSV format, from the World Bank</a>, one of the open data repositories we listed in <a href="find.html">Chapter 3: Find and Question Your Data</a>. In our spreadsheet, we cleaned up the data, such as removing nations with 5 or fewer years of data reported over a half-century, as described in the Notes tab in the Google Sheet. Using the <a href="vlookup.html">VLookup spreadsheet method from Chapter 2</a>, we merged in columns of <a href="https://github.com/datawrapper/datawrapper/wiki/Country-flag-icons">two-letter nation codes and continents from Datawrapper</a>. We also created two new columns: one named <em>Life Expectancy 1960</em> (intentionally blank for the sparkline to come) and <em>Difference</em> (which calculates the difference between the earliest and the most recent year of data available, in most cases from 1960 to 2018). See the Notes tab in the Google Sheet for more details.</p>
 <ol start="2" style="list-style-type: decimal">
-<li><p>Go to <a href="https://datawrapper.de">Datawrapper</a>, click on <em>Start Creating</em>, and select <em>New Table</em> in the top navigation. You are not required to sign in, but if you wish to save your work, we recommend that you create a free account.</p></li>
+<li><p>Go to <a href="https://www.datawrapper.de">Datawrapper</a>, click on <em>Start Creating</em>, and select <em>New Table</em> in the top navigation. You are not required to sign in, but if you wish to save your work, we recommend that you create a free account.</p></li>
 <li><p>In the first <em>Upload Data</em> tab, select <em>Import Google Spreadsheet</em>, paste in the web address of our cleaned-up Google Sheet, and click <em>Proceed.</em> Your Google Sheet must be <em>shared</em> so that others can view it.</p></li>
 <li><p>Inspect the data in the <em>Check and Describe</em> tab. Make sure that the <em>First row as label</em> box is checked, then click <em>Proceed</em>.</p></li>
 <li><p>In the <em>Visualize</em> screen, under <em>Customize Table</em>, check two additional boxes: <em>Make Searchable</em> (so that users can search for nations by keyword) and <em>Stripe Table</em> (to make lines more readable).</p></li>

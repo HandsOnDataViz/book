@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2021-02-24" />
+<meta name="date" content="2021-02-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -342,7 +342,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>Images and R Code-chunk Formatting</h2>
 <p>View the underlying source code to understand how this page was composed at: <a href="https://github.com/HandsOnDataViz/book/blob/main/20.4-images.Rmd" class="uri">https://github.com/HandsOnDataViz/book/blob/main/20.4-images.Rmd</a></p>
 <p>In general, create high-resolution color screenshots with the paid SnagIt tool (to capture cursors) on a high-resolution Retina monitor (144 ppi) with tight cropping, and save in PNG format (preferred over JPG due to image loss). Save items into the <code>images</code> subfolder that corresponds with each chapter. Make sure that color images include high contrast and/or shading, because they will be converted to grayscale by the publisher for the print book. Write file names in lowercase with dashes (not spaces) and begin with keyword of relevant section to keep related images grouped together. Despite being in separate folders, avoid duplicate image file names across the book. Avoid numbering images since they may not match the final sequence.</p>
-<p>If we need to create side-by-side images, save each element using the root file name plus a suffix, and use Photoshop or <a href="http://Photopea.com" class="uri">http://Photopea.com</a> to combine images and also save in Photoshop format (.psd) in the images subfolder.</p>
+<p>If we need to create side-by-side images, save each element using the root file name plus a suffix, and use Photoshop or <a href="https://Photopea.com" class="uri">https://Photopea.com</a> to combine images and also save in Photoshop format (.psd) in the images subfolder.</p>
 <p>If a screenshot requires additional artwork or text for the HTML edition, make a copy of the original, modify using a graphics tool, and add the suffix <code>-annotated</code> to note that this version is annotated, save into the same folder with the same root file name, and use in the code-chunk image pathnames. In the publisher’s Figure Log we will point to the original image, and add a note to the annotated version as a guide for any artwork that they wish to redraw.</p>
 <p>Since large PNG images sometimes appear too large in the PDF edition, convert a copy into a smaller PDF image to fit better. To batch process several PNG images:</p>
 <ul>
@@ -367,7 +367,7 @@ images/chapter/image-part2.png
 (ref:keyword) Caption, with optional Markdown links, but no endnotes.
 
 {r keyword, fig.cap=&quot;(ref:keyword)&quot;}
-if(knitr::is_html_output(excludes=&quot;markdown&quot;)) knitr::include_url(&quot;http://pathname-to-interactive-version-keyword.html&quot;)
+if(knitr::is_html_output(excludes=&quot;markdown&quot;)) knitr::include_url(&quot;https://pathname-to-interactive-version-keyword.html&quot;)
 else knitr::include_graphics(&quot;pathname-to-static-version-keyword.png&quot;)</code></pre>
 <p>The first line generates an auto-numbered and clickable figure cross-reference call-out. Auto-numbering appears in <code>Figure x.x</code> format in HTML, PDF, and Word, but <code>Figure x</code> format in Markdown. (Word auto-number formatting can be changed with a reference.docx file.) This call-out is important because images in PDF output will “float” by design and may appear before or after the desired page.</p>
 <p>The second line contains the caption, with optional links in Markdown format. But do not insert endnotes with Zotero citation keys, since those will cause errors in the PDF edition. Insert detailed endnotes about sources for images in the body of the text, and use the caption for only a brief “Source:” mention.</p>
@@ -473,7 +473,7 @@ Figure B.9: Caption only appears in HTML version. View link to <a href="https://
 <tbody>
 <tr class="odd">
 <td><img src="images/20-bookdown/dougherty-jack-200.png" /></td>
-<td>About <a href="http://jackdougherty.org">Jack Dougherty</a></td>
+<td>About <a href="https://jackdougherty.org">Jack Dougherty</a></td>
 </tr>
 <tr class="even">
 <td><img src="images/20-bookdown/ilyankou-ilya-200.png" /></td>

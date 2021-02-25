@@ -6141,7 +6141,7 @@ tooltips to properly display your data:
     Sheets](https://docs.google.com/spreadsheets/d/1bKY6RSNOXnwUMbLclEwHC_E9meLmwlfTcnxOF85wUjA/edit#gid=0),
     or use your own data in a similar format.
 
-2.  Open [Datawrapper](https://datawrapper.de) and click to start a new
+2.  Open [Datawrapper](https://www.datawrapper.de) and click to start a new
     chart.
 
 3.  In the Datawrapper *Upload Data* screen, either copy and paste the
@@ -6230,7 +6230,7 @@ tooltips, bubble sizes, and colors to display your data:
     Sheets](https://docs.google.com/spreadsheets/d/1yiZ975_uXOTOd0OCAdrR_s-bQFs7za3dar69IXPo6Xg/edit#gid=0),
     or use your own data in a similar format.
 
-2.  Open [Datawrapper](https://datawrapper.de) and click to start a new
+2.  Open [Datawrapper](https://www.datawrapper.de) and click to start a new
     chart.
 
 3.  Follow steps 3-5 above to upload, check, and visualize the data as a
@@ -7697,7 +7697,7 @@ calculated this way: `(2019 - 2010) / 2010 * 100`.
     Comma-Separated Values (CSV) format to save the data to your local
     computer.
 
-2.  Open [Datawrapper](https://datawrapper.de), click on *Start
+2.  Open [Datawrapper](https://www.datawrapper.de), click on *Start
     Creating*, then the *New Map* button, and select *Symbol map* as
     shown in Figure <a href="#fig:datawrapper-symbolmap-start">7.35</a>.
 
@@ -7851,7 +7851,7 @@ easily recognizes US state names and abbreviations.
     Comma-Separated Values (CSV) format to save the data to your local
     computer.
 
-2.  Open [Datawrapper](https://datawrapper.de), click on *Start
+2.  Open [Datawrapper](https://www.datawrapper.de), click on *Start
     Creating*, then click the *New Map* button, and select *Choropleth
     map* as shown in Figure
     <a href="#fig:datawrapper-map-choose">7.41</a>. No login is required
@@ -8714,7 +8714,7 @@ next section.
 ## Datawrapper Table with Sparklines
 
 In this section, you’ll learn how to create an interactive table with
-[Datawrapper](https://datawrapper.de), the free online drag-and-drop
+[Datawrapper](https://www.datawrapper.de), the free online drag-and-drop
 visualization tool we previously introduced [to create charts in Chapter
 6](chart-design.html) and [maps in Chapter 7](map-design.html). You can
 start creating in Datawrapper right away in your browser, even without
@@ -8787,7 +8787,7 @@ calculates the difference between the earliest and the most recent year
 of data available, in most cases from 1960 to 2018). See the Notes tab
 in the Google Sheet for more details.
 
-1.  Go to [Datawrapper](https://datawrapper.de), click on *Start
+1.  Go to [Datawrapper](https://www.datawrapper.de), click on *Start
     Creating*, and select *New Table* in the top navigation. You are not
     required to sign in, but if you wish to save your work, we recommend
     that you create a free account.
@@ -14478,7 +14478,7 @@ each nation.
     Datawrapper mapping tool, go to *File &gt; Download* to export the
     first tab in *CSV format* to your computer.
 
-2.  Open the [Datawrapper visualization tool](https://datawrapper.de) in
+2.  Open the [Datawrapper visualization tool](https://www.datawrapper.de) in
     your browser and upload your CSV map data. Select *New Map*, select
     *Choropleth map*, and select *World*, then *Proceed*. In the *Add
     your data* screen, scroll down below the table and select the

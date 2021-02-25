@@ -3,7 +3,7 @@ View the underlying source code to understand how this page was composed at: htt
 
 In general, create high-resolution color screenshots with the paid SnagIt tool (to capture cursors) on a high-resolution Retina monitor (144 ppi) with tight cropping, and save in PNG format (preferred over JPG due to image loss). Save items into the `images` subfolder that corresponds with each chapter. Make sure that color images include high contrast and/or shading, because they will be converted to grayscale by the publisher for the print book. Write file names in lowercase with dashes (not spaces) and begin with keyword of relevant section to keep related images grouped together. Despite being in separate folders, avoid duplicate image file names across the book. Avoid numbering images since they may not match the final sequence.
 
-If we need to create side-by-side images, save each element using the root file name plus a suffix, and use Photoshop or http://Photopea.com to combine images and also save in Photoshop format (.psd) in the images subfolder.
+If we need to create side-by-side images, save each element using the root file name plus a suffix, and use Photoshop or https://Photopea.com to combine images and also save in Photoshop format (.psd) in the images subfolder.
 
 If a screenshot requires additional artwork or text for the HTML edition, make a copy of the original, modify using a graphics tool, and add the suffix `-annotated` to note that this version is annotated, save into the same folder with the same root file name, and use in the code-chunk image pathnames. In the publisher's Figure Log we will point to the original image, and add a note to the annotated version as a guide for any artwork that they wish to redraw.
 
@@ -37,7 +37,7 @@ Our solution relies on R code-chunk formatting for *most* images, with some exce
 (ref:keyword) Caption, with optional Markdown links, but no endnotes.
 
 {r keyword, fig.cap="(ref:keyword)"}
-if(knitr::is_html_output(excludes="markdown")) knitr::include_url("http://pathname-to-interactive-version-keyword.html")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://pathname-to-interactive-version-keyword.html")
 else knitr::include_graphics("pathname-to-static-version-keyword.png")
 ```
 
@@ -142,5 +142,5 @@ When creating images to appear as the same size in sequence, temporarily add a c
 
 | Co-Authors      | About Us      |
 | --------------- | ------------- |
-| ![](images/20-bookdown/dougherty-jack-200.png) | About [Jack Dougherty](http://jackdougherty.org) |
+| ![](images/20-bookdown/dougherty-jack-200.png) | About [Jack Dougherty](https://jackdougherty.org) |
 | ![](images/20-bookdown/ilyankou-ilya-200.png) | About [Ilya Ilyankou](https://github.com/ilyankou) |   

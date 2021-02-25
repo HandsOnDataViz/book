@@ -217,7 +217,7 @@ Once you have chosen the color palette for your visualization, ask yourself:
 
 1. Is there a conflict of meaning between colors and the phenomenon they represent? Am I using red to represent profit or green to represent death rate? This question is complex as colors carry different associations for different social groups and cultures, but try to exercise your best sensitivity.
 
-2. Can people with color blindness interpret your chart? Palettes that contain reds and greens, or yellows and blues can be challenging. Consider using [Color Oracle](http://www.colororacle.org/) or another simulator to make sure your visualization is accessible.
+2. Can people with color blindness interpret your chart? Palettes that contain reds and greens, or yellows and blues can be challenging. Consider using [Color Oracle](https://www.colororacle.org/) or another simulator to make sure your visualization is accessible.
 
 3. Will the colors be distinguishable in black-and-white? Even if you don't expect viewers printing your chart, they may. You can use Color Oracle or another simulator to check that your colors have different brightness levels and look distinguishable in grayscale. Figure \@ref(fig:design-principles-color) shows some good and bad examples of color use.
 
@@ -649,7 +649,7 @@ Create your own interactive scatter chart in Datawrapper, and edit the tooltips 
 
 1. Open our [Scatter Chart sample data in Google Sheets](https://docs.google.com/spreadsheets/d/1bKY6RSNOXnwUMbLclEwHC_E9meLmwlfTcnxOF85wUjA/edit#gid=0), or use your own data in a similar format.
 
-2. Open [Datawrapper](https://datawrapper.de) and click to start a new chart.
+2. Open [Datawrapper](https://www.datawrapper.de) and click to start a new chart.
 
 3. In the Datawrapper *Upload Data* screen, either copy and paste the link to the data tab of the Google Sheet above, or copy and directly paste in the data. Click *Proceed*.
 
@@ -694,7 +694,7 @@ Create your own interactive bubble chart in Datawrapper, and edit the tooltips, 
 
 1. Open our [Scatter Chart sample data in Google Sheets](https://docs.google.com/spreadsheets/d/1yiZ975_uXOTOd0OCAdrR_s-bQFs7za3dar69IXPo6Xg/edit#gid=0), or use your own data in a similar format.
 
-2. Open [Datawrapper](https://datawrapper.de) and click to start a new chart.
+2. Open [Datawrapper](https://www.datawrapper.de) and click to start a new chart.
 
 3. Follow steps 3-5 above to upload, check, and visualize the data as a *Scatter Plot* chart type.
 
@@ -730,7 +730,7 @@ But Tableau Public also has some drawbacks. First, it may take several minutes t
 In the next section we'll keep things simple by starting with the basics of Tableau Public, with step-by-step tutorials to create two different types of charts. First, you'll build on skills you already learned in the section above by building a [scatter chart in Tableau Public](scatter-tableau.html). Second, you'll learn how to create a [filtered line chart](filtered-line-tableau.html), which demonstrates more of the tool's strengths in interactive visualization design.
 
 ## - Scatter Chart {- #scatter-tableau}
-Scatter charts are best to show the relationship between two datasets, placed on the x- and y-axis, to reveal possible correlations. With Tableau Public, you can create an interactive scatter chart, where you can hover your cursor over points to view more details about the data. Organize your data in three columns, the same way as the [Datawrapper scatter chart tutorial](scatter-bubble-datawrapper.html): the first column for data labels, the second column for the x-axis, and the third column for the y-axis. Then you can create an interactive scatter chart as shown in Figure \@ref(fig:tableau-scatter), which illustrates a strong relationship between household income and test scores (above or below the national average for 6th grade math and English) in Connecticut public school districts. To learn more about the data and related visualizations, see Sean Reardon et al. at the [Stanford Education Data Archive](http://purl.stanford.edu/db586ns4974), Motoko Rich et al. at [The New York Times](http://www.nytimes.com/interactive/2016/04/29/upshot/money-race-and-success-how-your-school-district-compares.html), Andrew Ba Tran at [CT Mirror/TrendCT](https://web.archive.org/web/20190129101923/http://trendct.org/2016/05/06/wealth-and-grades-compare-connecticuts-school-districts/), and this [TrendCT GitHub repo](https://github.com/trendct-data/stanford-cepa).
+Scatter charts are best to show the relationship between two datasets, placed on the x- and y-axis, to reveal possible correlations. With Tableau Public, you can create an interactive scatter chart, where you can hover your cursor over points to view more details about the data. Organize your data in three columns, the same way as the [Datawrapper scatter chart tutorial](scatter-bubble-datawrapper.html): the first column for data labels, the second column for the x-axis, and the third column for the y-axis. Then you can create an interactive scatter chart as shown in Figure \@ref(fig:tableau-scatter), which illustrates a strong relationship between household income and test scores (above or below the national average for 6th grade math and English) in Connecticut public school districts. To learn more about the data and related visualizations, see Sean Reardon et al. at the [Stanford Education Data Archive](https://purl.stanford.edu/db586ns4974), Motoko Rich et al. at [The New York Times](https://www.nytimes.com/interactive/2016/04/29/upshot/money-race-and-success-how-your-school-district-compares.html), Andrew Ba Tran at [CT Mirror/TrendCT](https://web.archive.org/web/20190129101923/http://trendct.org/2016/05/06/wealth-and-grades-compare-connecticuts-school-districts/), and this [TrendCT GitHub repo](https://github.com/trendct-data/stanford-cepa).
 
 (ref:tableau-scatter) Scatter chart in Tableau Public: Explore the [interactive version](https://public.tableau.com/profile/jackdougherty#!/vizhome/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1). Data by [CT Mirror/TrendCT and Stanford CEPA](https://github.com/trendct-data/stanford-cepa).
 

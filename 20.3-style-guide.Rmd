@@ -1,7 +1,7 @@
 ## Style Guide for *Hands-On Data Visualization* {- #style-guide}
 View the underlying source code to understand how this page was composed at: https://github.com/HandsOnDataViz/book/blob/main/20.3-style-guide.Rmd
 
-We built *Hands-On Data Visualization* based largely on the [O'Reilly Style Guide](http://oreillymedia.github.io/production-resources/styleguide/), and also to match our needs for composing in R-flavored Markdown (.Rmd) and generating multiple book products through Bookdown. While we drafted chapters, we wanted to produce an HTML edition for the web that would display our embedded iframes to online charts and maps. We also needed to produce a PDF or Word version that displayed only static images, for our developmental editor to markup and provide feedback. Finally, we needed to produce a full-length Markdown file (.md) of the entire book that would easily convert all of our text, captions, and pathnames to static images for O'Reilly's publishing platform. Some of the notes below are stylistic or technical reminders to ourselves to write consistently as we worked on 16 chapters and more than 400 images.
+We built *Hands-On Data Visualization* based largely on the [O'Reilly Style Guide](https://oreillymedia.github.io/production-resources/styleguide/), and also to match our needs for composing in R-flavored Markdown (.Rmd) and generating multiple book products through Bookdown. While we drafted chapters, we wanted to produce an HTML edition for the web that would display our embedded iframes to online charts and maps. We also needed to produce a PDF or Word version that displayed only static images, for our developmental editor to markup and provide feedback. Finally, we needed to produce a full-length Markdown file (.md) of the entire book that would easily convert all of our text, captions, and pathnames to static images for O'Reilly's publishing platform. Some of the notes below are stylistic or technical reminders to ourselves to write consistently as we worked on 16 chapters and more than 400 images.
 
 In general, each chapter is a separate R-flavored Markdown (.Rmd) file. Each paragraph begins on a separate line. O'Reilly style guide prefers *italics* rather than bold. Use single back tics to display a monospaced `code` word. Insert `TODO` to note items to finish or review with co-author or editor.
 
@@ -43,7 +43,7 @@ Dashes:
 - Use an en-dash (2 dashes) for ranges, such as the May--September magazine issue.
 - Use an em-dash (3 dashes) to insert an additional thought---like this---in a sentence.
 
-Insert three back tics to insert a code block, limited to 81 character line length for Animal style book body in [O'Reilly style guide](http://oreillymedia.github.io/production-resources/styleguide/#line-length), like this:
+Insert three back tics to insert a code block, limited to 81 character line length for Animal style book body in [O'Reilly style guide](https://oreillymedia.github.io/production-resources/styleguide/#line-length), like this:
 
 ```
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
@@ -123,4 +123,4 @@ Cross-reference interactivity varies by output:
 - In PDF, all cross-refs are clickable (except chapter-level HTML links).
 - In Word, no cross-refs are clickable (unless this varies with reference.docx).
 
-When writing cross-references in the text, the [O'Reilly Style Guide](http://oreillymedia.github.io/production-resources/styleguide/#considering_electronic_formats) prefers live cross references (e.g., "see Figure 2-1"), but if not feasible, use "preceding" or "following" because physical placement of elements may vary across print and digital formats. *Avoid* using "above" or "below."
+When writing cross-references in the text, the [O'Reilly Style Guide](https://oreillymedia.github.io/production-resources/styleguide/#considering_electronic_formats) prefers live cross references (e.g., "see Figure 2-1"), but if not feasible, use "preceding" or "following" because physical placement of elements may vary across print and digital formats. *Avoid* using "above" or "below."

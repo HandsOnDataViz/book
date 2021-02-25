@@ -1,6 +1,6 @@
 ## Zotero and Better BibTeX for Notes and Biblio {- #zotero}
 
-Our Bookdown workflow uses the open-source [Zotero bibliography manager](http://zotero.org), with the [Better BibTeX extension](https://retorque.re/zotero-better-bibtex/), to simplify the process of citing sources and creating a bibliography. Rather than typing full references directly into the text, you can insert a short citation key into the book manuscript, and the tools will automatically generate the desired references in your preferred format (we like Chicago-style endnotes), with an alphabetized bibliography of all sources cited at the end.
+Our Bookdown workflow uses the open-source [Zotero bibliography manager](https://zotero.org), with the [Better BibTeX extension](https://retorque.re/zotero-better-bibtex/), to simplify the process of citing sources and creating a bibliography. Rather than typing full references directly into the text, you can insert a short citation key into the book manuscript, and the tools will automatically generate the desired references in your preferred format (we like Chicago-style endnotes), with an alphabetized bibliography of all sources cited at the end.
 
 After you've installed the tools, here's an overview of the workflow:
 
@@ -12,7 +12,7 @@ After you've installed the tools, here's an overview of the workflow:
 
 Here are more detailed instructions to install, set up, and use Zotero and Better BibTeX in a Bookdown workflow. Remember that this workflow may not be ideal for novice computer users. But if you have multiple citations, it will save you time in the long run.
 
-1. Download and install [Zotero](http://zotero.org) for Mac, Windows, or Linux. Add connectors to your preferred browsers to automatically upload bibliographic data for your sources.
+1. Download and install [Zotero](https://zotero.org) for Mac, Windows, or Linux. Add connectors to your preferred browsers to automatically upload bibliographic data for your sources.
 
 2. Install the [Better BibTeX extension](https://retorque.re/zotero-better-bibtex/installation/) and follow all of the site's instructions for initial setup.
 
@@ -57,7 +57,7 @@ In our Bookdown workflow, which uses the Chicago full-note bibliography style, t
 - Blog post -- But we avoid this because Zotero Chicago-style entry inserts "(blog)" into citation title. Instead, we prefer to reset the type to Web page.
 - Document -- Use this all-purpose entry in place of other types: Law case, Presentation, Interview, Video recording, Television broadcast, etc. Insert important details (such as the archival location information) in the Publisher field.
 
-To help other researchers find items cited in this book, include URLs in Zotero entries whenever feasible, even if not required by convention. For example, some print-only books and documents are hard to locate, so include an OCLC WorldCat permalink to make them easier to find (example: http://www.worldcat.org/oclc/20683509). Also, if a print source has been digitized by HathiTrust, Google Books, or the Internet Archive, add one of these URLs to the Zotero entry.
+To help other researchers find items cited in this book, include URLs in Zotero entries whenever feasible, even if not required by convention. For example, some print-only books and documents are hard to locate, so include an OCLC WorldCat permalink to make them easier to find (example: https://www.worldcat.org/oclc/20683509). Also, if a print source has been digitized by HathiTrust, Google Books, or the Internet Archive, add one of these URLs to the Zotero entry.
 
 Reminder: Chicago full-note works exactly as it was designed, meaning that the second instance of a citation currently appears as an abbreviated note (author, with title when appropriate).
 

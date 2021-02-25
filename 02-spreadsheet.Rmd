@@ -95,7 +95,7 @@ Your copy of the Google Sheet will be private to you only, by default. In the ne
 ## Share Your Google Sheets {- #share}
 If you're working on a collaborative project with other people, Google Sheets offers several ways to share your data online, even with people who do not own a Google account. When you create a new Sheet, its default setting is private, meaning only you can view or edit its contents. In this section, you'll learn how to expand those options using the *Share* button.
 
-1. Log into your [Google Drive account](http://drive.google.com), click the *New* button, select *Google Sheets*, and create a blank spreadsheet. You will need to name your file to proceed with next steps.
+1. Log into your [Google Drive account](https://drive.google.com), click the *New* button, select *Google Sheets*, and create a blank spreadsheet. You will need to name your file to proceed with next steps.
 
 2. Click the *Share* button in the upper-right corner, and your options will appear on the *Share with people and groups* screen, as shown in Figure \@ref(fig:share-screen).
 
@@ -113,7 +113,7 @@ Tip: If you don't want to send people a really long and ugly Google Sheet web ad
 
 `https://docs.google.com/spreadsheets/d/1egX_akJccnCSzdk1aaDdtrEGe5HcaTrlOW-Yf6mJ3Uo`
 
-then use a free link-shortening service. For example, by using our free [Bitly.com](http://bitly.com) account and its handy [Chrome browser extension](https://chrome.google.com/webstore/detail/bitly-unleash-the-power-o/iabeihobmhlgpkcgjiloemdbofjbdcic) or [Firefox browser extension](https://addons.mozilla.org/en-US/firefox/user/13352154/), we can paste in a long URL and customize the back-end to something shorter, such as [bit.ly/reader-responses](https://bit.ly/reader-responses), as shown in Figure \@ref(fig:link-shortening). If someone else has already claimed your preferred custom name, you'll need to think up a different one. Beware that `bit.ly` links are case-sensitive, so we prefer to customize the back-end in all lower-case to match the front-end.
+then use a free link-shortening service. For example, by using our free [Bitly.com](https://bitly.com) account and its handy [Chrome browser extension](https://chrome.google.com/webstore/detail/bitly-unleash-the-power-o/iabeihobmhlgpkcgjiloemdbofjbdcic) or [Firefox browser extension](https://addons.mozilla.org/en-US/firefox/user/13352154/), we can paste in a long URL and customize the back-end to something shorter, such as [bit.ly/reader-responses](https://bit.ly/reader-responses), as shown in Figure \@ref(fig:link-shortening). If someone else has already claimed your preferred custom name, you'll need to think up a different one. Beware that `bit.ly` links are case-sensitive, so we prefer to customize the back-end in all lower-case to match the front-end.
 
 (ref:link-shortening) Use a free link-shortening service, such as Bitly.com, and customize its back-end.
 

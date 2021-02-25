@@ -9,7 +9,7 @@ Currently, the most popular cookbook among coders is [GitHub](https://github.com
 
 When you create a brand-new repo, GitHub invites you to [Choose a License](https://choosealicense.com/). Two of the most popular open-source software licenses are the [MIT License](https://choosealicense.com/licenses/mit/), which is very permissive, and the [GNU General Public License version 3](https://choosealicense.com/licenses/gpl-3.0/), which mandates that any modifications be shared under the same license. The latter version is often described as a *copyleft* license that requires any derivatives of the original code to remain publicly accessible, in contrast to traditional *copyright* that favors private ownership. When you fork a copy of someone's open-source code on GitHub, look at the type of license they've chosen (if any), keep it in your version, and respect its terms.
 
-To be clear, the GitHub platform is also owned by a large company (Microsoft purchased it in 2018), and when using it to share or host code, you're also dependent on its tools and terms. But the magic of code templates is that you can migrate and host your work anywhere on the web. You could move to a competing repository-hosting service such as [GitLab](http://gitlab.com), or purchase your own domain name and server space through one of many web hosting services. Or you can choose a hybrid option, such as hosting your code on GitHub and choosing its custom domain option, to display it under a domain name that you've purchased from an internet service provider.
+To be clear, the GitHub platform is also owned by a large company (Microsoft purchased it in 2018), and when using it to share or host code, you're also dependent on its tools and terms. But the magic of code templates is that you can migrate and host your work anywhere on the web. You could move to a competing repository-hosting service such as [GitLab](https://gitlab.com), or purchase your own domain name and server space through one of many web hosting services. Or you can choose a hybrid option, such as hosting your code on GitHub and choosing its custom domain option, to display it under a domain name that you've purchased from an internet service provider.
 
 In the next section of this chapter, we will introduce basic steps to [copy, edit, and host a simple Leaflet map code template on GitHub](copy-leaflet.html). When you publish any chart or map code template by hosting it on GitHub Pages, you can easily [transform its online link into an iframe](gh-pages-link-to-iframe.html) that you can [embed on a secondary website, which we discussed in Chapter 9](embed.html). Later you'll learn how to [create a new GitHub repo and upload code files](create-repo.html).
 
@@ -18,7 +18,7 @@ This chapter introduces GitHub using its web browser interface, which works best
 If problems arise, turn to the [Fix Common Problems](fix.html) section in the appendix. All of us make mistakes and accidentally "break our code" from time to time, and it's a great way to learn how things work---and what to do when it doesn't work!
 
 ## Copy, Edit, and Host a Simple Leaflet Map Template {- #copy-leaflet}
-Now that you understand how [GitHub](http://github.com) code repositories are like a public cookbook of recipes, which anyone can copy and modify, let's get into the kitchen and start baking! In this section, we'll introduce you to a very simple code template based on [Leaflet](http://leafletjs.com), an open-source code library for creating interactive maps that are very popular in journalism, business, government, and higher education. Many people choose Leaflet because the code is freely available to everyone, relatively easy to use, and has an active community of supporters who regularly update it. But unlike drag-and-drop tools that we previously covered in [Chapter 7: Map Your Data](map.html), working with our Leaflet templates requires you to copy and edit a few lines of code before hosting it on the web. While no prior coding experience is necessary, it's helpful to know that these code templates as based on the three core languages that communicate with browsers: HyperText Markup Language (HTML), Cascading Style Sheets (CSS), and JavaScript. Furthermore, we can edit these code templates using the GitHub web interface, which means you can do this on any type of computer (Mac, Windows, Chromebook, etc.) with any modern web browser.
+Now that you understand how [GitHub](https://github.com) code repositories are like a public cookbook of recipes, which anyone can copy and modify, let's get into the kitchen and start baking! In this section, we'll introduce you to a very simple code template based on [Leaflet](https://leafletjs.com), an open-source code library for creating interactive maps that are very popular in journalism, business, government, and higher education. Many people choose Leaflet because the code is freely available to everyone, relatively easy to use, and has an active community of supporters who regularly update it. But unlike drag-and-drop tools that we previously covered in [Chapter 7: Map Your Data](map.html), working with our Leaflet templates requires you to copy and edit a few lines of code before hosting it on the web. While no prior coding experience is necessary, it's helpful to know that these code templates as based on the three core languages that communicate with browsers: HyperText Markup Language (HTML), Cascading Style Sheets (CSS), and JavaScript. Furthermore, we can edit these code templates using the GitHub web interface, which means you can do this on any type of computer (Mac, Windows, Chromebook, etc.) with any modern web browser.
 
 Here's an overview of the key steps you'll learn about GitHub in this section:
 
@@ -34,7 +34,7 @@ Your goal is to create your own version of this simple interactive map, with you
 if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://handsondataviz.github.io/leaflet-map-simple/") else knitr::include_graphics("images/10-github/leaflet-simple.png")
 ```
 
-1. Create your own free account on [GitHub](http://github.com). It may ask you to do a simple quiz to prove you're a human! If you don't see a confirmation message in your email, check your spam folder.
+1. Create your own free account on [GitHub](https://github.com). It may ask you to do a simple quiz to prove you're a human! If you don't see a confirmation message in your email, check your spam folder.
 
 Tip: Choose a GitHub username that's relatively short, and one that you'll be happy seeing in the web address of charts and maps you'll publish online. In other words, `DrunkBrownieChef6789` may not be the wisest choice for a username, if `BrownieChef` is also available.
 
@@ -72,7 +72,7 @@ The upper-left corner of the next screen will say `USERNAME/leaflet-map-simple` 
  knitr::include_graphics("images/10-github/leaflet-simple-index.png")
 ```
 
-If this is the first time you're looking at computer code, it may feel overwhelming, but relax! We've inserted several "code comments" to explain what's happening. The first block tells web browsers the formatting to read the rest of the page of code. The second block instructs the browser to load the [Leaflet](http://leafletjs.com) code library, the open-source software that constructs the interactive map. The third block describes where the map and title should be positioned on the screen. The good news is that you don't need to touch any of those blocks of code, so leave them as-is. But you do want to modify a few lines further below.
+If this is the first time you're looking at computer code, it may feel overwhelming, but relax! We've inserted several "code comments" to explain what's happening. The first block tells web browsers the formatting to read the rest of the page of code. The second block instructs the browser to load the [Leaflet](https://leafletjs.com) code library, the open-source software that constructs the interactive map. The third block describes where the map and title should be positioned on the screen. The good news is that you don't need to touch any of those blocks of code, so leave them as-is. But you do want to modify a few lines further below.
 
 6. To edit the code, click on the the pencil symbol in the upper-right corner, as shown in Figure \@ref(fig:leaflet-simple-edit).
 
@@ -140,7 +140,7 @@ Remember how we told you not to create your account with a username like `DrunkB
 
 Keep both tabs open so you can easily go back and forth between editing your code and viewing the live results online.
 
-Tip: If your live map does *not* appear right away, wait up to 30 seconds for GitHub Pages to finish processing your edits. Then give your browser a "hard refresh" to [bypass any saved content in your cache](https://en.wikipedia.org/wiki/Wikipedia:Bypass_your_cache) and re-download the entire web page from the server, using one of these key combinations:
+Tip: GitHub Pages usually displays your live map in less than 30 seconds, but in some cases it may require several minutes. If you see no change after one minute, give your browser a "hard refresh" to [bypass any saved content in your cache](https://en.wikipedia.org/wiki/Wikipedia:Bypass_your_cache) and re-download the entire web page from the server, using one of these key combinations:
 
   - Ctrl + F5 (most browsers for Windows or Linux)
   - Command + Shift + R (Chrome or Firefox for Mac)
@@ -185,22 +185,24 @@ Wherever you see the `EDIT` code comment, this points out a line that you can ea
 The next code block displays the basemap tile layer that serve as the map background. Our template uses a light map with all labels, publicly provided by CARTO, with credit to OpenStreetMap. One simple edit is to change `light_all` to `dark_all`, which will substitute a different CARTO basemap with inverted coloring. Or see many other Leaflet basemap code options that you can paste in at https://leaflet-extras.github.io/leaflet-providers/preview/. Make sure to attribute the source, and also keep `}).addTo(map);` at the end of this code block, which displays the basemap.
 
 ```
- L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-   attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a>,
-   &copy; <a href="https://carto.com/attribution">CARTO</a>'
+ L.tileLayer(
+   'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+     attribution: '&copy; <a href="https://osm.org/copyright">\
+      OpenStreetMap</a> contributors, &copy;\
+        <a href="https://carto.com/attribution">CARTO</a>'
  }).addTo(map);
 ```
 
 The last code block displays a single point marker on the map, colored blue by default in Leaflet, with a pop-up message when users click it. You can edit the marker coordinates, insert the pop-up text, or copy and paste the code block to create a second marker.
 
 ```
-L.marker([41.77, -72.69]).addTo(map) // EDIT coordinates to re-position marker
+L.marker([41.77, -72.69]).addTo(map) // EDIT marker coordinates
 .bindPopup("Insert pop-up text here"); // EDIT pop-up text message
 ```
 
 Warning: Be careful when editing your code. Accidentally removing or adding extra punctuation (such as quotation marks, commas, or semicolons) can stop your map from working. But breaking your code---and fixing it---can also be a great way to learn.
 
-15. After making edits, remember to scroll down and press the *Commit* button to save changes. Then go to your browser tab with the live map, and do a "hard refresh" to view changes. If your map edits do not appear right away, remember that GitHub Pages sometimes requires up to 30 seconds to process code edits. If you have problems, see the [Fix Common Problems](fix.html) section in the appendix.
+15. After making edits, remember to scroll down and press the *Commit* button to save changes. Then go to your browser tab with the live map, and do a "hard refresh" to view changes. Edits to your map normally will appear within 30 seconds, but remember that GitHub Pages sometimes requires longer to process code commits. If you have problems, see the [Fix Common Problems](fix.html) section in the appendix.
 
 Congratulations! If this is the first time that you've edited computer code and hosted it online, you can now call yourself a "coder". The process is similar to following and modifying a cookbook recipe, just like you also can call yourself a "chef" after baking your first batch of brownies! Although no one is likely to hire you as a full-time paid coder (or chef) at this early stage, you now understand several of the basic skills needed to copy, edit, and host code online, and you're ready to dive into the more advanced versions, such as [Chart.js and Highcharts templates in Chapter 11](chartcode.html) and [Leaflet map templates in Chapter 12](leaflet.html).
 
@@ -425,7 +427,7 @@ Congratulations! You've successfully navigated a round-trip journey of code, fro
 
 While you could have made the tiny code edit above in the GitHub web interface, hopefully you've begun to see many advantages of using GitHub Desktop and Atom Editor to edit code and push commits from your local computer. First, you can make more complex code modifications with Atom Editor, which includes search, find-and-replace, and other features to work more efficiently. Second, when you copy the repo to your local computer, you can quickly drag-and-drop multiple files and subfolders for complex visualizations, such as data, geography, and images. Third, depending on the type of code, you may be able to test how it works locally with your browser, before uploading your commits to the public web.
 
-Tip: Atom Editor has many built-in features that recognize and help you edit code, plus the option to install more [packages](https://atom.io/packages) in the Preferences menu. One helpful built-in tool is *Edit > Toggle Comments*, which automatically detects the coding language and converts the selected text from executable code to non-executed code comments. Another built-in tool is *Edit > Lines > Auto Indent*, which automatically cleans up selected text or an entire page of code for easier reading.
+Tip: Atom has many built-in commands to help you edit code. One is *View > Toggle Soft Wrap*, which adjusts the right-hand margin to make long code strings visible on your screen. A second command is *Edit > Toggle Comments*, which automatically detects the coding language and converts the selected text from executable code to non-executed code comments. A third command is *Edit > Lines > Auto Indent*, which cleans up code indentation to make it more readable. Finally, you can install many more [Atom packages](https://atom.io/packages) in the Preferences menu.
 
 GitHub also offers a powerful platform for collaborative projects. When two people work on a shared repository, one co-worker can "pull" the most recent version of the code to their local computer using GitHub Desktop, then "push" their edits (also called commits) back to the online GitHub repo. The other co-worker can "pull" and "push" from the same repo at the same time, though it's simpler if they work on different files or sections of code. Both can see the changes that the other person made by selecting the GitHub repo *Code* tab and selecting a specific commit, which can be viewed line-by-line in green (additions) or red (deletions), as shown in Figure \@ref(fig:compare-commits).
 

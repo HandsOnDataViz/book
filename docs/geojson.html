@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2021-02-24" />
+<meta name="date" content="2021-02-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -354,7 +354,7 @@ Figure 13.1: Geospatial data can be a raster grid of cells (on the left) or a ve
 <p>Since we focus on vector data in the several sections of this chapter, let’s take a look at some of its most common file formats, starting with GeoJSON, the format that works best with our recommended tools.</p>
 <div id="geojson-1" class="section level4 unnumbered">
 <h4>GeoJSON</h4>
-<p><a href="https://geojson.org">GeoJSON</a> is a popular map data format, based on an open-standard created in 2016, with file suffixes that end with <code>.geojson</code> or <code>.json</code>. The code snippet below represents a single point in GeoJSON format, with latitude of 41.76 and longitude of -72.67, and a <em>name</em> attribute (also known as a property) whose value is <em>Hartford</em>.</p>
+<p><a href="https://geojson.org">GeoJSON</a> is a popular map data format, based on an open-standard created in 2016, with file extensions that end with <code>.geojson</code> or <code>.json</code>. The code snippet below represents a single point in GeoJSON format, with latitude of 41.76 and longitude of -72.67, and a <em>name</em> attribute (also known as a property) whose value is <em>Hartford</em>.</p>
 <pre><code>{
   &quot;type&quot;: &quot;Feature&quot;,
   &quot;geometry&quot;: {
@@ -382,7 +382,7 @@ Figure 13.2: GitHub repositories automatically show a map preview for GeoJSON fi
 <div id="shapefiles" class="section level4 unnumbered">
 <h4>Shapefiles</h4>
 <p>The shapefile format was created in the 1990s by Esri, the company that develops
-ArcGIS software. Shapefiles typically appear in a folder of files with suffixes
+ArcGIS software. Shapefiles typically appear in a folder of files with extensions
 such as <code>.shp</code>, <code>.shx</code>, and <code>.dbf</code>, and the folder may be compressed into a <code>.zip</code> file.</p>
 <p>Government agencies commonly distribute map data in shapefile format. But the standard tools for editing
 shapefiles—ArcGIS and its free and open-source cousin, QGIS—are not as
@@ -405,7 +405,7 @@ You can convert your KML file into GeoJSON format with the <a href="geojsonio.ht
 <div id="mapinfo-tab" class="section level4 unnumbered">
 <h4>MapInfo TAB</h4>
 <p>The proprietary TAB format is created and supported by MapInfo, Esri’s competitor, and is designed to work well with MapInfo Pro
-GIS software. Similar to Esri’s shapefiles, MapInfo TAB files usually appear in a folder with suffixes that end with <code>.tab</code>, <code>.dat</code>, <code>.ind</code>, and some other files. Unfortunately, you will most likely need MapInfo Pro, QGIS, or ArcGIS to convert these to Shapefile or GeoJSON format.</p>
+GIS software. Similar to Esri’s shapefiles, MapInfo TAB files usually appear in a folder with extensions that end with <code>.tab</code>, <code>.dat</code>, <code>.ind</code>, and some other files. Unfortunately, you will most likely need MapInfo Pro, QGIS, or ArcGIS to convert these to Shapefile or GeoJSON format.</p>
 <p>We’ve mentioned only a handful of the most common geospatial file formats, and there is a myriad of <a href="https://en.wikipedia.org/wiki/GIS_file_formats">lesser-known formats</a>. Remember that GeoJSON is one of the best, most universal formats for your <em>vector</em> data,
 and we strongly recommend that you store and share your point, polyline, and polygon data in this format.
 In the next section, we will describe how to find GeoJSON boundary files for many locations around the globe.</p>

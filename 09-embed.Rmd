@@ -221,7 +221,7 @@ Assume that you're using self-hosted WordPress version 5.0 or above with the new
 #### Method B: More Steps, But More Reliable {-}
 Assume that you're using self-hosted WordPress, any version, with either the classic or block editor, and that you have author-level or above access to the site.
 
-1. First, the site administrator must install and activate the [iframe plugin](http://wordpress.org/plugins/iframe/), as shown in Figure \@ref(fig:wordpress-iframe-plugin). This plugin allows authors to embed iframe codes in a modified "shortcode" format surrounded by square brackets in this general format: `[iframe...]`.
+1. First, the site administrator must install and activate the [iframe plugin](https://wordpress.org/plugins/iframe/), as shown in Figure \@ref(fig:wordpress-iframe-plugin). This plugin allows authors to embed iframe codes in a modified "shortcode" format surrounded by square brackets in this general format: `[iframe...]`.
 
 (ref:wordpress-iframe-plugin) Install and activate the *iframe* plugin on a self-hosted WordPress site.
 

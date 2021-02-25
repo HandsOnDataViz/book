@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2021-02-24" />
+<meta name="date" content="2021-02-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -341,7 +341,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="mask-aggregate" class="section level2 unnumbered">
 <h2>Mask or Aggregate Sensitive Data</h2>
 <p>Even if individual-level data is legally and publicly accessible, each of us is responsible for making ethical decisions about if and how to use it when creating data visualizations. When working with sensitive data, some ethical questions to ask are: <em>What are the risks that publicly sharing individual-level data might cause more harm than good?</em> and <em>Is there a way to tell the same data story without publicly sharing details that may intrude on individual privacy?</em> There are no simple answers to these ethical questions, since every situation is different and requires weighing the risks of individual harm versus the benefits of broader knowledge about vital public issues. But this section clarifies some of the alternatives to blindly redistributing sensitive information, such as masking and aggregating individual-level data.</p>
-<p>Imagine that you’re exploring crime data and wish to create an interactive map about the frequency of different types of 911 police calls across several neighborhoods. If you search for <a href="http://www.opendatanetwork.com/search?q=police">public data about police calls</a>, as described in the <a href="open-data.html">Open Data section in this chapter</a>, you’ll see different policies and practices for sharing individual-level data published by police call centers. In many US states, information about victims of sexual crimes or child abuse (such as the address where police were sent) is considered confidential and exempt from public release, so it’s not included in the open data. But some police departments publish open data about calls with the full address for other types of crimes, in a format like this:</p>
+<p>Imagine that you’re exploring crime data and wish to create an interactive map about the frequency of different types of 911 police calls across several neighborhoods. If you search for <a href="https://www.opendatanetwork.com/search?q=police">public data about police calls</a>, as described in the <a href="open-data.html">Open Data section in this chapter</a>, you’ll see different policies and practices for sharing individual-level data published by police call centers. In many US states, information about victims of sexual crimes or child abuse (such as the address where police were sent) is considered confidential and exempt from public release, so it’s not included in the open data. But some police departments publish open data about calls with the full address for other types of crimes, in a format like this:</p>
 <pre><code>| Date  | Full Address | Category           |
 | Jan 1 | 1234 Main St | Aggravated Assault |</code></pre>
 <p>While this information is publicly available, it’s possible that you could cause some type of physical or emotional harm to the victims by redistributing detailed information about a violent crime with their full address in your data visualization.</p>

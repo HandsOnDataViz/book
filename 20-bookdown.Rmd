@@ -16,6 +16,14 @@ A conventional word processor could not continuously generate all of these produ
  knitr::include_graphics("images/20-bookdown/workflow.png")
 ```
 
+Here's a three-minute video that demonstrates the process:
+
+(ref:workflow-video) Short video of our Bookdown workflow. View [on YouTube](https://youtu.be/8uFABzUG6Lw).
+
+```{r workflow-video, fig.cap="(ref:workflow-video)"}
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://www.youtube.com/embed/8uFABzUG6Lw")
+```
+
 ### Bookdown Overview: Why and How? {-}
 We based our solution around [Bookdown](https://bookdown.org), an open-source package for the [R code project](https://www.r-project.org/) created by Yihui Xie at RStudio. Although many people use R for statistical analysis, the free [RStudio desktop application](https://rstudio.com/) also supports several innovative publishing solutions. Here's an overview of our workflow:
 

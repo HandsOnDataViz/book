@@ -356,6 +356,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 Figure B.1: Simplified workflow to compose, compile, and publish in multiple formats with Bookdown. Images from <a href="https://fileicons.org">Daniel Hendricks</a>, <a href="https://github.com/rstudio/hex-stickers/">RStudio</a>, and <a href="https://www.zotero.org/support/brand">Zotero</a>.
 </p>
 </div>
+<p>Here’s a three-minute video that demonstrates the process:</p>
+
+<div class="figure"><span id="fig:workflow-video"></span>
+<iframe src="https://www.youtube.com/embed/8uFABzUG6Lw" width="672" height="400px">
+</iframe>
+<p class="caption">
+Figure B.2: Short video of our Bookdown workflow. View <a href="https://youtu.be/8uFABzUG6Lw">on YouTube</a>.
+</p>
+</div>
 <div id="bookdown-overview-why-and-how" class="section level3 unnumbered">
 <h3>Bookdown Overview: Why and How?</h3>
 <p>We based our solution around <a href="https://bookdown.org">Bookdown</a>, an open-source package for the <a href="https://www.r-project.org/">R code project</a> created by Yihui Xie at RStudio. Although many people use R for statistical analysis, the free <a href="https://rstudio.com/">RStudio desktop application</a> also supports several innovative publishing solutions. Here’s an overview of our workflow:</p>
@@ -369,19 +378,19 @@ Figure B.1: Simplified workflow to compose, compile, and publish in multiple for
 <li>As we worked on the book manuscript, our developmental editor downloaded the PDF edition from our public GitHub repo to mark up with feedback. (Alternatively, some editors prefer to insert track-changes comments in the MS Word edition.)</li>
 <li>When we were ready to submit the final manuscript, we used Bookdown to create one full-length Markdown file of the entire book, which was compatible with the publisher’s <a href="https://docs.atlas.oreilly.com/writing_in_asciidoc.html">Atlas production platform</a>. However, this was a one-time file conversion, and edits we make to our Bookdown workflow will not appear in the publisher’s platform, unless they request a new file and convert it.</li>
 </ul>
-<p>Screenshots of two variations of the basic workflow appear in Figure <a href="bookdown.html#fig:workflow-desktop">B.2</a> and Figure <a href="bookdown.html#fig:workflow-atom">B.3</a>. The first displays how to compose the book using the R Studio built-in editor, and the second shows a very similar process using the <a href="https://atom.io">Atom text editor</a>, which we prefer. Learn more about <a href="github-desktop-atom.html">GitHub Desktop and Atom text editor in Chapter 10</a>.</p>
+<p>Screenshots of two variations of the basic workflow appear in Figure <a href="bookdown.html#fig:workflow-desktop">B.3</a> and Figure <a href="bookdown.html#fig:workflow-atom">B.4</a>. The first displays how to compose the book using the R Studio built-in editor, and the second shows a very similar process using the <a href="https://atom.io">Atom text editor</a>, which we prefer. Learn more about <a href="github-desktop-atom.html">GitHub Desktop and Atom text editor in Chapter 10</a>.</p>
 
 <div class="figure"><span id="fig:workflow-desktop"></span>
 <img src="images/20-bookdown/workflow-desktop.png" alt="Workflow on a Mac desktop: Compose the text in RStudio and build books with Bookdown (top left), manage sources and insert citation keys with Zotero + BetterBibTex (bottom left), push book products to your GitHub repository to host online (right)."  />
 <p class="caption">
-Figure B.2: Workflow on a Mac desktop: Compose the text in RStudio and build books with Bookdown (top left), manage sources and insert citation keys with Zotero + BetterBibTex (bottom left), push book products to your GitHub repository to host online (right).
+Figure B.3: Workflow on a Mac desktop: Compose the text in RStudio and build books with Bookdown (top left), manage sources and insert citation keys with Zotero + BetterBibTex (bottom left), push book products to your GitHub repository to host online (right).
 </p>
 </div>
 
 <div class="figure"><span id="fig:workflow-atom"></span>
 <img src="images/20-bookdown/workflow-atom.png" alt="Variation on the workflow above: Compose the text in your preferred editor (such as Atom), and use RStudio only to build the book products."  />
 <p class="caption">
-Figure B.3: Variation on the workflow above: Compose the text in your preferred editor (such as Atom), and use RStudio only to build the book products.
+Figure B.4: Variation on the workflow above: Compose the text in your preferred editor (such as Atom), and use RStudio only to build the book products.
 </p>
 </div>
 <p>Our Bookdown workflow met our goal to efficiently and continuously produce multiple book products. But it may not be ideal for everyone, especially novice computer users. Installation and setup requires several steps, as described in the following sections:</p>

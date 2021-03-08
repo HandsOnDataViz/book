@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2021-03-02" />
+<meta name="date" content="2021-03-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -398,7 +398,7 @@ Figure 10.3: Name your copied repo <code>leaflet-map-simple</code>.
 Figure 10.4: Click the index.html file to view the code.
 </p>
 </div>
-<p>If this is the first time you’re looking at computer code, it may feel overwhelming, but relax! We’ve inserted several “code comments” to explain what’s happening. The first block tells web browsers the formatting to read the rest of the page of code. The second block instructs the browser to load the <a href="https://leafletjs.com">Leaflet</a> code library, the open-source software that constructs the interactive map. The third block describes where the map and title should be positioned on the screen. The good news is that you don’t need to touch any of those blocks of code, so leave them as-is. But you do want to modify a few lines further below.</p>
+<p>If this is the first time you’re looking at computer code, it may feel overwhelming, but relax! We’ve inserted several “code comments” to explain what’s happening. The first block tells web browsers which formatting to apply to the rest of the page of code. The second block instructs the browser to load the <a href="https://leafletjs.com">Leaflet</a> code library, the open-source software that constructs the interactive map. The third block describes where the map and title should be positioned on the screen. The good news is that you don’t need to touch any of those blocks of code, so leave them as-is. But you do want to modify a few lines further below.</p>
 <ol start="6" style="list-style-type: decimal">
 <li>To edit the code, click on the the pencil symbol in the upper-right corner, as shown in Figure <a href="copy-leaflet.html#fig:leaflet-simple-edit">10.5</a>.</li>
 </ol>
@@ -502,7 +502,7 @@ Figure 10.11: Open and edit the <code>README</code> file to paste the link to yo
     scrollWheelZoom: false,
     tap: false
   });</code></pre>
-<p>The next code block displays the basemap tile layer that serve as the map background. Our template uses a light map with all labels, publicly provided by CARTO, with credit to OpenStreetMap. One simple edit is to change <code>light_all</code> to <code>dark_all</code>, which will substitute a different CARTO basemap with inverted coloring. Or see many other Leaflet basemap code options that you can paste in at <a href="https://leaflet-extras.github.io/leaflet-providers/preview/" class="uri">https://leaflet-extras.github.io/leaflet-providers/preview/</a>. Make sure to attribute the source, and also keep <code>}).addTo(map);</code> at the end of this code block, which displays the basemap.</p>
+<p>The next code block displays the basemap tile layer that serve as the map background. Our template uses a light map with all labels, publicly provided by CARTO, with credit to OpenStreetMap. One simple edit is to change <code>light_all</code> to <code>dark_all</code>, which will substitute a different CARTO basemap with inverted coloring. Or <a href="https://leaflet-extras.github.io/leaflet-providers/preview/">preview several other Leaflet basemap code options</a> that you can copy and paste. Make sure to attribute the source, and also keep <code>}).addTo(map);</code> at the end of this code block, which displays the basemap.</p>
 <pre><code> L.tileLayer(
    &#39;https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png&#39;, {
      attribution: &#39;&amp;copy; &lt;a href=&quot;https://osm.org/copyright&quot;&gt;\

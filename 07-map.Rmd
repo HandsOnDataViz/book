@@ -385,7 +385,7 @@ knitr::include_graphics("images/07-map/mymaps-gdrive.png")
 
 Google My Maps is a good first tool to learn for making interactive maps, especially point maps with custom icons. You can design maps with multiple layers of points, polylines, and basic polygons, if desired. But the overall map design and features are limited to what the Google My Maps platform offers. Learn more at the [Google My Maps support page](https://support.google.com/mymaps).
 
-In the next section, we will explore a more powerful tool called Datawrapper to create symbol point maps, where the size and color of each circle (or other shapes) represents data values for that specific point.
+In the next section, we'll explore how to use Datawrapper to create symbol point maps, where the size and color of each circle (or other shapes) represents data values for that specific point.
 
 ## Symbol Point Map with Datawrapper {- #symbolmap-datawrapper}
 We first introduced you to the free and easy-to-learn [Datawrapper tool in Chapter 6: Chart Your Data](chart-datawrapper.html). It's also offers powerful features to create different types of maps, with professional-looking design elements. With Datawrapper you can start to work right away in your browser, with no account required unless you wish to save and share your work online.

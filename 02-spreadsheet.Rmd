@@ -42,7 +42,7 @@ Spreadsheet tools organize data in different formats. When you download spreadsh
  knitr::include_graphics("images/02-spreadsheet/data-formats.png")
 ```
 
-Warning: Several tools in this book may not work properly on a Mac computer that does not display the filename extensions, meaning the abbreviated file format after the period, such as `data.csv` or `map.geojson`. The Mac operating system hides these by default, so you need to turn them on by going to Finder > Preferences > Advanced, and check the box to *Show all filename extensions*, as shown in Figure \@ref(fig:mac-file-extensions).
+Tip: The Mac computer hides filename extensions by default, meaning you may not be able to see the abbreviated file format after the period, such as `data.csv` or `map.geojson`. We recommend that you change this setting by going to Finder > Preferences > Advanced, and check the box to *Show all filename extensions*, as shown in Figure \@ref(fig:mac-file-extensions).
 
 (ref:mac-file-extensions) On a Mac, go to *Finder-Preferences-Advanced* and check the box to *Show all filename extensions*.
 
@@ -113,7 +113,7 @@ Tip: If you don't want to send people a really long and ugly Google Sheet web ad
 
 `https://docs.google.com/spreadsheets/d/1egX_akJccnCSzdk1aaDdtrEGe5HcaTrlOW-Yf6mJ3Uo`
 
-then use a free link-shortening service. For example, by using our free [Bitly.com](https://bitly.com) account and its handy [Chrome browser extension](https://chrome.google.com/webstore/detail/bitly-unleash-the-power-o/iabeihobmhlgpkcgjiloemdbofjbdcic) or [Firefox browser extension](https://addons.mozilla.org/en-US/firefox/user/13352154/), we can paste in a long URL and customize the back-end to something shorter, such as [bit.ly/reader-responses](https://bit.ly/reader-responses), as shown in Figure \@ref(fig:link-shortening). If someone else has already claimed your preferred custom name, you'll need to think up a different one. Beware that `bit.ly` links are case-sensitive, so we prefer to customize the back-end in all lower-case to match the front-end.
+then use a free link-shortening service. For example, by using our free [Bitly.com](https://bitly.com) account and its handy [Chrome browser extension](https://chrome.google.com/webstore/detail/bitly-unleash-the-power-o/iabeihobmhlgpkcgjiloemdbofjbdcic) or [Firefox browser extension](https://addons.mozilla.org/en-US/firefox/user/13352154/), we can paste in a long URL and customize the latter half to something shorter, such as [bit.ly/reader-responses](https://bit.ly/reader-responses), as shown in Figure \@ref(fig:link-shortening). If someone else has already claimed your preferred custom name, you'll need to think up a different one. Beware that `bit.ly` links are case-sensitive, so we prefer to customize the latter half in all lowercase to match the front half.
 
 (ref:link-shortening) Use a free link-shortening service, such as Bitly.com, and customize its back-end.
 

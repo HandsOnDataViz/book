@@ -40,7 +40,7 @@ If you have a problem with one of our recommended digital tools, and have not fo
 - [Highcharts code library - demo and support](https://www.highcharts.com)
 - [Leaflet map code library - tutorials and documentation](https://leafletjs.com)
 - [LibreOffice Calc support](https://help.libreoffice.org)
-- [Mapshaper geodata editor - documentation wiki](https://github.com/mbloch/mapshaper/wiki)
+- [Mapshaper geodata editor - documentation wiki](https://github.com/mbloch/mapshaper/wiki/Command-Reference)
 - [Map Warper georectifier help](https://mapwarper.net/help) and [see note about limited disk space](https://mapwarper.net)
 - [OpenRefine data cleaner - documentation](https://openrefine.org)
 - [Tabula PDF table extractor - how to use](https://tabula.technology)
@@ -180,7 +180,7 @@ When working with [Chart.js and Highcharts code templates in Chapter 11](chartco
 
 Remember that you can edit and test code templates more efficiently on your *local* computer, rather than upload every change to view on GitHub online. Use the [GitHub Desktop and Atom Editor tools as described in Chapter 10](github-desktop-atom.html). To fully view more complex Chart.js or Highcharts or Leaflet code templates on your *local* computer, you may need to temporarily manage your CORS internet security settings in your browser, as shown in Figure \@ref(fig:disable-cors-safari) and Figure \@ref(fig:disable-cors-chrome).
 
-Over time, code templates require maintenance to ensure that they will continue to work as technology evolves. For example, the code templates featured in this book all have *code dependencies*, which means they rely on other code or online services in order to operate. These dependencies include online code libraries that create charts and maps, such as Chart.js, Highcharts, Leaflet, and others. Also, map code templates depend on online map tiles from providers such as CARTO, Stamen, and OpenStreetMap. *If one of your online code dependencies is no longer operating*, your code template will stop working.
+Over time, code templates require maintenance to ensure that they will continue to work as technology evolves. For example, the code templates featured in this book all have *code dependencies*, which means they rely on other code or online services in order to operate. These dependencies include online code libraries that create charts and maps, such as Chart.js, Highcharts, Leaflet, and others. Also, map code templates depend on online map tiles from providers such as CARTO, Stamen, and OpenStreetMap. *If one of your online code dependencies is no longer operating*, your code template probably will stop working.
 
 To check if your code template has an issue with one of its online code dependencies, go back to the original GitHub repository where you made your copy. Check to see if the current online demo chart or map is properly functioning. If yes, then check to see if the original GitHub repo has had recent code updates that may solve your problem. Some code updates are very simple and can be typed directly into your repo through the GitHub web interface. But other code updates are more complex, so review how to "pull" code from a repo to your local computer using tools such as [GitHub Desktop in Chapter 10](github-desktop-atom.html).
 

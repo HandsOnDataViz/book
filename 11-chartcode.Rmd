@@ -32,7 +32,7 @@ Table: (\#tab:chart-templates) Chart Code Templates, Best Uses, and Tutorials
 
 
 ## Bar or Column Chart with Chart.js {- #chartjs-bar-column}
-In this section, we will show you how to create bar or column charts using a Chart.js. To do so, we will be using a Chart.js come template that pulls data from a CSV file, as shown in Figure \@ref(fig:chartjs-demo-bar). This column chart shows how many students in five school districts in Connecticut were English-language learners in 2018-2019 academic year.
+In this section, we will show you how to create bar or column charts using Chart.js. To do so, we will be using a Chart.js code template that pulls data from a CSV file, as shown in Figure \@ref(fig:chartjs-demo-bar). This column chart shows how many students in five school districts in Connecticut were English-language learners in 2018-2019 academic year.
 
 (ref:chartjs-demo-bar) Bar chart with Chart.js: explore the [interactive version](https://handsondataviz.github.io/chartjs-bar/index.html).
 

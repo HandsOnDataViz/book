@@ -33,9 +33,9 @@ Meanwhile, the US Census publishes data for current years by aggregating individ
 - State
 - County
 - County subdivisions (equivalent to Connecticut towns and cities)
-- Census tracts (designated areas, roughly 2,500 to 8,000 people)
-- Block groups (sub-unit of tracts, roughly 600 to 3,000 people)
-- Census blocks (sub-unit of block groups, but not always a city block)
+- Census tracts (designated areas, roughly 1,200--8,000 people)
+- Block groups (sub-unit of tracts, roughly 600--3,000 people)
+- Census blocks (sub-unit of block groups, but not always a city block)^[@rossiterWhatAreCensus2011]
 
 (ref:census-divisions-hartford) Common US census geographies around Hartford, Connecticut, 2019. Zoom out in the [interactive version](https://handsondataviz.github.io/census-divisions-hartford/) for county and state boundaries.
 
@@ -128,7 +128,7 @@ Over the past decade, an increasing number of governmental and non-governmental 
 Due to the recent growth of open data repositories, especially in governmental policy and scientific research, there is no single website that lists all of them. Instead, we list just a few sites from the US and around the globe to spark readers' curiosity and encourage you to dig deeper:
 
 - [Data.gov](https://www.data.gov/), the official repository for US federal government agencies.
-- [Data.census.gov](https://data.census.gov), the main platform to access US Census Bureau data. The Decennial Census is a full count of the population every ten years, while the American Community Survey (ACS) is an annual sample count that produces one-year, three-year, or five-year estimates for different census geographies, with margins of error.
+- [Data.census.gov](https://data.census.gov), the main platform to access US Census Bureau data. The Decennial Census is a full count of the population every ten years, while the American Community Survey (ACS) is an annual sample count that produces one-year and five-year estimates for different census geographies, with margins of error.
 - [Eurostat](https://ec.europa.eu/eurostat), the statistical office of the European Union.
 - [Federal Reserve Economic Research](https://fred.stlouisfed.org/), for US and international data.
 - [Global Open Data Index](https://index.okfn.org/dataset/), by the Open Knowledge Foundation.
@@ -179,12 +179,12 @@ A third step is to make a backup of the original data before cleaning or editing
 Make a habit of using these three sourcing strategies---filenames, notes, and backups---to increase the credibility and replicability of your data visualizations. In the next section, we'll explore more ways to reduce your chances of making "bad data" errors.
 
 ## Recognize Bad Data {- #bad-data}
-When your data search produces some results, another key step is to open the file, quickly scroll through the content, and look for any warning signs that it might contain "bad data." If you fail to catch a problem in your data at an early stage, it could lead to false conclusions and diminish the credibility of all of your work. Fortunately, members of the data visualization community have shared multiple examples of problems we've previously encountered, to help save newer members from making the same embarrassing mistakes. One popular crowd-sourced compilation by data journalists was [The Quartz Guide to Bad Data](https://github.com/Quartz/bad-data-guide), last updated in 2018. Watch out for spreadsheets containing these "bad data" warning signs:
+When your data search produces some results, another key step is to open the file, quickly scroll through the content, and look for any warning signs that it might contain "bad data." If you fail to catch a problem in your data at an early stage, it could lead to false conclusions and diminish the credibility of all of your work. Fortunately, members of the data visualization community have shared multiple examples of problems we've previously encountered, to help save newer members from making the same embarrassing mistakes. One popular crowd-sourced compilation by data journalists was [The Quartz Guide to Bad Data](https://github.com/Quartz/bad-data-guide). Watch out for spreadsheets containing these "bad data" warning signs:
 
 - Missing values: If you see blank or "null" entries, does that mean data was not collected? Or maybe a respondent did not answer? If you're unsure, find out from the data creator. Also beware when humans enter a `0` or `-1` to represent a missing value, without thinking about its consequences on running spreadsheet calculations, such as SUM or AVERAGE.
 - Missing leading zeros: One of the zip codes for Hartford, Connecticut is `06106`. If someone converts a column of zip codes to numerical data, it will strip out the leading zero and appear as `6106`. Similarly, the US Census Bureau lists every place using a FIPS code, and some of these also begin with a meaningful zero character. For example, the FIPS code for Los Angeles County, California is `037`, but if someone accidentally converts a column of text to numbers, it will strip out the leading zero and convert that FIPS code to `37`, which may break some functions that rely on this code being a 3-digit number, or may make some people interpret it as a 2-digit state code for North Carolina instead.
 - 65536 rows or 255 columns: These are the maximum number of rows supported by older-style Excel spreadsheets, or columns supported by Apple Numbers spreadsheet, respectively. If your spreadsheet stops exactly at either of these limits, you probably have only partial data. As we wrote this, [the BBC reported that Public Health England lost thousands of Covid test results](https://www.bbc.com/news/technology-54423988) due to this row limit in older Excel spreadsheets.
-- Inconsistent date formats: For example, November 3rd, 2020 is commonly entered in spreadsheets in the US as `11/3/2020` (month-date-year), while people in other locations around the globe commonly type it as `3/11/2020` (date-month-year). Check your source.
+- Inconsistent date formats: For example, November 3rd, 2020 is commonly entered in spreadsheets in the US as `11/3/2020` (month-day-year), while people in other locations around the globe commonly type it as `3/11/2020` (day-month-year). Check your source.
 - Dates such as January 1st 1900, 1904, or 1970: These are default timestamps in Excel spreadsheets and Unix operating systems, which may indicate the actual date was blank or overwritten.
 - Dates similar to `43891`: When you type `March 1` during the year 2020 into Microsoft Excel, it automatically displays as `1-Mar`, but is saved using Excel's internal date system as `43891`. If someone converts this column from date to text format, you'll see Excel's 5-digit number, not the dates you're expecting.
 

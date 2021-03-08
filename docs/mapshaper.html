@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2021-03-02" />
+<meta name="date" content="2021-03-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -444,7 +444,7 @@ Figure 13.11: Consider simplifying geometries with Mapshaper to make your web ma
 </div>
 <p>To simplify map boundaries in Mapshaper, follow the steps below.</p>
 <ol style="list-style-type: decimal">
-<li><p>Import your geodata file to Mapshaper. You can use the <a href="data/lower-48.geojson">sample contiguous US states GeoJSON</a>.</p></li>
+<li><p>Import your geodata file to Mapshaper. You can use the <a href="data/lower-48.geojson">sample contiguous US states in GeoJSON format</a>.</p></li>
 <li><p>Click the <em>Simplify</em> button in the upper-right corner. The Simplification menu will appear,
 where you can choose one of three methods. We recommend checking <em>prevent shape removal</em>, and leaving
 the default <em>Visvalingam / weighted area</em>. Click <em>Apply</em>.</p></li>
@@ -549,7 +549,7 @@ In our example, first you would <code>-rename-fields name=town</code> to your CS
 <p>Mapshaper lets you count points in polygons, and record that number in polygon attributes using <code>-join</code> command.</p>
 <ol style="list-style-type: decimal">
 <li><p>Download two sample GeoJSON files to your computer: the points that you want to aggregate, such as <a href="data/hospitals-points.geojson">hospital points in the US</a>, and polygon boundaries, such as <a href="data/us-states.geojson">US state boundaries</a>. Import both into Mapshaper.</p></li>
-<li><p>Make sure polygons (not points) are the active layer from selecting it from the dropdown menu.</p></li>
+<li><p>Make sure you choose “polygons” (not points) for the active layer by selecting it from the dropdown menu.</p></li>
 <li><p>In the <em>Console</em>, do a <code>-join</code> command using a <code>count()</code> function, like this:</p></li>
 </ol>
 <p><code>-join hospitals-points calc='hospitals = count()' fields=</code></p>

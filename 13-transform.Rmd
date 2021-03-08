@@ -208,9 +208,8 @@ Polygons are used to define boundaries, including small and large geographical a
 8. Use the *Edit layers* tool (above *Delete*) to move a marker to a better position,
 or adjust the shapes of your features.
 
-After you have created features and their physical boundaries, add
-meaningful attribution data. Use the interactive popups or the Table view to
-give objects names and other properties. When finished, save the GeoJSON file to your computer.
+9. After you have created features and their physical boundaries, add
+meaningful attribution data. Use the interactive popups or the Table view to give objects names and other properties. When finished, save the GeoJSON file to your computer.
 
 You can also use drawing tools to edit existing GeoJSON files. For example,
 if you created a GeoJSON from a CSV file, you might decide to move some markers
@@ -340,7 +339,7 @@ knitr::include_graphics("images/13-transform/mapshaper-simplify-demo-annotated.p
 
 To simplify map boundaries in Mapshaper, follow the steps below.
 
-1. Import your geodata file to Mapshaper. You can use the [sample contiguous US states GeoJSON](data/lower-48.geojson).
+1. Import your geodata file to Mapshaper. You can use the [sample contiguous US states in GeoJSON format](data/lower-48.geojson).
 
 2. Click the *Simplify* button in the upper-right corner. The Simplification menu will appear,
 where you can choose one of three methods. We recommend checking *prevent shape removal*, and leaving
@@ -459,7 +458,7 @@ Mapshaper lets you count points in polygons, and record that number in polygon a
 
 1. Download two sample GeoJSON files to your computer: the points that you want to aggregate, such as [hospital points in the US](data/hospitals-points.geojson), and polygon boundaries, such as [US state boundaries](data/us-states.geojson). Import both into Mapshaper.
 
-2. Make sure polygons (not points) are the active layer from selecting it from the dropdown menu.
+2. Make sure you choose "polygons" (not points) for the active layer by selecting it from the dropdown menu.
 
 3. In the *Console*, do a `-join` command using a `count()` function, like this:
 
@@ -626,7 +625,7 @@ knitr::include_graphics("images/13-transform/mapwarper.png")
 
 7. You can copy and paste this special Tiles URL into the [Leaflet Storymaps with Google Sheets template as described in Chapter 12](leaflet-storymaps-with-google-sheets.html), or other web map tools or code templates that display overlay maps in this format. But it will not work if you paste it into a regular web browser.
 
-You can search for historical maps that have already been georeferenced and transformed into tiles, or contribute to crowdsourcing efforts to align maps, on platforms such as [Map warper](https://mapwarper.net), the [New York Public Library Map Warper](http://maps.nypl.org/warper/).
+You can search for historical maps that have already been georeferenced and transformed into tiles, or contribute to crowdsourcing efforts to align maps, on platforms such as [Map warper](https://mapwarper.net) and the [New York Public Library Map Warper](http://maps.nypl.org/warper/).
 
 ## Bulk Geocode with US Census {- #bulk-geocode}
 In Chapter 2: Strengthen Your Spreadsheet Skills, you learned [how to geocode addresses with a Google Sheets Add-On](geocode.html) called [Geocoding by SmartMonkey](https://gsuite.google.com/marketplace/app/geocoding_by_smartmonkey/1033231575312). Geocoding converts street addresses to latitude-longitude coordinates (such as *300 Summit St, Hartford CT, USA* to *41.75, -72.69*) that can be placed on maps. While the Geocoding by SmartMonkey Add-On for Google Sheets works well for medium-sized batches of addresses, sometimes you need a faster geocoding service for larger jobs.

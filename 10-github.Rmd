@@ -72,7 +72,7 @@ The upper-left corner of the next screen will say `USERNAME/leaflet-map-simple` 
  knitr::include_graphics("images/10-github/leaflet-simple-index.png")
 ```
 
-If this is the first time you're looking at computer code, it may feel overwhelming, but relax! We've inserted several "code comments" to explain what's happening. The first block tells web browsers the formatting to read the rest of the page of code. The second block instructs the browser to load the [Leaflet](https://leafletjs.com) code library, the open-source software that constructs the interactive map. The third block describes where the map and title should be positioned on the screen. The good news is that you don't need to touch any of those blocks of code, so leave them as-is. But you do want to modify a few lines further below.
+If this is the first time you're looking at computer code, it may feel overwhelming, but relax! We've inserted several "code comments" to explain what's happening. The first block tells web browsers which formatting to apply to the rest of the page of code. The second block instructs the browser to load the [Leaflet](https://leafletjs.com) code library, the open-source software that constructs the interactive map. The third block describes where the map and title should be positioned on the screen. The good news is that you don't need to touch any of those blocks of code, so leave them as-is. But you do want to modify a few lines further below.
 
 6. To edit the code, click on the the pencil symbol in the upper-right corner, as shown in Figure \@ref(fig:leaflet-simple-edit).
 
@@ -182,7 +182,7 @@ Wherever you see the `EDIT` code comment, this points out a line that you can ea
   });
 ```
 
-The next code block displays the basemap tile layer that serve as the map background. Our template uses a light map with all labels, publicly provided by CARTO, with credit to OpenStreetMap. One simple edit is to change `light_all` to `dark_all`, which will substitute a different CARTO basemap with inverted coloring. Or see many other Leaflet basemap code options that you can paste in at https://leaflet-extras.github.io/leaflet-providers/preview/. Make sure to attribute the source, and also keep `}).addTo(map);` at the end of this code block, which displays the basemap.
+The next code block displays the basemap tile layer that serve as the map background. Our template uses a light map with all labels, publicly provided by CARTO, with credit to OpenStreetMap. One simple edit is to change `light_all` to `dark_all`, which will substitute a different CARTO basemap with inverted coloring. Or [preview several other Leaflet basemap code options](https://leaflet-extras.github.io/leaflet-providers/preview/) that you can copy and paste. Make sure to attribute the source, and also keep `}).addTo(map);` at the end of this code block, which displays the basemap.
 
 ```
  L.tileLayer(
@@ -305,7 +305,7 @@ So far, you've learned how to copy, edit, and host code using the GitHub web int
 ## GitHub Desktop and Atom Editor to Code Efficiently {- #github-desktop-atom}
 Editing your code through the GitHub web interface is a good way to start, especially if you only need to make a few edits or upload a couple of files to your repo. But the web interface will feel very slow if you edit or upload multiple files in your repo. To speed up your work, we recommend that you download two free tools---[GitHub Desktop](https://desktop.github.com) and [Atom Text Editor](https://atom.io)---which run on Mac or Windows computers. When you connect your GitHub web account to GitHub Desktop, it allows you to "pull" the most recent version of the code to your local computer's hard drive, make and test your edits, and "push" your commits back to your GitHub web account. Atom Text Editor, which is also created by the makers of GitHub, allows you to view and edit code repos on your local computer more easily than the GitHub web interface. While there are many text editors for coders, Atom is designed to work well with GitHub Desktop.
 
-Tip: Currently, neither GitHub Desktop nor Atom Editor are supported for Chromebooks, but [Google's Web Store](https://chrome.google.com/webstore) offers several text editors, such as Text and Caret, which offer some of the functionality described below.
+Tip: Currently, neither GitHub Desktop nor Atom Editor are supported for Chromebooks, but [Chrome's Web Store](https://chrome.google.com/webstore) offers several text editors, such as Text and Caret, which offer some of the functionality described below.
 
 Let's use GitHub Desktop to pull a copy of your `leaflet-map-simple` template to your local computer, make some edits in Atom Editor, and push your commits back up to GitHub.
 

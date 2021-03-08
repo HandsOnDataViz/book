@@ -86,7 +86,7 @@ knitr::include_graphics("images/04-clean/sheets-find-replace-annotated.png")
 ```
 
 ## Transpose Rows and Columns {- #transpose}
-Sometimes you download good data, but your visualization tool requires you to transpose, or swap the rows and the columns, in order to create the chart or map you desire. This problem often arises when working with time-series or historical data, because tables and charts approach them in opposite directions. When designing a table, the proper method is to place dates horizontally as column headers, so that we read them from left-to-right, like this:^[@fewShowMeNumbers2012, p. 166]
+Sometimes you download good data, but your visualization tool requires you to transpose, or swap the rows and the columns, in order to create the chart or map you desire. This problem often arises when working with time-series or historical data, because they are treated in opposite ways in tables and charts. When designing a table, the proper method is to place dates horizontally as column headers, so that we read them from left-to-right, like this:^[@fewShowMeNumbers2012, p. 166]
 
 ```
 | Year    | 2000 | 2010 | 2020 |
@@ -419,7 +419,7 @@ You will have a choice of two clustering methods, *key collision* or *nearest ne
 clustering is a much faster technique that is appropriate for larger datasets, but it is less flexible.
 Nearest neighbor is a more computationally expensive approach and will be slow on larger datasets,
 but it allows for greater fine-tuning and precision. Both methods can be powered by different functions,
-which you can read about [on the project's Wiki page](https://github.com/OpenRefine/OpenRefine/wiki/Clustering-In-Depth). For the purpose of this exercise, let's leave the default *key collision* method with *fingerprint* function.
+which you can read about [on the project's GitHub Wiki page](https://github.com/OpenRefine/OpenRefine/wiki/Clustering-In-Depth). For the purpose of this exercise, let's leave the default *key collision* method with *fingerprint* function.
 
 OpenRefine will calculate a list of clusters. The *Values in Cluster* column contains grouped spellings
 that OpenRefine considers the same.
@@ -448,6 +448,5 @@ learn more formulas in Google Sheets, and explore extra functionality of OpenRef
 in your spare time. The more clean-up tools and techniques you know, the more able and adaptable
 you become to tackle more complex cases.
 
-You now know how to clean up your data, so let's proceed to visualizing it.
-In the following chapter, we will introduce you to a range of free data visualization
-tools that you can use to build interactive charts and embed them in your website.
+You now know how to clean up your data, so let's proceed to the next step before visualizing it.
+In the following chapter, we'll talk about why you should normalize data and use precise language to make meaningful comparisons.

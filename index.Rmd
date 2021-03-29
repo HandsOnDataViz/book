@@ -25,6 +25,7 @@ output:
     split_by: section
     number_sections: true
     split_bib: true
+    anchor_sections: true
     config:
       toc:
         scroll_highlight: yes

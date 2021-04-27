@@ -36,7 +36,7 @@ output:
           <li style="padding: 10px 15px; font-weight: bold;">Open-access web edition</li>
           <li><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a></li>
           <li><a href="https://bookdown.org" target="_blank">Built with Bookdown + RStudio</a></li>
-      view: https://github.com/handsondataviz/book/blob/master/%s
+      view: https://github.com/handsondataviz/book/blob/main/%s
       search: yes
       sharing:
         twitter: yes
@@ -69,6 +69,8 @@ options(knitr.graphics.auto_pdf = TRUE)
 Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You'll also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub.
 
 *Hands-On Data Visualization* takes you step-by-step through tutorials, real-world examples, and online resources. This book is ideal for students, educators, community activists, non-profit organizations, small business owners, local governments, journalists, researchers, or anyone who wants to take data out of spreadsheets and turn it into lively interactive stories. No coding experience is required.
+
+![Buy the book and get a free belly scratcher!](images/0-preface/belly-scratcher.gif)
 
 **Buy the book** at [Amazon](https://www.amazon.com/Hands-Data-Visualization-Storytelling-Spreadsheets/dp/1492086002/) - [Barnes & Noble](https://www.barnesandnoble.com/w/hands-on-data-visualization-jack-dougherty/1137725933) - [Bookshop](https://bookshop.org/books/hands-on-data-visualization-interactive-storytelling-from-spreadsheets-to-code/9781492086000) - [O'Reilly](https://learning.oreilly.com/library/view/hands-on-data-visualization/9781492085997/) - [Powell's](https://www.powells.com/book/hands-on-data-visualization-9781492086000) - your local bookstore
 

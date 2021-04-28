@@ -3,6 +3,11 @@ iframe {
   border: 0;
 }
 
+/* add spacing between References */
+div.csl-entry {
+  margin-bottom: 15px
+}
+
 p.caption {
   margin-top: 10px;
   margin-left: 20px;

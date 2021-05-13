@@ -108,7 +108,7 @@ Tip: If you wish to store your code on GitHub but need to scale up to a larger c
  knitr::include_graphics("images/10-github/leaflet-simple-settings.png")
 ```
 
-10. In the Settings screen, scroll way down to the GitHub Pages area. In the drop-down menu, change *Source* from *None* to *Main*, keep the default */(root)* option in the middle, and press *Save* as shown in Figure \@ref(fig:leaflet-github-pages-main). This step tells GitHub to publish a live version of your map on the public web, where anyone can access it in their browser, if they have the web address.
+10. In the Settings screen, navigate to Pages tab from the left-hand side menu. In the Pages tab, change *Source* from *None* to *main*, keep the default */(root)* option in the middle, and press *Save* as shown in Figure \@ref(fig:leaflet-github-pages-main). This step tells GitHub to publish a live version of your map on the public web, where anyone can access it in their browser, if they have the web address.
 
 (ref:leaflet-github-pages-main) In *Settings*, go to *GitHub Pages*, and switch the source from *None* to *Main*.
 
@@ -116,9 +116,9 @@ Tip: If you wish to store your code on GitHub but need to scale up to a larger c
 knitr::include_graphics("images/10-github/leaflet-github-pages-main.png")
 ```
 
-Tip: In response to the Black Lives Matter movement in 2020, [GitHub renamed its default branch](https://github.com/github/renaming) from *master* to *main* to eliminate its master-slave metaphor.
+Tip: In response to the Black Lives Matter movement in 2020, [GitHub renamed its default branch](https://github.com/github/renaming) from *master* to *main* to eliminate the [master-slave metaphor](https://en.wikipedia.org/wiki/Master/slave_%28technology%29) commonly used in computer science.
 
-11. Scroll back down to *Settings > GitHub Pages* to see the web address where your live map has been published online, and right-click it to open in a new browser tab, as shown in Figure \@ref(fig:leaflet-github-pages-link).
+11. The page will automatically refresh, and you should see the web address where your live map has been published online. Right-click the link and open it in the new browser tab, as shown in Figure \@ref(fig:leaflet-github-pages-link).
 
 (ref:leaflet-github-pages-link) In *Settings* for *GitHub Pages*, right-click your published map link to open in a new tab.
 

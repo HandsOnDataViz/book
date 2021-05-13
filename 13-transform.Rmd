@@ -359,7 +359,7 @@ the map looks appropriate (when the shapes are still recognizable).
 knitr::include_graphics("images/13-transform/mapshaper-simplify.png")
 ```
 
-Tip: Tip: When you upload a geographic file to Mapshaper, you may need to change its projection to align with your visualization tools or related geodata. Click to open the *Console* and type `-proj webmercator` (or `-proj EPSG:3857`) to change the projection to Web Mercator, the format commonly used by Google Maps and other web mapping tools.
+Tip: Tip: When you upload a geographic file to Mapshaper, you may need to change its projection to align with your visualization tools or related geodata. Click to open the *Console* and type `-proj wgs84` (or `-proj EPSG:4326`) to change the projection to Web Mercator, the format commonly used by Google Maps and other web mapping tools.
 
 #### Dissolve internal polygons to create an outline map {-}
 

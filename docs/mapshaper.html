@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2021-04-29" />
+<meta name="date" content="2021-05-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,7 +34,7 @@
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="geojsonio.html"/>
 <link rel="next" href="convert-kmz.html"/>
-<script src="libs/header-attrs-2.7/header-attrs.js"></script>
+<script src="libs/header-attrs-2.8/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -486,7 +486,7 @@ the map looks appropriate (when the shapes are still recognizable).</p></li>
 Figure 13.12: Use Simplify &amp; Repair tools in Mapshaper.
 </p>
 </div>
-<p>Tip: Tip: When you upload a geographic file to Mapshaper, you may need to change its projection to align with your visualization tools or related geodata. Click to open the <em>Console</em> and type <code>-proj webmercator</code> (or <code>-proj EPSG:3857</code>) to change the projection to Web Mercator, the format commonly used by Google Maps and other web mapping tools.</p>
+<p>Tip: When you upload a geographic file to Mapshaper, you may need to change its projection to align with your visualization tools or related geodata. Click to open the <em>Console</em> and type <code>-proj wgs84</code> (or <code>-proj EPSG:4326</code>) to change the projection to World Geodetic System 84 (wgs84), the format used by the Global Positioning System (GPS) to display geocoordinates around the world.</p>
 </div>
 <div id="dissolve-internal-polygons-to-create-an-outline-map" class="section level4 unnumbered">
 <h4>Dissolve internal polygons to create an outline map</h4>

@@ -427,7 +427,7 @@ Now we can start to add new content to your map. In the *Chapters* tab of your G
 
 - Chapter: The title appearing at the top of each section in the scrolling narrative.
 
-- Media Link: You have several options to display either an image, audio, or video in each chapter. For images, you can insert an external link to an online service (such as Flickr), as long as it begins with `https` (secure) and ends with either `.jpg` or `.png`. You can also insert a Youtube video link. Or you can upload an image file into the `media` subfolder in your GitHub repo, as shown in Figure \@ref(fig:storymap-media-upload), and enter the pathname in the Google Sheet in this format: `media/your-file-name.jpg` or `...png`. Similarly, you can upload an audio file in `.mp3` (recommended) or `.ogg` or `.wav` format.
+- Media Link: You have several options to display either an image, audio, or video in each chapter. For images, you can insert an external link to an online service (such as Flickr), as long as it begins with `https` (secure) and ends with either `.jpg` or `.png`. You can also insert a YouTube video embed link by following directions shown in the [YouTube section of the template](https://handsondataviz.github.io/leaflet-storymaps-with-google-sheets/#9). Or you can upload an image file into the `media` subfolder in your GitHub repo, as shown in Figure \@ref(fig:storymap-media-upload), and enter the pathname in the Google Sheet in this format: `media/your-file-name.jpg` or `...png`. Similarly, you can upload an audio file in `.mp3` (recommended) or `.ogg` or `.wav` format.
 
 (ref:storymap-media-upload) In GitHub, click to open the `media` folder and *Add file - Upload files*.
 

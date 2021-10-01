@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2021-06-23" />
+<meta name="date" content="2021-10-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -251,6 +251,7 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="design-choropleth.html"><a href="design-choropleth.html"><i class="fa fa-check"></i>Design Choropleth Colors &amp; Intervals</a></li>
 <li class="chapter" data-level="" data-path="normalize-choropleth.html"><a href="normalize-choropleth.html"><i class="fa fa-check"></i>Normalize Choropleth Map Data</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
+<li class="chapter" data-level="" data-path="locatormap-datawrapper.html"><a href="locatormap-datawrapper.html"><i class="fa fa-check"></i>Locator Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="symbolmap-datawrapper.html"><a href="symbolmap-datawrapper.html"><i class="fa fa-check"></i>Symbol Point Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="choropleth-datawrapper.html"><a href="choropleth-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="map-tableau.html"><a href="map-tableau.html"><i class="fa fa-check"></i>Choropleth Map with Tableau Public</a></li>
@@ -375,7 +376,7 @@ div.csl-indent {
 Figure 5.1: The <em>median</em> is a more useful comparative term than <em>average</em> or <em>mean</em> because it resists the influence of outliers.
 </p>
 </div>
-<p><em>Percentage</em> is another common term, which nearly everyone intuitively grasps as a <em>ratio</em> of parts per hundred. For example, an <a href="https://en.wikipedia.org/wiki/Trident_gum">old 1970s commercial for Trident gum</a> claimed that “4 out of 5 dentists surveyed recommend sugarless gum for their patients who chew gum.”<a href="#fn24" class="footnote-ref" id="fnref24"><sup>24</sup></a> Even if you’re too young to remember that slogan, or wonder how that survey was actually conducted, or are puzzling over how the fifth dentist resisted such intense peer pressure, we all understand that 4 out of 5 dentists is equivalent to <code>4/5 = 0.8 = 80%</code>.</p>
+<p><em>Percentage</em> is another common term, which nearly everyone intuitively grasps as a <em>ratio</em> of parts per hundred. For example, an <a href="https://en.wikipedia.org/wiki/Trident_gum">old 1970s commercial for Trident gum</a> claimed that “4 out of 5 dentists surveyed recommend sugarless gum for their patients who chew gum”.<a href="#fn24" class="footnote-ref" id="fnref24"><sup>24</sup></a> Even if you’re too young to remember that slogan, or wonder how that survey was actually conducted, or are puzzling over how the fifth dentist resisted such intense peer pressure, we all understand that 4 out of 5 dentists is equivalent to <code>4/5 = 0.8 = 80%</code>.</p>
 <p>But confusion arises sometimes when people hastily compare percentages, so we need to carefully choose our words. One term is <em>percent change</em> (also called relative change), which works best when comparing <em>old versus new values</em>. Percent change is calculated by the difference between new and old values, divided by the absolute value of the old value, or <code>(New value - Old value) / |Old value|</code>. For example, if 4 dentists recommended sugarless gum in 1970, but peer pressure finally prevailed and 5 dentists recommend it in 2020, we calculate the percent change as <code>(5-4)/4 = 1/4 = 0.25 = 25%</code>.</p>
 <p>Another term is <em>percentage point difference</em>, which works best when comparing <em>old versus new percentages</em> and is calculated by subtracting one from the other. For example, if 80 percent of dentists recommended sugarless gum in 1970, but 100 percent recommended it in 2020, we could compare the two figures by calculating the difference as <code>New percentage - Old percentage = 100% - 80%  = 20 percentage point difference</code>.</p>
 <p>When we precisely use each term, there are two correct ways to compare these figures. One way is to state that “The number of dentists who recommended sugarless gum increased 25 percent over time.” Another way is to state that “The percentage of dentists who recommended sugarless gum increased 20 percentage points over time.” Both statements are accurate. Even if someone confuses the two terms, there’s not a big gap between a “25 percent change” and a “20 percent point increase” in this particular example.</p>

@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2021-06-23" />
+<meta name="date" content="2021-10-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -251,6 +251,7 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="design-choropleth.html"><a href="design-choropleth.html"><i class="fa fa-check"></i>Design Choropleth Colors &amp; Intervals</a></li>
 <li class="chapter" data-level="" data-path="normalize-choropleth.html"><a href="normalize-choropleth.html"><i class="fa fa-check"></i>Normalize Choropleth Map Data</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
+<li class="chapter" data-level="" data-path="locatormap-datawrapper.html"><a href="locatormap-datawrapper.html"><i class="fa fa-check"></i>Locator Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="symbolmap-datawrapper.html"><a href="symbolmap-datawrapper.html"><i class="fa fa-check"></i>Symbol Point Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="choropleth-datawrapper.html"><a href="choropleth-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="map-tableau.html"><a href="map-tableau.html"><i class="fa fa-check"></i>Choropleth Map with Tableau Public</a></li>
@@ -402,7 +403,7 @@ Figure 2.28: Click on the blue bottom-right dot in cell E2, then hold-and-drag y
 </p>
 </div>
 <ol start="6" style="list-style-type: decimal">
-<li>Since the <em>Occupation</em> column contains a defined set of text responses, let’s use a different function to count them using an <em>if statement</em>, such as the number of responses if a reader listed “educator.” Click in cell G2 and type the equal symbol (<code>=</code>) to start a new formula. Google Sheets will automatically suggest possible formulas based on the context, and you can select one that displays the count if the response is <em>educator</em> for current values in the entire column. You can directly type in the formula <code>=COUNTIF(G3:G2894,"=educator")</code>, where your last cell reference will be a larger number to reflect all of the rows in your version, or type in the Google Sheets syntax <code>=COUNTIF(G3:G,"=educator")</code> that runs the calculation on the entire column without naming a specific endpoint, as shown in Figure <a href="calculate.html#fig:sheets-countif">2.29</a>.</li>
+<li>Since the <em>Occupation</em> column contains a defined set of text responses, let’s use a different function to count them using an <em>if statement</em>, such as the number of responses if a reader listed “educator”. Click in cell G2 and type the equal symbol (<code>=</code>) to start a new formula. Google Sheets will automatically suggest possible formulas based on the context, and you can select one that displays the count if the response is <em>educator</em> for current values in the entire column. You can directly type in the formula <code>=COUNTIF(G3:G2894,"=educator")</code>, where your last cell reference will be a larger number to reflect all of the rows in your version, or type in the Google Sheets syntax <code>=COUNTIF(G3:G,"=educator")</code> that runs the calculation on the entire column without naming a specific endpoint, as shown in Figure <a href="calculate.html#fig:sheets-countif">2.29</a>.</li>
 </ol>
 
 <div class="figure"><span id="fig:sheets-countif"></span>

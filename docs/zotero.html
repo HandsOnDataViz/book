@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2021-06-23" />
+<meta name="date" content="2021-10-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -251,6 +251,7 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="design-choropleth.html"><a href="design-choropleth.html"><i class="fa fa-check"></i>Design Choropleth Colors &amp; Intervals</a></li>
 <li class="chapter" data-level="" data-path="normalize-choropleth.html"><a href="normalize-choropleth.html"><i class="fa fa-check"></i>Normalize Choropleth Map Data</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
+<li class="chapter" data-level="" data-path="locatormap-datawrapper.html"><a href="locatormap-datawrapper.html"><i class="fa fa-check"></i>Locator Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="symbolmap-datawrapper.html"><a href="symbolmap-datawrapper.html"><i class="fa fa-check"></i>Symbol Point Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="choropleth-datawrapper.html"><a href="choropleth-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="map-tableau.html"><a href="map-tableau.html"><i class="fa fa-check"></i>Choropleth Map with Tableau Public</a></li>
@@ -387,7 +388,7 @@ div.csl-indent {
 </ol>
 <ul>
 <li>A. Select Library &gt; Right-click to export the collection</li>
-<li>B. Select format &gt; Better BibLaTeX (<em>IMPORTANT</em>: We use this setting, rather than “Better BibTex,” because “Better BibLaTex” includes full dates in newspaper citations, and URLs). Also, we leave all of the checkboxes blank during the export, and do <em>not</em> select “keep updated.” This means that if your Better BibTex citation codes suddenly change in Zotero because the author, title, or year changed, then you are responsible for running find-and-replace to make these edits in the text of the book.</li>
+<li>B. Select format &gt; Better BibLaTeX (<em>IMPORTANT</em>: We use this setting, rather than “Better BibTex”, because “Better BibLaTex” includes full dates in newspaper citations, and URLs). Also, we leave all of the checkboxes blank during the export, and do <em>not</em> select “keep updated”. This means that if your Better BibTex citation codes suddenly change in Zotero because the author, title, or year changed, then you are responsible for running find-and-replace to make these edits in the text of the book.</li>
 <li>C. Save the output in <code>.bib</code> format, save into your book repo, and be sure to add the same filename to your settings in <code>index.Rmd</code>, as shown in these excerpts:</li>
 </ul>
 <pre><code>  bibliography: dataviz.bib
@@ -418,7 +419,7 @@ div.csl-indent {
 <p>Reminder: Chicago full-note works exactly as it was designed, meaning that the second instance of a citation currently appears as an abbreviated note (author, with title when appropriate).</p>
 <p>Demo:
 Here’s a text-only note, with no Zotero citation.<a href="#fn58" class="footnote-ref" id="fnref58"><sup>58</sup></a></p>
-<p>To create a note with citations only, separate Zotero/BibTeX citation keys with semi-colons:<a href="#fn59" class="footnote-ref" id="fnref59"><sup>59</sup></a></p>
+<p>To create a note with citations only, separate Zotero/BibTeX citation keys with semi-colons: <a href="#fn59" class="footnote-ref" id="fnref59"><sup>59</sup></a></p>
 <p>Since notes also may include text and punctuation in Markdown syntax, always insert a caret symbol prior to the brackets to demarcate a note:<a href="#fn60" class="footnote-ref" id="fnref60"><sup>60</sup></a></p>
 <p>Remember that the <code>chicago-fullnote-bibliography.csl</code> format is designed to automatically shorten the note after it its first reference.</p>
 

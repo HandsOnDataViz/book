@@ -10,6 +10,7 @@ Table: (\#tab:map-types) Basic Map Types, Best Uses, and Tutorials
 | Map | Best use and tutorials in this book |
 | --- | --- |
 | Point map with custom icons<br> ![](images/07-map/tablemap-point.png) | Best to show specific locations (such as addresses) with customized colored markers for categories, plus text and images in popup windows. <br>Easy tool: [Google My Maps tutorial](mymaps.html). <br>Power tool: [Ch 13: Leaflet Maps with Google Sheets tutorial](leaflet-maps-with-google-sheets.html) |
+| Locator map for points or polygons<br> ![](images/07-map/tablemap-locator.png) | Best to show proximity of a small set of locations and/or regions. <br>Easy tool: [Locator Map with Datawrapper tutorial](locatormap-datawrapper.html). <br>Power tool: [Ch 13: Leaflet Maps with Google Sheets tutorial](leaflet-maps-with-google-sheets.html) |
 | Symbol point map<br> ![](images/07-map/tablemap-symbol.png) | Best to show specific locations (such as cities), with variable-sized shapes or colors to represent data values (such as population growth). <br>Easy tool: [Symbol Point Map with Datawrapper tutorial](symbolmap-datawrapper.html) |
 | Choropleth (colored polygon) map <br> ![](images/07-map/tablemap-choropleth.png) | Best to show patterns across geographic areas (such as neighborhoods or nations) by coloring polygons to represent data values. <br>Easy tool: [Choropleth map with Datawrapper tutorial](choropleth-datawrapper.html) or [Choropleth map with Tableau Public tutorial](map-tableau.html) <br>Power tools: [Ch 13: Leaflet Maps with Google Sheets tutorial](leaflet-maps-with-google-sheets.html) |
 | Heat point map <br> ![](images/07-map/tablemap-heat.png) | Best to show clusters of points as colored hotspots to emphasize high frequency or density of cases. <br>Power tool: [Ch 13: Leaflet Heatmap code template](leaflet-heatmap.html) |
@@ -386,6 +387,17 @@ knitr::include_graphics("images/07-map/mymaps-gdrive.png")
 Google My Maps is a good first tool to learn for making interactive maps, especially point maps with custom icons. You can design maps with multiple layers of points, polylines, and basic polygons, if desired. But the overall map design and features are limited to what the Google My Maps platform offers. Learn more at the [Google My Maps support page](https://support.google.com/mymaps).
 
 In the next section, we'll explore how to use Datawrapper to create symbol point maps, where the size and color of each circle (or other shapes) represents data values for that specific point.
+
+## Locator Map with Datawrapper {- #locatormap-datawrapper}
+New tutorial to come...
+
+(ref:datawrapper-locatormap) Locator map of San Francisco and bridges with Datawrapper. Explore the [interactive version](https://datawrapper.dwcdn.net/KwU8I).
+
+```{r datawrapper-locatormap, fig.cap="(ref:datawrapper-locatormap)"}
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://datawrapper.dwcdn.net/KwU8I", height="550px") else knitr::include_graphics("images/07-map/datawrapper-locatormap.png")
+```
+
+Open [Datawrapper](https://www.datawrapper.de), click on *Start Creating*, then the *New Map* button, and select *Locator map*... more to come...
 
 ## Symbol Point Map with Datawrapper {- #symbolmap-datawrapper}
 We first introduced you to the free and easy-to-learn [Datawrapper tool in Chapter 6: Chart Your Data](chart-datawrapper.html). It's also offers powerful features to create different types of maps, with professional-looking design elements. With Datawrapper you can start to work right away in your browser, with no account required unless you wish to save and share your work online.

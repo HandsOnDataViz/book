@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>A Fix Common Problems | Hands-On Data Visualization</title>
+  <title>Convert Numbers to Text | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="A Fix Common Problems | Hands-On Data Visualization" />
+  <meta property="og:title" content="Convert Numbers to Text | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io//images/cover-400wide.jpg" />
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="handsondataviz/book" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="A Fix Common Problems | Hands-On Data Visualization" />
+  <meta name="twitter:title" content="Convert Numbers to Text | Hands-On Data Visualization" />
   <meta name="twitter:site" content="@handsondataviz" />
   <meta name="twitter:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="twitter:image" content="http://handsondataviz.github.io//images/cover-400wide.jpg" />
@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
-<link rel="prev" href="story-format.html"/>
-<link rel="next" href="fix-tool.html"/>
+<link rel="prev" href="combine-data.html"/>
+<link rel="next" href="tabula.html"/>
 <script src="libs/header-attrs-2.9/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -365,33 +365,32 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="fix" class="section level1" number="16">
-<h1><span class="header-section-number">A</span> Fix Common Problems</h1>
-<p>When creating data visualizations with online tools, public datasets, and code templates, it’s not uncommon to encounter some occasional problems that prevent it from working as expected. We understand that finding the source of a problem can feel frustrating. But figuring out why it broke—and how to fix it—can be a great way to learn what’s happening behind the scenes.</p>
-<p>Reach out to ask others for advice on solving problems, and make it easier for them to help you. Clearly describe your issue, mention your computer operating system and/or browser version, and consider including a <a href="https://en.wikipedia.org/wiki/Screenshot">screenshot</a> using these built-in commands, as shown in Figure <a href="fix.html#fig:screenshot-mac">A.1</a>:</p>
-<ul>
-<li>Chromebook: <em>Shift + Ctrl + F5</em> (the <em>show windows</em> button), then click-and-drag the cross-hair cursor.</li>
-<li>Macintosh: <em>Shift + Command + 4</em>, then click-and-drag the cross-hair cursor to capture screenshot.</li>
-<li>Windows: <em>Windows logo key + Shift + S</em> to call up the <em>Snip &amp; Sketch</em> tool.</li>
-</ul>
+<div id="numbers-to-text" class="section level2 unnumbered">
+<h2>Convert Numbers to Text</h2>
+<p>We often need clean-up skills when working with US Census Data and similar geographic files. The US Census publishes data for different levels of boundaries, such as states, counties, and census tracts, as described in the <a href="guiding.html">Guiding Questions for Your Search section</a> of this book. Each of these geographic entities is uniquely identified by a Federal Information Processing System (FIPS) code. State-level FIPS codes are 2 digits (such as 09 for Connecticut), and county-level codes are 5 digits (such as 09003 for Hartford County, Connecticut, where the first 2 digits represent the state). Further down the hierarchy, each census tract has 11 digits (such as 09003503102, which consists of 2 digits for the state, 3 for the county, and 6 for the tract). Also, note that US Census tract boundaries change over time. The FIPS codes usually <em>look</em> similar over time, but deep down there may be significant changes in numbering and boundary lines from 2010 to 2020. For example, see Ilya’s richly-illustrated post about <a href="https://www.ctdata.org/blog/2020-census-geography-connecticut">Connecticut Census Tract Boundaries are Changing</a> from 2010 to 2020 on the CT Data Collaborative blog.</p>
+<p>When preparing to make maps with US Census tract data, you typically need to match a long FIPS code from your spreadsheet to a corresponding code in your mapping tool. But sometimes these data columns do not line up and you need to do some cleanup. For example, compare the spreadsheet of US Census tract data (on the left) and the Datawrapper map tool census tract codes (on the right), as shown in Figure <a href="numbers-to-text.html#fig:census-code-mismatch">4.8</a>.</p>
 
-<div class="figure"><span id="fig:screenshot-mac"></span>
-<iframe src="images/16-fix/screenshot-mac.gif" width="672" height="360px">
-</iframe>
+<div class="figure"><span id="fig:census-code-mismatch"></span>
+<img src="images/04-clean/census-code-mismatch-annotated.png" alt="The census tract codes in the spreadsheet (on the left) do not match the codes in the mapping tool (on the right)."  />
 <p class="caption">
-Figure A.1: How to create a screenshot on a Mac.
+Figure 4.8: The census tract codes in the spreadsheet (on the left) do not match the codes in the mapping tool (on the right).
 </p>
 </div>
-<p>Review these sections below to help you diagnose what type of problem you may be facing, and see our recommended solutions for the most common issues we’ve seen. Remember that some of the thorniest problems may be caused by two or more separate issues.</p>
-<ul>
-<li><a href="fix-tool.html">Tool or platform problems</a></li>
-<li><a href="fix-browser.html">Try a different browser</a></li>
-<li><a href="fix-developer-tools.html">Diagnose with developer tools</a></li>
-<li><a href="fix-computer.html">Mac or Chromebook problems</a></li>
-<li><a href="fix-data.html">Watch out for bad data</a></li>
-<li><a href="fix-iframe.html">Common iframe errors</a></li>
-<li><a href="fix-code.html">Fix your code on GitHub</a></li>
-</ul>
+<p>In this example, we have two problems that require cleanup: numeric versus text formatting, and different lengths of characters in each code.</p>
+<p>The first problem is that the FIPS codes on the right side are formatted as <em>numbers</em> (which usually appear right-aligned in spreadsheets) while the codes on the left side are formatted as <em>text</em> or <em>strings</em> (which usually appear as left-aligned).</p>
+<p>The second problem is that the FIPS codes on the right side are 10 numeric digits (and should be 11, but the leading 0 was dropped by the spreadsheet), while the tract codes on the left side are 10 text characters (because it no longer includes the first <code>9</code> character).</p>
+<p>Fortunately, we can easily fix both problems with one spreadsheet formula.</p>
+<p>If you only needed to convert a numeric code to a text code, you could use the <code>=TO_TEXT</code> formula in Google Sheets, which converts from one format to another.</p>
+<p>But if you wish to fix both problems at the same time, use the <code>=RIGHT</code> formula in Google Sheets, which converts a numeric value into a string (or text) value, and also returns only a specified number of characters, counting from the right side. In this example, we want to convert the 10-digit number <code>9001010100</code> into a text string, and keep only the 9 characters on the right side (to remove the <code>9</code>, which happens to be the 10th character when counting from that direction). Therefore, insert the formula <code>=RIGHT(A2,9)</code> in cell B2, and paste it down the entire column, as shown in Figure <a href="numbers-to-text.html#fig:census-code-cleaned">4.9</a>.</p>
+
+<div class="figure"><span id="fig:census-code-cleaned"></span>
+<img src="images/04-clean/census-code-cleaned.png" alt="The =RIGHT function converts numbers to text, and keeps only the desired number of characters, as counted from the right side."  />
+<p class="caption">
+Figure 4.9: The <code>=RIGHT</code> function converts numbers to text, and keeps only the desired number of characters, as counted from the right side.
+</p>
+</div>
+<p>Now the two data columns match up and you can connect census tract data from the spreadsheet to the map tool to create a choropleth map, as described in <a href="map.html">Chapter 7: Map Your Data</a>. See related <a href="https://support.google.com/docs/topic/9054603">Google Sheet formulas and functions</a>.</p>
+<p>Spreadsheets are great tools to find and replace data, split data into separate columns, combine data into one column, and convert numeric to text data. But what if your data table is trapped inside a PDF? In the next section, we will introduce Tabula and show you how to convert tables from text-based PDF documents into tables that you can analyze in spreadsheets.</p>
 </div>
 <footer style="margin-top: 60px; font-size: 0.8em; padding: 10px; background-color: rgba(0,0,0,0.08); display: table; width: 98%">
 
@@ -438,8 +437,8 @@ Figure A.1: How to create a screenshot on a Mac.
           </div>
         </div>
       </div>
-<a href="story-format.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="fix-tool.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="combine-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="tabula.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -479,7 +478,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/handsondataviz/book/blob/main/16-fix.Rmd",
+"link": "https://github.com/handsondataviz/book/blob/main/04-clean.Rmd",
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],

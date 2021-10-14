@@ -9,7 +9,7 @@ They will have missing values, dates in different formats, text in numeric-only 
 knitr::include_graphics("images/04-clean/clean-up-messy-data.png")
 ```
 
-In this chapter you'll learn about different tools, in order to help you make decisions about which one to use to clean up your data efficiently. First, we'll start with basic cleanup methods using Google Sheets, such as its [Smart Cleanup feature](smart-cleanup.html) to fix inconsistent data and remove duplicates, [find and replace with a blank](find-and-replace.html), [tranpose rows and columns of data](transpose.html), [split data into separate columns](split-data.html), and [combine columns into one](combine-data.html). While we feature Google Sheets in our examples, many of these principles (and in some cases the same formulas) apply to Microsoft Excel, LibreOffice Calc, Mac's Numbers, or other spreadsheet packages. Next, you will learn how to [extract table data from text-based PDF documents with Tabula](tabula.html), a free tool used by data journalists and researchers worldwide to analyze spending data, health reports, and all sorts of other datasets that get trapped in PDFs. Finally, we will [introduce OpenRefine, a powerful and versatile tool to clean up the messiest spreadsheets](open-refine.html), such as those containing dozens of different spellings of the same name.
+In this chapter you'll learn about different tools, in order to help you make decisions about which one to use to clean up your data efficiently. First, we'll start with basic cleanup methods using Google Sheets, such as its [Smart Cleanup feature](smart-cleanup.html) to fix inconsistent data and remove duplicates, [find and replace with a blank](find-and-replace.html), [tranpose rows and columns of data](transpose.html), [split data into separate columns](split-data.html), [combine columns into one](combine-data.html), and [convert numbers to text](numbers-to-text.html). While we feature Google Sheets in our examples, many of these principles (and in some cases the same formulas) apply to Microsoft Excel, LibreOffice Calc, Mac's Numbers, or other spreadsheet packages. Next, you will learn how to [extract table data from text-based PDF documents with Tabula](tabula.html), a free tool used by data journalists and researchers worldwide to analyze spending data, health reports, and all sorts of other datasets that get trapped in PDFs. Finally, we will [introduce OpenRefine, a powerful and versatile tool to clean up the messiest spreadsheets](open-refine.html), such as those containing dozens of different spellings of the same name.
 
 ## Smart Cleanup with Google Sheets {- #smart-cleanup}
 
@@ -226,9 +226,44 @@ Now that you have successfully combined the terms into one location column, you 
 For further reading, we recommend Lisa Charlotte Rost's brilliant [Datawrapper blog post](https://blog.datawrapper.de/prepare-and-clean-up-data-for-data-visualization/)
 about cleaning and preparing your spreadsheet data for analysis and visualization.^[@rostHowPrepareYour2019]
 
-Spreadsheets are great tools to find and replace data, split data into separate columns, or combine data into one column. But what if your data table is trapped inside a PDF? In the next section, we will introduce Tabula and show you how to convert tables from text-based PDF documents into tables that you can analyze in spreadsheets.
+Spreadsheets provide helpful ways to combine data columns. In the next section, we will introduce another spreadsheet function to convert numbers to text data.
+
+## Convert Numbers to Text {- #numbers-to-text}
+
+We often need clean-up skills when working with US Census Data and similar geographic files. The US Census publishes data for different levels of boundaries, such as states, counties, and census tracts, as described in the [Guiding Questions for Your Search section](guiding.html) of this book. Each of these geographic entities is uniquely identified by a Federal Information Processing System (FIPS) code. State-level FIPS codes are 2 digits (such as 09 for Connecticut), and county-level codes are 5 digits (such as 09003 for Hartford County, Connecticut, where the first 2 digits represent the state). Further down the hierarchy, each census tract has 11 digits (such as 09003503102, which consists of 2 digits for the state, 3 for the county, and 6 for the tract). Also, note that US Census tract boundaries change over time. The FIPS codes usually *look* similar over time, but deep down there may be significant changes in numbering and boundary lines from 2010 to 2020. For example, see Ilya's richly-illustrated post about [Connecticut Census Tract Boundaries are Changing](https://www.ctdata.org/blog/2020-census-geography-connecticut) from 2010 to 2020 on the CT Data Collaborative blog.
+
+When preparing to make maps with US Census tract data, you typically need to match a long FIPS code from your spreadsheet to a corresponding code in your mapping tool. But sometimes these data columns do not line up and you need to do some cleanup. For example, compare the spreadsheet of US Census tract data (on the left) and the Datawrapper map tool census tract codes (on the right), as shown in Figure \@ref(fig:census-code-mismatch).
+
+(ref:census-code-mismatch) The census tract codes in the spreadsheet (on the left) do not match the codes in the mapping tool (on the right).
+
+```{r census-code-mismatch, fig.cap="(ref:census-code-mismatch)"}
+ knitr::include_graphics("images/04-clean/census-code-mismatch-annotated.png")
+```
+
+In this example, we have two problems that require cleanup: numeric versus text formatting, and different lengths of characters in each code.
+
+The first problem is that the FIPS codes on the right side are formatted as *numbers* (which usually appear right-aligned in spreadsheets) while the codes on the left side are formatted as *text* or *strings* (which usually appear as left-aligned).
+
+The second problem is that the FIPS codes on the right side are 10 numeric digits (and should be 11, but the leading 0 was dropped by the spreadsheet), while the tract codes on the left side are 10 text characters (because it no longer includes the first `9` character).
+
+Fortunately, we can easily fix both problems with one spreadsheet formula.
+
+If you only needed to convert a numeric code to a text code, you could use the `=TO_TEXT` formula in Google Sheets, which converts from one format to another.
+
+But if you wish to fix both problems at the same time, use the `=RIGHT` formula in Google Sheets, which converts a numeric value into a string (or text) value, and also returns only a specified number of characters, counting from the right side. In this example, we want to convert the 10-digit number `9001010100` into a text string, and keep only the 9 characters on the right side (to remove the `9`, which happens to be the 10th character when counting from that direction). Therefore, insert the formula `=RIGHT(A2,9)` in cell B2, and paste it down the entire column, as shown in Figure \@ref(fig:census-code-cleaned).
+
+(ref:census-code-cleaned) The `=RIGHT` function converts numbers to text, and keeps only the desired number of characters, as counted from the right side.
+
+```{r census-code-cleaned, fig.cap="(ref:census-code-cleaned)"}
+ knitr::include_graphics("images/04-clean/census-code-cleaned.png")
+```
+
+Now the two data columns match up and you can connect census tract data from the spreadsheet to the map tool to create a choropleth map, as described in [Chapter 7: Map Your Data](map.html). See related [Google Sheet formulas and functions](https://support.google.com/docs/topic/9054603).
+
+Spreadsheets are great tools to find and replace data, split data into separate columns, combine data into one column, and convert numeric to text data. But what if your data table is trapped inside a PDF? In the next section, we will introduce Tabula and show you how to convert tables from text-based PDF documents into tables that you can analyze in spreadsheets.
 
 ## Extract Tables from PDFs with Tabula {- #tabula}
+
 It sometimes happens that the dataset you are interested in is only available as a PDF document. Don't despair, you can *likely* use Tabula to extract tables and save them as CSV files. Keep in mind that PDFs generally come in two flavors: text-based and image-based. If you can use cursor to select and copy-paste text in your PDF, then it's text-based, which is great because you can process it with Tabula. But if you cannot select and copy-paste items inside a PDF, then it's image-based, meaning it was probably created as a scanned version of the original document. You need to use optical character recognition (OCR) software, such as Adobe Acrobat Pro or another OCR tool, to convert an image-based PDF into a text-based PDF. Furthermore, Tabula can only extract data from tables, not charts or other types of visualizations.
 
 Tabula is a free tool that runs on Java in your browser, and is available for Mac, Windows, and Linux computers. It runs on your local machine and does not send your data to the cloud, so you can also use it for sensitive documents.

@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Convert Numbers to Text | Hands-On Data Visualization</title>
+  <title>Numbers-to-Text and Remove Characters | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Convert Numbers to Text | Hands-On Data Visualization" />
+  <meta property="og:title" content="Numbers-to-Text and Remove Characters | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io//images/cover-400wide.jpg" />
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="handsondataviz/book" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Convert Numbers to Text | Hands-On Data Visualization" />
+  <meta name="twitter:title" content="Numbers-to-Text and Remove Characters | Hands-On Data Visualization" />
   <meta name="twitter:site" content="@handsondataviz" />
   <meta name="twitter:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="twitter:image" content="http://handsondataviz.github.io//images/cover-400wide.jpg" />
@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2021-10-14" />
+<meta name="date" content="2021-10-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -221,7 +221,7 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="transpose.html"><a href="transpose.html"><i class="fa fa-check"></i>Transpose Rows and Columns</a></li>
 <li class="chapter" data-level="" data-path="split-data.html"><a href="split-data.html"><i class="fa fa-check"></i>Split Data into Separate Columns</a></li>
 <li class="chapter" data-level="" data-path="combine-data.html"><a href="combine-data.html"><i class="fa fa-check"></i>Combine Data into One Column</a></li>
-<li class="chapter" data-level="" data-path="numbers-to-text.html"><a href="numbers-to-text.html"><i class="fa fa-check"></i>Convert Numbers to Text</a></li>
+<li class="chapter" data-level="" data-path="numbers-to-text.html"><a href="numbers-to-text.html"><i class="fa fa-check"></i>Numbers-to-Text and Remove Characters</a></li>
 <li class="chapter" data-level="" data-path="tabula.html"><a href="tabula.html"><i class="fa fa-check"></i>Extract Tables from PDFs with Tabula</a></li>
 <li class="chapter" data-level="" data-path="open-refine.html"><a href="open-refine.html"><i class="fa fa-check"></i>Clean Data with OpenRefine</a></li>
 </ul></li>
@@ -366,31 +366,28 @@ div.csl-indent {
 
             <section class="normal" id="section-">
 <div id="numbers-to-text" class="section level2 unnumbered">
-<h2>Convert Numbers to Text</h2>
+<h2>Numbers-to-Text and Remove Characters</h2>
 <p>We often need clean-up skills when working with US Census Data and similar geographic files. The US Census publishes data for different levels of boundaries, such as states, counties, and census tracts, as described in the <a href="guiding.html">Guiding Questions for Your Search section</a> of this book. Each of these geographic entities is uniquely identified by a Federal Information Processing System (FIPS) code. State-level FIPS codes are 2 digits (such as 09 for Connecticut), and county-level codes are 5 digits (such as 09003 for Hartford County, Connecticut, where the first 2 digits represent the state). Further down the hierarchy, each census tract has 11 digits (such as 09003503102, which consists of 2 digits for the state, 3 for the county, and 6 for the tract). Also, note that US Census tract boundaries change over time. The FIPS codes usually <em>look</em> similar over time, but deep down there may be significant changes in numbering and boundary lines from 2010 to 2020. For example, see Ilya’s richly-illustrated post about <a href="https://www.ctdata.org/blog/2020-census-geography-connecticut">Connecticut Census Tract Boundaries are Changing</a> from 2010 to 2020 on the CT Data Collaborative blog.</p>
-<p>When preparing to make maps with US Census tract data, you typically need to match a long FIPS code from your spreadsheet to a corresponding code in your mapping tool. But sometimes these data columns do not line up and you need to do some cleanup. For example, compare the spreadsheet of US Census tract data (on the left) and the Datawrapper map tool census tract codes (on the right), as shown in Figure <a href="numbers-to-text.html#fig:census-code-mismatch">4.8</a>.</p>
+<p>When preparing to make maps with US Census tract data, you typically need to match a long FIPS code from your spreadsheet to a corresponding code in your mapping tool. But sometimes these data columns do not line up and you need to do some cleanup. For example, compare the spreadsheet of US Census tract data (on the left) and the Datawrapper map tool census tract codes (on the right), as shown in Figure <a href="numbers-to-text.html#fig:census-code-mismatch">4.8</a>. The first entry on the left <code>9001010101</code> does not perfectly match the first entry on the right <code>001010101</code>. We need to do a bit of data cleanup before we can match the data columns and begin mapping.</p>
 
 <div class="figure"><span id="fig:census-code-mismatch"></span>
-<img src="images/04-clean/census-code-mismatch-annotated.png" alt="The census tract codes in the spreadsheet (on the left) do not match the codes in the mapping tool (on the right)."  />
+<img src="images/04-clean/census-code-mismatch-annotated.png" alt="The census tract codes in the spreadsheet on the left do not match the codes in the mapping tool on the right."  />
 <p class="caption">
-Figure 4.8: The census tract codes in the spreadsheet (on the left) do not match the codes in the mapping tool (on the right).
+Figure 4.8: The census tract codes in the spreadsheet on the left do not match the codes in the mapping tool on the right.
 </p>
 </div>
-<p>In this example, we have two problems that require cleanup: numeric versus text formatting, and different lengths of characters in each code.</p>
-<p>The first problem is that the FIPS codes on the right side are formatted as <em>numbers</em> (which usually appear right-aligned in spreadsheets) while the codes on the left side are formatted as <em>text</em> or <em>strings</em> (which usually appear as left-aligned).</p>
-<p>The second problem is that the FIPS codes on the right side are 10 numeric digits (and should be 11, but the leading 0 was dropped by the spreadsheet), while the tract codes on the left side are 10 text characters (because it no longer includes the first <code>9</code> character).</p>
-<p>Fortunately, we can easily fix both problems with one spreadsheet formula.</p>
-<p>If you only needed to convert a numeric code to a text code, you could use the <code>=TO_TEXT</code> formula in Google Sheets, which converts from one format to another.</p>
-<p>But if you wish to fix both problems at the same time, use the <code>=RIGHT</code> formula in Google Sheets, which converts a numeric value into a string (or text) value, and also returns only a specified number of characters, counting from the right side. In this example, we want to convert the 10-digit number <code>9001010100</code> into a text string, and keep only the 9 characters on the right side (to remove the <code>9</code>, which happens to be the 10th character when counting from that direction). Therefore, insert the formula <code>=RIGHT(A2,9)</code> in cell B2, and paste it down the entire column, as shown in Figure <a href="numbers-to-text.html#fig:census-code-cleaned">4.9</a>.</p>
+<p>In this example, we have two problems that require cleanup: format and length. The first problem is that the FIPS codes on the left side are formatted as <em>numbers</em> (which usually appear right-aligned in spreadsheets) while the codes on the left side are formatted as <em>text</em> or <em>string data</em> (which usually appear as left-aligned). If that was our only problem, we could fix it by selecting the column and changing it to Format &gt; Number &gt; Plain Text.</p>
+<p>But the second problem is that the codes on the right side are 10 numeric digits while the tract codes on the left side are 9 text characters. Look closely and you’ll notice that the spreadsheet entries all begin with a <code>9</code>, which does not appear in the mapping tool entries. Originally, the left side entries all began with <code>09</code>, the FIPS code for Connecticut, but when the spreadsheet read this as numeric data, it dropped the leading zero, which explains why an 11-digit FIPS code appears here as a 10-digit code.</p>
+<p>Fortunately, we can easily fix both problems with one spreadsheet formula. In Google Sheets, the <code>=RIGHT</code> formula converts a numeric value into a string (or text) value, and also returns only a specified number of characters, counting from the right side. In this example, we want to convert the 10-digit number <code>9001010100</code> into a 9-character text string without the <code>9</code> in front, so it becomes <code>001010100</code>. Insert the formula <code>=RIGHT(A2,9)</code> in cell B2, where the <code>9</code> refers to the number of characters you wish to keep when counting from the right side, and paste it down the entire column, as shown in Figure <a href="numbers-to-text.html#fig:census-code-cleaned">4.9</a>.</p>
 
 <div class="figure"><span id="fig:census-code-cleaned"></span>
-<img src="images/04-clean/census-code-cleaned.png" alt="The =RIGHT function converts numbers to text, and keeps only the desired number of characters, as counted from the right side."  />
+<img src="images/04-clean/census-code-cleaned.png" alt="The =RIGHT formula converts numbers to text, and keeps only the desired number of characters when counting from the right side."  />
 <p class="caption">
-Figure 4.9: The <code>=RIGHT</code> function converts numbers to text, and keeps only the desired number of characters, as counted from the right side.
+Figure 4.9: The <code>=RIGHT</code> formula converts numbers to text, and keeps only the desired number of characters when counting from the right side.
 </p>
 </div>
-<p>Now the two data columns match up and you can connect census tract data from the spreadsheet to the map tool to create a choropleth map, as described in <a href="map.html">Chapter 7: Map Your Data</a>. See related <a href="https://support.google.com/docs/topic/9054603">Google Sheet formulas and functions</a>.</p>
-<p>Spreadsheets are great tools to find and replace data, split data into separate columns, combine data into one column, and convert numeric to text data. But what if your data table is trapped inside a PDF? In the next section, we will introduce Tabula and show you how to convert tables from text-based PDF documents into tables that you can analyze in spreadsheets.</p>
+<p>Now the two data columns match perfectly and you can connect census tract data from the spreadsheet to the map tool to create a choropleth map, as described in <a href="map.html">Chapter 7: Map Your Data</a>. See related <a href="https://support.google.com/docs/topic/9054603">Google Sheet formulas and functions</a>.</p>
+<p>Spreadsheets are great tools to find and replace data, split data into separate columns, combine data into one column, convert numeric to text data, and remove characters. But what if your data table is trapped inside a PDF? In the next section, we will introduce Tabula and show you how to convert tables from text-based PDF documents into tables that you can analyze in spreadsheets.</p>
 </div>
 <footer style="margin-top: 60px; font-size: 0.8em; padding: 10px; background-color: rgba(0,0,0,0.08); display: table; width: 98%">
 

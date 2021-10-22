@@ -178,6 +178,8 @@ knitr::include_graphics("images/12-leaflet/leaflet-media-upload.png")
 
 Warning: Media file pathnames are case-sensitive, and we recommend using *all lowercase characters*, including the suffix ending. Also, since the code template automatically resizes images to fit, we recommend that you *reduce the size* of any images to 600x400 pixels or less prior to uploading, to make sure your map operates smoothly.
 
+Tip: Some people accidentally erase the entire `media` folder. For example, if you delete all of the contents of a GitHub repo folder, that action also deletes the folder, because GitHub does not keep track of empty folders. To create a new folder in your GitHub repo, go to *Add file - Create new file*, then type the folder name followed by a slash (such as `media/`), then type a temporary file name (such as `temp.md`) to serve as a placeholder so that your new folder will not be empty. Now you can upload files into your new GitHub repo folder.
+
 - Location, Latitude, Longitude: These place your markers at points on the map. Although the code template only requires Latitude and Longitude, it's wise to paste an address or place name into the Location column as a reminder to correspond with the numerical coordinates. Use the [Geocoding by SmartMonkey Add-on from Chapter 2](geocode.html) and select *Add-ons > Geocoding by SmartMonkey > Geocode Details* to create a new sheet with sample data and display results for three new columns: *Latitude*, *Longitude*, and *Address found*, as shown in Figure \@ref(fig:geocode-details2). Paste in your own address data and repeat the step above to geocode it, then copy and paste the results into your *Points* sheet.
 
 (ref:geocode-details2) Select *Add-ons--Geocoding by SmartMonkey--Geocode Details* to display sample data with results for three new columns: *Latitude*, *Longitude*, and *Address found*.
@@ -436,6 +438,8 @@ knitr::include_graphics("images/12-leaflet/storymap-media-upload.png")
 ```
 
 Warning: Media file pathnames are case-sensitive, and we recommend using *all lowercase characters*, including the suffix ending. Also, since the code template automatically resizes images to fit, we recommend that you *reduce the size* of any images to 600x400 pixels or less prior to uploading, to make sure your storymap scrolls quickly.
+
+Tip: Some people accidentally erase the entire `media` folder. For example, if you delete all of the contents of a GitHub repo folder, that action also deletes the folder, because GitHub does not keep track of empty folders. To create a new folder in your GitHub repo, go to *Add file - Create new file*, then type the folder name followed by a slash (such as `media/`), then type a temporary file name (such as `temp.md`) to serve as a placeholder so that your new folder will not be empty. Now you can upload files into your new GitHub repo folder.
 
 Tip: You can display multiple images for one location by creating a series of rows, but only list the *Chapter* and *Location* information in the first row of the series, and leave it blank for the others.
 

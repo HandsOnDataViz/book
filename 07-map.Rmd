@@ -488,87 +488,73 @@ Datawrapper splits the process of creating a map into four steps: select map, ad
 
 Good maps often require [cleaning up messy data as described in Chapter 4](clean.html). In our spreadsheet we removed all of the columns except two, August 2019 and August 2020, and we also inserted a *Percent Change* column, which we calculated this way: `(2020 - 2019) / 2019 * 100`. Also, we're fortunate that Datawrapper easily recognizes US state names and abbreviations.
 
-2. In the Google Sheet, go to *File > Download* and select the Comma-Separated Values (CSV) format to save the data to your local computer.
+2. In the Google Sheet, go to *File > Make a Copy* to save your own version in your Google Drive, and *Share* it so that anyone can view it.
 
-3. Open [Datawrapper](https://www.datawrapper.de), click on *Start Creating*, then click the *New Map* button, and select *Choropleth map* as shown in Figure \@ref(fig:datawrapper-map-choose). No login is required to create a map, but you should sign up for a free account in order to save your work and publish your map online.
+3. Open [Datawrapper](https://www.datawrapper.de), click on *Start Creating*, then click the *Create - New Map* dropdown menu, and select *Choropleth map* as shown in Figure \@ref(fig:datawrapper-map-choose). No login is required to create a map, but you should sign up for a free account in order to save your work and publish your map online.
 
-(ref:datawrapper-map-choose) In Datawrapper, click *New Map*, and choose *Choropleth*.
+(ref:datawrapper-map-choose) In Datawrapper, click *Create - New Map*, and choose *Choropleth*.
 
 ```{r datawrapper-map-choose, out.width=500, fig.cap="(ref:datawrapper-map-choose)"}
 knitr::include_graphics("images/07-map/datawrapper-map-choose-annotated.png")
 ```
 
-4. In the *Select your map* screen, choose your geographic boundaries. In this case, search and select *USA > States and Territories* in order to include data for Washington DC, which is not a state, as shown in Figure \@ref(fig:datawrapper-map-us-states-territories), then click *Proceed*.
+4. In the *Select your map* screen, choose your geographic boundaries. In this case, search and select *USA > States*, as shown in Figure \@ref(fig:datawrapper-map-us-states), then click *Proceed*.
 
-(ref:datawrapper-map-us-states-territories) Choose *USA - States and Territories* for your map outline.
+(ref:datawrapper-map-us-states) Choose *USA - States* for your map outline.
 
-```{r datawrapper-map-us-states-territories, out.width=500, fig.cap="(ref:datawrapper-map-us-states-territories)"}
-knitr::include_graphics("images/07-map/datawrapper-map-us-states-territories.png")
+```{r datawrapper-map-us-states, out.width=350, fig.cap="(ref:datawrapper-map-us-states)"}
+knitr::include_graphics("images/07-map/datawrapper-map-us-states.png")
 ```
+
+Tip: Note that Datawrapper includes geography for Washington DC in *USA - States*, even though the District of Columbia is not officially recognized as a state. If you have data that you wish to display for other US territories, choose *USA - States & Territories*, which includes geography for Puerto Rico, US Virgin Islands, Guam, Northern Mariana Islands, and American Samoa.
 
 Tip: If Datawrapper does not list your preferred map outline, you can upload your own custom geography data in GeoJSON or TopoJSON format, which you will learn more about in the [GeoJSON data section of Chapter 13](geojson.html).
 
-5. In the *Add your data* screen, you can manually enter data for each area, which would be fine for just a few, but not for 50 states. Instead, scroll down below the *add data* table and click the *Import your dataset* button, as shown in Figure \@ref(fig:datawrapper-import-dataset).
+5. In the *Add your data* screen, you can manually enter data for each area, which would be fine for just a few, but not for 50 states. Instead, scroll down to the *Upload* tab to see other options to import data. Since your sample data for this exercise is in a Google Sheet, scroll further down and click the *Connect Google Sheet* button, and paste the link to your *shared* Google Sheet, then press *Connect*, as shown in Figure \@ref(fig:datawrapper-upload-google-sheet).
 
-(ref:datawrapper-import-dataset) Scroll down below the *add data* table to import your dataset.
+Hint: When you select a Datawrapper map, look for labels that match your data, including place names, or Federal Information Processing Standards (FIPS) codes for states or smaller census geographies, or American National Standards Institute (ANSI) alphabetical or numeric codes. Learn more from the [US Census Bureau about ANSI and FIPS codes](https://www.census.gov/library/reference/code-lists/ansi.html). Codes vary by the type of map. For example, a world map may accept country names (which vary in spelling) or [ISO three-letter codes](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes). If necessary, you could copy and paste names and their code equivalents into your spreadsheet to prepare your data. Learn more about [place name geocoding at the Datawrapper Academy](https://academy.datawrapper.de/article/193-symbol-location-accuracy-using-addresses-place-names).
 
-```{r datawrapper-import-dataset, out.width=200, fig.cap="(ref:datawrapper-import-dataset)"}
-knitr::include_graphics("images/07-map/datawrapper-import-dataset.png")
+(ref:datawrapper-upload-google-sheet) In the *Upload* tab, scroll down to click *Connect Google Sheet* and paste the link to import your data.
+
+```{r datawrapper-upload-google-sheet, out.width=600, fig.cap="(ref:datawrapper-upload-google-sheet)"}
+knitr::include_graphics("images/07-map/datawrapper-upload-google-sheet.png")
 ```
 
-Datawrapper will explain that when uploading data to the *USA > States and Territories map*, your data must include one of these columns:
+6. Carefully inspect your data upload. Datawrapper will display a sample map and table to review how it attempted to match each row to a geographic area. In the table, Datawrapper shows *numbers* in blue, *dates* in green, and *text* data in black, while *red* represents errors or missing data. If necessary, click the *Match* or *Check* tabs to inspect your data or address errors. If you approve the data upload, click *Proceed* or advance to the *Visualize* tab, as shown in Figure \@ref(fig:datawrapper-upload-review).
 
-- Names, such as `California`.
-- FIPS-Codes, the Federal Information Processing Standards numeric codes for US states and smaller geographies, where California is `06`.
-- ANSI-Codes, the American National Standards Institute alphabetical or numeric codes for US states and smaller geographies, where California is `CA`. Learn more from the [US Census Bureau about ANSI and FIPS codes](https://www.census.gov/library/reference/code-lists/ansi.html).
+(ref:datawrapper-upload-review) Inspect your data upload before you proceed to the next step.
 
-Codes vary by the type of map. For example, a world map may accept country names (which vary in spelling) or [ISO three-letter codes](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes). To view all of the codes for your selected geography, go back one screen in Datawrapper and select the Geo-code drop-down menu, as shown in Figure \@ref(fig:datawrapper-import-codes). If necessary, you could copy and paste names and their code equivalents into your spreadsheet to prepare your data. Learn more about [place name geocoding at the Datawrapper Academy](https://academy.datawrapper.de/article/193-symbol-location-accuracy-using-addresses-place-names).
-
-(ref:datawrapper-import-codes) To view all codes for your selected map, go back one screen to the *Geo-Code* drop-down menu.
-
-```{r datawrapper-import-codes, out.width=250, fig.cap="(ref:datawrapper-import-codes)"}
-knitr::include_graphics("images/07-map/datawrapper-import-codes.png")
+```{r datawrapper-upload-review, out.width=600, fig.cap="(ref:datawrapper-upload-review)"}
+knitr::include_graphics("images/07-map/datawrapper-upload-review.png")
 ```
 
-6. Since our data includes columns for both Names and ANSI-Codes, go ahead and click *Start Import*.
+7. In the *Visualize* screen, under the *Refine* tab, select the column named *Aug2020 Home Values* to create the initial map, as shown in Figure \@ref(fig:datawrapper-select-column).
 
-7. On the *Import your dataset* screen, rather than paste your data, we recommend that you click to *upload a CSV file* and select the file you downloaded in step 2.
+(ref:datawrapper-select-column) Under the *Refine* tab, click the column named *Aug2020 Homes Values*.
 
-8. In the *Match your columns* screen, click the column that matches up with ANSI codes, as shown in Figure \@ref(fig:datawrapper-map-match). You may need to scroll down a bit to click the *Next* button, then *Continue*.
-
-(ref:datawrapper-map-match) Select the data column that contains matching ANSI codes.
-
-```{r datawrapper-map-match, out.width=500, fig.cap="(ref:datawrapper-map-match)"}
-knitr::include_graphics("images/07-map/datawrapper-map-match.png")
+```{r datawrapper-select-column, out.width=600, fig.cap="(ref:datawrapper-select-column)"}
+knitr::include_graphics("images/07-map/datawrapper-select-column.png")
 ```
 
-9. Proceed to the next screen, select the column of data values that you initially wish to map, and click *Matched as values*, as shown in Figure \@ref(fig:datawrapper-map-match-values). For this tutorial, select *Aug2020 Home Values*, then scroll down to click *Next*, then *Go*, then *Proceed*. You'll be able to map other data values in a later step.
+8. Do not blindly accept the default map, but it's a good place to start and explore how factors shape its appearance. Let's review key concepts we first introduced in the [Design Choropleth Colors & Intervals section](design-choropleth.html) of this chapter. The default map shows a *sequential* green-to-blue color palette, using a *continous* gradient ramp, with *linear* interpolation, which means the home values are distributed in a straight line up the scale. These colors and intervals work better for a data story that emphasizes the low and high extremes.
 
-(ref:datawrapper-map-match-values) Select the data column that contains the values that you wish to map.
+9. In the *Refine* tab, experiment with how changing settings affects the appearance of your map and the story it emphasizes about your data. For example, change *Type* from a *continuous* color gradient (like a ramp) to *steps* (like a staircase), which makes intervals (or ranges) sharper and more distinct in your data, as shown in Figure \@ref(fig:datawrapper-default-steps). This map works better for a data story that emphasizes groups at the high or low extremes, or above or below specific thresholds.
 
-```{r datawrapper-map-match-values, out.width=500, fig.cap="(ref:datawrapper-map-match-values)"}
-knitr::include_graphics("images/07-map/datawrapper-map-match-values.png")
+(ref:datawrapper-default-steps) Under the *Refine* tab, experiment with changing *Type* to *steps*.
+
+```{r datawrapper-default-steps, out.width=600, fig.cap="(ref:datawrapper-default-steps)"}
+knitr::include_graphics("images/07-map/datawrapper-default-steps.png")
 ```
 
-10. In the *Visualize* screen, under the *Refine* tab, click the *wrench symbol* next to the color palette to review the *default* map settings, as shown in Figure \@ref(fig:datawrapper-map-default). Do not blindly accept the default map, but it's a good place to start and explore how factors shape its appearance.
-
-(ref:datawrapper-map-default) Under the *Refine* tab, click the *wrench symbol* to see the default map settings.
-
-```{r datawrapper-map-default, out.width=600, fig.cap="(ref:datawrapper-map-default)"}
-knitr::include_graphics("images/07-map/datawrapper-map-default.png")
-```
-
-Let's review key concepts we first introduced in the [Design Choropleth Colors & Intervals section](design-choropleth.html) of this chapter. The default map shows a *continuous* green-to-blue color palette, with *linear* interpolation, which means the home values are distributed in a straight line up the scale. These colors and intervals work better for a data story that emphasizes the low and high extremes.
-
-11. In the *Refine* tab, experiment with different types of interpolation to change how values are assigned to colors. For example, change from *linear* to *quartiles*, which groups the data into four groups of equal size, as shown in Figure \@ref(fig:datawrapper-map-quartiles). This map works better for a data story that emphasizes geographic diversity, since we see more contrast between states in the middle range.
+10. In the *Refine* tab, experiment with different types of interpolation that change how values are assigned to colors, which also affects the appearance of your map and its data story. For example, change *Type* from *steps* back to the *continuous* color gradient, and change *Interpolation* from *linear* to *quartiles*, which groups the data into four groups of equal size, as shown in Figure \@ref(fig:datawrapper-map-quartiles). This map works better for a data story that emphasizes geographic diversity, since we see more contrast between states in the middle range, rather than highlighting only the extremes.
 
 (ref:datawrapper-map-quartiles) Under the *Refine* tab, change the interpolation from *linear* to *quartiles* and see how the map changes.
 
-```{r datawrapper-map-quartiles, out.width=400, fig.cap="(ref:datawrapper-map-quartiles)"}
+```{r datawrapper-map-quartiles, out.width=600, fig.cap="(ref:datawrapper-map-quartiles)"}
 knitr::include_graphics("images/07-map/datawrapper-map-quartiles.png")
 ```
 
-12. Experiment with other colors, intervals, and data columns. Change the palette from *sequential* to *diverging* colors, which display a neutral color in the middle range and two dark colors at the extremes. Change from a *continuous* gradient to *steps*, and choose different numbers of dividers. Change the data column to *Pct Change 2019-20* to [normalize the choropleth map data](normalize-choropleth.html) as discussed earlier in this chapter, since home values are so different across the country. For example, see the map of percent change in home value from 2019 to 2020, with a diverging red-to-blue palette, 5 steps, and rounded values in Figure \@ref(fig:datawrapper-map-percentchange).
+11. Experiment with other colors, intervals, and data columns. Change the palette from *sequential* to *diverging* colors, which display a neutral color in the middle range and two dark colors at the extremes. Change the data column to *Pct Change 2019-20* to [normalize the choropleth map data](normalize-choropleth.html) as discussed earlier in this chapter, since home values are so different across the country. For example, see the map of percent change in home value from 2019 to 2020, with a diverging red-to-blue palette, 5 steps, and rounded values in Figure \@ref(fig:datawrapper-map-percentchange).
 
 (ref:datawrapper-map-percentchange) Experiment with other colors, intervals, and data columns to find true and meaningful stories.
 
@@ -580,7 +566,7 @@ Which data columns, colors, and intervals make the best map? There's no easy ans
 
 Let's move on to finalize the labels and styling of the map before we publish and share it with others.
 
-13. Under the *Refine* tab, customize the legend format. For example, to convert long numbers (such as 107762) into abbreviated dollars ($ 108 k), we selected *custom format* and inserted the code `($ 0 a)`, as shown in Figure \@ref(fig:datawrapper-map-legend-custom). Learn more about Datawrapper custom formats in their link to the [numeral.js documentation](http://numeraljs.com/#format).
+12. Under the *Refine* tab, customize the legend format. For example, to convert long numbers (such as 107762) into abbreviated dollars ($ 108 k), we selected *custom format* and inserted the code `($ 0 a)`, as shown in Figure \@ref(fig:datawrapper-map-legend-custom). Learn more about Datawrapper custom formats in their link to the [numeral.js documentation](http://numeraljs.com/#format).
 
 (ref:datawrapper-map-legend-custom) Change how numbers appear in the legend by entering a custom format.
 
@@ -588,7 +574,7 @@ Let's move on to finalize the labels and styling of the map before we publish an
 knitr::include_graphics("images/07-map/datawrapper-map-legend-custom.png")
 ```
 
-14. Under the *Annotate* tab, add a title, description, and source credits, to add credibility to your work. You can also add map labels and customize tooltips that will display when readers hover their cursor over different states. The easiest way to edit tooltips is to click on blue column names, or format them using their drop-down menus, to make the proper codes appear in double curly brackets, as shown in Figure \@ref(fig:datawrapper-map-tooltip). Learn more about [customizing tooltips from Datawrapper Academy](https://academy.datawrapper.de/article/116-how-to-create-useful-tooltips-for-your-maps).
+13. Under the *Annotate* tab, add a title, description, and source credits, to add credibility to your work. You can also add map labels and customize tooltips that will display when readers hover their cursor over different states. The easiest way to edit tooltips is to click on blue column names, or format them using their drop-down menus, to make the proper codes appear in double curly brackets, as shown in Figure \@ref(fig:datawrapper-map-tooltip). Learn more about [customizing tooltips from Datawrapper Academy](https://academy.datawrapper.de/article/116-how-to-create-useful-tooltips-for-your-maps).
 
 (ref:datawrapper-map-tooltip) To edit tooltips, click the blue column names or use drop-down menus to format the codes.
 
@@ -596,7 +582,7 @@ knitr::include_graphics("images/07-map/datawrapper-map-legend-custom.png")
 knitr::include_graphics("images/07-map/datawrapper-map-tooltip.png")
 ```
 
-15. Finally, click *Proceed* or advance to the *Publish & Embed* screen to share your work with others. Follow the prompts, or the more detailed Datawrapper tutorial above, to obtain an embed code to your interactive map, and learn more about your next steps in [Chapter 9: Embed on the Web](embed.html).
+14. Finally, click *Proceed* or advance to the *Publish & Embed* screen to share your work with others. Follow the prompts, or the more detailed Datawrapper tutorial above, to obtain an embed code to your interactive map, and learn more about your next steps in [Chapter 9: Embed on the Web](embed.html).
 
 Tip: Learn more about [choropleth map design in this excellent series of posts by the Datawrapper Academy](https://academy.datawrapper.de/category/93-maps).
 

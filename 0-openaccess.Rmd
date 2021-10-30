@@ -1,10 +1,10 @@
-## About Open-Access Web Edition: Why and How {- #open-access}
+## Our Open-Access Web Edition: Why and How {- #open-access}
 This open-access web edition displays the book manuscript we submitted to our publisher, O'Reilly Media, Inc., which we publicly shared under the terms of our contract, and is freely available to read at https://HandsOnDataViz.org. Also, you can access our open-source code templates that we featured in this book on our GitHub organizational account at https://github.com/handsondataviz. To suggest any corrections or updates for future editions, you can open an issue or submit a pull request on our book's GitHub repository at https://github.com/handsondataviz/book. See also [Appendix: Publishing with Bookdown](bookdown.html) to learn why and how we built our workflow around [Bookdown](https://bookdown.org), [GitHub](https://github.com), and [Zotero](https://zotero.org).
 
 ### Why create an open-access book? {-}
-Why did we publicly share this open-access edition of our book? Why not maximize our profits and try to pocket all of the cash instead? Our answer is a combination of philosophical values and pragmatic realities. This is Jack's third open-access book, and he has written more extensively about the rationale in introductions to *Writing History in the Digital Age* (co-edited with Kristen Nawrotzki) and *Web Writing: Why and How for Liberal Arts Teaching and Learning* (co-edited with Tennyson O'Donnell).^[@doughertyWritingHistoryDigital2013; @doughertyWebWritingWhy2015]. Here's a summary of our key motivations.
+Why did we publicly share this open-access edition of our book? Why not maximize our profits and try to pocket all of the cash instead? Our answer is a combination of philosophical values and pragmatic realities. This is Jack's third open-access book, and he has previously written more about the rationale in the introductions to *Writing History in the Digital Age* (co-edited with Kristen Nawrotzki) and *Web Writing: Why and How for Liberal Arts Teaching and Learning* (co-edited with Tennyson O'Donnell).^[@doughertyWritingHistoryDigital2013; @doughertyWebWritingWhy2015]. Here's a summary of our key motivations.
 
-First, we believe that **knowledge becomes more valuable when shared widely**, rather than hidden behind a paywall. If our book makes a small improvement to the world by helping a thousand readers to communicate more clearly with data, then reaching ten thousand or more readers is even better. Originally, this book began as a compilation of tutorials for a data visualization course, which educated many college students and Hartford community partners in face-to-face settings, and thousands more in a free online course that attracted readers from around the globe. An open-access book is more likely to share knowledge than a closed one.^[On the origins of this book in a free online course, see @doughertyToughQuestionsAsk2017. For another perspective that asks whether writing a book is *worth* it, see @kleppmannWritingBookIt2020]
+First, we believe that **knowledge becomes more valuable when shared widely**, rather than hidden behind a paywall. If our book makes a small improvement to the world by helping a thousand readers to communicate more clearly with data, then reaching ten thousand or more readers is even better. Originally, this book began as a compilation of tutorials for a data visualization course, which educated many college students and Hartford community partners in face-to-face settings, and thousands more in a free online course that attracted readers from around the globe. An open-access book is more likely to share knowledge than a closed one.^[On the origins of this book in a free online course, see @doughertyToughQuestionsAsk2017. For an interesting perspective from another O'Reilly author who asks whether writing a book is *worth* it, see @kleppmannWritingBookIt2020]
 
 Second, both of us **operate in a reputation economy**, where our professional status rises or falls in the eyes of readers who judge the quality of our work. Therefore, it's in our professional self-interest to make our best work more accessible to wider audiences, rather than hiding it behind a paywall. Jack is a college professor and Ilya is a civic technologist. Creating an open-access book that introduces readers to core principles and concrete examples, and shares links to our open-access code templates, aligns with the expectations in our professions. Money also matters, but it's not our primary motivator, and both of us earn salaries through our regular employment.^[On reputation capital in academic life, see Tim Burke in the Conclusions to @doughertyWritingHistoryDigital2013; and also @fitzpatrickPlannedObsolescencePublishing2011, p. 40]  
 
@@ -16,46 +16,52 @@ Finally, one more motivator may be particular to this type of book on data visua
 
 When we decided we wanted to transform our existing online draft chapters into a polished publication, we sought a publisher who would work with us to include an open-access edition. Fortunately, our first-choice publisher, O'Reilly Media, has a friendly stance toward open access than many traditional publishers, and they also make money by selling print and digital books. When pitching our book proposal to O'Reilly's editors, we pointed to our existing open-access site and the web traffic it received as evidence of the book's audience.
 
-At the beginning of our book contract negotiations, here's how our O'Reilly acquisitions editor addressed the open-access issue in an email:
+During our book contract negotiations with O'Reilly, here's how our acquisitions editor addressed the open-access issue in an April 2020 email:
 
 > I assume you are wanting to leave the open-access textbook version available as it stands now? That would generally be fine with us, with the caveat that our edits and any material added to print book and our platform edition (basically, the work we do together) stays with us and does not migrate to the open edition. It does not prevent you from also updating your open edition differently, but would prevent a cut and paste of all of our editorial work into your open edition. And of course it would prevent you from charging separately for your open edition, but as long as you kept it open, it could stay up in perpetuity...  
 
-Based on this favorably stance, we agreed to sign a contract with O'Reilly that permits us to publish our open-access web edition for free (we cannot sell it) and we also submitted it as the final manuscript. The publisher has done copyediting (which we cannot directly “cut and paste” into our web edition), but we can update our web edition as we wish, and have continued to do so. Also, we submitted more than 300 figures, and the publisher's staff redrew about 15% to match their style, and we cannot paste those redrawn figures into the web edition, but that’s fine because those are mostly stylistic changes).
+Based on this favorable stance, we agreed to sign a contract with O'Reilly that permits us to publish our open-access web edition for free (we cannot sell it) and which we also submitted as the final manuscript. The publisher has done copyediting (which we cannot directly "cut and paste" into our web edition), but we can update our web edition as we wish, and have continued to do so. Also, we submitted more than 300 figures, and the editorial team redrew about 15% to match their style. So while we cannot paste those redrawn figures into the web edition, that's fine because those are mostly stylistic changes.
 
-Interestingly, O’Reilly's standard book contract does not specifically mention “open access” by name. Instead, here’s the relevant sections of their contract. Part 2A gives O’Reilly exclusive rights to publish our work, and Part 2C states that their exclusive rights in 2A do not apply to our “pre-existing materials,” meaning our open-access web edition and final manuscript.
+Interestingly, O'Reilly's standard book contract does not specifically mention "open access" by name. Instead, here's the relevant sections of our agreement. Part 2A gives O'Reilly exclusive rights to publish our work, and Part 2C states that their exclusive rights in 2A do not apply to our "pre-existing materials," meaning our open-access web edition and final manuscript.
 
 > 2. (a) You, jointly and severally, grant us the exclusive rights throughout the world and in any language, for the duration of all copyrights in the Work, to: (i) print, copy, publish, market, display, distribute, and provide access to the Work, in print, electronic, online, audio, and/or audiovisual form (and/or in any form in which we may now or in the future publish, display, distribute, or provide access to similar works); (ii) create derivative works based on the Work, and with respect to any derivative work, to exercise the rights granted to us in the preceding subsection (i) with respect to the Work; and (iii) license others to exercise any of the rights licensed to us. We will register the copyright in the first U.S. print edition of the Work in the United States Copyright Office in your names, provided that you sign and return to us Exhibit 3.  
 
-> (b) You acknowledge and agree that your ownership rights in the Work do not include ownership of any public domain data and technology, open source material that is not authored by you, or third-party material included in the Work. You also acknowledge and agree that with respect to any publication, distribution, or display of the Work, or access to the Work, permitted by this agreement, our ownership rights include the distinctive elements associated with the Work in that format, for example, the title, cover art, design format, “look and feel,” method of presentation, elements related to any series that includes the Work, and our trademarks, service marks, and trade names.  
+> (b) You acknowledge and agree that your ownership rights in the Work do not include ownership of any public domain data and technology, open source material that is not authored by you, or third-party material included in the Work. You also acknowledge and agree that with respect to any publication, distribution, or display of the Work, or access to the Work, permitted by this agreement, our ownership rights include the distinctive elements associated with the Work in that format, for example, the title, cover art, design format, "look and feel," method of presentation, elements related to any series that includes the Work, and our trademarks, service marks, and trade names.  
 
-> (c) We acknowledge and agree that the work will be based on, and may incorporate, materials you have previously developed and/or published (“Pre-Existing Materials”). We agree that the exclusivity granted in Section 2(a) above does not apply to such Pre-Existing Materials and nothing in this agreement is intended to restrict your ability to utilize the Pre-Existing Materials.  
+> (c) We acknowledge and agree that the work will be based on, and may incorporate, materials you have previously developed and/or published ("Pre-Existing Materials"). We agree that the exclusivity granted in Section 2(a) above does not apply to such Pre-Existing Materials and nothing in this agreement is intended to restrict your ability to utilize the Pre-Existing Materials.  
 
-Also, during editing and production, O’Reilly asked us not to include the open-access link (https://HandsOnDataViz.org) in the text of their book. We understand and respected that request, though also pointed out that it pops up as the first result in [a Google search of the book's title](https://www.google.com/search?hl=en&as_q=hands+on+data+visualization).
+Also, during editing and production, O'Reilly asked us not to include the open-access link (https://HandsOnDataViz.org) in the text of their book. We understand and respected that request, though also pointed out that it pops up as the first result in [a Google search of the book's title](https://www.google.com/search?hl=en&as_q=hands+on+data+visualization).
 
-Finally, it’s interesting that even when we tweet about the book being open-access, O’Reilly likes or retweets it. So their marketing people understand that in some ways, awareness of the open-access edition creates some book sales that *might* not have happened otherwise, though we cannot be certain.  For example, as we were finishing up our open-access manuscript, data visualization expert Alberto Cairo [tweeted about our book](https://twitter.com/AlbertoCairo/status/1338134036758335495) and many followers liked or reshared his tweet, which would not have happened if our book had not been open access.
+Finally, it's interesting that even when we tweet about the book being open-access, the O'Reilly marketing team often likes or retweets us. This suggests that our for-profit publisher understands that the open-access edition *might* generate some sales that otherwise would not have happened if buyers were unaware of our book. For example, as we were finishing up our open-access manuscript, data visualization expert Alberto Cairo [tweeted about our book](https://twitter.com/AlbertoCairo/status/1338134036758335495) and many followers liked or reshared his tweet, including our publisher. This type of Twitter publicity probably would not have happened if our book manuscript was locked behind a for-profit paywall.
 
-How many people have read our book? We have incomplete data because there are three major editions: our open-access web edition (which we host on a website we own), the O'Reilly print edition, and the O'Reilly digital subscriber edition.
+![Tweet by Alberto Cairo about our open-access book, December 2020](images/0-preface/alberto-cairo-tweet.png)
 
-Here's what we know from our Google Analytics for the our open-access web edition:
+How many people have read our our book? We can offer a partial answer from data for different editions: our open-access web edition (which we host on our GitHub website with our custom domain https://handsondataviz.org), and three editions sold by O'Reilly: subscriber-only online access to their entire library (which retails at $49/month), the print book edition, the eBook edition, and foreign rights.
 
-| Year        | Users visited |
-|-------------|---------------|
-| 2019        | 41,000        |
-| 2020        | 60,000        |
-| 2021 so far | 88,000        |
+Here's a summary of readership for our open-access web edition, according to our Google Analytics data, before and after O'Reilly published our book in late March 2021:
 
-And here's a summary of O'Reilly's book sales data for all editions:
+| Time Period                   | Users  | Pageviews | Avg Session Duration |
+|-------------------------------|-------:|----------:|---------------------:|
+| 2019 (before contract)        | 41,443 | 117,750   | 1:55 minutes         |
+| 2020 (revising manuscript)    | 60,709 | 185,391   | 2:09 minutes         |
+| 2021 (book released) thru Oct | 90,521 | 234,328   | 1:51 minutes         |
 
-Total earnings: $28,000
+Also, here's a summary of O'Reilly's book sales for their editions thru August 2021:
 
-Royalties to authors: $4,465
+| O'Reilly Sales | Units | Earnings | Pct to Author | Author Royalties |
+|----------------|------:|---------:|--------------:|-----------------:|
+| Online Access  |       | $5,963   | 25%           | $1,490           |
+| Print Books    | 671   | $15,431  | 10%           | $1,543           |
+| eBooks         | 78    | $2,045   | 25%           | $511             |
+| Foreign Rights |       | $5,000   | 25%           | $1,250           |
+| Other/Returns  |       |          |               | -$329            |
+| Total          | 749   | $28,111  |               | $4,466           |
 
-Print books sold to date: 671
+Since O'Reilly does not provide us with data on the number of readers or pageviews of our book through their subscriber-only online access, we do not know our total number of online readers.
 
-Ebooks sold to date: 78
+While our open-access book audience seems to be growing, a comparison with current data on O'Reilly total earnings and author royalties from book sales seem modest. That's perfectly fine with us, because our goal was to maximize the quality and readership of our open-access edition, while collaborating with a publisher that sells print and digital access to our book with full awareness of our open-access priorities. In other words, we never measured our success by the amount of money we could squeeze out of for-profit book sales and author royalties.
 
-
-In conclusion, our approach to open-access book publishing may not match your ideals or realities. Perhaps you rely on book sales as your sole source of income. Many authors and publishers still prefer to let readers preview only a chapter online in order to maximize revenue. Some authors will consider open-access publishing, but dare not share their drafts until the work is completed. Others take the opposite approach and widely circulate pieces of their early writing online in blog posts or social media, but do not share the comprehensive final work in the same manner. Still others have never considered any of these options, nor do they realize that the knowledge-production industry is slowly changing, and some book publishers are growing more comfortable with open-access agreements. While our approach may not suit your situation, we hope that our reasoning will nudge you to think differently about why and how we publish books.
+In conclusion, our approach to open-access book publishing may not match your ideals or realities. Perhaps you rely on book sales as your sole source of income. Many authors and publishers still prefer to let readers preview only a chapter online in order to maximize revenue. Some authors will consider open-access publishing, but dare not share their drafts until the work is completed. Others take the opposite approach and widely circulate pieces of their early writing online in blog posts or social media, but do not share the comprehensive final work in the same manner. Still others have never considered any of these options, nor do they realize that the knowledge-production industry is slowly changing, and some book publishers are growing more comfortable with open-access agreements. So while our approach may not suit your situation, we hope that our reasoning will nudge you to think differently about why and how all of us publish books, both in the present and in future years to come.
 
 ### How to read the web edition {-}
 Reading the open-access edition of *Hands-On Data Visualization* in your web browser the ideal way to explore our interactive charts and maps. Most are embedded in the web pages as iframes using the same principles illustrated in [Chapter 9: Embed on the Web](embed.html). Also, the web edition enables readers to easily click on internal cross-references and follow our links to external sources.
@@ -71,7 +77,7 @@ Try these toolbar features located near the top of your browser:
 - Social Media
 - Share
 
-![Screenshot: toolbar features](images/0-preface/toolbar-features.png)
+![Toolbar features in open-access web edition](images/0-preface/toolbar-features.png)
 
 #### Open links in new tabs {-}
 Keep your place when reading online and moving between pages.  
@@ -81,9 +87,9 @@ Keep your place when reading online and moving between pages.
 - or Alt + click (Chromebook)
 - or right-click (Windows and others)
 
-![Screenshot: Open link in new tab (on Mac)](images/0-preface/contextual-menu.png)
+![How to open links in new tab (on Mac)](images/0-preface/contextual-menu.png)
 
 #### Share section links {-}
 Float your cursor over any section header to reveal a hashtag anchor symbol: `#`. Click the symbol to view the section link in your browser bar, and copy it to share with others.
 
-![Screenshot: Share section links](images/0-preface/section-links.png)
+![How to share section links](images/0-preface/section-links.png)

@@ -98,6 +98,8 @@ Another way to find and download GeoJSON files is the clever [Gimme Geodata tool
 knitr::include_graphics("images/13-transform/gimme-geodata.png")
 ```
 
+Tip: When you download a GeoJSON file that contains spaces in its name (such as `Old Toronto.geojson`), replace the spaces with either hyphens or underscores (such as `Old-Toronto.geojson`). This will avoid problems with visualization tools in this book that do not recognize spaces in file names.
+
 Now that you know how to find geodata, let's look at free online tools to create, convert, edit, and join GeoJSON files with other types of data.
 
 ## Draw and Edit with GeoJson.io {- #geojsonio}
@@ -239,6 +241,8 @@ Mapshaper also allows you to upload Esri Shapefiles, so you can easily convert t
 In the following steps, we will convert a geospatial file by importing it to Mapshaper,
 and then exporting it as a different file type.
 
+Tip: Mapshaper doesn't work with KML or KMZ files, but you can use [GeoJson.io](geojson.html) to first convert them into GeoJSON format, then upload to Mapshaper.
+
 1. Navigate to [Mapshaper.org](https://mapshaper.org). The start page is two large drag-and-drop zones
 which you can use to import your file. The smaller area at the bottom, *Quick import*, uses default
 import settings and is a good way to begin.
@@ -266,8 +270,13 @@ all exported layers.
 knitr::include_graphics("images/13-transform/mapshaper-export.png")
 ```
 
-Tip: Mapshaper doesn't work with KML or KMZ files, but you can use [GeoJson.io](geojson.html) to first convert them into GeoJSON format, then upload to Mapshaper.
+Tip: In Mapshaper, when you export a file in GeoJSON format, your downloaded will appear in the `.json` format. Rename the file and change the extension to `.geojson` format, as shown in Figure \@ref(fig:mapshaper-json-geojson). This will avoid confusion with other visualization tools in this book that only recognize a properly-named GeoJSON file.
 
+(ref:mapshaper-json-geojson) Rename your Mapshaper exports from `.json` to `.geojson`.
+
+```{r mapshaper-json-geojson, out.width=350, fig.cap="(ref:mapshaper-json-geojson)"}
+knitr::include_graphics("images/13-transform/mapshaper-json-geojson-annotated.png")
+```
 
 #### Edit data for specific polygons {-}
 
@@ -351,7 +360,7 @@ the map looks appropriate (when the shapes are still recognizable).
 
 4. Mapshaper may suggest to repair line intersections in the upper-left corner. Click *Repair*.
 
-5. You can now export your file using the *Export* feature.
+5. You can now export your file using the *Export* feature. Remember to rename an exported GeoJSON file from `.json` to `.geojson` format.
 
 (ref:mapshaper-simplify) Use Simplify & Repair tools in Mapshaper.
 
@@ -359,11 +368,40 @@ the map looks appropriate (when the shapes are still recognizable).
 knitr::include_graphics("images/13-transform/mapshaper-simplify.png")
 ```
 
-Tip: When you upload a geographic file to Mapshaper, you may need to change its projection to align with your visualization tools or related geodata. Click to open the *Console* and type `-proj wgs84` (or `-proj EPSG:4326`) to change the projection to World Geodetic System 84 (wgs84), the format used by the Global Positioning System (GPS) to display geocoordinates around the world. 
+Tip: When you upload a geographic file to Mapshaper, you may need to change its projection to align with your visualization tools or related geodata. Click to open the *Console* and type `-proj wgs84` (or `-proj EPSG:4326`) to change the projection to World Geodetic System 84 (wgs84), the format used by the Global Positioning System (GPS) to display geocoordinates around the world.
+
+#### Merge and rename map layers {-}
+A common map editing task is to combine two separate map layers into one, which you can easily do with a simple Console command in Mapshaper.
+
+1. Import your first map file into Mapshaper, such as this [sample Hartford County, Connecticut GeoJSON file](data/hartford-county.geojson).
+
+2. Import your second map file, such as this [sample Tolland County, Connecticut GeoJSON file](data/tolland-county.geojson), so that you have two separate layers, as shown in Figure \@ref(fig:mapshaper-two-layers).
+
+(ref:mapshaper-two-layers) Two separate map layers have been imported into Mapshaper.
+
+```{r mapshaper-two-layers, out.width=350, fig.cap="(ref:mapshaper-two-layers)"}
+knitr::include_graphics("images/13-transform/mapshaper-two-layers.png")
+```
+
+3. Click on *Console*, which opens a window to type in commands. Enter the *merge* command as shown below, designate the *target* layers you wish to merge (separated by a comma and *without spaces*), then press the *Return* or *Enter* key.
+
+`-merge-layers target=hartford-county,tolland-county`
+
+4. Your new merged map will appear as `[unnamed layer]`. In the *Console* window, enter the *rename-layers* command as shown below to assign it a new name (such as `hartford-tolland` and *without spaces*), then press the *Return* or *Enter* key, as shown in Figure \@ref(fig:mapshaper-merge-rename).
+
+`-rename-layers hartford-tolland`
+
+(ref:mapshaper-merge-rename) Mapshaper allows you to merge and rename map layers.
+
+```{r mapshaper-merge-rename, fig.cap="(ref:mapshaper-merge-rename)"}
+knitr::include_graphics("images/13-transform/mapshaper-merge-rename.png")
+```
+
+If you need to dissolve the internal lines between your newly merged polygon map layers, see the next section about the *dissolve* command.
 
 #### Dissolve internal polygons to create an outline map {-}
 
-A common map editing task is to create an outline map by removing the internal boundaries. For example, you can dissolve
+Another common map editing task is to create an outline map by removing the internal boundaries. For example, you can dissolve
 state boundaries of the US map in the previous exercise to get the outline of the country, as shown in
 Figure \@ref(fig:mapshaper-dissolve).
 
@@ -378,7 +416,7 @@ Click on *Console*, which opens a window to type in commands. Enter the *dissolv
 `-dissolve`
 
 You will see that internal boundaries became lighter color, and that's Mapshaper's way of saying they no longer exist.
-You can now export your outline shape.
+You can now export your outline shape. Remember to rename an exported GeoJSON file from `.json` to `.geojson` format.
 
 #### Clip a map to match an outline layer {-}
 
@@ -402,7 +440,7 @@ If that is the case, use a related command to remove them, like this:
 
 `-clip hartfordcounty-outline -filter-slivers`
 
-5. Your Mapshaper state should look like the one pictured in Figure \@ref(fig:mapshaper-clip). You can now save the file on your computer using the *Export* button.
+5. Your Mapshaper state should look like the one pictured in Figure \@ref(fig:mapshaper-clip). You can now save the file on your computer using the *Export* button. Remember to rename an exported GeoJSON file from `.json` to `.geojson` format.
 
 (ref:mapshaper-clip) When clipping, make sure your active layer is the one being clipped (with many features), not the clipping feature itself.
 
@@ -440,7 +478,7 @@ of the CSV file.
 
 6. Use the *Cursor > inspect features* tool to make sure you see CSV columns as fields of your polygons, as shown in Figure \@ref(fig:mapshaper-join).
 
-7. You can now save the file to your computer by clicking the *Export* button.
+7. You can now save the file to your computer by clicking the *Export* button. Remember to rename an exported GeoJSON file from `.json` to `.geojson` format.
 
 (ref:mapshaper-join) In Mapshaper, join spatial and CSV files using common keys, such as town names.
 
@@ -561,7 +599,7 @@ knitr::include_graphics("images/13-transform/mapshaper-merge.png")
 ```
 
 You can inspect attribute data of polygons using *Cursor > inspect features* tool, and save the resulting file
-using the *Export* button.
+using the *Export* button. Remember to rename an exported GeoJSON file from `.json` to `.geojson` format.
 
 Overall, Mapshaper is a powerful geodata editing tool with many more commands that are worth exploring. Some of these include changing projections, filtering features using JavaScript expressions, assigning colors to polygons based on values, and many more. Explore the [MapShaper Wiki on GitHub](https://github.com/mbloch/mapshaper/wiki/Command-Reference) to learn more commands and see more examples.
 

@@ -472,7 +472,7 @@ Now that you've created a symbol point map with Datawrapper, in the next section
 
 ## Choropleth Map with Datawrapper {- #choropleth-datawrapper}
 
-Now let's pivot from point maps to polygon maps. Since you've already learned how to use [Datawrapper to design charts](chart-datawrapper.html) and [symbol maps](datawrapper-symbolmap.html), let's use this tool to create a choropleth map, which look like colored polygons. Choropleth maps are best for showing patterns across geographic areas by coloring polygons to represent data values. Datawrapper offers a wide collection of common geographical boundaries, including world regions, states and provinces, and also hexagons (cartograms), counties, congressional districts, and census tracts for the United States.
+Now let's pivot from point maps to polygon maps. Since you've already learned how to use [Datawrapper to design charts](chart-datawrapper.html) and [symbol maps](symbolmap-datawrapper.html), let's use this tool to create a choropleth map, which looks like colored polygons. Choropleth maps work best when used to show patterns across geographic areas by coloring polygons to represent data values. Datawrapper offers a wide collection of common geographical boundaries, including world regions, states and provinces, and also hexagons (cartograms), counties, congressional districts, and census tracts for the United States.
 
 In this section, you'll create a choropleth map of typical home values for US states in August 2020 according to the [Zillow Home Value Index](https://www.zillow.com/research/data/), as shown in Figure \@ref(fig:datawrapper-map-final). The index reflects typical home values (meaning those in the 35th to 65th percentile range, around the median) for single-family residences, condos, and co-ops, and it is smoothed and seasonally adjusted.
 
@@ -488,11 +488,11 @@ Datawrapper splits the process of creating a map into four steps: select map, ad
 
 Good maps often require [cleaning up messy data as described in Chapter 4](clean.html). In our spreadsheet we removed all of the columns except two, August 2019 and August 2020, and we also inserted a *Percent Change* column, which we calculated this way: `(2020 - 2019) / 2019 * 100`. Also, we're fortunate that Datawrapper easily recognizes US state names and abbreviations.
 
-2. In the Google Sheet, go to *File > Make a Copy* to save your own version in your Google Drive, and *Share* it so that anyone can view it.
+2. In the Google Sheet, go to *File > Make a copy* to save your own version in your Google Drive, and *Share* it so that anyone can view it.
 
-3. Open [Datawrapper](https://www.datawrapper.de), click on *Start Creating*, then click the *Create - New Map* dropdown menu, and select *Choropleth map* as shown in Figure \@ref(fig:datawrapper-map-choose). No login is required to create a map, but you should sign up for a free account in order to save your work and publish your map online.
+3. Open [Datawrapper](https://www.datawrapper.de), click on *Start Creating*, then click the *Create new...- New Map* dropdown menu, and select *Choropleth map* as shown in Figure \@ref(fig:datawrapper-map-choose). No login is required to create a map, but you should sign up for a free account in order to save your work and publish your map online.
 
-(ref:datawrapper-map-choose) In Datawrapper, click *Create - New Map*, and choose *Choropleth*.
+(ref:datawrapper-map-choose) In Datawrapper, click *Create new...- New Map*, and choose *Choropleth*.
 
 ```{r datawrapper-map-choose, out.width=500, fig.cap="(ref:datawrapper-map-choose)"}
 knitr::include_graphics("images/07-map/datawrapper-map-choose-annotated.png")
@@ -536,7 +536,7 @@ knitr::include_graphics("images/07-map/datawrapper-upload-review.png")
 knitr::include_graphics("images/07-map/datawrapper-select-column.png")
 ```
 
-8. Do not blindly accept the default map, but it's a good place to start and explore how factors shape its appearance. Let's review key concepts we first introduced in the [Design Choropleth Colors & Intervals section](design-choropleth.html) of this chapter. The default map shows a *sequential* green-to-blue color palette, using a *continous* gradient ramp, with *linear* interpolation, which means the home values are distributed in a straight line up the scale. These colors and intervals work better for a data story that emphasizes the low and high extremes.
+8. Do not blindly accept the default map, but it's a good place to start and explore how factors shape its appearance. Let's review key concepts we first introduced in the [Design Choropleth Colors & Intervals section](design-choropleth.html) of this chapter. The default map shows a *sequential* green-to-blue color palette, using a *continuous* gradient ramp, with *linear* interpolation, which means the home values are distributed in a straight line up the scale. These colors and intervals work better for a data story that emphasizes the low and high extremes.
 
 9. In the *Refine* tab, experiment with how changing settings affects the appearance of your map and the story it emphasizes about your data. For example, change *Type* from a *continuous* color gradient (like a ramp) to *steps* (like a staircase), which makes intervals (or ranges) sharper and more distinct in your data, as shown in Figure \@ref(fig:datawrapper-default-steps). This map works better for a data story that emphasizes groups at the high or low extremes, or above or below specific thresholds.
 
@@ -546,7 +546,7 @@ knitr::include_graphics("images/07-map/datawrapper-select-column.png")
 knitr::include_graphics("images/07-map/datawrapper-default-steps.png")
 ```
 
-10. In the *Refine* tab, experiment with different types of interpolation that change how values are assigned to colors, which also affects the appearance of your map and its data story. For example, change *Type* from *steps* back to the *continuous* color gradient, and change *Interpolation* from *linear* to *quartiles*, which groups the data into four groups of equal size, as shown in Figure \@ref(fig:datawrapper-map-quartiles). This map works better for a data story that emphasizes geographic diversity, since we see more contrast between states in the middle range, rather than highlighting only the extremes.
+10. Now, switch *Type* from *steps* back to the *continuous* color gradient, and let’s experiment with different types of *Interpolation*. Interpolation in this context is a function of assigning values to colors, and Datawrapper’s default is set to linear. Let’s switch it to *quartiles*, which bundles values into four groups of equal size, as shown in Figure \@ref(fig:datawrapper-map-quartiles). This map works better for a data story that emphasizes geographic diversity, since we see more contrast between states in the middle range, rather than highlighting only the extremes.
 
 (ref:datawrapper-map-quartiles) Under the *Refine* tab, change the interpolation from *linear* to *quartiles* and see how the map changes.
 
@@ -554,7 +554,7 @@ knitr::include_graphics("images/07-map/datawrapper-default-steps.png")
 knitr::include_graphics("images/07-map/datawrapper-map-quartiles.png")
 ```
 
-11. Experiment with other colors, intervals, and data columns. Change the palette from *sequential* to *diverging* colors, which display a neutral color in the middle range and two dark colors at the extremes. Change the data column to *Pct Change 2019-20* to [normalize the choropleth map data](normalize-choropleth.html) as discussed earlier in this chapter, since home values are so different across the country. For example, see the map of percent change in home value from 2019 to 2020, with a diverging red-to-blue palette, 5 steps, and rounded values in Figure \@ref(fig:datawrapper-map-percentchange).
+11. Experiment with other colors, intervals, and data columns. Change the palette from *sequential* to *diverging* colors, which display a neutral color in the middle range and two dark colors at the extremes. Diverging palettes are often used to represent change in values, and *Pct Change 2019-20* column would be a good candidate. Figure \@ref(fig:datawrapper-map-percentchange) shows our map of percent change in home values from 2019 to 2020, with a diverging red-to-blue palette of 5 steps. Two shades of red were assigned to represent decreases in values, but in fact the only state with a negative home value change is Alaska (-6.66%). You can notice that Alaska is painted in the darkest red (assigned to all values lower than -5%), and the lighter red is not used at all. This is to keep bucket sizes of equal size of 5 percentage points each.
 
 (ref:datawrapper-map-percentchange) Experiment with other colors, intervals, and data columns to find true and meaningful stories.
 
@@ -574,7 +574,7 @@ Let's move on to finalize the labels and styling of the map before we publish an
 knitr::include_graphics("images/07-map/datawrapper-map-legend-custom.png")
 ```
 
-13. Under the *Annotate* tab, add a title, description, and source credits, to add credibility to your work. You can also add map labels and customize tooltips that will display when readers hover their cursor over different states. The easiest way to edit tooltips is to click on blue column names, or format them using their drop-down menus, to make the proper codes appear in double curly brackets, as shown in Figure \@ref(fig:datawrapper-map-tooltip). Learn more about [customizing tooltips from Datawrapper Academy](https://academy.datawrapper.de/article/116-how-to-create-useful-tooltips-for-your-maps).
+13. Under the *Annotate* tab, add a title, description, and cite your sources to add credibility to your work. You can also add map labels and customize tooltips that will display when readers hover their cursor over different states. The easiest way to edit tooltips is to click on blue column names, or format them using their drop-down menus, to make the proper codes appear in double curly brackets, as shown in Figure \@ref(fig:datawrapper-map-tooltip). Learn more about [customizing tooltips from Datawrapper Academy](https://academy.datawrapper.de/article/116-how-to-create-useful-tooltips-for-your-maps).
 
 (ref:datawrapper-map-tooltip) To edit tooltips, click the blue column names or use drop-down menus to format the codes.
 
@@ -590,7 +590,7 @@ Now that you've learned how to create a choropleth map using one tool, Datawrapp
 
 ## Choropleth Map with Tableau Public {- #map-tableau}
 
-We first introduced you to the free Tableau Public desktop application (for Mac or Windows) when building [scattercharts](scatter-tableau.html) and [filtered line charts](filtered-line-tableau.html) in Chapter 6. Now let's use the same tool to create an interactive choropleth map, and compare the process with the Datawrapper tool we learned in the prior section. We're showing you how to create the same type of map with both tools, in order to show you the difference. On one hand, Datawrapper gives you more control over interpolating data and shaping the appearance of color intervals in your choropleth map. On the other hand, some people prefer Tableau Public because they're already familiar with its interface.
+We first introduced you to the free Tableau Public desktop application (for Mac or Windows) when building [scatter charts](scatter-tableau.html) and [filtered line charts](filtered-line-tableau.html) in Chapter 6. Now let's use the same tool to create an interactive choropleth map, and compare the process with the Datawrapper tool we learned in the prior section. We're showing you how to create the same type of map with both tools, in order to show you the difference. On one hand, Datawrapper gives you more control over interpolating data and shaping the appearance of color intervals in your choropleth map. On the other hand, some people prefer Tableau Public because they're already familiar with its interface.
 
 Tableau Public can create many different types of map for geographical place names or ISO codes it already recognizes, such as nations, states, counties, and airports. But Tableau Public cannot geocode street addresses by itself, so you'll need to obtain their latitude and longitude with another tool, such as those described in the [geocode section of Chapter 2](geocode.html). Furthermore, if you want to upload customized map boundaries, learn how to [Create Tableau Maps from Spatial Files](https://help.tableau.com/current/pro/desktop/en-us/maps_shapefiles.htm)
 on the support page.
@@ -667,7 +667,7 @@ as shown in Figure \@ref(fig:tableau-polygon-color).
 knitr::include_graphics("images/07-map/tableau-polygon-color.png")
 ```
 
-8. When you hover over countries, you will notice a tooltip that tells you the name of the country and gives you the percent value. It is generally well-formatted as our initial data table had proper column headers. But we can make the tooltip even better. Click the Tooltip box of the Marks card, change the first instance of `Country Name` to just `Country` (do not change the grayed-out text inside `<` and `>` as these are variable names), and add a `%` sign at the end of the second row, as shown in Figure \@ref(fig:tableau-polygon-tooltip).
+8. When you hover over countries, you will notice a tooltip that tells you the name of the country and gives you the percent value. It is generally well-formatted as our initial data table had proper column headers. But we can make the tooltip even better. Click the Tooltip box of the Marks card, change the first instance of `Country Name` to just `Country` (do not change the text inside `<` and `>` as these are variable names), and add a `%` sign at the end of the second line, as shown in Figure \@ref(fig:tableau-polygon-tooltip).
 
 (ref:tableau-polygon-tooltip) Change tooltip text to make it more user-friendly.
 
@@ -679,7 +679,7 @@ knitr::include_graphics("images/07-map/tableau-polygon-tooltip.png")
 to bring up the *Edit Title* window, and change the name of your chart to
 *2017 Healthcare Spending by Country as % of GDP*.
 
-10. At this point the data is loaded and should be displayed correctly, so we are going to create the final layout that include map's title and credits, the legend, and is appropriate for sharing. At the bottom-left of the program, create a *New Dashboard*, as shown in Figure \@ref(fig:tableau-dashboard-create). Dashboards in Tableau are layouts that can contain visualizations from multiple sheets, as well as text boxes, images, and other elements, creating rich exploratory interfaces. In this tutorial, we will stick to just a single sheet that contains our choropleth map.
+10. At this point the data is loaded and should be displayed correctly, so we are going to create the final layout that includes map's title and credits, the legend, and is appropriate for sharing. At the bottom-left of the program, create a *New Dashboard*, as shown in Figure \@ref(fig:tableau-dashboard-create). Dashboards in Tableau are layouts that can contain visualizations from multiple sheets, as well as text boxes, images, and other elements, creating rich exploratory interfaces. In this tutorial, we will stick to just a single sheet that contains our choropleth map.
 
 (ref:tableau-dashboard-create) Before you publish the map, create a new dashboard to finalize your layout.
 
@@ -687,7 +687,7 @@ to bring up the *Edit Title* window, and change the name of your chart to
 knitr::include_graphics("images/07-map/tableau-dashboard-create-annotated.png")
 ```
 
-11. In your Dashboard 1 tab, change the size of the dashboard to Automatic so that the map is responsive and occupies 100% of the width on all devices. Drag and drop Sheet 1 to the *Drop sheets here* area, as shown in Figure \@ref(fig:tableau-dashboard). This will copy the map, the title, and the legend from Sheet 1.
+11. In your Dashboard 1 tab, change the size of the dashboard to Automatic so that the map is responsive and occupies 100% of the width on all devices. Drag and drop Sheet 1 to the *Add sheets here* area, as shown in Figure \@ref(fig:tableau-dashboard). This will copy the map, the title, and the legend from Sheet 1.
 
 (ref:tableau-dashboard) To create a responsive dashboard, change the Size to Automatic.
 
@@ -703,11 +703,13 @@ knitr::include_graphics("images/07-map/tableau-dashboard-annotated.png")
 knitr::include_graphics("images/07-map/tableau-dashboard-legend.png")
 ```
 
-13. Finally, let's add a text block with data source underneath the map. From the Objects menu in the left-hand side, drag and drop *Text* to the lower half of the map. In the *Edit Text* window that appears, type *Data by the World Bank, 2017*, and click OK. Initially the text area will occupy half the height of the screen, so resize it like you would resize any window on your computer.
+13. Finally, let's add a text block with data source underneath the map. From the Objects menu in the left-hand side, drag and drop *Text* to the lower half of the map. In the *Edit Text* window that appears, type *Data by the World Bank, 2017*, and click OK. Initially the text area will occupy half the height of the screen, so resize it like you would resize any window on your computer. Also, position your map's center and zoom level as you want it to be visible by others. In this case, the best would be to have a world view as we are showing data for most countries, although you may want to zoom in to a specific continent.
 
-And we're done! Make sure you position your map's center and zoom level as you want it to be visible by others. In this case, the best would be to have a world view as we are showing data for most countries, although you may want to zoom in to a specific continent. Once you are ready to publish and share the map, go to *File > Save As* to your Tableau Public profile. Give it a title, such as Healthcare Spending, and click Save. See how to [embed the map as an iframe in Chapter 9](embed-code.html).
+14. When you are ready to publish your map online, go to *File > Save As* to your Tableau Public profile. Give it a title, such as Healthcare Spending, and click Save. See how to [embed the map as an iframe in Chapter 9](embed-code.html).
 
-Warning: Tableau may not be the best tool to create choropleth maps where you want to have full control of color breaks. By default, Tableau uses a linear color scheme that, as we've learned earlier in the chapter, is prone to highlighting outliers, and there is no straightforward way to change the intervals to non-linear methods such as quantiles. If you are not happy with the way the linear scale represents your data, you can [filter your data to remove outliers from the map](https://help.tableau.com/current/pro/desktop/en-us/filtering.htm), or see [Andy Kriebel's VizWiz tutorial to use table calculations to group items into quantiles](https://www.vizwiz.com/2018/07/rankpercentile.html), or create your [choropleth map in Datawrapper](choropleth-datawrapper.html), which gives you more control over color intervals and interpolation.
+Warning: When you first try to save the map to your Tableau Public account, you will get an error saying that "the data source needs to be an extract" and you can [read more about data extracts in Tableau Help](https://help.tableau.com/current/pro/desktop/en-us/extracting_data.htm). Go back to the *Data Source* tab, and click the *Create Extract* button in the upper-right corner. Tableau will take a few moments to manipulate the original CSV data, after which you can successfully save the map to your profile with File > Save As.
+
+Tip: Tableau may not be the best tool to create choropleth maps where you want to have full control of color breaks. By default, Tableau uses a linear color scheme that, as we've learned earlier in the chapter, is prone to highlighting outliers, and there is no straightforward way to change the intervals to non-linear methods such as quantiles. If you are not happy with the way the linear scale represents your data, you can [filter your data to remove outliers from the map](https://help.tableau.com/current/pro/desktop/en-us/filtering.htm), or see [Andy Kriebel's VizWiz tutorial to use table calculations to group items into quantiles](https://www.vizwiz.com/2018/07/rankpercentile.html), or create your [choropleth map in Datawrapper](choropleth-datawrapper.html), which gives you more control over color intervals and interpolation.
 
 In all of the prior tutorials, you created interactive maps using *static data*, meaning it came from a spreadsheet. In the next tutorial, you'll learn how to build a map using *continuously-updated data* from a Socrata open data repository, which will always display the most current information.
 

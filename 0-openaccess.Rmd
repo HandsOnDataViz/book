@@ -36,7 +36,9 @@ Finally, it's interesting that even when we tweet about the book being open-acce
 
 ![Tweet by Alberto Cairo about our open-access book, December 2020](images/0-preface/alberto-cairo-tweet.png)
 
-How many people have read our our book? We can offer a partial answer from data for different editions: our open-access web edition (which we host on our GitHub website with our custom domain https://handsondataviz.org), and three editions sold by O'Reilly: subscriber-only online access to their entire library (which retails at $49/month), the print book edition, the eBook edition, and foreign rights.
+### What is our readership and sales data? {-}
+
+How many people have read our open-access web book? And how many for-profit books have been sold? Answering these questions requires data from different sources because our book appears in four editions. One is the open-access web edition that we host on our GitHub website (with our custom domain https://handsondataviz.org). The other three editions are sold by O'Reilly: subscriber-only online access to their entire library (which retails at $49/month), the print book edition, and the eBook edition. Furthermore, O'Reilly sells foreign rights to publish the book in other countries.
 
 Here's a summary of readership for our open-access web edition, according to our Google Analytics data, before and after O'Reilly published our book in late March 2021:
 
@@ -46,7 +48,7 @@ Here's a summary of readership for our open-access web edition, according to our
 | 2020 (revising manuscript)    | 60,709 | 185,391   | 2:09 minutes         |
 | 2021 (book released) thru Oct | 90,521 | 234,328   | 1:51 minutes         |
 
-Also, here's a summary of O'Reilly's book sales for their editions thru August 2021:
+Here's a summary of O'Reilly's book sales for their editions thru August 2021:
 
 | O'Reilly Sales | Units | Earnings | Pct to Author | Author Royalties |
 |----------------|------:|---------:|--------------:|-----------------:|
@@ -57,9 +59,9 @@ Also, here's a summary of O'Reilly's book sales for their editions thru August 2
 | Other/Returns  |       |          |               | -$329            |
 | Total          | 749   | $28,111  |               | $4,466           |
 
-Since O'Reilly does not provide us with data on the number of readers or pageviews of our book through their subscriber-only online access, we do not know our total number of online readers.
+Note that O'Reilly does not provide us with data on the number of readers or pageviews of our book through their subscriber-only online access.
 
-While our open-access book audience seems to be growing, a comparison with current data on O'Reilly total earnings and author royalties from book sales seem modest. That's perfectly fine with us, because our goal was to maximize the quality and readership of our open-access edition, while collaborating with a publisher that sells print and digital access to our book with full awareness of our open-access priorities. In other words, we never measured our success by the amount of money we could squeeze out of for-profit book sales and author royalties.
+While our open-access web book audience is large and growing, O'Reilly's total earnings from for-profit sales seems modest by comparison. That's perfectly fine with us, because we never measured our success by squeezing out more money from for-profit book sales. Instead, our primary goal with *Hands-On Data Visualization* was to enhance the quality and expand the readership of our open-access edition, while collaborating with a publisher, who respects our open-access priorities, to produce print and digital editions of the book to readers who prefer to buy them in these formats. Working with O'Reilly---especially our developmental editor, copyeditor, and production editor---has been an excellent experience. 
 
 In conclusion, our approach to open-access book publishing may not match your ideals or realities. Perhaps you rely on book sales as your sole source of income. Many authors and publishers still prefer to let readers preview only a chapter online in order to maximize revenue. Some authors will consider open-access publishing, but dare not share their drafts until the work is completed. Others take the opposite approach and widely circulate pieces of their early writing online in blog posts or social media, but do not share the comprehensive final work in the same manner. Still others have never considered any of these options, nor do they realize that the knowledge-production industry is slowly changing, and some book publishers are growing more comfortable with open-access agreements. So while our approach may not suit your situation, we hope that our reasoning will nudge you to think differently about why and how all of us publish books, both in the present and in future years to come.
 

@@ -270,7 +270,7 @@ all exported layers.
 knitr::include_graphics("images/13-transform/mapshaper-export.png")
 ```
 
-Tip: In Mapshaper, when you export a file in GeoJSON format, your downloaded will appear in the `.json` format. Rename the file and change the extension to `.geojson` format, as shown in Figure \@ref(fig:mapshaper-json-geojson). This will avoid confusion with other visualization tools in this book that only recognize a properly-named GeoJSON file.
+Tip: In Mapshaper, when you export a file in GeoJSON format, your downloaded file will appear in the `.json` format. Rename the file and change the extension to `.geojson` format, as shown in Figure \@ref(fig:mapshaper-json-geojson). This will avoid confusion with other visualization tools in this book that only recognize a properly-named GeoJSON file.
 
 (ref:mapshaper-json-geojson) Rename your Mapshaper exports from `.json` to `.geojson`.
 

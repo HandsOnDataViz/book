@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2021-10-31" />
+<meta name="date" content="2021-11-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -376,20 +376,20 @@ which represents polygons that are colored in a particular way to represent unde
 A lot of polygon maps end up being <em>choropleth</em> maps, so we will be using this term a lot in this book.</p>
 <p>Let’s take a look at a list of all hospitals (<a href="https://data.cms.gov/provider-data/dataset/xubh-q36u" class="uri">https://data.cms.gov/provider-data/dataset/xubh-q36u</a>) that are registered with the Medicare program in the US, made available by The Centers for Medicare &amp; Medicaid Services. The dataset has information on each hospital’s name, location (nicely divided into Address, City, State, and ZIP Code columns), a phone number, and some other indicators, such as mortality and patient experience.</p>
 <p>Imagine you’re asked to create a choropleth map of total hospitals by US state.
-Instead of showing individual hospitals as points, you want darker shades of blue to represent states with more hospitals, as shown in Figure <a href="pivot-point-to-polygon.html#fig:pivot-address">13.25</a>.</p>
+Instead of showing individual hospitals as points, you want darker shades of blue to represent states with more hospitals, as shown in Figure <a href="pivot-point-to-polygon.html#fig:pivot-address">13.29</a>.</p>
 
 <div class="figure"><span id="fig:pivot-address"></span>
 <img src="images/13-transform/pivot-address-annotated.png" alt="You can count addresses by state (or other area) to produce polygon, or choropleth, maps instead of point maps."  />
 <p class="caption">
-Figure 13.25: You can count addresses by state (or other area) to produce polygon, or choropleth, maps instead of point maps.
+Figure 13.29: You can count addresses by state (or other area) to produce polygon, or choropleth, maps instead of point maps.
 </p>
 </div>
-<p>First, save the database to your local machine by clicking the “Download this dataset” button to the right of the table, as shown in Figure <a href="pivot-point-to-polygon.html#fig:pivot-address-export">13.26</a>.</p>
+<p>First, save the database to your local machine by clicking the “Download this dataset” button to the right of the table, as shown in Figure <a href="pivot-point-to-polygon.html#fig:pivot-address-export">13.30</a>.</p>
 
 <div class="figure"><span id="fig:pivot-address-export"></span>
 <img src="images/13-transform/pivot-address-export-annotated.png" alt="Export the entire dataset as a CSV." width="600" />
 <p class="caption">
-Figure 13.26: Export the entire dataset as a CSV.
+Figure 13.30: Export the entire dataset as a CSV.
 </p>
 </div>
 <p>Next, open the file in your favorite spreadsheet tool. If you use Google Sheets,
@@ -402,7 +402,7 @@ column that has no missing values—and choose <em>Summarize by: COUNTA</em>. Vo
 <div class="figure"><span id="fig:pivot-address-sheet"></span>
 <img src="images/13-transform/pivot-address-sheet-annotated.png" alt="Use pivot tables in any spreadsheet software to count addresses per area (such as state, county, of zip code)."  />
 <p class="caption">
-Figure 13.27: Use pivot tables in any spreadsheet software to count addresses per area (such as state, county, of zip code).
+Figure 13.31: Use pivot tables in any spreadsheet software to count addresses per area (such as state, county, of zip code).
 </p>
 </div>
 <p>Your aggregated dataset is ready, so save it as a CSV. If you use Google Sheets,

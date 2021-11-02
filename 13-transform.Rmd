@@ -448,12 +448,55 @@ If that is the case, use a related command to remove them, like this:
 knitr::include_graphics("images/13-transform/mapshaper-clip-annotated.png")
 ```
 
+#### Join points with polygon map {-}
+Joining a spreadsheet of point data with geographical boundaries is also known as a *spatial join* and is a common task in data visualization. In this exercise, you will download this table of [Connecticut electric vehicle charging station data, including latitude and longitude coordinates for each location, in CSV format](data/ct-stations.csv), and also download this [Connecticut census tracts 2018 boundaries in GeoJSON format](data/ct-census-tracts-2018.geojson). Our goal is to use Mapshaper's powerful `-join` command to answer this question: in which census tract is each charging station located?
+
+1. Import the CSV point data file you downloaded above into Mapshaper using its Quick import box. Click on the *inspect features* arrow tool and float over cells to confirm that they contain *Latitude* and *Longitude* data columns, as shown in Figure \@ref(fig:mapshaper-inspect-csv).
+
+(ref:mapshaper-inspect-csv) Use the *inspect features* arrow tool to confirm that each CSV cell contains *Latitude* and *Longitude* columns.
+
+```{r mapshaper-inspect-csv, out.width=500, fig.cap="(ref:mapshaper-inspect-csv)"}
+knitr::include_graphics("images/13-transform/mapshaper-inspect-csv.png")
+```
+
+2. Click open the *Console* window in Mapshaper and enter the *points* command as shown below to instruct the tool to designate the *Longitude* and *Latitude* columns as XY coordinates, then press *Return* or *Enter*. Be sure to follow the order below and spell the column headers exactly as they appear in your data. Mapshaper will display them as points on a map, as shown in Figure \@ref(fig:mapshaper-points-xy).
+
+`-points x=Longitude y=Latitude`
+
+(ref:mapshaper-points-xy) Use the Mapshaper `-points` command to display your CSV data as XY coordinates on a map.
+
+```{r mapshaper-points-xy, fig.cap="(ref:mapshaper-points-xy)"}
+knitr::include_graphics("images/13-transform/mapshaper-points-xy.png")
+```
+
+3. Import the CT census tracts 2018 GeoJSON data you downloaded above by dragging the file into Mapshaper. Click on the *inspect features* arrow tool to float over polygons to confirm that they contain data columns named *GEOID* and *NAME*, which represent different formats of the census tract name, as shown in Figure \@ref(fig:mapshaper-inspect-tracts).
+
+(ref:mapshaper-inspect-tracts) Use the *inspect features* arrow tool to confirm that each tract contains data columns named *GEOID* and *NAME*.
+
+```{r mapshaper-inspect-tracts, out.width=500, fig.cap="(ref:mapshaper-inspect-tracts)"}
+knitr::include_graphics("images/13-transform/mapshaper-inspect-tracts-annotated.png")
+```
+
+4. At the top of Mapshaper, click on the dropdown menu to change the active layer back to the points, or in this case *ct-stations*. Click open the *Console* and enter the `join` command in the format below, which matches the polygon layer (*ct-census-tracts-2018*) to each point, and adds two new data columns (*GEOID* and *NAME*) to the CSV, as shown in Figure \@ref(fig:mapshaper-spatial-join).
+
+`-join ct-census-tracts-2018 fields='GEOID,NAME'`
+
+(ref:mapshaper-spatial-join) Use the *inspect features* arrow tool to confirm that each tract contains data columns named *GEOID* and *NAME*.
+
+```{r mapshaper-spatial-join, fig.cap="(ref:mapshaper-spatial-join)"}
+knitr::include_graphics("images/13-transform/mapshaper-spatial-join-annotated.png")
+```
+
+Tip: The Mapshaper console also provides helpful information about the status of your join. In this example, joined data from 225 source records (census tracts) to 385 target records (points). But 605 out of 830 source records (census tracts) could not be joined, because they did not match any of the points.
+
+5. Export your updated points data (in this case *ct-stations*) in CSV format to analyze your results in a spreadsheet.
+
 #### Join spreadsheet data with polygon map {-}
 
-Combining spreadsheet data with geographical boundaries is a common task in data visualization. In this exercise, you will download this [Connecticut town boundaries map in GeoJson format ](data/ct-towns.geojson),
+Combining spreadsheet data with geographical boundaries is another common task in data visualization. In this exercise, you will download this [Connecticut town boundaries map in GeoJson format ](data/ct-towns.geojson),
 and also download this [Connecticut town population data in CSV format](data/ct-towns-popdensity.csv), and join the two of them in order to build a choropleth map.
 
-Mapshaper provides a powerful `-join` command to connect these files files. Remember that you need some common keys
+Mapshaper provides a powerful `-join` command to connect these files. Remember that you need some common keys
 in both datasets (such as *town name*, or *state*, or *country*) in order to join the two files. Without a common field, Mapshaper has no way of knowing which
 numbers belong to which polygons.
 

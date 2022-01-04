@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2021-11-02" />
+<meta name="date" content="2022-01-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -376,24 +376,24 @@ div.csl-indent {
 Figure 2.13: To map addresses, you first need to geocode them.
 </p>
 </div>
-<p>If you have just one or two addresses, you can quickly geocode them with <a href="https://www.google.com/maps">Google Maps</a>. Search for an address, right-click on that point, and select <em>What’s here?</em> to reveal a popup window with its latitude and longitude, as shown in Figure <a href="geocode.html#fig:gmaps-whats-here">2.14</a>.</p>
+<p>If you have just one or two addresses, you can quickly geocode them with <a href="https://www.google.com/maps">Google Maps</a>. Search for an address, right-click on that point, and select the first entry to copy its latitude and longitude, as shown in Figure <a href="geocode.html#fig:gmaps-coordinates">2.14</a>.</p>
 
-<div class="figure"><span id="fig:gmaps-whats-here"></span>
-<img src="images/02-spreadsheet/gmaps-whats-here.png" alt="To geocode one address, search in Google Maps and right-click What’s here? to show coordinates."  />
+<div class="figure"><span id="fig:gmaps-coordinates"></span>
+<img src="images/02-spreadsheet/gmaps-coordinates.png" alt="To geocode one address, search in Google Maps and right-click to copy its coordinates." width="200" />
 <p class="caption">
-Figure 2.14: To geocode one address, search in Google Maps and right-click <em>What’s here?</em> to show coordinates.
+Figure 2.14: To geocode one address, search in Google Maps and right-click to copy its coordinates.
 </p>
 </div>
 <p>But what if you need to geocode a dozen or a hundred addresses? To geocode multiple addresses inside your spreadsheet, install a free Google Sheets Add-on called <a href="https://gsuite.google.com/marketplace/app/geocoding_by_smartmonkey/1033231575312">Geocoding by SmartMonkey</a>, created by Xavier Ruiz, the CEO of <a href="https://www.smartmonkey.io/">SmartMonkey</a>, a geographic route-planning company in Barcelona, Spain. Add-ons are created by third-party companies to expand features for Google Sheets, Google Documents, and related tools. Add-ons are verified to meet Google’s requirements and distributed through its <a href="https://gsuite.google.com/marketplace">G Suite Marketplace</a>.</p>
 <ol style="list-style-type: decimal">
 <li><p>Sign into your Google Drive account, go to the <a href="https://gsuite.google.com/marketplace/app/geocoding_by_smartmonkey/1033231575312">Geocoding by SmartMonkey Add-on page</a>, and click the blue button to install it in your Google Sheets. The Add-on will ask for your permission before installing, and if you agree, press <em>Continue</em>. In the next window, choose your Google Drive account, and if you agree with the terms, click <em>Allow</em> to complete the installation. Google will email you to confirm that you have installed this third-party app with access to your account. You can always <a href="https://myaccount.google.com/permissions">review permissions and revoke access</a> in the future, if desired.</p></li>
-<li><p>Go to your <a href="https://drive.google.com">Google Drive</a> and create a new Google Sheet. Select the <em>Add-ons</em> menu to see the new <em>Geocoding by SmartMonkey</em> options, and select <em>Geocode Details</em> menu. The Add-on will create a new sheet with sample data and display results for three new columns: <em>Latitude</em>, <em>Longitude</em>, and <em>Address found</em>, as shown in Figure <a href="geocode.html#fig:geocode-details">2.15</a>. Always review the quality of geocoded results by comparing the <em>Address found</em> column to the original <em>Address</em> entered.</p></li>
+<li><p>Go to your <a href="https://drive.google.com">Google Drive</a> and create a new Google Sheet. Select the <em>Extensions</em> menu to see the new <em>Geocoding by SmartMonkey</em> options, and select <em>Geocode Details</em> menu. The geocoding tool will create a new sheet with sample data and display results for three new columns: <em>Latitude</em>, <em>Longitude</em>, and <em>Address found</em>, as shown in Figure <a href="geocode.html#fig:geocode-details">2.15</a>. Always review the quality of geocoded results by comparing the <em>Address found</em> column to the original <em>Address</em> entered.</p></li>
 </ol>
 
 <div class="figure"><span id="fig:geocode-details"></span>
-<img src="images/02-spreadsheet/geocode-details.png" alt="Select Add-ons–Geocoding by SmartMonkey–Geocode Details to display sample data with results for three new columns: Latitude, Longitude, and Address found."  />
+<img src="images/02-spreadsheet/geocode-details.png" alt="Select Extensions–Geocoding by SmartMonkey–Geocode Details to display sample data with results for three new columns: Latitude, Longitude, and Address found."  />
 <p class="caption">
-Figure 2.15: Select <em>Add-ons–Geocoding by SmartMonkey–Geocode Details</em> to display sample data with results for three new columns: <em>Latitude</em>, <em>Longitude</em>, and <em>Address found</em>.
+Figure 2.15: Select <em>Extensions–Geocoding by SmartMonkey–Geocode Details</em> to display sample data with results for three new columns: <em>Latitude</em>, <em>Longitude</em>, and <em>Address found</em>.
 </p>
 </div>
 <ol start="3" style="list-style-type: decimal">
@@ -405,6 +405,7 @@ Figure 2.15: Select <em>Add-ons–Geocoding by SmartMonkey–Geocode Details</em
 <li>You can leave the <em>Country</em> column blank, but its default value is the United States. To specify other nations, use their <a href="https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains">top-level Internet domain code</a>, such as <code>es</code> for Spain.</li>
 <li>If your original data splits street, city, state, and zip code into different columns, see how to <a href="combine-data.html">Combine Data into One Column in Chapter 4: Clean Up Messy Data</a>.</li>
 <li>Give the tool time to work. For example, if you enter 50 addresses, expect to wait at least 15 seconds for your geocoded results.</li>
+<li>Gecoding results may be limited to approximately 500 addresses per day per account.</li>
 <li>Always inspect the quality of your results, and never assume that geocoding services from any provider are accurate.</li>
 </ul>
 <p>If you need a faster geocoding service for US addresses, which can handle up to 10,000 requests in one upload, see <a href="bulk-geocode.html">bulk geocoding with the US Census</a> in Chapter 13: Transform Your Map Data.</p>

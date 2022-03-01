@@ -21,6 +21,7 @@ output:
     css: css/style.css
     includes:
       in_header: header-dataviz.html
+      before_body: header.html
       after_body: footer.html
     toc_depth: 2
     split_by: section

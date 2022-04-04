@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2022-03-01" />
+<meta name="date" content="2022-04-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -372,7 +372,7 @@ div.csl-indent {
   </p>
 
   <p style="background-color: #FFD700; margin: 0; padding: 10px 20px; text-align: center">
-    All 2022 book royalties will be donated to <a href="https://savelife.in.ua/en/donate/" target="_blank">Save Life in Ukraine</a>. Join us and donate.
+    Join us and donate. All 2022 book royalties will be donated to:<br> <a href="https://savelife.in.ua/en/donate/" target="_blank">Save Life in Ukraine</a> and <a href="https://www.dec.org.uk/appeal/ukraine-humanitarian-appeal" target="_blank">Ukraine Humanitarian Appeal</a>. 
   </p>
 
 </header>
@@ -380,10 +380,11 @@ div.csl-indent {
 <h2>Leaflet Maps with Open Data APIs</h2>
 <p>Learn how to code your own Leaflet map with an application programming interface (API) that continuously pulls the most current information directly from an open-data repository, similar to the <a href="map-socrata.html">Socrata Open Data map you learned about in Chapter 7</a>. Leaflet maps can pull and display data from various open data repositories using APIs.
 Figure <a href="leaflet-maps-open-data-apis.html#fig:leaflet-open-data">12.40</a> shows an interactive map of North Dakota counties,
-colored by population density, with hospitals and emergency medical service (EMS) locations.</p>
+colored by population density, with emergency medical service (EMS) locations and recent AmeriCorps projects.</p>
+<p><em>Note: The original example showed hospital locations in North Dakota provided by Medicare.gov website. This example was modified on 23 March 2022 due to Medicare.gov replacing Socrata with a different database system. In this updated example, AmeriCorps NCCC projects in North Dakota are shown.</em></p>
 <p>This map template pulls data from three different open repository sources:</p>
 <ul>
-<li>Hospital information is pulled directly from <a href="https://data.medicare.gov/">Medicare.org Socrata database</a>.</li>
+<li>Locations of AmeriCorps NCCC projects are pulled directly from <a href="https://data.americorps.gov/">AmeriCorps Socrata database</a>.</li>
 <li>County boundaries and population density are pulled from <a href="https://www.gis.nd.gov/">North Dakota GIS</a> ArcGIS server.</li>
 <li>EMS stations are fetched from <a href="https://hifld-geoplatform.opendata.arcgis.com/">Homeland Infrastructure Foundation-Level Data</a> ArcGIS server.</li>
 </ul>
@@ -396,8 +397,7 @@ Figure 12.40: Explore the <a href="https://handsondataviz.github.io/leaflet-maps
 </p>
 </div>
 <p>You can enable Leaflet to pull data from ArcGIS servers using a free <a href="https://github.com/Esri/esri-leaflet"><code>esri-leaflet</code></a> plugin.
-Data from Socrata can be pulled using jQuery’s <code>$.getJSON()</code> function,
-and then passed to Leaflet directly using <code>L.geoJSON()</code> function.</p>
+Data from Socrata can be pulled from <a href="https://dev.socrata.com/">SODA API</a> using jQuery’s <code>$.getJSON()</code> function.</p>
 <p>To adapt this template for your own project:</p>
 <ol style="list-style-type: decimal">
 <li>Visit the <a href="https://github.com/HandsOnDataViz/leaflet-maps-open-data-apis">GitHub repository</a> that contains the code for the map in Figure <a href="leaflet-maps-open-data-apis.html#fig:leaflet-open-data">12.40</a>,
@@ -407,35 +407,51 @@ data from Socrata or another JSON/GeoJSON endpoint, modify the following code sn
 with the appropriate URL and icon:</li>
 </ol>
 <div class="sourceCode" id="cb34"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb34-1"><a href="leaflet-maps-open-data-apis.html#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co">/*</span></span>
-<span id="cb34-2"><a href="leaflet-maps-open-data-apis.html#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="co">  From Medicare&#39;s Socrata database, add general hospitals in North Dakota</span></span>
-<span id="cb34-3"><a href="leaflet-maps-open-data-apis.html#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="co">  using simple filtering on the `state` column, and a GeoJSON endpoint.</span></span>
-<span id="cb34-4"><a href="leaflet-maps-open-data-apis.html#cb34-4" aria-hidden="true" tabindex="-1"></a><span class="co">  Each point is a custom .png icon with a tooltip containing hospital&#39;s name,</span></span>
-<span id="cb34-5"><a href="leaflet-maps-open-data-apis.html#cb34-5" aria-hidden="true" tabindex="-1"></a><span class="co">  city, and zipcode.</span></span>
+<span id="cb34-2"><a href="leaflet-maps-open-data-apis.html#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="co">  From AmeriCorps Socrata database, add projects in North Dakota</span></span>
+<span id="cb34-3"><a href="leaflet-maps-open-data-apis.html#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="co">  using simple filtering on the `stabbr` column, and a JSON endpoint.</span></span>
+<span id="cb34-4"><a href="leaflet-maps-open-data-apis.html#cb34-4" aria-hidden="true" tabindex="-1"></a><span class="co">  Each point is a custom .png icon with a tooltip containing AmeriCorps</span></span>
+<span id="cb34-5"><a href="leaflet-maps-open-data-apis.html#cb34-5" aria-hidden="true" tabindex="-1"></a><span class="co">  sponsor name, and project description.</span></span>
 <span id="cb34-6"><a href="leaflet-maps-open-data-apis.html#cb34-6" aria-hidden="true" tabindex="-1"></a><span class="co">*/</span></span>
-<span id="cb34-7"><a href="leaflet-maps-open-data-apis.html#cb34-7" aria-hidden="true" tabindex="-1"></a>$<span class="op">.</span><span class="fu">getJSON</span>(<span class="st">&quot;https://data.medicare.gov/resource/xubh-q36u.geojson?state=ND&quot;</span><span class="op">,</span></span>
+<span id="cb34-7"><a href="leaflet-maps-open-data-apis.html#cb34-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb34-8"><a href="leaflet-maps-open-data-apis.html#cb34-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb34-9"><a href="leaflet-maps-open-data-apis.html#cb34-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">function</span>(data) {</span>
+<span id="cb34-9"><a href="leaflet-maps-open-data-apis.html#cb34-9" aria-hidden="true" tabindex="-1"></a>$<span class="op">.</span><span class="fu">getJSON</span>(<span class="st">&quot;https://data.americorps.gov/resource/yie5-ur4v.json?stabbr=ND&quot;</span><span class="op">,</span> <span class="kw">function</span>(data) {</span>
 <span id="cb34-10"><a href="leaflet-maps-open-data-apis.html#cb34-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb34-11"><a href="leaflet-maps-open-data-apis.html#cb34-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">var</span> hospitals <span class="op">=</span> L<span class="op">.</span><span class="fu">geoJSON</span>(data<span class="op">,</span> {</span>
-<span id="cb34-12"><a href="leaflet-maps-open-data-apis.html#cb34-12" aria-hidden="true" tabindex="-1"></a>      <span class="dt">pointToLayer</span><span class="op">:</span> <span class="kw">function</span>(feature<span class="op">,</span> latlng) {</span>
-<span id="cb34-13"><a href="leaflet-maps-open-data-apis.html#cb34-13" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> L<span class="op">.</span><span class="fu">marker</span>(latlng<span class="op">,</span> {</span>
-<span id="cb34-14"><a href="leaflet-maps-open-data-apis.html#cb34-14" aria-hidden="true" tabindex="-1"></a>          <span class="dt">icon</span><span class="op">:</span> L<span class="op">.</span><span class="fu">icon</span>({</span>
-<span id="cb34-15"><a href="leaflet-maps-open-data-apis.html#cb34-15" aria-hidden="true" tabindex="-1"></a>            <span class="dt">iconUrl</span><span class="op">:</span> <span class="st">&#39;images/hospital.png&#39;</span><span class="op">,</span></span>
-<span id="cb34-16"><a href="leaflet-maps-open-data-apis.html#cb34-16" aria-hidden="true" tabindex="-1"></a>            <span class="dt">iconSize</span><span class="op">:</span> [<span class="dv">24</span><span class="op">,</span> <span class="dv">24</span>]<span class="op">,</span></span>
-<span id="cb34-17"><a href="leaflet-maps-open-data-apis.html#cb34-17" aria-hidden="true" tabindex="-1"></a>            <span class="dt">iconAnchor</span><span class="op">:</span> [<span class="dv">12</span><span class="op">,</span> <span class="dv">12</span>]<span class="op">,</span></span>
-<span id="cb34-18"><a href="leaflet-maps-open-data-apis.html#cb34-18" aria-hidden="true" tabindex="-1"></a>            <span class="dt">opacity</span><span class="op">:</span> <span class="fl">0.5</span></span>
-<span id="cb34-19"><a href="leaflet-maps-open-data-apis.html#cb34-19" aria-hidden="true" tabindex="-1"></a>          })</span>
-<span id="cb34-20"><a href="leaflet-maps-open-data-apis.html#cb34-20" aria-hidden="true" tabindex="-1"></a>        })<span class="op">.</span><span class="fu">bindTooltip</span>(</span>
-<span id="cb34-21"><a href="leaflet-maps-open-data-apis.html#cb34-21" aria-hidden="true" tabindex="-1"></a>          feature<span class="op">.</span><span class="at">properties</span><span class="op">.</span><span class="at">hospital_name</span></span>
-<span id="cb34-22"><a href="leaflet-maps-open-data-apis.html#cb34-22" aria-hidden="true" tabindex="-1"></a>            <span class="op">+</span> <span class="st">&#39;&lt;br&gt;&#39;</span> <span class="op">+</span> feature<span class="op">.</span><span class="at">properties</span><span class="op">.</span><span class="at">city</span></span>
-<span id="cb34-23"><a href="leaflet-maps-open-data-apis.html#cb34-23" aria-hidden="true" tabindex="-1"></a>            <span class="op">+</span> <span class="st">&#39;&lt;br&gt;&#39;</span> <span class="op">+</span> feature<span class="op">.</span><span class="at">properties</span><span class="op">.</span><span class="at">zip_code</span></span>
-<span id="cb34-24"><a href="leaflet-maps-open-data-apis.html#cb34-24" aria-hidden="true" tabindex="-1"></a>        )</span>
-<span id="cb34-25"><a href="leaflet-maps-open-data-apis.html#cb34-25" aria-hidden="true" tabindex="-1"></a>      }</span>
-<span id="cb34-26"><a href="leaflet-maps-open-data-apis.html#cb34-26" aria-hidden="true" tabindex="-1"></a>    })<span class="op">.</span><span class="fu">addTo</span>(map)</span>
-<span id="cb34-27"><a href="leaflet-maps-open-data-apis.html#cb34-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb34-28"><a href="leaflet-maps-open-data-apis.html#cb34-28" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb34-29"><a href="leaflet-maps-open-data-apis.html#cb34-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb34-30"><a href="leaflet-maps-open-data-apis.html#cb34-30" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<span id="cb34-11"><a href="leaflet-maps-open-data-apis.html#cb34-11" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Array of Leaflet markers</span></span>
+<span id="cb34-12"><a href="leaflet-maps-open-data-apis.html#cb34-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">var</span> markers <span class="op">=</span> []<span class="op">;</span></span>
+<span id="cb34-13"><a href="leaflet-maps-open-data-apis.html#cb34-13" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb34-14"><a href="leaflet-maps-open-data-apis.html#cb34-14" aria-hidden="true" tabindex="-1"></a>  <span class="co">// For each row in Socrata, create a Leaflet marker</span></span>
+<span id="cb34-15"><a href="leaflet-maps-open-data-apis.html#cb34-15" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (<span class="kw">var</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> data<span class="op">.</span><span class="at">length</span><span class="op">;</span> i<span class="op">++</span>) {</span>
+<span id="cb34-16"><a href="leaflet-maps-open-data-apis.html#cb34-16" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb34-17"><a href="leaflet-maps-open-data-apis.html#cb34-17" aria-hidden="true" tabindex="-1"></a>    <span class="kw">var</span> item <span class="op">=</span> data[i]<span class="op">;</span></span>
+<span id="cb34-18"><a href="leaflet-maps-open-data-apis.html#cb34-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-19"><a href="leaflet-maps-open-data-apis.html#cb34-19" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Extract coordinates for each project, convert strings to floats</span></span>
+<span id="cb34-20"><a href="leaflet-maps-open-data-apis.html#cb34-20" aria-hidden="true" tabindex="-1"></a>    <span class="kw">var</span> coordinates <span class="op">=</span> [</span>
+<span id="cb34-21"><a href="leaflet-maps-open-data-apis.html#cb34-21" aria-hidden="true" tabindex="-1"></a>      <span class="pp">parseFloat</span>(item<span class="op">.</span><span class="at">geocoded_column</span><span class="op">.</span><span class="at">latitude</span>)<span class="op">,</span></span>
+<span id="cb34-22"><a href="leaflet-maps-open-data-apis.html#cb34-22" aria-hidden="true" tabindex="-1"></a>      <span class="pp">parseFloat</span>(item<span class="op">.</span><span class="at">geocoded_column</span><span class="op">.</span><span class="at">longitude</span>)</span>
+<span id="cb34-23"><a href="leaflet-maps-open-data-apis.html#cb34-23" aria-hidden="true" tabindex="-1"></a>    ]</span>
+<span id="cb34-24"><a href="leaflet-maps-open-data-apis.html#cb34-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-25"><a href="leaflet-maps-open-data-apis.html#cb34-25" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Create a marker with a custom icon</span></span>
+<span id="cb34-26"><a href="leaflet-maps-open-data-apis.html#cb34-26" aria-hidden="true" tabindex="-1"></a>    <span class="kw">var</span> marker <span class="op">=</span> L<span class="op">.</span><span class="fu">marker</span>(coordinates<span class="op">,</span> {</span>
+<span id="cb34-27"><a href="leaflet-maps-open-data-apis.html#cb34-27" aria-hidden="true" tabindex="-1"></a>        <span class="dt">icon</span><span class="op">:</span> L<span class="op">.</span><span class="fu">icon</span>({</span>
+<span id="cb34-28"><a href="leaflet-maps-open-data-apis.html#cb34-28" aria-hidden="true" tabindex="-1"></a>          <span class="dt">iconUrl</span><span class="op">:</span> <span class="st">&#39;images/americorps.png&#39;</span><span class="op">,</span></span>
+<span id="cb34-29"><a href="leaflet-maps-open-data-apis.html#cb34-29" aria-hidden="true" tabindex="-1"></a>          <span class="dt">iconSize</span><span class="op">:</span> [<span class="dv">24</span><span class="op">,</span> <span class="dv">24</span>]<span class="op">,</span></span>
+<span id="cb34-30"><a href="leaflet-maps-open-data-apis.html#cb34-30" aria-hidden="true" tabindex="-1"></a>          <span class="dt">iconAnchor</span><span class="op">:</span> [<span class="dv">12</span><span class="op">,</span> <span class="dv">12</span>]<span class="op">,</span></span>
+<span id="cb34-31"><a href="leaflet-maps-open-data-apis.html#cb34-31" aria-hidden="true" tabindex="-1"></a>          <span class="dt">opacity</span><span class="op">:</span> <span class="fl">0.5</span></span>
+<span id="cb34-32"><a href="leaflet-maps-open-data-apis.html#cb34-32" aria-hidden="true" tabindex="-1"></a>        })</span>
+<span id="cb34-33"><a href="leaflet-maps-open-data-apis.html#cb34-33" aria-hidden="true" tabindex="-1"></a>    })<span class="op">.</span><span class="fu">bindTooltip</span>(item<span class="op">.</span><span class="at">sponsor</span> <span class="op">+</span> <span class="st">&#39;&lt;br&gt;&#39;</span> <span class="op">+</span> item<span class="op">.</span><span class="at">project_description</span>)<span class="op">;</span></span>
+<span id="cb34-34"><a href="leaflet-maps-open-data-apis.html#cb34-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-35"><a href="leaflet-maps-open-data-apis.html#cb34-35" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Add marker to the array of markers</span></span>
+<span id="cb34-36"><a href="leaflet-maps-open-data-apis.html#cb34-36" aria-hidden="true" tabindex="-1"></a>    markers<span class="op">.</span><span class="fu">push</span>(marker)<span class="op">;</span></span>
+<span id="cb34-37"><a href="leaflet-maps-open-data-apis.html#cb34-37" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb34-38"><a href="leaflet-maps-open-data-apis.html#cb34-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-39"><a href="leaflet-maps-open-data-apis.html#cb34-39" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Create a Leaflet layer group from array of markers</span></span>
+<span id="cb34-40"><a href="leaflet-maps-open-data-apis.html#cb34-40" aria-hidden="true" tabindex="-1"></a>  <span class="kw">var</span> layer <span class="op">=</span> L<span class="op">.</span><span class="fu">layerGroup</span>(markers)<span class="op">;</span></span>
+<span id="cb34-41"><a href="leaflet-maps-open-data-apis.html#cb34-41" aria-hidden="true" tabindex="-1"></a>  layer<span class="op">.</span><span class="fu">addTo</span>(map)<span class="op">;</span> <span class="co">// add layer to the map</span></span>
+<span id="cb34-42"><a href="leaflet-maps-open-data-apis.html#cb34-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-43"><a href="leaflet-maps-open-data-apis.html#cb34-43" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Add layer to the legend, together with the little icon</span></span>
+<span id="cb34-44"><a href="leaflet-maps-open-data-apis.html#cb34-44" aria-hidden="true" tabindex="-1"></a>  legend<span class="op">.</span><span class="fu">addOverlay</span>(layer<span class="op">,</span> <span class="st">&#39;AmeriCorps NCCC &lt;img src=&quot;images/americorps.png&quot; height=&quot;11&quot; alt=&quot;AmeriCorps NCCC&quot;&gt;&#39;</span>)</span>
+<span id="cb34-45"><a href="leaflet-maps-open-data-apis.html#cb34-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-46"><a href="leaflet-maps-open-data-apis.html#cb34-46" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div>
 <p>The following code snippet uses <code>esri-leaflet</code> plugin to pull polygon data
 from an ArcGIS server, and creates a choropleth layer based on population density
 (stored in <code>POP10_SQMI</code> variable of each feature, or polygon).</p>
@@ -466,7 +482,7 @@ remember that those resources are out of your control (unless you administer the
 Data changes often come unannounced. For example, if the dataset owner decides
 to rename the population density field from <code>POP10_SQMI</code> to <code>Pop10_sqmi</code>,
 your map will stop showing values correctly. Datasets may get moved
-to a different domain name or get deleted entirely, so
+to a different domain name or get deleted entirely (we experienced both!), so
 it is wise to have a back-up file saved locally.</p>
 <p>If you are more concerned about the long-term functioning of your map as opposed
 to displaying the most up-to-date version of the dataset, you may consider serving

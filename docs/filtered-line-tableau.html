@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>- Filtered Line Chart | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="- Filtered Line Chart | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io//images/cover-400wide.jpg" />
   <meta property="og:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="github-repo" content="handsondataviz/book" />
@@ -25,7 +24,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2022-04-04" />
+<meta name="date" content="2022-07-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,8 +33,8 @@
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="scatter-tableau.html"/>
 <link rel="next" href="map.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -51,9 +50,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -336,7 +335,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
 <li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
-<li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
+<li class="chapter" data-level="" data-path="style-guide.html"><a href="style-guide.html"><i class="fa fa-check"></i>Style Guide for <em>Hands-On Data Visualization</em></a></li>
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
 <li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
 <li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
@@ -376,28 +375,28 @@ div.csl-indent {
   </p>
 
 </header>
-<div id="filtered-line-tableau" class="section level2 unnumbered">
-<h2>- Filtered Line Chart</h2>
+<div id="filtered-line-tableau" class="section level2 unnumbered hasAnchor">
+<h2>- Filtered Line Chart<a href="filtered-line-tableau.html#filtered-line-tableau" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Now that you’ve learned how to create a scatter chart in Tableau Public, let’s move on to a new type of chart that highlights the tool’s strengths. Instead of <em>static</em> charts, such as those found in print or PDFs, this book features <em>interactive</em> charts for their ability to display more data. But you can also design interactive charts to show only the amount of data you desire. In other words, your interactive visualization can become a data-exploration tool that allows users to “dig” and find specific data points and patterns, without overwhelming them with too much information at once.</p>
 <p>In this tutorial, we will build an interactive filtered line chart with Tableau Public, to visualize how internet access has changed in different nations over time. Organize the data in three columns, as shown in Figure <a href="filtered-line-tableau.html#fig:tableau-filtered-data">6.56</a>. The first column, <em>Country Name</em>, are the data labels that become the colored lines. The second column, <em>Year</em>, will appear on the horizontal x-axis. The third column, <em>Percent Internet Users</em>, are numeric values that appear on the vertical y-axis. Now you can create a filtered line chart with checkboxes, to show only selected lines on startup to avoid overwhelming users, while allowing them to toggle on other lines, and hover over each one for more details, as shown in Figure <a href="filtered-line-tableau.html#fig:tableau-filtered">6.57</a>.</p>
 
-<div class="figure"><span id="fig:tableau-filtered-data"></span>
+<div class="figure"><span style="display:block;" id="fig:tableau-filtered-data"></span>
 <img src="images/06-chart/tableau-filtered-data.png" alt="In a filtered line chart, organize the data in three columns: data labels, year, and numeric values." width="350" />
 <p class="caption">
 Figure 6.56: In a filtered line chart, organize the data in three columns: data labels, year, and numeric values.
 </p>
 </div>
 
-<div class="figure"><span id="fig:tableau-filtered"></span>
-<iframe src="https://public.tableau.com/views/InternetAccessbyCountry/Sheet1?:showVizHome=no&amp;:embed=true" width="672" height="500px">
+<div class="figure"><span style="display:block;" id="fig:tableau-filtered"></span>
+<iframe src="https://public.tableau.com/views/InternetAccessbyCountry/Sheet1?:showVizHome=no&amp;:embed=true" width="672" height="500px" data-external="1">
 </iframe>
 <p class="caption">
 Figure 6.57: Filtered Line chart: Explore the <a href="https://public.tableau.com/profile/ilya7257#!/vizhome/InternetAccessbyCountry/Sheet1">interactive version</a>. Data from <a href="https://docs.google.com/spreadsheets/d/1nrfd8Cr-wpm5N9WGA2YO6d1XLuwk-VK8kCvDwoTdeWM/edit#gid=600173793">World Bank</a>.
 </p>
 </div>
 <p>To create your own filtered line chart using this sample data in Tableau Public, follow this tutorial. We assume that you have already installed the free <a href="https://public.tableau.com">Tableau Public</a> desktop application for Mac or Windows, and have already become familiar with the tool by completing the previous <a href="scatter-tableau.html">Scatter Chart with Tableau Public tutorial</a>, since the steps below are abbreviated.</p>
-<div id="connect-data-to-tableau-public" class="section level4 unnumbered">
-<h4>Connect Data to Tableau Public</h4>
+<div id="connect-data-to-tableau-public" class="section level4 unnumbered hasAnchor">
+<h4>Connect Data to Tableau Public<a href="filtered-line-tableau.html#connect-data-to-tableau-public" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ol style="list-style-type: decimal">
 <li><p>Download the <a href="data/world-bank-internet-users-1995-2018.xlsx">World Bank Internet Users 1995-2018 sample data in Excel format</a>, or <a href="https://docs.google.com/spreadsheets/d/1nrfd8Cr-wpm5N9WGA2YO6d1XLuwk-VK8kCvDwoTdeWM/edit#gid=600173793">view and download the Google Sheets version</a>. The file consists of three columns: data labels, year, and numeric values.</p></li>
 <li><p>Open Tableau Public, and under the <em>Connect</em> menu, you can upload your data as a Microsoft Excel file, or choose <em>Text file</em> to upload a CSV file, or click <em>More…</em> to connect to a server and upload a Google Sheet from your account. After you successfully connect to your data source, you will see it under <em>Connections</em> in the <em>Data Source</em> tab. Under <em>Sheets</em>, you will see two tables, <code>data</code> and <code>notes</code>. Drag the <code>data</code> sheet into <em>Drag tables here</em> area to preview it.</p></li>
@@ -405,15 +404,15 @@ Figure 6.57: Filtered Line chart: Explore the <a href="https://public.tableau.co
 </ol>
 <p>In your worksheet, your variables will be listed under <em>Tables</em> in the left-hand side. The original variables are displayed in normal font, the <em>generated</em> variables will be shown in <em>italics</em> (such as <em>Latitude</em> and <em>Longitude</em>, which Tableau guessed from the country names). Now you are ready to begin building your interactive chart.</p>
 </div>
-<div id="build-and-publish-a-filtered-line-chart" class="section level4 unnumbered">
-<h4>Build and Publish a Filtered Line Chart</h4>
+<div id="build-and-publish-a-filtered-line-chart" class="section level4 unnumbered hasAnchor">
+<h4>Build and Publish a Filtered Line Chart<a href="filtered-line-tableau.html#build-and-publish-a-filtered-line-chart" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ol style="list-style-type: decimal">
 <li><p>Drag the <em>Year</em> variable to <em>Columns</em> shelf. This will place years along the x-axis.</p></li>
 <li><p>Drag the <em>Percent Internet Users</em> variable to <em>Rows</em> shelf to place them on the y-axis. The value in the shelf will change to <code>SUM(Percent Internet Users)</code>. You should see a single line chart that sums up percentages for each year. That is completely incorrect, so let’s fix it.</p></li>
 <li><p>In order to “break” aggregation, drag-and-drop <em>Country Name</em> to the <em>Color</em> shelf of the <em>Marks</em> card, as shown in Figure <a href="filtered-line-tableau.html#fig:tableau-filtered-filters">6.58</a>. Tableau will warn you that the recommended number of colors should not exceed 20. Since we will be adding checkbox filtering, ignore this warning, and go ahead and press the <em>Add all members</em> button.</p></li>
 </ol>
 
-<div class="figure"><span id="fig:tableau-filtered-filters"></span>
+<div class="figure"><span style="display:block;" id="fig:tableau-filtered-filters"></span>
 <img src="images/06-chart/tableau-filtered-filters.png" alt="Drag Country Name to the Color shelf of the Marks card to break up the aggregated data." width="220" />
 <p class="caption">
 Figure 6.58: Drag <em>Country Name</em> to the <em>Color</em> shelf of the <em>Marks</em> card to break up the aggregated data.
@@ -430,7 +429,7 @@ how the interactive filtering works. The checkboxes you select at this stage wil
 You may notice that some countries from your “on” selection got assigned the same value. The good news is, Tableau lets you change colors of individual datapoints (in our case, countries). From the <em>Marks</em> card, click <em>Color</em> shelf, and then <em>Edit Colors…</em>. Double-click a country from the <em>Select Data Item:</em> list to bring up a color picker window, pick your favorite color, and click OK. Although you can ensure that your pre-selected countries are painted in unique colors, there will be repetitions among other countries as your palette is limited to 20 colors. Unfortunately, there is little you can do to go around this.</p></li>
 </ol>
 
-<div class="figure"><span id="fig:tableau-filtered-show-filter"></span>
+<div class="figure"><span style="display:block;" id="fig:tableau-filtered-show-filter"></span>
 <img src="images/06-chart/tableau-filtered-show-filter.png" alt="After you drag Country Name to the Filters card, make sure the Filter is displayed." width="220" />
 <p class="caption">
 Figure 6.59: After you drag <em>Country Name</em> to the <em>Filters</em> card, make sure the Filter is displayed.
@@ -448,7 +447,7 @@ Close the window and see that the empty space on the edges has disappeared.</p><
 you are ready to publish. Go to <em>File &gt; Save to Tableau Public As…</em>, and log into your account, or create one if you haven’t yet done so. Follow the prompts to publish your chart on the public web, or see the previous <a href="scatter-tableau.html">Scatter Chart in Tableau Public tutorial</a> for more details.</p></li>
 </ol>
 
-<div class="figure"><span id="fig:tableau-filtered-ready"></span>
+<div class="figure"><span style="display:block;" id="fig:tableau-filtered-ready"></span>
 <img src="images/06-chart/tableau-filtered-ready-annotated.png" alt="This workbook is ready to be published."  />
 <p class="caption">
 Figure 6.60: This workbook is ready to be published.
@@ -456,8 +455,8 @@ Figure 6.60: This workbook is ready to be published.
 </div>
 <p>See the <a href="embed-code.html">Get the Embed Code</a> section of Chapter 9 to insert the interactive version of your chart on a web page that you control.</p>
 </div>
-<div id="summary6" class="section level3 unnumbered">
-<h3>Summary</h3>
+<div id="summary6" class="section level3 unnumbered hasAnchor">
+<h3>Summary<a href="filtered-line-tableau.html#summary6" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Congratulations on creating interactive charts that pull readers deeper into your story, and encourage them to explore the underlying data! As you continue to create more, always match the chart type to your data format and the story you wish to emphasize. Also, design your charts based on the principles and aesthetic guidelines outlined near the top of this chapter. While anyone can click a few buttons to quickly create a chart nowadays, your audiences will greatly appreciate well-designed charts that thoughtfully call their attention to meaningful patterns in the data.</p>
 <p>In this chapter you learned how to create different types of interactive charts with Google Sheets, Datawrapper, and Tableau Public. For more advanced chart design with open-source code, see <a href="chartcode.html">Chapter 11: Chart.js and Highcharts templates</a>, which give you ever more control over how your design and display your data, but also requires learning how to <a href="github.html">edit and host code templates with GitHub</a> in Chapter 10.</p>
 <p>The next chapter on <a href="map.html">Map Your Data</a> follows a similar format to introduce different map types, design principles, and hands-on tutorials to create interactive visualizations with spatial data. Later you’ll learn how to <a href="embed.html">embed interactive charts on your web</a> in Chapter 9.</p>
@@ -515,7 +514,6 @@ Figure 6.60: This workbook is ready to be published.
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -555,15 +553,32 @@ gitbook.start({
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
-},
-"search": true
+}
 });
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

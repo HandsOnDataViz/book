@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Copy, Edit, and Host a Simple Leaflet Map Template | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Copy, Edit, and Host a Simple Leaflet Map Template | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io//images/cover-400wide.jpg" />
   <meta property="og:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="github-repo" content="handsondataviz/book" />
@@ -25,7 +24,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2022-04-04" />
+<meta name="date" content="2022-07-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,8 +33,8 @@
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="github.html"/>
 <link rel="next" href="gh-pages-link-to-iframe.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -51,9 +50,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -336,7 +335,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
 <li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
-<li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
+<li class="chapter" data-level="" data-path="style-guide.html"><a href="style-guide.html"><i class="fa fa-check"></i>Style Guide for <em>Hands-On Data Visualization</em></a></li>
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
 <li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
 <li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
@@ -376,8 +375,8 @@ div.csl-indent {
   </p>
 
 </header>
-<div id="copy-leaflet" class="section level2 unnumbered">
-<h2>Copy, Edit, and Host a Simple Leaflet Map Template</h2>
+<div id="copy-leaflet" class="section level2 unnumbered hasAnchor">
+<h2>Copy, Edit, and Host a Simple Leaflet Map Template<a href="copy-leaflet.html#copy-leaflet" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Now that you understand how <a href="https://github.com">GitHub</a> code repositories are like a public cookbook of recipes, which anyone can copy and modify, let’s get into the kitchen and start baking! In this section, we’ll introduce you to a very simple code template based on <a href="https://leafletjs.com">Leaflet</a>, an open-source code library for creating interactive maps that are very popular in journalism, business, government, and higher education. Many people choose Leaflet because the code is freely available to everyone, relatively easy to use, and has an active community of supporters who regularly update it. But unlike drag-and-drop tools that we previously covered in <a href="map.html">Chapter 7: Map Your Data</a>, working with our Leaflet templates requires you to copy and edit a few lines of code before hosting it on the web. While no prior coding experience is necessary, it’s helpful to know that these code templates as based on the three core languages that communicate with browsers: HyperText Markup Language (HTML), Cascading Style Sheets (CSS), and JavaScript. Furthermore, we can edit these code templates using the GitHub web interface, which means you can do this on any type of computer (Mac, Windows, Chromebook, etc.) with any modern web browser.</p>
 <p>Here’s an overview of the key steps you’ll learn about GitHub in this section:</p>
 <ul>
@@ -387,8 +386,8 @@ div.csl-indent {
 </ul>
 <p>Your goal is to create your own version of this simple interactive map, with your edits, as shown in Figure <a href="copy-leaflet.html#fig:leaflet-simple">10.1</a>.</p>
 
-<div class="figure"><span id="fig:leaflet-simple"></span>
-<iframe src="https://handsondataviz.github.io/leaflet-map-simple/" width="672" height="400px">
+<div class="figure"><span style="display:block;" id="fig:leaflet-simple"></span>
+<iframe src="https://handsondataviz.github.io/leaflet-map-simple/" width="672" height="400px" data-external="1">
 </iframe>
 <p class="caption">
 Figure 10.1: Create your own version of this <a href="https://handsondataviz.github.io/leaflet-map-simple/">simple interactive Leaflet map</a>.
@@ -403,7 +402,7 @@ Figure 10.1: Create your own version of this <a href="https://handsondataviz.git
 <li><p>Click the green <em>Use this template</em> button to make your own copy of our repo, as shown in Figure <a href="copy-leaflet.html#fig:leaflet-simple-template">10.2</a>.</p></li>
 </ol>
 
-<div class="figure"><span id="fig:leaflet-simple-template"></span>
+<div class="figure"><span style="display:block;" id="fig:leaflet-simple-template"></span>
 <img src="images/10-github/leaflet-simple-template.png" alt="Click Use this template to make your own copy."  />
 <p class="caption">
 Figure 10.2: Click <em>Use this template</em> to make your own copy.
@@ -413,7 +412,7 @@ Figure 10.2: Click <em>Use this template</em> to make your own copy.
 <li>On the next screen, your account will appear as the owner. Name your copy of the repo <code>leaflet-map-simple</code>, the same as ours, as shown in Figure <a href="copy-leaflet.html#fig:leaflet-simple-name">10.3</a>. Click the green <em>Create repository from template</em> button.</li>
 </ol>
 
-<div class="figure"><span id="fig:leaflet-simple-name"></span>
+<div class="figure"><span style="display:block;" id="fig:leaflet-simple-name"></span>
 <img src="images/10-github/leaflet-simple-name.png" alt="Name your copied repo leaflet-map-simple." width="600" />
 <p class="caption">
 Figure 10.3: Name your copied repo <code>leaflet-map-simple</code>.
@@ -430,7 +429,7 @@ Figure 10.3: Name your copied repo <code>leaflet-map-simple</code>.
 <li>Click on the <code>index.html</code> file to view the code, as shown in Figure <a href="copy-leaflet.html#fig:leaflet-simple-index">10.4</a>.</li>
 </ol>
 
-<div class="figure"><span id="fig:leaflet-simple-index"></span>
+<div class="figure"><span style="display:block;" id="fig:leaflet-simple-index"></span>
 <img src="images/10-github/leaflet-simple-index.png" alt="Click the index.html file to view the code." width="600" />
 <p class="caption">
 Figure 10.4: Click the index.html file to view the code.
@@ -441,7 +440,7 @@ Figure 10.4: Click the index.html file to view the code.
 <li>To edit the code, click on the the pencil symbol in the upper-right corner, as shown in Figure <a href="copy-leaflet.html#fig:leaflet-simple-edit">10.5</a>.</li>
 </ol>
 
-<div class="figure"><span id="fig:leaflet-simple-edit"></span>
+<div class="figure"><span style="display:block;" id="fig:leaflet-simple-edit"></span>
 <img src="images/10-github/leaflet-simple-edit.png" alt="Click the pencil button to edit the code."  />
 <p class="caption">
 Figure 10.5: Click the pencil button to edit the code.
@@ -453,7 +452,7 @@ Figure 10.5: Click the pencil button to edit the code.
 <li><p>To save your edit, scroll to the bottom of the page and click the green <em>Commit Changes</em> button, as shown in Figure <a href="copy-leaflet.html#fig:leaflet-simple-commit">10.6</a>.</p></li>
 </ol>
 
-<div class="figure"><span id="fig:leaflet-simple-commit"></span>
+<div class="figure"><span style="display:block;" id="fig:leaflet-simple-commit"></span>
 <img src="images/10-github/leaflet-simple-commit.png" alt="Click the green Commit Changes button to save your edits." width="450" />
 <p class="caption">
 Figure 10.6: Click the green <em>Commit Changes</em> button to save your edits.
@@ -466,7 +465,7 @@ Figure 10.6: Click the green <em>Commit Changes</em> button to save your edits.
 <li>To access GitHub Pages, scroll to the top of your repo page and click the <em>Settings</em> button as shown in Figure <a href="copy-leaflet.html#fig:leaflet-simple-settings">10.7</a>.</li>
 </ol>
 
-<div class="figure"><span id="fig:leaflet-simple-settings"></span>
+<div class="figure"><span style="display:block;" id="fig:leaflet-simple-settings"></span>
 <img src="images/10-github/leaflet-simple-settings.png" alt="Click the Settings button to access GitHub Pages and publish your work on the web."  />
 <p class="caption">
 Figure 10.7: Click the <em>Settings</em> button to access GitHub Pages and publish your work on the web.
@@ -476,7 +475,7 @@ Figure 10.7: Click the <em>Settings</em> button to access GitHub Pages and publi
 <li>In the Settings screen, navigate to Pages tab from the left-hand side menu. In the Pages tab, change <em>Source</em> from <em>None</em> to <em>main</em>, keep the default <em>/(root)</em> option in the middle, and press <em>Save</em> as shown in Figure <a href="copy-leaflet.html#fig:leaflet-github-pages-main">10.8</a>. This step tells GitHub to publish a live version of your map on the public web, where anyone can access it in their browser, if they have the web address.</li>
 </ol>
 
-<div class="figure"><span id="fig:leaflet-github-pages-main"></span>
+<div class="figure"><span style="display:block;" id="fig:leaflet-github-pages-main"></span>
 <img src="images/10-github/leaflet-github-pages-main.png" alt="In Settings, go to GitHub Pages, and switch the source from None to Main." width="300" />
 <p class="caption">
 Figure 10.8: In <em>Settings</em>, go to <em>GitHub Pages</em>, and switch the source from <em>None</em> to <em>Main</em>.
@@ -487,7 +486,7 @@ Figure 10.8: In <em>Settings</em>, go to <em>GitHub Pages</em>, and switch the s
 <li>The page will automatically refresh, and you should see the web address where your live map has been published online. Right-click the link and open it in the new browser tab, as shown in Figure <a href="copy-leaflet.html#fig:leaflet-github-pages-link">10.9</a>.</li>
 </ol>
 
-<div class="figure"><span id="fig:leaflet-github-pages-link"></span>
+<div class="figure"><span style="display:block;" id="fig:leaflet-github-pages-link"></span>
 <img src="images/10-github/leaflet-github-pages-link.png" alt="In Settings for GitHub Pages, right-click your published map link to open in a new tab." width="600" />
 <p class="caption">
 Figure 10.9: In <em>Settings</em> for <em>GitHub Pages</em>, right-click your published map link to open in a new tab.
@@ -513,7 +512,7 @@ Figure 10.9: In <em>Settings</em> for <em>GitHub Pages</em>, right-click your pu
 <li><p>Go back to your first browser tab with your GitHub repo, and click on the repo title to return to its home page, as shown in Figure <a href="copy-leaflet.html#fig:leaflet-click-title">10.10</a>.</p></li>
 </ol>
 
-<div class="figure"><span id="fig:leaflet-click-title"></span>
+<div class="figure"><span style="display:block;" id="fig:leaflet-click-title"></span>
 <img src="images/10-github/leaflet-click-title.png" alt="On your first browser tab, click the repo title." width="450" />
 <p class="caption">
 Figure 10.10: On your first browser tab, click the repo title.
@@ -523,7 +522,7 @@ Figure 10.10: On your first browser tab, click the repo title.
 <li>On your repo page, click to open the <code>README.md</code> file, and click the pencil again to edit it, as shown in Figure <a href="copy-leaflet.html#fig:leaflet-paste-link">10.11</a>. Paste your live web link under the label <em>(replace with link to your site)</em> and scroll down to commit the change.</li>
 </ol>
 
-<div class="figure"><span id="fig:leaflet-paste-link"></span>
+<div class="figure"><span style="display:block;" id="fig:leaflet-paste-link"></span>
 <img src="images/10-github/leaflet-paste-link.png" alt="Open and edit the README file to paste the link to your live map." width="600" />
 <p class="caption">
 Figure 10.11: Open and edit the <code>README</code> file to paste the link to your live map.
@@ -606,7 +605,6 @@ Figure 10.11: Open and edit the <code>README</code> file to paste the link to yo
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -646,15 +644,32 @@ gitbook.start({
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
-},
-"search": true
+}
 });
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

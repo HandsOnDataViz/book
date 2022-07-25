@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>B Publishing with Bookdown | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="B Publishing with Bookdown | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io//images/cover-400wide.jpg" />
   <meta property="og:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="github-repo" content="handsondataviz/book" />
@@ -25,7 +24,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2022-04-04" />
+<meta name="date" content="2022-07-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,8 +33,8 @@
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="fix-code.html"/>
 <link rel="next" href="install.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -51,9 +50,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -336,7 +335,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
 <li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
-<li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
+<li class="chapter" data-level="" data-path="style-guide.html"><a href="style-guide.html"><i class="fa fa-check"></i>Style Guide for <em>Hands-On Data Visualization</em></a></li>
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
 <li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
 <li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
@@ -376,8 +375,8 @@ div.csl-indent {
   </p>
 
 </header>
-<div id="bookdown" class="section level1" number="17">
-<h1><span class="header-section-number">B</span> Publishing with Bookdown</h1>
+<div id="bookdown" class="section level1 hasAnchor" number="17">
+<h1><span class="header-section-number">B</span> Publishing with Bookdown<a href="bookdown.html#bookdown" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>We built this book with free-to-use, open-source tools, primarily <a href="https://bookdown.org">Bookdown</a>, <a href="https://github.com">GitHub</a>, and <a href="https://zotero.org">Zotero</a>. This chapter explains why and how we combined these tools and developed our publishing workflow, so that others can build their own books and share their knowledge about how to improve the process.</p>
 <p>Why not just write the book in a conventional word processor? We desired an efficient workflow to co-author one manuscript that could continuously generate multiple book products for different purposes, as shown in Figure <a href="bookdown.html#fig:workflow">B.1</a>.</p>
 <ul>
@@ -388,7 +387,7 @@ div.csl-indent {
 </ul>
 <p>A conventional word processor could not continuously generate all of these products, which likely would have resulted in creating entirely separate files and code for different editions. But with our unified Bookdown workflow, all of our writing is done in one manuscript. Whenever we make edits, we push a couple of buttons to publish our updated book products in the HTML, PDF, MS Word, and Markdown formats.</p>
 
-<div class="figure"><span id="fig:workflow"></span>
+<div class="figure"><span style="display:block;" id="fig:workflow"></span>
 <img src="images/20-bookdown/workflow.png" alt="Simplified workflow to compose, compile, and publish in multiple formats with Bookdown. Images from Daniel Hendricks, RStudio, and Zotero."  />
 <p class="caption">
 Figure B.1: Simplified workflow to compose, compile, and publish in multiple formats with Bookdown. Images from <a href="https://fileicons.org">Daniel Hendricks</a>, <a href="https://github.com/rstudio/hex-stickers/">RStudio</a>, and <a href="https://www.zotero.org/support/brand">Zotero</a>.
@@ -396,15 +395,15 @@ Figure B.1: Simplified workflow to compose, compile, and publish in multiple for
 </div>
 <p>Here’s a three-minute video that demonstrates the process:</p>
 
-<div class="figure"><span id="fig:workflow-video"></span>
-<iframe src="https://www.youtube.com/embed/8uFABzUG6Lw" width="672" height="400px">
+<div class="figure"><span style="display:block;" id="fig:workflow-video"></span>
+<iframe src="https://www.youtube.com/embed/8uFABzUG6Lw" width="672" height="400px" data-external="1">
 </iframe>
 <p class="caption">
 Figure B.2: Short video of our Bookdown workflow. View <a href="https://youtu.be/8uFABzUG6Lw">on YouTube</a>.
 </p>
 </div>
-<div id="bookdown-overview-why-and-how" class="section level3 unnumbered">
-<h3>Bookdown Overview: Why and How?</h3>
+<div id="bookdown-overview-why-and-how" class="section level3 unnumbered hasAnchor">
+<h3>Bookdown Overview: Why and How?<a href="bookdown.html#bookdown-overview-why-and-how" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>We based our solution around <a href="https://bookdown.org">Bookdown</a>, an open-source package for the <a href="https://www.r-project.org/">R code project</a> created by Yihui Xie at RStudio. Although many people use R for statistical analysis, the free <a href="https://rstudio.com/">RStudio desktop application</a> also supports several innovative publishing solutions. Here’s an overview of our workflow:</p>
 <ul>
 <li>We set up the Bookdown files and composed the manuscript in <a href="https://rmarkdown.rstudio.com">R Markdown</a>, the R-flavored version of the easy-to-write <a href="https://en.wikipedia.org/wiki/Markdown">Markdown syntax</a>. Each chapter consisted of one .Rmd file, with links to static images and interactive visualizations.</li>
@@ -418,14 +417,14 @@ Figure B.2: Short video of our Bookdown workflow. View <a href="https://youtu.be
 </ul>
 <p>Screenshots of two variations of the basic workflow appear in Figure <a href="bookdown.html#fig:workflow-desktop">B.3</a> and Figure <a href="bookdown.html#fig:workflow-atom">B.4</a>. The first displays how to compose the book using the R Studio built-in editor, and the second shows a very similar process using the <a href="https://atom.io">Atom text editor</a>, which we prefer. Learn more about <a href="github-desktop-atom.html">GitHub Desktop and Atom text editor in Chapter 10</a>.</p>
 
-<div class="figure"><span id="fig:workflow-desktop"></span>
+<div class="figure"><span style="display:block;" id="fig:workflow-desktop"></span>
 <img src="images/20-bookdown/workflow-desktop.png" alt="Workflow on a Mac desktop: Compose the text in RStudio and build books with Bookdown (top left), manage sources and insert citation keys with Zotero + BetterBibTex (bottom left), push book products to your GitHub repository to host online (right)."  />
 <p class="caption">
 Figure B.3: Workflow on a Mac desktop: Compose the text in RStudio and build books with Bookdown (top left), manage sources and insert citation keys with Zotero + BetterBibTex (bottom left), push book products to your GitHub repository to host online (right).
 </p>
 </div>
 
-<div class="figure"><span id="fig:workflow-atom"></span>
+<div class="figure"><span style="display:block;" id="fig:workflow-atom"></span>
 <img src="images/20-bookdown/workflow-atom.png" alt="Variation on the workflow above: Compose the text in your preferred editor (such as Atom), and use RStudio only to build the book products."  />
 <p class="caption">
 Figure B.4: Variation on the workflow above: Compose the text in your preferred editor (such as Atom), and use RStudio only to build the book products.
@@ -500,7 +499,6 @@ Figure B.4: Variation on the workflow above: Compose the text in your preferred 
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -540,15 +538,32 @@ gitbook.start({
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
-},
-"search": true
+}
 });
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

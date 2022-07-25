@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Calculate with Formulas | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Calculate with Formulas | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io//images/cover-400wide.jpg" />
   <meta property="og:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="github-repo" content="handsondataviz/book" />
@@ -25,7 +24,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2022-04-04" />
+<meta name="date" content="2022-07-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,8 +33,8 @@
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="sort.html"/>
 <link rel="next" href="pivot.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -51,9 +50,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -336,7 +335,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
 <li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
-<li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
+<li class="chapter" data-level="" data-path="style-guide.html"><a href="style-guide.html"><i class="fa fa-check"></i>Style Guide for <em>Hands-On Data Visualization</em></a></li>
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
 <li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
 <li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
@@ -376,8 +375,8 @@ div.csl-indent {
   </p>
 
 </header>
-<div id="calculate" class="section level2 unnumbered">
-<h2>Calculate with Formulas</h2>
+<div id="calculate" class="section level2 unnumbered hasAnchor">
+<h2>Calculate with Formulas<a href="calculate.html#calculate" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Spreadsheet tools can save you lots of time when you insert simple formulas and functions to automatically perform calculations across entire rows and columns of data. Formulas always begin with an equal sign, and may simply add up other cells (such as <code>=C2+C3+C4</code>), or may contain a function that performs a specific operation (such as calculating the sum of a range of cells: <code>=SUM(C2:C100)</code>). In this section you’ll learn how to write two formulas with functions: one to calculate an average numeric value, and another to count the frequency of a specific text response. Once again, let’s learn this skill using the reader survey sample dataset we described at the top of the chapter.</p>
 <ol style="list-style-type: decimal">
 <li><p>Open this <a href="https://docs.google.com/spreadsheets/d/1egX_akJccnCSzdk1aaDdtrEGe5HcaTrlOW-Yf6mJ3Uo">Google Sheet of Hands-On Data Visualization reader public survey responses</a> in a new tab in your browser.</p></li>
@@ -385,7 +384,7 @@ div.csl-indent {
 <li><p>Add a blank row immediately below the header to make space for our calculations. Right-click on row number 1 and select <em>Insert 1 below</em> to add a new row, as shown in Figure <a href="calculate.html#fig:sheets-insert-row">2.26</a>.</p></li>
 </ol>
 
-<div class="figure"><span id="fig:sheets-insert-row"></span>
+<div class="figure"><span style="display:block;" id="fig:sheets-insert-row"></span>
 <img src="images/02-spreadsheet/sheets-insert-row.png" alt="Right-click on row number 1 and select Insert 1 below." width="200" />
 <p class="caption">
 Figure 2.26: Right-click on row number 1 and select <em>Insert 1 below</em>.
@@ -395,7 +394,7 @@ Figure 2.26: Right-click on row number 1 and select <em>Insert 1 below</em>.
 <li>Let’s calculate the average level of reader experience with data visualization. Click on cell E2 in the new blank row you just created, and type an equal symbol (<code>=</code>) to start a formula. Google Sheets will automatically suggest possible formulas based on the context, and you can select one that displays the average for current values in the column, such as <code>=AVERAGE(E3:E2894)</code>, then press <em>Return</em> or <em>Enter</em> on your keyboard, as shown in Figure <a href="calculate.html#fig:sheets-average">2.27</a>.</li>
 </ol>
 
-<div class="figure"><span id="fig:sheets-average"></span>
+<div class="figure"><span style="display:block;" id="fig:sheets-average"></span>
 <img src="images/02-spreadsheet/sheets-average.png" alt="Type = to start a formula and select the suggestion for average, or type it directly in with the correct range." width="300" />
 <p class="caption">
 Figure 2.27: Type <code>=</code> to start a formula and select the suggestion for average, or type it directly in with the correct range.
@@ -407,8 +406,8 @@ Figure 2.27: Type <code>=</code> to start a formula and select the suggestion fo
 <li>Part of the magic of spreadsheets is that you can use the built-in hold-and-drag feature to copy and paste a formula across other columns or rows, and it will automatically update its cell references. Click in cell E2, and then press and hold down on the blue dot in the bottom-right corner of that cell, which transforms your cursor into a crosshair symbol. Drag your cursor to cell F2 and let go, and show in Figure <a href="calculate.html#fig:sheets-drag-calc">2.28</a>. The formula will be automatically pasted and updated for the new column to <code>=AVERAGE(F3:F2894)</code> or <code>AVERAGE(F3:F)</code>, depending on which way you entered it above. Once again, since this is a live spreadsheet with a growing number of responses, your sheet will have a larger number in the last cell reference.</li>
 </ol>
 
-<div class="figure"><span id="fig:sheets-drag-calc"></span>
-<iframe src="images/02-spreadsheet/sheets-drag-calc.gif" width="672" height="185px">
+<div class="figure"><span style="display:block;" id="fig:sheets-drag-calc"></span>
+<iframe src="images/02-spreadsheet/sheets-drag-calc.gif" width="672" height="185px" data-external="1">
 </iframe>
 <p class="caption">
 Figure 2.28: Click on the blue bottom-right dot in cell E2, then hold-and-drag your crosshair cursor in cell F2, and let go to automatically paste and update the formula.
@@ -418,7 +417,7 @@ Figure 2.28: Click on the blue bottom-right dot in cell E2, then hold-and-drag y
 <li>Since the <em>Occupation</em> column contains a defined set of text responses, let’s use a different function to count them using an <em>if statement</em>, such as the number of responses if a reader listed “educator”. Click in cell G2 and type the equal symbol (<code>=</code>) to start a new formula. Google Sheets will automatically suggest possible formulas based on the context, and you can select one that displays the count if the response is <em>educator</em> for current values in the entire column. You can directly type in the formula <code>=COUNTIF(G3:G2894,"=educator")</code>, where your last cell reference will be a larger number to reflect all of the rows in your version, or type in the Google Sheets syntax <code>=COUNTIF(G3:G,"=educator")</code> that runs the calculation on the entire column without naming a specific endpoint, as shown in Figure <a href="calculate.html#fig:sheets-countif">2.29</a>.</li>
 </ol>
 
-<div class="figure"><span id="fig:sheets-countif"></span>
+<div class="figure"><span style="display:block;" id="fig:sheets-countif"></span>
 <img src="images/02-spreadsheet/sheets-countif.png" alt="Select or enter a formula that counts responses if the entry is educator." width="250" />
 <p class="caption">
 Figure 2.29: Select or enter a formula that counts responses if the entry is <em>educator</em>.
@@ -478,7 +477,6 @@ Figure 2.29: Select or enter a formula that counts responses if the entry is <em
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -518,15 +516,32 @@ gitbook.start({
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
-},
-"search": true
+}
 });
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

@@ -28,7 +28,7 @@ Get ready to sketch out your data story in words and pictures. No artistic skill
 
 ```{r data-story-panel, out.width=750, fig.cap="(ref:data-story-panel)"}
  knitr::include_graphics("images/01-choose/data-story-panel.png")
- ```
+```
 
 This exercise can help you in multiple ways, whether you do it by yourself, or even better, with a team of co-workers, as shown in Figure \@ref(fig:data-story-photo-combined). First, by migrating ideas from your mind to paper, you'll make your thinking clearer not only for you, but also more visible for others. When ideas are sketched out, you can reflect on them, listen to feedback, cross-out not-so-good ones, and replace them with better ones on new sheets of paper. If your initial sketches are too complicated or confusing, break down those ideas into separate pages to make them more coherent.
 
@@ -36,7 +36,7 @@ This exercise can help you in multiple ways, whether you do it by yourself, or e
 
 ```{r data-story-photo-combined, out.width=750, fig.cap="(ref:data-story-photo-combined)"}
  knitr::include_graphics("images/01-choose/data-story-photo-combined.jpg")
- ```
+```
 
 Second, look at your sheets like a storyboard. Spread them out on a table, move them around to potentially reorder the sequence, start to define the three essential stages of your story: the beginning, middle, and end. Also, these pages can help you organize your thinking about how you'll communicate your data story to larger audiences, such as a presentation slide deck, or paragraphs and pictures for your next report or web page. Don't throw them away, because we'll return to this exercise at the end of the book in [Chapter 15: Tell and Show Your Data Story](story.html).
 

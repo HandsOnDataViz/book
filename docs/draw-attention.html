@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Draw Attention to Meaning | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Draw Attention to Meaning | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io//images/cover-400wide.jpg" />
   <meta property="og:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="github-repo" content="handsondataviz/book" />
@@ -25,7 +24,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2022-04-04" />
+<meta name="date" content="2022-07-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,8 +33,8 @@
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="storyboard.html"/>
 <link rel="next" href="sources-uncertainty.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -51,9 +50,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -336,7 +335,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
 <li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
-<li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
+<li class="chapter" data-level="" data-path="style-guide.html"><a href="style-guide.html"><i class="fa fa-check"></i>Style Guide for <em>Hands-On Data Visualization</em></a></li>
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
 <li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
 <li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
@@ -376,8 +375,8 @@ div.csl-indent {
   </p>
 
 </header>
-<div id="draw-attention" class="section level2 unnumbered">
-<h2>Draw Attention to Meaning</h2>
+<div id="draw-attention" class="section level2 unnumbered hasAnchor">
+<h2>Draw Attention to Meaning<a href="draw-attention.html#draw-attention" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>When finalizing your visualizations, add finishing touches to draw attention to the most meaningful aspects of the data. In addition to writing text to accompany your charts and maps, you can also add annotations and use colors <em>inside</em> some types of visualizations to point out what’s most significant in your data story. Let’s demonstrate how to use these features to transform your visualization in <a href="chart-datawrapper.html">Datawrapper, a tool we first introduced in Chapter 6</a>.</p>
 <p>One of the environmental challenges we face today is the ever-growing production of plastics. While these inexpensive and lightweight materials offer many quality-of-life benefits, we often deposit them in mismanaged waste streams that cause them to enter our rivers and oceans. To understand the growth of plastics, we consulted <a href="https://ourworldindata.org/plastic-pollution">Our World In Data</a>, and you can view the <a href="https://docs.google.com/spreadsheets/d/1H3OwmiLQy5DugT-iArhuqHryzcWJi1kLocpGp7v-1VM/edit#gid=339613035">annual global production data from 1950-2015 in Google Sheets format</a>.<a href="#fn57" class="footnote-ref" id="fnref57"><sup>57</sup></a></p>
 <p>First, let’s upload the data in a single-column format to Datawrapper. By default, the tool transforms this time-series data into a line chart, as shown in Figure <a href="draw-attention.html#fig:plastic-line-chart">15.3</a>, which shows how global plastic production has increased over time.</p>
@@ -386,8 +385,8 @@ div.csl-indent {
 | 1951 |        2 |
 ...</code></pre>
 
-<div class="figure"><span id="fig:plastic-line-chart"></span>
-<iframe src="https://datawrapper.dwcdn.net/5y13d/" width="672" height="475px">
+<div class="figure"><span style="display:block;" id="fig:plastic-line-chart"></span>
+<iframe src="https://datawrapper.dwcdn.net/5y13d/" width="672" height="475px" data-external="1">
 </iframe>
 <p class="caption">
 Figure 15.3: The default line chart for historical plastic production in Datawrapper.
@@ -400,7 +399,7 @@ Figure 15.3: The default line chart for historical plastic production in Datawra
 | 2001 |             |        218 |
 ...</code></pre>
 
-<div class="figure"><span id="fig:plastic-refine"></span>
+<div class="figure"><span style="display:block;" id="fig:plastic-refine"></span>
 <img src="images/15-story/plastic-refine.png" alt="After dividing the data into two columns and switching to an area chart, uncheck the stacked areas box in the Refine tab."  />
 <p class="caption">
 Figure 15.4: After dividing the data into two columns and switching to an area chart, uncheck the <em>stacked areas</em> box in the <em>Refine</em> tab.
@@ -408,8 +407,8 @@ Figure 15.4: After dividing the data into two columns and switching to an area c
 </div>
 <p>Finally, hide the old title and replace it by adding annotations as you learned in the <a href="annotated-datawrapper.html">Annotated Charts with Datawrapper section of Chapter 6</a>. Place annotations inside the area chart, using colored text, to emphasize the new interpretation and place it where readers will look, as shown in Figure <a href="draw-attention.html#fig:plastic-area-chart">15.5</a>. Overall, redesigning your chart helps you to communicate a more meaningful data story that global plastic production is increasing <em>and</em> that our world has manufactured more than half of our historical total in just the past 15 years.</p>
 
-<div class="figure"><span id="fig:plastic-area-chart"></span>
-<iframe src="https://datawrapper.dwcdn.net/1TyyZ/" width="672" height="475px">
+<div class="figure"><span style="display:block;" id="fig:plastic-area-chart"></span>
+<iframe src="https://datawrapper.dwcdn.net/1TyyZ/" width="672" height="475px" data-external="1">
 </iframe>
 <p class="caption">
 Figure 15.5: Explore the <a href="https://datawrapper.dwcdn.net/1TyyZ/">interactive version of the new area chart</a>, which uses color and annotations to draw attention to post-2000 global plastic production.
@@ -473,7 +472,6 @@ Figure 15.5: Explore the <a href="https://datawrapper.dwcdn.net/1TyyZ/">interact
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -513,15 +511,32 @@ gitbook.start({
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
-},
-"search": true
+}
 });
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

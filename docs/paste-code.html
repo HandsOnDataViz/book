@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Paste Code or iframe to Website | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Paste Code or iframe to Website | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io//images/cover-400wide.jpg" />
   <meta property="og:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="github-repo" content="handsondataviz/book" />
@@ -25,7 +24,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2022-04-04" />
+<meta name="date" content="2022-07-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,8 +33,8 @@
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="embed-code.html"/>
 <link rel="next" href="github.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -51,9 +50,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -336,7 +335,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
 <li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
-<li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
+<li class="chapter" data-level="" data-path="style-guide.html"><a href="style-guide.html"><i class="fa fa-check"></i>Style Guide for <em>Hands-On Data Visualization</em></a></li>
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
 <li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
 <li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
@@ -376,25 +375,25 @@ div.csl-indent {
   </p>
 
 </header>
-<div id="paste-code" class="section level2 unnumbered">
-<h2>Paste Code or iframe to Website</h2>
+<div id="paste-code" class="section level2 unnumbered hasAnchor">
+<h2>Paste Code or iframe to Website<a href="paste-code.html#paste-code" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In the prior section, you learned how to copy the embed code or create an iframe for your interactive visualization that is hosted online by the primary site. For example, your live chart or map might be hosted on a Google Sheets, Datawrapper, or Tableau Public server. In this section, we’ll demonstrate ways to properly paste the embed code or iframe to seamlessly display your interactive chart or map on a secondary website that you control, and we’ll focus on common web-building platforms such as WordPress, SquareSpace, Wix, and Weebly. Even if your website runs on a different platform, the principles will likely be the same.</p>
-<div id="to-wordpress.com-sites" class="section level3 unnumbered">
-<h3>to WordPress.com sites</h3>
+<div id="to-wordpress.com-sites" class="section level3 unnumbered hasAnchor">
+<h3>to WordPress.com sites<a href="paste-code.html#to-wordpress.com-sites" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>If you own <em>free</em> or personal or premium <a href="https://wordpress.com">WordPress.com</a> site, with a web address in the format <code>anyone.wordpress.com</code>, you <em>cannot</em> insert an embed code that contains an iframe or Javascript due to security concerns, as described on their <a href="https://wordpress.com/support/troubleshooting-embed-links-and-shortcodes/">support page</a>. This means that if wish to show data visualizations created from this book on a WordPress.com site, you have two options. First, with your free or personal or premium plan, you can still insert a <em>static image</em> of a chart or map and a link to its interactive site, but that’s clearly not ideal. Second, WordPress.com suggests that you can <a href="https://wordpress.com/support/plan-features/">update to their paid Business or eCommerce plan</a>, which supports embed codes that contain iframes or Javascript, following instructions similar to the self-hosted WordPress sites below.</p>
 </div>
-<div id="to-self-hosted-wordpress-sites" class="section level3 unnumbered">
-<h3>to Self-hosted WordPress sites</h3>
+<div id="to-self-hosted-wordpress-sites" class="section level3 unnumbered hasAnchor">
+<h3>to Self-hosted WordPress sites<a href="paste-code.html#to-self-hosted-wordpress-sites" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Make sure you <a href="https://wordpress.com/support/com-vs-org/">understand the difference</a> between a WordPress.com site above versus a self-hosted WordPress site. The latter is sometimes called WordPress.org site because anyone can freely download the software from that address and <em>host it on their own webserver</em>, or more commonly, have access to a self-hosted WordPress server through their school or work, or by renting space on a vendor’s webserver. But the web address of a self-hosted WordPress site does <em>not</em> necessarily need to end in <code>.org</code>. It also could be <code>.com</code> or <code>.edu</code> or any other ending, so don’t let that confuse you.</p>
 <p>There are two ways to insert an embed code or iframe in a self-hosted WordPress site, but your success may depend on your WP version, your access level, and the complexity of the code. We’ll show you both Method A (which is simpler, but not always reliable) and Method B (which requires a few more steps, but works more reliably). See which method works best for your self-hosted WordPress site.</p>
-<div id="method-a-simple-but-not-always-reliable" class="section level4 unnumbered">
-<h4>Method A: Simple, But Not Always Reliable</h4>
+<div id="method-a-simple-but-not-always-reliable" class="section level4 unnumbered hasAnchor">
+<h4>Method A: Simple, But Not Always Reliable<a href="paste-code.html#method-a-simple-but-not-always-reliable" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Assume that you’re using self-hosted WordPress version 5.0 or above with the newer block editor, and you have editor or administrator access to your site. (This method does not work reliably with author-level access or below.)</p>
 <ol style="list-style-type: decimal">
 <li>In your block editor, select a <em>custom HTML</em> block, and directly insert the embed code or the iframe, as shown in Figure <a href="paste-code.html#fig:wordpress-custom-html">9.16</a>.</li>
 </ol>
 
-<div class="figure"><span id="fig:wordpress-custom-html"></span>
+<div class="figure"><span style="display:block;" id="fig:wordpress-custom-html"></span>
 <img src="images/09-embed/wordpress-custom-html.png" alt="Paste an embed code or iframe into a custom HTML block." width="700" />
 <p class="caption">
 Figure 9.16: Paste an embed code or iframe into a custom HTML block.
@@ -404,14 +403,14 @@ Figure 9.16: Paste an embed code or iframe into a custom HTML block.
 <li>Preview your WordPress page or post, and if your iframe appears, publish and view it in another browser to test how it appears to your readers.</li>
 </ol>
 </div>
-<div id="method-b-more-steps-but-more-reliable" class="section level4 unnumbered">
-<h4>Method B: More Steps, But More Reliable</h4>
+<div id="method-b-more-steps-but-more-reliable" class="section level4 unnumbered hasAnchor">
+<h4>Method B: More Steps, But More Reliable<a href="paste-code.html#method-b-more-steps-but-more-reliable" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Assume that you’re using self-hosted WordPress, any version, with either the classic or block editor, and that you have author-level or above access to the site.</p>
 <ol style="list-style-type: decimal">
 <li>First, the site administrator must install and activate the <a href="https://wordpress.org/plugins/iframe/">iframe plugin</a>, as shown in Figure <a href="paste-code.html#fig:wordpress-iframe-plugin">9.17</a>. This plugin allows authors to embed iframe codes in a modified “shortcode” format surrounded by square brackets in this general format: <code>[iframe...]</code>.</li>
 </ol>
 
-<div class="figure"><span id="fig:wordpress-iframe-plugin"></span>
+<div class="figure"><span style="display:block;" id="fig:wordpress-iframe-plugin"></span>
 <img src="images/09-embed/wordpress-iframe-plugin.png" alt="Install and activate the iframe plugin on a self-hosted WordPress site." width="287" />
 <p class="caption">
 Figure 9.17: Install and activate the <em>iframe</em> plugin on a self-hosted WordPress site.
@@ -422,7 +421,7 @@ Figure 9.17: Install and activate the <em>iframe</em> plugin on a self-hosted Wo
 <li><p>Initially, the code you pasted probably included HTML iframe tags at the start (<code>&lt;iframe...</code>) and the end (<code>...&gt;&lt;/iframe&gt;</code>). Modify the start tag by replacing the less-than symbol (<code>&lt;</code>) with a square opening bracket (<code>[</code>). Modify the back end by erasing the greater-than symbol <em>and</em> the entire end tag (<code>&gt; &lt;/iframe&gt;</code>), and replacing both of them with one square closing bracket (<code>]</code>), as shown in Figure <a href="paste-code.html#fig:wordpress-insert-brackets">9.18</a>. Closely compare the two figures to see what these small code edits look like.</p></li>
 </ol>
 
-<div class="figure"><span id="fig:wordpress-insert-brackets"></span>
+<div class="figure"><span style="display:block;" id="fig:wordpress-insert-brackets"></span>
 <img src="images/09-embed/wordpress-insert-brackets.png" alt="Modify the front and back end with square brackets." width="700" />
 <p class="caption">
 Figure 9.18: Modify the front and back end with square brackets.
@@ -434,16 +433,16 @@ Figure 9.18: Modify the front and back end with square brackets.
 </ol>
 </div>
 </div>
-<div id="to-squarespace-wix-weebly-or-other-web-building-sites" class="section level3 unnumbered">
-<h3>to SquareSpace, Wix, Weebly, or Other Web-Building Sites</h3>
+<div id="to-squarespace-wix-weebly-or-other-web-building-sites" class="section level3 unnumbered hasAnchor">
+<h3>to SquareSpace, Wix, Weebly, or Other Web-Building Sites<a href="paste-code.html#to-squarespace-wix-weebly-or-other-web-building-sites" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>In other web-building sites, the process of pasting in your data visualization iframes or embed codes is similar to that on WordPress sites, but details will vary, depending on freemium versus paid subscription level and author-administrator status. Here are details for three of the most popular web-building services:</p>
 <p>See these SquareSpace support pages about <a href="https://support.squarespace.com/hc/en-us/articles/206543617-Embed-Blocks">embed blocks</a> and <a href="https://support.squarespace.com/hc/en-us/articles/205815928-Adding-custom-code-to-your-site#toc-code-blocks-vs--embed-blocks">adding custom code to your site</a>.</p>
 <p>See this Wix support page about <a href="https://support.wix.com/en/article/wix-editor-using-iframes-to-display-visible-content-on-your-site">using iframes to display content on your site</a>.</p>
 <p>See Weebly support page about <a href="https://www.weebly.com/app/help/us/en/topics/create-widgets-embed-code-and-add-external-content">adding external content and widgets with embedded code</a>.</p>
 <p>Tip: When working with long or complex embed codes, you may need to experiment with pasting and trimming down to the most relevant portion of the iframe in the <a href="https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_iframe">W3Schools TryIt iframe page</a>, then pasting that portion into your web-builder platform.</p>
 </div>
-<div id="summary9" class="section level3 unnumbered">
-<h3>Summary</h3>
+<div id="summary9" class="section level3 unnumbered hasAnchor">
+<h3>Summary<a href="paste-code.html#summary9" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>In this chapter, you learned about iframes and embed codes, and how they seamlessly display your interactive data visualization from their home site onto a second website that you personally manage. This concept will be valuable in the next chapter, where you will learn how to edit and host open-source code templates on the GitHub platform, because you can also create iframes to make those charts and maps seamlessly appear on your own website.</p>
 
 </div>
@@ -499,7 +498,6 @@ Figure 9.18: Modify the front and back end with square brackets.
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -539,15 +537,32 @@ gitbook.start({
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
-},
-"search": true
+}
 });
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

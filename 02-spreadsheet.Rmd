@@ -250,7 +250,7 @@ To preview how your online will appear to recipients, click the *Eyeball symbol*
 
 ```{r forms-preview, out.width=350, fig.cap="(ref:forms-preview)"}
  knitr::include_graphics("images/02-spreadsheet/forms-preview.png")
- ```
+```
 
 The Google Forms *Responses* tab will show individual results you receive, and also includes a powerful button to open the data in a linked Google Sheet, as shown in Figure \@ref(fig:forms-responses).
 

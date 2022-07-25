@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>- Scatter Chart | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="- Scatter Chart | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io//images/cover-400wide.jpg" />
   <meta property="og:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="github-repo" content="handsondataviz/book" />
@@ -25,7 +24,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2022-04-04" />
+<meta name="date" content="2022-07-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,8 +33,8 @@
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="chart-tableau.html"/>
 <link rel="next" href="filtered-line-tableau.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -51,9 +50,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -336,7 +335,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
 <li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
-<li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
+<li class="chapter" data-level="" data-path="style-guide.html"><a href="style-guide.html"><i class="fa fa-check"></i>Style Guide for <em>Hands-On Data Visualization</em></a></li>
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
 <li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
 <li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
@@ -376,20 +375,20 @@ div.csl-indent {
   </p>
 
 </header>
-<div id="scatter-tableau" class="section level2 unnumbered">
-<h2>- Scatter Chart</h2>
+<div id="scatter-tableau" class="section level2 unnumbered hasAnchor">
+<h2>- Scatter Chart<a href="scatter-tableau.html#scatter-tableau" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Scatter charts are best to show the relationship between two datasets, placed on the x- and y-axis, to reveal possible correlations. With Tableau Public, you can create an interactive scatter chart, where you can hover your cursor over points to view more details about the data. Organize your data in three columns, the same way as the <a href="scatter-bubble-datawrapper.html">Datawrapper scatter chart tutorial</a>: the first column for data labels, the second column for the x-axis, and the third column for the y-axis. Then you can create an interactive scatter chart as shown in Figure <a href="scatter-tableau.html#fig:tableau-scatter">6.51</a>, which illustrates a strong relationship between household income and test scores (above or below the national average for 6th grade math and English) in Connecticut public school districts. To learn more about the data and related visualizations, see Sean Reardon et al. at the <a href="https://purl.stanford.edu/db586ns4974">Stanford Education Data Archive</a>, Motoko Rich et al. at <a href="https://www.nytimes.com/interactive/2016/04/29/upshot/money-race-and-success-how-your-school-district-compares.html">The New York Times</a>, Andrew Ba Tran at <a href="https://web.archive.org/web/20190129101923/http://trendct.org/2016/05/06/wealth-and-grades-compare-connecticuts-school-districts/">CT Mirror/TrendCT</a>, and this <a href="https://github.com/trendct-data/stanford-cepa">TrendCT GitHub repo</a>.</p>
 
-<div class="figure"><span id="fig:tableau-scatter"></span>
-<iframe src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&amp;:embed=true" width="672" height="500px">
+<div class="figure"><span style="display:block;" id="fig:tableau-scatter"></span>
+<iframe src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&amp;:embed=true" width="672" height="500px" data-external="1">
 </iframe>
 <p class="caption">
 Figure 6.51: Scatter chart in Tableau Public: Explore the <a href="https://public.tableau.com/profile/jackdougherty#!/vizhome/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1">interactive version</a>. Data by <a href="https://github.com/trendct-data/stanford-cepa">CT Mirror/TrendCT and Stanford CEPA</a>.
 </p>
 </div>
 <p>To create your own scatter chart using this sample data in Tableau Public, follow this tutorial.</p>
-<div id="install-tableau-public-and-connect-data" class="section level4 unnumbered">
-<h4>Install Tableau Public and Connect Data</h4>
+<div id="install-tableau-public-and-connect-data" class="section level4 unnumbered hasAnchor">
+<h4>Install Tableau Public and Connect Data<a href="scatter-tableau.html#install-tableau-public-and-connect-data" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ol style="list-style-type: decimal">
 <li><p>Download the <a href="data/ct-districts-income-grades-2009-13.xlsx">CT Districts-Income-Grades sample data in Excel format</a>, or <a href="https://docs.google.com/spreadsheets/d/1mfZymUnbEQ8I1YUzqXWeiqA5JS1PIhnX7zdhwwvMmsk/edit#gid=840790465">view and download the Google Sheets version</a>. The data file consists of three columns: district, median household income, and test score levels.</p></li>
 <li><p>Install and start up the free <a href="https://public.tableau.com">Tableau Public</a> desktop application for Mac or Windows. It may require several minutes to complete this process. Tableau Public’s welcome page includes three sections: Connect, Open, and Discover.</p></li>
@@ -397,15 +396,15 @@ Figure 6.51: Scatter chart in Tableau Public: Explore the <a href="https://publi
 <li><p>Drag the <em>data</em> sheet into <em>Drag tables here</em> area, as shown in Figure <a href="scatter-tableau.html#fig:tableau-connect">6.52</a>. You will see the preview of the table under the drag-and-drop area. You have successfully connected one data source to Tableau Public, and you are ready to build your first chart.</p></li>
 </ol>
 
-<div class="figure"><span id="fig:tableau-connect"></span>
+<div class="figure"><span style="display:block;" id="fig:tableau-connect"></span>
 <img src="images/06-chart/tableau-connect-annotated.png" alt="Drag data sheet into Drag tables here area."  />
 <p class="caption">
 Figure 6.52: Drag <em>data</em> sheet into <em>Drag tables here</em> area.
 </p>
 </div>
 </div>
-<div id="create-scatter-chart-in-the-worksheet" class="section level4 unnumbered">
-<h4>Create Scatter Chart in the Worksheet</h4>
+<div id="create-scatter-chart-in-the-worksheet" class="section level4 unnumbered hasAnchor">
+<h4>Create Scatter Chart in the Worksheet<a href="scatter-tableau.html#create-scatter-chart-in-the-worksheet" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ol style="list-style-type: decimal">
 <li>In the <em>Data source</em> screen, click on the orange <em>Sheet 1</em> tab (in the lower-left corner) to go to your worksheet, where you will build the chart.</li>
 </ol>
@@ -418,20 +417,20 @@ in the <em>Rows</em> row, and a blue bar in the charting area. It makes little s
 <li><p>We want to tell Tableau to disaggregate the household and grade levels variables. In other words, we want to introduce an extra level of granularity, or <em>detail</em> to our visualization. To do so, drag the <em>District</em> dimension into the <em>Detail</em> shelf of the <em>Marks</em> card. Now a real scatter chart will appear in the charting area. If you hover over points, you will see all three values associated with these points.</p></li>
 </ol>
 
-<div class="figure"><span id="fig:tableau-scatter-dragging"></span>
+<div class="figure"><span style="display:block;" id="fig:tableau-scatter-dragging"></span>
 <img src="images/06-chart/tableau-scatter-dragging-annotated.png" alt="Drag data fields to the right locations in Tableau Public."  />
 <p class="caption">
 Figure 6.53: Drag data fields to the right locations in Tableau Public.
 </p>
 </div>
 </div>
-<div id="add-title-and-caption-and-publish" class="section level4 unnumbered">
-<h4>Add Title and Caption, and Publish</h4>
+<div id="add-title-and-caption-and-publish" class="section level4 unnumbered hasAnchor">
+<h4>Add Title and Caption, and Publish<a href="scatter-tableau.html#add-title-and-caption-and-publish" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Give your scatter chart a meaningful title by double-clicking on the default <em>Sheet 1</em> title
 above the charting area. Add more information about the chart, such as source of the data, who built the visualization and when, and other details to add credibility to your work. You can do so inside a <em>Caption</em>, a text block that accompanies your Tableau chart. In the menu, go to <em>Worksheet &gt; Show Caption</em>. Double-click
 the Caption block that appears, and edit the text. As a result, your final worksheet will look like shown in Figure <a href="scatter-tableau.html#fig:tableau-scatter-final">6.54</a>.</p>
 
-<div class="figure"><span id="fig:tableau-scatter-final"></span>
+<div class="figure"><span style="display:block;" id="fig:tableau-scatter-final"></span>
 <img src="images/06-chart/tableau-scatter-final-annotated.png" alt="This scatter chart is ready to be published."  />
 <p class="caption">
 Figure 6.54: This scatter chart is ready to be published.
@@ -446,7 +445,7 @@ to something meaningful, as this name will appear in the public web address for 
 with the visualization. In the green banner above the chart, click <em>Edit Details</em> to edit the title or description. Under <em>Toolbar Settings</em>, see the checkbox to <em>Allow others to download or explore and copy this workbook and its data</em>, and select the setting you wish, as shown in Figure <a href="scatter-tableau.html#fig:tableau-toolbar-settings">6.55</a>. If you are publishing your visualization on the web, we also recommend that you keep this box checked so that others can download your data and see how you constructed it, to improve data accessibility for all.</p></li>
 </ol>
 
-<div class="figure"><span id="fig:tableau-toolbar-settings"></span>
+<div class="figure"><span style="display:block;" id="fig:tableau-toolbar-settings"></span>
 <img src="images/06-chart/tableau-toolbar-settings-annotated.png" alt="This scatter chart is ready to be published."  />
 <p class="caption">
 Figure 6.55: This scatter chart is ready to be published.
@@ -507,7 +506,6 @@ where <code>USERNAME</code> is your unique username.</p>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -547,15 +545,32 @@ gitbook.start({
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
-},
-"search": true
+}
 });
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

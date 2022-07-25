@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Guiding Questions for Your Search | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Guiding Questions for Your Search | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io//images/cover-400wide.jpg" />
   <meta property="og:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="github-repo" content="handsondataviz/book" />
@@ -25,7 +24,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2022-04-04" />
+<meta name="date" content="2022-07-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,8 +33,8 @@
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="find.html"/>
 <link rel="next" href="public.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -51,9 +50,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -336,7 +335,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
 <li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
-<li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
+<li class="chapter" data-level="" data-path="style-guide.html"><a href="style-guide.html"><i class="fa fa-check"></i>Style Guide for <em>Hands-On Data Visualization</em></a></li>
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
 <li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
 <li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
@@ -376,8 +375,8 @@ div.csl-indent {
   </p>
 
 </header>
-<div id="guiding" class="section level2 unnumbered">
-<h2>Guiding Questions for Your Search</h2>
+<div id="guiding" class="section level2 unnumbered hasAnchor">
+<h2>Guiding Questions for Your Search<a href="guiding.html#guiding" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>For many people, a data search is simply googling some keywords on the web. Sometimes that works, sometimes not. When that approach flounders, we reflect on the many lessons we’ve learned about data-hunting while working alongside talented librarians, journalists, and researchers. Collectively, they taught us a set of guiding questions that outline a more thoughtful process about <em>how to search</em> for data:</p>
 <p><em>What exactly is the question you’re seeking to answer with data?</em></p>
 <p>Literally write it down—in the form of a question, punctuated with a question mark at the end—to clarify your own thinking, and also so that you can clearly communicate it to others who can assist you. All too often, our brains automatically leap ahead to try to identify the <em>answer</em>, without reflecting on the best way frame the <em>question</em> in a way that does not limit the range of possible outcomes.</p>
@@ -388,7 +387,7 @@ div.csl-indent {
 <p><em>What level(s) of data are available?</em></p>
 <p>Is information disaggregated into individual cases or aggregated into larger groups? Smaller units of data allow you to make more granular interpretations, while larger units can help you to identify broader patterns. Librarians can help us to decipher how and why organizations publish data at different levels. For example, the US Census collects data every ten years about each person residing in the nation. Under law, individual-level data about each person is confidential for 72 years, then released to the public. Currently, you can search for specific individuals in the 1940 Census and earlier decades at the <a href="https://www.archives.gov/research/genealogy/census/about">US National Archives</a> and other websites, as shown in Figure <a href="guiding.html#fig:census-1940-excerpt">3.1</a>.</p>
 
-<div class="figure"><span id="fig:census-1940-excerpt"></span>
+<div class="figure"><span style="display:block;" id="fig:census-1940-excerpt"></span>
 <img src="images/03-find/census-1940-excerpt.png" alt="Excerpt of individual-level 1940 US Census data for Jack’s father’s family." width="350" />
 <p class="caption">
 Figure 3.1: Excerpt of individual-level 1940 US Census data for Jack’s father’s family.
@@ -404,8 +403,8 @@ Figure 3.1: Excerpt of individual-level 1940 US Census data for Jack’s father�
 <li>Census blocks (sub-unit of block groups, but not always a city block)<a href="#fn12" class="footnote-ref" id="fnref12"><sup>12</sup></a></li>
 </ul>
 
-<div class="figure"><span id="fig:census-divisions-hartford"></span>
-<iframe src="https://handsondataviz.github.io/census-divisions-hartford/" width="672" height="700px">
+<div class="figure"><span style="display:block;" id="fig:census-divisions-hartford"></span>
+<iframe src="https://handsondataviz.github.io/census-divisions-hartford/" width="672" height="700px" data-external="1">
 </iframe>
 <p class="caption">
 Figure 3.2: Common US census geographies around Hartford, Connecticut, 2019. Zoom out in the <a href="https://handsondataviz.github.io/census-divisions-hartford/">interactive version</a> for county and state boundaries.
@@ -420,7 +419,7 @@ Figure 3.2: Common US census geographies around Hartford, Connecticut, 2019. Zoo
 <div class="footnotes">
 <hr />
 <ol start="10">
-<li id="fn10"><p><span class="citation">, <span>“Drilling into the <span>DEA</span>’s <span>Pain Pill Database</span>”</span> (<span>Washington Post</span>, July 16, 2019), <a href="https://www.washingtonpost.com/graphics/2019/investigations/dea-pain-pill-database/" role="doc-biblioref">https://www.washingtonpost.com/graphics/2019/investigations/dea-pain-pill-database/</a>.</span><a href="guiding.html#fnref10" class="footnote-back">↩︎</a></p></li>
+<li id="fn10"><p><span class="citation"><span>“Drilling into the <span>DEA</span>’s <span>Pain Pill Database</span>”</span> (<span>Washington Post</span>, July 16, 2019), <a href="https://www.washingtonpost.com/graphics/2019/investigations/dea-pain-pill-database/" role="doc-biblioref">https://www.washingtonpost.com/graphics/2019/investigations/dea-pain-pill-database/</a>.</span><a href="guiding.html#fnref10" class="footnote-back">↩︎</a></p></li>
 <li id="fn11"><p>Jack Dougherty et al., <span>“School <span>Choice</span> in <span>Suburbia</span>: Test <span>Scores</span>, <span>Race</span>, and <span>Housing Markets</span>,”</span> <em>American Journal of Education</em> 115, no. 4 (August 2009): 523–48, <a href="http://digitalrepository.trincoll.edu/cssp_papers/1" role="doc-biblioref">http://digitalrepository.trincoll.edu/cssp_papers/1</a>.<a href="guiding.html#fnref11" class="footnote-back">↩︎</a></p></li>
 <li id="fn12"><p><span class="citation">Katy Rossiter, <span>“What Are Census Blocks?”</span> (<span>US Census Bureau</span>, July 11, 2011), <a href="https://www.census.gov/newsroom/blogs/random-samplings/2011/07/what-are-census-blocks.html" role="doc-biblioref">https://www.census.gov/newsroom/blogs/random-samplings/2011/07/what-are-census-blocks.html</a>.</span><a href="guiding.html#fnref12" class="footnote-back">↩︎</a></p></li>
 <li id="fn13"><p>D’Ignazio and Klein, <em>Data <span>Feminism</span></em>, chap. 1.<a href="guiding.html#fnref13" class="footnote-back">↩︎</a></p></li>
@@ -476,7 +475,6 @@ Figure 3.2: Common US census geographies around Hartford, Connecticut, 2019. Zoo
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -516,15 +514,32 @@ gitbook.start({
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
-},
-"search": true
+}
 });
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

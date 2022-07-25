@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Recognize and Reduce Data Bias | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Recognize and Reduce Data Bias | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io//images/cover-400wide.jpg" />
   <meta property="og:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="github-repo" content="handsondataviz/book" />
@@ -25,7 +24,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2022-04-04" />
+<meta name="date" content="2022-07-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,8 +33,8 @@
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="how-to-lie-with-maps.html"/>
 <link rel="next" href="spatial-bias.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -51,9 +50,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -336,7 +335,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
 <li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
-<li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
+<li class="chapter" data-level="" data-path="style-guide.html"><a href="style-guide.html"><i class="fa fa-check"></i>Style Guide for <em>Hands-On Data Visualization</em></a></li>
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
 <li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
 <li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
@@ -376,8 +375,8 @@ div.csl-indent {
   </p>
 
 </header>
-<div id="data-bias" class="section level2 unnumbered">
-<h2>Recognize and Reduce Data Bias</h2>
+<div id="data-bias" class="section level2 unnumbered hasAnchor">
+<h2>Recognize and Reduce Data Bias<a href="data-bias.html#data-bias" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We define bias as unfairly favoring one view over another. When working with data and designing visualizations, it’s important to be aware of different types of bias, so that you can recognize them as potential factors that may influence your perception, and reduce their presence in your own work. The first step toward reducing bias is to correctly identify various types, which at first glance may appear hidden, so that we can call them out. In this section we’ll discuss four categories of bias that anyone who works with data needs to recognize: sampling biases, cognitive biases, algorithmic biases, and intergroup biases. In a later section we’ll address other types of biases that are highly relevant to anyone working with map data.</p>
 <p><em>Sampling biases</em> occur when we believe our data has been selected fairly, but some behind-the-scenes process influences its composition and skews the results. We previously warned you about several types in the <a href="biased-comparisons.html">Beware of Biased Comparisons section of Chapter 5</a>. One type to avoid is <em>selection bias</em>, which means that the sample selected for your study differs systematically from the larger population, such as when you randomly measure the height of people who happen to be leaving the gym after basketball practice. A second type to avoid is <em>non-response bias</em>, which happens when certain subgroups of a population as less likely to respond to a survey, and leads to less representative results. We also cautioned you about a third type, <em>self-selection bias</em>, where participants who apply or volunteer for a program must be evaluated carefully to avoid comparisons with people with non-participants, who may not share the same motivations. Always <a href="question.html">question your data, as described in chapter 3</a>, before you attempt to make meaningful comparisons. If you suspect that sampling issue may have snuck into the data collection process, either do not use the data, or clearly describe your concerns in your visualization notes and companion text to call out potential biases.</p>
 <p><em>Cognitive biases</em> refer to a category of human behaviors that skew how we interpret data. One example is <em>confirmation bias</em>, which refers to the tendency to accept only claims that fit our preconceived notions of how the world works. Counter this by actively searching for alternative interpretations and considering contradictory findings with open eyes. A second example is <em>pattern bias</em>, which describes how people tend to see meaningful relationships in data, even when numbers were randomly selected. Fight against this by reminding readers (and yourself) that data is noisy, and our brains are wired to see patterns, even where none exist. See additional resources on statistical analysis mentioned in <a href="comparisons.html">chapter 5</a> to learn about appropriate tests to determine whether apparent patterns in your data exist at odds greater than chance. A third example is <em>framing bias</em>, which refers to negative or positive labels or conceptual categories that affect how we interpret information. On the power of labels, British statistician David Spiegelhalter notes that US hospitals tend to report <em>mortality rates</em>, while UK hospitals report <em>survival</em> rates. When weighing the risks of a surgical procedure for member of your family, a 5 percent mortality rate seems worse than a 95 percent survival rate, even though they’re identical. Furthermore, Spiegelhalter observes that when we supplement rates with raw counts, it further increases our impression of risks. For example, if we told you a surgical procedure had a 5 percent mortality rate <em>and</em> that 20 out of 400 patients died, that outcome seems worse because we begin to imagine real people’s lives, not just abstract percentages.<a href="#fn51" class="footnote-ref" id="fnref51"><sup>51</sup></a> Counter framing bias by being aware of its potential effect on our minds and calling it out.</p>
@@ -385,14 +384,14 @@ div.csl-indent {
 <p><em>Intergroup biases</em> refers to multiple ways that people privilege or discriminate by social categories, such as race, gender, class, and sexuality. Clearly, intergroup biases have a long history that predate the digital era. But in the wake of the Black Lives Matter movement, some authors have called attention to ways that intergroup bias pervades the field of data visualization, and have advocated for ways to counter its impact. For example, Jonathan Schwabish and Alice Feng describe how they applied a racial equity lens to revise the <a href="https://urbaninstitute.github.io/graphics-styleguide/">Urban Institute’s Data Visualization Style Guide</a>.<a href="#fn54" class="footnote-ref" id="fnref54"><sup>54</sup></a> For example, Schwabish and Feng recommend ordering group labels to focus on the data story, rather than listing “White” and “Men” at the top by default. They also call on us to proactively acknowledge missing groups in our data by calling attention to those often omitted, such as non-binary and transgender people in US federal datasets, rather than ignoring their absence. Furthermore, when choosing color palettes to represent people in charts and maps, the authors remind us to avoid stereotypical colors and to avoid color-grouping Black, Latino, and Asian people as polar opposites of White people.</p>
 <p>Schwabish and Feng offer several excellent recommendations to improve racial equity in data visualization, though some of their more provocative proposals are likely to generate more discussion and debate. For example, they <a href="https://medium.com/@urban_institute/applying-racial-equity-awareness-in-data-visualization-bd359bf7a7ff">contrast different ways to portray Covid-19 pandemic data</a> and recommend that we stop placing disaggregated racial and ethnic data on the same chart because it promotes a “deficit-based perspective” that judges lower-performing groups by the standards of higher-performing ones, as shown in Figure <a href="data-bias.html#fig:schwabish-feng1">14.15</a>. Instead, Schwabish and Feng suggest that we plot racial and ethnic data in separate but adjacent charts, each with its own reference to state or national averages and confidence intervals, as shown in Figure <a href="data-bias.html#fig:schwabish-feng2">14.16</a>.</p>
 
-<div class="figure"><span id="fig:schwabish-feng1"></span>
+<div class="figure"><span style="display:block;" id="fig:schwabish-feng1"></span>
 <img src="images/14-detect/schwabish-feng1.png" alt="To avoid a deficit-based perspective, Schwabish and Feng argue against combining racial and ethnic data on the same chart. Image by Urban Institute, reprinted with permission." width="500" />
 <p class="caption">
 Figure 14.15: To avoid a deficit-based perspective, Schwabish and Feng argue against combining racial and ethnic data on the same chart. Image by <a href="https://medium.com/@urban_institute/applying-racial-equity-awareness-in-data-visualization-bd359bf7a7ff">Urban Institute</a>, reprinted with permission.
 </p>
 </div>
 
-<div class="figure"><span id="fig:schwabish-feng2"></span>
+<div class="figure"><span style="display:block;" id="fig:schwabish-feng2"></span>
 <img src="images/14-detect/schwabish-feng2.png" alt="Instead, Schwabish and Feng recommend placing racial and ethnic data in separate charts, with state or national averages as a comparison point. Image by Urban Institute, reprinted with permission." width="500" />
 <p class="caption">
 Figure 14.16: Instead, Schwabish and Feng recommend placing racial and ethnic data in separate charts, with state or national averages as a comparison point. Image by <a href="https://medium.com/@urban_institute/applying-racial-equity-awareness-in-data-visualization-bd359bf7a7ff">Urban Institute</a>, reprinted with permission.
@@ -460,7 +459,6 @@ Figure 14.16: Instead, Schwabish and Feng recommend placing racial and ethnic da
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -500,15 +498,32 @@ gitbook.start({
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
-},
-"search": true
+}
 });
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

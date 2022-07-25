@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Current Map with Socrata Open Data | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Current Map with Socrata Open Data | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io//images/cover-400wide.jpg" />
   <meta property="og:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="github-repo" content="handsondataviz/book" />
@@ -25,7 +24,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2022-04-04" />
+<meta name="date" content="2022-07-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,8 +33,8 @@
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="map-tableau.html"/>
 <link rel="next" href="table.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -51,9 +50,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -336,7 +335,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
 <li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
-<li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
+<li class="chapter" data-level="" data-path="style-guide.html"><a href="style-guide.html"><i class="fa fa-check"></i>Style Guide for <em>Hands-On Data Visualization</em></a></li>
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
 <li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
 <li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
@@ -376,14 +375,14 @@ div.csl-indent {
   </p>
 
 </header>
-<div id="map-socrata" class="section level2 unnumbered">
-<h2>Current Map with Socrata Open Data</h2>
+<div id="map-socrata" class="section level2 unnumbered hasAnchor">
+<h2>Current Map with Socrata Open Data<a href="map-socrata.html#map-socrata" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>This type of map shows current data because it continuously pulls the most up-to-date from an <a href="opendata.html">open data repository, which you learned about in chapter 3</a>. The advantage of creating visualizations directly on an open data platform is that your chart or map is directly linked to the source. Some government agencies frequently update selected open data repositories where current information matters, such as fire or police calls, property data, or public finances. Whenever an administrator revises the contents of an open data repository, your chart or map will automatically display the most current information. However, if the government agency stops updating the repository or switches to a different platform, your visualization will no longer show current information or it may break entirely.</p>
 <p><a href="https://www.tylertech.com/products/socrata">Socrata</a> is a company that provides an open data repository service that many government agencies use to make open data available to the public. It offers user-friendly ways to view, filter, and export data. In addition, the Socrata platform includes built-in support to create interactive charts and maps, which can be embedded in other websites (including your own). You can search for publicly-available datasets on Socrata’s <a href="https://www.opendatanetwork.com/">Open Data Network</a>.</p>
 <p>In this section, we will build an interactive point map of fatal crashes involving cars in New York City, which continuously updates to display points over the past 365 days, as shown in Figure <a href="map-socrata.html#fig:socrata-final">7.63</a>. Our interactive map pulls data from the <a href="https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95/data">Motor Vehicle Collisions - Crashes</a> public repository on New York City’s OpenData Portal, based on the Socrata platform. As long as government administrators continue to update this dataset on this platform, your map should always display the most recent data for the past 12 months.</p>
 
-<div class="figure"><span id="fig:socrata-final"></span>
-<iframe src="https://data.cityofnewyork.us/dataset/Fatal-NYC-Crashes/nx4u-jy9t/embed?width=100%25&amp;height=500" width="672" height="500px">
+<div class="figure"><span style="display:block;" id="fig:socrata-final"></span>
+<iframe src="https://data.cityofnewyork.us/dataset/Fatal-NYC-Crashes/nx4u-jy9t/embed?width=100%25&amp;height=500" width="672" height="500px" data-external="1">
 </iframe>
 <p class="caption">
 Figure 7.63: Map of fatal crashes in NYC during the past year, continuously updated from a Socrata open data repository. See <a href="https://data.cityofnewyork.us/dataset/Fatal-NYC-Crashes/nx4u-jy9t/embed?width=100%25&amp;height=500">interactive version</a>.
@@ -395,7 +394,7 @@ Figure 7.63: Map of fatal crashes in NYC during the past year, continuously upda
 <li><p>Navigate to the <a href="https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95/data">Motor Vehicle Collisions - Crashes</a> dataset. In the menu on the right-hand side choose <em>Visualize &gt; Launch New Visualization</em>, as shown in Figure <a href="map-socrata.html#fig:socrata-launch-new-viz">7.64</a>. This will open a <em>Configure Visualization</em> studio where you can create the map.</p></li>
 </ol>
 
-<div class="figure"><span id="fig:socrata-launch-new-viz"></span>
+<div class="figure"><span style="display:block;" id="fig:socrata-launch-new-viz"></span>
 <img src="images/07-map/socrata-launch-new-viz-annotated.png" alt="Go to Visualize &gt; Launch New Visualization." width="300" />
 <p class="caption">
 Figure 7.64: Go to Visualize &gt; Launch New Visualization.
@@ -405,7 +404,7 @@ Figure 7.64: Go to Visualize &gt; Launch New Visualization.
 <li>In the top menu, select <em>Map</em> (the globe icon between a scatter chart icon and a calendar) as the visualization type. In a few seconds a basemap will appear, with <em>Map Layers</em> and <em>Map Settings</em> items in the side menu on the left, as shown in Figure <a href="map-socrata.html#fig:socrata-configure">7.65</a>.</li>
 </ol>
 
-<div class="figure"><span id="fig:socrata-configure"></span>
+<div class="figure"><span style="display:block;" id="fig:socrata-configure"></span>
 <img src="images/07-map/socrata-configure-annotated.png" alt="Your studio should look similar to this once you choose Map as the visualization type." width="500" />
 <p class="caption">
 Figure 7.65: Your studio should look similar to this once you choose Map as the visualization type.
@@ -418,7 +417,7 @@ Figure 7.65: Your studio should look similar to this once you choose Map as the 
 <li><p>Instead of showing all recorded crashes since 2012, let’s display crashes that happened over the past year, to be updated continuously. Add a third filter for <em>CRASH DATE</em> column, and set it to <em>Relative Date &gt; Custom &gt; Last 365 day(s)</em>. You will see a lot of points disappearing from the map as they don’t fall in the selected dates range. You can now close <em>Filters</em> window to free up screen space.</p></li>
 </ol>
 
-<div class="figure"><span id="fig:socrata-filter"></span>
+<div class="figure"><span style="display:block;" id="fig:socrata-filter"></span>
 <img src="images/07-map/socrata-filter-annotated.png" alt="Add filters for number of persons killed (&gt;0), location (latitude &gt; 0), and date (last 365 days)." width="300" />
 <p class="caption">
 Figure 7.66: Add filters for number of persons killed (&gt;0), location (latitude &gt; 0), and date (last 365 days).
@@ -428,7 +427,7 @@ Figure 7.66: Add filters for number of persons killed (&gt;0), location (latitud
 <li>Let’s ensure that crash locations appear as individual points and are never clustered together. Go to <em>Map Settings &gt; Clusters</em>, and bring the <em>Stop Clustering at Zoom Level</em> slider to 1, as shown in Figure <a href="map-socrata.html#fig:socrata-uncluster">7.67</a>. You should now see individual crash locations at all zoom levels.</li>
 </ol>
 
-<div class="figure"><span id="fig:socrata-uncluster"></span>
+<div class="figure"><span style="display:block;" id="fig:socrata-uncluster"></span>
 <img src="images/07-map/socrata-uncluster-annotated.png" alt="To always show individual points instead of clusters, set Stop Clustering at Zoom Level to 1." width="300" />
 <p class="caption">
 Figure 7.67: To always show individual points instead of clusters, set <em>Stop Clustering at Zoom Level</em> to 1.
@@ -439,7 +438,7 @@ Figure 7.67: To always show individual points instead of clusters, set <em>Stop 
 <li><p>Finally, let’s create meaningful tooltips for points. Return back to the <em>Map Layers</em> menu and choose our <em>Motor Vehicle Collisions - Crashes</em> point layer. To change what is shown in tooltips when you hover or click on points, navigate to <em>Flyout Details</em>, and set <em>Flyout Title</em> to <em>ON STREET NAME</em>, adding <em>CRASH DATE</em>, <em>CRASH DATE</em>, <em>NUMBER OF PERSONS INJURED</em>, and <em>NUMBER OF PERSONS KILLED</em> as additional flyout values, as shown in Figure <a href="map-socrata.html#fig:socrata-flyout">7.68</a>.</p></li>
 </ol>
 
-<div class="figure"><span id="fig:socrata-flyout"></span>
+<div class="figure"><span style="display:block;" id="fig:socrata-flyout"></span>
 <img src="images/07-map/socrata-flyout.png" alt="To edit tooltip information, use the Flyout Details menu item." width="250" />
 <p class="caption">
 Figure 7.68: To edit tooltip information, use the <em>Flyout Details</em> menu item.
@@ -452,22 +451,22 @@ Figure 7.68: To edit tooltip information, use the <em>Flyout Details</em> menu i
 </ol>
 <p>Now you can embed the map on your website as an iframe. To do so, click the <em>Share</em> button in the upper-right side of your map (see Figure <a href="map-socrata.html#fig:socrata-share">7.69</a>), and copy the generated code from <em>Embed Code</em> text area (Figure <a href="map-socrata.html#fig:socrata-share-embed">7.70</a>). We will talk about embedding visualizations in detail in <a href="embed.html">Chapter 9: Embed on the Web</a>.</p>
 
-<div class="figure"><span id="fig:socrata-share"></span>
+<div class="figure"><span style="display:block;" id="fig:socrata-share"></span>
 <img src="images/07-map/socrata-share-annotated.png" alt="Click Share button to bring up Share and Embed window." width="400" />
 <p class="caption">
 Figure 7.69: Click <em>Share</em> button to bring up <em>Share and Embed</em> window.
 </p>
 </div>
 
-<div class="figure"><span id="fig:socrata-share-embed"></span>
+<div class="figure"><span style="display:block;" id="fig:socrata-share-embed"></span>
 <img src="images/07-map/socrata-share-embed.png" alt="Copy iframe code to embed this map in another website." width="400" />
 <p class="caption">
 Figure 7.70: Copy iframe code to embed this map in another website.
 </p>
 </div>
 <p>There are limitations to creating your chart or map on an open data repository platform. First, if the agency stops using the platform, or changes the structure of the underlying data, your online map (or chart) may stop functioning. In fact, we had to rewrite this tutorial when it referred to a different Socrata platform that administrators stopped supporting. Second, you are limited to using datasets and geographic boundaries that exist on that platform. If these limitations concern you, a simple alternative is to export data from the open repository (which means that any “live” data would become “static”), and import it into your preferred data visualization tool, such as Datawrapper, Google Sheets, or Tableau. A second, more advanced alternative, is to learn to pull live data from Socrata using an API (Application Programming Interface), as described in the <a href="leaflet-maps-open-data-apis.html">Leaflet Maps with Open Data APIs tutorial in Chapter 12</a>.</p>
-<div id="summary7" class="section level3 unnumbered">
-<h3>Summary</h3>
+<div id="summary7" class="section level3 unnumbered hasAnchor">
+<h3>Summary<a href="map-socrata.html#summary7" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>In this chapter, we reviewed map design principles and explored recommended tools and tutorials for telling different types of data stories. When creating maps, think carefully about whether you are working with point or polygon data, the two most common options. If the latter, remember that well-designed choropleth maps required normalized data and careful thought about color intervals.</p>
 <p>We only scratched the surface and showed simple examples to help you quickly create some sample maps. See more advanced designs using <a href="leaflet.html">Leaflet map code templates in Chapter 12</a>, and how to <a href="transform.html">find and transform geospatial data in Chapter 13</a></p>
 
@@ -524,7 +523,6 @@ Figure 7.70: Copy iframe code to embed this map in another website.
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -564,15 +562,32 @@ gitbook.start({
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
-},
-"search": true
+}
 });
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Clean Data with OpenRefine | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Clean Data with OpenRefine | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io//images/cover-400wide.jpg" />
   <meta property="og:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="github-repo" content="handsondataviz/book" />
@@ -25,7 +24,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2022-04-04" />
+<meta name="date" content="2022-07-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,8 +33,8 @@
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="tabula.html"/>
 <link rel="next" href="comparisons.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -51,9 +50,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -336,7 +335,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
 <li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
-<li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
+<li class="chapter" data-level="" data-path="style-guide.html"><a href="style-guide.html"><i class="fa fa-check"></i>Style Guide for <em>Hands-On Data Visualization</em></a></li>
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
 <li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
 <li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
@@ -376,26 +375,26 @@ div.csl-indent {
   </p>
 
 </header>
-<div id="open-refine" class="section level2 unnumbered">
-<h2>Clean Data with OpenRefine</h2>
+<div id="open-refine" class="section level2 unnumbered hasAnchor">
+<h2>Clean Data with OpenRefine<a href="open-refine.html#open-refine" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Open the <a href="https://docs.google.com/spreadsheets/d/19BilYJxd0fgi7MTAa2y9NUF65Xqf2_y_dVr1jPbmWeg/edit#gid=1983762503">US Foreign Aid sample dataset in Google Sheets format</a> as shown in Figure <a href="open-refine.html#fig:openrefine-dataset">4.13</a>. Can you spot any problems with it? This data excerpt is from <a href="https://catalog.data.gov/dataset/u-s-overseas-loans-and-grants-greenbook">US Overseas Loans and Grants (Greenbook) dataset</a>, which shows US economic and military assistance to various countries.
 We chose to only include assistance to South Korea and North Korea for the years between 2000 and 2018. We added deliberate misspellings and formatting issues for demonstration purposes, but we did not alter values.</p>
 
-<div class="figure"><span id="fig:openrefine-dataset"></span>
+<div class="figure"><span style="display:block;" id="fig:openrefine-dataset"></span>
 <img src="images/04-clean/openrefine-dataset.png" alt="Can you spot any problems with this sample data?" width="600" />
 <p class="caption">
 Figure 4.13: Can you spot any problems with this sample data?
 </p>
 </div>
 <p>Notice how the <em>Country</em> column various spellings of North and South Korea. Also note how the <em>FundingAmount</em> column is not standardized. Some amounts use commas to separate thousands, while some uses spaces. Some amounts start with a dollar sign, and some do not. Datasets like this can be an absolute nightmare to analyze. Luckily, OpenRefine provides powerful tools to clean up and standardize data.</p>
-<div id="set-up-openrefine" class="section level3 unnumbered">
-<h3>Set up OpenRefine</h3>
+<div id="set-up-openrefine" class="section level3 unnumbered hasAnchor">
+<h3>Set up OpenRefine<a href="open-refine.html#set-up-openrefine" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Let’s use OpenRefine to clean up this messy data. Download <a href="https://openrefine.org/download.html">OpenRefine</a> for Windows, Mac, or Linux. Just like Tabula, it runs in your browser and no
 data leaves your local machine, which is great for confidentiality.</p>
 <p>To launch OpenRefine in Windows, unzip the downloaded file, double-click the <em>.exe</em> file, and the tool should open in your default browser.</p>
 <p>To launch OpenRefine on a Mac, double-click the downloaded <em>.dmg</em> file to install it. You will likely see a security warning that prevents OpenRefine from automatically launching because Apple does not recognize the developer for this open-source project. To resolve the problem, go to <em>System Preferences &gt; Security and Privacy &gt; General tab</em>, and click the <em>Open Anyway</em> button in the lower half of the window, as shown in Figure <a href="open-refine.html#fig:openrefine-mac-alert-combined">4.14</a>. If prompted with another window, click <em>Open</em>.</p>
 
-<div class="figure"><span id="fig:openrefine-mac-alert-combined"></span>
+<div class="figure"><span style="display:block;" id="fig:openrefine-mac-alert-combined"></span>
 <img src="images/04-clean/openrefine-mac-alert-combined.png" alt="If your Mac displays a warning about launching OpenRefine (on left), go to System Preferences - Security and Privacy - General tab and click Open Anyways (on right)."  />
 <p class="caption">
 Figure 4.14: If your Mac displays a warning about launching OpenRefine (on left), go to <em>System Preferences - Security and Privacy - General tab</em> and click <em>Open Anyways</em> (on right).
@@ -403,15 +402,15 @@ Figure 4.14: If your Mac displays a warning about launching OpenRefine (on left)
 </div>
 <p>When you start up OpenRefine, it will open your default browser with the localhost <code>127.0.0.1</code> address, with or without the additional port number <code>:3333</code>, as shown in Figure <a href="open-refine.html#fig:openrefine-welcome">4.15</a>. If your regular browser (such as Safari) does not behave nicely with OpenRefine, copy and paste the localhost address into a different browser (such as Firefox or Chrome).</p>
 
-<div class="figure"><span id="fig:openrefine-welcome"></span>
+<div class="figure"><span style="display:block;" id="fig:openrefine-welcome"></span>
 <img src="images/04-clean/openrefine-welcome.png" alt="The OpenRefine welcome page." width="500" />
 <p class="caption">
 Figure 4.15: The OpenRefine welcome page.
 </p>
 </div>
 </div>
-<div id="load-data-and-start-a-new-project" class="section level3 unnumbered">
-<h3>Load Data and Start a New Project</h3>
+<div id="load-data-and-start-a-new-project" class="section level3 unnumbered hasAnchor">
+<h3>Load Data and Start a New Project<a href="open-refine.html#load-data-and-start-a-new-project" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>To start cleaning up messy dataset, we need to load it into a new project. OpenRefine lets you upload a dataset from your local machine, or a remote web address (such as a Google Sheet). OpenRefine also can extract data directly from SQL databases, but this is beyond the scope of this book.</p>
 <ol style="list-style-type: decimal">
 <li><p>Open the <a href="https://docs.google.com/spreadsheets/d/19BilYJxd0fgi7MTAa2y9NUF65Xqf2_y_dVr1jPbmWeg/edit#gid=1983762503">US Foreign Aid sample dataset in Google Sheets</a>, sign in with your account, and go to <em>File &gt; Download</em> to save a version in comma-separated values (CSV) format to your computer.</p></li>
@@ -420,7 +419,7 @@ Figure 4.15: The OpenRefine welcome page.
 In our case, parsing means the way the data is split into columns. Make sure OpenRefine assigned values to the right columns, or change setting in <em>Parse data as</em> block at the bottom of the page until it starts looking meaningful, as shown in Figure <a href="open-refine.html#fig:openrefine-parse">4.16</a>. Then press <em>Create Project</em> in the upper-right corner.</p></li>
 </ol>
 
-<div class="figure"><span id="fig:openrefine-parse"></span>
+<div class="figure"><span style="display:block;" id="fig:openrefine-parse"></span>
 <img src="images/04-clean/openrefine-parse.png" alt="OpenRefine parsing options."  />
 <p class="caption">
 Figure 4.16: OpenRefine parsing options.
@@ -430,8 +429,8 @@ Figure 4.16: OpenRefine parsing options.
 the fun part: converting text into numbers, removing unnecessary characters,
 and fixing the spellings for North and South Koreas.</p>
 </div>
-<div id="convert-dollar-amounts-from-text-to-numbers" class="section level3 unnumbered">
-<h3>Convert Dollar Amounts from Text to Numbers</h3>
+<div id="convert-dollar-amounts-from-text-to-numbers" class="section level3 unnumbered hasAnchor">
+<h3>Convert Dollar Amounts from Text to Numbers<a href="open-refine.html#convert-dollar-amounts-from-text-to-numbers" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Once your project is created, you will see the first 10 rows of the dataset.
 You can change it to 5, 10, 25, or 50 by clicking the appropriate number in the header</p>
 <p>Each column header has its own menu, which you can select by clicking its arrow-down button.
@@ -440,7 +439,7 @@ Left-aligned numbers in a column are likely represented as text, as is our case 
 <li>To transform text into numbers, select the <em>FundingAmount</em> column menu, and go to <em>Edit cells &gt; Common transforms &gt; To number</em>, as shown in Figure <a href="open-refine.html#fig:openrefine-edit-common">4.17</a>.</li>
 </ol>
 
-<div class="figure"><span id="fig:openrefine-edit-common"></span>
+<div class="figure"><span style="display:block;" id="fig:openrefine-edit-common"></span>
 <img src="images/04-clean/openrefine-edit-common.png" alt="In the FundingAmount column menu, select Edit cells - Common transforms - To number." width="450" />
 <p class="caption">
 Figure 4.17: In the <em>FundingAmount</em> column menu, select <em>Edit cells - Common transforms - To number</em>.
@@ -452,7 +451,7 @@ Figure 4.17: In the <em>FundingAmount</em> column menu, select <em>Edit cells - 
 disappear in the preview window, as shown in Figure <a href="open-refine.html#fig:openrefine-edit-expression">4.18</a>. When you confirm your formula has no syntax errors, click <em>OK</em></li>
 </ol>
 
-<div class="figure"><span id="fig:openrefine-edit-expression"></span>
+<div class="figure"><span style="display:block;" id="fig:openrefine-edit-expression"></span>
 <img src="images/04-clean/openrefine-edit-expression.png" alt="Type the expression into the screen, preview the change, and confirm that there are no syntax errors."  />
 <p class="caption">
 Figure 4.18: Type the expression into the screen, preview the change, and confirm that there are no syntax errors.
@@ -466,7 +465,7 @@ are once again left-aligned and in black. Perform step 1 again. This time, nearl
 <li><p>To fix the remaining non-numeric black cells, we need to remove spaces and an <code>a</code> character at the end of one number. Fix these manually by hovering over a cell, click the <em>Edit</em> button, and in the new popup window, change <em>Data type</em> to <em>number</em>, and press <em>Apply</em>, as shown in Figure <a href="open-refine.html#fig:openrefine-manual-edit">4.19</a>.</p></li>
 </ol>
 
-<div class="figure"><span id="fig:openrefine-manual-edit"></span>
+<div class="figure"><span style="display:block;" id="fig:openrefine-manual-edit"></span>
 <img src="images/04-clean/openrefine-manual-edit-combined.png" alt="Manually edit to remove spaces and extra characters, and change data type to number." width="550" />
 <p class="caption">
 Figure 4.19: Manually edit to remove spaces and extra characters, and change data type to number.
@@ -475,8 +474,8 @@ Figure 4.19: Manually edit to remove spaces and extra characters, and change dat
 <p>At this point, all funding amounts should be clean numbers, right-aligned and colored in green.
 We’re ready to move on to the <em>Country</em> column and fix different spellings of Koreas.</p>
 </div>
-<div id="cluster-similar-spellings" class="section level3 unnumbered">
-<h3>Cluster Similar Spellings</h3>
+<div id="cluster-similar-spellings" class="section level3 unnumbered hasAnchor">
+<h3>Cluster Similar Spellings<a href="open-refine.html#cluster-similar-spellings" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>When you combine different data sources, or process survey data where respondents
 wrote down their answers as opposed to selecting them from a dropdown menu, you might end up
 with multiple spellings of the same word (town name, education level – you name it!).
@@ -492,7 +491,7 @@ and choose <em>Edit cells &gt; Cluster and edit</em>. You will see a window like
 <a href="open-refine.html#fig:openrefine-cluster">4.20</a>.</li>
 </ol>
 
-<div class="figure"><span id="fig:openrefine-cluster"></span>
+<div class="figure"><span style="display:block;" id="fig:openrefine-cluster"></span>
 <img src="images/04-clean/openrefine-cluster-annotated.png" alt="Cluster similar text values."  />
 <p class="caption">
 Figure 4.20: Cluster similar text values.
@@ -519,8 +518,8 @@ You can choose your format (we recommend CSV, or comma-separated value).
 Now you have a clean dataset that is ready to be analyzed and visualized.</li>
 </ol>
 </div>
-<div id="summary4" class="section level3 unnumbered">
-<h3>Summary</h3>
+<div id="summary4" class="section level3 unnumbered hasAnchor">
+<h3>Summary<a href="open-refine.html#summary4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>In this chapter, we looked at cleaning up tables in Google Sheets,
 liberating tabular data trapped in PDFs using Tabula, and using
 OpenRefine to clean up very messy datasets.
@@ -585,7 +584,6 @@ In the following chapter, we’ll talk about why you should normalize data and u
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -625,15 +623,32 @@ gitbook.start({
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
-},
-"search": true
+}
 });
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

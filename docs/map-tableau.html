@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Choropleth Map with Tableau Public | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Choropleth Map with Tableau Public | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io//images/cover-400wide.jpg" />
   <meta property="og:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="github-repo" content="handsondataviz/book" />
@@ -25,7 +24,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2022-04-04" />
+<meta name="date" content="2022-07-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,8 +33,8 @@
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="choropleth-datawrapper.html"/>
 <link rel="next" href="map-socrata.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -51,9 +50,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -336,7 +335,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
 <li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
-<li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
+<li class="chapter" data-level="" data-path="style-guide.html"><a href="style-guide.html"><i class="fa fa-check"></i>Style Guide for <em>Hands-On Data Visualization</em></a></li>
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
 <li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
 <li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
@@ -376,15 +375,15 @@ div.csl-indent {
   </p>
 
 </header>
-<div id="map-tableau" class="section level2 unnumbered">
-<h2>Choropleth Map with Tableau Public</h2>
+<div id="map-tableau" class="section level2 unnumbered hasAnchor">
+<h2>Choropleth Map with Tableau Public<a href="map-tableau.html#map-tableau" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We first introduced you to the free Tableau Public desktop application (for Mac or Windows) when building <a href="scatter-tableau.html">scatter charts</a> and <a href="filtered-line-tableau.html">filtered line charts</a> in Chapter 6. Now let’s use the same tool to create an interactive choropleth map, and compare the process with the Datawrapper tool we learned in the prior section. We’re showing you how to create the same type of map with both tools, in order to show you the difference. On one hand, Datawrapper gives you more control over interpolating data and shaping the appearance of color intervals in your choropleth map. On the other hand, some people prefer Tableau Public because they’re already familiar with its interface.</p>
 <p>Tableau Public can create many different types of map for geographical place names or ISO codes it already recognizes, such as nations, states, counties, and airports. But Tableau Public cannot geocode street addresses by itself, so you’ll need to obtain their latitude and longitude with another tool, such as those described in the <a href="geocode.html">geocode section of Chapter 2</a>. Furthermore, if you want to upload customized map boundaries, learn how to <a href="https://help.tableau.com/current/pro/desktop/en-us/maps_shapefiles.htm">Create Tableau Maps from Spatial Files</a>
 on the support page.</p>
 <p>In this section, we will create a choropleth map of healthcare spending per country as a percentage of their gross domestic product (GDP), as shown in Figure <a href="map-tableau.html#fig:tableau-polygon-final">7.52</a>. Remember that choropleth maps work best when we <a href="normalize-choropleth.html">normalize the data</a> to show relative, rather than absolute, numbers. Creating a map of total health spending per country would not be very meaningful, as larger nations tend to have larger economies, so we’ll base our map on the percentage of their economy that is spent on healthcare.</p>
 
-<div class="figure"><span id="fig:tableau-polygon-final"></span>
-<iframe src="https://public.tableau.com/views/2017HealthcareSpendingbyCountryasofGDP/Dashboard1?:showVizHome=no&amp;:embed=true" width="672" height="500px">
+<div class="figure"><span style="display:block;" id="fig:tableau-polygon-final"></span>
+<iframe src="https://public.tableau.com/views/2017HealthcareSpendingbyCountryasofGDP/Dashboard1?:showVizHome=no&amp;:embed=true" width="672" height="500px" data-external="1">
 </iframe>
 <p class="caption">
 Figure 7.52: Choropleth map of healthcare spending with Tableau Public. Explore the <a href="https://public.tableau.com/profile/ilya7257#!/vizhome/2017HealthcareSpendingbyCountryasofGDP/Dashboard1">interactive version</a>. Data from the World Bank.
@@ -400,7 +399,7 @@ Figure 7.52: Choropleth map of healthcare spending with Tableau Public. Explore 
 <li><p>If you have not already done so, <a href="https://public.tableau.com/s/#modal-signup">create a free Tableau Public profile page</a>, or <a href="https://public.tableau.com">click the <em>Sign In</em> button to access your existing profile</a>, then click the <em>Create a Viz</em> button in your browser, as shown in Figure <a href="map-tableau.html#fig:tableau-create-viz">7.53</a>.</p></li>
 </ol>
 
-<div class="figure"><span id="fig:tableau-create-viz"></span>
+<div class="figure"><span style="display:block;" id="fig:tableau-create-viz"></span>
 <img src="images/07-map/tableau-create-viz.png" alt="Click the Create a Viz button when logged into your Tableau Public profile page." width="500" />
 <p class="caption">
 Figure 7.53: Click the <em>Create a Viz</em> button when logged into your Tableau Public profile page.
@@ -412,7 +411,7 @@ Figure 7.53: Click the <em>Create a Viz</em> button when logged into your Tablea
 </ol>
 <p>Tip: Tableau Public also lets you access data directly from external servers using its <em>Connectors</em> menu. So instead of downloading a CSV file in step 2, you could have linked directly to a Google Sheet in your Google Drive, but doing this requires a few extra steps to grant permission.</p>
 
-<div class="figure"><span id="fig:tableau-connect-data"></span>
+<div class="figure"><span style="display:block;" id="fig:tableau-connect-data"></span>
 <img src="images/07-map/tableau-connect-data.png" alt="In the Connect to Data window, upload your CSV file." width="600" />
 <p class="caption">
 Figure 7.54: In the <em>Connect to Data</em> window, upload your CSV file.
@@ -422,7 +421,7 @@ Figure 7.54: In the <em>Connect to Data</em> window, upload your CSV file.
 <li>After you import data, Tableau Public automatically advances to display <em>Sheet 1</em> of your <em>New Workbook</em> in your browser, with individual tables listed in the left menu, as shown in Figure <a href="map-tableau.html#fig:tableau-sheet">7.55</a>.</li>
 </ol>
 
-<div class="figure"><span id="fig:tableau-sheet"></span>
+<div class="figure"><span style="display:block;" id="fig:tableau-sheet"></span>
 <img src="images/07-map/tableau-sheet.png" alt="Tableau Public has uploaded your data into the left menu Tables menu in Sheet 1."  />
 <p class="caption">
 Figure 7.55: Tableau Public has uploaded your data into the left menu <em>Tables</em> menu in <em>Sheet 1</em>.
@@ -430,7 +429,7 @@ Figure 7.55: Tableau Public has uploaded your data into the left menu <em>Tables
 </div>
 <p>Tip: Notice that a small globe icon appears next to Country Name and Country Code, which shows that Tableau Public successfully recognized these as geographic data, rather than string or text data. If Tableau does not automatically recognize your geographic data, you will need to manually change the data type. To do so, click the data type icon (e.g. globe or a green <code>#</code> for numeric values), and then choose <em>Geographic Role &gt; Country/Region</em> as shown in Figure <a href="map-tableau.html#fig:tableau-data-geographic">7.56</a>. Also, you can inspect your data upload in the <em>Data Source</em> tab.</p>
 
-<div class="figure"><span id="fig:tableau-data-geographic"></span>
+<div class="figure"><span style="display:block;" id="fig:tableau-data-geographic"></span>
 <img src="images/07-map/tableau-data-geographic.png" alt="Make sure Tableau Public knows that the Country Name column contains geographic data." width="400" />
 <p class="caption">
 Figure 7.56: Make sure Tableau Public knows that the Country Name column contains geographic data.
@@ -440,7 +439,7 @@ Figure 7.56: Make sure Tableau Public knows that the Country Name column contain
 <li>In <em>Sheet 1</em>, create your choropleth map using a two-step process, as shown in Figure <a href="map-tableau.html#fig:tableau-drag">7.57</a>. First, drag-and-drop the <em>Country Name</em> field into the middle of the worksheet (alternatively to the Detail box of the Marks card) to create the map. The default view is the symbol map, which we need to replace with a polygon map. To add colored polygons, drag-and-drop the <em>Health Spending As % of GDP</em> field into the <em>Color</em> box of the <em>Marks</em> card to transform it into a choropleth map.</li>
 </ol>
 
-<div class="figure"><span id="fig:tableau-drag"></span>
+<div class="figure"><span style="display:block;" id="fig:tableau-drag"></span>
 <img src="images/07-map/tableau-drag-annotated.png" alt="Drag and drop Country Name to the center of the sheet, then Health Spending As % of GDP to the Color box in the Marks card."  />
 <p class="caption">
 Figure 7.57: Drag and drop <em>Country Name</em> to the center of the sheet, then <em>Health Spending As % of GDP</em> to the <em>Color</em> box in the <em>Marks</em> card.
@@ -453,7 +452,7 @@ then <em>Edit colors</em>. Change the palette to <em>Green</em>, and change it f
 as shown in Figure <a href="map-tableau.html#fig:tableau-polygon-color">7.58</a>.</li>
 </ol>
 
-<div class="figure"><span id="fig:tableau-polygon-color"></span>
+<div class="figure"><span style="display:block;" id="fig:tableau-polygon-color"></span>
 <img src="images/07-map/tableau-polygon-color.png" alt="Change the color scheme to Green with 5 steps." width="400" />
 <p class="caption">
 Figure 7.58: Change the color scheme to Green with 5 steps.
@@ -463,7 +462,7 @@ Figure 7.58: Change the color scheme to Green with 5 steps.
 <li>When you hover over countries, you will notice a tooltip that tells you the name of the country and gives you the percent value. It is generally well-formatted as our initial data table had proper column headers. But we can make the tooltip even better. Click the Tooltip box of the Marks card, change the first instance of <code>Country Name</code> to just <code>Country</code> (do not change the text inside <code>&lt;</code> and <code>&gt;</code> as these are variable names), and add a <code>%</code> sign at the end of the second line, as shown in Figure <a href="map-tableau.html#fig:tableau-polygon-tooltip">7.59</a>.</li>
 </ol>
 
-<div class="figure"><span id="fig:tableau-polygon-tooltip"></span>
+<div class="figure"><span style="display:block;" id="fig:tableau-polygon-tooltip"></span>
 <img src="images/07-map/tableau-polygon-tooltip.png" alt="Change tooltip text to make it more user-friendly." width="400" />
 <p class="caption">
 Figure 7.59: Change tooltip text to make it more user-friendly.
@@ -476,7 +475,7 @@ to bring up the <em>Edit Title</em> window, and change the name of your chart to
 <li><p>At this point the data is loaded and should be displayed correctly, so we are going to create the final layout that includes map’s title and credits, the legend, and is appropriate for sharing. At the bottom-left of the program, create a <em>New Dashboard</em>, as shown in Figure <a href="map-tableau.html#fig:tableau-dashboard-create">7.60</a>. Dashboards in Tableau are layouts that can contain visualizations from multiple sheets, as well as text boxes, images, and other elements, creating rich exploratory interfaces. In this tutorial, we will stick to just a single sheet that contains our choropleth map.</p></li>
 </ol>
 
-<div class="figure"><span id="fig:tableau-dashboard-create"></span>
+<div class="figure"><span style="display:block;" id="fig:tableau-dashboard-create"></span>
 <img src="images/07-map/tableau-dashboard-create-annotated.png" alt="Before you publish the map, create a new dashboard to finalize your layout." width="400" />
 <p class="caption">
 Figure 7.60: Before you publish the map, create a new dashboard to finalize your layout.
@@ -486,7 +485,7 @@ Figure 7.60: Before you publish the map, create a new dashboard to finalize your
 <li>In your Dashboard 1 tab, change the size of the dashboard to Automatic so that the map is responsive and occupies 100% of the width on all devices. Drag and drop Sheet 1 to the <em>Add sheets here</em> area, as shown in Figure <a href="map-tableau.html#fig:tableau-dashboard">7.61</a>. This will copy the map, the title, and the legend from Sheet 1.</li>
 </ol>
 
-<div class="figure"><span id="fig:tableau-dashboard"></span>
+<div class="figure"><span style="display:block;" id="fig:tableau-dashboard"></span>
 <img src="images/07-map/tableau-dashboard-annotated.png" alt="To create a responsive dashboard, change the Size to Automatic." width="400" />
 <p class="caption">
 Figure 7.61: To create a responsive dashboard, change the Size to Automatic.
@@ -496,7 +495,7 @@ Figure 7.61: To create a responsive dashboard, change the Size to Automatic.
 <li>Right-click the upper part of the map legend, and select <em>Floating</em>, as shown in Figure <a href="map-tableau.html#fig:tableau-dashboard-legend">7.62</a>. Now you are able to place your legend directly on top of the map to save space. Drag and drop it to one of the map’s corners.</li>
 </ol>
 
-<div class="figure"><span id="fig:tableau-dashboard-legend"></span>
+<div class="figure"><span style="display:block;" id="fig:tableau-dashboard-legend"></span>
 <img src="images/07-map/tableau-dashboard-legend.png" alt="To place the legend on top of the map, make sure it is floating." width="400" />
 <p class="caption">
 Figure 7.62: To place the legend on top of the map, make sure it is floating.
@@ -560,7 +559,6 @@ Figure 7.62: To place the legend on top of the map, make sure it is floating.
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -600,15 +598,32 @@ gitbook.start({
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
-},
-"search": true
+}
 });
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>- Bar and Column Charts | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="- Bar and Column Charts | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io//images/cover-400wide.jpg" />
   <meta property="og:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="github-repo" content="handsondataviz/book" />
@@ -25,7 +24,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2022-04-04" />
+<meta name="date" content="2022-07-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,8 +33,8 @@
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="chart-google.html"/>
 <link rel="next" href="histogram-google.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -51,9 +50,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -336,7 +335,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
 <li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
-<li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
+<li class="chapter" data-level="" data-path="style-guide.html"><a href="style-guide.html"><i class="fa fa-check"></i>Style Guide for <em>Hands-On Data Visualization</em></a></li>
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
 <li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
 <li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
@@ -376,22 +375,22 @@ div.csl-indent {
   </p>
 
 </header>
-<div id="bar-column-google" class="section level2 unnumbered">
-<h2>- Bar and Column Charts</h2>
+<div id="bar-column-google" class="section level2 unnumbered hasAnchor">
+<h2>- Bar and Column Charts<a href="bar-column-google.html#bar-column-google" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Before you begin, be sure to review the <a href="chart-google.html">pros and cons of designing charts with Google Sheets in the prior section</a>. In this section, you’ll learn how to create bar and column charts, the most common visualization methods to compare values across categories. We’ll focus on why and how to create three different types: grouped, split, and stacked. For all of these, we blend the instructions for bar and column charts because they’re essentially the same, though oriented in different directions. If your data contains long labels, create a horizontal bar chart, instead of a vertical column chart, to give them more space for readability.</p>
-<div id="grouped-bar-and-column-charts" class="section level3 unnumbered">
-<h3>Grouped Bar and Column Charts</h3>
+<div id="grouped-bar-and-column-charts" class="section level3 unnumbered hasAnchor">
+<h3>Grouped Bar and Column Charts<a href="bar-column-google.html#grouped-bar-and-column-charts" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>A grouped bar or column chart is best to compare categories side-by-side. For example, if you wish to emphasize gender differences in obesity across age brackets, then format the male and female data series together in vertical columns in your Google Sheet, as shown in Figure <a href="bar-column-google.html#fig:column-grouped-data">6.12</a>. Now you can easily create a grouped column chart to displays these data series side-by-side, as shown in Figure <a href="bar-column-google.html#fig:column-grouped">6.13</a>.</p>
 
-<div class="figure"><span id="fig:column-grouped-data"></span>
+<div class="figure"><span style="display:block;" id="fig:column-grouped-data"></span>
 <img src="images/06-chart/column-grouped-data.png" alt="To create a grouped bar or column chart, format each data series vertically in Google Sheets." width="400" />
 <p class="caption">
 Figure 6.12: To create a grouped bar or column chart, format each data series vertically in Google Sheets.
 </p>
 </div>
 
-<div class="figure"><span id="fig:column-grouped"></span>
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o4UR8OJXSxBWvUK531t5vYubt39gecV9yLIfic89DCeJnGNvpRttFfKzn/pubchart?oid=787918829&amp;amp;format=interactive" width="672" height="400px">
+<div class="figure"><span style="display:block;" id="fig:column-grouped"></span>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o4UR8OJXSxBWvUK531t5vYubt39gecV9yLIfic89DCeJnGNvpRttFfKzn/pubchart?oid=787918829&amp;amp;format=interactive" width="672" height="400px" data-external="1">
 </iframe>
 <p class="caption">
 Figure 6.13: Grouped Column chart: Explore the <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o4UR8OJXSxBWvUK531t5vYubt39gecV9yLIfic89DCeJnGNvpRttFfKzn/pubchart?oid=787918829&amp;format=interactive">interactive version</a>. Data from <a href="https://stateofchildhoodobesity.org/monitor/">NHANES / State of Childhood Obesity, 2017-18</a>.
@@ -402,7 +401,7 @@ Figure 6.13: Grouped Column chart: Explore the <a href="https://docs.google.com/
 <li>Open our <a href="https://docs.google.com/spreadsheets/d/1ltA9siijVSDkTE3fzB3UaWHO7dotBIrGH4R9wI_Qyqw/">Grouped Column chart template in Google Sheets</a> with US obesity data by gender and age. Sign in to your account, and go to <em>File &gt; Make a Copy</em> to save a version you can edit to your own Google Drive, as shown in Figure <a href="bar-column-google.html#fig:file-make-copy2">6.14</a>.</li>
 </ol>
 
-<div class="figure"><span id="fig:file-make-copy2"></span>
+<div class="figure"><span style="display:block;" id="fig:file-make-copy2"></span>
 <img src="images/06-chart/file-make-copy2.png" alt="Make your own copy of the Google Sheet template." width="250px" />
 <p class="caption">
 Figure 6.14: Make your own copy of the Google Sheet template.
@@ -412,7 +411,7 @@ Figure 6.14: Make your own copy of the Google Sheet template.
 <li>To remove the current chart from your copy of the spreadsheet, float your cursor to the top-right corner of the chart to make the three-dot kebab menu appear, and select <em>Delete</em>, as shown in Figure <a href="bar-column-google.html#fig:delete-chart">6.15</a>.</li>
 </ol>
 
-<div class="figure"><span id="fig:delete-chart"></span>
+<div class="figure"><span style="display:block;" id="fig:delete-chart"></span>
 <img src="images/06-chart/delete-chart.png" alt="Float cursor in top-right corner of the chart to make the three-dot kebab menu appear, and select Delete." width="180px" />
 <p class="caption">
 Figure 6.15: Float cursor in top-right corner of the chart to make the three-dot kebab menu appear, and select Delete.
@@ -423,7 +422,7 @@ Figure 6.15: Float cursor in top-right corner of the chart to make the three-dot
 <li><p>Use your cursor to select only the data you wish to chart, then go to the <em>Insert</em> menu and select <em>Chart</em>, as shown in Figure <a href="bar-column-google.html#fig:column-grouped-insert">6.16</a>.</p></li>
 </ol>
 
-<div class="figure"><span id="fig:column-grouped-insert"></span>
+<div class="figure"><span style="display:block;" id="fig:column-grouped-insert"></span>
 <img src="images/06-chart/column-grouped-insert.png" alt="Select your data and Insert the Chart." width="250px" />
 <p class="caption">
 Figure 6.16: Select your data and Insert the Chart.
@@ -433,7 +432,7 @@ Figure 6.16: Select your data and Insert the Chart.
 <li>In the Chart Editor, change the default selection to <em>Column chart</em>, with <em>Stacking none</em>, to display Grouped Columns, as shown in Figure <a href="bar-column-google.html#fig:column-grouped-editor">6.17</a>. Or select <em>Horizontal bar chart</em> if you have longer labels.</li>
 </ol>
 
-<div class="figure"><span id="fig:column-grouped-editor"></span>
+<div class="figure"><span style="display:block;" id="fig:column-grouped-editor"></span>
 <img src="images/06-chart/column-grouped-editor.png" alt="Change the default to Column chart, with Stacking none." width="250px" />
 <p class="caption">
 Figure 6.17: Change the default to Column chart, with Stacking none.
@@ -443,7 +442,7 @@ Figure 6.17: Change the default to Column chart, with Stacking none.
 <li>To customize title, labels, and more, in the Chart Editor select <em>Customize</em>, as shown in Figure <a href="bar-column-google.html#fig:chart-editor-customize">6.18</a>. Also, you can select the chart and axis titles to edit them.</li>
 </ol>
 
-<div class="figure"><span id="fig:chart-editor-customize"></span>
+<div class="figure"><span style="display:block;" id="fig:chart-editor-customize"></span>
 <img src="images/06-chart/chart-editor-customize.png" alt="Select Customize to edit title, labels, and more." width="250px" />
 <p class="caption">
 Figure 6.18: Select Customize to edit title, labels, and more.
@@ -453,7 +452,7 @@ Figure 6.18: Select Customize to edit title, labels, and more.
 <li>To make your data public, go to the upper-right corner of your sheet to click the Share button, and in the next screen, click the words “Change to anyone with the link,” as shown in Figure <a href="bar-column-google.html#fig:share-button-sheet">6.19</a>. This means your sheet is no longer Restricted to only you, but can be viewed by anyone with the link. See additional options.</li>
 </ol>
 
-<div class="figure"><span id="fig:share-button-sheet"></span>
+<div class="figure"><span style="display:block;" id="fig:share-button-sheet"></span>
 <img src="images/06-chart/share-button-sheet-annotated.png" alt="Click the Share button and then click Change to anyone with the link to make your data public." width="350px" />
 <p class="caption">
 Figure 6.19: Click the Share button and then click <em>Change to anyone with the link</em> to make your data public.
@@ -463,7 +462,7 @@ Figure 6.19: Click the Share button and then click <em>Change to anyone with the
 <li>To embed an interactive version of your chart in another web page, click the kebab menu in the upper-right corner of your chart, and select Publish Chart, as shown in Figure <a href="bar-column-google.html#fig:chart-publish">6.20</a>. In the next screen, select Embed and press the Publish button. See <a href="embed.html">Chapter 9: Embed on the Web</a> to learn what to do with the iframe code.</li>
 </ol>
 
-<div class="figure"><span id="fig:chart-publish"></span>
+<div class="figure"><span style="display:block;" id="fig:chart-publish"></span>
 <img src="images/06-chart/chart-publish.png" alt="Select Publish Chart to embed an interactive chart on another web page." width="150" />
 <p class="caption">
 Figure 6.20: Select Publish Chart to embed an interactive chart on another web page.
@@ -472,7 +471,7 @@ Figure 6.20: Select Publish Chart to embed an interactive chart on another web p
 <p>Unfortunately Google Sheets functionality is very limited when it comes to displaying error bars or uncertainty.
 You can only assign either constant numbers or percent values as error bar values to an individual series, not to specific data points. If you wish to display error bars in Google Sheets, in <em>Chart editor</em>, select <em>Customize</em> tab, scroll down to <em>Series</em>, and select a series from the dropdown menu. Check <em>Error bars</em>, and customize its value as either percent or a constant value, as shown in Figure <a href="bar-column-google.html#fig:chart-error-bar">6.21</a>. This setting will be applied to all data points in that series.</p>
 
-<div class="figure"><span id="fig:chart-error-bar"></span>
+<div class="figure"><span style="display:block;" id="fig:chart-error-bar"></span>
 <img src="images/06-chart/chart-error-bar.png" alt="Google Sheets has limited settings to create error bars." width="300" />
 <p class="caption">
 Figure 6.21: Google Sheets has limited settings to create error bars.
@@ -480,19 +479,19 @@ Figure 6.21: Google Sheets has limited settings to create error bars.
 </div>
 <p>Finally, remember that providing your data source adds credibility to your work. You can briefly describe the source in a chart subtitle in Google Sheets. But there is no easy way to insert a clickable link in your chart, so you would need to add more details or links in the separate web page that contains your embedded interactive chart.</p>
 </div>
-<div id="split-bar-and-column-charts" class="section level3 unnumbered">
-<h3>Split Bar and Column Charts</h3>
+<div id="split-bar-and-column-charts" class="section level3 unnumbered hasAnchor">
+<h3>Split Bar and Column Charts<a href="bar-column-google.html#split-bar-and-column-charts" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>A split column (or bar) chart is best to compare categories in separate clusters. For example, imagine you wish to emphasize calorie counts for selected foods offered at two different restaurants, Starbucks and McDonalds. Format the restaurant data in vertical columns in your Google Sheet, as shown in Figure <a href="bar-column-google.html#fig:bar-split-data">6.22</a>. Since food items are unique to each restaurant, only enter calorie data in the appropriate column, and leave other cells blank. Now you can easily create a split bar (or column) chart that displays the restaurant data in different clusters, as shown in Figure <a href="bar-column-google.html#fig:bar-split">6.23</a>. Unlike the grouped column chart previously shown in Figure <a href="bar-column-google.html#fig:column-grouped">6.13</a>, here the bars are separated from each other, because we do not wish to draw comparisons between food items that are unique to each restaurant. Also, our chart displays horizontal bars (not columns) because our some data labels are long.</p>
 
-<div class="figure"><span id="fig:bar-split-data"></span>
+<div class="figure"><span style="display:block;" id="fig:bar-split-data"></span>
 <img src="images/06-chart/bar-split-data.png" alt="To create a split bar (or column) chart, format each data series vertically, and leave cells blank where appropriate." width="550" />
 <p class="caption">
 Figure 6.22: To create a split bar (or column) chart, format each data series vertically, and leave cells blank where appropriate.
 </p>
 </div>
 
-<div class="figure"><span id="fig:bar-split"></span>
-<iframe src="https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/pubchart?oid=1270431574&amp;amp;format=interactive" width="672" height="400px">
+<div class="figure"><span style="display:block;" id="fig:bar-split"></span>
+<iframe src="https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/pubchart?oid=1270431574&amp;amp;format=interactive" width="672" height="400px" data-external="1">
 </iframe>
 <p class="caption">
 Figure 6.23: Split bar chart: Explore the <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o4UR8OJXSxBWvUK531t5vYubt39gecV9yLIfic89DCeJnGNvpRttFfKzn/pubchart?oid=787918829&amp;format=interactive">full-screen interactive version</a>. Data from <a href="https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/edit#gid=956322126">Starbucks and McDonalds</a>.
@@ -500,19 +499,19 @@ Figure 6.23: Split bar chart: Explore the <a href="https://docs.google.com/sprea
 </div>
 <p>Create your own version using our <a href="https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/">Split Bar Chart in Google Sheets template</a> with Starbucks and McDonalds data. Organize each data series vertically so that it becomes its own color in the chart. Leave cells blank when no direct comparisons are appropriate. The remainder of the steps are similar to the grouped column chart tutorial above.</p>
 </div>
-<div id="stacked-bar-and-column-charts" class="section level3 unnumbered">
-<h3>Stacked Bar and Column Charts</h3>
+<div id="stacked-bar-and-column-charts" class="section level3 unnumbered hasAnchor">
+<h3>Stacked Bar and Column Charts<a href="bar-column-google.html#stacked-bar-and-column-charts" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Stacked column (or bar) charts are best to compare subcategories, or parts of a whole. For example, if you wish to compare the percentage of overweight residents across nations, format each weight-level data series in vertical columns in your Google Sheet, as shown in Figure <a href="bar-column-google.html#fig:column-stacked-data">6.24</a>. Now you can easily create a stacked column (or bar) chart that displays comparisons of weight-level subcategories across nations, as shown in Figure <a href="bar-column-google.html#fig:column-stacked">6.25</a>. Often it’s better to use a stacked chart instead of multiple pie charts, because people can see differences more precisely in rectangular stacks than in circular pie slices.</p>
 
-<div class="figure"><span id="fig:column-stacked-data"></span>
+<div class="figure"><span style="display:block;" id="fig:column-stacked-data"></span>
 <img src="images/06-chart/column-stacked-data.png" alt="To create a stacked column (or bar) chart, format each data series vertically in Google Sheets." width="450" />
 <p class="caption">
 Figure 6.24: To create a stacked column (or bar) chart, format each data series vertically in Google Sheets.
 </p>
 </div>
 
-<div class="figure"><span id="fig:column-stacked"></span>
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSZrCP99EDqmpYc3VxFF5-Fpryh7KOU3GZ39Gl33OmDw4ecWKXxjrfzHDeQKfandKiUwvDkyF6kwK6L/pubchart?oid=307057605&amp;amp;format=interactive" width="672" height="400px">
+<div class="figure"><span style="display:block;" id="fig:column-stacked"></span>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSZrCP99EDqmpYc3VxFF5-Fpryh7KOU3GZ39Gl33OmDw4ecWKXxjrfzHDeQKfandKiUwvDkyF6kwK6L/pubchart?oid=307057605&amp;amp;format=interactive" width="672" height="400px" data-external="1">
 </iframe>
 <p class="caption">
 Figure 6.25: Stacked column chart: Explore the <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSZrCP99EDqmpYc3VxFF5-Fpryh7KOU3GZ39Gl33OmDw4ecWKXxjrfzHDeQKfandKiUwvDkyF6kwK6L/pubchart?oid=307057605&amp;format=interactive">interactive version</a>. Data from <a href="https://docs.google.com/spreadsheets/d/1WS11EK33JCmvCRzSDh9UpP6R7Z2sHglF7ve5iJL6eZk/edit#gid=735710691">WHO and CDC</a>.
@@ -521,7 +520,7 @@ Figure 6.25: Stacked column chart: Explore the <a href="https://docs.google.com/
 <p>Create your own version using our <a href="https://docs.google.com/spreadsheets/d/1WS11EK33JCmvCRzSDh9UpP6R7Z2sHglF7ve5iJL6eZk/">Stacked Column Chart in Google Sheets template</a> with international weight-level data. Organize each data series vertically so that it becomes its own color in the chart. In the Chart Editor window, choose <em>Chart Type &gt; Stacked column chart</em> (or choose <em>Stacked bar chart</em> if you have long data labels). The rest of the steps are similar to the ones above.</p>
 <p>To change the color of a data series (for example, to show Overweight category in red), click the kebab menu in the top-right corner of the chart, then go to <em>Edit Chart &gt; Customize &gt; Series</em>. Then choose the appropriate series from the dropdown menu, and set its color in the dropdown menu, as shown in Figure <a href="bar-column-google.html#fig:column-stacked-edit-series">6.26</a>.</p>
 
-<div class="figure"><span id="fig:column-stacked-edit-series"></span>
+<div class="figure"><span style="display:block;" id="fig:column-stacked-edit-series"></span>
 <img src="images/06-chart/column-stacked-edit-series.png" alt="To edit a column color, select Edit Chart - Customize - Series." width="450" />
 <p class="caption">
 Figure 6.26: To edit a column color, select <em>Edit Chart - Customize - Series</em>.
@@ -579,7 +578,6 @@ Figure 6.26: To edit a column color, select <em>Edit Chart - Customize - Series<
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -619,15 +617,32 @@ gitbook.start({
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
-},
-"search": true
+}
 });
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

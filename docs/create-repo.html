@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Create a New Repo and Upload Files on GitHub | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Create a New Repo and Upload Files on GitHub | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io//images/cover-400wide.jpg" />
   <meta property="og:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="github-repo" content="handsondataviz/book" />
@@ -25,7 +24,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2022-04-04" />
+<meta name="date" content="2022-07-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,8 +33,8 @@
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="gh-pages-link-to-iframe.html"/>
 <link rel="next" href="github-desktop-atom.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -51,9 +50,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -336,7 +335,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
 <li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
-<li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
+<li class="chapter" data-level="" data-path="style-guide.html"><a href="style-guide.html"><i class="fa fa-check"></i>Style Guide for <em>Hands-On Data Visualization</em></a></li>
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
 <li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
 <li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
@@ -376,8 +375,8 @@ div.csl-indent {
   </p>
 
 </header>
-<div id="create-repo" class="section level2 unnumbered">
-<h2>Create a New Repo and Upload Files on GitHub</h2>
+<div id="create-repo" class="section level2 unnumbered hasAnchor">
+<h2>Create a New Repo and Upload Files on GitHub<a href="create-repo.html#create-repo" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Now that you’ve made a copy of our GitHub template, the next step is to learn how to create a brand-new repo and upload files. These skills will be helpful for several scenarios. First, if you have to fork a repo, which GitHub allows you to do only one time, this method will allow you to create additional copies. Second, you’ll need to upload some of your own files when creating data visualizations using <a href="chartcode.html">Chart.js and Highcharts templates in Chapter 11</a> and <a href="leaflet.html">Leaflet map templates in Chapter 12</a>. Once again, we’ll demonstrate how to do all of these steps in GitHub’s beginner-level browser interface, but see the next section on <a href="github-desktop-atom.html">GitHub Desktop</a> for an intermediate-level interface that’s more efficient for working with code templates.</p>
 <p>In the previous section, you created a copy of our GitHub repo with the <em>Use this template</em> button, and we intentionally set up our repos with this newer feature because it allows the user to make <em>multiple</em> copies and assign each one a different name. Many other GitHub repos do not include a <em>Template</em> button, so to copy those you’ll need to click the <em>Fork</em> button, which automatically generates a copy with the same repo name as the original. But what if you wish to fork someone’s repo a second time? GitHub prevents you from creating a second fork to avoid violating one of its important rules: every repo in your account must have a unique name, to avoid overwriting and erasing your work.</p>
 <p>So how do you make a second fork of a GitHub repo, if there’s no <em>Use this template</em> button? Follow our recommended workaround that’s summarized in these three steps:</p>
@@ -390,7 +389,7 @@ div.csl-indent {
 <li>Click on the <em>Code &gt; Download Zip</em> drop-down menu button on any repo, as shown in Figure <a href="create-repo.html#fig:repo-code-download">10.12</a>. Your browser will download a zipped compressed folder with the contents of the repo to your local computer, and it may ask you where you wish to save it. Decide on a location and click OK.</li>
 </ol>
 
-<div class="figure"><span id="fig:repo-code-download"></span>
+<div class="figure"><span style="display:block;" id="fig:repo-code-download"></span>
 <img src="images/10-github/repo-code-download.png" alt="Click Code and select Download Zip to create a compressed folder of a repo on your computer." width="350" />
 <p class="caption">
 Figure 10.12: Click <em>Code</em> and select <em>Download Zip</em> to create a compressed folder of a repo on your computer.
@@ -401,7 +400,7 @@ Figure 10.12: Click <em>Code</em> and select <em>Download Zip</em> to create a c
 <li><p>Go back to your GitHub account in your web browser, click on the plus (+) symbol in the upper-right corner of your account, and select <em>New repository</em>, as shown in Figure <a href="create-repo.html#fig:repo-create-new">10.13</a>.</p></li>
 </ol>
 
-<div class="figure"><span id="fig:repo-create-new"></span>
+<div class="figure"><span style="display:block;" id="fig:repo-create-new"></span>
 <img src="images/10-github/repo-create-new.png" alt="Click the plus (+) symbol in upper-right corner to create a new repo." width="300" />
 <p class="caption">
 Figure 10.13: Click the plus (+) symbol in upper-right corner to create a new repo.
@@ -413,7 +412,7 @@ Figure 10.13: Click the plus (+) symbol in upper-right corner to create a new re
 <p>Check the box to <em>Initialize this repository with a README</em> to simplify the next steps.</p>
 <p>Also, select <em>Add a license</em> that matches the code you plan to upload, which in this case is <em>MIT License</em>. Other fields are optional. Click the green <em>Create Repository</em> button at the bottom when done, as shown in Figure <a href="create-repo.html#fig:repo-create-options">10.14</a>.</p>
 
-<div class="figure"><span id="fig:repo-create-options"></span>
+<div class="figure"><span style="display:block;" id="fig:repo-create-options"></span>
 <img src="images/10-github/repo-create-options.png" alt="Name your new repo practice, check the box to Initialize this repo with a README, and Add a license (select MIT) to match any code you plan to upload." width="400" />
 <p class="caption">
 Figure 10.14: Name your new repo <em>practice</em>, check the box to <em>Initialize this repo with a README</em>, and <em>Add a license</em> (select <em>MIT</em>) to match any code you plan to upload.
@@ -424,7 +423,7 @@ Figure 10.14: Name your new repo <em>practice</em>, check the box to <em>Initial
 <li>On your new repo home page, click the <em>Add File &gt; Upload Files</em> drop-down menu button, near the middle of the screen, as shown in Figure <a href="create-repo.html#fig:repo-upload-files">10.15</a>.</li>
 </ol>
 
-<div class="figure"><span id="fig:repo-upload-files"></span>
+<div class="figure"><span style="display:block;" id="fig:repo-upload-files"></span>
 <img src="images/10-github/repo-upload-files.png" alt="Click the Upload Files button." width="350" />
 <p class="caption">
 Figure 10.15: Click the <em>Upload Files</em> button.
@@ -434,7 +433,7 @@ Figure 10.15: Click the <em>Upload Files</em> button.
 <li>Inside the repo folder that you previously downloaded and unzipped on your local computer, drag-and-drop the <code>index.html</code> file to the upload screen of your GitHub repo in your browser, as shown in Figure <a href="create-repo.html#fig:repo-drag-index">10.16</a>. Do not upload <code>LICENSE</code> or <code>README.md</code> because your new repo already contains those two files. Scroll down to click the green <em>Commit Changes</em> button.</li>
 </ol>
 
-<div class="figure"><span id="fig:repo-drag-index"></span>
+<div class="figure"><span style="display:block;" id="fig:repo-drag-index"></span>
 <img src="images/10-github/repo-drag-index-annotated.png" alt="Drag-and-drop the index.html file to the upload screen."  />
 <p class="caption">
 Figure 10.16: Drag-and-drop the <code>index.html</code> file to the upload screen.
@@ -446,7 +445,7 @@ Figure 10.16: Drag-and-drop the <code>index.html</code> file to the upload scree
 <li>Since this was only a <code>practice</code> repo, let’s delete it from GitHub. In the repo screen of your browser, click the top-right <em>Settings</em> button, scroll all the way down to the <em>Danger Zone</em>, and click <em>Delete this repository</em>, as shown in Figure <a href="create-repo.html#fig:repo-delete">10.17</a>. GitHub will ask you to type in your username and repo name to ensure that you really want to delete the repo, to prove you are not a drunken brownie chef.</li>
 </ol>
 
-<div class="figure"><span id="fig:repo-delete"></span>
+<div class="figure"><span style="display:block;" id="fig:repo-delete"></span>
 <img src="images/10-github/repo-delete.png" alt="After clicking the Delete Repository button, GitHub will ask you to type your username and repo name to confirm." width="600" />
 <p class="caption">
 Figure 10.17: After clicking the Delete Repository button, GitHub will ask you to type your username and repo name to confirm.
@@ -504,7 +503,6 @@ Figure 10.17: After clicking the Delete Repository button, GitHub will ask you t
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -544,15 +542,32 @@ gitbook.start({
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
-},
-"search": true
+}
 });
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

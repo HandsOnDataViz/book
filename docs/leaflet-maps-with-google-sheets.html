@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Leaflet Maps with Google Sheets | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Leaflet Maps with Google Sheets | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io//images/cover-400wide.jpg" />
   <meta property="og:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="github-repo" content="handsondataviz/book" />
@@ -25,7 +24,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2022-04-04" />
+<meta name="date" content="2022-07-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,8 +33,8 @@
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="leaflet.html"/>
 <link rel="next" href="leaflet-storymaps-with-google-sheets.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -51,9 +50,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -336,7 +335,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
 <li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
-<li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
+<li class="chapter" data-level="" data-path="style-guide.html"><a href="style-guide.html"><i class="fa fa-check"></i>Style Guide for <em>Hands-On Data Visualization</em></a></li>
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
 <li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
 <li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
@@ -376,27 +375,27 @@ div.csl-indent {
   </p>
 
 </header>
-<div id="leaflet-maps-with-google-sheets" class="section level2 unnumbered">
-<h2>Leaflet Maps with Google Sheets</h2>
+<div id="leaflet-maps-with-google-sheets" class="section level2 unnumbered hasAnchor">
+<h2>Leaflet Maps with Google Sheets<a href="leaflet-maps-with-google-sheets.html#leaflet-maps-with-google-sheets" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Sometimes you need to create a map that cannot be made easily with drag-and-drop tools, because you need to customize its appearance or show some combination of point, polygon, or polyline data. One solution is to build your map based on our Leaflet Maps with Google Sheets code template, which allows you to display custom point icons, pick any choropleth color palettes, and stack different combinations of map data layers, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:lmwgs-map">12.1</a>. If you’ve explored prior chapters in this book, this template is a good template for newer users, because you enter your map data and settings in a linked Google Sheet, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:lmwgs-sheet">12.2</a>, and upload images or geographic files into a folder in your GitHub repository. All of the data you enter can easily be exported and migrated to other platforms as visualization technology continues to evolve in the future, as we discussed in the <a href="choose.html">how to choose tools section in Chapter 1</a>. Furthermore, the map design is responsive, meaning it automatically resizes to look good on small or large screens. Finally, the Leaflet Maps template is built on flexible open-source software that’s written primarily in JavaScript, a very common coding language for the web, so you can customize it further if you have skills or support from a developer.</p>
 
-<div class="figure"><span id="fig:lmwgs-map"></span>
-<iframe src="https://handsondataviz.github.io/leaflet-maps-with-google-sheets/" width="672" height="500px">
+<div class="figure"><span style="display:block;" id="fig:lmwgs-map"></span>
+<iframe src="https://handsondataviz.github.io/leaflet-maps-with-google-sheets/" width="672" height="500px" data-external="1">
 </iframe>
 <p class="caption">
 Figure 12.1: Explore the <a href="https://handsondataviz.github.io/leaflet-maps-with-google-sheets/">interactive Leaflet Maps with Google Sheets</a>. This demo version shows the East Coast Greenway, a walking-biking route that connects cities between Maine and Florida. Over one-third of the 3,000-mile route is on traffic-free trails as of 2021. To learn more, see the <a href="https://www.greenway.org/route-map">official Greenway map</a>.
 </p>
 </div>
 
-<div class="figure"><span id="fig:lmwgs-sheet"></span>
-<iframe src="https://docs.google.com/spreadsheets/d/1ZxvU8eGyuN9M8GxTU9acKVJv70iC3px_m3EVFsOHN9g/pubhtml?widget=true&amp;amp;headers=false" width="672" height="500px">
+<div class="figure"><span style="display:block;" id="fig:lmwgs-sheet"></span>
+<iframe src="https://docs.google.com/spreadsheets/d/1ZxvU8eGyuN9M8GxTU9acKVJv70iC3px_m3EVFsOHN9g/pubhtml?widget=true&amp;amp;headers=false" width="672" height="500px" data-external="1">
 </iframe>
 <p class="caption">
 Figure 12.2: View the <a href="https://docs.google.com/spreadsheets/d/1ZxvU8eGyuN9M8GxTU9acKVJv70iC3px_m3EVFsOHN9g">online Google Sheet template</a> that feeds data into the Leaflet Maps demo above.
 </p>
 </div>
-<div id="tutorial-requirements-and-overview" class="section level3 unnumbered">
-<h3>Tutorial Requirements and Overview</h3>
+<div id="tutorial-requirements-and-overview" class="section level3 unnumbered hasAnchor">
+<h3>Tutorial Requirements and Overview<a href="leaflet-maps-with-google-sheets.html#tutorial-requirements-and-overview" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Before you begin, you must have a <a href="https://drive.google.com">Google Drive account</a> and know how to <a href="copy.html">Make a Copy in Google Sheets as described in Chapter 2</a>. Also, you must have a <a href="https://github.com">GitHub account</a> and know how to <a href="github.html">Edit and Host Code with GitHub as described in Chapter 10</a>. We omitted some screenshots below that illustrate steps we previously covered, so if you get lost, go back to those chapters.</p>
 <p>Since this tutorial involves multiple steps, we created this outline to provide a broad overview. In the first part, you will create and publish your copies of two templates, one for GitHub and another for its linked Google Sheet.</p>
 <ul>
@@ -434,8 +433,8 @@ Figure 12.2: View the <a href="https://docs.google.com/spreadsheets/d/1ZxvU8eGyu
 </ul>
 <p>If any problems arise, see the <a href="fix.html">Fix Common Problems</a> section of the appendix.</p>
 <p>Now that you have a better sense of the big picture, let’s get started with the first part of the tutorial.</p>
-<div id="a-copy-the-github-template-and-publish-your-version-with-github-pages" class="section level4 unnumbered">
-<h4>A) Copy the GitHub template and publish your version with GitHub Pages</h4>
+<div id="a-copy-the-github-template-and-publish-your-version-with-github-pages" class="section level4 unnumbered hasAnchor">
+<h4>A) Copy the GitHub template and publish your version with GitHub Pages<a href="leaflet-maps-with-google-sheets.html#a-copy-the-github-template-and-publish-your-version-with-github-pages" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ol style="list-style-type: decimal">
 <li><p>Open the <a href="https://github.com/handsondataviz/leaflet-maps-with-google-sheets">GitHub code template</a> in a new tab.</p></li>
 <li><p>In the upper-right corner of the code template, sign in to your free GitHub account.</p></li>
@@ -446,7 +445,7 @@ Figure 12.2: View the <a href="https://docs.google.com/spreadsheets/d/1ZxvU8eGyu
 <li>In your new copy of the code repo, click the upper-right <em>Settings</em> button and scroll way down to the GitHub Pages area. In the drop-down menu, change <em>Source</em> from <em>None</em> to <em>Main</em>, keep the default <em>/(root)</em> setting, and press <em>Save</em> as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:leaflet-github-pages-main2">12.3</a>. This step tells GitHub to publish a live version of your map on the public web, where anyone can access it in their browser, if they have the web address.</li>
 </ol>
 
-<div class="figure"><span id="fig:leaflet-github-pages-main2"></span>
+<div class="figure"><span style="display:block;" id="fig:leaflet-github-pages-main2"></span>
 <img src="images/12-leaflet/leaflet-github-pages-main.png" alt="In Settings, go to GitHub Pages, switch the source from None to Main, and Save." width="300" />
 <p class="caption">
 Figure 12.3: In <em>Settings</em>, go to <em>GitHub Pages</em>, switch the source from <em>None</em> to <em>Main</em>, and <em>Save</em>.
@@ -462,7 +461,7 @@ Figure 12.3: In <em>Settings</em>, go to <em>GitHub Pages</em>, switch the sourc
 <li><p>Delete the link to the <em>our</em> live site, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:leaflet-readme-link-top">12.4</a>, and paste in the link to <em>your</em> published site. Scroll down to <em>Commit</em> your changes.</p></li>
 </ol>
 
-<div class="figure"><span id="fig:leaflet-readme-link-top"></span>
+<div class="figure"><span style="display:block;" id="fig:leaflet-readme-link-top"></span>
 <img src="images/12-leaflet/leaflet-readme-link-top.png" alt="Edit your README file to replace the link to our site with the link to your site."  />
 <p class="caption">
 Figure 12.4: Edit your README file to replace the link to <em>our</em> site with the link to <em>your</em> site.
@@ -472,8 +471,8 @@ Figure 12.4: Edit your README file to replace the link to <em>our</em> site with
 <li>On your repo main page, right-click the link to open your live map in a new tab. <em>Be patient</em>. GitHub Pages normally will display your live map within 30 seconds, but sometimes it may require several minutes to appear.</li>
 </ol>
 </div>
-<div id="b-file-make-a-copy-of-google-sheet-template-share-and-publish" class="section level4 unnumbered">
-<h4>B) File &gt; Make a Copy of Google Sheet template, Share, and Publish</h4>
+<div id="b-file-make-a-copy-of-google-sheet-template-share-and-publish" class="section level4 unnumbered hasAnchor">
+<h4>B) File &gt; Make a Copy of Google Sheet template, Share, and Publish<a href="leaflet-maps-with-google-sheets.html#b-file-make-a-copy-of-google-sheet-template-share-and-publish" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ol style="list-style-type: decimal">
 <li><p>Open the <a href="https://docs.google.com/spreadsheets/d/1ZxvU8eGyuN9M8GxTU9acKVJv70iC3px_m3EVFsOHN9g">Google Sheets template</a> in a new tab.</p></li>
 <li><p>Sign into your Google account, and select <em>File &gt; Make a Copy</em> to save your own version of this Google Sheet on your Google Drive.</p></li>
@@ -482,22 +481,22 @@ Figure 12.4: Edit your README file to replace the link to <em>our</em> site with
 <li><p>At the top of your browser, copy your Google Sheet address or URL (which usually ends in <code>...XYZ/edit#gid=0</code>), as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:sheets-publish">12.5</a>. Do <em>NOT</em> copy the <em>Published to the web</em> address (which usually ends in <code>...XYZ/pubhtml</code>) because that link is slightly different and will not work in this template.</p></li>
 </ol>
 
-<div class="figure"><span id="fig:sheets-publish"></span>
+<div class="figure"><span style="display:block;" id="fig:sheets-publish"></span>
 <img src="images/12-leaflet/sheets-publish-annotated.png" alt="Copy the Google Sheet address at the top of the browser, NOT the Publish to the web address." width="500" />
 <p class="caption">
 Figure 12.5: Copy the Google Sheet address at the top of the browser, NOT the <em>Publish to the web</em> address.
 </p>
 </div>
 </div>
-<div id="c-paste-your-google-sheet-browser-address-in-two-places-in-your-github-repo" class="section level4 unnumbered">
-<h4>C) Paste your Google Sheet browser address in two places in your GitHub repo</h4>
+<div id="c-paste-your-google-sheet-browser-address-in-two-places-in-your-github-repo" class="section level4 unnumbered hasAnchor">
+<h4>C) Paste your Google Sheet browser address in two places in your GitHub repo<a href="leaflet-maps-with-google-sheets.html#c-paste-your-google-sheet-browser-address-in-two-places-in-your-github-repo" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Our next task is to link your published Google Sheet to your Leaflet code in GitHub, so that it can pull your data from the Sheet to display on the map.</p>
 <ol style="list-style-type: decimal">
 <li><p>At the top of your GitHub repo, click to open the file named <code>google-doc-url.js</code>, and click the pencil symbol to edit it.</p></li>
 <li><p>Paste <em>your</em> Google Sheet address or URL (which usually ends in <code>...XYZ/edit#gid=0</code>) to replace <em>our</em> existing URL, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:google-doc-url">12.6</a>. Be careful <em>NOT</em> to erase the single quotation marks or the semicolon at the end. Scroll down to <em>Commit</em> your changes. See separate instructions about the Google API key further below.</p></li>
 </ol>
 
-<div class="figure"><span id="fig:google-doc-url"></span>
+<div class="figure"><span style="display:block;" id="fig:google-doc-url"></span>
 <img src="images/12-leaflet/google-doc-url.png" alt="Paste in your Google Sheet URL to replace our URL."  />
 <p class="caption">
 Figure 12.6: Paste in <em>your</em> Google Sheet URL to replace <em>our</em> URL.
@@ -507,7 +506,7 @@ Figure 12.6: Paste in <em>your</em> Google Sheet URL to replace <em>our</em> URL
 <li>Also, let’s paste your Google Sheet URL in second place to help you keep track of it. In your GitHub repo, click the README.md file to open it, click the pencil symbol to edit it, and paste <em>your</em> Google Sheet URL to replace <em>our</em> existing URL, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:leaflet-readme-link-bottom">12.7</a>. Scroll down to <em>Commit</em> your changes.</li>
 </ol>
 
-<div class="figure"><span id="fig:leaflet-readme-link-bottom"></span>
+<div class="figure"><span style="display:block;" id="fig:leaflet-readme-link-bottom"></span>
 <img src="images/12-leaflet/leaflet-readme-link-bottom.png" alt="Edit your README file to replace the link to our site with the link to your site."  />
 <p class="caption">
 Figure 12.7: Edit your README file to replace the link to <em>our</em> site with the link to <em>your</em> site.
@@ -515,8 +514,8 @@ Figure 12.7: Edit your README file to replace the link to <em>our</em> site with
 </div>
 <p>Feel free to remove any other content on the README page that you do not wish to keep.</p>
 </div>
-<div id="d-update-your-google-sheet-options-tab-info-and-refresh-your-live-map" class="section level4 unnumbered">
-<h4>D) Update your Google Sheet <em>Options</em> tab info and refresh your live map</h4>
+<div id="d-update-your-google-sheet-options-tab-info-and-refresh-your-live-map" class="section level4 unnumbered hasAnchor">
+<h4>D) Update your Google Sheet <em>Options</em> tab info and refresh your live map<a href="leaflet-maps-with-google-sheets.html#d-update-your-google-sheet-options-tab-info-and-refresh-your-live-map" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Now that your published Google Sheet is linked to your live map, go to the <em>Options</em> tab to update any of these items:</p>
 <ul>
 <li>Map Title</li>
@@ -527,8 +526,8 @@ Figure 12.7: Edit your README file to replace the link to <em>our</em> site with
 </ul>
 <p>Open the browser tab that displays your live map and refresh the page to see your changes. If your changes do not appear within a few seconds, see the <a href="fix.html">Fix Common Problems</a> section of the appendix.</p>
 </div>
-<div id="e-geocode-locations-and-customize-new-markers-in-the-points-tab" class="section level4 unnumbered">
-<h4>E) Geocode locations and customize new markers in the Points tab</h4>
+<div id="e-geocode-locations-and-customize-new-markers-in-the-points-tab" class="section level4 unnumbered hasAnchor">
+<h4>E) Geocode locations and customize new markers in the Points tab<a href="leaflet-maps-with-google-sheets.html#e-geocode-locations-and-customize-new-markers-in-the-points-tab" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Now we can start to add new content to your map. In the <em>Points</em> tab of your Google Sheet, you’ll see column headers to organize and display interactive markers on your map. Replace the demonstration data with your own, but do <em>not</em> delete or rename the column headers, since the Leaflet code looks for these specific names.</p>
 <ul>
 <li>Group: Create any labels to categorize groups of markers in your legend.</li>
@@ -538,7 +537,7 @@ Figure 12.7: Edit your README file to replace the link to <em>our</em> site with
 <li>Custom Size: Leave blank, unless you are creating your own custom icon further below.</li>
 </ul>
 
-<div class="figure"><span id="fig:icon-combined"></span>
+<div class="figure"><span style="display:block;" id="fig:icon-combined"></span>
 <img src="images/12-leaflet/icon-combined-annotated.png" alt="For a Marker Icon, insert a Font Awesome free and solid icon name such as fa-ambulance (on the right), or any Material Icon name such as accessible (on the left)." width="400" />
 <p class="caption">
 Figure 12.8: For a <em>Marker Icon</em>, insert a Font Awesome free and solid icon name such as <code>fa-ambulance</code> (on the right), or any Material Icon name such as <code>accessible</code> (on the left).
@@ -551,7 +550,7 @@ Figure 12.8: For a <em>Marker Icon</em>, insert a Font Awesome free and solid ic
 <li>Image: You have two options to display images. You can insert an external link to an image hosted by an online service (such as Flickr), as long as it begins with <code>https</code> (secure) and ends with either <code>.jpg</code> or <code>.png</code>. Or you can upload an image into the <code>media</code> subfolder in your GitHub repo, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:leaflet-media-upload">12.9</a>, and enter the pathname in the Google Sheet in this format: <code>media/image.jpg</code> or <code>...png</code>.</li>
 </ul>
 
-<div class="figure"><span id="fig:leaflet-media-upload"></span>
+<div class="figure"><span style="display:block;" id="fig:leaflet-media-upload"></span>
 <img src="images/12-leaflet/leaflet-media-upload.png" alt="In GitHub, click to open the media folder and Add file - Upload files." width="400" />
 <p class="caption">
 Figure 12.9: In GitHub, click to open the <code>media</code> folder and <em>Add file - Upload files</em>.
@@ -563,7 +562,7 @@ Figure 12.9: In GitHub, click to open the <code>media</code> folder and <em>Add 
 <li>Location, Latitude, Longitude: These place your markers at points on the map. Although the code template only requires Latitude and Longitude, it’s wise to paste an address or place name into the Location column as a reminder to correspond with the numerical coordinates. Use the <a href="geocode.html">Geocoding by SmartMonkey Add-on from Chapter 2</a> and select <em>Add-ons &gt; Geocoding by SmartMonkey &gt; Geocode Details</em> to create a new sheet with sample data and display results for three new columns: <em>Latitude</em>, <em>Longitude</em>, and <em>Address found</em>, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:geocode-details2">12.10</a>. Paste in your own address data and repeat the step above to geocode it, then copy and paste the results into your <em>Points</em> sheet.</li>
 </ul>
 
-<div class="figure"><span id="fig:geocode-details2"></span>
+<div class="figure"><span style="display:block;" id="fig:geocode-details2"></span>
 <img src="images/12-leaflet/geocode-details.png" alt="Select Add-ons–Geocoding by SmartMonkey–Geocode Details to display sample data with results for three new columns: Latitude, Longitude, and Address found."  />
 <p class="caption">
 Figure 12.10: Select <em>Add-ons–Geocoding by SmartMonkey–Geocode Details</em> to display sample data with results for three new columns: <em>Latitude</em>, <em>Longitude</em>, and <em>Address found</em>.
@@ -571,7 +570,7 @@ Figure 12.10: Select <em>Add-ons–Geocoding by SmartMonkey–Geocode Details</e
 </div>
 <p>Optional table of viewable markers: To display an interactive table at the bottom of your map, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:leaflet-map-with-table">12.11</a>. In the <em>Options</em> tab, set <em>Display Table</em> (cell B30) to <em>On</em>. You can also adjust the <em>Table Height</em>, and modify the display of <em>Table Columns</em> by entering the column headers, separated with commas.</p>
 
-<div class="figure"><span id="fig:leaflet-map-with-table"></span>
+<div class="figure"><span style="display:block;" id="fig:leaflet-map-with-table"></span>
 <img src="images/12-leaflet/leaflet-map-with-table.png" alt="Optional: display interactive table of viewable markers at the bottom of your map." width="500" />
 <p class="caption">
 Figure 12.11: Optional: display interactive table of viewable markers at the bottom of your map.
@@ -579,7 +578,7 @@ Figure 12.11: Optional: display interactive table of viewable markers at the bot
 </div>
 <p>Optional custom markers: To create your own custom marker, such as a thumbnail photo icon as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:leaflet-map-custom-marker">12.12</a>, use any image editing tool to reduce a photo to a square of 64 x 64 pixels. Save it in PNG format and choose a filename using all lower-case characters with no spaces. Upload the image to the <em>media</em> folder in your GitHub repo as described above. In the <em>Marker Icon</em> column, enter the file pathname in this format: <code>media/imagename-small.png</code>. In the <em>Custom Size</em> column, set the dimensions to <code>64x64</code> or similar, such as <code>40x40</code> if desired.</p>
 
-<div class="figure"><span id="fig:leaflet-map-custom-marker"></span>
+<div class="figure"><span style="display:block;" id="fig:leaflet-map-custom-marker"></span>
 <img src="images/12-leaflet/leaflet-map-custom-marker.png" alt="Optional: create and upload custom thumbnail map markers." width="600" />
 <p class="caption">
 Figure 12.12: Optional: create and upload custom thumbnail map markers.
@@ -587,8 +586,8 @@ Figure 12.12: Optional: create and upload custom thumbnail map markers.
 </div>
 <p>Open the browser tab that displays your live map and refresh the page to see your changes. If your changes do not appear within a few seconds, see the <a href="fix.html">Fix Common Problems</a> section of the appendix.</p>
 </div>
-<div id="f-remove-or-display-point-polygon-or-polylines-data-and-legends" class="section level4 unnumbered">
-<h4>F) Remove or display point, polygon, or polylines data and legends</h4>
+<div id="f-remove-or-display-point-polygon-or-polylines-data-and-legends" class="section level4 unnumbered hasAnchor">
+<h4>F) Remove or display point, polygon, or polylines data and legends<a href="leaflet-maps-with-google-sheets.html#f-remove-or-display-point-polygon-or-polylines-data-and-legends" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>By default, the demo map displays three types of data—points, polygons, and polylines—and their legends. You can remove any of these from your map by modifying your linked Google Sheet:</p>
 <p>To remove points:</p>
 <ul>
@@ -624,18 +623,18 @@ Figure 12.12: Optional: create and upload custom thumbnail map markers.
 </ul>
 </div>
 </div>
-<div id="finalize-your-map-before-sharing-with-the-public" class="section level3 unnumbered">
-<h3>Finalize Your Map Before Sharing with the Public</h3>
+<div id="finalize-your-map-before-sharing-with-the-public" class="section level3 unnumbered hasAnchor">
+<h3>Finalize Your Map Before Sharing with the Public<a href="leaflet-maps-with-google-sheets.html#finalize-your-map-before-sharing-with-the-public" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Now you’re ready to finalize your map. If you wish to share your map link with the public, read the options below and choose either step G <em>OR</em> step H.</p>
 <p>Warning: We reserve the right to change <em>our</em> Google Sheets API key at any time, especially if other people overuse or abuse it. This means that you <em>must</em> finalize your map using either step G or H below before sharing it publicly, because it will <em>stop working</em> if we change our key.</p>
-<div id="g-save-each-google-sheets-tab-as-a-csv-file-and-upload-to-github" class="section level4 unnumbered">
-<h4>G) Save each Google Sheets tab as a CSV file and upload to GitHub</h4>
+<div id="g-save-each-google-sheets-tab-as-a-csv-file-and-upload-to-github" class="section level4 unnumbered hasAnchor">
+<h4>G) Save each Google Sheets tab as a CSV file and upload to GitHub<a href="leaflet-maps-with-google-sheets.html#g-save-each-google-sheets-tab-as-a-csv-file-and-upload-to-github" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>If you have finished entering most of your data into your Google Sheets, downloading them into separate CSV files and uploading those into your GitHub repo is the <em>best</em> long-term preservation strategy. This approach keeps your map and data together in the same GitHub repo, and removes the risk that your map will break due to an interruption to Google services. Plus, you can still edit your map data. If this approach makes sense, follow these steps:</p>
 <ol style="list-style-type: decimal">
 <li>In your Google Sheets, go to each tab and select <em>File &gt; Download</em> into CSV format, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:sheets-download-csv">12.13</a>, to create a separate file for each tab.</li>
 </ol>
 
-<div class="figure"><span id="fig:sheets-download-csv"></span>
+<div class="figure"><span style="display:block;" id="fig:sheets-download-csv"></span>
 <img src="images/12-leaflet/sheets-download-csv.png" alt="Download each Google Sheets tab as a separate CSV file." width="350" />
 <p class="caption">
 Figure 12.13: Download each Google Sheets tab as a separate CSV file.
@@ -655,7 +654,7 @@ Figure 12.13: Download each Google Sheets tab as a separate CSV file.
 <li>In your GitHub repo, click the <code>csv</code> subfolder to open it, select <em>Add file &gt; Upload files</em>, and upload all of the CSV files above into this subfolder, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:leaflet-upload-csv">12.14</a>. The Leaflet template code checks here first for data, and if it finds CSV files with the names above, it will pull the map data directly from them, instead of your Google Sheets. <em>Remember</em> that from this point forward, any edits in your Google Sheet will <em>no longer appear automatically</em> in your map.</li>
 </ol>
 
-<div class="figure"><span id="fig:leaflet-upload-csv"></span>
+<div class="figure"><span style="display:block;" id="fig:leaflet-upload-csv"></span>
 <img src="images/12-leaflet/leaflet-upload-csv.png" alt="Upload your map data files into the csv subfolder in GitHub." width="400" />
 <p class="caption">
 Figure 12.14: Upload your map data files into the <em>csv</em> subfolder in GitHub.
@@ -665,8 +664,8 @@ Figure 12.14: Upload your map data files into the <em>csv</em> subfolder in GitH
 <li>If you wish to edit your map after uploading your CSV files, you have two options. You can make small edits directly to your CSV files by opening them in the GitHub web interface. Or you can make larger edits in the Google Sheet, and repeating the steps above to download them in CSV format and upload them to replace your existing files on GitHub.</li>
 </ol>
 </div>
-<div id="h-get-your-own-google-sheets-api-key-to-insert-into-the-code" class="section level4 unnumbered">
-<h4>H) Get your own Google Sheets API Key to insert into the code</h4>
+<div id="h-get-your-own-google-sheets-api-key-to-insert-into-the-code" class="section level4 unnumbered hasAnchor">
+<h4>H) Get your own Google Sheets API Key to insert into the code<a href="leaflet-maps-with-google-sheets.html#h-get-your-own-google-sheets-api-key-to-insert-into-the-code" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>As an alternative to step G, if you wish to continue to store your map data in your Google Sheets that is published online, go to the section of this chapter titled <a href="google-sheets-api-key.html">Get Your Own Google Sheets API Key</a>, and insert it into the Leaflet map code as described, to avoid overusing our key. Google Sheets requires an API key to maintain reasonable <a href="https://developers.google.com/sheets/api/limits">usage limits</a> on its service. You can get a free Google Sheets API key if you have a personal Google account, but <em>not</em> a Google Suite account provided by your school or business.</p>
 <p>If problems arise, see the <a href="fix.html">Fix Common Problems</a> section of the appendix.</p>
 </div>
@@ -722,7 +721,6 @@ Figure 12.14: Upload your map data files into the <em>csv</em> subfolder in GitH
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -762,15 +760,32 @@ gitbook.start({
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
-},
-"search": true
+}
 });
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

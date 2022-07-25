@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Geospatial Data and GeoJSON | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Geospatial Data and GeoJSON | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io//images/cover-400wide.jpg" />
   <meta property="og:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="github-repo" content="handsondataviz/book" />
@@ -25,7 +24,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2022-04-04" />
+<meta name="date" content="2022-07-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,8 +33,8 @@
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="transform.html"/>
 <link rel="next" href="find-geojson.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -51,9 +50,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -336,7 +335,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
 <li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
-<li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
+<li class="chapter" data-level="" data-path="style-guide.html"><a href="style-guide.html"><i class="fa fa-check"></i>Style Guide for <em>Hands-On Data Visualization</em></a></li>
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
 <li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
 <li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
@@ -376,22 +375,22 @@ div.csl-indent {
   </p>
 
 </header>
-<div id="geojson" class="section level2 unnumbered">
-<h2>Geospatial Data and GeoJSON</h2>
+<div id="geojson" class="section level2 unnumbered hasAnchor">
+<h2>Geospatial Data and GeoJSON<a href="geojson.html#geojson" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Let’s talk about basics of geospatial data to help you to better understand the map layers that you’ll create and edit later in this chapter. The first thing to know about geospatial data is that it consists of two components, <em>location</em> and <em>attribute</em>.
 When you use Google Maps to search for a restaurant, you see a red marker on the screen that points to its location in latitude and longitude coordinates, such as <code>41.7620891, -72.6856295</code>. Attributes include additional information such as the restaurant name, its human-friendly street address, and guest review comments. All of these attributes add value to your location data.</p>
 <p>Second, geospatial data can be <em>raster</em> or <em>vector</em>, a concept we previously introduced in the <a href="map-design.html">Map Design Principles section of Chapter 7</a>. In digital maps, raster data often appears as satellite and aerial images, and the quality depends on the resolution of the camera that captured them. If a satellite camera has a 1-meter resolution, its images display the different colors it captured as a grid of cells, which measure one meter on each side. Each of these cells appears as a color-coded pixel on our computer screens. If you zoom in too close to a raster image, it may appear fuzzy or pixelated due to the resolution limitations of the original image, as shown in Figure <a href="geojson.html#fig:geospatial-raster-vector">13.1</a>.</p>
 <p>By contrast, vector data often appears in digital maps as pictorial images of buildings, rivers, and regions. Vector maps can be created by humans or algorithms when they draw points, polylines, and polygons from raster satellite or aerial images, or from devices such as GPS trackers that record runs or hikes, or from other sources. For example, much of <a href="https://www.openstreetmap.org">OpenStreetMap</a> has been built by volunteers who trace outlines of objects from satellite images, and anyone can sign up to help expand it this crowdsourced map of the world. Unlike raster maps, vector maps remain sharply focused at any zoom level, because every point and line is represented by latitude and longitude coordinates, which can be expressed with precise decimals. In addition, while raster data is generally limited to one value per cell (such as color for traditional satellite images, or height above sea level for digital elevation models), vector data can contain multiple attributes about each object (such as its name, street address, and comments). Moreover, vector map files tend to be smaller in size than raster ones, which is important when we create and upload maps to share and display online.</p>
 
-<div class="figure"><span id="fig:geospatial-raster-vector"></span>
+<div class="figure"><span style="display:block;" id="fig:geospatial-raster-vector"></span>
 <img src="images/13-transform/geospatial-raster-vector.png" alt="Geospatial data can be a raster grid of cells (on the left) or a vector collection of points, polylines, and polygons (on the right)." width="750" />
 <p class="caption">
 Figure 13.1: Geospatial data can be a raster grid of cells (on the left) or a vector collection of points, polylines, and polygons (on the right).
 </p>
 </div>
 <p>Since we focus on vector data in the several sections of this chapter, let’s take a look at some of its most common file formats, starting with GeoJSON, the format that works best with our recommended tools.</p>
-<div id="geojson-1" class="section level4 unnumbered">
-<h4>GeoJSON</h4>
+<div id="geojson-1" class="section level4 unnumbered hasAnchor">
+<h4>GeoJSON<a href="geojson.html#geojson-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p><a href="https://geojson.org">GeoJSON</a> is a popular map data format, based on an open-standard created in 2016, with file extensions that end with <code>.geojson</code> or <code>.json</code>. The code snippet below represents a single point in GeoJSON format, with latitude of 41.76 and longitude of -72.67, and a <em>name</em> attribute (also known as a property) whose value is <em>Hartford</em>.</p>
 <pre><code>{
   &quot;type&quot;: &quot;Feature&quot;,
@@ -407,7 +406,7 @@ Figure 13.1: Geospatial data can be a raster grid of cells (on the left) or a ve
 simple text editor, such as the <a href="github-desktop-atom.html">Atom Editor tool described in Chapter 10</a>.</p>
 <p>We strongly recommend that you create and edit map data in GeoJSON format, which is supported by the map tools we recommend in this book (such as Datawrapper and Leaflet) and dozens of others. Storing and sharing your geospatial data in GeoJSON ensures that you can others will be able to use the file without installing bulky or expensive GIS desktop applications. Another benefit is that your GitHub repository will automatically display a map preview of any GeoJSON file, as shown in Figure <a href="geojson.html#fig:geojson-github">13.2</a>.</p>
 
-<div class="figure"><span id="fig:geojson-github"></span>
+<div class="figure"><span style="display:block;" id="fig:geojson-github"></span>
 <img src="images/13-transform/geojson-github.png" alt="GitHub repositories automatically show a map preview for GeoJSON files." width="600" />
 <p class="caption">
 Figure 13.2: GitHub repositories automatically show a map preview for GeoJSON files.
@@ -417,8 +416,8 @@ Figure 13.2: GitHub repositories automatically show a map preview for GeoJSON fi
 <a href="https://macwright.com/lonlat/">showing lat/lon order of different geospatial formats and technologies</a>.</p>
 <p>Now that you’ve been introduced to the GeoJSON geospatial file format, let’s compare it with some other formats.</p>
 </div>
-<div id="shapefiles" class="section level4 unnumbered">
-<h4>Shapefiles</h4>
+<div id="shapefiles" class="section level4 unnumbered hasAnchor">
+<h4>Shapefiles<a href="geojson.html#shapefiles" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>The shapefile format was created in the 1990s by Esri, the company that develops
 ArcGIS software. Shapefiles typically appear in a folder of files with extensions
 such as <code>.shp</code>, <code>.shx</code>, and <code>.dbf</code>, and the folder may be compressed into a <code>.zip</code> file.</p>
@@ -427,21 +426,21 @@ shapefiles—ArcGIS and its free and open-source cousin, QGIS—are not as
 easy to learn as other tools in this book. For this reason, we
 recommend converting shapefiles into GeoJSON files if possible, and you can do this with the <a href="mapshaper.html">Mapshaper tool</a>, discussed a bit later in the chapter.</p>
 </div>
-<div id="gps-exchange-format-gpx" class="section level4 unnumbered">
-<h4>GPS Exchange Format (GPX)</h4>
+<div id="gps-exchange-format-gpx" class="section level4 unnumbered hasAnchor">
+<h4>GPS Exchange Format (GPX)<a href="geojson.html#gps-exchange-format-gpx" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>If you ever recorded your run or bike ride with a GPS device, chances are you ended up with a <code>.gpx</code> file.
 GPX is an open standard and is based on XML markup language.
 Like GeoJSON, you can inspect the contents of a GPX file in any simple text editor. Most likely, you will see a collection timestamps and latitude/longitude coordinates that the GPS device recorded at that particular time. You can convert GPX to GeoJSON format with the <a href="geojsonio.html">GeoJson.io tool</a>, discussed later in this chapter.</p>
 </div>
-<div id="keyhole-markup-language-or-kml" class="section level4 unnumbered">
-<h4>Keyhole Markup Language (or KML)</h4>
+<div id="keyhole-markup-language-or-kml" class="section level4 unnumbered hasAnchor">
+<h4>Keyhole Markup Language (or KML)<a href="geojson.html#keyhole-markup-language-or-kml" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>The KML format rose in popularity during the late 2000s, when it was developed for <a href="https://www.google.com/earth/">Google Earth</a>, a free and user-friendly tool to view and edit two- and three-dimensional geographic data. KML files were also used
 with maps powered by Google Fusion Tables, but that <a href="https://killedbygoogle.com/">tool was dropped by Google in late 2019</a>.
 You can convert your KML file into GeoJSON format with the <a href="geojsonio.html">GeoJson.io tool</a> described later in this chapter.</p>
 <p>Tip: Sometimes <code>.kml</code> files are distributed in a compressed <code>.kmz</code> format. To learn how to transform them, see the <a href="convert-kmz.html">Converting from KMZ to KML format</a> section of this chapter.</p>
 </div>
-<div id="mapinfo-tab" class="section level4 unnumbered">
-<h4>MapInfo TAB</h4>
+<div id="mapinfo-tab" class="section level4 unnumbered hasAnchor">
+<h4>MapInfo TAB<a href="geojson.html#mapinfo-tab" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>The proprietary TAB format is created and supported by MapInfo, Esri’s competitor, and is designed to work well with MapInfo Pro
 GIS software. Similar to Esri’s shapefiles, MapInfo TAB files usually appear in a folder with extensions that end with <code>.tab</code>, <code>.dat</code>, <code>.ind</code>, and some other files. Unfortunately, you will most likely need MapInfo Pro, QGIS, or ArcGIS to convert these to Shapefile or GeoJSON format.</p>
 <p>We’ve mentioned only a handful of the most common geospatial file formats, and there is a myriad of <a href="https://en.wikipedia.org/wiki/GIS_file_formats">lesser-known formats</a>. Remember that GeoJSON is one of the best, most universal formats for your <em>vector</em> data,
@@ -499,7 +498,6 @@ In the next section, we will describe how to find GeoJSON boundary files for man
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -539,15 +537,32 @@ gitbook.start({
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
-},
-"search": true
+}
 });
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

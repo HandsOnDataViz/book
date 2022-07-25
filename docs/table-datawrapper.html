@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Datawrapper Table with Sparklines | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Datawrapper Table with Sparklines | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io//images/cover-400wide.jpg" />
   <meta property="og:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="github-repo" content="handsondataviz/book" />
@@ -25,7 +24,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2022-04-04" />
+<meta name="date" content="2022-07-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,8 +33,8 @@
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="table-design.html"/>
 <link rel="next" href="other-table-tools.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -51,9 +50,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -336,7 +335,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
 <li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
-<li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
+<li class="chapter" data-level="" data-path="style-guide.html"><a href="style-guide.html"><i class="fa fa-check"></i>Style Guide for <em>Hands-On Data Visualization</em></a></li>
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
 <li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
 <li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
@@ -376,13 +375,13 @@ div.csl-indent {
   </p>
 
 </header>
-<div id="table-datawrapper" class="section level2 unnumbered">
-<h2>Datawrapper Table with Sparklines</h2>
+<div id="table-datawrapper" class="section level2 unnumbered hasAnchor">
+<h2>Datawrapper Table with Sparklines<a href="table-datawrapper.html#table-datawrapper" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In this section, you’ll learn how to create an interactive table with <a href="https://www.datawrapper.de">Datawrapper</a>, the free online drag-and-drop visualization tool we previously introduced <a href="chart-design.html">to create charts in Chapter 6</a> and <a href="map-design.html">maps in Chapter 7</a>. You can start creating in Datawrapper right away in your browser, even without an account, but signing up for a free one will help you to keep your visualizations organized. Remember that you’ll probably still need a spreadsheet tool, such as Google Sheets, to compile and clean up data for large tables, but Datawrapper is the best tool to create and publish the interactive table online.</p>
 <p>You’ll also learn how to create sparklines, or tiny line charts that quickly summarize data trends. This chart type was refined by Edward Tufte, a Yale professor and data visualization pioneer, who described sparklines as “datawords… intense, simple, word-sized graphics.”<a href="#fn40" class="footnote-ref" id="fnref40"><sup>40</sup></a> While Tufte envisioned sparklines on a static sheet of paper or PDF document, you’ll create them inside an interactive table, as shown in Figure <a href="table-datawrapper.html#fig:datawrapper-table">8.2</a>. Readers can search by keyword, sort columns in ascending or descending order, and scroll through pages of sparklines to quickly identify data trends that would be difficult to spot in a traditional numbers-only table.</p>
 
-<div class="figure"><span id="fig:datawrapper-table"></span>
-<iframe src="https://datawrapper.dwcdn.net/0HK4f/" width="672" height="1007px">
+<div class="figure"><span style="display:block;" id="fig:datawrapper-table"></span>
+<iframe src="https://datawrapper.dwcdn.net/0HK4f/" width="672" height="1007px" data-external="1">
 </iframe>
 <p class="caption">
 Figure 8.2: Table with sparklines. Explore the <a href="https://datawrapper.dwcdn.net/0HK4f/">interactive version</a>.
@@ -407,7 +406,7 @@ Figure 8.2: Table with sparklines. Explore the <a href="https://datawrapper.dwcd
 <li>In the <em>Visualize</em> screen, under <em>Customize columns</em>, select the third line named <em>Nation</em>. Then scroll down and push the slider to <em>Replace country codes with flags</em>, as shown in Figure <a href="table-datawrapper.html#fig:datawrapper-flag">8.3</a>.</li>
 </ol>
 
-<div class="figure"><span id="fig:datawrapper-flag"></span>
+<div class="figure"><span style="display:block;" id="fig:datawrapper-flag"></span>
 <img src="images/08-table/datawrapper-flag.png" alt="Customize the Nation column and push slider to replace codes with flags."  />
 <p class="caption">
 Figure 8.3: Customize the <em>Nation</em> column and push slider to replace codes with flags.
@@ -418,7 +417,7 @@ Figure 8.3: Customize the <em>Nation</em> column and push slider to replace code
 <li><p>Now let’s color-code the <em>Continent</em> column to make it easier for readers to sort by category it in the interactive table. In the <em>Visualize</em> screen under <em>Customize columns</em>, select the <em>Continent</em> column, then scroll down and push the slider to select <em>Color cells based on categories</em>. In the drop-down menu, select the column <em>Continent</em>, and click on the <em>Background: customize colors</em> button. Select each continent and assign them different colors, as shown in Figure <a href="table-datawrapper.html#fig:datawrapper-colors">8.4</a>.</p></li>
 </ol>
 
-<div class="figure"><span id="fig:datawrapper-colors"></span>
+<div class="figure"><span style="display:block;" id="fig:datawrapper-colors"></span>
 <img src="images/08-table/datawrapper-colors.png" alt="Customize the Continent column and push slider to color cells based on categories." width="600" />
 <p class="caption">
 Figure 8.4: Customize the <em>Continent</em> column and push slider to color cells based on categories.
@@ -429,7 +428,7 @@ Figure 8.4: Customize the <em>Continent</em> column and push slider to color cel
 <li>Now let’s prepare our data to add sparklines, or tiny line charts, to visually represent change in the <em>Life expectancy 1960</em> column, which we intentionally left blank for this step. Before you begin, you must change this column from textual data (represented by the A symbol in the <em>Customize columns</em> window) to numerical data (represented by the # symbol). At the top of the screen, click on the <em>2. Check and Describe</em> arrow to go back a step. (Datawrapper will save your work.) Now click on the table header to edit the properties for <em>column E: Life Expectancy 1960</em>. On the left side, use the drop-down menu to change its properties from <em>auto (text)</em> to <em>Number</em>, as shown in Figure <a href="table-datawrapper.html#fig:datawrapper-edit-column">8.5</a>. Then click <em>Proceed</em> to return to the <em>Visualize</em> window.</li>
 </ol>
 
-<div class="figure"><span id="fig:datawrapper-edit-column"></span>
+<div class="figure"><span style="display:block;" id="fig:datawrapper-edit-column"></span>
 <img src="images/08-table/datawrapper-edit-column.png" alt="Go back to Check &amp; Describe to change the properties of column E from textual to numerical data."  />
 <p class="caption">
 Figure 8.5: Go back to <em>Check &amp; Describe</em> to change the properties of column E from textual to numerical data.
@@ -440,7 +439,7 @@ Figure 8.5: Go back to <em>Check &amp; Describe</em> to change the properties of
 </ol>
 <p>Tip: By design, we initially named this column <em>Life expectancy 1960</em>, because when we selected several columns to create sparklines, the tool added <em>–2018</em> to the end of the new column name.</p>
 
-<div class="figure"><span id="fig:datawrapper-tiny-chart"></span>
+<div class="figure"><span style="display:block;" id="fig:datawrapper-tiny-chart"></span>
 <img src="images/08-table/datawrapper-tiny-chart.png" alt="Shift-click to select all columns from Life expectancy 1960–2018 down to 2018, then click on Show selected columns as tiny chart." width="300" />
 <p class="caption">
 Figure 8.6: Shift-click to select all columns from <em>Life expectancy 1960–2018</em> down to <em>2018</em>, then click on <em>Show selected columns as tiny chart</em>.
@@ -450,7 +449,7 @@ Figure 8.6: Shift-click to select all columns from <em>Life expectancy 1960–20
 <li>Let’s add one more visual element: a bar chart to visually represent the <em>Difference</em> column in the table. In the <em>Visualize</em> screen under <em>Customize columns</em>, select <em>Difference</em>. Then scroll down and push the slider to select <em>Show as bar chart</em>, as shown in Figure <a href="table-datawrapper.html#fig:datawrapper-bar-chart">8.7</a>. Also, select a different bar color, such as black, to distinguish it from the continent colors.</li>
 </ol>
 
-<div class="figure"><span id="fig:datawrapper-bar-chart"></span>
+<div class="figure"><span style="display:block;" id="fig:datawrapper-bar-chart"></span>
 <img src="images/08-table/datawrapper-bar-chart.png" alt="Select the Difference column and Show as bar chart."  />
 <p class="caption">
 Figure 8.7: Select the <em>Difference</em> column and <em>Show as bar chart</em>.
@@ -518,7 +517,6 @@ Figure 8.7: Select the <em>Difference</em> column and <em>Show as bar chart</em>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -558,15 +556,32 @@ gitbook.start({
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
-},
-"search": true
+}
 });
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Symbol Point Map with Datawrapper | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Symbol Point Map with Datawrapper | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io//images/cover-400wide.jpg" />
   <meta property="og:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="github-repo" content="handsondataviz/book" />
@@ -25,7 +24,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2022-04-04" />
+<meta name="date" content="2022-07-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,8 +33,8 @@
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="locatormap-datawrapper.html"/>
 <link rel="next" href="choropleth-datawrapper.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -51,9 +50,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -336,7 +335,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
 <li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
-<li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
+<li class="chapter" data-level="" data-path="style-guide.html"><a href="style-guide.html"><i class="fa fa-check"></i>Style Guide for <em>Hands-On Data Visualization</em></a></li>
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
 <li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
 <li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
@@ -376,13 +375,13 @@ div.csl-indent {
   </p>
 
 </header>
-<div id="symbolmap-datawrapper" class="section level2 unnumbered">
-<h2>Symbol Point Map with Datawrapper</h2>
+<div id="symbolmap-datawrapper" class="section level2 unnumbered hasAnchor">
+<h2>Symbol Point Map with Datawrapper<a href="symbolmap-datawrapper.html#symbolmap-datawrapper" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We first introduced you to the free and easy-to-learn <a href="chart-datawrapper.html">Datawrapper tool in Chapter 6: Chart Your Data</a>. It’s also offers powerful features to create different types of maps, with professional-looking design elements. With Datawrapper you can start to work right away in your browser, with no account required unless you wish to save and share your work online.</p>
 <p>In this section, you’ll learn how to create a symbol point map. Unlike the <a href="mymaps.html">basic point map in the Google MyMaps tutorial</a>, a symbol point map shows data for specific locations through shapes of varying size or color. In Figure <a href="symbolmap-datawrapper.html#fig:datawrapper-symbolmap">7.35</a>, sample symbol map displays population change for 300 major US cities as point locations with two variables: circle size (for 2019 population size) and circle color (for percent change since 2010). Remember that we use <em>point</em> data to create symbol maps, but <em>polygon</em> data to create choropleth maps, which you’ll learn how to create in the following sections. Later we’ll explain <a href="embed.html">how to embed your interactive Datawrapper maps on the web in Chapter 9</a>.</p>
 
-<div class="figure"><span id="fig:datawrapper-symbolmap"></span>
-<iframe src="https://datawrapper.dwcdn.net/V0V9Y" width="672" height="550px">
+<div class="figure"><span style="display:block;" id="fig:datawrapper-symbolmap"></span>
+<iframe src="https://datawrapper.dwcdn.net/V0V9Y" width="672" height="550px" data-external="1">
 </iframe>
 <p class="caption">
 Figure 7.35: Symbol point map of US city population growth with Datawrapper. Explore the <a href="https://datawrapper.dwcdn.net/V0V9Y">interactive version</a>.
@@ -398,7 +397,7 @@ Figure 7.35: Symbol point map of US city population growth with Datawrapper. Exp
 <li><p>Open <a href="https://www.datawrapper.de">Datawrapper</a>, click on <em>Start Creating</em>, then the <em>New Map</em> button, and select <em>Symbol map</em> as shown in Figure <a href="symbolmap-datawrapper.html#fig:datawrapper-symbolmap-start">7.36</a>.</p></li>
 </ol>
 
-<div class="figure"><span id="fig:datawrapper-symbolmap-start"></span>
+<div class="figure"><span style="display:block;" id="fig:datawrapper-symbolmap-start"></span>
 <img src="images/07-map/datawrapper-symbolmap-start.png" alt="Start to create a symbol map in Datawrapper." width="600" />
 <p class="caption">
 Figure 7.36: Start to create a symbol map in Datawrapper.
@@ -410,7 +409,7 @@ Figure 7.36: Start to create a symbol map in Datawrapper.
 <li><p>In the <em>Match your columns</em> screen, select the <em>City-State</em> column to be <em>Matched as Address</em>, then scroll down to click the <em>Next</em> button, as shown in Figure <a href="symbolmap-datawrapper.html#fig:datawrapper-symbolmap-match">7.37</a>. In the next screen click <em>Go</em>, then see your geocoded data displayed on a map in the following screen.</p></li>
 </ol>
 
-<div class="figure"><span id="fig:datawrapper-symbolmap-match"></span>
+<div class="figure"><span style="display:block;" id="fig:datawrapper-symbolmap-match"></span>
 <img src="images/07-map/datawrapper-symbolmap-match.png" alt="Select the City-State column to be matched as the Address." width="400" />
 <p class="caption">
 Figure 7.37: Select the <em>City-State</em> column to be matched as the <em>Address</em>.
@@ -420,7 +419,7 @@ Figure 7.37: Select the <em>City-State</em> column to be matched as the <em>Addr
 <li>Click the <em>Visualize</em> button to <em>Refine</em> your map. Our goal is to display two variables: 2019 population as the circle size, and percent change as the circle color. Under <em>Symbol shape and size</em>, select the <em>circle</em> symbol, to be sized by <em>Pop Estimate 2019</em>, with a maximum symbol size of 25 pixels. Under <em>Symbol colors</em>, select the <em>Percent Change 2010-2019</em> column, as shown in Figure <a href="symbolmap-datawrapper.html#fig:datawrapper-symbolmap-refine">7.38</a>.</li>
 </ol>
 
-<div class="figure"><span id="fig:datawrapper-symbolmap-refine"></span>
+<div class="figure"><span style="display:block;" id="fig:datawrapper-symbolmap-refine"></span>
 <img src="images/07-map/datawrapper-symbolmap-refine.png" alt="Refine your map by selecting data to display symbol shapes, sizes, and colors."  />
 <p class="caption">
 Figure 7.38: Refine your map by selecting data to display symbol shapes, sizes, and colors.
@@ -430,7 +429,7 @@ Figure 7.38: Refine your map by selecting data to display symbol shapes, sizes, 
 <li>Optionally, to customize the color palette and intervals to match our example, click the <em>wrench symbol</em> next to the palette. Click the <em>Import colors</em> button and you can paste in the five hexadecimal codes listed below from ColorBrewer, as described in the <a href="design-choropleth.html">Choropleth Design section</a>. The first code is dark pink, followed by a 4-class sequential green: <code>#d01c8b,#bae4b3,#74c476,#31a354,#006d2c</code>. See Figure <a href="symbolmap-datawrapper.html#fig:datawrapper-symbolmap-colors">7.39</a>.</li>
 </ol>
 
-<div class="figure"><span id="fig:datawrapper-symbolmap-colors"></span>
+<div class="figure"><span style="display:block;" id="fig:datawrapper-symbolmap-colors"></span>
 <img src="images/07-map/datawrapper-symbolmap-colors.png" alt="Create a new color palette by importing five hexadecimal color codes from ColorBrewer." width="600" />
 <p class="caption">
 Figure 7.39: Create a new color palette by importing five hexadecimal color codes from ColorBrewer.
@@ -440,7 +439,7 @@ Figure 7.39: Create a new color palette by importing five hexadecimal color code
 <li>To continue customizing intervals to match our example, set the steps to <em>5</em> and <em>Custom</em>. Manually type in custom intervals for below 0% (bright pink), 0 to 5% (light green), and so forth up the scale. Click the <em>More options</em> button, and under <em>Legend</em>, change <em>Labels</em> to <em>custom</em>, and click each label to edit the text that appears on the map menu, as shown in Figure <a href="symbolmap-datawrapper.html#fig:datawrapper-symbolmap-intervals">7.40</a>. Learn more about these options in the <a href="https://academy.datawrapper.de/article/120-customizing-your-symbol-map">Datawrapper Academy post on customizing your symbol map</a>.</li>
 </ol>
 
-<div class="figure"><span id="fig:datawrapper-symbolmap-intervals"></span>
+<div class="figure"><span style="display:block;" id="fig:datawrapper-symbolmap-intervals"></span>
 <img src="images/07-map/datawrapper-symbolmap-intervals.png" alt="Customize the interval ranges and edit the legend." width="500" />
 <p class="caption">
 Figure 7.40: Customize the interval ranges and edit the legend.
@@ -503,7 +502,6 @@ Figure 7.40: Customize the interval ranges and edit the legend.
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -543,15 +541,32 @@ gitbook.start({
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
-},
-"search": true
+}
 });
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Pivot Points into Polygon Data | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Pivot Points into Polygon Data | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io//images/cover-400wide.jpg" />
   <meta property="og:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="github-repo" content="handsondataviz/book" />
@@ -25,7 +24,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2022-04-04" />
+<meta name="date" content="2022-07-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,8 +33,8 @@
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="bulk-geocode.html"/>
 <link rel="next" href="detect.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -51,9 +50,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -336,7 +335,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
 <li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
-<li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
+<li class="chapter" data-level="" data-path="style-guide.html"><a href="style-guide.html"><i class="fa fa-check"></i>Style Guide for <em>Hands-On Data Visualization</em></a></li>
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
 <li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
 <li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
@@ -376,8 +375,8 @@ div.csl-indent {
   </p>
 
 </header>
-<div id="pivot-point-to-polygon" class="section level2 unnumbered">
-<h2>Pivot Points into Polygon Data</h2>
+<div id="pivot-point-to-polygon" class="section level2 unnumbered hasAnchor">
+<h2>Pivot Points into Polygon Data<a href="pivot-point-to-polygon.html#pivot-point-to-polygon" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>If you deal with geographical data, you may find yourself in a situation where
 you have a list of addresses which need to be counted (<em>aggregated</em>) by area
 and displayed as a polygon map. In this case, a simple pivot table in a spreadsheet
@@ -389,7 +388,7 @@ A lot of polygon maps end up being <em>choropleth</em> maps, so we will be using
 <p>Imagine you’re asked to create a choropleth map of total hospitals by US state.
 Instead of showing individual hospitals as points, you want darker shades of blue to represent states with more hospitals, as shown in Figure <a href="pivot-point-to-polygon.html#fig:pivot-address">13.29</a>.</p>
 
-<div class="figure"><span id="fig:pivot-address"></span>
+<div class="figure"><span style="display:block;" id="fig:pivot-address"></span>
 <img src="images/13-transform/pivot-address-annotated.png" alt="You can count addresses by state (or other area) to produce polygon, or choropleth, maps instead of point maps."  />
 <p class="caption">
 Figure 13.29: You can count addresses by state (or other area) to produce polygon, or choropleth, maps instead of point maps.
@@ -397,7 +396,7 @@ Figure 13.29: You can count addresses by state (or other area) to produce polygo
 </div>
 <p>First, save the database to your local machine by clicking the “Download this dataset” button to the right of the table, as shown in Figure <a href="pivot-point-to-polygon.html#fig:pivot-address-export">13.30</a>.</p>
 
-<div class="figure"><span id="fig:pivot-address-export"></span>
+<div class="figure"><span style="display:block;" id="fig:pivot-address-export"></span>
 <img src="images/13-transform/pivot-address-export-annotated.png" alt="Export the entire dataset as a CSV." width="600" />
 <p class="caption">
 Figure 13.30: Export the entire dataset as a CSV.
@@ -410,7 +409,7 @@ is selected, and click <em>Create</em>). In the pivot table, set <em>Rows</em> t
 we want to get counts by state. Next, set pivot table’s <em>Values</em> to <em>State</em>—or really any other
 column that has no missing values—and choose <em>Summarize by: COUNTA</em>. Voila!</p>
 
-<div class="figure"><span id="fig:pivot-address-sheet"></span>
+<div class="figure"><span style="display:block;" id="fig:pivot-address-sheet"></span>
 <img src="images/13-transform/pivot-address-sheet-annotated.png" alt="Use pivot tables in any spreadsheet software to count addresses per area (such as state, county, of zip code)."  />
 <p class="caption">
 Figure 13.31: Use pivot tables in any spreadsheet software to count addresses per area (such as state, county, of zip code).
@@ -420,8 +419,8 @@ Figure 13.31: Use pivot tables in any spreadsheet software to count addresses pe
 go to <em>File &gt; Download &gt; Comma-separated values (.csv, current sheet)</em>.
 You can now merge this dataset with your polygons manually using editing capabilities of
 <a href="geojsonio.html">GeoJson.io</a>, or merge it all in one go using powerful <a href="mapshaper.html">Mapshaper</a>.</p>
-<div id="summary13" class="section level3 unnumbered">
-<h3>Summary</h3>
+<div id="summary13" class="section level3 unnumbered hasAnchor">
+<h3>Summary<a href="pivot-point-to-polygon.html#summary13" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>In this chapter, we delved into geospatial data and the GeoJSON format. You also learned how to use various open-source tools to find geodata, convert and create vector data, and edit and join these layers with spreadsheet data. You also “warped” historical raster map images by georeferencing them onto modern maps. Finally, you acquired some additional strategies to bulk geocode large batches of US addresses, and to pivot point-level data into polygons for use in choropleth maps.</p>
 <p>In the next chapter, we will discuss how to detect lies and reduce bias in charts and maps, so that you become a more critical consumer of visualizations as well as a better data storyteller.</p>
 
@@ -478,7 +477,6 @@ You can now merge this dataset with your polygons manually using editing capabil
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -518,15 +516,32 @@ gitbook.start({
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
-},
-"search": true
+}
 });
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

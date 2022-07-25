@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Collect Data with Google Forms | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Collect Data with Google Forms | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io//images/cover-400wide.jpg" />
   <meta property="og:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="github-repo" content="handsondataviz/book" />
@@ -25,7 +24,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2022-04-04" />
+<meta name="date" content="2022-07-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,8 +33,8 @@
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="geocode.html"/>
 <link rel="next" href="sort.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -51,9 +50,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -336,7 +335,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
 <li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
-<li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
+<li class="chapter" data-level="" data-path="style-guide.html"><a href="style-guide.html"><i class="fa fa-check"></i>Style Guide for <em>Hands-On Data Visualization</em></a></li>
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
 <li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
 <li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
@@ -376,12 +375,12 @@ div.csl-indent {
   </p>
 
 </header>
-<div id="forms" class="section level2 unnumbered">
-<h2>Collect Data with Google Forms</h2>
+<div id="forms" class="section level2 unnumbered hasAnchor">
+<h2>Collect Data with Google Forms<a href="forms.html#forms" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>At the top of this chapter, we invited you and other readers of this book to fill out a <a href="https://forms.gle/yn5QwTzfQkYcppQn9">quick online survey</a>, which <a href="https://docs.google.com/spreadsheets/d/1egX_akJccnCSzdk1aaDdtrEGe5HcaTrlOW-Yf6mJ3Uo">publicly shares all of the responses in a sample dataset</a>, so that we can learn more about people like you, and to continue to make revisions to match your expectations. In this section, you’ll learn how to create your own online form and link the results to a live Google Sheet.</p>
 <p>Inside your Google Drive account, click on the <em>New</em> button and select <em>Google Forms</em>, as shown in Figure <a href="forms.html#fig:forms-new">2.16</a>.</p>
 
-<div class="figure"><span id="fig:forms-new"></span>
+<div class="figure"><span style="display:block;" id="fig:forms-new"></span>
 <img src="images/02-spreadsheet/forms-new.png" alt="Click the New button to select Google Forms." width="150" />
 <p class="caption">
 Figure 2.16: Click the <em>New</em> button to select <em>Google Forms</em>.
@@ -389,7 +388,7 @@ Figure 2.16: Click the <em>New</em> button to select <em>Google Forms</em>.
 </div>
 <p>The Google Forms <em>Questions</em> tab allows you to design questions with different types of responses: short- and paragraph-length answers, multiple choice, checkboxes, file uploads, etc., as shown in Figure <a href="forms.html#fig:forms-questions">2.17</a>. Furthermore, Google Forms attempts to interpret questions you enter in order to predictively assign them to a type.</p>
 
-<div class="figure"><span id="fig:forms-questions"></span>
+<div class="figure"><span style="display:block;" id="fig:forms-questions"></span>
 <img src="images/02-spreadsheet/forms-questions.png" alt="The Google Forms Questions tab allows you to designate different types of responses." width="700" />
 <p class="caption">
 Figure 2.17: The Google Forms <em>Questions</em> tab allows you to designate different types of responses.
@@ -397,7 +396,7 @@ Figure 2.17: The Google Forms <em>Questions</em> tab allows you to designate dif
 </div>
 <p>Give each question a very short title, since these will appear as column headers in the linked spreadsheet you’ll create further below. If a question needs more explanation or examples, click the three-dot kebob menu in the bottom-right corner to <em>Show &gt; Description</em>, which opens a text box where you can type in more details, as shown in Figure <a href="forms.html#fig:forms-description">2.18</a>. Also, you can <em>Show &gt; Response validation</em>, which requires users to follow a particular format, such as an email address or phone number. Furthermore, you can select the <em>Required</em> field to require users to respond to a question before proceeding. See additional options on the <a href="https://support.google.com/a/users/answer/9991170">Google Forms support page</a>.</p>
 
-<div class="figure"><span id="fig:forms-description"></span>
+<div class="figure"><span style="display:block;" id="fig:forms-description"></span>
 <img src="images/02-spreadsheet/forms-description.png" alt="Click the three-dot kebab menu to Show - Description to add details for any question." width="700" />
 <p class="caption">
 Figure 2.18: Click the three-dot kebab menu to <em>Show - Description</em> to add details for any question.
@@ -405,7 +404,7 @@ Figure 2.18: Click the three-dot kebab menu to <em>Show - Description</em> to ad
 </div>
 <p>Note: Another name for the three-dot menu symbol is the “kebab menu” because it resembles Middle Eastern food cooked on a skewer, in contrast to the three-line “hamburger menu” on many mobile devices, as shown in Figure <a href="forms.html#fig:menu-hamburger-kebab">2.19</a>. Software developers must be hungry.</p>
 
-<div class="figure"><span id="fig:menu-hamburger-kebab"></span>
+<div class="figure"><span style="display:block;" id="fig:menu-hamburger-kebab"></span>
 <img src="images/02-spreadsheet/menu-hamburger-kebab.png" alt="Distinguish between the hamburger versus kebab menu icons."  />
 <p class="caption">
 Figure 2.19: Distinguish between the hamburger versus kebab menu icons.
@@ -413,7 +412,7 @@ Figure 2.19: Distinguish between the hamburger versus kebab menu icons.
 </div>
 <p>To preview how your online will appear to recipients, click the <em>Eyeball symbol</em> near the top of the page, as shown in Figure <a href="forms.html#fig:forms-preview">2.20</a>. When your form is complete, click the <em>Send</em> button to distribute it via email, a link, or to embed the live form as an iframe on a web page. Learn more about the latter option in <a href="embed.html">Chapter 9: Embed on the Web</a>.</p>
 
-<div class="figure"><span id="fig:forms-preview"></span>
+<div class="figure"><span style="display:block;" id="fig:forms-preview"></span>
 <img src="images/02-spreadsheet/forms-preview.png" alt="Click the Eyeball symbol to preview your form." width="350" />
 <p class="caption">
 Figure 2.20: Click the <em>Eyeball symbol</em> to preview your form.
@@ -421,7 +420,7 @@ Figure 2.20: Click the <em>Eyeball symbol</em> to preview your form.
 </div>
 <p>The Google Forms <em>Responses</em> tab will show individual results you receive, and also includes a powerful button to open the data in a linked Google Sheet, as shown in Figure <a href="forms.html#fig:forms-responses">2.21</a>.</p>
 
-<div class="figure"><span id="fig:forms-responses"></span>
+<div class="figure"><span style="display:block;" id="fig:forms-responses"></span>
 <img src="images/02-spreadsheet/forms-responses.png" alt="The Google Forms Responses tab includes a button to open results in a linked Google Sheet." width="500" />
 <p class="caption">
 Figure 2.21: The Google Forms <em>Responses</em> tab includes a button to open results in a linked Google Sheet.
@@ -479,7 +478,6 @@ Figure 2.21: The Google Forms <em>Responses</em> tab includes a button to open r
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -519,15 +517,32 @@ gitbook.start({
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
-},
-"search": true
+}
 });
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Spreadsheet vs. Relational Database | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Spreadsheet vs. Relational Database | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io//images/cover-400wide.jpg" />
   <meta property="og:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="github-repo" content="handsondataviz/book" />
@@ -25,7 +24,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2022-04-04" />
+<meta name="date" content="2022-07-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,8 +33,8 @@
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="vlookup.html"/>
 <link rel="next" href="find.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -51,9 +50,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -336,7 +335,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
 <li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
-<li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
+<li class="chapter" data-level="" data-path="style-guide.html"><a href="style-guide.html"><i class="fa fa-check"></i>Style Guide for <em>Hands-On Data Visualization</em></a></li>
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
 <li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
 <li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
@@ -376,8 +375,8 @@ div.csl-indent {
   </p>
 
 </header>
-<div id="database" class="section level2 unnumbered">
-<h2>Spreadsheet vs. Relational Database</h2>
+<div id="database" class="section level2 unnumbered hasAnchor">
+<h2>Spreadsheet vs. Relational Database<a href="database.html#database" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In the previous section, you learned how the VLOOKUP function can search for matching data in columns across spreadsheets and automatically paste results. Building on that concept, let’s distinguish between a spreadsheet and a relational database, and under what circumstances it might be wiser to use the latter.</p>
 <p>A spreadsheet is sometimes called a “flat-file database” because all of the records are stored in rows and columns in a single table. For example, if you kept a single spreadsheet of US food bank staff, every row would list an individual person, organization, and addresses, just like the mailing list we created in Figure <a href="vlookup.html#fig:vlookup-final">2.39</a> in the prior section on VLOOKUP.</p>
 <p>But keeping all of your data in a single spreadsheet can raise problems. For example, it contains lots of duplicated entries. For people who all work at the same food bank, each row contains a duplicate of that organization’s address. If an organization moves to a new location, you need to update all of the rows that contain those addresses. Or if two organizations merge together under a new name, you need to update all of the rows for individuals affected by that change. While keeping all of your information organized in a single spreadsheet initially sounds like a good idea, when your dataset grows in size and internal relationships (such as tracking people who are connected to organizations, etc.), continually updating every row becomes a lot of extra work.</p>
@@ -385,7 +384,7 @@ div.csl-indent {
 <p>Although Google Sheets is a great spreadsheet, it’s not a relational database. Instead, consider a better tool such as <a href="https://airtable.com">Airtable</a>, which allows you to create relational databases in your web browser with up to 1,200 free records (or more with the paid version), using existing templates or your own designs. Airtable enables data migration by importing or exporting all records in CSV format, and it also supports real-time editor collaboration with co-workers.</p>
 <p>To demonstrate, we imported both of the Google Sheets above into this <a href="https://airtable.com/shrOlb4XT11Xy2LP2">live Airtable database called Food Banks sample</a>, which anyone with the link can view, but only we can edit. At the top are tabs to view each sheet, named <em>people</em> and <em>food banks</em>. To transform this into a relational database, we used Airtable settings to link the <em>organization</em> column in the <em>people</em> sheet to the <em>food banks</em> sheet, where the addresses are stored, as shown in Figure <a href="database.html#fig:airtable-link">2.40</a>. In our editable version, we double-clicked on the column name, then selected <em>Link to another record</em> in the drop-down menu, to connect it to another tab.</p>
 
-<div class="figure"><span id="fig:airtable-link"></span>
+<div class="figure"><span style="display:block;" id="fig:airtable-link"></span>
 <img src="images/02-spreadsheet/airtable-link.png" alt="In this Airtable sample, we linked the organization column in the people sheet to the food banks sheet." width="500" />
 <p class="caption">
 Figure 2.40: In this Airtable sample, we linked the <em>organization</em> column in the <em>people</em> sheet to the <em>food banks</em> sheet.
@@ -393,16 +392,16 @@ Figure 2.40: In this Airtable sample, we linked the <em>organization</em> column
 </div>
 <p>In our Airtable sample, click on a linked row to expand it and view related data. For example, if you click and expand on the first row the <em>people</em> sheet, their organization’s full address appears from the <em>food banks</em> sheet, as shown in Figure <a href="database.html#fig:airtable-expand">2.41</a>. In our editable version, if we update the address for one organization in the <em>food banks</em> sheet, it’s automatically changed for all employees linked to that organization in the <em>people</em> sheet. In addition, Airtable allows you to sort, filter, and create different views of your data that you can share with others, a topic we’ll cover in <a href="embed.html">Chapter 9: Embed on the Web</a>. See more about its features in the <a href="https://support.airtable.com">Airtable Support page</a>.</p>
 
-<div class="figure"><span id="fig:airtable-expand"></span>
-<iframe src="https://airtable.com/embed/shrOlb4XT11Xy2LP2?backgroundColor=yellow" width="600" height="533px">
+<div class="figure"><span style="display:block;" id="fig:airtable-expand"></span>
+<iframe src="https://airtable.com/embed/shrOlb4XT11Xy2LP2?backgroundColor=yellow" width="600" height="533px" data-external="1">
 </iframe>
 <p class="caption">
 Figure 2.41: In this <a href="https://airtable.com/shrOlb4XT11Xy2LP2">Airtable demo</a>, click on a row in one sheet to expand and view its linked data in another sheet.
 </p>
 </div>
 <p>It’s important to understand the conceptual differences between a “flat-file” spreadsheet and a relational database to help you determine when to use one tool versus another. As you’ve learned in the sections above, spreadsheets are your best choice to begin organizing and analyzing your data, using methods such as sorting, filtering, pivoting, and lookup, to help reveal the underlying stories that you may wish to visualize. But relational databases are your best choice when maintaining large amounts of data with internal links, like one-to-many relationships, such as an organization with several employees.</p>
-<div id="summary2" class="section level3 unnumbered">
-<h3>Summary</h3>
+<div id="summary2" class="section level3 unnumbered hasAnchor">
+<h3>Summary<a href="database.html#summary2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>If you’re one of the many people who “never really learned” about spreadsheets in school or on the job, or if you’ve taught yourself bits and pieces along the way, we hope that this chapter has successfully strengthened your skills. All of the subsequent chapters in this book, especially those on designing <a href="chart.html">interactive charts in Chapter 6</a> and <a href="map.html">interactive maps in Chapter 7</a>, require a basic level of familiarity with spreadsheets. In addition to serving as incredible time-savers when it comes to tedious data tasks, the spreadsheet tools and methods featured above are designed to help you share, sort, calculate, pivot, and lookup matching data, with the broader goal of visualizing your data stories.</p>
 <p>The next chapter describes strategies for finding and questioning your data, particularly on open data sites operated by governmental and non-profit organizations, where you’ll also need spreadsheet skills to download and organize public information.</p>
 
@@ -459,7 +458,6 @@ Figure 2.41: In this <a href="https://airtable.com/shrOlb4XT11Xy2LP2">Airtable d
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -499,15 +497,32 @@ gitbook.start({
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
-},
-"search": true
+}
 });
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

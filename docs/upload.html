@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Upload and Convert to Google Sheets | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Upload and Convert to Google Sheets | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io//images/cover-400wide.jpg" />
   <meta property="og:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="github-repo" content="handsondataviz/book" />
@@ -25,7 +24,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2022-04-04" />
+<meta name="date" content="2022-07-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,8 +33,8 @@
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="share.html"/>
 <link rel="next" href="geocode.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -51,9 +50,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -336,7 +335,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
 <li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
-<li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
+<li class="chapter" data-level="" data-path="style-guide.html"><a href="style-guide.html"><i class="fa fa-check"></i>Style Guide for <em>Hands-On Data Visualization</em></a></li>
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
 <li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
 <li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
@@ -376,15 +375,15 @@ div.csl-indent {
   </p>
 
 </header>
-<div id="upload" class="section level2 unnumbered">
-<h2>Upload and Convert to Google Sheets</h2>
+<div id="upload" class="section level2 unnumbered hasAnchor">
+<h2>Upload and Convert to Google Sheets<a href="upload.html#upload" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We feature Google Sheets in this book partly because it supports data migration, meaning the ability to import and export files in many common formats. But imports work best when you check the <em>Convert uploads</em> box, which is hidden inside the Google Drive Settings gear symbol as shown in Figure <a href="upload.html#fig:drive-settings">2.9</a>. Checking this box automatically transforms Microsoft Excel sheets into Google Sheets format (and also Microsoft Word and PowerPoint files into Google Documents and Slides formats), which allows easier editing. If you don’t check this box, then Google will keep your files in their original format, which makes them harder to edit. Google turns off this conversion setting by default on new accounts, but we’ll teach you how to turn it on, and the benefits of doing so.</p>
 <ol style="list-style-type: decimal">
 <li><p>Find a sample Excel file you can use on your computer. If you don’t have one, open and save to download to your computer this <a href="data/subset-reader-survey.xlsx">Excel file of a subset of the Hands-On Data Visualization reader public survey responses</a>.</p></li>
 <li><p>Log into your <a href="https://drive.google.com">Google Drive</a> account, and click the <em>Gear symbol</em> in the upper-right corner, as shown in Figure <a href="upload.html#fig:drive-settings">2.9</a>, to open the Settings screen. Note that this global <em>Gear symbol &gt; Settings</em> appears at Google Drive level, <em>not</em> inside each Google Sheet.</p></li>
 </ol>
 
-<div class="figure"><span id="fig:drive-settings"></span>
+<div class="figure"><span style="display:block;" id="fig:drive-settings"></span>
 <img src="images/02-spreadsheet/drive-settings.png" alt="Click your Google Drive Gear Symbol - Settings in the upper-right corner." width="300" />
 <p class="caption">
 Figure 2.9: Click your Google Drive <em>Gear Symbol - Settings</em> in the upper-right corner.
@@ -394,7 +393,7 @@ Figure 2.9: Click your Google Drive <em>Gear Symbol - Settings</em> in the upper
 <li>On the Settings screen, check the box to <em>Convert uploaded files to Google Docs editor format</em>, as shown in Figure <a href="upload.html#fig:convert-uploads">2.10</a>, and click <em>Done</em>. This turns on the conversion setting globally, meaning it will convert all possible files that you upload in the future—including Microsoft Excel, Word, PowerPoint, and more—unless you turn it off.</li>
 </ol>
 
-<div class="figure"><span id="fig:convert-uploads"></span>
+<div class="figure"><span style="display:block;" id="fig:convert-uploads"></span>
 <img src="images/02-spreadsheet/convert-uploads.png" alt="Inside your Google Drive Settings, check the box to automatically convert all uploads." width="750" />
 <p class="caption">
 Figure 2.10: Inside your Google Drive Settings, check the box to automatically convert all uploads.
@@ -404,7 +403,7 @@ Figure 2.10: Inside your Google Drive Settings, check the box to automatically c
 <li>Upload a sample Excel file from your computer to your Google Drive. Either drag-and-drop it to the desired folder, as shown in Figure <a href="upload.html#fig:upload-file">2.11</a>, or use the <em>New</em> button and select <em>File upload</em>.</li>
 </ol>
 
-<div class="figure"><span id="fig:upload-file"></span>
+<div class="figure"><span style="display:block;" id="fig:upload-file"></span>
 <img src="images/02-spreadsheet/upload-file.png" alt="Drag-and-drop your sample Excel file into your Google Drive to upload it." width="300" />
 <p class="caption">
 Figure 2.11: Drag-and-drop your sample Excel file into your Google Drive to upload it.
@@ -412,7 +411,7 @@ Figure 2.11: Drag-and-drop your sample Excel file into your Google Drive to uplo
 </div>
 <p>If you forget to check the <em>Convert uploads</em> box, Google Drive will keep uploaded files in their original format, and display their icons and file name extensions such as <code>.xlsx</code> or <code>.csv</code>, as shown in Figure <a href="upload.html#fig:drive-file-icons">2.12</a>.</p>
 
-<div class="figure"><span id="fig:drive-file-icons"></span>
+<div class="figure"><span style="display:block;" id="fig:drive-file-icons"></span>
 <img src="images/02-spreadsheet/drive-file-icons.png" alt="If you forget to convert uploads, Google Drive will keep files in their original format with these icons." width="300" />
 <p class="caption">
 Figure 2.12: If you forget to convert uploads, Google Drive will keep files in their original format with these icons.
@@ -471,7 +470,6 @@ Figure 2.12: If you forget to convert uploads, Google Drive will keep files in t
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -511,15 +509,32 @@ gitbook.start({
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
-},
-"search": true
+}
 });
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

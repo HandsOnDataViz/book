@@ -20,7 +20,7 @@ Spread out these sheets like a *storyboard* to define the sequence of your narra
 
 ```{r data-story-panel2, out.width=750, fig.cap="(ref:data-story-panel2)"}
  knitr::include_graphics("images/01-choose/data-story-panel.png")
- ```
+```
 
 Let's enrich your storyboard by adding content about what you discovered while searching, cleaning, analyzing, and visualizing your data. Select only your most meaningful tables, charts, or maps. Print them out on separate sheets of paper, or download [static images or capture screenshots](static.html) to place them in your draft slides or document. Leave room for you to write at the top and bottom of each table, chart, or map in order to tell your data story.
 

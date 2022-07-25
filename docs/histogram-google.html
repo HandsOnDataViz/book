@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>- Histograms | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="- Histograms | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io//images/cover-400wide.jpg" />
   <meta property="og:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="github-repo" content="handsondataviz/book" />
@@ -25,7 +24,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2022-04-04" />
+<meta name="date" content="2022-07-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,8 +33,8 @@
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="bar-column-google.html"/>
 <link rel="next" href="pie-line-area-google.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -51,9 +50,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -336,7 +335,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
 <li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
-<li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
+<li class="chapter" data-level="" data-path="style-guide.html"><a href="style-guide.html"><i class="fa fa-check"></i>Style Guide for <em>Hands-On Data Visualization</em></a></li>
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
 <li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
 <li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
@@ -376,18 +375,18 @@ div.csl-indent {
   </p>
 
 </header>
-<div id="histogram-google" class="section level2 unnumbered">
-<h2>- Histograms</h2>
+<div id="histogram-google" class="section level2 unnumbered hasAnchor">
+<h2>- Histograms<a href="histogram-google.html#histogram-google" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Histograms are best to show the distribution of raw data, by displaying the number of values that fall within defined ranges, often called <em>buckets</em> or <em>bins</em>. Creating a histogram can be a great way to better understand what your data looks like to inform your decision-making when designing more advanced visualizations, such as <a href="design-choropleth.html">choropleth maps, as you’ll learn in Chapter 7</a>. Although histograms may look similar to column charts, the two are different. First, histograms show <em>continuous</em> data, and usually you can adjust the bucket ranges to explore frequency patterns. For example, you can shift histogram buckets from 0-1, 1-2, 2-3, etc. to 0-2, 2-4, etc. By contrast, column charts show <em>categorical</em> data, such as the number of apples, bananas, carrots, etc. Second, histograms do not usually show spaces between buckets because these are continuous values, while column charts show spaces to separate each category.</p>
 <p>In this section, you’ll create two types of histograms in Google Sheets: quick histograms using the <em>Column stats</em> menu versus regular histograms using the <em>Chart</em> menu, and the advantages of each method. For both tutorials we’ll use the same data: the average calorie supply per capita for 174 countries in 2017, compiled by the <a href="http://www.fao.org/faostat/en/#data/FBS">United Nations Food and Agriculture Organization</a>, accessed through <a href="https://ourworldindata.org/food-supply">Our World In Data</a>. Note that methods for measuring food supply vary across nations and over time, and estimate the amount of food availability, rather than actual consumption.</p>
-<div id="quick-histograms-with-google-sheets-column-stats" class="section level3 unnumbered">
-<h3>Quick Histograms with Google Sheets Column Stats</h3>
+<div id="quick-histograms-with-google-sheets-column-stats" class="section level3 unnumbered hasAnchor">
+<h3>Quick Histograms with Google Sheets Column Stats<a href="histogram-google.html#quick-histograms-with-google-sheets-column-stats" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
 <li><p>Open the sample data on <a href="https://docs.google.com/spreadsheets/d/1V-r1bOWpvyCRhmJa0gRZ1TEchXvrr7UTZ97rKOU1WRo/edit#gid=1132930452">Average Daily Calorie Supply per capita by country 2017 in Google Sheets</a>, log in with your account, and go to <em>File &gt; Make a Copy</em> to create a version you can edit in your Google Drive.</p></li>
 <li><p>To create a quick histogram in Google Sheets, select any column, then go to <em>Data &gt; Column stats</em>, and click the <em>Distribution</em> button in the sidebar to view a histogram for that column, as shown in Figure <a href="histogram-google.html#fig:histogram-quick">6.27</a>. The advantage is that this method is very fast, and you can quickly create histograms for other columns in the same sheet using the arrows near the top of the sidebar (<code>&lt; &gt;</code>). However, you cannot manually adjust the bucket ranges or make other edits to these quick histograms, and you cannot embed them on the web as you can with regular charts in Google Sheets.</p></li>
 </ol>
 
-<div class="figure"><span id="fig:histogram-quick"></span>
+<div class="figure"><span style="display:block;" id="fig:histogram-quick"></span>
 <img src="images/06-chart/histogram-quick.png" alt="To create a quick histogram in a Google Sheet, select a column, then go to Data - Column stats - Distribution." width="500" />
 <p class="caption">
 Figure 6.27: To create a quick histogram in a Google Sheet, select a column, then go to <em>Data - Column stats - Distribution</em>.
@@ -395,12 +394,12 @@ Figure 6.27: To create a quick histogram in a Google Sheet, select a column, the
 </div>
 <p>Histograms are designed to show broad patterns of data distribution, not individual values. The histogram in Figure <a href="histogram-google.html#fig:histogram-quick">6.27</a> shows that while most nations have an average daily supply around 2,800 calories per capita, 8 nations have fewer than 2,000, and 11 nations have more than 3,500. Without annotations, histograms don’t tell us the names of those outlier countries. But they do offer a better sense of the shape of the data distribution.</p>
 </div>
-<div id="regular-histograms-with-google-sheets-charts" class="section level3 unnumbered">
-<h3>Regular Histograms with Google Sheets Charts</h3>
+<div id="regular-histograms-with-google-sheets-charts" class="section level3 unnumbered hasAnchor">
+<h3>Regular Histograms with Google Sheets Charts<a href="histogram-google.html#regular-histograms-with-google-sheets-charts" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Compare the quick histogram created with <em>Column stats</em> in Figure <a href="histogram-google.html#fig:histogram-quick">6.27</a> with the regular histogram created with <em>Charts</em> in Figure <a href="histogram-google.html#fig:histogram">6.28</a>. You’ll notice that in the regular histogram, you can define the bucket ranges, display dividers, and add titles and labels to provide more context to readers. Also, the interactive version of the regular histogram allows users to float their cursor to see underlying data on the count for each column.</p>
 
-<div class="figure"><span id="fig:histogram"></span>
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=480820223&amp;amp;format=interactive" width="672" height="400px">
+<div class="figure"><span style="display:block;" id="fig:histogram"></span>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=480820223&amp;amp;format=interactive" width="672" height="400px" data-external="1">
 </iframe>
 <p class="caption">
 Figure 6.28: Regular histogram chart: Explore the full-screen <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=480820223&amp;format=interactive">interactive version</a>.
@@ -410,7 +409,7 @@ Figure 6.28: Regular histogram chart: Explore the full-screen <a href="https://d
 <li>To create a regular histogram in Google Sheets, select a column with values and go to <em>Insert &gt; Chart</em>. If Google Sheets does not automatically select <em>Histogram chart</em> as the <em>Chart type</em> in Chart editor, use the dropdown and select it manually, near the bottom of the list in the <em>Other</em> category, as shown in Figure <a href="histogram-google.html#fig:histogram-chart-type">6.29</a></li>
 </ol>
 
-<div class="figure"><span id="fig:histogram-chart-type"></span>
+<div class="figure"><span style="display:block;" id="fig:histogram-chart-type"></span>
 <img src="images/06-chart/histogram-chart-type.png" alt="If not shown automatically, go to the Chart Editor sidebar and select Setup - Chart type - Other - Histogram." width="300" />
 <p class="caption">
 Figure 6.29: If not shown automatically, go to the Chart Editor sidebar and select <em>Setup - Chart type - Other - Histogram</em>.
@@ -478,7 +477,6 @@ Figure 6.29: If not shown automatically, go to the Chart Editor sidebar and sele
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -518,15 +516,32 @@ gitbook.start({
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
-},
-"search": true
+}
 });
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

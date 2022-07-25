@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 14 Detect Lies and Reduce Bias | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 14 Detect Lies and Reduce Bias | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io//images/cover-400wide.jpg" />
   <meta property="og:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="github-repo" content="handsondataviz/book" />
@@ -25,7 +24,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2022-04-04" />
+<meta name="date" content="2022-07-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,8 +33,8 @@
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="pivot-point-to-polygon.html"/>
 <link rel="next" href="how-to-lie-with-charts.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -51,9 +50,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -336,7 +335,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
 <li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
-<li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
+<li class="chapter" data-level="" data-path="style-guide.html"><a href="style-guide.html"><i class="fa fa-check"></i>Style Guide for <em>Hands-On Data Visualization</em></a></li>
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
 <li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
 <li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
@@ -376,8 +375,8 @@ div.csl-indent {
   </p>
 
 </header>
-<div id="detect" class="section level1" number="14">
-<h1><span class="header-section-number">Chapter 14</span> Detect Lies and Reduce Bias</h1>
+<div id="detect" class="section level1 hasAnchor" number="14">
+<h1><span class="header-section-number">Chapter 14</span> Detect Lies and Reduce Bias<a href="detect.html#detect" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>The goal of data visualization is to encode information into images that capture true and insightful stories. But we’ve warned you to watch out for people who lie with visualizations. Looking back at income inequality examples in the <a href="introduction.html">Introduction</a> to this book, we intentionally manipulated charts in Figure <a href="persuasive.html#fig:us-income-chart1">0.1</a> and Figure <a href="persuasive.html#fig:us-income-chart2">0.2</a>, and maps in Figure <a href="shades.html#fig:world-income-map1">0.3</a> and Figure <a href="shades.html#fig:world-income-map2">0.4</a>, to demonstrate how the same data can be rearranged to paint very different pictures of reality. Does that mean all data visualizations are right? Definitely not. On closer examination, we declared that the second of the two charts about US income inequality was <em>misleading</em> because it intentionally used an inappropriate scale to hide the truth. But we also confided that the two world maps were <em>equally truthful</em>, even though the US appeared in a darker color (signaling a higher level of inequality) than the other.</p>
 <p>How can two different visualizations be equally right? Our response may conflict with those who prefer to call their work <em>data science</em>, a label that suggests an objective world with only one right answer. Instead, we argue that data visualization is best understood as <em>interpretative skill</em> that still depends on evidence, but more than one portrayal of reality may be valid. As you recall, our field has only a few definitive rules about how <em>not</em> to visualize data, which we introduced in <a href="chart-design.html">Chapter 6 on chart design</a> and <a href="map-design.html">Chapter 7 on map design</a>. Rather than a binary world, we argue that visualizations fall into three categories.</p>
 <p>First, visualizations are <em>wrong</em> if they misstate the evidence or violate one of these rigid design rules. For examples of the latter, if a bar or column chart begins at a number other than zero, it’s wrong because those types of charts represent values through <em>length</em> or <em>height</em>, which readers cannot determine if the baseline has been truncated. Similarly, if the slices of a pie chart adds up to more than 100 percent, it’s wrong because readers cannot accurately interpret the chart, which also incorrectly presents data.</p>
@@ -388,7 +387,7 @@ div.csl-indent {
 <div class="footnotes">
 <hr />
 <ol start="43">
-<li id="fn43"><p>The “how to lie” tutorials were inspired by several excellent works in data visualization: <span class="citation">Cairo, <em>The <span>Truthful Art</span></em></span>; <span class="citation">Cairo, <em>How <span>Charts Lie</span></em></span>; <span class="citation">Darrell Huff, <em>How to <span>Lie</span> with <span>Statistics</span></em> (<span>W. W. Norton &amp; Company</span>, 1954), <a href="http://books.google.com/books?isbn=0393070875" role="doc-biblioref">http://books.google.com/books?isbn=0393070875</a></span>; <span class="citation">Mark Monmonier, <em>How to <span>Lie</span> with <span>Maps</span>, <span>Third Edition</span></em> (<span>University of Chicago Press</span>, 2018), <a href="https://www.google.com/books/edition/How_to_Lie_with_Maps_Third_Edition/MwdRDwAAQBAJ" role="doc-biblioref">https://www.google.com/books/edition/How_to_Lie_with_Maps_Third_Edition/MwdRDwAAQBAJ</a></span>; <span class="citation">Nathan Yau, <span>“How to <span>Spot Visualization Lies</span>”</span> (<span>FlowingData</span>, February 9, 2017), <a href="http://flowingdata.com/2017/02/09/how-to-spot-visualization-lies/" role="doc-biblioref">http://flowingdata.com/2017/02/09/how-to-spot-visualization-lies/</a></span>; <span class="citation">NASA JPL, <span>“Educator <span>Guide</span>: Graphing <span>Global Temperature Trends</span>,”</span> 2017, <a href="https://www.jpl.nasa.gov/edu/teach/activity/graphing-global-temperature-trends/" role="doc-biblioref">https://www.jpl.nasa.gov/edu/teach/activity/graphing-global-temperature-trends/</a>.</span><a href="detect.html#fnref43" class="footnote-back">↩︎</a></p></li>
+<li id="fn43"><p>The “how to lie” tutorials were inspired by several excellent works in data visualization: <span class="citation">Cairo, <em>The <span>Truthful Art</span></em>, 2016</span>; <span class="citation">Cairo, <em>How <span>Charts Lie</span></em>, 2019</span>; <span class="citation">Darrell Huff, <em>How to <span>Lie</span> with <span>Statistics</span></em> (<span>W. W. Norton &amp; Company</span>, 1954), <a href="http://books.google.com/books?isbn=0393070875" role="doc-biblioref">http://books.google.com/books?isbn=0393070875</a></span>; <span class="citation">Mark Monmonier, <em>How to <span>Lie</span> with <span>Maps</span>, <span>Third Edition</span></em> (<span>University of Chicago Press</span>, 2018), <a href="https://www.google.com/books/edition/How_to_Lie_with_Maps_Third_Edition/MwdRDwAAQBAJ" role="doc-biblioref">https://www.google.com/books/edition/How_to_Lie_with_Maps_Third_Edition/MwdRDwAAQBAJ</a></span>; <span class="citation">Nathan Yau, <span>“How to <span>Spot Visualization Lies</span>”</span> (<span>FlowingData</span>, February 9, 2017), <a href="http://flowingdata.com/2017/02/09/how-to-spot-visualization-lies/" role="doc-biblioref">http://flowingdata.com/2017/02/09/how-to-spot-visualization-lies/</a></span>; <span class="citation">NASA JPL, <span>“Educator <span>Guide</span>: Graphing <span>Global Temperature Trends</span>,”</span> 2017, <a href="https://www.jpl.nasa.gov/edu/teach/activity/graphing-global-temperature-trends/" role="doc-biblioref">https://www.jpl.nasa.gov/edu/teach/activity/graphing-global-temperature-trends/</a>.</span><a href="detect.html#fnref43" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
 <footer style="margin-top: 60px; font-size: 0.8em; padding: 10px; background-color: rgba(0,0,0,0.08); display: table; width: 98%">
@@ -441,7 +440,6 @@ div.csl-indent {
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -481,15 +479,32 @@ gitbook.start({
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
-},
-"search": true
+}
 });
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

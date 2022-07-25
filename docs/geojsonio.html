@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Draw and Edit with GeoJson.io | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Draw and Edit with GeoJson.io | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io//images/cover-400wide.jpg" />
   <meta property="og:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="github-repo" content="handsondataviz/book" />
@@ -25,7 +24,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2022-04-04" />
+<meta name="date" content="2022-07-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,8 +33,8 @@
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="find-geojson.html"/>
 <link rel="next" href="mapshaper.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -51,9 +50,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -336,7 +335,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
 <li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
-<li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
+<li class="chapter" data-level="" data-path="style-guide.html"><a href="style-guide.html"><i class="fa fa-check"></i>Style Guide for <em>Hands-On Data Visualization</em></a></li>
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
 <li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
 <li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
@@ -376,8 +375,8 @@ div.csl-indent {
   </p>
 
 </header>
-<div id="geojsonio" class="section level2 unnumbered">
-<h2>Draw and Edit with GeoJson.io</h2>
+<div id="geojsonio" class="section level2 unnumbered hasAnchor">
+<h2>Draw and Edit with GeoJson.io<a href="geojsonio.html#geojsonio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><a href="https://geojson.io">GeoJson.io</a> is a popular open-source web tool to convert,
 edit, and create GeoJSON files. The tool was originally developed by
 <a href="https://macwright.org/about/">Tom MacWright</a> in 2013
@@ -385,8 +384,8 @@ and quickly became a go-to tool for geospatial practitioners.</p>
 <p>In this tutorial, we will show you how to convert existing KML, GPX, TopoJSON, and even
 CSV files with latitude/longitude data into GeoJSON files. We will also explore how to
 edit attribute data, add new features to GeoJSON files, and create new geodata from scratch by tracing satellite imagery.</p>
-<div id="convert-kml-gpx-and-other-formats-into-geojson" class="section level4 unnumbered">
-<h4>Convert KML, GPX, and other formats into GeoJSON</h4>
+<div id="convert-kml-gpx-and-other-formats-into-geojson" class="section level4 unnumbered hasAnchor">
+<h4>Convert KML, GPX, and other formats into GeoJSON<a href="geojsonio.html#convert-kml-gpx-and-other-formats-into-geojson" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Navigate to the <a href="https://geojson.io">GeoJson.io tool</a>. You will see
 a map on the left, and a Table/JSON attribute view area on the right. At the start,
 it represents an empty feature collection. Remember that features
@@ -402,7 +401,7 @@ the sample Toronto neighborhoods KML file, and these polygons appear in the top 
 <p>Note: If GeoJson.io cannot import your file, you will see a red
 popup saying it “Could not detect file type.” Instead, try to convert your file into GeoJSON format using the <a href="mapshaper.html">Mapshaper tool</a>, as described further below.</p>
 
-<div class="figure"><span id="fig:geojson-io-import"></span>
+<div class="figure"><span style="display:block;" id="fig:geojson-io-import"></span>
 <img src="images/13-transform/geojson-io-import.png" alt="GeoJson.io successfully imported the Toronto neighborhoods sample KML file." width="600" />
 <p class="caption">
 Figure 13.4: GeoJson.io successfully imported the Toronto neighborhoods sample KML file.
@@ -411,14 +410,14 @@ Figure 13.4: GeoJson.io successfully imported the Toronto neighborhoods sample K
 <p>To download a converted GeoJSON file to your computer, go to <em>Save &gt; GeoJSON</em>.</p>
 <p>Warning: The GeoJson.io tool will automatically name your downloaded file as <code>map.geojson</code>, so rename it to avoid confusion.</p>
 </div>
-<div id="create-geojson-from-a-csv-file" class="section level4 unnumbered">
-<h4>Create GeoJSON from a CSV file</h4>
+<div id="create-geojson-from-a-csv-file" class="section level4 unnumbered hasAnchor">
+<h4>Create GeoJSON from a CSV file<a href="geojsonio.html#create-geojson-from-a-csv-file" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>GeoJson.io can transform a CSV spreadsheet with <em>latitude</em> (or <em>lat</em>) and <em>longitude</em> (or <em>lon</em>)
 columns into a GeoJSON file of point features. Each row in the spreadsheet
 becomes its own point, and all columns other than <em>lat</em> and <em>lon</em>
 become <em>attributes</em> (or <em>properties</em>) of point features. For this exercise, you can download the <a href="data/toronto-locations-sample.csv">Toronto locations sample CSV file</a> to your computer, which contains three rows of data as shown in Figure <a href="geojsonio.html#fig:geojson-io-csv-data">13.5</a>.</p>
 
-<div class="figure"><span id="fig:geojson-io-csv-data"></span>
+<div class="figure"><span style="display:block;" id="fig:geojson-io-csv-data"></span>
 <img src="images/13-transform/geojson-io-csv-data.png" alt="A CSV spreadsheet with lat/lon columns can be transformed into a GeoJSON with point features."  />
 <p class="caption">
 Figure 13.5: A CSV spreadsheet with lat/lon columns can be transformed into a GeoJSON with point features.
@@ -434,15 +433,15 @@ Figure 13.5: A CSV spreadsheet with lat/lon columns can be transformed into a Ge
 <li><p>If you edited your map data, go to <em>Save &gt; GeoJSON</em> to download the file to your computer, which will automatically be named <code>map.geojson</code>, so rename it to avoid confusion. Optionally, you can also log into GeoJson.io with your GitHub account and save it directly to your repository.</p></li>
 </ol>
 
-<div class="figure"><span id="fig:geojson-io-points"></span>
+<div class="figure"><span style="display:block;" id="fig:geojson-io-points"></span>
 <img src="images/13-transform/geojson-io-points.png" alt="Upload CSV data into GeoJson.io to easily edit it in the Map or Table view."  />
 <p class="caption">
 Figure 13.6: Upload CSV data into GeoJson.io to easily edit it in the Map or Table view.
 </p>
 </div>
 </div>
-<div id="create-new-geojson-data-with-drawing-tools" class="section level4 unnumbered">
-<h4>Create new GeoJSON data with drawing tools</h4>
+<div id="create-new-geojson-data-with-drawing-tools" class="section level4 unnumbered hasAnchor">
+<h4>Create new GeoJSON data with drawing tools<a href="geojsonio.html#create-new-geojson-data-with-drawing-tools" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>GeoJson.io lets you create geospatial files from scratch by using simple drawing
 tools to place points, polylines, or polygons on the map.
 These are useful when you have no original file to work with. Let’s create some new data.</p>
@@ -454,7 +453,7 @@ For this exercise, we will trace the geography around an athletic field in Toron
 Figure <a href="geojsonio.html#fig:geojson-io-draw">13.7</a>.</p></li>
 </ol>
 
-<div class="figure"><span id="fig:geojson-io-draw"></span>
+<div class="figure"><span style="display:block;" id="fig:geojson-io-draw"></span>
 <img src="images/13-transform/geojson-io-draw.png" alt="Use drawing tools to create points, lines, and polygons in GeoJson.io." width="450" />
 <p class="caption">
 Figure 13.7: Use drawing tools to create points, lines, and polygons in GeoJson.io.
@@ -535,7 +534,6 @@ to convert and modify geospatial files.</p>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -575,15 +573,32 @@ gitbook.start({
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
-},
-"search": true
+}
 });
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

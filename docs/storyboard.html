@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Build a Narrative on a Storyboard | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Build a Narrative on a Storyboard | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io//images/cover-400wide.jpg" />
   <meta property="og:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="github-repo" content="handsondataviz/book" />
@@ -25,7 +24,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2022-04-04" />
+<meta name="date" content="2022-07-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,8 +33,8 @@
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="story.html"/>
 <link rel="next" href="draw-attention.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -51,9 +50,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -336,7 +335,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
 <li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
-<li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
+<li class="chapter" data-level="" data-path="style-guide.html"><a href="style-guide.html"><i class="fa fa-check"></i>Style Guide for <em>Hands-On Data Visualization</em></a></li>
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
 <li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
 <li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
@@ -376,8 +375,8 @@ div.csl-indent {
   </p>
 
 </header>
-<div id="storyboard" class="section level2 unnumbered">
-<h2>Build a Narrative on a Storyboard</h2>
+<div id="storyboard" class="section level2 unnumbered hasAnchor">
+<h2>Build a Narrative on a Storyboard<a href="storyboard.html#storyboard" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Let’s return to the <a href="sketch.html">Sketch Your Data Story exercise from Chapter 1</a>. We encouraged you to scribble words and sketch pictures on sheets of paper to lay out at least four initial elements of your story:</p>
 <ul>
 <li>Identify the <em>problem</em> that motivates your project.</li>
@@ -387,7 +386,7 @@ div.csl-indent {
 </ul>
 <p>Spread out these sheets like a <em>storyboard</em> to define the sequence of your narrative, as shown in Figure <a href="storyboard.html#fig:data-story-panel2">15.1</a>. Imagine them as preliminary slides for your presentation, or paragraphs and pictures for your written report or web page, for how you will explain the process to your audience. If you prefer to construct your storyboard digitally, another option is to convert blocks of text and images from your sheets into a <a href="https://www.google.com/slides/about/">Google Slides presentation</a> or a <a href="https://www.google.com/docs/about/">draft Google Document</a>, or your preferred tools for telling the data story. Of course, it’s perfectly normal to update the sheets you created at the beginning of your project to reflect changes in your thinking. For example, you may have refined your research question, found new sources during your search, and of course, turned your imagined visualizations into actual tables, charts, or maps with real data.</p>
 
-<div class="figure"><span id="fig:data-story-panel2"></span>
+<div class="figure"><span style="display:block;" id="fig:data-story-panel2"></span>
 <img src="images/01-choose/data-story-panel.png" alt="Sketch out your story idea on four pages: problem, question, find data, visualize." width="750" />
 <p class="caption">
 Figure 15.1: Sketch out your story idea on four pages: problem, question, find data, visualize.
@@ -399,7 +398,7 @@ Figure 15.1: Sketch out your story idea on four pages: problem, question, find d
 <p>For example, we started to <a href="sketch.html">sketch our own data storyboard in chapter 2</a> to define our problem statement: <em>We need to find out our readers’ backgrounds and interests about data visualization, in order to write a better introductory guide that meets their needs.</em> We collected data from over 3,000 readers of an earlier draft of this book who responded to our <a href="https://forms.gle/yn5QwTzfQkYcppQn9">online survey</a> and agreed that we would <a href="https://docs.google.com/spreadsheets/d/1egX_akJccnCSzdk1aaDdtrEGe5HcaTrlOW-Yf6mJ3Uo">publicly share the survey results</a>, as we discussed in <a href="spreadsheet.html">chapter 2</a>. We <a href="clean.html">cleaned up the data as described in chapter 4</a> because some responses were partially empty or contained locations that could not be accurately geocoded. Then we looked for <a href="comparisons.html">meaningful comparisons as described in chapter 5</a> and visualized our most interesting results in two ways. We created a <a href="chart.html">scatter chart as described in chapter 6</a> and also a <a href="map.html">point map as described in chapter 7</a>. For this chapter, we followed our own advice above by writing short summaries at the top of each visualization, and explaining why it matters at the bottom.</p>
 <p>What did we discover in our reader survey about the earlier draft of this book? And how did we respond to the key data findings? First, over 70 percent of readers who responded live outside of North America. Most notably, 35 percent reside in Asia, 20 percent in Europe, 6 percent each in Africa and South America, and 3 percent in Oceania, as shown in the left side of Figure <a href="storyboard.html#fig:survey-combined-annotated">15.2</a>. Our first draft of the book mostly included examples from Hartford, Connecticut, where we both worked. While we knew that our book had a global audience, we were surprised to see how many readers—among those who responded to the survey—live outside of the United States. In order to be more inclusive and expand our international audience, we revised the book to add more sample charts and maps from other regions around the world. Second, we learned that readers who responded to our survey have relatively high levels of education, but limited data visualization experience. In particular, 89 percent reported completing the equivalent of a college degree (16 or more years of schooling), and 64% of these rated themselves as data visualization beginners (either 1 or 2 on the 5-point experiential scale), as shown in the right side of Figure <a href="storyboard.html#fig:survey-combined-annotated">15.2</a>. In our earlier draft of the book, our primary audience were college undergraduates, and we were uncertain about the reading and background levels of other readers. Based on the survey responses, we revised the manuscript to add deeper concepts about data visualization, because we believe most of our readers can grasp them, yet we continue to write at an introductory level that assumes no prior knowledge beyond a secondary school or early college education. Now we can add these new sheets to our storyboard.</p>
 
-<div class="figure"><span id="fig:survey-combined-annotated"></span>
+<div class="figure"><span style="display:block;" id="fig:survey-combined-annotated"></span>
 <img src="images/15-story/survey-combined-annotated.png" alt="Verbalize meaningful insights at the top of each visualization, and tell why it matters at the bottom, then insert them into your storyboard." width="750" />
 <p class="caption">
 Figure 15.2: Verbalize meaningful insights at the top of each visualization, and tell why it matters at the bottom, then insert them into your storyboard.
@@ -472,7 +471,6 @@ Figure 15.2: Verbalize meaningful insights at the top of each visualization, and
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -512,15 +510,32 @@ gitbook.start({
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
-},
-"search": true
+}
 });
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

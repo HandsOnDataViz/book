@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Leaflet Searchable Point Map | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Leaflet Searchable Point Map | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io//images/cover-400wide.jpg" />
   <meta property="og:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="github-repo" content="handsondataviz/book" />
@@ -25,7 +24,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2022-04-04" />
+<meta name="date" content="2022-07-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,8 +33,8 @@
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="leaflet-heatmap.html"/>
 <link rel="next" href="leaflet-maps-open-data-apis.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -51,9 +50,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -336,7 +335,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
 <li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
-<li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
+<li class="chapter" data-level="" data-path="style-guide.html"><a href="style-guide.html"><i class="fa fa-check"></i>Style Guide for <em>Hands-On Data Visualization</em></a></li>
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
 <li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
 <li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
@@ -376,8 +375,8 @@ div.csl-indent {
   </p>
 
 </header>
-<div id="leaflet-searchable-map" class="section level2 unnumbered">
-<h2>Leaflet Searchable Point Map</h2>
+<div id="leaflet-searchable-map" class="section level2 unnumbered hasAnchor">
+<h2>Leaflet Searchable Point Map<a href="leaflet-searchable-map.html#leaflet-searchable-map" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>A searchable point map works best for showing multiple locations, where users can search by name or proximity to a location, or filter by category, with an optional list view. Figure <a href="leaflet-searchable-map.html#fig:searchable-map">12.39</a> shows a powerful Leaflet template of a searchable
 and filterable point map, which draws from a CSV data file,
 developed by <a href="https://derekeder.com/">Derek Eder</a> from DataMade in Chicago. This map allows
@@ -385,7 +384,7 @@ you to show points of interest, filter them by using <em>Search by name</em> fun
 and show them as a list instead of points on a map. In addition, the <em>About</em> page
 gives you plenty of space to describe the purpose and content of your map.</p>
 
-<div class="figure"><span id="fig:searchable-map"></span>
+<div class="figure"><span style="display:block;" id="fig:searchable-map"></span>
 <img src="images/12-leaflet/searchable-map.png" alt="Explore the interactive Searchable Map template."  />
 <p class="caption">
 Figure 12.39: Explore the <a href="https://searchable-map-template-csv.netlify.app/">interactive Searchable Map template</a>.
@@ -396,12 +395,12 @@ address search.</p>
 <p>To begin using the template for your own project, visit the <a href="https://github.com/HandsOnDataViz/searchable-map-template-csv">template’s GitHub page</a>,
 and fork it so that you get your own copy (see <a href="github.html">Edit and Host Code with GitHub</a>
 chapter to remind yourself about forks).</p>
-<div id="step-1-prepare-your-data" class="section level3 unnumbered">
-<h3>Step 1: Prepare your data</h3>
+<div id="step-1-prepare-your-data" class="section level3 unnumbered hasAnchor">
+<h3>Step 1: Prepare your data<a href="leaflet-searchable-map.html#step-1-prepare-your-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>This template will work with data in <a href="csv.html">CSV</a> and <a href="geojson.html">GeoJSON</a> formats. If you have an Excel file, save it in CSV format with any spreadsheet tool. The CSV file must have a latitude column and longitude column and all rows must be geocoded. If you only have street-address or location data, learn how to <a href="geocode.html">geocode</a> it in chapter 2.</p>
 </div>
-<div id="step-2-download-and-edit-this-template" class="section level3 unnumbered">
-<h3>Step 2: Download and edit this template</h3>
+<div id="step-2-download-and-edit-this-template" class="section level3 unnumbered hasAnchor">
+<h3>Step 2: Download and edit this template<a href="leaflet-searchable-map.html#step-2-download-and-edit-this-template" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
 <li>Download or clone this project and fire up your text editor of choice. Open up <code>/js/map.js</code> and set your map options in the <code>SearchableMapLib.initialize</code> function:</li>
 </ol>
@@ -426,8 +425,8 @@ chapter to remind yourself about forks).</p>
 <li><code>/js/searchable_map_lib.js</code> - logic for custom filters starts around line 265</li>
 </ul>
 </div>
-<div id="step-3-publish-your-map" class="section level3 unnumbered">
-<h3>Step 3: Publish your map</h3>
+<div id="step-3-publish-your-map" class="section level3 unnumbered hasAnchor">
+<h3>Step 3: Publish your map<a href="leaflet-searchable-map.html#step-3-publish-your-map" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
 <li>Before you publish, you’ll need to get a <a href="https://developers.google.com/maps/documentation/javascript/get-api-key">free Google Maps API key</a>, which is similar but different from the <a href="google-sheets-api-key.html">Get Your Google Sheets API Key section in this chapter</a>. Replace the Google Maps API key on this line of <code>index.html</code> with yours: <code>&lt;script type="text/javascript" src="https://maps.google.com/maps/api/js?libraries=places&amp;key=[YOUR KEY HERE]"&gt;&lt;/script&gt;</code></li>
 <li>Upload this map and all the supporting files and folders to your site. This map requires no back-end code, so any host will work, such as <a href="github.html">GitHub Pages as described in Chapter 10</a>, or <a href="https://www.netlify.com">Netlify</a>, or your own web server.</li>
@@ -484,7 +483,6 @@ chapter to remind yourself about forks).</p>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -524,15 +522,32 @@ gitbook.start({
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
-},
-"search": true
+}
 });
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

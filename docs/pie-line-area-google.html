@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>- Pie, Line, and Area Charts | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="- Pie, Line, and Area Charts | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io//images/cover-400wide.jpg" />
   <meta property="og:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="github-repo" content="handsondataviz/book" />
@@ -25,7 +24,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2022-04-04" />
+<meta name="date" content="2022-07-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,8 +33,8 @@
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="histogram-google.html"/>
 <link rel="next" href="chart-datawrapper.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -51,9 +50,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -336,7 +335,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
 <li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
-<li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
+<li class="chapter" data-level="" data-path="style-guide.html"><a href="style-guide.html"><i class="fa fa-check"></i>Style Guide for <em>Hands-On Data Visualization</em></a></li>
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
 <li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
 <li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
@@ -376,22 +375,22 @@ div.csl-indent {
   </p>
 
 </header>
-<div id="pie-line-area-google" class="section level2 unnumbered">
-<h2>- Pie, Line, and Area Charts</h2>
+<div id="pie-line-area-google" class="section level2 unnumbered hasAnchor">
+<h2>- Pie, Line, and Area Charts<a href="pie-line-area-google.html#pie-line-area-google" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Before starting this section, be sure to review the <a href="chart-google.html">pros and cons of designing charts with Google Sheets</a>, as well as <a href="bar-column-google.html">beginner-level step-by-step instructions for creating bar and column charts</a>, in the previous sections of this chapter. In this section, you’ll learn why and how to use Google Sheets to build three more types of interactive visualizations: pie charts (to show parts of a whole), line charts (to show change over time), and stacked area charts (to combine showing parts of a whole, with change over time). If Google Sheets or these chart types do not meet your needs, refer back to Table <a href="chart.html#tab:chart-types">6.1</a> for other tools and tutorials.</p>
-<div id="pie-charts" class="section level3 unnumbered">
-<h3>Pie Charts</h3>
+<div id="pie-charts" class="section level3 unnumbered hasAnchor">
+<h3>Pie Charts<a href="pie-line-area-google.html#pie-charts" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Some people use pie charts to show parts of a whole, but we urge caution with this type of chart for reasons explained further below. For example, if you wish to show the number of different fruits sold by a store in one day, as a proportion of total fruit sold, then format the labels and values in vertical columns in your Google Sheet, as shown in Figure <a href="pie-line-area-google.html#fig:pie-data">6.30</a>. Values can be expressed as either raw numbers or percentages. Now you can easily create a pie chart that displays these values as colored slices of a circle, as shown in Figure <a href="pie-line-area-google.html#fig:pie">6.31</a>. Viewers can see that bananas made up slightly over half of the fruit sold, followed by apples and oranges.</p>
 
-<div class="figure"><span id="fig:pie-data"></span>
+<div class="figure"><span style="display:block;" id="fig:pie-data"></span>
 <img src="images/06-chart/pie-data.png" alt="To create a pie chart, format the data values vertically in Google Sheets." width="300" />
 <p class="caption">
 Figure 6.30: To create a pie chart, format the data values vertically in Google Sheets.
 </p>
 </div>
 
-<div class="figure"><span id="fig:pie"></span>
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQai8YWkqMOHsiwWXpe1jyhBKy5wW6zcMaEIklkF-598h1QaVBrRR0F9JVrsX2Zo5ihXWP-HlnY-KlE/pubchart?oid=760990456&amp;amp;format=interactive" width="672" height="400px">
+<div class="figure"><span style="display:block;" id="fig:pie"></span>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQai8YWkqMOHsiwWXpe1jyhBKy5wW6zcMaEIklkF-598h1QaVBrRR0F9JVrsX2Zo5ihXWP-HlnY-KlE/pubchart?oid=760990456&amp;amp;format=interactive" width="672" height="400px" data-external="1">
 </iframe>
 <p class="caption">
 Figure 6.31: Pie chart: Explore the <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQai8YWkqMOHsiwWXpe1jyhBKy5wW6zcMaEIklkF-598h1QaVBrRR0F9JVrsX2Zo5ihXWP-HlnY-KlE/pubchart?oid=760990456&amp;format=interactive">interactive version</a>. Data is fictitious.
@@ -401,19 +400,19 @@ Figure 6.31: Pie chart: Explore the <a href="https://docs.google.com/spreadsheet
 <p>Create your own version using our <a href="https://docs.google.com/spreadsheets/d/11cn0eysXqXIwhcTKmGuzMDw_RmpDpYLKZN3TeevT-Vg/">Pie Chart in Google Sheets template</a>. The steps are similar to those in prior Google Sheets chart tutorials in this chapter. Go to <em>File &gt; Make a Copy</em> to create a version you can edit in your Google Drive. Select all of the cells and go to <em>Insert &gt; Chart</em>. If Google Sheets does not correctly guess that you wish to create a pie chart, then in the Chart editor window, in the Setup tab, select <em>Pie chart</em> from the <em>Chart type</em> dropdown list.</p>
 <p>Note that slices are ordered the same way they appear in the spreadsheet. Select the entire sheet and <em>Sort</em> the values column from largest to smallest, or from Z to A. In <em>Customize</em> tab of the Chart editor, you can change colors and add borders to slices. Then add a meaningful title and labels as desired.</p>
 </div>
-<div id="line-charts" class="section level3 unnumbered">
-<h3>Line Charts</h3>
+<div id="line-charts" class="section level3 unnumbered hasAnchor">
+<h3>Line Charts<a href="pie-line-area-google.html#line-charts" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>A line chart is the best way to represent continuous data, such as change over time. For example, imagine you wish to compare the availability of different meats per capita in the US over the past century. In your Google Sheet, organize the time units (such as years) into the first column, since these will appear on the horizontal X-axis. Also, place each data series (such as beef, pork, chicken) alongside the vertical time-unit column, and each series will become its own line, as shown in Figure <a href="pie-line-area-google.html#fig:line-data">6.32</a>. Now you can easily create a line chart that emphasizes each data series changed over time, as shown in Figure <a href="pie-line-area-google.html#fig:line">6.33</a>. In the US, the amount of chicken per capita steadily rose and surpassed pork and beef around 2000.</p>
 
-<div class="figure"><span id="fig:line-data"></span>
+<div class="figure"><span style="display:block;" id="fig:line-data"></span>
 <img src="images/06-chart/line-data.png" alt="To create a line chart, format the time units and each data series in vertical columns." width="300" />
 <p class="caption">
 Figure 6.32: To create a line chart, format the time units and each data series in vertical columns.
 </p>
 </div>
 
-<div class="figure"><span id="fig:line"></span>
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS38EC_34L8gKK9NStS8S322BzvBRbnRNpu9KXQ4oHHpaDmVMBAhEu4SXtCC6CD2yv_V6brX8s386Nf/pubchart?oid=2073830845&amp;amp;format=interactive" width="672" height="400px">
+<div class="figure"><span style="display:block;" id="fig:line"></span>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS38EC_34L8gKK9NStS8S322BzvBRbnRNpu9KXQ4oHHpaDmVMBAhEu4SXtCC6CD2yv_V6brX8s386Nf/pubchart?oid=2073830845&amp;amp;format=interactive" width="672" height="400px" data-external="1">
 </iframe>
 <p class="caption">
 Figure 6.33: Line chart: Explore the <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vS38EC_34L8gKK9NStS8S322BzvBRbnRNpu9KXQ4oHHpaDmVMBAhEu4SXtCC6CD2yv_V6brX8s386Nf/pubchart?oid=2073830845&amp;format=interactive">interactive version</a>. Data from <a href="https://docs.google.com/spreadsheets/d/1wkWxxZ2-N5hqkcp7in8bxwdEcT1-XMnt1A8qUXxUSjw/edit?usp=sharing">US Department of Agriculture</a>.
@@ -474,13 +473,13 @@ Figure 6.33: Line chart: Explore the <a href="https://docs.google.com/spreadshee
 </table>
 <p>To convert data from tables to charts, learn how to <a href="transpose.html">transpose rows and columns in Chapter 4: Clean Up Messy Data</a>.</p>
 </div>
-<div id="stacked-area-charts" class="section level3 unnumbered">
-<h3>Stacked Area Charts</h3>
+<div id="stacked-area-charts" class="section level3 unnumbered hasAnchor">
+<h3>Stacked Area Charts<a href="pie-line-area-google.html#stacked-area-charts" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Area charts resemble line charts with filled space underneath. The most useful type is a stacked area chart, which is best for combining two concepts from above: showing parts of the whole (like a pie chart) and continuous data over time (like a line chart). For example, the line chart above shows how the availability of three different meats changed over time. However, if you also wish to show how the total availability of these combined meats went up or down over time, it’s hard to see this in a line chart. Instead, use a stacked line chart to visualize the availability of each meat <em>and</em> the total combined availability per capita over time. Stacked line charts show both aspects of your data simultaneously.</p>
 <p>To create a stacked area chart, organize the data in the same way as you did for the line chart in Figure <a href="pie-line-area-google.html#fig:line-data">6.32</a>. Now you can easily create a stacked line chart that displays the availability of each meat—and their combined total—over time, as shown in Figure <a href="pie-line-area-google.html#fig:stacked-area">6.34</a>. Overall, we can see that total available meat per capita increased after the 1930s Depression, and chicken steadily became a larger portion of the total after 1970.</p>
 
-<div class="figure"><span id="fig:stacked-area"></span>
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSotrM_zZDo0MT--JgXwA3nBQudzIwmt8TGwmZxvUxNUzPrfBgqso5glLn05ObJxdTTmKoT_fQWQMx-/pubchart?oid=1976471326&amp;amp;format=interactive" width="672" height="400px">
+<div class="figure"><span style="display:block;" id="fig:stacked-area"></span>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSotrM_zZDo0MT--JgXwA3nBQudzIwmt8TGwmZxvUxNUzPrfBgqso5glLn05ObJxdTTmKoT_fQWQMx-/pubchart?oid=1976471326&amp;amp;format=interactive" width="672" height="400px" data-external="1">
 </iframe>
 <p class="caption">
 Figure 6.34: Stacked area chart: Explore the <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSotrM_zZDo0MT--JgXwA3nBQudzIwmt8TGwmZxvUxNUzPrfBgqso5glLn05ObJxdTTmKoT_fQWQMx-/pubchart?oid=1976471326&amp;format=interactive">interactive version</a>. Data from <a href="https://docs.google.com/spreadsheets/d/16QR4prVUoztW6bFVyj_q0n8GjNWqkcW6sgAkIyHQIJc/edit?usp=sharing">US Department of Agriculture</a>.
@@ -546,7 +545,6 @@ Figure 6.34: Stacked area chart: Explore the <a href="https://docs.google.com/sp
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -586,15 +584,32 @@ gitbook.start({
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
-},
-"search": true
+}
 });
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

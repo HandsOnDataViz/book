@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Design Choropleth Colors &amp; Intervals | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Design Choropleth Colors &amp; Intervals | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io//images/cover-400wide.jpg" />
   <meta property="og:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="github-repo" content="handsondataviz/book" />
@@ -25,7 +24,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2022-04-04" />
+<meta name="date" content="2022-07-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,8 +33,8 @@
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="map-design.html"/>
 <link rel="next" href="normalize-choropleth.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -51,9 +50,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -336,7 +335,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
 <li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
-<li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
+<li class="chapter" data-level="" data-path="style-guide.html"><a href="style-guide.html"><i class="fa fa-check"></i>Style Guide for <em>Hands-On Data Visualization</em></a></li>
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
 <li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
 <li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
@@ -376,12 +375,12 @@ div.csl-indent {
   </p>
 
 </header>
-<div id="design-choropleth" class="section level2 unnumbered">
-<h2>Design Choropleth Colors &amp; Intervals</h2>
+<div id="design-choropleth" class="section level2 unnumbered hasAnchor">
+<h2>Design Choropleth Colors &amp; Intervals<a href="design-choropleth.html#design-choropleth" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>This section takes a deeper dive into map design principles for choropleth maps. Your choices about how to represent data with colors dramatically shapes their appearance, so it’s very important to learn key concepts to ensure that your maps tell true and meaningful stories. Good choropleth maps make true and insightful geographic patterns clearly visible to readers, whether they are printed in black-and-white on paper or displayed in color on a computer screen. Furthermore, the best choropleth maps are designed to be interpreted correctly by people with colorblindness. For an excellent overview of visualization colors in general, see Lisa Charlotte Rost’s “<a href="https://blog.datawrapper.de/colorguide/">Your Friendly Guide to Colors in Data Visualization</a>” and “<a href="https://blog.datawrapper.de/beautifulcolors/index.html">How to Pick More Beautiful Colors for Your Data Visualizations</a>,” both on the Datawrapper blog.<a href="#fn35" class="footnote-ref" id="fnref35"><sup>35</sup></a></p>
 <p>The best way to illustrate how color choices affect choropleth map design is with a wonderful online design assistant called <a href="https://colorbrewer2.org/">ColorBrewer</a>, created by Cynthia Brewer and Mark Harrower.<a href="#fn36" class="footnote-ref" id="fnref36"><sup>36</sup></a> Unlike other tools in this book, you do not upload data directly into ColorBrewer to generate your visualization. Instead, you select the type of data you wish to display in your choropleth map, and ColorBrewer will assist you by recommending color palettes that work best with your data story. Then you can export those color codes into your preferred choropleth mapping tool, as shown in the <a href="choropleth-datawrapper.html">Datawrapper</a> and <a href="map-tableau.html">Tableau Public</a> tutorials below. See the ColorBrewer interface in Figure <a href="design-choropleth.html#fig:map-colorbrewer">7.5</a>.</p>
 
-<div class="figure"><span id="fig:map-colorbrewer"></span>
+<div class="figure"><span style="display:block;" id="fig:map-colorbrewer"></span>
 <img src="images/07-map/map-colorbrewer-annotated.png" alt="The ColorBrewer design assistant interface: data classes, type of color scheme, and recommended color codes."  />
 <p class="caption">
 Figure 7.5: The ColorBrewer design assistant interface: data classes, type of color scheme, and recommended color codes.
@@ -389,12 +388,12 @@ Figure 7.5: The ColorBrewer design assistant interface: data classes, type of co
 </div>
 <p>In this section, we’ll focus on two important decisions that ColorBrewer can assist you with when designing choropleth maps: choosing the type of color palette (sequential, divergent, or qualitative) and the intervals to group together similar-colored data points.</p>
 <p>When you open <a href="https://colorbrewer2.org/">ColorBrewer</a>, the top row asks you to select the number of data classes (also known as intervals or steps) in the color range of your choropleth map. ColorBrewer can recommend distinct colors for up to twelve data classes, depending on the type of scheme you select. But for now, use the default setting of 3, and we’ll return to this topic later when we discuss intervals in more detail further below.</p>
-<div id="choose-choropleth-palettes-to-match-your-data" class="section level3 unnumbered">
-<h3>Choose Choropleth Palettes to Match Your Data</h3>
+<div id="choose-choropleth-palettes-to-match-your-data" class="section level3 unnumbered hasAnchor">
+<h3>Choose Choropleth Palettes to Match Your Data<a href="design-choropleth.html#choose-choropleth-palettes-to-match-your-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>One of the most important decisions you’ll make when designing a choropleth map is to select the type of palette. You’re not simply choosing a color, but the <em>arrangement of colors</em> to help readers correctly interpret your information. The rule is straightforward: choose an appropriate color palette that matches your data format, and the story you wish to tell.</p>
 <p>ColorBrewer groups palettes into three types—sequential, diverging, and qualitative—as shown in Figure <a href="design-choropleth.html#fig:map-principles-color-schemes">7.6</a>.</p>
 
-<div class="figure"><span id="fig:map-principles-color-schemes"></span>
+<div class="figure"><span style="display:block;" id="fig:map-principles-color-schemes"></span>
 <img src="images/07-map/map-principles-color-schemes.png" alt="Sequential, diverging, and qualitative color palettes from ColorBrewer."  />
 <p class="caption">
 Figure 7.6: Sequential, diverging, and qualitative color palettes from <a href="https://colorbrewer2.org/">ColorBrewer</a>.
@@ -405,7 +404,7 @@ Figure 7.6: Sequential, diverging, and qualitative color palettes from <a href="
 <p><em>Qualitative palettes</em> work best to show categorical data, rather than numeric scales. They typically feature unique colors that stand apart from one another to emphasize differences. Examples include different types of land use (residential, commercial, open space, water) or categories such as a stoplight-colored warning system (green, yellow, and red).</p>
 <p>To illustrate the difference between <em>sequential</em> and <em>diverging</em> numeric values, compare the two maps that display the same data on income per capita in the contiguous US states in 2018 in Figure <a href="design-choropleth.html#fig:map-principles-classification">7.7</a>. The sequential color palette shows five shades of blue to represent the low-to-high range of income levels, and it works best for a data story that emphasizes the highest income levels, shown by the darker blue colors along the Northeastern coast from Maryland to Massachusetts. By contrast, the diverging color palette shows dark orange for below-average states, dark purple for above-average states, and a neutral color in the middle, and it works best for a data story that emphasizes an economic division between lower-income Southern states versus higher-income East Coast and West Coast states.</p>
 
-<div class="figure"><span id="fig:map-principles-classification"></span>
+<div class="figure"><span style="display:block;" id="fig:map-principles-classification"></span>
 <img src="images/07-map/map-principles-classification.png" alt="Sequential versus diverging color palettes to illustrate per capita income in US dollars in the contiguous states, from American Community Survey, 2018." width="750" />
 <p class="caption">
 Figure 7.7: Sequential versus diverging color palettes to illustrate per capita income in US dollars in the contiguous states, from American Community Survey, 2018.
@@ -413,19 +412,19 @@ Figure 7.7: Sequential versus diverging color palettes to illustrate per capita 
 </div>
 <p>After you select data classes and a color palette, ColorBrewer displays alphanumeric codes that web browsers translate into colors. You can select hexadecimal codes (<code>#ffffff</code> is white), RGB codes (<code>255,255,255</code> is white), or CMYK codes (<code>0,0,0,0</code> is white), and export them in different formats, as shown in Figure <a href="design-choropleth.html#fig:colorbrewer-export">7.8</a>, if your preferred map tool allows you to import color palettes.</p>
 
-<div class="figure"><span id="fig:colorbrewer-export"></span>
+<div class="figure"><span style="display:block;" id="fig:colorbrewer-export"></span>
 <img src="images/07-map/colorbrewer-export.png" alt="Click open the Export tab to display your color palette codes in various formats." width="435" />
 <p class="caption">
 Figure 7.8: Click open the <em>Export</em> tab to display your color palette codes in various formats.
 </p>
 </div>
 </div>
-<div id="choose-color-intervals-to-group-choropleth-map-data" class="section level3 unnumbered">
-<h3>Choose Color Intervals to Group Choropleth Map Data</h3>
+<div id="choose-color-intervals-to-group-choropleth-map-data" class="section level3 unnumbered hasAnchor">
+<h3>Choose Color Intervals to Group Choropleth Map Data<a href="design-choropleth.html#choose-color-intervals-to-group-choropleth-map-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Another important design choice is color intervals, which determine how you group and display data on your choropleth map. This powerful set of decisions will dramatically shape how your map appears in readers’ eyes, and the message conveyed by your data story. You will need to consider several options in this multi-step decision-making process, and although there are few uniform design rules, we will offer guidance and recommendations. Since options for selecting intervals vary across different mapping tools, we will explain broad concepts in this section, with occasional screenshots from Datawrapper and Tableau Public, but will save the details for those specific tutorials later in the chapter.</p>
 <p>Some mapping tools allow you to choose between two different <em>types of color intervals</em> to show movement up or down a data scale, as shown in Figure <a href="design-choropleth.html#fig:intervals-type-combined">7.9</a>. <em>Steps</em> are clearly-marked color dividers, like a staircase, while <em>continuous</em> is a gradual change in color, like a ramp. Both go upward, but take you there in different ways.</p>
 
-<div class="figure"><span id="fig:intervals-type-combined"></span>
+<div class="figure"><span style="display:block;" id="fig:intervals-type-combined"></span>
 <img src="images/07-map/intervals-type-combined.png" alt="Steps versus continuous color intervals in Datawrapper (left) and Tableau Public (right)." width="500" />
 <p class="caption">
 Figure 7.9: Steps versus continuous color intervals in Datawrapper (left) and Tableau Public (right).
@@ -434,7 +433,7 @@ Figure 7.9: Steps versus continuous color intervals in Datawrapper (left) and Ta
 <p>If both options exist, which type of color interval is best: steps or continuous? There is no uniform map design rule about this, but consider these factors. On one hand, steps work best for data stories that show areas below or above a specific line or threshold, such as zones that will flood if the sea level rises by one meter. Also, since human eyes are not always good at distinguishing between hues, steps can help readers to quickly match colors from your map legend to your data. On the other hand, continuous works best for data stories that draw attention to subtle differences between neighboring areas, such as the wide range of values on an income scale. Read this Datawrapper Academy article on <a href="https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps">what to consider when creating choropleth maps</a>. Overall, we advise you to make design choices that are both honest and insightful: tell the truth about the data and also draw attention to what matters in your data story.</p>
 <p>If you choose <em>steps</em>, how many dividers should you use to slice up your data? Once again, there is no uniform rule, but reflect on these options and outcomes. Fewer steps creates a <em>coarse</em> map that highlights broad differences, while more steps creates a <em>granular</em> map that emphasizes geographic diversity between areas. However, simply adding more steps does not necessarily make a better map, because differences between steps become less visible to the human eye. Since the <a href="https://colorbrewer2.org">ColorBrewer</a> design assistant was created specifically for steps (and does not show continuous options), we recommend experimenting by raising or lowering the <em>Number of data classes</em> (also known as steps) to visualize the appearance of different design choices, as shown in Figure <a href="design-choropleth.html#fig:colorbrewer-steps">7.10</a>. Make decisions with the best interests of your readers in mind, to represent your data in honest and insightful ways.</p>
 
-<div class="figure"><span id="fig:colorbrewer-steps"></span>
+<div class="figure"><span style="display:block;" id="fig:colorbrewer-steps"></span>
 <img src="images/07-map/colorbrewer-steps.png" alt="If you choose steps, experiment with ColorBrewer data classes and color palettes." width="300" />
 <p class="caption">
 Figure 7.10: If you choose steps, experiment with ColorBrewer data classes and color palettes.
@@ -442,7 +441,7 @@ Figure 7.10: If you choose steps, experiment with ColorBrewer data classes and c
 </div>
 <p>Some choropleth mapping tools also allow you to choose how to <em>interpolate</em> your data, meaning the method for grouping numbers to represent similar colors on your map. For example, Datawrapper displays two different sets of drop-down menus for interpolation options, depending on whether you chose steps or continuous, as shown in Figure <a href="design-choropleth.html#fig:interpolation-datawrapper-combined">7.11</a>.</p>
 
-<div class="figure"><span id="fig:interpolation-datawrapper-combined"></span>
+<div class="figure"><span style="display:block;" id="fig:interpolation-datawrapper-combined"></span>
 <img src="images/07-map/interpolation-datawrapper-combined.png" alt="Interpolation options for steps (left) and continuous (right) in Datawrapper." width="650" />
 <p class="caption">
 Figure 7.11: Interpolation options for steps (left) and continuous (right) in Datawrapper.
@@ -450,7 +449,7 @@ Figure 7.11: Interpolation options for steps (left) and continuous (right) in Da
 </div>
 <p>Before choosing how to interpolate, create a <a href="histogram-google.html">histogram chart in Google Sheets described in chapter 6</a> to gain a deeper understanding of how your data is distributed. Is your histogram evenly distributed with a symmetrical shape around the mean? Or is it skewed to one side, with one tail of outliers that is longer than the other? Compare the simplified histograms in Figure <a href="design-choropleth.html#fig:interpolation-histograms">7.12</a>, which may influence your decision about how to interpolate, as described below.</p>
 
-<div class="figure"><span id="fig:interpolation-histograms"></span>
+<div class="figure"><span style="display:block;" id="fig:interpolation-histograms"></span>
 <img src="images/07-map/interpolation-histograms.png" alt="Histogram of evenly-distributed data (on right) versus skewed data with a longer tail to one side (on left)." width="500" />
 <p class="caption">
 Figure 7.12: Histogram of evenly-distributed data (on right) versus skewed data with a longer tail to one side (on left).
@@ -465,7 +464,7 @@ Figure 7.12: Histogram of evenly-distributed data (on right) versus skewed data 
 <p>Which interpolation method is best? There are no uniform design rules, except that we advise <em>against</em> using <em>Custom</em> settings to manually place color intervals wherever you wish, since they are more likely to create misleading maps, as you’ll learn in <a href="detect.html">Chapter 14: Detect Lies and Reduce Bias</a>. Our best advice is to experiment with different interpolation methods, especially when working with skewed data, to better understand how these options shape the appearance of your choropleth maps and the data stories you tell with them.</p>
 <p>Overall, <a href="https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps">Datawrapper Academy recommends</a> that you make color intervals choices to help readers “see all the differences in the data” by fully utilizing all of the colors in your range, as shown in Figure <a href="design-choropleth.html#fig:intervals-datawrapper-montage">7.13</a>. In other words, if your map displays only the lightest and darkest colors, you’re not sufficiently using the middle portion of your color range to highlight geographic patterns and diversity within your data. To do this, you’ll need to explore beyond the default map settings and test which options do the best job of telling an honest and insightful data story.</p>
 
-<div class="figure"><span id="fig:intervals-datawrapper-montage"></span>
+<div class="figure"><span style="display:block;" id="fig:intervals-datawrapper-montage"></span>
 <img src="images/07-map/intervals-datawrapper-montage.png" alt="Use the full color range to show all of the differences in the data. Image by Datawrapper Academy, reprinted with permission." width="500" />
 <p class="caption">
 Figure 7.13: Use the full color range to show all of the differences in the data. Image by <a href="https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps">Datawrapper Academy</a>, reprinted with permission.
@@ -531,7 +530,6 @@ Figure 7.13: Use the full color range to show all of the differences in the data
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -571,15 +569,32 @@ gitbook.start({
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
-},
-"search": true
+}
 });
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

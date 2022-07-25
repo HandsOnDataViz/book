@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Images and R Code-chunk Formatting | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Images and R Code-chunk Formatting | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io//images/cover-400wide.jpg" />
   <meta property="og:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="github-repo" content="handsondataviz/book" />
@@ -25,7 +24,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2022-04-04" />
+<meta name="date" content="2022-07-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,8 +33,8 @@
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="style-guide.html"/>
 <link rel="next" href="tables.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -51,9 +50,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -336,7 +335,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
 <li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
-<li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
+<li class="chapter" data-level="" data-path="style-guide.html"><a href="style-guide.html"><i class="fa fa-check"></i>Style Guide for <em>Hands-On Data Visualization</em></a></li>
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
 <li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
 <li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
@@ -376,8 +375,8 @@ div.csl-indent {
   </p>
 
 </header>
-<div id="images" class="section level2 unnumbered">
-<h2>Images and R Code-chunk Formatting</h2>
+<div id="images" class="section level2 unnumbered hasAnchor">
+<h2>Images and R Code-chunk Formatting<a href="images.html#images" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>View the underlying source code to understand how this page was composed at: <a href="https://github.com/HandsOnDataViz/book/blob/main/20.4-images.Rmd" class="uri">https://github.com/HandsOnDataViz/book/blob/main/20.4-images.Rmd</a></p>
 <p>In general, create high-resolution color screenshots with the paid SnagIt tool (to capture cursors) on a high-resolution Retina monitor (144 ppi) with tight cropping, and save in PNG format (preferred over JPG due to image loss). Save items into the <code>images</code> subfolder that corresponds with each chapter. Make sure that color images include high contrast and/or shading, because they will be converted to grayscale by the publisher for the print book. Write file names in lowercase with dashes (not spaces) and begin with keyword of relevant section to keep related images grouped together. Despite being in separate folders, avoid duplicate image file names across the book. Avoid numbering images since they may not match the final sequence.</p>
 <p>If we need to create side-by-side images, save each element using the root file name plus a suffix, and use Photoshop or <a href="https://Photopea.com" class="uri">https://Photopea.com</a> to combine images and also save in Photoshop format (.psd) in the images subfolder.</p>
@@ -421,24 +420,24 @@ images/07-chart/keywords-with-hyphens.png</code></pre>
 <pre><code>{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 options(knitr.graphics.auto_pdf = TRUE)</code></pre>
-<div id="demo-r-code-chunk-for-static-image-for-all-editions-html-pdf-docx-md" class="section level3 unnumbered">
-<h3>Demo: R code-chunk for static image for all editions: HTML, PDF, DOCX, MD</h3>
+<div id="demo-r-code-chunk-for-static-image-for-all-editions-html-pdf-docx-md" class="section level3 unnumbered hasAnchor">
+<h3>Demo: R code-chunk for static image for all editions: HTML, PDF, DOCX, MD<a href="images.html#demo-r-code-chunk-for-static-image-for-all-editions-html-pdf-docx-md" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>…as shown in Figure <a href="images.html#fig:sample-image">B.5</a>.</p>
 
-<div class="figure"><span id="fig:sample-image"></span>
+<div class="figure"><span style="display:block;" id="fig:sample-image"></span>
 <img src="images/20-bookdown/sample-image.png" alt="Caption with optional Markdown links but no endnotes. Source: “Hippo and crocodile” by Stig Nygaard, CC-BY."  />
 <p class="caption">
 Figure B.5: Caption with optional Markdown links but no endnotes. Source: “Hippo and crocodile” by <a href="https://www.flickr.com/photos/10259776@N00">Stig Nygaard</a>, CC-BY.
 </p>
 </div>
 </div>
-<div id="demo-r-code-chunk-to-reduce-size-of-static-image-for-all-editions" class="section level3 unnumbered">
-<h3>Demo: R code-chunk to reduce size of static image for all editions</h3>
+<div id="demo-r-code-chunk-to-reduce-size-of-static-image-for-all-editions" class="section level3 unnumbered hasAnchor">
+<h3>Demo: R code-chunk to reduce size of static image for all editions<a href="images.html#demo-r-code-chunk-to-reduce-size-of-static-image-for-all-editions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>First, create a copy of the original PNG image. Use Preview or any image editor to reduce size by 50 percent or more, and if needed, increase the resolution (from 72 to 144 dpi or higher), and save. Export as PDF image with same filename as PNG file, to produce two image files: keyword.png (original) and keyword.pdf (smaller size). The global setting will auto-substitute the smaller PDF image in place of the original PNG image.</p>
 <p>Second, insert an <code>out.width=...</code> in the second line to reduce the PNG display size as needed in the HTML edition. Note that this method keeps the original PNG image intact, which is ideal when working with historical images of a reasonable file size. Images larger than 3MB may be delayed in the HTML web edition for readers with slow internet connections.</p>
 <p>…as shown in Figure <a href="images.html#fig:sample-image2">B.6</a>.</p>
 
-<div class="figure"><span id="fig:sample-image2"></span>
+<div class="figure"><span style="display:block;" id="fig:sample-image2"></span>
 <img src="images/20-bookdown/sample-image2.png" alt="This version reduces HTML display size using out.width=300 and auto-substitutes a smaller PDF image. Source: “Hippo and crocodile” by Stig Nygaard, CC-BY." width="300" />
 <p class="caption">
 Figure B.6: This version reduces HTML display size using <code>out.width=300</code> and auto-substitutes a smaller PDF image. Source: “Hippo and crocodile” by <a href="https://www.flickr.com/photos/10259776@N00">Stig Nygaard</a>, CC-BY.
@@ -446,62 +445,66 @@ Figure B.6: This version reduces HTML display size using <code>out.width=300</co
 </div>
 <p>R code-chunks allow more complex conditional formatting, where an interactive map or animated GIF or streaming video clip appears in the HTML version, and a manually-produced static image with an embedded link appears in the PDF, MS Word, and full-length Markdown outputs. To change the height of the default 400px iframe, add the new height to <code>include_url</code> as shown in the examples. (Note: Changing the width of the default 675px iframe to less than 100 percent requires adding a line in a <code>custom-scripts.html</code> file, and including this in the <code>index.Rmd</code> file).</p>
 </div>
-<div id="demo-r-code-chunk-for-iframe-in-html-static-image-in-pdf-docx-md" class="section level3 unnumbered">
-<h3>Demo: R code-chunk for iframe in HTML, static image in PDF, DOCX, MD</h3>
+<div id="demo-r-code-chunk-for-iframe-in-html-static-image-in-pdf-docx-md" class="section level3 unnumbered hasAnchor">
+<h3>Demo: R code-chunk for iframe in HTML, static image in PDF, DOCX, MD<a href="images.html#demo-r-code-chunk-for-iframe-in-html-static-image-in-pdf-docx-md" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>…as shown in Figure <a href="images.html#fig:sample-map">B.7</a>.</p>
 
-<div class="figure"><span id="fig:sample-map"></span>
-<iframe src="https://handsondataviz.github.io/leaflet-map-simple/" width="672" height="375px">
+<div class="figure"><span style="display:block;" id="fig:sample-map"></span>
+<iframe src="https://handsondataviz.github.io/leaflet-map-simple/" width="672" height="375px" data-external="1">
 </iframe>
 <p class="caption">
 Figure B.7: Explore the <a href="https://handsondataviz.github.io/leaflet-map-simple/">interactive map</a>, which enables readers of non-HTML editions to view it.
 </p>
 </div>
 </div>
-<div id="demo-r-code-chunk-for-animated-gif-in-html-static-image-in-pdf-docx-md" class="section level3 unnumbered">
-<h3>Demo: R code-chunk for animated GIF in HTML, static image in PDF, DOCX, MD</h3>
+<div id="demo-r-code-chunk-for-animated-gif-in-html-static-image-in-pdf-docx-md" class="section level3 unnumbered hasAnchor">
+<h3>Demo: R code-chunk for animated GIF in HTML, static image in PDF, DOCX, MD<a href="images.html#demo-r-code-chunk-for-animated-gif-in-html-static-image-in-pdf-docx-md" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>When appropriate, create animated GIF files using the free <a href="https://giphy.com/apps/giphycapture">Giphy Capture</a> or the paid <a href="https://www.techsmith.com/video-editor.html">Camtasia</a> application, which allows the option to add fade-to-black to mark the end-point in the looped version.</p>
 <p>…as shown in Figure <a href="images.html#fig:sample-gif">B.8</a>.</p>
 
-<div class="figure"><span id="fig:sample-gif"></span>
-<iframe src="images/20-bookdown/sample-gif.gif" width="672" height="250px">
+<div class="figure"><span style="display:block;" id="fig:sample-gif"></span>
+<iframe src="images/20-bookdown/sample-gif.gif" width="672" height="250px" data-external="1">
 </iframe>
 <p class="caption">
 Figure B.8: View the <a href="https://handsondataviz.org/images/20-bookdown/sample.gif">animated GIF</a>, which enables readers of non-HTML editions to view it.
 </p>
 </div>
 </div>
-<div id="demo-r-code-chunk-for-streaming-video-in-html-static-image-in-pdf-docx-md" class="section level3 unnumbered">
-<h3>Demo: R code-chunk for streaming video in HTML, static image in PDF, DOCX, MD</h3>
+<div id="demo-r-code-chunk-for-streaming-video-in-html-static-image-in-pdf-docx-md" class="section level3 unnumbered hasAnchor">
+<h3>Demo: R code-chunk for streaming video in HTML, static image in PDF, DOCX, MD<a href="images.html#demo-r-code-chunk-for-streaming-video-in-html-static-image-in-pdf-docx-md" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Be sure to use the <em>embed</em> link from a YouTube or Vimeo <em>share</em> button.</p>
 <p>…as shown in the video <a href="images.html#fig:sample-video">B.9</a>.</p>
 
-<div class="figure"><span id="fig:sample-video"></span>
-<iframe src="https://www.youtube.com/embed/M3_TWyva5yc" width="672" height="400px">
+<div class="figure"><span style="display:block;" id="fig:sample-video"></span>
+<iframe src="https://www.youtube.com/embed/M3_TWyva5yc" width="672" height="400px" data-external="1">
 </iframe>
 <p class="caption">
 Figure B.9: View the <a href="https://youtu.be/M3_TWyva5yc">YouTube video</a>, which enables readers of non-HTML editions to view it.
 </p>
 </div>
 </div>
-<div id="demo-r-code-chunk-for-streaming-video-only-in-html" class="section level3 unnumbered">
-<h3>Demo: R code-chunk for streaming video ONLY in HTML</h3>
+<div id="demo-r-code-chunk-for-streaming-video-only-in-html" class="section level3 unnumbered hasAnchor">
+<h3>Demo: R code-chunk for streaming video ONLY in HTML<a href="images.html#demo-r-code-chunk-for-streaming-video-only-in-html" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>This option is useful if you wish to display a video only in the HTML edition, with no screenshot in the other editions. Note that this will alter figure auto-numbering between the HTML and other editions. To avoid auto-numbering issues, use conventional iframe formatting without the R code-chunk.</p>
 
-<div class="figure"><span id="fig:sample-video2"></span>
-<iframe src="https://www.youtube.com/embed/_hmhEr1s7F0" width="672" height="400px">
+<div class="figure"><span style="display:block;" id="fig:sample-video2"></span>
+<iframe src="https://www.youtube.com/embed/_hmhEr1s7F0" width="672" height="400px" data-external="1">
 </iframe>
 <p class="caption">
 Figure B.10: Caption only appears in HTML version. View link to <a href="https://youtu.be/_hmhEr1s7F0">YouTube video</a>.
 </p>
 </div>
 </div>
-<div id="demo-markdown-image-formatting-without-auto-numbering-for-all-editions" class="section level3 unnumbered">
-<h3>Demo: Markdown image formatting without auto-numbering, for all editions</h3>
+<div id="demo-markdown-image-formatting-without-auto-numbering-for-all-editions" class="section level3 unnumbered hasAnchor">
+<h3>Demo: Markdown image formatting without auto-numbering, for all editions<a href="images.html#demo-markdown-image-formatting-without-auto-numbering-for-all-editions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>While we normally use R code-chunk image formatting, there are some exceptions. For example, we use Markdown formatting for tables or grids of images that are relatively small and do not require captions or auto-numbering.</p>
 <p>When creating images to appear as the same size in sequence, temporarily add a code-comment with the image width, height, and resolution as a reminder to match up with others, as shown below. Use PNG images (rather than JPG), and if appropriate, add a numerical suffix to the filename (image-200.png) to distinguish this 200px-wide version from the larger original.</p>
 <p><code>&lt;!-- Images below are 200x200 at 300 resolution --&gt;</code></p>
 <table>
+<colgroup>
+<col width="53%" />
+<col width="46%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th>Co-Authors</th>
@@ -572,7 +575,6 @@ Figure B.10: Caption only appears in HTML version. View link to <a href="https:/
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -612,15 +614,32 @@ gitbook.start({
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
-},
-"search": true
+}
 });
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

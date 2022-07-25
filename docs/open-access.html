@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Our Open-Access Web Edition: Why and How | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Our Open-Access Web Edition: Why and How | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io//images/cover-400wide.jpg" />
   <meta property="og:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="github-repo" content="handsondataviz/book" />
@@ -25,7 +24,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2022-04-04" />
+<meta name="date" content="2022-07-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,8 +33,8 @@
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="authors.html"/>
 <link rel="next" href="introduction.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -51,9 +50,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -336,7 +335,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
 <li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
-<li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
+<li class="chapter" data-level="" data-path="style-guide.html"><a href="style-guide.html"><i class="fa fa-check"></i>Style Guide for <em>Hands-On Data Visualization</em></a></li>
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
 <li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
 <li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
@@ -376,19 +375,19 @@ div.csl-indent {
   </p>
 
 </header>
-<div id="open-access" class="section level2 unnumbered">
-<h2>Our Open-Access Web Edition: Why and How</h2>
+<div id="open-access" class="section level2 unnumbered hasAnchor">
+<h2>Our Open-Access Web Edition: Why and How<a href="open-access.html#open-access" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>This open-access web edition displays the book manuscript we submitted to our publisher, O’Reilly Media, Inc., which we publicly shared under the terms of our contract, and is freely available to read at <a href="https://HandsOnDataViz.org" class="uri">https://HandsOnDataViz.org</a>. Also, you can access our open-source code templates that we featured in this book on our GitHub organizational account at <a href="https://github.com/handsondataviz" class="uri">https://github.com/handsondataviz</a>. To suggest any corrections or updates for future editions, you can open an issue or submit a pull request on our book’s GitHub repository at <a href="https://github.com/handsondataviz/book" class="uri">https://github.com/handsondataviz/book</a>. See also <a href="bookdown.html">Appendix: Publishing with Bookdown</a> to learn why and how we built our workflow around <a href="https://bookdown.org">Bookdown</a>, <a href="https://github.com">GitHub</a>, and <a href="https://zotero.org">Zotero</a>.</p>
-<div id="why-create-an-open-access-book" class="section level3 unnumbered">
-<h3>Why create an open-access book?</h3>
+<div id="why-create-an-open-access-book" class="section level3 unnumbered hasAnchor">
+<h3>Why create an open-access book?<a href="open-access.html#why-create-an-open-access-book" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Why did we publicly share this open-access edition of our book? Why not maximize our profits and try to pocket all of the cash instead? Our answer is a combination of philosophical values and pragmatic realities. This is Jack’s third open-access book, and he has previously written more about the rationale in the introductions to <em>Writing History in the Digital Age</em> (co-edited with Kristen Nawrotzki) and <em>Web Writing: Why and How for Liberal Arts Teaching and Learning</em> (co-edited with Tennyson O’Donnell).<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>. Here’s a summary of our key motivations.</p>
 <p>First, we believe that <strong>knowledge becomes more valuable when shared widely</strong>, rather than hidden behind a paywall. If our book makes a small improvement to the world by helping a thousand readers to communicate more clearly with data, then reaching ten thousand or more readers is even better. Originally, this book began as a compilation of tutorials for a data visualization course, which educated many college students and Hartford community partners in face-to-face settings, and thousands more in a free online course that attracted readers from around the globe. An open-access book is more likely to share knowledge than a closed one.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p>
 <p>Second, both of us <strong>operate in a reputation economy</strong>, where our professional status rises or falls in the eyes of readers who judge the quality of our work. Therefore, it’s in our professional self-interest to make our best work more accessible to wider audiences, rather than hiding it behind a paywall. Jack is a college professor and Ilya is a civic technologist. Creating an open-access book that introduces readers to core principles and concrete examples, and shares links to our open-access code templates, aligns with the expectations in our professions. Money also matters, but it’s not our primary motivator, and both of us earn salaries through our regular employment.<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></p>
 <p>Third, the <strong>quality of our final product improved as a direct result of reader feedback</strong> on the early open-access editions. Years before we even considered approaching a publisher, we publicly shared early drafts on the web, and interactions with readers, both face-to-face and via email, eventually persuaded us to pitch it to a publisher as a full-fledged book. During our extended writing and revising process, we intentionally made all of the chapters visible as we wrote them, including incomplete sections with lots of “TODO” notes. Readers sent us thoughtful questions, helpful suggestions, and told us how they were using the draft book to teach students or coworkers. Some readers pointed out errors we had missed, and a few even submitted corrections via GitHub pull requests. To be clear, our draft also improved dramatically due to the feedback of our developmental editor and her colleagues, as well as peer reviewers she recruited, all of whom were compensated by the publisher. Thanks to input from all of our readers, this open-access book is much stronger than a closed one would have been.</p>
 <p>Finally, one more motivator may be particular to this type of book on data visualization. <strong>By design, the ideal way to read this book is through your browser on the open web</strong>. We embedded dozens of charts and maps on web pages so that readers can explore their interactive nature and float their cursors to view underlying data. The text also includes hundreds of hyperlinks to sample data and sources for further reading. If you’re reading the print or PDF edition of this book, you’re missing out. And while it may be possible to include some interactive materials behind a password-protected website, that proprietary approach might violate the terms of service for some of the charts, maps, and tools we feature in this book.</p>
 </div>
-<div id="how-did-we-make-this-book-open-access" class="section level3 unnumbered">
-<h3>How did we make this book open access?</h3>
+<div id="how-did-we-make-this-book-open-access" class="section level3 unnumbered hasAnchor">
+<h3>How did we make this book open access?<a href="open-access.html#how-did-we-make-this-book-open-access" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>When we decided we wanted to transform our existing online draft chapters into a polished publication, we sought a publisher who would work with us to include an open-access edition. Fortunately, our first-choice publisher, O’Reilly Media, has a friendly stance toward open access than many traditional publishers, and they also make money by selling print and digital books. When pitching our book proposal to O’Reilly’s editors, we pointed to our existing open-access site and the web traffic it received as evidence of the book’s audience.</p>
 <p>During our book contract negotiations with O’Reilly, here’s how our acquisitions editor addressed the open-access issue in an April 2020 email:</p>
 <blockquote>
@@ -420,11 +419,17 @@ div.csl-indent {
 <p class="caption">Tweet by Alberto Cairo about our open-access book, December 2020</p>
 </div>
 </div>
-<div id="what-is-our-readership-and-sales-data" class="section level3 unnumbered">
-<h3>What is our readership and sales data?</h3>
+<div id="what-is-our-readership-and-sales-data" class="section level3 unnumbered hasAnchor">
+<h3>What is our readership and sales data?<a href="open-access.html#what-is-our-readership-and-sales-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>How many people have read our open-access web book? And how many for-profit books have been sold? Answering these questions requires data from different sources because our book appears in four editions. One is the open-access web edition that we host on our GitHub website (with our custom domain <a href="https://handsondataviz.org" class="uri">https://handsondataviz.org</a>). The other three editions are sold by O’Reilly: subscriber-only online access to their entire library (which retails at $49/month), the print book edition, and the eBook edition. Furthermore, O’Reilly sells foreign rights to publish the book in other countries.</p>
 <p>Here’s a summary of readership for our open-access web edition, according to our Google Analytics data, before and after O’Reilly published our book in late March 2021:</p>
-<table>
+<table style="width:100%;">
+<colgroup>
+<col width="42%" />
+<col width="12%" />
+<col width="15%" />
+<col width="30%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th>Time Period (calendar year)</th>
@@ -452,10 +457,23 @@ div.csl-indent {
 <td align="right">285,511</td>
 <td align="right">1:46 minutes</td>
 </tr>
+<tr class="even">
+<td>2022 (Jan thru July ONLY)</td>
+<td align="right">98,994</td>
+<td align="right">225,692</td>
+<td align="right">1:27 minutes</td>
+</tr>
 </tbody>
 </table>
-<p>Here’s a summary of O’Reilly’s book sales for their editions thru November 2021:</p>
+<p>Here’s a summary of O’Reilly’s book sales for their editions thru May 2022:</p>
 <table>
+<colgroup>
+<col width="24%" />
+<col width="10%" />
+<col width="15%" />
+<col width="22%" />
+<col width="27%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th>O’Reilly Sales</th>
@@ -469,44 +487,37 @@ div.csl-indent {
 <tr class="odd">
 <td>Online Access</td>
 <td align="right"></td>
-<td align="right">$6,689</td>
+<td align="right">$7,789</td>
 <td align="right">25%</td>
-<td align="right">$1,672</td>
+<td align="right">$1,947</td>
 </tr>
 <tr class="even">
 <td>Print Books</td>
-<td align="right">687</td>
-<td align="right">$15,851</td>
+<td align="right">718</td>
+<td align="right">$16,648</td>
 <td align="right">10%</td>
-<td align="right">$1,585</td>
+<td align="right">$1,665</td>
 </tr>
 <tr class="odd">
 <td>eBooks</td>
-<td align="right">94</td>
-<td align="right">$2,480</td>
+<td align="right">126</td>
+<td align="right">$3,300</td>
 <td align="right">25%</td>
-<td align="right">$620</td>
+<td align="right">$ 825</td>
 </tr>
 <tr class="even">
 <td>Foreign Rights</td>
 <td align="right"></td>
 <td align="right">$5,000</td>
 <td align="right">25%</td>
-<td align="right">$1,250</td>
+<td align="right"><span class="math inline">\(1,250 | | Other/Returns | | | | -\)</span> 26</td>
 </tr>
 <tr class="odd">
-<td>Other/Returns</td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right">-$23</td>
-</tr>
-<tr class="even">
 <td>Total</td>
 <td align="right">781</td>
-<td align="right">$29,997</td>
+<td align="right">$32,710</td>
 <td align="right"></td>
-<td align="right">$5,103</td>
+<td align="right">$5,660</td>
 </tr>
 </tbody>
 </table>
@@ -514,8 +525,8 @@ div.csl-indent {
 <p>While our open-access web book audience is large and growing, O’Reilly’s total earnings from for-profit sales seems modest by comparison. That’s perfectly fine with us, because we never measured our success by squeezing out more money from for-profit book sales. Instead, our primary goal with <em>Hands-On Data Visualization</em> was to enhance the quality and expand the readership of our open-access edition, while collaborating with a publisher, who respects our open-access priorities, to produce print and digital editions of the book to readers who prefer to buy them in these formats. Working with O’Reilly—especially our developmental editor, copyeditor, and production editor—has been an excellent experience.</p>
 <p>In conclusion, our approach to open-access book publishing may not match your ideals or realities. Perhaps you rely on book sales as your sole source of income. Many authors and publishers still prefer to let readers preview only a chapter online in order to maximize revenue. Some authors will consider open-access publishing, but dare not share their drafts until the work is completed. Others take the opposite approach and widely circulate pieces of their early writing online in blog posts or social media, but do not share the comprehensive final work in the same manner. Still others have never considered any of these options, nor do they realize that the knowledge-production industry is slowly changing, and some book publishers are growing more comfortable with open-access agreements. So while our approach may not suit your situation, we hope that our reasoning will nudge you to think differently about why and how all of us publish books, both in the present and in future years to come.</p>
 </div>
-<div id="how-to-read-the-web-edition" class="section level3 unnumbered">
-<h3>How to read the web edition</h3>
+<div id="how-to-read-the-web-edition" class="section level3 unnumbered hasAnchor">
+<h3>How to read the web edition<a href="open-access.html#how-to-read-the-web-edition" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Reading the open-access edition of <em>Hands-On Data Visualization</em> in your web browser the ideal way to explore our interactive charts and maps. Most are embedded in the web pages as iframes using the same principles illustrated in <a href="embed.html">Chapter 9: Embed on the Web</a>. Also, the web edition enables readers to easily click on internal cross-references and follow our links to external sources.</p>
 <p>Try these toolbar features located near the top of your browser:</p>
 <ul>
@@ -532,8 +543,8 @@ div.csl-indent {
 <img src="images/0-preface/toolbar-features.png" alt="" />
 <p class="caption">Toolbar features in open-access web edition</p>
 </div>
-<div id="open-links-in-new-tabs" class="section level4 unnumbered">
-<h4>Open links in new tabs</h4>
+<div id="open-links-in-new-tabs" class="section level4 unnumbered hasAnchor">
+<h4>Open links in new tabs<a href="open-access.html#open-links-in-new-tabs" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Keep your place when reading online and moving between pages.</p>
 <ul>
 <li>Two-finger trackpad click</li>
@@ -546,8 +557,8 @@ div.csl-indent {
 <p class="caption">How to open links in new tab (on Mac)</p>
 </div>
 </div>
-<div id="share-section-links" class="section level4 unnumbered">
-<h4>Share section links</h4>
+<div id="share-section-links" class="section level4 unnumbered hasAnchor">
+<h4>Share section links<a href="open-access.html#share-section-links" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Float your cursor over any section header to reveal a hashtag anchor symbol: <code>#</code>. Click the symbol to view the section link in your browser bar, and copy it to share with others.</p>
 <div class="figure">
 <img src="images/0-preface/section-links.png" alt="" />
@@ -616,7 +627,6 @@ div.csl-indent {
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -656,15 +666,32 @@ gitbook.start({
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
-},
-"search": true
+}
 });
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

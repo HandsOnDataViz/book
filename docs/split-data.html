@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Split Data into Separate Columns | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Split Data into Separate Columns | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io//images/cover-400wide.jpg" />
   <meta property="og:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="github-repo" content="handsondataviz/book" />
@@ -25,7 +24,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2022-04-04" />
+<meta name="date" content="2022-07-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,8 +33,8 @@
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="transpose.html"/>
 <link rel="next" href="combine-data.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -51,9 +50,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -336,7 +335,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
 <li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
-<li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
+<li class="chapter" data-level="" data-path="style-guide.html"><a href="style-guide.html"><i class="fa fa-check"></i>Style Guide for <em>Hands-On Data Visualization</em></a></li>
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
 <li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
 <li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
@@ -376,8 +375,8 @@ div.csl-indent {
   </p>
 
 </header>
-<div id="split-data" class="section level2 unnumbered">
-<h2>Split Data into Separate Columns</h2>
+<div id="split-data" class="section level2 unnumbered hasAnchor">
+<h2>Split Data into Separate Columns<a href="split-data.html#split-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Sometimes multiple pieces of data appear in a single cell,
 such as first and last names (<code>John Doe</code>), geographic coordinates (<code>40.12,-72.12</code>),
 or addresses (<code>300 Summit St, Hartford, CT, 06106</code>). For your analysis,
@@ -385,8 +384,8 @@ you might want to split them into separate entities, so that your <em>FullName</
 column (with <code>John Doe</code> in it) becomes <em>FirstName</em> (<code>John</code>) and <em>LastName</em> (<code>Doe</code>) columns,
 coordinates become <em>Latitude</em> and <em>Longitude</em> columns, and your <em>FullAddress</em> column becomes
 4 columns, <em>Street</em>, <em>City</em>, <em>State</em>, and <em>Zip</em> (postcode).</p>
-<div id="example-1-simple-splitting" class="section level3 unnumbered">
-<h3>Example 1: Simple Splitting</h3>
+<div id="example-1-simple-splitting" class="section level3 unnumbered hasAnchor">
+<h3>Example 1: Simple Splitting<a href="split-data.html#example-1-simple-splitting" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Let’s begin with a simple example of splitting pairs of geographic coordinates, separated by commas, into separate columns.</p>
 <ol style="list-style-type: decimal">
 <li><p>Open the <a href="https://docs.google.com/spreadsheets/d/1VmY9aS7I7UstXeI2xsJ-Ep2Q0CW8tnFHWTCga4EaJRk/edit#gid=1670822958">Split Coordinate Pairs sample data in Google Sheets</a>, sign in with your account, and go to <em>File &gt; Make a Copy</em> to create a version you can edit in your Google Drive.</p></li>
@@ -402,15 +401,15 @@ or any other custom character (or even a sequence of characters, which we’ll d
 <li><p>You can rename the new columns into <em>Longitude</em> (first number) and <em>Latitude</em> (second number).</p></li>
 </ol>
 
-<div class="figure"><span id="fig:sheets-split"></span>
+<div class="figure"><span style="display:block;" id="fig:sheets-split"></span>
 <img src="images/04-clean/sheets-split.png" alt="Select Data - Split text to columns to automatically separate data." width="350" />
 <p class="caption">
 Figure 4.5: Select <em>Data - Split text to columns</em> to automatically separate data.
 </p>
 </div>
 </div>
-<div id="example-2-complex-splitting" class="section level3 unnumbered">
-<h3>Example 2: Complex Splitting</h3>
+<div id="example-2-complex-splitting" class="section level3 unnumbered hasAnchor">
+<h3>Example 2: Complex Splitting<a href="split-data.html#example-2-complex-splitting" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Now, let’s look at a slightly more complicated example. Each cell contains a full address, which you want to split into four columns: street, city, state, and zipcode (postcode). But notice how the separators differ: a comma between street and city, a space between city and state, and two dashes between state and the zipcode. In this case, you’ll need to manually add some instructions to properly split the text into four columns.</p>
 <pre><code>| Location                          |
 | --------------------------------- |
@@ -425,7 +424,7 @@ Figure 4.5: Select <em>Data - Split text to columns</em> to automatically separa
 <li><p>Finally, select only the third column and perform <em>Split text to columns</em> again. Google Sheets won’t recognize the two dashes as a separator, so you need to manually select <em>Custom</em>, type those two dashes (<code>--</code>) in the <em>Custom separator</em> field, as shown in Figure <a href="split-data.html#fig:sheets-split-complex">4.6</a>, and press Enter. Now you have successfully split the full address into four columns.</p></li>
 </ol>
 
-<div class="figure"><span id="fig:sheets-split-complex"></span>
+<div class="figure"><span style="display:block;" id="fig:sheets-split-complex"></span>
 <img src="images/04-clean/sheets-split-complex.png" alt="To split the last column, select a Custom separator and manually type in two dashes." width="550" />
 <p class="caption">
 Figure 4.6: To split the last column, select a <em>Custom</em> separator and manually type in two dashes.
@@ -484,7 +483,6 @@ Figure 4.6: To split the last column, select a <em>Custom</em> separator and man
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -524,15 +522,32 @@ gitbook.start({
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
-},
-"search": true
+}
 });
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

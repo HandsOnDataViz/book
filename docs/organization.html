@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Organization of the Book | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Organization of the Book | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io//images/cover-400wide.jpg" />
   <meta property="og:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="github-repo" content="handsondataviz/book" />
@@ -25,7 +24,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2022-04-04" />
+<meta name="date" content="2022-07-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,8 +33,8 @@
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="shades.html"/>
 <link rel="next" href="choose.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -51,9 +50,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -336,7 +335,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
 <li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
-<li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
+<li class="chapter" data-level="" data-path="style-guide.html"><a href="style-guide.html"><i class="fa fa-check"></i>Style Guide for <em>Hands-On Data Visualization</em></a></li>
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
 <li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
 <li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
@@ -376,15 +375,15 @@ div.csl-indent {
   </p>
 
 </header>
-<div id="organization" class="section level2 unnumbered">
-<h2>Organization of the Book</h2>
+<div id="organization" class="section level2 unnumbered hasAnchor">
+<h2>Organization of the Book<a href="organization.html#organization" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We’ve organized the chapters of this book to serve as an introductory hands-on guide to data visualization, from spreadsheets to code. Also, we assume no prior skills other than general familiarity with operating a computer and a vague memory of secondary school mathematics, along with an innate curiosity about telling stories with data. Imagine the book in four parts.</p>
 <p>In part one, you’ll develop foundational skills about envisioning your data story, along with the tools and data you’ll need to tell it. We’ll gradually move from <a href="choose.html">Chapter 1: Choose Tools to Tell Your Data Story</a> to <a href="spreadsheet.html">Chapter 2: Strengthen Your Spreadsheet Skills</a> to <a href="find.html">Chapter 3: Find and Question Your Data</a> to <a href="clean.html">Chapter 4: Clean Up Messy Data</a> to <a href="comparisons.html">Chapter 5: Make Meaningful Comparisons</a>. These chapters feature hands-on tutorials to enrich learning by doing.</p>
 <p>In part two, you’ll build lots of visualizations with easy-to-learn drag-and-drop tools, and find out which types work best with different data stories. We’ll start with <a href="chart.html">Chapter 6: Chart Your Data</a>, <a href="map.html">Chapter 7: Map Your Data</a>, and <a href="table.html">Chapter 8: Table Your Data</a> and develop your understanding of the interpretive style that each one emphasizes. In <a href="embed.html">Chapter 9: Embed on the Web</a>, you’ll learn how to insert all of these interactive visualizations on common web platforms, to invite readers to explore your data and share your work more widely.</p>
 <p>In part three, you’ll advance to working with more powerful tools, specifically code templates, that give you more control over customizing the appearance of your visualizations and where you host them online. We’ll start with <a href="github.html">Chapter 10: Edit and Host Code with GitHub</a>, and walk you through the easy web interface for this popular open-source coding platform. Then you’ll build using <a href="chartcode.html">Chapter 11: Chart.js and Highcharts Templates</a> and <a href="leaflet.html">Chapter 12: Leaflet Map Templates</a>, and discover more advanced spatial tools in <a href="transform.html">Chapter 13: Transform Your Map Data</a>. At the end of the book we include an <a href="fix.html">Appendix: Fix Common Problems</a> to consult when you accidentally break your code, which is also a great way to learn how it works.</p>
 <p>In part four, we’ll wrap up all of the visualization skills you’ve developed by returning to the central theme of this introduction: telling true and meaningful stories with data. In <a href="detect.html">Chapter 14: Detect Lies and Reduce Bias</a>, you’ll learn how to lie with charts and maps in order to do a better job of telling the truth. Finally, <a href="story.html">Chapter 15: Tell and Show Your Data Story</a> emphasizes how the goal of data visualization is not simply to make pictures about numbers, but to craft a truthful narrative that convinces readers how and why your interpretation matters.</p>
-<div id="summary0" class="section level3 unnumbered">
-<h3>Summary</h3>
+<div id="summary0" class="section level3 unnumbered hasAnchor">
+<h3>Summary<a href="organization.html#summary0" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Now you have a clearer sense of our primary goal for this book. We aim for you to learn how to tell true and meaningful stories with interactive data visualizations, while being mindful of the ways that people can use them to mislead. In the next chapter, let’s get started on clarifying the data story you wish to tell, and factors to consider when choosing tools to do the job.</p>
 
 </div>
@@ -440,7 +439,6 @@ div.csl-indent {
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -480,15 +478,32 @@ gitbook.start({
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
-},
-"search": true
+}
 });
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

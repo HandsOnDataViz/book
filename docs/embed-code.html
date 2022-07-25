@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Get the Embed Code or iframe Tag | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Get the Embed Code or iframe Tag | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io//images/cover-400wide.jpg" />
   <meta property="og:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="github-repo" content="handsondataviz/book" />
@@ -25,7 +24,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2022-04-04" />
+<meta name="date" content="2022-07-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,8 +33,8 @@
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="static.html"/>
 <link rel="next" href="paste-code.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -51,9 +50,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -336,7 +335,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
 <li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
-<li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
+<li class="chapter" data-level="" data-path="style-guide.html"><a href="style-guide.html"><i class="fa fa-check"></i>Style Guide for <em>Hands-On Data Visualization</em></a></li>
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
 <li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
 <li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
@@ -376,24 +375,24 @@ div.csl-indent {
   </p>
 
 </header>
-<div id="embed-code" class="section level2 unnumbered">
-<h2>Get the Embed Code or iframe Tag</h2>
+<div id="embed-code" class="section level2 unnumbered hasAnchor">
+<h2>Get the Embed Code or iframe Tag<a href="embed-code.html#embed-code" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In this section, you’ll learn how to copy the embed code or iframe tag that is automatically generated when you publish a chart or map on different visualization platforms featured in this book. Remember that embed codes contain the essential iframe tag, along with other bits of code to display the chart or map from the primary site and make it appear seamlessly on the secondary site.</p>
 <p>We’ll break this down into three steps for each visualization platform. First, we will demonstrate how to copy your embed code or iframe tag from Google Sheets, Datawrapper, Tableau Public, and other platforms listed below. Second, we’ll show you how to test the embed code or iframe tag in a wonderful assistant called the <a href="https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_iframe">W3Schools TryIt iframe page</a>, as shown in Figure <a href="embed-code.html#fig:w3schools-tryit-iframe">9.3</a>. It’s a great way to see what happens if you need to trim parts of the embed code before placing it in web page, and test if it still works. Third, we’ll point you to the next section to learn how to properly paste the embed code in your preferred website, including common platforms such as WordPress, SquareSpace, Wix, and Weebly.</p>
 
-<div class="figure"><span id="fig:w3schools-tryit-iframe"></span>
+<div class="figure"><span style="display:block;" id="fig:w3schools-tryit-iframe"></span>
 <img src="images/09-embed/w3schools-tryit-iframe.png" alt="For each embed code below, paste it in place of the selected text of the W3Schools TryIt iframe page to test how it works." width="750" />
 <p class="caption">
 Figure 9.3: For each embed code below, paste it in place of the selected text of the W3Schools TryIt iframe page to test how it works.
 </p>
 </div>
-<div id="from-google-sheets" class="section level3 unnumbered">
-<h3>from Google Sheets</h3>
+<div id="from-google-sheets" class="section level3 unnumbered hasAnchor">
+<h3>from Google Sheets<a href="embed-code.html#from-google-sheets" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
 <li>After you create a <a href="chart-google.html">Google Sheets chart as you did in Chapter 6</a>, click the three-dot kebab menu in the upper-right corner of the chart to publish it, as shown in Figure <a href="embed-code.html#fig:google-sheets-publish">9.4</a>.</li>
 </ol>
 
-<div class="figure"><span id="fig:google-sheets-publish"></span>
+<div class="figure"><span style="display:block;" id="fig:google-sheets-publish"></span>
 <img src="images/09-embed/google-sheets-publish.png" alt="In your chart, click the three-dot kebab menu to publish it." width="150" />
 <p class="caption">
 Figure 9.4: In your chart, click the three-dot kebab menu to publish it.
@@ -403,7 +402,7 @@ Figure 9.4: In your chart, click the three-dot kebab menu to publish it.
 <li>In the next screen, select the <em>Embed</em> tab and <em>Interactive</em> chart, and click the <em>Publish</em> button to share it online. Select and copy the embed code, as shown in Figure <a href="embed-code.html#fig:google-sheets-embed-code">9.5</a>.</li>
 </ol>
 
-<div class="figure"><span id="fig:google-sheets-embed-code"></span>
+<div class="figure"><span style="display:block;" id="fig:google-sheets-embed-code"></span>
 <img src="images/09-embed/google-sheets-embed-code.png" alt="Click Embed and Interactive and Publish, then select and copy the embed code." width="500" />
 <p class="caption">
 Figure 9.5: Click <em>Embed</em> and <em>Interactive</em> and <em>Publish</em>, then select and copy the embed code.
@@ -413,7 +412,7 @@ Figure 9.5: Click <em>Embed</em> and <em>Interactive</em> and <em>Publish</em>, 
 <li>To better understand how the embed code works, open the <a href="https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_iframe">W3Schools TryIt iframe page</a>. Select the current iframe tag, paste in your embed code to replace it, and press the green <em>Run</em> button. The result should be similar to Figure <a href="embed-code.html#fig:google-sheets-tryit">9.6</a>, but instead will display your embed code and interactive visualization.</li>
 </ol>
 
-<div class="figure"><span id="fig:google-sheets-tryit"></span>
+<div class="figure"><span style="display:block;" id="fig:google-sheets-tryit"></span>
 <img src="images/09-embed/google-sheets-tryit.png" alt="Paste your Google Sheets embed code to place of the current iframe tag in the TryIt page and click Run." width="750" />
 <p class="caption">
 Figure 9.6: Paste your Google Sheets embed code to place of the current iframe tag in the TryIt page and click <em>Run</em>.
@@ -424,13 +423,13 @@ Figure 9.6: Paste your Google Sheets embed code to place of the current iframe t
 <li>Now jump to the <a href="paste-code.html">paste code to website section</a> of this chapter to learn how to properly insert your embed code into your preferred platform.</li>
 </ol>
 </div>
-<div id="from-datawrapper" class="section level3 unnumbered">
-<h3>from Datawrapper</h3>
+<div id="from-datawrapper" class="section level3 unnumbered hasAnchor">
+<h3>from Datawrapper<a href="embed-code.html#from-datawrapper" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
 <li>After you create a <a href="chart-datawrapper.html">Datawrapper chart as you did in Chapter 6</a> or <a href="map.html">map as you did in Chapter 7</a> or <a href="table.html">interactive table as you did Chapter 8</a>, proceed to the final screen and click the <em>Publish</em> button, as shown in Figure <a href="embed-code.html#fig:datawrapper-publish">9.7</a>. This publishes the interactive version of your chart or map online. Further down on the same screen you can also export a static image, if desired.</li>
 </ol>
 
-<div class="figure"><span id="fig:datawrapper-publish"></span>
+<div class="figure"><span style="display:block;" id="fig:datawrapper-publish"></span>
 <img src="images/09-embed/datawrapper-publish.png" alt="Proceed to the final screen and click the Publish button." width="300" />
 <p class="caption">
 Figure 9.7: Proceed to the final screen and click the <em>Publish</em> button.
@@ -440,7 +439,7 @@ Figure 9.7: Proceed to the final screen and click the <em>Publish</em> button.
 <li>On the next screen, click <em>copy</em> to get the Datawrapper embed code, as shown in Figure <a href="embed-code.html#fig:datawrapper-embed-code">9.8</a>. The default <em>responsive iframe</em> version of the embed code contains additional instructions to improve its appearance on both small and large device screens.</li>
 </ol>
 
-<div class="figure"><span id="fig:datawrapper-embed-code"></span>
+<div class="figure"><span style="display:block;" id="fig:datawrapper-embed-code"></span>
 <img src="images/09-embed/datawrapper-embed-code.png" alt="Copy the responsive iframe version of the Datawrapper embed code." width="300" />
 <p class="caption">
 Figure 9.8: Copy the responsive iframe version of the Datawrapper embed code.
@@ -450,7 +449,7 @@ Figure 9.8: Copy the responsive iframe version of the Datawrapper embed code.
 <li>To better understand how the embed code works, open the <a href="https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_iframe">W3Schools TryIt iframe page</a>. Select the current iframe tag, paste in your embed code to replace it, and press the green <em>Run</em> button. The result should be similar to Figure <a href="embed-code.html#fig:datawrapper-tryit">9.9</a>, but instead will display your unique embed code and interactive visualization.</li>
 </ol>
 
-<div class="figure"><span id="fig:datawrapper-tryit"></span>
+<div class="figure"><span style="display:block;" id="fig:datawrapper-tryit"></span>
 <img src="images/09-embed/datawrapper-tryit.png" alt="Paste your Datawrapper embed code in place of the current iframe tag in the TryIt page and click Run." width="750" />
 <p class="caption">
 Figure 9.9: Paste your Datawrapper embed code in place of the current iframe tag in the TryIt page and click <em>Run</em>.
@@ -462,7 +461,7 @@ Figure 9.9: Paste your Datawrapper embed code in place of the current iframe tag
 </ol>
 <p>Tip: But if it doesn’t work, go back to step 3 and experiment. Try to edit the embed code down to a <em>simple iframe</em>, and run it again to see how it looks, as shown in Figure <a href="embed-code.html#fig:datawrapper-tryit-simple">9.10</a>. Sometimes a simple iframe works better on your website than a complex embed code.</p>
 
-<div class="figure"><span id="fig:datawrapper-tryit-simple"></span>
+<div class="figure"><span style="display:block;" id="fig:datawrapper-tryit-simple"></span>
 <img src="images/09-embed/datawrapper-tryit-simple.png" alt="If a complex embed code does not work in your website, go back and try to edit it down into a simple iframe." width="750" />
 <p class="caption">
 Figure 9.10: If a complex embed code does not work in your website, go back and try to edit it down into a simple iframe.
@@ -470,13 +469,13 @@ Figure 9.10: If a complex embed code does not work in your website, go back and 
 </div>
 <p>Tip: The Datawrapper iframe tag source follows this general format: <code>https://datawrapper.dwcdn.net/abcdef/1/</code>, where the <code>1</code> refers to the first version of the chart or map you published. If you make edits and re-publish your visualization, Datawrapper will increase the last digit (to <code>2</code> and so forth), and <em>automatically redirect</em> older links to the <em>current version</em>, which keeps your work up-to-date for your audience.</p>
 </div>
-<div id="from-tableau-public" class="section level3 unnumbered">
-<h3>from Tableau Public</h3>
+<div id="from-tableau-public" class="section level3 unnumbered hasAnchor">
+<h3>from Tableau Public<a href="embed-code.html#from-tableau-public" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
 <li>After you create a <a href="chart-tableau.html">Tableau Public chart in Chapter 6</a> or <a href="map-tableau.html">map in Chapter 7</a>, publish your worksheet, dashboard, or story online by selecting <em>File &gt; Save to Tableau Public</em> in the desktop application menu, as shown in Figure <a href="embed-code.html#fig:tableau-public-publish">9.11</a>.</li>
 </ol>
 
-<div class="figure"><span id="fig:tableau-public-publish"></span>
+<div class="figure"><span style="display:block;" id="fig:tableau-public-publish"></span>
 <img src="images/09-embed/tableau-public-publish.png" alt="In the Tableau Public desktop application, select File–Save to Tableau Public to publish to the online server." width="428" />
 <p class="caption">
 Figure 9.11: In the Tableau Public desktop application, select <em>File–Save to Tableau Public</em> to publish to the online server.
@@ -486,7 +485,7 @@ Figure 9.11: In the Tableau Public desktop application, select <em>File–Save t
 <li>In your online Tableau Public account profile page, click to <em>View</em> the details of any of your published visualizations, as shown in Figure <a href="embed-code.html#fig:tableau-public-view">9.12</a>.</li>
 </ol>
 
-<div class="figure"><span id="fig:tableau-public-view"></span>
+<div class="figure"><span style="display:block;" id="fig:tableau-public-view"></span>
 <img src="images/09-embed/tableau-public-view.png" alt="In your Tableau Public online profile page, click to View the details of a published visualization." width="289" />
 <p class="caption">
 Figure 9.12: In your Tableau Public online profile page, click to <em>View</em> the details of a published visualization.
@@ -497,7 +496,7 @@ Figure 9.12: In your Tableau Public online profile page, click to <em>View</em> 
 <li>When viewing details for a published visualization in your Tableau Public online account, scroll down and click on the <em>Share</em> symbol in the lower-right corner. Select and copy its embed code, as shown in Figure <a href="embed-code.html#fig:tableau-public-embed-code">9.13</a>.</li>
 </ol>
 
-<div class="figure"><span id="fig:tableau-public-embed-code"></span>
+<div class="figure"><span style="display:block;" id="fig:tableau-public-embed-code"></span>
 <img src="images/09-embed/tableau-public-embed-code-annotated.png" alt="Scroll down in the online published visualization details, click the Share button, and copy the embed code." width="469" />
 <p class="caption">
 Figure 9.13: Scroll down in the online published visualization details, click the <em>Share</em> button, and copy the embed code.
@@ -507,7 +506,7 @@ Figure 9.13: Scroll down in the online published visualization details, click th
 <li>To better understand how the embed code works, open the <a href="https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_iframe">W3Schools TryIt iframe page</a>. Select the current iframe tag, paste in your embed code to replace it, and press the green <em>Run</em> button. The result should be similar to Figure <a href="embed-code.html#fig:tableau-public-tryit">9.14</a>, but instead will display your embed code and interactive visualization. Note how the Tableau Public embed code is so long that it does not fit in this image.</li>
 </ol>
 
-<div class="figure"><span id="fig:tableau-public-tryit"></span>
+<div class="figure"><span style="display:block;" id="fig:tableau-public-tryit"></span>
 <img src="images/09-embed/tableau-public-tryit.png" alt="Paste your Tableau public embed code in place of the current iframe tag in the TryIt page and click Run." width="750" />
 <p class="caption">
 Figure 9.14: Paste your Tableau public embed code in place of the current iframe tag in the TryIt page and click <em>Run</em>.
@@ -546,7 +545,7 @@ Figure 9.14: Paste your Tableau public embed code in place of the current iframe
 <li>Press <em>Run</em> to see how it looks in the W3Schools TryIt iframe page, as shown in Figure <a href="embed-code.html#fig:tableau-public-tryit-simple">9.15</a>. Sometimes a simple iframe works better on your website than a complex embed code.</li>
 </ol>
 
-<div class="figure"><span id="fig:tableau-public-tryit-simple"></span>
+<div class="figure"><span style="display:block;" id="fig:tableau-public-tryit-simple"></span>
 <img src="images/09-embed/tableau-public-tryit-simple.png" alt="If a complex embed code does not work in your website, go back and copy the link to the visualization, and try to convert it into a simple iframe." width="750" />
 <p class="caption">
 Figure 9.15: If a complex embed code does not work in your website, go back and copy the link to the visualization, and try to convert it into a simple iframe.
@@ -606,7 +605,6 @@ Figure 9.15: If a complex embed code does not work in your website, go back and 
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -646,15 +644,32 @@ gitbook.start({
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
-},
-"search": true
+}
 });
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

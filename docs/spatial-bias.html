@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Recognize and Reduce Spatial Bias | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Recognize and Reduce Spatial Bias | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io//images/cover-400wide.jpg" />
   <meta property="og:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="github-repo" content="handsondataviz/book" />
@@ -25,7 +24,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2022-04-04" />
+<meta name="date" content="2022-07-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,8 +33,8 @@
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="data-bias.html"/>
 <link rel="next" href="story.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -51,9 +50,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -336,7 +335,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
 <li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
-<li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
+<li class="chapter" data-level="" data-path="style-guide.html"><a href="style-guide.html"><i class="fa fa-check"></i>Style Guide for <em>Hands-On Data Visualization</em></a></li>
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
 <li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
 <li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
@@ -376,14 +375,14 @@ div.csl-indent {
   </p>
 
 </header>
-<div id="spatial-bias" class="section level2 unnumbered">
-<h2>Recognize and Reduce Spatial Bias</h2>
+<div id="spatial-bias" class="section level2 unnumbered hasAnchor">
+<h2>Recognize and Reduce Spatial Bias<a href="spatial-bias.html#spatial-bias" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In addition to recognizing and reducing data biases in general, we also need to watch out for spatial biases that negatively influence how we create and interpret maps. In this section, we’ll identify four types of spatial biases: map area, projection, disputed territory, and exclusion. We’ll also suggest specific ways to try to counter these biases when creating visualizations.</p>
 <p><em>Map area bias</em> refers to the tendency for our eyes to focus primarily on larger regions on a map, and less on smaller ones. A classic example arises every four years with choropleth maps of US presidential elections, which draw our attention to the geographic area of US states, rather than their population size or number of electoral votes, as shown in Figure <a href="spatial-bias.html#fig:conventional-cartogram-combined">14.17</a>. Conventional maps exaggerate the political influence of rural states with larger geographic areas (such as spacious Wyoming with less than 600,000 people), and diminish the role of urban states with small areas (such as tiny Rhode Island with over 1,000,000 people). Although Wyoming covers 80 times more area than Rhode Island, it casts only 3 electoral votes in US presidential races, while Rhode Island has 4 electoral votes. But when looking at conventional maps, most readers cannot easily make this distinction because our eyes are drawn to states with larger geographic areas, not population.</p>
 <p><em>Projection bias</em> is a related issue about how maps portray geographic areas. Over time, mapmakers have developed different projection systems to display a three-dimensional globe on a two-dimensional surface. Mercator, one of the most common projection systems, inflates the size of many European and North American countries, and diminishes the relative size (and importance) of Central African and Central American countries that lie closer to the equator. See the <a href="https://engaging-data.com/country-sizes-mercator/">Engaging Data site</a> and <a href="https://googlemapsmania.blogspot.com/2020/09/how-map-projections-lie.html">How Map Projections Lie by Maps Mania</a> for interactive visualizations about Mercator projection map bias and comparisons to other systems. As Google maps and similar online services grew in popularity over the past fifteen years, their default projection system, known as <a href="https://en.wikipedia.org/wiki/Web_Mercator_projection">Web Mercator</a>, became ubiquitous on the web, further cementing distorted geography in our minds. (In 2018, Google Maps allowed desktop users who zoomed out to enable its 3D Globe view, instead of Web Mercator, but this may not be the default setting and may need to be switched on.)</p>
 <p>One way to address both map area and projection bias in national or global maps is to replace conventional map outlines with <em>cartograms</em>, which are also called hexagon maps or population squares on some platforms. Cartograms display the size of geographic regions by their relative importance, which in this case is population, but could also be the size of the economy or other factors, depending on the data story. One advantage is that cartograms can focus our attention more evenly on the most relevant aspect of our data story, such as electoral votes in as shown in Figure <a href="spatial-bias.html#fig:conventional-cartogram-combined">14.17</a>. But one drawback is that cartograms require readers to recognize abstract shapes in place of familiar boundaries, since these population-based visualizations do not align perfectly with conventional Mercator geography-based land maps. See also Lisa Charlotte Rost’s post in Datawrapper Academy on <a href="https://blog.datawrapper.de/how-to-visualize-the-us-election-2020-with-datawrapper/">how to visualize US elections results</a>.</p>
 
-<div class="figure"><span id="fig:conventional-cartogram-combined"></span>
+<div class="figure"><span style="display:block;" id="fig:conventional-cartogram-combined"></span>
 <img src="images/14-detect/conventional-cartogram-combined.png" alt="The US 2020 Presidential electoral vote displayed in a conventional US map (left) versus a cartogram (right), both created with Datawrapper." width="750" />
 <p class="caption">
 Figure 14.17: The US 2020 Presidential electoral vote displayed in a conventional US map (left) versus a cartogram (right), both created with Datawrapper.
@@ -396,8 +395,8 @@ Figure 14.17: The US 2020 Presidential electoral vote displayed in a conventiona
 <li><p>Go to the <em>Select your map</em> screen, and type “squares” to see all of those available types (including World population squares). Similarly, type “hexagons” to see all of the cartograms available (including US States). Select your preferred map, and proceed to visualize the data in the same way as other Datawrapper choropleth maps, as shown in Figure <a href="spatial-bias.html#fig:map-world-pop-square">14.18</a>.</p></li>
 </ol>
 
-<div class="figure"><span id="fig:map-world-pop-square"></span>
-<iframe src="https://datawrapper.dwcdn.net/YfNDe/" width="672" height="600px">
+<div class="figure"><span style="display:block;" id="fig:map-world-pop-square"></span>
+<iframe src="https://datawrapper.dwcdn.net/YfNDe/" width="672" height="600px" data-external="1">
 </iframe>
 <p class="caption">
 Figure 14.18: World population square map with income inequality data. Explore the <a href="https://datawrapper.dwcdn.net/YfNDe/">interactive version</a>.
@@ -408,14 +407,14 @@ Figure 14.18: World population square map with income inequality data. Explore t
 <p><em>Map exclusion bias</em> refers to ways that we fail to represent people or land through the act of omission. Sometimes these actions are taken by Google and other proprietary map providers, and sometimes we make them through our everyday decisions while creating maps. Take a close look at maps you recently made and ask yourself if they truly represent what their titles claim to show. For example, if you’ve created a U.S. map with state-level data, how did you address the District of Columbia? The nation’s capital is not counted as a state, nor does it have a voting representative in the U.S. Congress. But D.C. has over 700,000 residents (more than Wyoming or Vermont), and the Twenty-Third Amendment to the US Constitution grants it electoral votes as if it were a state (though it can never have more than the least populous state). Similarly, how did your U.S. maps represent Puerto Rico, a territory with over 3 million residents who are U.S. citizens, but have no vote in Congress or for the Presidency? What about other U.S. territories whose residents are also U.S. citizens, such as American Samoa, Guam, the Northern Mariana Islands, and the US Virgin Islands? When data exists for these places, do your maps make them visible—or do they vanish? If the latter, then you need to consider if your act of omission is also a type of intergroup bias, given that the majority of residents in D.C. and these territories are Black, Latino, and Pacific Islanders.</p>
 <p>To be clear, some data visualization tools make it very difficult to include people and places who have traditionally been excluded from our maps. But sometimes the problem lies within us, or the default settings of our tools and our decisions about whether to try to change them. Take another look at your favorite map tool and closely examine the geographic outlines that appear when you choose to map data for the “United States.” If you feed in data that includes D.C. and U.S. territories—but the map only displays the 50 recognized states—then this omission will erase the existence of 4 million U.S. citizens from your map. Look beyond the default settings to determine if your tool offers more inclusive options. For example, Datawrapper recently improved how its <em>USA &gt; States and Territories</em> map options display both symbol point and choropleth map data, as seen in Figure <a href="spatial-bias.html#fig:usa-states-territories">14.19</a>. For other regions that do not yet appear in Datawrapper’s options, you can create and upload your own map boundary file in <a href="geojson.html">GeoJSON format, as described in Chapter 13</a>. Or, if your tool forces you to omit part of your data story, then call out this bias by describing its absence in the map notes or the companion text. Our mission in data visualization is to tell true and meaningful stories, so include people and places that belong on the map, rather than ignoring their existence.</p>
 
-<div class="figure"><span id="fig:usa-states-territories"></span>
+<div class="figure"><span style="display:block;" id="fig:usa-states-territories"></span>
 <img src="images/14-detect/usa-states-territories-combined.png" alt="Datawrapper recently improved how it displays D.C. and non-contiguous places in its USA - States and Territories option for both symbol and choropleth maps." width="750" />
 <p class="caption">
 Figure 14.19: Datawrapper recently improved how it displays D.C. and non-contiguous places in its <em>USA - States and Territories</em> option for both symbol and choropleth maps.
 </p>
 </div>
-<div id="summary14" class="section level3 unnumbered">
-<h3>Summary</h3>
+<div id="summary14" class="section level3 unnumbered hasAnchor">
+<h3>Summary<a href="spatial-bias.html#summary14" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>In this chapter, you learned how to distinguish between wrong, misleading, and truthful visualizations, and strengthened your lie-detector skills to understand the importance of being honest when telling your own data stories. You also learned how to recognize and ways to reduce four categories of data bias in general, and spatial bias in particular.</p>
 <p>The next chapter will bring together all of the concepts from different parts of the book to emphasize the importance of storytelling in our data visualizations.</p>
 
@@ -478,7 +477,6 @@ Figure 14.19: Datawrapper recently improved how it displays D.C. and non-contigu
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -518,15 +516,32 @@ gitbook.start({
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
-},
-"search": true
+}
 });
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

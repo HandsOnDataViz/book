@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>How to Lie with Maps | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="How to Lie with Maps | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io//images/cover-400wide.jpg" />
   <meta property="og:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="github-repo" content="handsondataviz/book" />
@@ -25,7 +24,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2022-04-04" />
+<meta name="date" content="2022-07-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,8 +33,8 @@
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="how-to-lie-with-charts.html"/>
 <link rel="next" href="data-bias.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -51,9 +50,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -336,7 +335,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
 <li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
-<li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
+<li class="chapter" data-level="" data-path="style-guide.html"><a href="style-guide.html"><i class="fa fa-check"></i>Style Guide for <em>Hands-On Data Visualization</em></a></li>
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
 <li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
 <li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
@@ -376,8 +375,8 @@ div.csl-indent {
   </p>
 
 </header>
-<div id="how-to-lie-with-maps" class="section level2 unnumbered">
-<h2>How to Lie with Maps</h2>
+<div id="how-to-lie-with-maps" class="section level2 unnumbered hasAnchor">
+<h2>How to Lie with Maps<a href="how-to-lie-with-maps.html#how-to-lie-with-maps" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>One of the best ways to learn how to detect lies is to intentionally manipulate a map, and tell two (or more) opposing stories with the same data. You’ll learn what to watch out for when viewing other people’s maps, and think more carefully about the ethical issues when you design your own. We’ll focus our attention on choropleth maps that use shading or color to represent values in geographic areas, because they are a topic of considerable mischief. This exercise was inspired by geographer Mark Monmonier’s classic book by the same name, <em>How to Lie with Maps</em>, originally published in 1991, now in its third edition.<span class="citation"><a href="#fn50" class="footnote-ref" id="fnref50"><sup>50</sup></a></span></p>
 <p>Before we get started, review the <a href="map-design.html">map design principles in Chapter 7</a> to avoid common mistakes when designing choropleth maps. For example, in most cases you should avoid mapping raw counts (such as the total number of people with a disease) and instead show relative rates (such as the percentage of people with a disease), because a raw count map would generally show that most people live in urban rather than rural areas. Also, this section assumes that you’re already familiar with the steps for creating a <a href="choropleth-datawrapper.html">Choropleth map with Datawrapper in Chapter 7</a>.</p>
 <p>Let’s return to the two maps in the <a href="introduction.html">Introduction</a> of this book, where we presented two different interpretations of world income inequality. In particular, Figure <a href="shades.html#fig:world-income-map1">0.3</a> colored the US in medium blue which suggested its level of inequality was similar to other nations, while Figure <a href="shades.html#fig:world-income-map2">0.4</a> made the US stand out in dark blue at the highest tier of inequality. We argued that both were <em>truthful</em> interpretations. You’ll understand the concepts more clearly by following this hands-on tutorial to recreate both maps, plus one more. First, let’s examine the data and upload it to Datawrapper to start making our choropleth maps.</p>
@@ -392,18 +391,18 @@ div.csl-indent {
 <li><p>In the <em>Visualize</em> screen, in the <em>Colors</em> section of the <em>Refine</em> tab <em>Select palette</em>, click the <em>wrench symbol</em> to open up the color settings, as shown in Figure <a href="how-to-lie-with-maps.html#fig:map-color-settings">14.11</a>. Let’s skip past the light-green-to-blue color palette, which you can modify later, and let’s focus on settings for color ranges.</p></li>
 </ol>
 
-<div class="figure"><span id="fig:map-color-settings"></span>
+<div class="figure"><span style="display:block;" id="fig:map-color-settings"></span>
 <img src="images/14-detect/map-color-settings.png" alt="Click the wrench symbol to open the color settings." width="350" />
 <p class="caption">
 Figure 14.11: Click the <em>wrench symbol</em> to open the color settings.
 </p>
 </div>
-<div id="modify-the-map-color-ranges" class="section level3 unnumbered">
-<h3>Modify the map color ranges</h3>
+<div id="modify-the-map-color-ranges" class="section level3 unnumbered hasAnchor">
+<h3>Modify the map color ranges<a href="how-to-lie-with-maps.html#modify-the-map-color-ranges" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>While we never blindly accept the default visualization, it’s a good place to begin. The default map displays a <em>continuous</em> type of range, with a <em>linear</em> interpolation of data values. This means that the map places all of the values in a straight line, from the minimum of 5% to the maximum of 31%, and assigns each value to a color along the gradient, as shown in Figure <a href="how-to-lie-with-maps.html#fig:map-continuous-linear">14.12</a>. Notice that the US (20.5%) blends in with a medium blue color, just above the midpoint in this range.</p>
 
-<div class="figure"><span id="fig:map-continuous-linear"></span>
-<iframe src="https://datawrapper.dwcdn.net/aetEM/" width="672" height="450px">
+<div class="figure"><span style="display:block;" id="fig:map-continuous-linear"></span>
+<iframe src="https://datawrapper.dwcdn.net/aetEM/" width="672" height="450px" data-external="1">
 </iframe>
 <p class="caption">
 Figure 14.12: Income inequality map with continuous range and linear interpolation. Explore the <a href="https://datawrapper.dwcdn.net/aetEM/">interactive version</a>.
@@ -411,8 +410,8 @@ Figure 14.12: Income inequality map with continuous range and linear interpolati
 </div>
 <p>Create a second map with the same data but different settings. Change the <em>Type</em> setting to <em>steps</em>, and adjust to <em>3</em> steps, using <em>Natural breaks (Jenks)</em> interpolation, as shown in Figure <a href="how-to-lie-with-maps.html#fig:map-3steps-naturalbreaks">14.13</a>. This means that the map now places all of the values in three ascending groups. Natural breaks offers a compromise between using colors to highlight the outliers versus diversity inside the range. Notice that the US (still 20.5%) now stands out in a dark blue color at the top third of this range (19% or above).</p>
 
-<div class="figure"><span id="fig:map-3steps-naturalbreaks"></span>
-<iframe src="https://datawrapper.dwcdn.net/VSfdZ/" width="672" height="450px">
+<div class="figure"><span style="display:block;" id="fig:map-3steps-naturalbreaks"></span>
+<iframe src="https://datawrapper.dwcdn.net/VSfdZ/" width="672" height="450px" data-external="1">
 </iframe>
 <p class="caption">
 Figure 14.13: Income inequality map with 3 steps and natural breaks interpolation. Explore the <a href="https://datawrapper.dwcdn.net/VSfdZ/">interactive version</a>.
@@ -421,7 +420,7 @@ Figure 14.13: Income inequality map with 3 steps and natural breaks interpolatio
 <p>The first map portrays US income inequality to be similar to most nations, while the second map places the US at the higher end of the color scale. Which map is misleading? Which one is truthful? If you prefer clear and definitive rules in map design, this answer may frustrate you. Although the two maps generate very different impressions in our eyes, both maps present accurate data that is clearly labeled, based on reasonable and truthful interpretations of the data.</p>
 <p>To understand what’s happening behind the scenes with your choropleth map, visualization expert Alberto Cairo recommends creating a histogram to better understand the data distribution. Go back to the <a href="https://docs.google.com/spreadsheets/d/1IomO4pyGziTZnQrlSnlO11zqgdohwwTm2olR2-tGPfI/edit#gid=1463939565">data in the Google Sheet</a> and create a <a href="histogram-google.html">histogram, as we described in chapter 7</a> to view the frequency of nations when sorted by percent share into “buckets”, as shown in Figure <a href="how-to-lie-with-maps.html#fig:map-data-histogram">14.14</a>. While most nations are clumped around the median, this is not a normal distribution curve, because a handful are outliers near the 30 percent mark. In the first map, which used continuous type and linear interpolation, the US appeared closer to the median and blended in with a medium blue. By contrast, the second map used 3 steps and natural breaks, which meant that the US appeared in the top range and stood out in dark blue.</p>
 
-<div class="figure"><span id="fig:map-data-histogram"></span>
+<div class="figure"><span style="display:block;" id="fig:map-data-histogram"></span>
 <img src="images/14-detect/map-data-histogram-annotated.png" alt="Histogram of income inequality map data."  />
 <p class="caption">
 Figure 14.14: Histogram of income inequality map data.
@@ -487,7 +486,6 @@ Figure 14.14: Histogram of income inequality map data.
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -527,15 +525,32 @@ gitbook.start({
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
-},
-"search": true
+}
 });
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

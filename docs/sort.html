@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Sort and Filter Data | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Sort and Filter Data | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io//images/cover-400wide.jpg" />
   <meta property="og:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="github-repo" content="handsondataviz/book" />
@@ -25,7 +24,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2022-04-04" />
+<meta name="date" content="2022-07-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,8 +33,8 @@
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="forms.html"/>
 <link rel="next" href="calculate.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -51,9 +50,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -336,7 +335,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i>Install and Set Up Bookdown</a></li>
 <li class="chapter" data-level="" data-path="structure.html"><a href="structure.html"><i class="fa fa-check"></i>File Structure and Headers</a></li>
-<li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
+<li class="chapter" data-level="" data-path="style-guide.html"><a href="style-guide.html"><i class="fa fa-check"></i>Style Guide for <em>Hands-On Data Visualization</em></a></li>
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images and R Code-chunk Formatting</a></li>
 <li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables in Markdown Format</a></li>
 <li class="chapter" data-level="" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i>Zotero and Better BibTeX for Notes and Biblio</a></li>
@@ -376,8 +375,8 @@ div.csl-indent {
   </p>
 
 </header>
-<div id="sort" class="section level2 unnumbered">
-<h2>Sort and Filter Data</h2>
+<div id="sort" class="section level2 unnumbered hasAnchor">
+<h2>Sort and Filter Data<a href="sort.html#sort" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Spreadsheet tools help you to dig deeper into your data and raise the stories you find to the surface. A basic step in organizing your data is to <em>sort</em> a table by a particular column, to quickly view its minimum and maximum values, and the range that lies in between. A related method is to <em>filter</em> an entire table to display only rows that contain certain values, to help them stand out for further study among all of the other entries. Both of these methods become more powerful when your spreadsheets contain hundreds or thousands of rows of data. To learn how to sort and filter, let’s explore the reader survey sample dataset we described at the top of the chapter.</p>
 <ol style="list-style-type: decimal">
 <li><p>Open this <a href="https://docs.google.com/spreadsheets/d/1egX_akJccnCSzdk1aaDdtrEGe5HcaTrlOW-Yf6mJ3Uo">Google Sheet of Hands-On Data Visualization reader public survey responses</a> in a new tab in your browser.</p></li>
@@ -385,7 +384,7 @@ div.csl-indent {
 <li><p>Before sorting, click the upper-left corner of the sheet to select all cells, as shown in Figure <a href="sort.html#fig:sheets-select-all">2.22</a>. When the entire sheet becomes light blue, and all of the alphabetical column and numerical row headers become dark grey, this confirms you’ve selected all cells.</p></li>
 </ol>
 
-<div class="figure"><span id="fig:sheets-select-all"></span>
+<div class="figure"><span style="display:block;" id="fig:sheets-select-all"></span>
 <img src="images/02-spreadsheet/sheets-select-all.png" alt="Click the upper-left corner to select all cells before sorting." width="400" />
 <p class="caption">
 Figure 2.22: Click the upper-left corner to select all cells before sorting.
@@ -396,7 +395,7 @@ Figure 2.22: Click the upper-left corner to select all cells before sorting.
 <li>In the top menu, go to <em>Data &gt; Sort Range &gt; Advanced Range Sorting Options</em> to review all of your sort options. In the next screen, check the <em>Data has header row</em> box to view the column headers in your data. Let’s sort the <em>Experience with data visualization</em> column in ascending order (from A-Z), as shown in Figure <a href="sort.html#fig:sheets-sort-range">2.23</a>, to display the minimum at the top, the maximum at the bottom, and the range in between.</li>
 </ol>
 
-<div class="figure"><span id="fig:sheets-sort-range"></span>
+<div class="figure"><span style="display:block;" id="fig:sheets-sort-range"></span>
 <img src="images/02-spreadsheet/sheets-sort-range.png" alt="Go to Data - Sort Range - Advanced Range Sorting Options, check the header row box, and sort by Experience with dataviz in ascending order." width="400" />
 <p class="caption">
 Figure 2.23: Go to <em>Data - Sort Range - Advanced Range Sorting Options</em>, check the header row box, and sort by <em>Experience with dataviz</em> in ascending order.
@@ -405,7 +404,7 @@ Figure 2.23: Go to <em>Data - Sort Range - Advanced Range Sorting Options</em>, 
 <p>Scroll through your sorted data and you’ll see that over 1,000 readers rated themselves as beginners (level 1) with data visualization.</p>
 <p>Tip: When working with large spreadsheets, you can “freeze” the first row so that column headers will still appear as you scroll downward. In Google Sheets, go to <em>View &gt; Freeze</em> and select 1 row, as shown in Figure <a href="sort.html#fig:sheets-view-freeze">2.24</a>. You can also freeze one or more columns to continuously display when scrolling sideways. LibreOffice has a same option to <em>View &gt; Freeze Rows and Columns</em>, but Excel has a different option called <em>Window &gt; Split</em>.</p>
 
-<div class="figure"><span id="fig:sheets-view-freeze"></span>
+<div class="figure"><span style="display:block;" id="fig:sheets-view-freeze"></span>
 <img src="images/02-spreadsheet/sheets-view-freeze.png" alt="In Google Sheets, go to View - Freeze to select the number of rows to continuously display when scrolling downward." width="500" />
 <p class="caption">
 Figure 2.24: In Google Sheets, go to <em>View - Freeze</em> to select the number of rows to continuously display when scrolling downward.
@@ -415,7 +414,7 @@ Figure 2.24: In Google Sheets, go to <em>View - Freeze</em> to select the number
 <li>Now let’s try filtering your sheet. Go to <em>Data &gt; Create a Filter</em>, which inserts downward arrows in each column header. Click on the downward arrow-shaped toggle in the <em>Occupation</em> column, and see options to display or hide rows of data. For example, look under <em>Filter by values</em>, then click the “Clear” button to undo all options, then click only <em>educator</em> to display only rows with that response, as shown in Figure <a href="sort.html#fig:sheets-filter">2.25</a>. Click “OK”.</li>
 </ol>
 
-<div class="figure"><span id="fig:sheets-filter"></span>
+<div class="figure"><span style="display:block;" id="fig:sheets-filter"></span>
 <img src="images/02-spreadsheet/sheets-filter.png" alt="Go to Data - Create a Filter, click the downward arrow in the Occupation column, select only educator." width="300" />
 <p class="caption">
 Figure 2.25: Go to <em>Data - Create a Filter</em>, click the downward arrow in the <em>Occupation</em> column, select only <em>educator</em>.
@@ -473,7 +472,6 @@ Figure 2.25: Go to <em>Data - Create a Filter</em>, click the downward arrow in 
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -513,15 +511,32 @@ gitbook.start({
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
-},
-"search": true
+}
 });
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

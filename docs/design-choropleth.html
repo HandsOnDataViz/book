@@ -24,7 +24,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2022-07-25" />
+<meta name="date" content="2022-07-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -463,6 +463,7 @@ Figure 7.12: Histogram of evenly-distributed data (on right) versus skewed data 
 </ul>
 <p>Which interpolation method is best? There are no uniform design rules, except that we advise <em>against</em> using <em>Custom</em> settings to manually place color intervals wherever you wish, since they are more likely to create misleading maps, as you’ll learn in <a href="detect.html">Chapter 14: Detect Lies and Reduce Bias</a>. Our best advice is to experiment with different interpolation methods, especially when working with skewed data, to better understand how these options shape the appearance of your choropleth maps and the data stories you tell with them.</p>
 <p>Overall, <a href="https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps">Datawrapper Academy recommends</a> that you make color intervals choices to help readers “see all the differences in the data” by fully utilizing all of the colors in your range, as shown in Figure <a href="design-choropleth.html#fig:intervals-datawrapper-montage">7.13</a>. In other words, if your map displays only the lightest and darkest colors, you’re not sufficiently using the middle portion of your color range to highlight geographic patterns and diversity within your data. To do this, you’ll need to explore beyond the default map settings and test which options do the best job of telling an honest and insightful data story.</p>
+<p>Tip: For a deeper dive into this topic, read Lisa Charlotte Muth, “<a href="https://blog.datawrapper.de/interpolation-for-color-scales-and-maps/">How to choose an interpolation for your color scale</a>,” in Datawrapper Blog, 2022.</p>
 
 <div class="figure"><span style="display:block;" id="fig:intervals-datawrapper-montage"></span>
 <img src="images/07-map/intervals-datawrapper-montage.png" alt="Use the full color range to show all of the differences in the data. Image by Datawrapper Academy, reprinted with permission." width="500" />

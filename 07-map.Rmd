@@ -192,6 +192,8 @@ Which interpolation method is best? There are no uniform design rules, except th
 
 Overall, [Datawrapper Academy recommends](https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps) that you make color intervals choices to help readers "see all the differences in the data" by fully utilizing all of the colors in your range, as shown in Figure \@ref(fig:intervals-datawrapper-montage). In other words, if your map displays only the lightest and darkest colors, you're not sufficiently using the middle portion of your color range to highlight geographic patterns and diversity within your data. To do this, you'll need to explore beyond the default map settings and test which options do the best job of telling an honest and insightful data story.
 
+Tip: For a deeper dive into this topic, read Lisa Charlotte Muth, "[How to choose an interpolation for your color scale](https://blog.datawrapper.de/interpolation-for-color-scales-and-maps/)," in Datawrapper Blog, 2022. 
+
 (ref:intervals-datawrapper-montage) Use the full color range to show all of the differences in the data. Image by [Datawrapper Academy](https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps), reprinted with permission.
 
 ```{r intervals-datawrapper-montage, out.width=500, fig.cap="(ref:intervals-datawrapper-montage)"}

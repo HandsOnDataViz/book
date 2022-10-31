@@ -448,7 +448,11 @@ Tip: You can display multiple images for one location by creating a series of ro
 - Description: Designed to display about a paragraph or less of text for the Chapter. You may insert HTML tags to add line breaks (such as `<br>`), or to open external links in a new tab, such as `<a href='https://www.w3schools.com/' target='_blank'>Visit W3Schools</a>`. Learn about HTML syntax at [W3Schools](https://www.w3schools.com/html/html_links.asp).
 
 - Zoom: Leaflet's default zoom levels are between 0 (world view) to 18 (individual buildings), and most free basemap tiles, such as those provided by Stamen or CartoDB are available for each level in this range. There exist more detailed basemaps that allow you to use higher values. Experiment with zoom levels to get the best view for your story, and remember that given the same zoom level, larger screens will show larger areas compared to smaller screens, such as smartphones.
-- Marker: Select either `Numbered` (the default) or `Plain` or `Hidden`. The latter works best when assigning several chapters to one location (to avoid stacking markers on top of each other) or when zooming out for a broader view (without highlighting one specific location).
+- Marker: As of version 1.3.0, you can insert four options:
+  - `Numbered` (auto-increment: 1, 2, 3, etc.)
+  - `Hidden` (not visible, to avoid stacking markers on top of one another when multiple chapters focus on one location)
+  - `Plain` (marker visible, but no label inside)
+  - or customize by inserting any number, letter, or emoji. Works best when auto-increment does not display your desired output. 
 - Marker Color: Insert any standard web color name such as `blue` or `darkblue`, or insert a web color code such as `#775307` or `rgba(200,100,0,0.5)`. See options at [W3Schools Color Names](https://www.w3schools.com/colors/colors_names.asp).
 
 - Location, Latitude, Longitude: These place your markers at points on the map. Although the code template only requires Latitude and Longitude, it's wise to paste an address or place name into the Location column as a reminder to correspond with the numerical coordinates. Use the [Geocoding by SmartMonkey Add-on from Chapter 2](geocode.html) and select *Add-ons > Geocoding by SmartMonkey > Geocode Details* to create a new sheet with sample data and display results for three new columns: *Latitude*, *Longitude*, and *Address found*, as shown in Figure \@ref(fig:geocode-details3). Paste in your own address data and repeat the step above to geocode it, then copy and paste the results into your *Points* sheet.
@@ -824,10 +828,10 @@ $.getJSON("https://data.americorps.gov/resource/yie5-ur4v.json?stabbr=ND", funct
 
   // Array of Leaflet markers
   var markers = [];
-  
+
   // For each row in Socrata, create a Leaflet marker
   for (var i = 0; i < data.length; i++) {
-    
+
     var item = data[i];
 
     // Extract coordinates for each project, convert strings to floats

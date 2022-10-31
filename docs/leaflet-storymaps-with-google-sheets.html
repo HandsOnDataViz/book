@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Leaflet Storymaps with Google Sheets | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Leaflet Storymaps with Google Sheets | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2022-07-26" />
+<meta name="date" content="2022-10-31" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -568,7 +568,13 @@ Figure 12.22: In GitHub, click to open the <code>media</code> folder and <em>Add
 <li><p>Media Credit Link: Add a direct link to the source info in the Media Credit text above.</p></li>
 <li><p>Description: Designed to display about a paragraph or less of text for the Chapter. You may insert HTML tags to add line breaks (such as <code>&lt;br&gt;</code>), or to open external links in a new tab, such as <code>&lt;a href='https://www.w3schools.com/' target='_blank'&gt;Visit W3Schools&lt;/a&gt;</code>. Learn about HTML syntax at <a href="https://www.w3schools.com/html/html_links.asp">W3Schools</a>.</p></li>
 <li><p>Zoom: Leaflet’s default zoom levels are between 0 (world view) to 18 (individual buildings), and most free basemap tiles, such as those provided by Stamen or CartoDB are available for each level in this range. There exist more detailed basemaps that allow you to use higher values. Experiment with zoom levels to get the best view for your story, and remember that given the same zoom level, larger screens will show larger areas compared to smaller screens, such as smartphones.</p></li>
-<li><p>Marker: Select either <code>Numbered</code> (the default) or <code>Plain</code> or <code>Hidden</code>. The latter works best when assigning several chapters to one location (to avoid stacking markers on top of each other) or when zooming out for a broader view (without highlighting one specific location).</p></li>
+<li><p>Marker: As of version 1.3.0, you can insert four options:</p>
+<ul>
+<li><code>Numbered</code> (auto-increment: 1, 2, 3, etc.)</li>
+<li><code>Hidden</code> (not visible, to avoid stacking markers on top of one another when multiple chapters focus on one location)</li>
+<li><code>Plain</code> (marker visible, but no label inside)</li>
+<li>or customize by inserting any number, letter, or emoji. Works best when auto-increment does not display your desired output.</li>
+</ul></li>
 <li><p>Marker Color: Insert any standard web color name such as <code>blue</code> or <code>darkblue</code>, or insert a web color code such as <code>#775307</code> or <code>rgba(200,100,0,0.5)</code>. See options at <a href="https://www.w3schools.com/colors/colors_names.asp">W3Schools Color Names</a>.</p></li>
 <li><p>Location, Latitude, Longitude: These place your markers at points on the map. Although the code template only requires Latitude and Longitude, it’s wise to paste an address or place name into the Location column as a reminder to correspond with the numerical coordinates. Use the <a href="geocode.html">Geocoding by SmartMonkey Add-on from Chapter 2</a> and select <em>Add-ons &gt; Geocoding by SmartMonkey &gt; Geocode Details</em> to create a new sheet with sample data and display results for three new columns: <em>Latitude</em>, <em>Longitude</em>, and <em>Address found</em>, as shown in Figure <a href="leaflet-storymaps-with-google-sheets.html#fig:geocode-details3">12.23</a>. Paste in your own address data and repeat the step above to geocode it, then copy and paste the results into your <em>Points</em> sheet.</p></li>
 </ul>
@@ -776,7 +782,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

@@ -373,7 +373,7 @@ knitr::include_graphics("images/12-leaflet/storymap-readme-link-top.png")
 
 #### B) File > Make a Copy of Google Sheet template, Share, and Publish {-}
 
-1. Open the [Google Sheets template](13-) in a new tab.
+1. Open the [Google Sheets template](https://docs.google.com/spreadsheets/d/1AO6XHL_0JafWZF4KEejkdDNqfuZWUk3SlNlQ6MjlRFM/) in a new tab.
 
 2. Sign into your Google account, and select *File > Make a Copy* to save your own version of this Google Sheet on your Google Drive.
 
@@ -452,7 +452,7 @@ Tip: You can display multiple images for one location by creating a series of ro
   - `Numbered` (auto-increment: 1, 2, 3, etc.)
   - `Hidden` (not visible, to avoid stacking markers on top of one another when multiple chapters focus on one location)
   - `Plain` (marker visible, but no label inside)
-  - or customize by inserting any number, letter, or emoji. Works best when auto-increment does not display your desired output. 
+  - or customize by inserting any number, letter, or emoji. Works best when auto-increment does not display your desired output.
 - Marker Color: Insert any standard web color name such as `blue` or `darkblue`, or insert a web color code such as `#775307` or `rgba(200,100,0,0.5)`. See options at [W3Schools Color Names](https://www.w3schools.com/colors/colors_names.asp).
 
 - Location, Latitude, Longitude: These place your markers at points on the map. Although the code template only requires Latitude and Longitude, it's wise to paste an address or place name into the Location column as a reminder to correspond with the numerical coordinates. Use the [Geocoding by SmartMonkey Add-on from Chapter 2](geocode.html) and select *Add-ons > Geocoding by SmartMonkey > Geocode Details* to create a new sheet with sample data and display results for three new columns: *Latitude*, *Longitude*, and *Address found*, as shown in Figure \@ref(fig:geocode-details3). Paste in your own address data and repeat the step above to geocode it, then copy and paste the results into your *Points* sheet.

@@ -119,6 +119,8 @@ Learn how to transpose rows and columns in our sample data:
 knitr::include_graphics("images/04-clean/sheets-transpose.png")
 ```
 
+Tip: Google Sheets also provides a function, *=transpose( -insert range- )*, which, unlike *Paste Special > Transpose*, will prevent you from overwriting existing data in the spreadsheet.
+
 Now that you know how to clean up data by transposing rows and columns, in the next section you'll learn how to split data into separate columns.
 
 ## Split Data into Separate Columns {- #split-data}

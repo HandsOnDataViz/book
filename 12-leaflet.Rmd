@@ -139,13 +139,14 @@ Feel free to remove any other content on the README page that you do not wish to
 
 #### D) Update your Google Sheet *Options* tab info and refresh your live map {-}
 
-Now that your published Google Sheet is linked to your live map, go to the *Options* tab to update any of these items:
+Now that your published Google Sheet is linked to your live map, go to the *Options* tab to update these and other settings:
 
 - Map Title
 - Map Subtitle
 - Author Name
 - Author Email or Website
 - Author Code Repo
+- and many more
 
 Open the browser tab that displays your live map and refresh the page to see your changes. If your changes do not appear within a few seconds, see the [Fix Common Problems](fix.html) section of the appendix.
 
@@ -414,13 +415,14 @@ Feel free to remove any other content on the README page that you do not wish to
 
 #### D) Update your Google Sheet *Options* tab info and refresh your live map {-}
 
-Now that your published Google Sheet is linked to your live map, go to the *Options* tab to update any of these items:
+Now that your published Google Sheet is linked to your live map, go to the *Options* tab to update any of these settings:
 
 - Storymap Title
 - Storymap Subtitle -- with code for downward arrow: `<br><small>Scroll down <i class='fa fa-chevron-down'></i></small>`
 - Author Name
 - Author Email or Website
 - Author GitHub Repo Link
+- and many more
 
 Open the browser tab that displays your live map and refresh the page to see your changes. If your changes do not appear within a few seconds, see the [Fix Common Problems](fix.html) section of the appendix.
 
@@ -447,7 +449,7 @@ Tip: You can display multiple images for one location by creating a series of ro
 - Media Credit Link: Add a direct link to the source info in the Media Credit text above.
 - Description: Designed to display about a paragraph or less of text for the Chapter. You may insert HTML tags to add line breaks (such as `<br>`), or to open external links in a new tab, such as `<a href='https://www.w3schools.com/' target='_blank'>Visit W3Schools</a>`. Learn about HTML syntax at [W3Schools](https://www.w3schools.com/html/html_links.asp).
 
-- Zoom: Leaflet's default zoom levels are between 0 (world view) to 18 (individual buildings), and most free basemap tiles, such as those provided by Stamen or CartoDB are available for each level in this range. There exist more detailed basemaps that allow you to use higher values. Experiment with zoom levels to get the best view for your story, and remember that given the same zoom level, larger screens will show larger areas compared to smaller screens, such as smartphones.
+- Zoom: Leaflet's default zoom levels are between 0 (world view) to 18 (individual buildings), and most free basemap tiles, such as those provided by the default CartoDB provider, are available for each level in this range. There exist more detailed basemaps that allow you to use higher values. Experiment with zoom levels to get the best view for your story, and remember that given the same zoom level, larger screens will show larger areas compared to smaller screens, such as smartphones.
 - Marker: As of version 1.3.0, you can insert four options:
   - `Numbered` (auto-increment: 1, 2, 3, etc.)
   - `Hidden` (not visible, to avoid stacking markers on top of one another when multiple chapters focus on one location)
@@ -499,8 +501,9 @@ Or you can enter properties and CSS codes in the *GeoJSON Feature Properties* te
 
 Inside the template you'll discover more ways to customize your storymap, such as:
 
-- Insert logo (see Options tab in Google Sheets)
-- Insert Google Analytics tracking ID (see Options tab in Google Sheets
+- Insert logo to brand your storymap (see Options tab in Google Sheets)
+- Add a Google Analytics tracking ID to view usage (see Options tab)
+- Change Basemap Tiles background maps, with option to insert an API Key for providers that require one. For example, you can create [a free account on Stadia](https://stadiamaps.com) to use their background tile maps, up to a generous limit, and insert your Stadia API key (see Options tab)
 - Adjust title size and font (go to css/styles.css file in GitHub)
 - To insert a horizontal divider in Chapter text (copy and paste this text into Description field in Google Sheets, and avoid changing single-quote marks into curly apostrophes)
 `<span style='display:block;width:100%;height:1px;background-color: silver; margin: 20px 0;'></span>`

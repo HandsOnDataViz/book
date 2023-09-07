@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Leaflet Storymaps with Google Sheets | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Leaflet Storymaps with Google Sheets | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2023-06-07" />
+<meta name="date" content="2023-09-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -540,13 +540,14 @@ Figure 12.21: Edit your README file to replace the link to <em>our</em> site wit
 </div>
 <div id="d-update-your-google-sheet-options-tab-info-and-refresh-your-live-map-1" class="section level4 unnumbered hasAnchor">
 <h4>D) Update your Google Sheet <em>Options</em> tab info and refresh your live map<a href="leaflet-storymaps-with-google-sheets.html#d-update-your-google-sheet-options-tab-info-and-refresh-your-live-map-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Now that your published Google Sheet is linked to your live map, go to the <em>Options</em> tab to update any of these items:</p>
+<p>Now that your published Google Sheet is linked to your live map, go to the <em>Options</em> tab to update any of these settings:</p>
 <ul>
 <li>Storymap Title</li>
 <li>Storymap Subtitle – with code for downward arrow: <code>&lt;br&gt;&lt;small&gt;Scroll down &lt;i class='fa fa-chevron-down'&gt;&lt;/i&gt;&lt;/small&gt;</code></li>
 <li>Author Name</li>
 <li>Author Email or Website</li>
 <li>Author GitHub Repo Link</li>
+<li>and many more</li>
 </ul>
 <p>Open the browser tab that displays your live map and refresh the page to see your changes. If your changes do not appear within a few seconds, see the <a href="fix.html">Fix Common Problems</a> section of the appendix.</p>
 </div>
@@ -571,7 +572,7 @@ Figure 12.22: In GitHub, click to open the <code>media</code> folder and <em>Add
 <li><p>Media Credit: To display text about the origin of the media, such as “Source:…”.</p></li>
 <li><p>Media Credit Link: Add a direct link to the source info in the Media Credit text above.</p></li>
 <li><p>Description: Designed to display about a paragraph or less of text for the Chapter. You may insert HTML tags to add line breaks (such as <code>&lt;br&gt;</code>), or to open external links in a new tab, such as <code>&lt;a href='https://www.w3schools.com/' target='_blank'&gt;Visit W3Schools&lt;/a&gt;</code>. Learn about HTML syntax at <a href="https://www.w3schools.com/html/html_links.asp">W3Schools</a>.</p></li>
-<li><p>Zoom: Leaflet’s default zoom levels are between 0 (world view) to 18 (individual buildings), and most free basemap tiles, such as those provided by Stamen or CartoDB are available for each level in this range. There exist more detailed basemaps that allow you to use higher values. Experiment with zoom levels to get the best view for your story, and remember that given the same zoom level, larger screens will show larger areas compared to smaller screens, such as smartphones.</p></li>
+<li><p>Zoom: Leaflet’s default zoom levels are between 0 (world view) to 18 (individual buildings), and most free basemap tiles, such as those provided by the default CartoDB provider, are available for each level in this range. There exist more detailed basemaps that allow you to use higher values. Experiment with zoom levels to get the best view for your story, and remember that given the same zoom level, larger screens will show larger areas compared to smaller screens, such as smartphones.</p></li>
 <li><p>Marker: As of version 1.3.0, you can insert four options:</p>
 <ul>
 <li><code>Numbered</code> (auto-increment: 1, 2, 3, etc.)</li>
@@ -625,8 +626,9 @@ Figure 12.25: Enter the pathname in the <em>GeoJSON Overlay</em> column (on left
 <p>Or you can enter properties and CSS codes in the <em>GeoJSON Feature Properties</em> template column, in this format, separated by semicolons, with no quotation marks required: <code>weight:3;color:red;opacity:1;fillColor:orange;fillOpacity:0.9</code>. You can assign colors with standard names, hex codes, or RGBA values as described in the <a href="https://www.w3schools.com/colors/colors_picker.asp">W3Schools Colors Picker</a>.</p>
 <p>Inside the template you’ll discover more ways to customize your storymap, such as:</p>
 <ul>
-<li>Insert logo (see Options tab in Google Sheets)</li>
-<li>Insert Google Analytics tracking ID (see Options tab in Google Sheets</li>
+<li>Insert logo to brand your storymap (see Options tab in Google Sheets)</li>
+<li>Add a Google Analytics tracking ID to view usage (see Options tab)</li>
+<li>Change Basemap Tiles background maps, with option to insert an API Key for providers that require one. For example, you can create <a href="https://stadiamaps.com">a free account on Stadia</a> to use their background tile maps, up to a generous limit, and insert your Stadia API key (see Options tab)</li>
 <li>Adjust title size and font (go to css/styles.css file in GitHub)</li>
 <li>To insert a horizontal divider in Chapter text (copy and paste this text into Description field in Google Sheets, and avoid changing single-quote marks into curly apostrophes)
 <code>&lt;span style='display:block;width:100%;height:1px;background-color: silver; margin: 20px 0;'&gt;&lt;/span&gt;</code></li>

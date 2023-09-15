@@ -308,7 +308,26 @@ Tip: When working with large spreadsheets, you can "freeze" the first row so tha
 Now your view of reader responses is sorted by experience, and filtered to show only educators. Scroll through their one-sentence goals for learning about data visualization. How to do they compare to your own goals? In the next section, we'll learn how to start analyzing your data with simple formulas and functions.
 
 ## Calculate with Formulas {- #calculate}
-Spreadsheet tools can save you lots of time when you insert simple formulas and functions to automatically perform calculations across entire rows and columns of data. Formulas always begin with an equal sign, and may simply add up other cells (such as `=C2+C3+C4`), or may contain a function that performs a specific operation (such as calculating the sum of a range of cells: `=SUM(C2:C100)`). In this section you'll learn how to write two formulas with functions: one to calculate an average numeric value, and another to count the frequency of a specific text response. Once again, let's learn this skill using the reader survey sample dataset we described at the top of the chapter.
+Spreadsheet tools can save you lots of time when you insert simple formulas and functions to automatically perform calculations across entire rows and columns of data. In this section you'll learn how to write formulas and functions in a sample dataset.
+
+Always start a formula with an equal sign (`=`) to tell the spreadsheet tool you are inserting a calculation, rather than regular text or numbers. Simple formulas use symbols for mathematical operations between specific cells:
+
+- Plus symbol (`+`) to add, like this: `= B2 + B3`
+- Minus symbol (`-`) to subtract, like this: `= B2 - B3`
+- Asterisk symbol (`*`) to multiply, like this: `= B2 * B3`
+- Forward slash  (`/`) to divide, like this: `= B2 / B3`
+
+Also, spreadsheet tools contain built-in functions that save us time by avoiding the need to write long formulas. Two simple functions are `=SUM()` and `=AVERAGE()`, which run calculations on cells inside the parentheses. A colon symbol (`:`) represents a consecutive range of cells. For example, the cells B2, B3, B4, B5, and B6 can be represented this like: `(B2:B6)`.
+
+- To add up five cells, you could enter: `= B2 + B3 + B4 + B5 + B6`
+- But this function is faster: `=SUM(B2:B6)`
+
+- To find the average of five cells, you could enter: `= ( B2 + B3 + B4 + B5 + B6 ) / 5`, using parentheses to add up the sum before dividing by the count of numbers
+- But this function is faster: `=AVERAGE(B2:B6)`
+
+Tip: Instead of typing out each character in your formulas and functions, experiment by clicking on specific cells or column headers, or clicking and dragging across ranges of cells, to automatically enter your desired instructions. For example, when you start typing the function `=AVERAGE()`, instead of typing `B2:B6` inside the parentheses, you can click on cell B2, hold down your mouse or trackpad button, and drag to B6. Your spreadsheet tool should automatically generate this formula: `=AVERAGE(B2:B6)`.
+
+Now let's practice our formula skills using the reader survey sample dataset described at the top of the chapter. You'll use one function to calculate an average numeric value, and another function to count the frequency of a specific text response.
 
 1. Open this [Google Sheet of Hands-On Data Visualization reader public survey responses](https://docs.google.com/spreadsheets/d/1egX_akJccnCSzdk1aaDdtrEGe5HcaTrlOW-Yf6mJ3Uo) in a new tab in your browser.
 

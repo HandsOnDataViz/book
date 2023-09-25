@@ -19,9 +19,9 @@ Learn what types of issues Smart Cleanup catches, and which ones it misses, usin
 
 1. Open the [Smart Cleanup sample data file in Google Sheets](https://docs.google.com/spreadsheets/d/1N06Xv87K9A-veKyQ2FPlT68fzbsN9q6lWv8hAb36K_E/edit#gid=0), sign in with your account, and go to *File > Make a Copy* to create a version you can edit in your Google Drive.
 
-2. Go to *Data > Cleanup suggestions* and view items that appear in the sidebar, as shown in Figure \@ref(fig:sheets-cleanup-suggestions).
+2. Go to *Data > Data Cleanup > Cleanup suggestions* and view items that appear in the sidebar, as shown in Figure \@ref(fig:sheets-cleanup-suggestions).
 
-(ref:sheets-cleanup-suggestions) Go to *Data - Cleanup Suggestions* to review potential errors.
+(ref:sheets-cleanup-suggestions) Go to *Data Cleanup* to review potential errors.
 
 ```{r sheets-cleanup-suggestions, out.width=650, fig.cap="(ref:sheets-cleanup-suggestions)"}
 knitr::include_graphics("images/04-clean/sheets-cleanup-suggestions.png")

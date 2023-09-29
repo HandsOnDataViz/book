@@ -24,7 +24,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2023-09-25" />
+<meta name="date" content="2023-09-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -382,7 +382,7 @@ div.csl-indent {
 <div id="leaflet-maps-open-data-apis" class="section level2 unnumbered hasAnchor">
 <h2>Leaflet Maps with Open Data APIs<a href="leaflet-maps-open-data-apis.html#leaflet-maps-open-data-apis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Learn how to code your own Leaflet map with an application programming interface (API) that continuously pulls the most current information directly from an open-data repository, similar to the <a href="map-socrata.html">Socrata Open Data map you learned about in Chapter 7</a>. Leaflet maps can pull and display data from various open data repositories using APIs.
-Figure <a href="leaflet-maps-open-data-apis.html#fig:leaflet-open-data">12.40</a> shows an interactive map of North Dakota counties,
+Figure <a href="leaflet-maps-open-data-apis.html#fig:leaflet-open-data">12.41</a> shows an interactive map of North Dakota counties,
 colored by population density, with emergency medical service (EMS) locations and recent AmeriCorps projects.</p>
 <p><em>Note: The original example showed hospital locations in North Dakota provided by Medicare.gov website. This example was modified on 23 March 2022 due to Medicare.gov replacing Socrata with a different database system. In this updated example, AmeriCorps NCCC projects in North Dakota are shown.</em></p>
 <p>This map template pulls data from three different open repository sources:</p>
@@ -396,14 +396,14 @@ colored by population density, with emergency medical service (EMS) locations an
 <iframe src="https://handsondataviz.github.io/leaflet-maps-open-data-apis/index.html" width="672" height="500px" data-external="1">
 </iframe>
 <p class="caption">
-Figure 12.40: Explore the <a href="https://handsondataviz.github.io/leaflet-maps-open-data-apis/index.html">interactive Leaflet Map with Open Data</a>.
+Figure 12.41: Explore the <a href="https://handsondataviz.github.io/leaflet-maps-open-data-apis/index.html">interactive Leaflet Map with Open Data</a>.
 </p>
 </div>
 <p>You can enable Leaflet to pull data from ArcGIS servers using a free <a href="https://github.com/Esri/esri-leaflet"><code>esri-leaflet</code></a> plugin.
 Data from Socrata can be pulled from <a href="https://dev.socrata.com/">SODA API</a> using jQuery’s <code>$.getJSON()</code> function.</p>
 <p>To adapt this template for your own project:</p>
 <ol style="list-style-type: decimal">
-<li>Visit the <a href="https://github.com/HandsOnDataViz/leaflet-maps-open-data-apis">GitHub repository</a> that contains the code for the map in Figure <a href="leaflet-maps-open-data-apis.html#fig:leaflet-open-data">12.40</a>,
+<li>Visit the <a href="https://github.com/HandsOnDataViz/leaflet-maps-open-data-apis">GitHub repository</a> that contains the code for the map in Figure <a href="leaflet-maps-open-data-apis.html#fig:leaflet-open-data">12.41</a>,
 and press the <em>Use this template</em> button to copy the repo to your own GitHub account.</li>
 <li>All data is pulled form the code inside the <code>&lt;script&gt;</code> tag of <code>index.html</code>. To pull
 data from Socrata or another JSON/GeoJSON endpoint, modify the following code snippet

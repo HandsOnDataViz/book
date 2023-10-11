@@ -675,6 +675,14 @@ knitr::include_graphics("images/06-chart/scatter-tooltip.png")
 
 8. Finish the annotations to add your title and data source, then proceed to publish and embed your chart by following the prompts or reading the more detailed Datawrapper tutorial above. Learn about your next steps in [Chapter 9: Embed on the Web](embed.html).
 
+Tip: In your Google Sheet, you can calculate the correlation coefficient using the `=CORREL()` function, which displays a numerical value of the strength of any association between pairs of cells in two data columns (or ranges), as shown in Figure \@ref(fig:sheets-correlation). Correlation coefficients appear on a scale from -1 to 0 to 1, where the extremes show very strong relationships (negative or positive), while values near zero show no relationship. Learn more about this concept in any statistics book. Remember that correlation is not the same as causation, as we discussed in [Chapter 5: Make Meaningful Comparisons](comparisons.html).
+
+(ref:sheets-correlation) Hover over a data point to inspect the edited tooltip display.
+
+```{r sheets-correlation, out.width=600, fig.cap="(ref:sheets-correlation)"}
+knitr::include_graphics("images/06-chart/sheets-correlation.png")
+```
+
 ### Bubble Charts {-}
 In your scatter chart above, you learned how to visualize the relationship between two datasets: life expectancy (the X-axis coordinate) and fertility (the Y-axis coordinate). Now let's expand on this concept by creating a bubble chart that adds two more datasets: population (shown by the size of each point, or bubble) and region of the world (shown by the color of each bubble). We'll use similar World Bank data as before, with two additional columns, as shown in Figure \@ref(fig:bubble-data). Note that we're using numeric data (population) for bubble size, but categorical data (regions) for color. Now you can easily create a bubble chart that displays a relationship between these four datasets, as shown in Figure \@ref(fig:bubble).
 

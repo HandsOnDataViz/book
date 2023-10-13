@@ -24,15 +24,15 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2023-10-11" />
+<meta name="date" content="2023-10-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
-<link rel="prev" href="normalize-choropleth.html"/>
-<link rel="next" href="locatormap-datawrapper.html"/>
+<link rel="prev" href="locatormap-datawrapper.html"/>
+<link rel="next" href="symbolmap-datawrapper.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -254,8 +254,8 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
 <li class="chapter" data-level="" data-path="design-choropleth.html"><a href="design-choropleth.html"><i class="fa fa-check"></i>Design Choropleth Colors &amp; Intervals</a></li>
 <li class="chapter" data-level="" data-path="normalize-choropleth.html"><a href="normalize-choropleth.html"><i class="fa fa-check"></i>Normalize Choropleth Map Data</a></li>
+<li class="chapter" data-level="" data-path="locatormap-datawrapper.html"><a href="locatormap-datawrapper.html"><i class="fa fa-check"></i>Locator Point Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
-<li class="chapter" data-level="" data-path="locatormap-datawrapper.html"><a href="locatormap-datawrapper.html"><i class="fa fa-check"></i>Locator Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="symbolmap-datawrapper.html"><a href="symbolmap-datawrapper.html"><i class="fa fa-check"></i>Symbol Point Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="choropleth-datawrapper.html"><a href="choropleth-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="map-tableau.html"><a href="map-tableau.html"><i class="fa fa-check"></i>Choropleth Map with Tableau Public</a></li>
@@ -382,200 +382,200 @@ div.csl-indent {
 <div id="mymaps" class="section level2 unnumbered hasAnchor">
 <h2>Point Map with Google My Maps<a href="mymaps.html#mymaps" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Most people are already familiar with <a href="https://www.google.com/maps/">Google Maps</a>, the web mapping service that allows users to look up locations and directions around the world. In this section you’ll learn about <a href="https://www.google.com/maps/about/mymaps/">Google My Maps</a>, a related tool that allows you to display groups of points on top of the Google Maps platform, which users can click on to reveal more data, including photos, websites, or directions. You can customize the colors and icons for your point markers, and all of the map layer content you create will reside in your <a href="https://drive.google.com">Google Drive</a>, where you can edit and collaborate with others. Although Google My Maps has limited features, it’s an easy-to-learn tool to build a basic interactive point map, along with simple polylines and polygons if desired. Finally, you can share a public link to your map or embed it on your website, a step that you’ll learn more about in <a href="embed.html">Chapter 9: Embed on the Web</a>.</p>
-<p>In this section, we will construct a point map of museums and parks in North America, with two different groups of styled markers and a custom photo icon. When users click on a marker, additional text, links, and images appear in the pop-up window, as shown in Figure <a href="mymaps.html#fig:mymaps-final">7.15</a>.</p>
+<p>In this section, we will construct a point map of museums and parks in North America, with two different groups of styled markers and a custom photo icon. When users click on a marker, additional text, links, and images appear in the pop-up window, as shown in Figure <a href="mymaps.html#fig:mymaps-final">7.22</a>.</p>
 
 <div class="figure"><span style="display:block;" id="fig:mymaps-final"></span>
 <iframe src="https://www.google.com/maps/d/u/3/embed?mid=1W6VujVZzB1Y1D1tktLVhO99ZabyOZABr" width="672" height="500px" data-external="1">
 </iframe>
 <p class="caption">
-Figure 7.15: Point map of parks and museums created with Google My Maps. Explore the <a href="https://www.google.com/maps/d/u/1/edit?mid=1W6VujVZzB1Y1D1tktLVhO99ZabyOZABr&amp;usp=sharing">interactive version</a>.
+Figure 7.22: Point map of parks and museums created with Google My Maps. Explore the <a href="https://www.google.com/maps/d/u/1/edit?mid=1W6VujVZzB1Y1D1tktLVhO99ZabyOZABr&amp;usp=sharing">interactive version</a>.
 </p>
 </div>
 <p>To create your own interactive point map with custom icons, follow this tutorial:</p>
 <ol style="list-style-type: decimal">
 <li><p>Open the <a href="https://docs.google.com/spreadsheets/d/11nSoyGUxDJiBe5VZflDnaaqgWMdWyIUNnjNLMlGOPLk/edit#gid=312385679">Parks and Museums data in Google Sheets</a>, which contains six popular locations in North America. Each row includes a <em>Group</em>, <em>Name</em>, <em>Address</em>, and <em>URL</em>. Log into your Google account and go to <em>File &gt; Make a Copy</em> to create a version you can edit in your Google Drive.</p></li>
-<li><p>Navigate to <a href="https://www.google.com/mymaps/">Google My Maps</a>. In the upper-left corner, click the <em>+ Create a New Map</em> button, as shown in Figure <a href="mymaps.html#fig:mymaps-create-new">7.16</a>. This will create an empty map with familiar Google Maps style.</p></li>
+<li><p>Navigate to <a href="https://www.google.com/mymaps/">Google My Maps</a>. In the upper-left corner, click the <em>+ Create a New Map</em> button, as shown in Figure <a href="mymaps.html#fig:mymaps-create-new">7.23</a>. This will create an empty map with familiar Google Maps style.</p></li>
 </ol>
 
 <div class="figure"><span style="display:block;" id="fig:mymaps-create-new"></span>
 <img src="images/07-map/mymaps-create-new.png" alt="Navigate to https://www.google.com/mymaps/ and create a new map." width="300" />
 <p class="caption">
-Figure 7.16: Navigate to <a href="https://www.google.com/mymaps/" class="uri">https://www.google.com/mymaps/</a> and create a new map.
+Figure 7.23: Navigate to <a href="https://www.google.com/mymaps/" class="uri">https://www.google.com/mymaps/</a> and create a new map.
 </p>
 </div>
 <ol start="3" style="list-style-type: decimal">
-<li>Add a relevant title and description by clicking its current title, <em>Untitled map</em>, and typing in the new information, as shown in Figure <a href="mymaps.html#fig:mymaps-edit-title">7.17</a>.</li>
+<li>Add a relevant title and description by clicking its current title, <em>Untitled map</em>, and typing in the new information, as shown in Figure <a href="mymaps.html#fig:mymaps-edit-title">7.24</a>.</li>
 </ol>
 
 <div class="figure"><span style="display:block;" id="fig:mymaps-edit-title"></span>
 <img src="images/07-map/mymaps-edit-title.png" alt="Add title and description to your map." width="300" />
 <p class="caption">
-Figure 7.17: Add title and description to your map.
+Figure 7.24: Add title and description to your map.
 </p>
 </div>
 <ol start="4" style="list-style-type: decimal">
-<li>To add data to your map, click the <em>Import</em> button under the <em>Untitled layer</em> item, as shown in Figure <a href="mymaps.html#fig:mymaps-import">7.18</a>.</li>
+<li>To add data to your map, click the <em>Import</em> button under the <em>Untitled layer</em> item, as shown in Figure <a href="mymaps.html#fig:mymaps-import">7.25</a>.</li>
 </ol>
 
 <div class="figure"><span style="display:block;" id="fig:mymaps-import"></span>
 <img src="images/07-map/mymaps-import.png" alt="Click the Import button to add a data layer to your map." width="300" />
 <p class="caption">
-Figure 7.18: Click the <em>Import</em> button to add a data layer to your map.
+Figure 7.25: Click the <em>Import</em> button to add a data layer to your map.
 </p>
 </div>
 <ol start="5" style="list-style-type: decimal">
-<li>In the <em>Choose a file to import</em> screen, there are several ways to upload data. Choose <em>Google Drive</em>, since our sample data is already in that format, and select the <em>Recent</em> button to locate the <em>Museums and Parks</em> file you saved to your Google Drive, as shown in Figure <a href="mymaps.html#fig:mymaps-import-gdrive">7.19</a>. Press <em>Select</em>.</li>
+<li>In the <em>Choose a file to import</em> screen, there are several ways to upload data. Choose <em>Google Drive</em>, since our sample data is already in that format, and select the <em>Recent</em> button to locate the <em>Museums and Parks</em> file you saved to your Google Drive, as shown in Figure <a href="mymaps.html#fig:mymaps-import-gdrive">7.26</a>. Press <em>Select</em>.</li>
 </ol>
 
 <div class="figure"><span style="display:block;" id="fig:mymaps-import-gdrive"></span>
 <img src="images/07-map/mymaps-import-gdrive.png" alt="After you choose to import your data through Google Drive, select the Recent button to find the file." width="750" />
 <p class="caption">
-Figure 7.19: After you choose to import your data through <em>Google Drive</em>, select the <em>Recent</em> button to find the file.
+Figure 7.26: After you choose to import your data through <em>Google Drive</em>, select the <em>Recent</em> button to find the file.
 </p>
 </div>
 <ol start="6" style="list-style-type: decimal">
-<li>In the <em>Choose columns to position your placemarks</em> screen, select the <em>Address</em> column to place your point data on the map, as shown in Figure <a href="mymaps.html#fig:mymaps-placemarks">7.20</a>. Press <em>Continue</em>.</li>
+<li>In the <em>Choose columns to position your placemarks</em> screen, select the <em>Address</em> column to place your point data on the map, as shown in Figure <a href="mymaps.html#fig:mymaps-placemarks">7.27</a>. Press <em>Continue</em>.</li>
 </ol>
 
 <div class="figure"><span style="display:block;" id="fig:mymaps-placemarks"></span>
 <img src="images/07-map/mymaps-placemarks.png" alt="Select Address to place your data on the map." width="350" />
 <p class="caption">
-Figure 7.20: Select <em>Address</em> to place your data on the map.
+Figure 7.27: Select <em>Address</em> to place your data on the map.
 </p>
 </div>
 <p>Tip: You can select multiple boxes if your address is split across several columns, such as <em>Address</em>, <em>City</em>, <em>State</em>, <em>Zipcode</em>. Also, if your point data is already geocoded, you can upload latitude and longitude pairs, such as <code>41.76, -72.69</code>.</p>
 <ol start="7" style="list-style-type: decimal">
-<li>In the <em>Choose a column to title your markers</em> window, select the <em>Name</em> column to title your point markers, as shown in Figure <a href="mymaps.html#fig:mymaps-marker-titles">7.21</a>. Then click <em>Finish</em>.</li>
+<li>In the <em>Choose a column to title your markers</em> window, select the <em>Name</em> column to title your point markers, as shown in Figure <a href="mymaps.html#fig:mymaps-marker-titles">7.28</a>. Then click <em>Finish</em>.</li>
 </ol>
 
 <div class="figure"><span style="display:block;" id="fig:mymaps-marker-titles"></span>
 <img src="images/07-map/mymaps-marker-titles.png" alt="Select the Name column to title your point markers." width="350" />
 <p class="caption">
-Figure 7.21: Select the <em>Name</em> column to title your point markers.
+Figure 7.28: Select the <em>Name</em> column to title your point markers.
 </p>
 </div>
 <p>Google My Maps will automatically <a href="geocode.html">geocode your address data as we discussed in chapter 3</a>, display them using its default blue markers, and center the map to fit all of the points.</p>
 <ol start="8" style="list-style-type: decimal">
-<li>Click the three-dot kebab menu next to the <em>Museums and Parks…</em> layer to <em>Rename</em> and shorten its name, since the full name of the file is imported by default, as shown in Figure <a href="mymaps.html#fig:mymaps-rename-layer">7.22</a>.</li>
+<li>Click the three-dot kebab menu next to the <em>Museums and Parks…</em> layer to <em>Rename</em> and shorten its name, since the full name of the file is imported by default, as shown in Figure <a href="mymaps.html#fig:mymaps-rename-layer">7.29</a>.</li>
 </ol>
 
 <div class="figure"><span style="display:block;" id="fig:mymaps-rename-layer"></span>
 <img src="images/07-map/mymaps-rename-layer.png" alt="Click the three-dot kebab menu next to the layer to shorten its name." width="300" />
 <p class="caption">
-Figure 7.22: Click the three-dot kebab menu next to the layer to shorten its name.
+Figure 7.29: Click the three-dot kebab menu next to the layer to shorten its name.
 </p>
 </div>
 <ol start="9" style="list-style-type: decimal">
-<li>Since our map contains two groups—museums and parks—let’s create a custom color marker for each group to replace the default blue markers. Click on <em>Individual styles</em>, and in the <em>Group places by</em> dropdown, change the value to <em>Style data by column: Group</em>, as show in Figure <a href="mymaps.html#fig:mymaps-group-places">7.23</a>. This option is available because we intentionally created the <em>Group</em> column for museums and parks when setting up the sample data. Close this window by clicking the upper-right <em>X</em> symbol.</li>
+<li>Since our map contains two groups—museums and parks—let’s create a custom color marker for each group to replace the default blue markers. Click on <em>Individual styles</em>, and in the <em>Group places by</em> dropdown, change the value to <em>Style data by column: Group</em>, as show in Figure <a href="mymaps.html#fig:mymaps-group-places">7.30</a>. This option is available because we intentionally created the <em>Group</em> column for museums and parks when setting up the sample data. Close this window by clicking the upper-right <em>X</em> symbol.</li>
 </ol>
 
 <div class="figure"><span style="display:block;" id="fig:mymaps-group-places"></span>
 <img src="images/07-map/mymaps-group-places.png" alt="Change Individual styles to Group places by: Group." width="300" />
 <p class="caption">
-Figure 7.23: Change <em>Individual styles</em> to <em>Group places by: Group</em>.
+Figure 7.30: Change <em>Individual styles</em> to <em>Group places by: Group</em>.
 </p>
 </div>
 <ol start="10" style="list-style-type: decimal">
-<li>Under <em>Styled by group</em>, float your cursor over the <em>Museum</em> label to reveal the bucket styling symbol, and click it, as shown in Figure <a href="mymaps.html#fig:mymaps-customize-marker">7.24</a>.</li>
+<li>Under <em>Styled by group</em>, float your cursor over the <em>Museum</em> label to reveal the bucket styling symbol, and click it, as shown in Figure <a href="mymaps.html#fig:mymaps-customize-marker">7.31</a>.</li>
 </ol>
 
 <div class="figure"><span style="display:block;" id="fig:mymaps-customize-marker"></span>
 <img src="images/07-map/mymaps-customize-marker.png" alt="Float your cursor over a label to reveal the bucket styling symbol." width="295" />
 <p class="caption">
-Figure 7.24: Float your cursor over a label to reveal the bucket styling symbol.
+Figure 7.31: Float your cursor over a label to reveal the bucket styling symbol.
 </p>
 </div>
 <ol start="11" style="list-style-type: decimal">
-<li>Assign a new color for <em>Museums</em>, and click <em>More icons</em> to find a more appropriate point marker symbol, as shown in Figure <a href="mymaps.html#fig:mymaps-colors-icons">7.25</a>.</li>
+<li>Assign a new color for <em>Museums</em>, and click <em>More icons</em> to find a more appropriate point marker symbol, as shown in Figure <a href="mymaps.html#fig:mymaps-colors-icons">7.32</a>.</li>
 </ol>
 
 <div class="figure"><span style="display:block;" id="fig:mymaps-colors-icons"></span>
 <img src="images/07-map/mymaps-colors-icons.png" alt="Select point marker colors and icons." width="295" />
 <p class="caption">
-Figure 7.25: Select point marker colors and icons.
+Figure 7.32: Select point marker colors and icons.
 </p>
 </div>
 <ol start="12" style="list-style-type: decimal">
-<li>In the <em>Choose an icon</em> screen, use the upper-right <em>Filter</em> to search for icon types by name, such as “Museum” as shown in Figure <a href="mymaps.html#fig:mymaps-choose-icon">7.26</a>. Repeat this process for <em>Parks</em>.</li>
+<li>In the <em>Choose an icon</em> screen, use the upper-right <em>Filter</em> to search for icon types by name, such as “Museum” as shown in Figure <a href="mymaps.html#fig:mymaps-choose-icon">7.33</a>. Repeat this process for <em>Parks</em>.</li>
 </ol>
 
 <div class="figure"><span style="display:block;" id="fig:mymaps-choose-icon"></span>
 <img src="images/07-map/mymaps-choose-icon.png" alt="Search by filter in the Choose an icon screen." width="750" />
 <p class="caption">
-Figure 7.26: Search by filter in the <em>Choose an icon</em> screen.
+Figure 7.33: Search by filter in the <em>Choose an icon</em> screen.
 </p>
 </div>
 <ol start="13" style="list-style-type: decimal">
-<li>In the <em>Choose an icon</em> screen, you can click the lower-left <em>Custom icon</em> button to upload an image, which will be transformed into a thumbnail image icon, as shown in Figure <a href="mymaps.html#fig:mymaps-custom-icon">7.27</a>. This custom icon was created from a <a href="https://commons.wikimedia.org/wiki/File:Washington_Monument_Panorama.jpg">Wikimedia image of the Washington Monument</a>.</li>
+<li>In the <em>Choose an icon</em> screen, you can click the lower-left <em>Custom icon</em> button to upload an image, which will be transformed into a thumbnail image icon, as shown in Figure <a href="mymaps.html#fig:mymaps-custom-icon">7.34</a>. This custom icon was created from a <a href="https://commons.wikimedia.org/wiki/File:Washington_Monument_Panorama.jpg">Wikimedia image of the Washington Monument</a>.</li>
 </ol>
 
 <div class="figure"><span style="display:block;" id="fig:mymaps-custom-icon"></span>
 <img src="images/07-map/mymaps-custom-icon.png" alt="Upload a photo to create a custom thumbnail icon image." width="180" />
 <p class="caption">
-Figure 7.27: Upload a photo to create a custom thumbnail icon image.
+Figure 7.34: Upload a photo to create a custom thumbnail icon image.
 </p>
 </div>
 <ol start="14" style="list-style-type: decimal">
-<li>Click on any map marker to edit its data, insert a photo to appear in its pop-up window, or add Google Map directions, as shown in Figure <a href="mymaps.html#fig:mymaps-edit-point">7.28</a>. This photo came from a <a href="https://commons.wikimedia.org/wiki/File:Metropolitan_Museum_of_Art_entrance_NYC.JPG">Wikimedia image of the Metropolitan Museum of Art</a>. However, you must add photos or directions manually, since these links cannot be pre-loaded into the data spreadsheet.</li>
+<li>Click on any map marker to edit its data, insert a photo to appear in its pop-up window, or add Google Map directions, as shown in Figure <a href="mymaps.html#fig:mymaps-edit-point">7.35</a>. This photo came from a <a href="https://commons.wikimedia.org/wiki/File:Metropolitan_Museum_of_Art_entrance_NYC.JPG">Wikimedia image of the Metropolitan Museum of Art</a>. However, you must add photos or directions manually, since these links cannot be pre-loaded into the data spreadsheet.</li>
 </ol>
 
 <div class="figure"><span style="display:block;" id="fig:mymaps-edit-point"></span>
 <img src="images/07-map/mymaps-edit-point.png" alt="Click any map marker to edit its data, add a photo, or directions." width="345" />
 <p class="caption">
-Figure 7.28: Click any map marker to edit its data, add a photo, or directions.
+Figure 7.35: Click any map marker to edit its data, add a photo, or directions.
 </p>
 </div>
 <ol start="15" style="list-style-type: decimal">
-<li>You can change the style of the basemap to one of nine different versions offered by Google, as shown in the drop-down menu in Figure <a href="mymaps.html#fig:mymaps-style-basemap">7.29</a>. Choose high-contrast colors for marker icons and basemap backgrounds.</li>
+<li>You can change the style of the basemap to one of nine different versions offered by Google, as shown in the drop-down menu in Figure <a href="mymaps.html#fig:mymaps-style-basemap">7.36</a>. Choose high-contrast colors for marker icons and basemap backgrounds.</li>
 </ol>
 
 <div class="figure"><span style="display:block;" id="fig:mymaps-style-basemap"></span>
 <img src="images/07-map/mymaps-style-basemap.png" alt="Change the style of the Google basemap." width="300" />
 <p class="caption">
-Figure 7.29: Change the style of the Google basemap.
+Figure 7.36: Change the style of the Google basemap.
 </p>
 </div>
 <ol start="16" style="list-style-type: decimal">
-<li>At the top of the map, see buttons to manually add more point markers, draw a line, add directions, or measure distance, as shown in Figure <a href="mymaps.html#fig:mymaps-draw-line">7.30</a>. However, Google My Maps has limited support for polylines and polygons, and you cannot easily create a choropleth map with colored boundaries that represent data values.</li>
+<li>At the top of the map, see buttons to manually add more point markers, draw a line, add directions, or measure distance, as shown in Figure <a href="mymaps.html#fig:mymaps-draw-line">7.37</a>. However, Google My Maps has limited support for polylines and polygons, and you cannot easily create a choropleth map with colored boundaries that represent data values.</li>
 </ol>
 
 <div class="figure"><span style="display:block;" id="fig:mymaps-draw-line"></span>
 <img src="images/07-map/mymaps-draw-line.png" alt="Manually add more point markers, lines, and directions, or measure distance." width="235" />
 <p class="caption">
-Figure 7.30: Manually add more point markers, lines, and directions, or measure distance.
+Figure 7.37: Manually add more point markers, lines, and directions, or measure distance.
 </p>
 </div>
 <ol start="17" style="list-style-type: decimal">
-<li>Click <em>Preview</em> to see how you map will appear to other people. When you finish editing your map, click the <em>Share</em> button underneath the map’s title and description, and in the next screen, make sure <em>Enable link sharing</em> is activated, as shown in Figure <a href="mymaps.html#fig:mymaps-share">7.31</a>, and copy the generated link. You can share with link with anyone, with or without a Google account. You also have the option to make your map publicly appear in web search results, if desired.</li>
+<li>Click <em>Preview</em> to see how you map will appear to other people. When you finish editing your map, click the <em>Share</em> button underneath the map’s title and description, and in the next screen, make sure <em>Enable link sharing</em> is activated, as shown in Figure <a href="mymaps.html#fig:mymaps-share">7.38</a>, and copy the generated link. You can share with link with anyone, with or without a Google account. You also have the option to make your map publicly appear in web search results, if desired.</li>
 </ol>
 
 <div class="figure"><span style="display:block;" id="fig:mymaps-share"></span>
 <img src="images/07-map/mymaps-share.png" alt="Before sharing your map, make sure anyone with the link can view it." width="400" />
 <p class="caption">
-Figure 7.31: Before sharing your map, make sure anyone with the link can view it.
+Figure 7.38: Before sharing your map, make sure anyone with the link can view it.
 </p>
 </div>
 <ol start="18" style="list-style-type: decimal">
-<li>If you wish to embed your map as an iframe on a web page, click the 3-button kebab menu to the right of the map title and select <em>Embed on my site</em>, as shown in Figure <a href="mymaps.html#fig:mymaps-embed">7.32</a>. This will generate an HTML embed code, which we will explain in <a href="embed.html">Chapter 9: Embed on the Web</a>.</li>
+<li>If you wish to embed your map as an iframe on a web page, click the 3-button kebab menu to the right of the map title and select <em>Embed on my site</em>, as shown in Figure <a href="mymaps.html#fig:mymaps-embed">7.39</a>. This will generate an HTML embed code, which we will explain in <a href="embed.html">Chapter 9: Embed on the Web</a>.</li>
 </ol>
 
 <div class="figure"><span style="display:block;" id="fig:mymaps-embed"></span>
 <img src="images/07-map/mymaps-embed.png" alt="Select Embed on my site to copy the HTML iframe code." width="315" />
 <p class="caption">
-Figure 7.32: Select <em>Embed on my site</em> to copy the HTML iframe code.
+Figure 7.39: Select <em>Embed on my site</em> to copy the HTML iframe code.
 </p>
 </div>
 <ol start="19" style="list-style-type: decimal">
-<li>If you wish to edit your map in the future, here are two ways to access it when logged into your Google account. One way is to <a href="https://www.google.com/mymaps/">open the Google My Maps platform</a> to view all of your maps. A second way is to go to your <a href="https://drive.google.com">Google Drive</a> and search for your Google My Maps by keyword. When you create a Google My Map from data in a Google Sheet, we recommend that you keep the My Map and Sheet files together in the same folder in your Google Drive, as shown in Figure <a href="mymaps.html#fig:mymaps-gdrive">7.33</a>, to help you make edits more easily in the future.</li>
+<li>If you wish to edit your map in the future, here are two ways to access it when logged into your Google account. One way is to <a href="https://www.google.com/mymaps/">open the Google My Maps platform</a> to view all of your maps. A second way is to go to your <a href="https://drive.google.com">Google Drive</a> and search for your Google My Maps by keyword. When you create a Google My Map from data in a Google Sheet, we recommend that you keep the My Map and Sheet files together in the same folder in your Google Drive, as shown in Figure <a href="mymaps.html#fig:mymaps-gdrive">7.40</a>, to help you make edits more easily in the future.</li>
 </ol>
 
 <div class="figure"><span style="display:block;" id="fig:mymaps-gdrive"></span>
 <img src="images/07-map/mymaps-gdrive.png" alt="Keep your Google My Maps and Sheets files together in a Google Drive folder." width="500" />
 <p class="caption">
-Figure 7.33: Keep your Google My Maps and Sheets files together in a Google Drive folder.
+Figure 7.40: Keep your Google My Maps and Sheets files together in a Google Drive folder.
 </p>
 </div>
-<p>Google My Maps is a good first tool to learn for making interactive maps, especially point maps with custom icons. You can design maps with multiple layers of points, polylines, and basic polygons, if desired. But the overall map design and features are limited to what the Google My Maps platform offers. Learn more at the <a href="https://support.google.com/mymaps">Google My Maps support page</a>.</p>
+<p>Google My Maps is basic tool for making point maps with custom icons and grouped categories. You can design maps with multiple layers of points, polylines, and basic polygons, if desired. But the overall map design and features are limited to what the Google My Maps platform offers. Learn more at the <a href="https://support.google.com/mymaps">Google My Maps support page</a>.</p>
 <p>In the next section, we’ll explore how to use Datawrapper to create symbol point maps, where the size and color of each circle (or other shapes) represents data values for that specific point.</p>
 </div>
 <footer style="margin-top: 60px; font-size: 0.8em; padding: 10px; background-color: rgba(0,0,0,0.08); display: table; width: 98%">
@@ -623,8 +623,8 @@ Figure 7.33: Keep your Google My Maps and Sheets files together in a Google Driv
           </div>
         </div>
       </div>
-<a href="normalize-choropleth.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="locatormap-datawrapper.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="locatormap-datawrapper.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="symbolmap-datawrapper.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

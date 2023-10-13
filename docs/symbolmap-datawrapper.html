@@ -24,14 +24,14 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2023-10-11" />
+<meta name="date" content="2023-10-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
-<link rel="prev" href="locatormap-datawrapper.html"/>
+<link rel="prev" href="mymaps.html"/>
 <link rel="next" href="choropleth-datawrapper.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -254,8 +254,8 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
 <li class="chapter" data-level="" data-path="design-choropleth.html"><a href="design-choropleth.html"><i class="fa fa-check"></i>Design Choropleth Colors &amp; Intervals</a></li>
 <li class="chapter" data-level="" data-path="normalize-choropleth.html"><a href="normalize-choropleth.html"><i class="fa fa-check"></i>Normalize Choropleth Map Data</a></li>
+<li class="chapter" data-level="" data-path="locatormap-datawrapper.html"><a href="locatormap-datawrapper.html"><i class="fa fa-check"></i>Locator Point Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
-<li class="chapter" data-level="" data-path="locatormap-datawrapper.html"><a href="locatormap-datawrapper.html"><i class="fa fa-check"></i>Locator Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="symbolmap-datawrapper.html"><a href="symbolmap-datawrapper.html"><i class="fa fa-check"></i>Symbol Point Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="choropleth-datawrapper.html"><a href="choropleth-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="map-tableau.html"><a href="map-tableau.html"><i class="fa fa-check"></i>Choropleth Map with Tableau Public</a></li>
@@ -382,13 +382,13 @@ div.csl-indent {
 <div id="symbolmap-datawrapper" class="section level2 unnumbered hasAnchor">
 <h2>Symbol Point Map with Datawrapper<a href="symbolmap-datawrapper.html#symbolmap-datawrapper" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We first introduced you to the free and easy-to-learn <a href="chart-datawrapper.html">Datawrapper tool in Chapter 6: Chart Your Data</a>. It’s also offers powerful features to create different types of maps, with professional-looking design elements. With Datawrapper you can start to work right away in your browser, with no account required unless you wish to save and share your work online.</p>
-<p>In this section, you’ll learn how to create a symbol point map. Unlike the <a href="mymaps.html">basic point map in the Google MyMaps tutorial</a>, a symbol point map shows data for specific locations through shapes of varying size or color. In Figure <a href="symbolmap-datawrapper.html#fig:datawrapper-symbolmap">7.35</a>, sample symbol map displays population change for 300 major US cities as point locations with two variables: circle size (for 2019 population size) and circle color (for percent change since 2010). Remember that we use <em>point</em> data to create symbol maps, but <em>polygon</em> data to create choropleth maps, which you’ll learn how to create in the following sections. Later we’ll explain <a href="embed.html">how to embed your interactive Datawrapper maps on the web in Chapter 9</a>.</p>
+<p>In this section, you’ll learn how to create a symbol point map. Unlike the <a href="mymaps.html">basic point map in the Google MyMaps tutorial</a>, a symbol point map shows data for specific locations through shapes of varying size or color. In Figure <a href="symbolmap-datawrapper.html#fig:datawrapper-symbolmap">7.41</a>, sample symbol map displays population change for 300 major US cities as point locations with two variables: circle size (for 2019 population size) and circle color (for percent change since 2010). Remember that we use <em>point</em> data to create symbol maps, but <em>polygon</em> data to create choropleth maps, which you’ll learn how to create in the following sections. Later we’ll explain <a href="embed.html">how to embed your interactive Datawrapper maps on the web in Chapter 9</a>.</p>
 
 <div class="figure"><span style="display:block;" id="fig:datawrapper-symbolmap"></span>
 <iframe src="https://datawrapper.dwcdn.net/V0V9Y" width="672" height="550px" data-external="1">
 </iframe>
 <p class="caption">
-Figure 7.35: Symbol point map of US city population growth with Datawrapper. Explore the <a href="https://datawrapper.dwcdn.net/V0V9Y">interactive version</a>.
+Figure 7.41: Symbol point map of US city population growth with Datawrapper. Explore the <a href="https://datawrapper.dwcdn.net/V0V9Y">interactive version</a>.
 </p>
 </div>
 <p>Datawrapper splits the process of creating a map into four steps: select map, add data, visualize, then publish and embed. To create your own symbol point map, follow this tutorial.</p>
@@ -398,54 +398,54 @@ Figure 7.35: Symbol point map of US city population growth with Datawrapper. Exp
 <p>Good maps often require <a href="clean.html">cleaning up messy data as described in Chapter 4</a>. In our spreadsheet we narrowed the original list down to about 300 cities with more than 100,000 residents in either 2010 or 2019. Also, we created a new column named <em>Percent Change</em>, which we calculated this way: <code>(2019 - 2010) / 2010 * 100</code>.</p>
 <p>Tip: To simplify this tutorial, we previously geocoded the Latitude and Longitude of each city. See <a href="geocode.html">Chapter 2: Geocode Addresses in Google Sheets</a>. To learn more about the pros and cons of geocoding within Datawrapper, read this <a href="https://academy.datawrapper.de/article/193-symbol-location-accuracy-using-addresses-place-names">Datawrapper Academy article about symbol location accuracy using addresses and place names</a>.</p>
 <ol start="2" style="list-style-type: decimal">
-<li>Open <a href="https://www.datawrapper.de">Datawrapper</a>, click on <em>Start Creating</em>, then the <em>New Map</em> button, and select <em>Symbol map</em> as shown in Figure <a href="symbolmap-datawrapper.html#fig:datawrapper-symbolmap-start">7.36</a>.</li>
+<li>Open <a href="https://www.datawrapper.de">Datawrapper</a>, click on <em>Start Creating</em>, then the <em>New Map</em> button, and select <em>Symbol map</em> as shown in Figure <a href="symbolmap-datawrapper.html#fig:datawrapper-symbolmap-start">7.42</a>.</li>
 </ol>
 
 <div class="figure"><span style="display:block;" id="fig:datawrapper-symbolmap-start"></span>
 <img src="images/07-map/datawrapper-symbolmap-start.png" alt="Start to create a symbol map in Datawrapper." width="600" />
 <p class="caption">
-Figure 7.36: Start to create a symbol map in Datawrapper.
+Figure 7.42: Start to create a symbol map in Datawrapper.
 </p>
 </div>
 <ol start="3" style="list-style-type: decimal">
 <li><p>In the <em>Select your map</em> screen, search for <em>USA &gt; States and Territories</em> to include Puerto Rico, rather than the <em>USA &gt; States</em> option that appears closer to the top of the list. Proceed to the next screen.</p></li>
-<li><p>In the <em>Add your data</em> screen, there are several options to upload your data. Since our sample data is in a Google Sheet, scroll down to <em>Connect to a remote data set</em> and select <em>Connect Google Sheet</em>. Copy and paste the link from the Google Sheet in the first step of this tutorial, as shown in Figure <a href="symbolmap-datawrapper.html#fig:datawrapper-symbolmap-connect">7.37</a>. When the green checkmark appears to confirm your Google Sheet is public and readable, click the blue <em>Connect</em> button, then <em>Proceed</em> to the next step.</p></li>
+<li><p>In the <em>Add your data</em> screen, there are several options to upload your data. Since our sample data is in a Google Sheet, scroll down to <em>Connect to a remote data set</em> and select <em>Connect Google Sheet</em>. Copy and paste the link from the Google Sheet in the first step of this tutorial, as shown in Figure <a href="symbolmap-datawrapper.html#fig:datawrapper-symbolmap-connect">7.43</a>. When the green checkmark appears to confirm your Google Sheet is public and readable, click the blue <em>Connect</em> button, then <em>Proceed</em> to the next step.</p></li>
 </ol>
 
 <div class="figure"><span style="display:block;" id="fig:datawrapper-symbolmap-connect"></span>
 <img src="images/07-map/datawrapper-symbolmap-connect-annotated.png" alt="In the Connect to a remote data set section, paste the link to the Google Sheet." width="400" />
 <p class="caption">
-Figure 7.37: In the <em>Connect to a remote data set</em> section, paste the link to the Google Sheet.
+Figure 7.43: In the <em>Connect to a remote data set</em> section, paste the link to the Google Sheet.
 </p>
 </div>
 <ol start="5" style="list-style-type: decimal">
-<li>Click the <em>Visualize</em> button to <em>Refine</em> your map. Our goal is to display two variables: 2019 population as the circle size, and percent change as the circle color. Under <em>Symbol shape and size</em>, select the <em>circle</em> symbol, to be sized by <em>Pop Estimate 2019</em>, with a maximum symbol size of 25 pixels. Under <em>Symbol colors</em>, select the <em>Percent Change 2010-2019</em> column, as shown in Figure <a href="symbolmap-datawrapper.html#fig:datawrapper-symbolmap-refine">7.38</a>.</li>
+<li>Click the <em>Visualize</em> button to <em>Refine</em> your map. Our goal is to display two variables: 2019 population as the circle size, and percent change as the circle color. Under <em>Symbol shape and size</em>, select the <em>circle</em> symbol, to be sized by <em>Pop Estimate 2019</em>, with a maximum symbol size of 25 pixels. Under <em>Symbol colors</em>, select the <em>Percent Change 2010-2019</em> column, as shown in Figure <a href="symbolmap-datawrapper.html#fig:datawrapper-symbolmap-refine">7.44</a>.</li>
 </ol>
 
 <div class="figure"><span style="display:block;" id="fig:datawrapper-symbolmap-refine"></span>
 <img src="images/07-map/datawrapper-symbolmap-refine.png" alt="Refine your map by selecting data to display symbol shapes, sizes, and colors."  />
 <p class="caption">
-Figure 7.38: Refine your map by selecting data to display symbol shapes, sizes, and colors.
+Figure 7.44: Refine your map by selecting data to display symbol shapes, sizes, and colors.
 </p>
 </div>
 <ol start="6" style="list-style-type: decimal">
-<li>Optionally, to customize the color palette and intervals to match our example, click the <em>wrench symbol</em> next to the palette. Click the <em>Import colors</em> button and you can paste in the five hexadecimal codes listed below from ColorBrewer, as described in the <a href="design-choropleth.html">Choropleth Design section</a>. The first code is dark pink, followed by a 4-class sequential green: <code>#d01c8b,#bae4b3,#74c476,#31a354,#006d2c</code>. See Figure <a href="symbolmap-datawrapper.html#fig:datawrapper-symbolmap-colors">7.39</a>.</li>
+<li>Optionally, to customize the color palette and intervals to match our example, click the <em>wrench symbol</em> next to the palette. Click the <em>Import colors</em> button and you can paste in the five hexadecimal codes listed below from ColorBrewer, as described in the <a href="design-choropleth.html">Choropleth Design section</a>. The first code is dark pink, followed by a 4-class sequential green: <code>#d01c8b,#bae4b3,#74c476,#31a354,#006d2c</code>. See Figure <a href="symbolmap-datawrapper.html#fig:datawrapper-symbolmap-colors">7.45</a>.</li>
 </ol>
 
 <div class="figure"><span style="display:block;" id="fig:datawrapper-symbolmap-colors"></span>
 <img src="images/07-map/datawrapper-symbolmap-colors.png" alt="Create a new color palette by importing five hexadecimal color codes from ColorBrewer." width="600" />
 <p class="caption">
-Figure 7.39: Create a new color palette by importing five hexadecimal color codes from ColorBrewer.
+Figure 7.45: Create a new color palette by importing five hexadecimal color codes from ColorBrewer.
 </p>
 </div>
 <ol start="7" style="list-style-type: decimal">
-<li>To continue customizing intervals to match our example, set the steps to <em>5</em> and <em>Custom</em>. Manually type in custom intervals for below 0% (bright pink), 0 to 5% (light green), and so forth up the scale. Click the <em>More options</em> button, and under <em>Legend</em>, change <em>Labels</em> to <em>custom</em>, and click each label to edit the text that appears on the map menu, as shown in Figure <a href="symbolmap-datawrapper.html#fig:datawrapper-symbolmap-intervals">7.40</a>. Learn more about these options in the <a href="https://academy.datawrapper.de/article/120-customizing-your-symbol-map">Datawrapper Academy post on customizing your symbol map</a>.</li>
+<li>To continue customizing intervals to match our example, set the steps to <em>5</em> and <em>Custom</em>. Manually type in custom intervals for below 0% (bright pink), 0 to 5% (light green), and so forth up the scale. Click the <em>More options</em> button, and under <em>Legend</em>, change <em>Labels</em> to <em>custom</em>, and click each label to edit the text that appears on the map menu, as shown in Figure <a href="symbolmap-datawrapper.html#fig:datawrapper-symbolmap-intervals">7.46</a>. Learn more about these options in the <a href="https://academy.datawrapper.de/article/120-customizing-your-symbol-map">Datawrapper Academy post on customizing your symbol map</a>.</li>
 </ol>
 
 <div class="figure"><span style="display:block;" id="fig:datawrapper-symbolmap-intervals"></span>
 <img src="images/07-map/datawrapper-symbolmap-intervals.png" alt="Customize the interval ranges and edit the legend." width="500" />
 <p class="caption">
-Figure 7.40: Customize the interval ranges and edit the legend.
+Figure 7.46: Customize the interval ranges and edit the legend.
 </p>
 </div>
 <ol start="8" style="list-style-type: decimal">
@@ -500,7 +500,7 @@ Figure 7.40: Customize the interval ranges and edit the legend.
           </div>
         </div>
       </div>
-<a href="locatormap-datawrapper.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="mymaps.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="choropleth-datawrapper.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>

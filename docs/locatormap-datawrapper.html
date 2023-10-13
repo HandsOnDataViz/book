@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Locator Map with Datawrapper | Hands-On Data Visualization</title>
+  <title>Locator Point Map with Datawrapper | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Locator Map with Datawrapper | Hands-On Data Visualization" />
+  <meta property="og:title" content="Locator Point Map with Datawrapper | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="http://handsondataviz.github.io//images/cover-400wide.jpg" />
   <meta property="og:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="github-repo" content="handsondataviz/book" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Locator Map with Datawrapper | Hands-On Data Visualization" />
+  <meta name="twitter:title" content="Locator Point Map with Datawrapper | Hands-On Data Visualization" />
   <meta name="twitter:site" content="@handsondataviz" />
   <meta name="twitter:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="twitter:image" content="http://handsondataviz.github.io//images/cover-400wide.jpg" />
@@ -24,15 +24,15 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2023-10-11" />
+<meta name="date" content="2023-10-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
-<link rel="prev" href="mymaps.html"/>
-<link rel="next" href="symbolmap-datawrapper.html"/>
+<link rel="prev" href="normalize-choropleth.html"/>
+<link rel="next" href="mymaps.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -254,8 +254,8 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
 <li class="chapter" data-level="" data-path="design-choropleth.html"><a href="design-choropleth.html"><i class="fa fa-check"></i>Design Choropleth Colors &amp; Intervals</a></li>
 <li class="chapter" data-level="" data-path="normalize-choropleth.html"><a href="normalize-choropleth.html"><i class="fa fa-check"></i>Normalize Choropleth Map Data</a></li>
+<li class="chapter" data-level="" data-path="locatormap-datawrapper.html"><a href="locatormap-datawrapper.html"><i class="fa fa-check"></i>Locator Point Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
-<li class="chapter" data-level="" data-path="locatormap-datawrapper.html"><a href="locatormap-datawrapper.html"><i class="fa fa-check"></i>Locator Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="symbolmap-datawrapper.html"><a href="symbolmap-datawrapper.html"><i class="fa fa-check"></i>Symbol Point Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="choropleth-datawrapper.html"><a href="choropleth-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="map-tableau.html"><a href="map-tableau.html"><i class="fa fa-check"></i>Choropleth Map with Tableau Public</a></li>
@@ -380,17 +380,82 @@ div.csl-indent {
 
 </header>
 <div id="locatormap-datawrapper" class="section level2 unnumbered hasAnchor">
-<h2>Locator Map with Datawrapper<a href="locatormap-datawrapper.html#locatormap-datawrapper" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>New tutorial to come…</p>
+<h2>Locator Point Map with Datawrapper<a href="locatormap-datawrapper.html#locatormap-datawrapper" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We first introduced you to the free and easy-to-learn <a href="chart-datawrapper.html">Datawrapper tool in Chapter 6: Chart Your Data</a>. This tool also offers powerful features to create different types of maps, with professional-looking design elements. With Datawrapper you can start to work right away in your browser, with no account required unless you wish to save and share your work online.</p>
+<p>Locator point maps are best used to introduce readers to key landmarks, and associated polygon regions, to provide a frame of reference for a geographic area. The Locator Map tool in Datawrapper easily allows you to display points with a selection of colored markers and show their proximity to preset list of polygon areas. More advanced users can upload their own custom polygons or lines in GeoJSON format, a concept we explain in <a href="transform.html">Chapter 13: Transform Your Map Data</a>.</p>
+<p>In this section, you’ll learn how to create a Locator Map in Datawrapper to highlight key landmarks (points) inside a city boundary (a polygon), then publish and share your interactive map, as shown in Figure <a href="locatormap-datawrapper.html#fig:datawrapper-locatormap">7.15</a>.</p>
 
 <div class="figure"><span style="display:block;" id="fig:datawrapper-locatormap"></span>
-<iframe src="https://datawrapper.dwcdn.net/KwU8I" width="672" height="550px" data-external="1">
+<iframe src="https://datawrapper.dwcdn.net/KwU8I" width="672" height="600px" data-external="1">
 </iframe>
 <p class="caption">
-Figure 7.34: Locator map of San Francisco and bridges with Datawrapper. Explore the <a href="https://datawrapper.dwcdn.net/KwU8I">interactive version</a>.
+Figure 7.15: Locator map with Datawrapper: Popular locations in San Francisco, California. Explore the <a href="https://datawrapper.dwcdn.net/KwU8I">interactive version</a>.
 </p>
 </div>
-<p>Open <a href="https://www.datawrapper.de">Datawrapper</a>, click on <em>Start Creating</em>, then the <em>New Map</em> button, and select <em>Locator map</em>… more to come…</p>
+<ol style="list-style-type: decimal">
+<li>Open <a href="https://www.datawrapper.de">Datawrapper</a>, click on <em>Start Creating</em>, then the <em>New Map</em> button, and select <em>Locator map</em>, as shown in Figure <a href="locatormap-datawrapper.html#fig:datawrapper-locatormap-create">7.16</a>.</li>
+</ol>
+
+<div class="figure"><span style="display:block;" id="fig:datawrapper-locatormap-create"></span>
+<img src="images/07-map/datawrapper-locatormap-create.png" alt="Start creating a New Map and select Locator map" width="600" />
+<p class="caption">
+Figure 7.16: Start creating a <em>New Map</em> and select <em>Locator map</em>
+</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>Add point markers to your map by entering the name of a place, or an address, or paste a Google Maps link, as shown in Figure <a href="locatormap-datawrapper.html#fig:datawrapper-locatormap-add-markers">7.17</a>.</li>
+</ol>
+
+<div class="figure"><span style="display:block;" id="fig:datawrapper-locatormap-add-markers"></span>
+<img src="images/07-map/datawrapper-locatormap-add-markers.png" alt="Add point markers by entering a place, address, or pasting a Google Maps link." width="600" />
+<p class="caption">
+Figure 7.17: Add point markers by entering a place, address, or pasting a Google Maps link.
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>Select a point marker to edit the text, choose a preset number or symbol or color, or add an interactive tooltip, as shown in Figure <a href="locatormap-datawrapper.html#fig:datawrapper-locatormap-edit-markers">7.18</a>.</li>
+</ol>
+
+<div class="figure"><span style="display:block;" id="fig:datawrapper-locatormap-edit-markers"></span>
+<img src="images/07-map/datawrapper-locatormap-edit-markers.png" alt="Edit point markers by choosing preset numbers, symbols, colors, or adding interactive tooltips." width="300" />
+<p class="caption">
+Figure 7.18: Edit point markers by choosing preset numbers, symbols, colors, or adding interactive tooltips.
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>To add a basic polygon (such as a preset city or regional boundary), scroll down to turn on <em>Add region as area marker</em>, select a listed area, and modify the appearance of its fill or outline color, as shown in Figure <a href="locatormap-datawrapper.html#fig:datawrapper-locatormap-area-markers">7.19</a>.</li>
+</ol>
+
+<div class="figure"><span style="display:block;" id="fig:datawrapper-locatormap-area-markers"></span>
+<img src="images/07-map/datawrapper-locatormap-area-markers.png" alt="Caption here…" width="400" />
+<p class="caption">
+Figure 7.19: Caption here…
+</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li>Adjust the zoom and center of your map, and preview how it will look on different sized devices, such as smaller smartphones or larger desktops, as shown in Figure <a href="locatormap-datawrapper.html#fig:datawrapper-locatormap-preview">7.20</a>.</li>
+</ol>
+
+<div class="figure"><span style="display:block;" id="fig:datawrapper-locatormap-preview"></span>
+<img src="images/07-map/datawrapper-locatormap-preview.png" alt="Adjust your map zoom level and center it, and preview how it will appear on small and large screens." width="500" />
+<p class="caption">
+Figure 7.20: Adjust your map zoom level and center it, and preview how it will appear on small and large screens.
+</p>
+</div>
+<ol start="6" style="list-style-type: decimal">
+<li><p>Proceed to the <em>Design Map</em> tab to select background map styles and labelling, and choose to add map extras, such as scale bar, north arrow, or inset map.</p></li>
+<li><p>Proceed to the <em>Annotate &amp; Layout</em> tab to insert a title, byline, or marker key.</p></li>
+<li><p>Proceed to the <em>Publish &amp; Embed</em> tab to share your map link or embed it on a web page. Also, scroll down on this tab to <em>Export</em> your visualization as a static PNG image, or export the spatial geography in GeoJSON format for other visualization tools, as shown in Figure <a href="locatormap-datawrapper.html#fig:datawrapper-locatormap-export">7.21</a>.</p></li>
+</ol>
+
+<div class="figure"><span style="display:block;" id="fig:datawrapper-locatormap-export"></span>
+<img src="images/07-map/datawrapper-locatormap-export.png" alt="After publishing your live interactive map, you also can export a static PNG image or GeoJSON spatial data file." width="400" />
+<p class="caption">
+Figure 7.21: After publishing your live interactive map, you also can export a static PNG image or GeoJSON spatial data file.
+</p>
+</div>
+<p>Datawrapper’s Locator Map offers an easy introduction to highlighting some key points on a map and showing their relationship to an outlined region. To learn more steps beyond this basic tutorial, see more detailed instructions by <a href="https://academy.datawrapper.de/article/161-how-to-create-a-locator-map">How to Create a Locator Map</a> by Datawrapper Academy.</p>
+<p>In the next section, we’ll explore how to create point maps with more features, such as markers in grouped categories or with custom images, using Google My Maps. The tool is similar to Datawrapper’s Locator point map, but offers different options and flexiblity.</p>
 </div>
 <footer style="margin-top: 60px; font-size: 0.8em; padding: 10px; background-color: rgba(0,0,0,0.08); display: table; width: 98%">
 
@@ -437,8 +502,8 @@ Figure 7.34: Locator map of San Francisco and bridges with Datawrapper. Explore 
           </div>
         </div>
       </div>
-<a href="mymaps.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="symbolmap-datawrapper.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="normalize-choropleth.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="mymaps.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

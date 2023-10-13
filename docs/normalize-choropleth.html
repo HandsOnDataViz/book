@@ -24,7 +24,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2023-10-11" />
+<meta name="date" content="2023-10-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="design-choropleth.html"/>
-<link rel="next" href="mymaps.html"/>
+<link rel="next" href="locatormap-datawrapper.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -254,8 +254,8 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
 <li class="chapter" data-level="" data-path="design-choropleth.html"><a href="design-choropleth.html"><i class="fa fa-check"></i>Design Choropleth Colors &amp; Intervals</a></li>
 <li class="chapter" data-level="" data-path="normalize-choropleth.html"><a href="normalize-choropleth.html"><i class="fa fa-check"></i>Normalize Choropleth Map Data</a></li>
+<li class="chapter" data-level="" data-path="locatormap-datawrapper.html"><a href="locatormap-datawrapper.html"><i class="fa fa-check"></i>Locator Point Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
-<li class="chapter" data-level="" data-path="locatormap-datawrapper.html"><a href="locatormap-datawrapper.html"><i class="fa fa-check"></i>Locator Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="symbolmap-datawrapper.html"><a href="symbolmap-datawrapper.html"><i class="fa fa-check"></i>Symbol Point Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="choropleth-datawrapper.html"><a href="choropleth-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="map-tableau.html"><a href="map-tableau.html"><i class="fa fa-check"></i>Choropleth Map with Tableau Public</a></li>
@@ -393,7 +393,7 @@ Figure 7.14: Choropleth maps work best with normalized values.
 <p>Both maps show Covid-19 data collected by the New York Times and published <a href="https://github.com/nytimes/covid-19-data">on GitHub</a>. In the map in Figure <a href="normalize-choropleth.html#fig:normalize-map-data">7.14</a>b, we normalized values by dividing the total number of cases by the population in each state, according to the 2018 US Census American Community Survey, the most recent data available on the day of writing. We did not add legends and other important cartographic elements so that you can better focus on interpreting spatial patterns. In both cases, we used Jenks natural breaks for classification.</p>
 <p>What are the worst-hit states according to the map showing total Covid-19 counts (shown in Figure <a href="normalize-choropleth.html#fig:normalize-map-data">7.14</a>a)? If you are familiar with the US geography, you can quickly tell that these are New York, New Jersey, Massachusetts, Florida, Illinois, Texas, and California. But five of these happen to be some of the most populous states in the US, so it makes sense that they will also have higher Covid-19 cases.</p>
 <p>Now, how about the map in Figure <a href="normalize-choropleth.html#fig:normalize-map-data">7.14</a>b? You can see that New York and its neighbors, including New Jersey and Massachusetts, have by far the highest rates per capita (per person), which we saw in the first map. But you can also see that in fact California, Texas, and Florida were impacted to a lesser extent than the map on the left had suggested. So the map with per-capita values is a much better illustration to the story about New York being the <em>first</em> epicenter of the Covid-19 crisis in the United States.</p>
-<p>At this point, you should have a better idea of key principles and best practices in map design. Now that we’ve covered key concepts for interactive maps in general, and choropleth maps in particular, we will pivot to a series of hands-on tutorials with our recommended tools. In our first tutorial, we will create a <a href="mymaps.html">point map with custom icons in Google MyMaps</a> to show information about specific locations with pop-up windows. In our second tutorial, we will build a <a href="symbolmap-datawrapper.html">symbol point map in Datawrapper</a> that uses colored circles of varying sizes to represent population change for specific cities. Our final tutorials in this chapter will return to the topic of designing <a href="choropleth-datawrapper.html">choropleth maps in Datawrapper</a> and also <a href="map-tableau.html">in Tableau Public</a> in order to compare these two tools.</p>
+<p>At this point, you should have a better idea of key principles and best practices in map design. Now that we’ve covered key concepts for interactive maps in general, and choropleth maps in particular, we will pivot to a series of hands-on tutorials with our recommended tools. Our first tutorial shows how to design a <a href="datawrapper-locatormap.html">locator point map with a basic polygon area in Datawrapper</a>. In our second tutorial, we will create a <a href="mymaps.html">point map with custom icons in Google MyMaps</a> to show information about specific locations with pop-up windows. In our final tutorial, we will build a <a href="symbolmap-datawrapper.html">symbol point map in Datawrapper</a> that uses colored circles of varying sizes to represent population change for specific cities. Our final tutorials in this chapter will return to the topic of designing <a href="choropleth-datawrapper.html">choropleth maps in Datawrapper</a> and also <a href="map-tableau.html">in Tableau Public</a> in order to compare these two tools.</p>
 </div>
 <footer style="margin-top: 60px; font-size: 0.8em; padding: 10px; background-color: rgba(0,0,0,0.08); display: table; width: 98%">
 
@@ -441,7 +441,7 @@ Figure 7.14: Choropleth maps work best with normalized values.
         </div>
       </div>
 <a href="design-choropleth.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="mymaps.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="locatormap-datawrapper.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

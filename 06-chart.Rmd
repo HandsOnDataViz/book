@@ -408,7 +408,17 @@ Compare the quick histogram created with *Column stats* in Figure \@ref(fig:hist
 if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=480820223&amp;format=interactive") else knitr::include_graphics("images/06-chart/histogram.png")
 ```
 
-1. To create a regular histogram in Google Sheets, select a column with values and go to *Insert > Chart*. If Google Sheets does not automatically select *Histogram chart* as the *Chart type* in Chart editor, use the dropdown and select it manually, near the bottom of the list in the *Other* category, as shown in Figure \@ref(fig:histogram-chart-type)
+1. To create a regular histogram in Google Sheets, open the sample data on [Average Daily Calorie Supply per capita by country 2017 in Google Sheets](https://docs.google.com/spreadsheets/d/1V-r1bOWpvyCRhmJa0gRZ1TEchXvrr7UTZ97rKOU1WRo/edit#gid=1132930452), log in with your account, and go to *File > Make a Copy* to create a version you can edit in your Google Drive.
+
+2. Select only *one* column with numerical values as shown in Figure \@ref(fig:histogram-select-column).
+
+(ref:histogram-select-column) Select only *one* column with values to create a histogram.
+
+```{r histogram-select-column, out.width=300, fig.cap="(ref:histogram-select-column)"}
+ knitr::include_graphics("images/06-chart/histogram-select-column.png")
+```
+
+3. Go to *Insert > Chart*. If Google Sheets does not automatically select *Histogram chart* as the *Chart type* in Chart editor, use the dropdown and select it manually, near the bottom of the list in the *Other* category, as shown in Figure \@ref(fig:histogram-chart-type)
 
 (ref:histogram-chart-type) If not shown automatically, go to the Chart Editor sidebar and select *Setup - Chart type - Other - Histogram*.
 
@@ -416,13 +426,13 @@ if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://docs.
  knitr::include_graphics("images/06-chart/histogram-chart-type.png")
 ```
 
-2. You can manually set the range of each bucket and round the breakpoints to whole numbers (such as multiple of 1, 5, or 100), if this makes sense for the distribution of your data. In the Chart Editor, go to *Customize > Histogram > Bucket size*. Larger intervals will contain more data points and will appear wider, while smaller intervals will contain fewer points and appear narrower.
+4. You can manually set the range of each bucket and round the breakpoints to whole numbers (such as multiple of 1, 5, or 100), if this makes sense for the distribution of your data. In the Chart Editor, go to *Customize > Histogram > Bucket size*. Larger intervals will contain more data points and will appear wider, while smaller intervals will contain fewer points and appear narrower.
 
 Note: Currently, Google Sheets does not allow users to remove decimal points in the x-axis label of a histogram, even when all of the breakpoints are integers.
 
-3. Optionally, you can break down the column into individual items (in our case, countries), which will appear as blocks with white boundaries. To do this, go to *Customize > Histogram > Show item dividers*.
+5. Optionally, you can break down the column into individual items (in our case, countries), which will appear as blocks with white boundaries. To do this, go to *Customize > Histogram > Show item dividers*.
 
-4. In the Chart Editor, customize further to add a *Chart title*, a *subtitle* to describe the source, and also vertical and horizontal axis titles to help readers interpret the chart.
+6. In the Chart Editor, customize further to add a *Chart title*, a *subtitle* to describe the source, and also vertical and horizontal axis titles to help readers interpret the chart.
 
 Since the regular histogram is created using the Charts feature, you can choose to *Publish* it and copy the embed code for the interactive version, as you'll learn in [Chapter 9: Embed on the Web](embed.html).
 

@@ -24,7 +24,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2023-10-13" />
+<meta name="date" content="2023-10-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -410,20 +410,31 @@ Figure 6.28: Regular histogram chart: Explore the full-screen <a href="https://d
 </p>
 </div>
 <ol style="list-style-type: decimal">
-<li>To create a regular histogram in Google Sheets, select a column with values and go to <em>Insert &gt; Chart</em>. If Google Sheets does not automatically select <em>Histogram chart</em> as the <em>Chart type</em> in Chart editor, use the dropdown and select it manually, near the bottom of the list in the <em>Other</em> category, as shown in Figure <a href="histogram-google.html#fig:histogram-chart-type">6.29</a></li>
+<li><p>To create a regular histogram in Google Sheets, open the sample data on <a href="https://docs.google.com/spreadsheets/d/1V-r1bOWpvyCRhmJa0gRZ1TEchXvrr7UTZ97rKOU1WRo/edit#gid=1132930452">Average Daily Calorie Supply per capita by country 2017 in Google Sheets</a>, log in with your account, and go to <em>File &gt; Make a Copy</em> to create a version you can edit in your Google Drive.</p></li>
+<li><p>Select only <em>one</em> column with numerical values as shown in Figure <a href="histogram-google.html#fig:histogram-select-column">6.29</a>.</p></li>
+</ol>
+
+<div class="figure"><span style="display:block;" id="fig:histogram-select-column"></span>
+<img src="images/06-chart/histogram-select-column.png" alt="Select only one column with values to create a histogram." width="300" />
+<p class="caption">
+Figure 6.29: Select only <em>one</em> column with values to create a histogram.
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>Go to <em>Insert &gt; Chart</em>. If Google Sheets does not automatically select <em>Histogram chart</em> as the <em>Chart type</em> in Chart editor, use the dropdown and select it manually, near the bottom of the list in the <em>Other</em> category, as shown in Figure <a href="histogram-google.html#fig:histogram-chart-type">6.30</a></li>
 </ol>
 
 <div class="figure"><span style="display:block;" id="fig:histogram-chart-type"></span>
 <img src="images/06-chart/histogram-chart-type.png" alt="If not shown automatically, go to the Chart Editor sidebar and select Setup - Chart type - Other - Histogram." width="300" />
 <p class="caption">
-Figure 6.29: If not shown automatically, go to the Chart Editor sidebar and select <em>Setup - Chart type - Other - Histogram</em>.
+Figure 6.30: If not shown automatically, go to the Chart Editor sidebar and select <em>Setup - Chart type - Other - Histogram</em>.
 </p>
 </div>
-<ol start="2" style="list-style-type: decimal">
+<ol start="4" style="list-style-type: decimal">
 <li>You can manually set the range of each bucket and round the breakpoints to whole numbers (such as multiple of 1, 5, or 100), if this makes sense for the distribution of your data. In the Chart Editor, go to <em>Customize &gt; Histogram &gt; Bucket size</em>. Larger intervals will contain more data points and will appear wider, while smaller intervals will contain fewer points and appear narrower.</li>
 </ol>
 <p>Note: Currently, Google Sheets does not allow users to remove decimal points in the x-axis label of a histogram, even when all of the breakpoints are integers.</p>
-<ol start="3" style="list-style-type: decimal">
+<ol start="5" style="list-style-type: decimal">
 <li><p>Optionally, you can break down the column into individual items (in our case, countries), which will appear as blocks with white boundaries. To do this, go to <em>Customize &gt; Histogram &gt; Show item dividers</em>.</p></li>
 <li><p>In the Chart Editor, customize further to add a <em>Chart title</em>, a <em>subtitle</em> to describe the source, and also vertical and horizontal axis titles to help readers interpret the chart.</p></li>
 </ol>

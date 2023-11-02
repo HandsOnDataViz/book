@@ -150,6 +150,14 @@ Now that your published Google Sheet is linked to your live map, go to the *Opti
 
 Open the browser tab that displays your live map and refresh the page to see your changes. If your changes do not appear within a few seconds, see the [Fix Common Problems](fix.html) section of the appendix.
 
+Tip: In Google Sheet Options > Map Settings > Basemap Tiles, the default option is the CartoDB.Positron basemap. If you choose options by [other Leaflet basemap providers](https://leaflet-extras.github.io/leaflet-providers/preview/), you may need to [register for and insert an API key](https://github.com/leaflet-extras/leaflet-providers#providers-requiring-registration) to use their service. If you choose a Stadia basemap, [register for an account to use domain-based authentication](https://docs.stadiamaps.com/authentication), as shown in Figure \@ref(fig:stadia-domain).
+
+(ref:stadia-domain) If you choose a Stadia basemap option, register to use domain-based authentication. For example, *handsondataviz.github.io* is the domain for our demo map on GitHub Pages.
+
+```{r stadia-domain, out.width=500, fig.cap="(ref:stadia-domain)"}
+knitr::include_graphics("images/12-leaflet/stadia-domain.png")
+```
+
 #### E) Geocode locations and customize new markers in the Points tab {-}
 Now we can start to add new content to your map. In the *Points* tab of your Google Sheet, you'll see column headers to organize and display interactive markers on your map. Replace the demonstration data with your own, but do *not* delete or rename the column headers, since the Leaflet code looks for these specific names.
 
@@ -433,6 +441,14 @@ Now that your published Google Sheet is linked to your live map, go to the *Opti
 - and many more
 
 Open the browser tab that displays your live map and refresh the page to see your changes. If your changes do not appear within a few seconds, see the [Fix Common Problems](fix.html) section of the appendix.
+
+Tip: In Google Sheet Options > Map Settings > Basemap Tiles, the default option is the CartoDB.Positron basemap. If you choose options by [other Leaflet basemap providers](https://leaflet-extras.github.io/leaflet-providers/preview/), you may need to [register for and insert an API key](https://github.com/leaflet-extras/leaflet-providers#providers-requiring-registration) to use their service. If you choose a Stadia basemap, [register for an account to use domain-based authentication](https://docs.stadiamaps.com/authentication), as shown in Figure \@ref(fig:stadia-domain2).
+
+(ref:stadia-domain2) If you choose a Stadia basemap option, register to use domain-based authentication. For example, *handsondataviz.github.io* is the domain for our demo map on GitHub Pages.
+
+```{r stadia-domain2, out.width=500, fig.cap="(ref:stadia-domain2)"}
+knitr::include_graphics("images/12-leaflet/stadia-domain.png")
+```
 
 #### E) Add text, media, markers, and geocode locations in the Chapters tab. {-}
 Now we can start to add new content to your map. In the *Chapters* tab of your Google Sheet, you'll see column headers to organize and display interactive markers on your map. Replace the demonstration data with your own, but do *not* delete or rename the column headers, since the Leaflet code looks for these specific names.

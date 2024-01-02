@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Leaflet Heatmap Points with CSV Data | Hands-On Data Visualization</title>
+  <title>GitHub Desktop and Code Editor to Work Efficiently | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Leaflet Heatmap Points with CSV Data | Hands-On Data Visualization" />
+  <meta property="og:title" content="GitHub Desktop and Code Editor to Work Efficiently | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="http://handsondataviz.github.io//images/cover-400wide.jpg" />
   <meta property="og:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="github-repo" content="handsondataviz/book" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Leaflet Heatmap Points with CSV Data | Hands-On Data Visualization" />
+  <meta name="twitter:title" content="GitHub Desktop and Code Editor to Work Efficiently | Hands-On Data Visualization" />
   <meta name="twitter:site" content="@handsondataviz" />
   <meta name="twitter:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="twitter:image" content="http://handsondataviz.github.io//images/cover-400wide.jpg" />
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
-<link rel="prev" href="leaflet-maps-with-csv.html"/>
-<link rel="next" href="leaflet-searchable-map.html"/>
+<link rel="prev" href="create-repo.html"/>
+<link rel="next" href="chartcode.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -379,53 +379,170 @@ div.csl-indent {
   </p>
 
 </header>
-<div id="leaflet-heatmap" class="section level2 unnumbered hasAnchor">
-<h2>Leaflet Heatmap Points with CSV Data<a href="leaflet-heatmap.html#leaflet-heatmap" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Heatmaps turn individual points into hotspots or clusters, allowing viewers to explore
-spatial distributions of events, such as areas of high and low population density or incidents of crime. Figure <a href="leaflet-heatmap.html#fig:leaflet-heatmap">12.41</a> shows an interactive heatmap of
-bike theft locations in London between January and July 2020. The underlying
-data are coordinate locations for each reported bike theft,
-which the <a href="https://github.com/Leaflet/Leaflet.heat"><code>Leaflet.heat</code></a> plugin transforms
-into areas of various densities. Red shows areas of highest density, or areas
-where bike theft appeared most often. When you zoom in, areas are re-calculated
-into more distinct clusters.</p>
+<div id="github-desktop-editor" class="section level2 unnumbered hasAnchor">
+<h2>GitHub Desktop and Code Editor to Work Efficiently<a href="github-desktop-editor.html#github-desktop-editor" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Editing your code through the GitHub web interface is a good way to start, especially if you only need to make a few edits or upload a couple of files to your repo. But the web interface will feel very slow if you edit or upload multiple files in your repo. To speed up your work on Mac or Windows, we recommend that you download the free <a href="https://desktop.github.com">GitHub Desktop</a> tool, plus any code editor, such as new favorite open-source option, <a href="https://pulsar-edit.dev">Pulsar</a>, based on the former Atom editor tool, but there are other options. When you connect your GitHub web account to GitHub Desktop, it allows you to “pull” the most recent version of the code to your local computer’s hard drive, make and test your edits, and “push” your commits back to your GitHub web account. Any text editor allows you to view and edit code repos on your local computer more easily than the GitHub web interface.</p>
+<p>Tip: Word-processor tools such as Microsoft Word are <em>not</em> good choices for code editors. Also, tools designed primarily as code editors, such as <a href="https://pulsar-edit.dev">Pulsar</a>, will work better than plain-text editors bundled with operating systems, such as TextEdit for Mac or NotePad for Windows.</p>
+<p>Tip: Currently, GitHub Desktop is not supported for Chromebooks, but <a href="https://chrome.google.com/webstore">Chrome’s Web Store</a> offers several text editors, such as Text and Caret, which offer some of the functionality described below.</p>
+<p>Let’s use GitHub Desktop to pull a copy of your <code>leaflet-map-simple</code> template to your local computer, make some edits in a code editor, and push your commits back up to GitHub.</p>
+<ol style="list-style-type: decimal">
+<li>Go to the GitHub web repo you wish to copy to your local computer. In your browser, navigate to <code>https://github.com/USERNAME/leaflet-map-simple</code>, using your GitHub username, to access the repo you created in the <a href="copy-leaflet.html">Copy, Edit, and Host a Simple Leaflet Map Template</a> section of this chapter. Click the <em>Code &gt; Open with GitHub Desktop</em> drop-down menu button near the middle of your screen, as shown in Figure <a href="github-desktop-editor.html#fig:desktop-open">10.18</a>. The next screen will show a link to the GitHub Desktop web page, and you should download and install the application.</li>
+</ol>
 
-<div class="figure"><span style="display:block;" id="fig:leaflet-heatmap"></span>
-<iframe src="https://handsondataviz.github.io/leaflet-heatmap/" width="672" height="500px" data-external="1">
-</iframe>
+<div class="figure"><span style="display:block;" id="fig:desktop-open"></span>
+<img src="images/10-github/desktop-open.png" alt="In your GitHub repo on the web, click Code to Open with GitHub Desktop to download and install GitHub Desktop." width="350" />
 <p class="caption">
-Figure 12.41: Explore the <a href="https://handsondataviz.github.io/leaflet-heatmap/">interactive Leaflet Heatmap</a>.
+Figure 10.18: In your GitHub repo on the web, click <em>Code</em> to <em>Open with GitHub Desktop</em> to download and install GitHub Desktop.
 </p>
 </div>
-<p>You can adapt the code we used for this London heatmap to create your own.</p>
-<ol style="list-style-type: decimal">
-<li>Visit the <a href="https://github.com/HandsOnDataViz/leaflet-heatmap">GitHub repository with our code</a>,
-make sure you are logged in, and click <em>Use this template</em> button to make a personal copy of this repo.</li>
-<li>Modify map’s title and description inside <code>index.html</code>.</li>
-<li>Place your point coordinates data inside <code>data.csv</code>. Do <em>not</em> insert any column headers. Instead of the traditional order, you must write them in <em>latitude,longitude</em> (or y,x) order, one pair per line, like this:</li>
+<ol start="2" style="list-style-type: decimal">
+<li>When you open GitHub Desktop for the first time, you’ll need to connect it to the GitHub web account you previously created in this chapter. On the welcome screen, click the blue <em>Sign in to GitHub.com</em> button, as shown in Figure <a href="github-desktop-editor.html#fig:desktop-signin">10.19</a>, and login with your GitHub username and password. On the next screen, GitHub will ask you to click the green <em>Authorize desktop</em> button to confirm that you wish to connect to your account.</li>
 </ol>
-<pre><code>51.506585,-0.139387
-51.505467,-0.14655
-51.507758,-0.141284</code></pre>
-<ol start="4" style="list-style-type: decimal">
-<li>Depending on your data density, you might want to tweak <em>radius</em> and <em>blur</em> parameters
-inside the <code>&lt;script&gt;</code> tag of <code>index.html</code>:</li>
-</ol>
-<div class="sourceCode" id="cb32"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb32-1"><a href="leaflet-heatmap.html#cb32-1" tabindex="-1"></a><span class="kw">var</span> heat <span class="op">=</span> L<span class="op">.</span><span class="fu">heatLayer</span>(data<span class="op">,</span> {</span>
-<span id="cb32-2"><a href="leaflet-heatmap.html#cb32-2" tabindex="-1"></a>  <span class="dt">radius</span><span class="op">:</span> <span class="dv">25</span><span class="op">,</span></span>
-<span id="cb32-3"><a href="leaflet-heatmap.html#cb32-3" tabindex="-1"></a>  <span class="dt">blur</span><span class="op">:</span> <span class="dv">15</span><span class="op">,</span></span>
-<span id="cb32-4"><a href="leaflet-heatmap.html#cb32-4" tabindex="-1"></a>})</span></code></pre></div>
-<ol start="5" style="list-style-type: decimal">
-<li>Edit the following chunk of code to set your map’s default position and zoom level:</li>
-</ol>
-<div class="sourceCode" id="cb33"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb33-1"><a href="leaflet-heatmap.html#cb33-1" tabindex="-1"></a><span class="kw">var</span> map <span class="op">=</span> L<span class="op">.</span><span class="fu">map</span>(<span class="st">&#39;map&#39;</span><span class="op">,</span> {</span>
-<span id="cb33-2"><a href="leaflet-heatmap.html#cb33-2" tabindex="-1"></a>  <span class="dt">center</span><span class="op">:</span> [<span class="fl">51.5</span><span class="op">,</span> <span class="op">-</span><span class="fl">0.1</span>]<span class="op">,</span> <span class="co">// Initial map center</span></span>
-<span id="cb33-3"><a href="leaflet-heatmap.html#cb33-3" tabindex="-1"></a>  <span class="dt">zoom</span><span class="op">:</span> <span class="dv">10</span><span class="op">,</span> <span class="co">// Initial zoom level</span></span>
-<span id="cb33-4"><a href="leaflet-heatmap.html#cb33-4" tabindex="-1"></a>})</span></code></pre></div>
-<p>If for some reason you cannot see clusters, make sure your point data is represented
-in <code>latitude,longitude</code> order, not the other way around. If you have few points,
-try increasing the value of <code>radius</code> property of <code>L.heatLayer</code>.</p>
+
+<div class="figure"><span style="display:block;" id="fig:desktop-signin"></span>
+<img src="images/10-github/desktop-signin.png" alt="Click the blue Sign in to GitHub.com button to link GitHub Desktop to your GitHub account." width="500" />
+<p class="caption">
+Figure 10.19: Click the blue <em>Sign in to GitHub.com</em> button to link GitHub Desktop to your GitHub account.
+</p>
 </div>
+<ol start="3" style="list-style-type: decimal">
+<li>In the next setup screen, GitHub Desktop asks you to configure Git, the underlying software that runs GitHub. Confirm that it displays your username and click <em>Continue</em>, as shown in Figure <a href="github-desktop-editor.html#fig:desktop-configure">10.20</a>.</li>
+</ol>
+
+<div class="figure"><span style="display:block;" id="fig:desktop-configure"></span>
+<img src="images/10-github/desktop-configure.png" alt="Click the Continue button to authorize GitHub Desktop to send commits to your GitHub account." width="500" />
+<p class="caption">
+Figure 10.20: Click the <em>Continue</em> button to authorize GitHub Desktop to send commits to your GitHub account.
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>On the “Let’s Get Started” with GitHub Desktop screen, click on <em>Your Repositories</em> on the right side to select your <code>leaflet-map-sample</code>, and further below click the blue button to <em>Clone</em> it to your local computer, as shown in Figure <a href="github-desktop-editor.html#fig:desktop-start">10.21</a>.</li>
+</ol>
+
+<div class="figure"><span style="display:block;" id="fig:desktop-start"></span>
+<img src="images/10-github/desktop-start-annotated.png" alt="Select your leaflet-map-simple repo and click the Clone button to copy it to your local computer."  />
+<p class="caption">
+Figure 10.21: Select your <em>leaflet-map-simple</em> repo and click the <em>Clone</em> button to copy it to your local computer.
+</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li>When you clone a repo, GitHub Desktop asks you to select the Local Path, meaning the location where you wish to store a copy of your GitHub repo on your local computer, as shown in Figure <a href="github-desktop-editor.html#fig:desktop-clone-path">10.22</a>. Before you click the <em>Clone</em> button, remember the path to this location, since you’ll need to find it later.</li>
+</ol>
+
+<div class="figure"><span style="display:block;" id="fig:desktop-clone-path"></span>
+<img src="images/10-github/desktop-clone-path.png" alt="Select the Local Path where your repo will be stored on your computer, then click Clone." width="500" />
+<p class="caption">
+Figure 10.22: Select the Local Path where your repo will be stored on your computer, then click <em>Clone</em>.
+</p>
+</div>
+<ol start="6" style="list-style-type: decimal">
+<li>On the next screen, GitHub Desktop may ask, “How are you planning to use this fork?” Select the default entry “To contribute to the parent project,” which means you plan to send your edits back to your GitHub web account, and click <em>Continue</em>, as shown in Figure <a href="github-desktop-editor.html#fig:desktop-fork">10.23</a>.</li>
+</ol>
+
+<div class="figure"><span style="display:block;" id="fig:desktop-fork"></span>
+<img src="images/10-github/desktop-fork.png" alt="If asked how you plan to use this fork, select the default To contribute to the parent project and click Continue." width="500" />
+<p class="caption">
+Figure 10.23: If asked how you plan to use this fork, select the default <em>To contribute to the parent project</em> and click <em>Continue</em>.
+</p>
+</div>
+<ol start="7" style="list-style-type: decimal">
+<li>Now you have copies of your GitHub repo in two places—in your GitHub web account and on your local computer—as shown in Figure <a href="github-desktop-editor.html#fig:desktop-finder">10.24</a>. Your screen may look different, depending on whether you use Windows or Mac, and the Local Path you selected to store your files.</li>
+</ol>
+
+<div class="figure"><span style="display:block;" id="fig:desktop-finder"></span>
+<img src="images/10-github/desktop-finder.png" alt="Now you have two copies of your repo: in your GitHub online account (on the left) and on your local computer (on the right, as shown in the Mac Finder). Windows screens will look different." width="500" />
+<p class="caption">
+Figure 10.24: Now you have two copies of your repo: in your GitHub online account (on the left) and on your local computer (on the right, as shown in the Mac Finder). Windows screens will look different.
+</p>
+</div>
+<ol start="8" style="list-style-type: decimal">
+<li>Before we can edit the code in your local computer, download and install your favorite code editor, such as <a href="https://pulsar-edit.dev">Pulsar</a>. Then go to your GitHub Desktop screen, confirm that the Current Repository is <code>leaflet-map-simple</code>, and click the <em>Open in Editor</em> button as shown in Figure <a href="github-desktop-editor.html#fig:desktop-atom">10.25</a>, which shows our old favorite editor, Atom.</li>
+</ol>
+
+<div class="figure"><span style="display:block;" id="fig:desktop-atom"></span>
+<img src="images/10-github/desktop-atom-annotated.png" alt="In GitHub Desktop, confirm the Current Repo and click the Open in Editor button to edit the code."  />
+<p class="caption">
+Figure 10.25: In GitHub Desktop, confirm the Current Repo and click the <em>Open in Editor</em> button to edit the code.
+</p>
+</div>
+<ol start="9" style="list-style-type: decimal">
+<li>A well-designed code editor opens up your entire repo as a “project,” where you can click files in the left window to open as new tabs to view and edit code, as shown in Figure <a href="github-desktop-editor.html#fig:atom-project">10.26</a>. Open your <code>index.html</code> file and edit the title of your map, around line 22, then save your work.</li>
+</ol>
+
+<div class="figure"><span style="display:block;" id="fig:atom-project"></span>
+<img src="images/10-github/atom-project-annotated.png" alt="A well-designed code editor opens your repo as a project, where you can click files to view code. Edit your map title."  />
+<p class="caption">
+Figure 10.26: A well-designed code editor opens your repo as a <em>project</em>, where you can click files to view code. Edit your map title.
+</p>
+</div>
+<ol start="10" style="list-style-type: decimal">
+<li>After saving your code edit, it’s a good habit to clean up your code editor workspace. Right-click on the current Project and select <em>Remove Project Folder</em> in the menu, as shown in Figure <a href="github-desktop-editor.html#fig:atom-remove-project">10.27</a>. Next time you open up your editor, you can right-click to <em>Add Project Folder</em>, and choose any GitHub repo that you have copied to your local computer.</li>
+</ol>
+
+<div class="figure"><span style="display:block;" id="fig:atom-remove-project"></span>
+<img src="images/10-github/atom-remove-project-annotated.png" alt="To clean up your code editor workspace, right-click to Remove Project Folder."  />
+<p class="caption">
+Figure 10.27: To clean up your code editor workspace, right-click to <em>Remove Project Folder</em>.
+</p>
+</div>
+<p>Sidebar: To fully view more complex code templates in your local browser, including some <a href="chartcode.html">Chart.js or Highcharts templates in Chapter 11</a> or <a href="leaflet.html">Leaflet templates in Chapter 12</a>, you may need to temporarily relax <a href="https://en.wikipedia.org/wiki/Same-origin_policy">same-origin policy restrictions</a>, an internet security mechanism that limits how web pages access content from other domains. You can do so by managing your <a href="https://en.wikipedia.org/wiki/Cross-origin_resource_sharing">Cross-Origin Resource Sharing</a>(CORS) settings, and methods for doing this vary across operating systems and browsers. For example, <a href="https://stackoverflow.com/questions/4556429/disabling-same-origin-policy-in-safari">to disable same-origin policy on Safari for Mac</a>, first go to <em>Preferences &gt; Advanced</em> to enable the <em>Developer</em> menu, then in this new menu select <em>Disable Cross-Origin Restrictions</em>, as shown in Figure <a href="github-desktop-editor.html#fig:disable-cors-safari">10.28</a>. After you are done testing your code, restart Safari to reset the setting to its default safety position. See also ways to <a href="https://alfilatov.com/posts/run-chrome-without-cors/">run the Chrome browser without same-origin restrictions on various computers</a>, as shown in Figure <a href="github-desktop-editor.html#fig:disable-cors-chrome">10.29</a>, or this <a href="https://stackoverflow.com/questions/3102819/disable-same-origin-policy-in-chrome">popular Stackoverflow page</a>. If you temporarily disable this safety mechanism in your browser, be sure to re-enable it before browsing sites on the public web.</p>
+
+<div class="figure"><span style="display:block;" id="fig:disable-cors-safari"></span>
+<img src="images/10-github/disable-cors-safari.png" alt="To view more complex code templates on your local computer with Safari browser, temporarily Disable Cross-Origin Restrictions." width="500" />
+<p class="caption">
+Figure 10.28: To view more complex code templates on your local computer with Safari browser, temporarily <em>Disable Cross-Origin Restrictions</em>.
+</p>
+</div>
+
+<div class="figure"><span style="display:block;" id="fig:disable-cors-chrome"></span>
+<img src="images/10-github/disable-cors-chrome-annotated.png" alt="To view more complex code templates on your local computer with Chrome browser, use the Terminal application command-line (bottom window) to run a version without same-origin safety restrictions." width="500" />
+<p class="caption">
+Figure 10.29: To view more complex code templates on your local computer with Chrome browser, use the <em>Terminal</em> application command-line (bottom window) to run a version without same-origin safety restrictions.
+</p>
+</div>
+<p>Note: Since your browser is displaying only the <em>local computer</em> version of your code, the web address will begin with <code>file:///...</code> rather than <code>https://...</code>, as appears in your GitHub Pages online map. Also, if your code depends on online elements, those features may not function when viewing it locally. But for this simple Leaflet map template, your updated map title should appear, allowing you to check its appearance before pushing your edits to the web.</p>
+<ol start="11" style="list-style-type: decimal">
+<li>Now that you’ve edited the code for your map on your local computer, let’s test how it looks before uploading it to GitHub. Go to the location where you saved the repo on your local computer, and right-click the <code>index.html</code> file, select Open With, and choose your preferred web browser, as shown in Figure <a href="github-desktop-editor.html#fig:finder-open-with">10.30</a>.</li>
+</ol>
+
+<div class="figure"><span style="display:block;" id="fig:finder-open-with"></span>
+<img src="images/10-github/finder-open-with.png" alt="Right-click the index.html file on your local computer and open with a browser to check your edits."  />
+<p class="caption">
+Figure 10.30: Right-click the index.html file on your local computer and open with a browser to check your edits.
+</p>
+</div>
+<p>Now let’s transfer your edits from your local computer to your GitHub web account, which you previously connected when you set up GitHub Desktop.</p>
+<ol start="12" style="list-style-type: decimal">
+<li>Go to GitHub Desktop, confirm that your Current Repo is <code>leaflet-map-simple</code>, and you will see your code edits summarized on the screen. In this two-step process, first click the blue <em>Commit</em> button at the bottom of the page to save your edits to your local copy of your repo. (If you edit multiple files, GitHub Desktop will ask you write a summary of your edit, to help you keep track of your work.) Second, click the blue <em>Push origin</em> button to transfer those edits to the parent copy of your repo on your GitHub web account. Both steps are shown in Figure <a href="github-desktop-editor.html#fig:desktop-commit-push">10.31</a>.</li>
+</ol>
+
+<div class="figure"><span style="display:block;" id="fig:desktop-commit-push"></span>
+<iframe src="images/10-github/desktop-commit-push.gif" width="672" height="500px" data-external="1">
+</iframe>
+<p class="caption">
+Figure 10.31: In this two-step process, click <em>Commit</em>, then click <em>Push origin</em> to save and copy your edits from your local computer to your GitHub web account, as shown in this <a href="https://handsondataviz.org/images/10-github/desktop-commit-push.gif">animated GIF</a>.
+</p>
+</div>
+<p>Congratulations! You’ve successfully navigated a round-trip journey of code, from your GitHub account to your local computer, and back again to GitHub. Since you previously used the GitHub Pages settings to create an online version of your code, go see if your edited map title now appears on the public web. The web address you set up earlier follows this format <code>https://USERNAME.github.io/REPOSITORY</code>, substituting your GitHub username and repo name.</p>
+<p>While you could have made the tiny code edit above in the GitHub web interface, hopefully you’ve begun to see many advantages of using GitHub Desktop and Atom Editor to edit code and push commits from your local computer. First, you can make more complex code modifications with your editor tool, which includes search, find-and-replace, and other features to work more efficiently. Second, when you copy the repo to your local computer, you can quickly drag-and-drop multiple files and subfolders for complex visualizations, such as data, geography, and images. Third, depending on the type of code, you may be able to test how it works locally with your browser, before uploading your commits to the public web.</p>
+<p>Tip: Pulsar has many built-in commands to help you edit code. One is <em>View &gt; Toggle Soft Wrap</em>, which adjusts the right-hand margin to make long code strings visible on your screen. A second command is <em>Edit &gt; Toggle Comments</em>, which automatically detects the coding language and converts the selected text from executable code to non-executed code comments. A third command is <em>Edit &gt; Lines &gt; Auto Indent</em>, which cleans up code indentation to make it more readable. Finally, you can install many more <a href="https://web.pulsar-edit.dev">Pular packages</a> in the Preferences menu.</p>
+<p>GitHub also offers a powerful platform for collaborative projects. When two people work on a shared repository, one co-worker can “pull” the most recent version of the code to their local computer using GitHub Desktop, then “push” their edits (also called commits) back to the online GitHub repo. The other co-worker can “pull” and “push” from the same repo at the same time, though it’s simpler if they work on different files or sections of code. Both can see the changes that the other person made by selecting the GitHub repo <em>Code</em> tab and selecting a specific commit, which can be viewed line-by-line in green (additions) or red (deletions), as shown in Figure <a href="github-desktop-editor.html#fig:compare-commits">10.32</a>.</p>
+
+<div class="figure"><span style="display:block;" id="fig:compare-commits"></span>
+<img src="images/10-github/compare-commits.png" alt="View commits made by co-workers on a shared GitHub repo." width="750" />
+<p class="caption">
+Figure 10.32: View commits made by co-workers on a shared GitHub repo.
+</p>
+</div>
+<p>Although GitHub does not operate like Google Documents, which displays live edits, the platform has several advantages when working collaboratively with code. First, since GitHub tracks every commit, it allows you to go back and restore a very specific past version of the code if needed. Second, when GitHub repos are public, anyone can view your code and submit an “issue” to notify the owner about an idea or problem, or send a “pull request” of suggested code edits, which the owner can accept or reject. Third, GitHub allows you to create different “branches” of a repo in order to make edits, and then “merge” the branches back together if desired. Occasionally, if two collaborators attempt to push incompatible commits to the same repo, GitHub will warn about a “Merge Conflict” and ask you to resolve it in order to preserve everyone’s work.</p>
+<p>Many coders prefer to work on GitHub using its Command Line Interface (CLI), which means memorizing and typing specific commands directly into the Terminal application on Mac or Windows, but this is beyond the scope of this introductory book.</p>
+<div id="summary10" class="section level3 unnumbered hasAnchor">
+<h3>Summary<a href="github-desktop-editor.html#summary10" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>If this is the first time you’ve forked, edited, and hosted live code on the public web, welcome to the coding family! We hope you agree that GitHub is a powerful platform for engaging in this work and sharing with others. While beginners will appreciate the web interface, you’ll find that the GitHub Desktop and Atom Editor tools makes it much easier to work with <a href="chartcode.html">Chart.js and Highcharts code templates in Chapter 11</a> and the <a href="leaflet.html">Leaflet map code templates in Chapter 12</a>. Let’s build on your brand-new coding skills to create more customized charts and maps in the next two chapters.</p>
+
+</div>
+</div>
+<!-- </div> -->
 <footer style="margin-top: 60px; font-size: 0.8em; padding: 10px; background-color: rgba(0,0,0,0.08); display: table; width: 98%">
 
   <a href="https://www.amazon.com/Hands-Data-Visualization-Storytelling-Spreadsheets/dp/1492086002/" style="width: 80px; margin-left: auto; margin-right: auto;"  class="db dtc-ns">
@@ -471,8 +588,8 @@ try increasing the value of <code>radius</code> property of <code>L.heatLayer</c
           </div>
         </div>
       </div>
-<a href="leaflet-maps-with-csv.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="leaflet-searchable-map.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="create-repo.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="chartcode.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -511,7 +628,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/handsondataviz/book/blob/main/12-leaflet.Rmd",
+"link": "https://github.com/handsondataviz/book/blob/main/10-github.Rmd",
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],

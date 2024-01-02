@@ -195,7 +195,7 @@ knitr::include_graphics("images/06-chart/design-principles-turn-bar.png")
 #### Arrange elements logically {-}
 If your bar chart shows different categories, consider ordering them, like is shown in Figure \@ref(fig:design-principles-order-categories). You might want to sort them alphabetically, which can be useful if you want the reader to be able to quickly look up an item, such as their town. Ordering categories by value is another common technique that makes comparisons possible. If your columns represent a value of something at a particular time, they have to be ordered sequentially, of course.
 
-(ref:design-principles-order-categories) For long labels, use horizontal bar charts.
+(ref:design-principles-order-categories) Use logical ordering for your bars, such as alphabetical or by value.
 
 ```{r design-principles-order-categories, fig.cap="(ref:design-principles-order-categories)"}
 knitr::include_graphics("images/06-chart/design-principles-order-categories.png")
@@ -627,6 +627,14 @@ knitr::include_graphics("images/06-chart/datawrapper-range-appearance.png")
 Tip: The *Refine* tab includes options to resort or group data rows, change the chart size for different devices, and check visibility for colorblind readers.
 
 9. After modifying your visualization, proceed to the *Publish and Embed* screen, and follow the prompts to share your work, or refer to the previous detailed Datawrapper tutorial.
+
+Tip: You can also grant access to Datawrapper visualizations in shared folders with team members. First, go to *Menu > My Teams > Create a Team* to invite members. Second, go to *Archive > Recently Edited* to view Shared folders on the left margin, then drag a visualization into the folder to share it with those team members, as shown in Figure \@ref(fig:datawrapper-shared-folders).
+
+(ref:datawrapper-shared-folders) After creating a team or accepting an invitation to a team, drag a visualization into its shared folder to grant access to others.
+
+```{r datawrapper-shared-folders, out.width=400, fig.cap="(ref:datawrapper-shared-folders)"}
+knitr::include_graphics("images/06-chart/datawrapper-shared-folders-annotated.png")
+```
 
 Now that you've completed a range chart, let's see how we can use Datawrapper to build scatter and bubble charts to show relationships between two or more variables.
 

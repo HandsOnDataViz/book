@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>A.7 Fix your code on GitHub | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.36 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
 
   <meta property="og:title" content="A.7 Fix your code on GitHub | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2023-11-02" />
+<meta name="date" content="2024-01-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -278,7 +278,7 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="copy-leaflet.html"><a href="copy-leaflet.html"><i class="fa fa-check"></i>Copy, Edit, and Host a Simple Leaflet Map Template</a></li>
 <li class="chapter" data-level="" data-path="gh-pages-link-to-iframe.html"><a href="gh-pages-link-to-iframe.html"><i class="fa fa-check"></i>Convert GitHub Pages Link to iframe</a></li>
 <li class="chapter" data-level="" data-path="create-repo.html"><a href="create-repo.html"><i class="fa fa-check"></i>Create a New Repo and Upload Files on GitHub</a></li>
-<li class="chapter" data-level="" data-path="github-desktop-atom.html"><a href="github-desktop-atom.html"><i class="fa fa-check"></i>GitHub Desktop and Atom Editor to Code Efficiently</a></li>
+<li class="chapter" data-level="" data-path="github-desktop-editor.html"><a href="github-desktop-editor.html"><i class="fa fa-check"></i>GitHub Desktop and Code Editor to Work Efficiently</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="chartcode.html"><a href="chartcode.html"><i class="fa fa-check"></i><b>11</b> Chart.js and Highcharts Templates</a>
 <ul>
@@ -403,7 +403,7 @@ Figure A.8: Do not change header names in code templates, unless you know what y
 </p>
 </div>
 <p>If you delete all of the contents of a GitHub repo folder, that action also deletes the folder, because GitHub does not keep track of empty folders. To create a new folder in your GitHub repo, go to <em>Add file - Create new file</em>, then type the folder name followed by a slash (such as <code>media/</code>), then type a temporary file name (such as <code>temp.md</code>) to serve as a placeholder so that your new folder will not be empty. Now you can upload files into your new GitHub repo folder.</p>
-<p>Remember that you can edit and test code templates more efficiently on your <em>local</em> computer, rather than upload every change to view on GitHub online. Use the <a href="github-desktop-atom.html">GitHub Desktop and Atom Editor tools as described in Chapter 10</a>. To fully view more complex Chart.js or Highcharts or Leaflet code templates on your <em>local</em> computer, you may need to temporarily manage your CORS internet security settings in your browser, as shown in Figure <a href="github-desktop-atom.html#fig:disable-cors-safari">10.28</a> and Figure <a href="github-desktop-atom.html#fig:disable-cors-chrome">10.29</a>.</p>
+<p>Remember that you can edit and test code templates more efficiently on your <em>local</em> computer, rather than upload every change to view on GitHub online. Use the <a href="github-desktop-atom.html">GitHub Desktop and Atom Editor tools as described in Chapter 10</a>. To fully view more complex Chart.js or Highcharts or Leaflet code templates on your <em>local</em> computer, you may need to temporarily manage your CORS internet security settings in your browser, as shown in Figure <a href="github-desktop-editor.html#fig:disable-cors-safari">10.28</a> and Figure <a href="github-desktop-editor.html#fig:disable-cors-chrome">10.29</a>.</p>
 <p>Over time, code templates require maintenance to ensure that they will continue to work as technology evolves. For example, the code templates featured in this book all have <em>code dependencies</em>, which means they rely on other code or online services in order to operate. These dependencies include online code libraries that create charts and maps, such as Chart.js, Leaflet, and others. Also, map code templates depend on online map tiles from providers such as CARTO, Stamen, and OpenStreetMap. <em>If one of your online code dependencies is no longer operating</em>, your code template probably will stop working.</p>
 <p>To check if your code template has an issue with one of its online code dependencies, go back to the original GitHub repository where you made your copy. Check to see if the current online demo chart or map is properly functioning. If yes, then check to see if the original GitHub repo has had recent code updates that may solve your problem. Some code updates are very simple and can be typed directly into your repo through the GitHub web interface. But other code updates are more complex, so review how to “pull” code from a repo to your local computer using tools such as <a href="github-desktop-atom.html">GitHub Desktop in Chapter 10</a>.</p>
 <p>If the original GitHub repo from which you copied the code template has a non-functional online demo version, contact the open-source software developer, and the best way to do this is to create an <em>Issue</em> on their GitHub repository. There is no guarantee that open-source software developers will continue to maintain their code project into the future. But one benefit of open-source code is that anyone can create a new fork copy and maintain it on their own, or with other collaborators in the open-source coding community.</p>

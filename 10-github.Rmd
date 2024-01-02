@@ -13,7 +13,7 @@ To be clear, the GitHub platform is also owned by a large company (Microsoft pur
 
 In the next section of this chapter, we will introduce basic steps to [copy, edit, and host a simple Leaflet map code template on GitHub](copy-leaflet.html). When you publish any chart or map code template by hosting it on GitHub Pages, you can easily [transform its online link into an iframe](gh-pages-link-to-iframe.html) that you can [embed on a secondary website, which we discussed in Chapter 9](embed.html). Later you'll learn how to [create a new GitHub repo and upload code files](create-repo.html).
 
-This chapter introduces GitHub using its web browser interface, which works best for beginners. Later you'll learn about intermediate-level tools, such as [GitHub Desktop and Atom Editor](github-desktop-atom.html), to work more efficiently with code repos on your personal computer.
+This chapter introduces GitHub using its web browser interface, which works best for beginners. Later you'll learn about intermediate-level tools, such as [GitHub Desktop and Code Editor](github-desktop-editor.html), to work more efficiently with code repos on your personal computer.
 
 If problems arise, turn to the [Fix Common Problems](fix.html) section in the appendix. All of us make mistakes and accidentally "break our code" from time to time, and it's a great way to learn how things work---and what to do when it doesn't work!
 
@@ -230,7 +230,7 @@ Now you are ready to [paste your iframe into your preferred website](paste-code.
 Now you should have a better sense of how to edit and host code repositories on GitHub. The next section describes how to enhance your GitHub skills by creating new repos and uploading your files. These are essential steps to create a second copy of a code template or to work with more advanced templates in the next two chapters.
 
 ## Create a New Repo and Upload Files on GitHub {- #create-repo}
-Now that you've made a copy of our GitHub template, the next step is to learn how to create a brand-new repo and upload files. These skills will be helpful for several scenarios. First, if you have to fork a repo, which GitHub allows you to do only one time, this method will allow you to create additional copies. Second, you'll need to upload some of your own files when creating data visualizations using [Chart.js and Highcharts templates in Chapter 11](chartcode.html) and [Leaflet map templates in Chapter 12](leaflet.html). Once again, we'll demonstrate how to do all of these steps in GitHub's beginner-level browser interface, but see the next section on [GitHub Desktop](github-desktop-atom.html) for an intermediate-level interface that's more efficient for working with code templates.
+Now that you've made a copy of our GitHub template, the next step is to learn how to create a brand-new repo and upload files. These skills will be helpful for several scenarios. First, if you have to fork a repo, which GitHub allows you to do only one time, this method will allow you to create additional copies. Second, you'll need to upload some of your own files when creating data visualizations using [Chart.js and Highcharts templates in Chapter 11](chartcode.html) and [Leaflet map templates in Chapter 12](leaflet.html). Once again, we'll demonstrate how to do all of these steps in GitHub's beginner-level browser interface, but see the next section on [GitHub Desktop](github-desktop-editor.html) for an intermediate-level interface that's more efficient for working with code templates.
 
 In the previous section, you created a copy of our GitHub repo with the *Use this template* button, and we intentionally set up our repos with this newer feature because it allows the user to make *multiple* copies and assign each one a different name. Many other GitHub repos do not include a *Template* button, so to copy those you'll need to click the *Fork* button, which automatically generates a copy with the same repo name as the original. But what if you wish to fork someone's repo a second time? GitHub prevents you from creating a second fork to avoid violating one of its important rules: every repo in your account must have a unique name, to avoid overwriting and erasing your work.
 
@@ -300,14 +300,16 @@ Optionally, you could use GitHub Pages to publish a live version of the code onl
  knitr::include_graphics("images/10-github/repo-delete.png")
 ```
 
-So far, you've learned how to copy, edit, and host code using the GitHub web interface, which is a great introduction for beginners. Now you're ready to move up to tools that will allow you to work more efficiently with GitHub, such as GitHub Desktop and Atom Editor, to quickly move entire repos to your local computer, edit the code, and move them back online.
+So far, you've learned how to copy, edit, and host code using the GitHub web interface, which is a great introduction for beginners. Now you're ready to move up to tools that will allow you to work more efficiently with GitHub, such as GitHub Desktop and a code editor, to quickly move entire repos to your local computer, edit the code, and move them back online.
 
-## GitHub Desktop and Atom Editor to Code Efficiently {- #github-desktop-atom}
-Editing your code through the GitHub web interface is a good way to start, especially if you only need to make a few edits or upload a couple of files to your repo. But the web interface will feel very slow if you edit or upload multiple files in your repo. To speed up your work, we recommend that you download two free tools---[GitHub Desktop](https://desktop.github.com) and [Atom Text Editor](https://atom.io)---which run on Mac or Windows computers. When you connect your GitHub web account to GitHub Desktop, it allows you to "pull" the most recent version of the code to your local computer's hard drive, make and test your edits, and "push" your commits back to your GitHub web account. Atom Text Editor, which is also created by the makers of GitHub, allows you to view and edit code repos on your local computer more easily than the GitHub web interface. While there are many text editors for coders, Atom is designed to work well with GitHub Desktop.
+## GitHub Desktop and Code Editor to Work Efficiently {- #github-desktop-editor}
+Editing your code through the GitHub web interface is a good way to start, especially if you only need to make a few edits or upload a couple of files to your repo. But the web interface will feel very slow if you edit or upload multiple files in your repo. To speed up your work on Mac or Windows, we recommend that you download the free [GitHub Desktop](https://desktop.github.com) tool, plus any code editor, such as new favorite open-source option, [Pulsar](https://pulsar-edit.dev), based on the former Atom editor tool, but there are other options. When you connect your GitHub web account to GitHub Desktop, it allows you to "pull" the most recent version of the code to your local computer's hard drive, make and test your edits, and "push" your commits back to your GitHub web account. Any text editor allows you to view and edit code repos on your local computer more easily than the GitHub web interface.
 
-Tip: Currently, neither GitHub Desktop nor Atom Editor are supported for Chromebooks, but [Chrome's Web Store](https://chrome.google.com/webstore) offers several text editors, such as Text and Caret, which offer some of the functionality described below.
+Tip: Word-processor tools such as Microsoft Word are *not* good choices for code editors. Also, tools designed primarily as code editors, such as [Pulsar](https://pulsar-edit.dev), will work better than plain-text editors bundled with operating systems, such as TextEdit for Mac or NotePad for Windows.
 
-Let's use GitHub Desktop to pull a copy of your `leaflet-map-simple` template to your local computer, make some edits in Atom Editor, and push your commits back up to GitHub.
+Tip: Currently, GitHub Desktop is not supported for Chromebooks, but [Chrome's Web Store](https://chrome.google.com/webstore) offers several text editors, such as Text and Caret, which offer some of the functionality described below.
+
+Let's use GitHub Desktop to pull a copy of your `leaflet-map-simple` template to your local computer, make some edits in a code editor, and push your commits back up to GitHub.
 
 1. Go to the GitHub web repo you wish to copy to your local computer. In your browser, navigate to `https://github.com/USERNAME/leaflet-map-simple`, using your GitHub username, to access the repo you created in the [Copy, Edit, and Host a Simple Leaflet Map Template](copy-leaflet.html) section of this chapter. Click the *Code > Open with GitHub Desktop* drop-down menu button near the middle of your screen, as shown in Figure \@ref(fig:desktop-open). The next screen will show a link to the GitHub Desktop web page, and you should download and install the application.
 
@@ -365,25 +367,25 @@ Let's use GitHub Desktop to pull a copy of your `leaflet-map-simple` template to
  knitr::include_graphics("images/10-github/desktop-finder.png")
 ```
 
-8. Before we can edit the code in your local computer, [download and install the Atom Editor application](https://atom.io). Then go to your GitHub Desktop screen, confirm that the Current Repository is `leaflet-map-simple`, and click the *Open in Atom* button as shown in Figure \@ref(fig:desktop-atom).
+8. Before we can edit the code in your local computer, download and install your favorite code editor, such as [Pulsar](https://pulsar-edit.dev). Then go to your GitHub Desktop screen, confirm that the Current Repository is `leaflet-map-simple`, and click the *Open in Editor* button as shown in Figure \@ref(fig:desktop-atom), which shows our old favorite editor, Atom.
 
-(ref:desktop-atom) In GitHub Desktop, confirm the Current Repo and click the *Open in Atom* button to edit the code.
+(ref:desktop-atom) In GitHub Desktop, confirm the Current Repo and click the *Open in Editor* button to edit the code.
 
 ```{r desktop-atom, fig.cap="(ref:desktop-atom)"}
  knitr::include_graphics("images/10-github/desktop-atom-annotated.png")
 ```
 
-9. Since Atom Editor is integrated with GitHub Desktop, it opens up your entire repo as a "project," where you can click files in the left window to open as new tabs to view and edit code, as shown in Figure \@ref(fig:atom-project). Open your `index.html` file and edit the title of your map, around line 22, then save your work.
+9. A well-designed code editor opens up your entire repo as a "project," where you can click files in the left window to open as new tabs to view and edit code, as shown in Figure \@ref(fig:atom-project). Open your `index.html` file and edit the title of your map, around line 22, then save your work.
 
-(ref:atom-project) Atom Editor opens your repo as a *project*, where you can click files to view code. Edit your map title.
+(ref:atom-project) A well-designed code editor opens your repo as a *project*, where you can click files to view code. Edit your map title.
 
 ```{r atom-project, fig.cap="(ref:atom-project)"}
  knitr::include_graphics("images/10-github/atom-project-annotated.png")
 ```
 
-10. After saving your code edit, it's a good habit to clean up your Atom Editor workspace. Right-click on the current Project and select *Remove Project Folder* in the menu, as shown in Figure \@ref(fig:atom-remove-project). Next time you open up Atom Editor, you can right-click to *Add Project Folder*, and choose any GitHub repo that you have copied to your local computer.
+10. After saving your code edit, it's a good habit to clean up your code editor workspace. Right-click on the current Project and select *Remove Project Folder* in the menu, as shown in Figure \@ref(fig:atom-remove-project). Next time you open up your editor, you can right-click to *Add Project Folder*, and choose any GitHub repo that you have copied to your local computer.
 
-(ref:atom-remove-project) To clean up your Atom Editor workspace, right-click to *Remove Project Folder*.
+(ref:atom-remove-project) To clean up your code editor workspace, right-click to *Remove Project Folder*.
 
 ```{r atom-remove-project, fig.cap="(ref:atom-remove-project)"}
  knitr::include_graphics("images/10-github/atom-remove-project-annotated.png")
@@ -425,9 +427,9 @@ if(knitr::is_html_output(excludes="markdown")) knitr::include_url("images/10-git
 
 Congratulations! You've successfully navigated a round-trip journey of code, from your GitHub account to your local computer, and back again to GitHub. Since you previously used the GitHub Pages settings to create an online version of your code, go see if your edited map title now appears on the public web. The web address you set up earlier follows this format `https://USERNAME.github.io/REPOSITORY`, substituting your GitHub username and repo name.
 
-While you could have made the tiny code edit above in the GitHub web interface, hopefully you've begun to see many advantages of using GitHub Desktop and Atom Editor to edit code and push commits from your local computer. First, you can make more complex code modifications with Atom Editor, which includes search, find-and-replace, and other features to work more efficiently. Second, when you copy the repo to your local computer, you can quickly drag-and-drop multiple files and subfolders for complex visualizations, such as data, geography, and images. Third, depending on the type of code, you may be able to test how it works locally with your browser, before uploading your commits to the public web.
+While you could have made the tiny code edit above in the GitHub web interface, hopefully you've begun to see many advantages of using GitHub Desktop and Atom Editor to edit code and push commits from your local computer. First, you can make more complex code modifications with your editor tool, which includes search, find-and-replace, and other features to work more efficiently. Second, when you copy the repo to your local computer, you can quickly drag-and-drop multiple files and subfolders for complex visualizations, such as data, geography, and images. Third, depending on the type of code, you may be able to test how it works locally with your browser, before uploading your commits to the public web.
 
-Tip: Atom has many built-in commands to help you edit code. One is *View > Toggle Soft Wrap*, which adjusts the right-hand margin to make long code strings visible on your screen. A second command is *Edit > Toggle Comments*, which automatically detects the coding language and converts the selected text from executable code to non-executed code comments. A third command is *Edit > Lines > Auto Indent*, which cleans up code indentation to make it more readable. Finally, you can install many more [Atom packages](https://atom.io/packages) in the Preferences menu.
+Tip: Pulsar has many built-in commands to help you edit code. One is *View > Toggle Soft Wrap*, which adjusts the right-hand margin to make long code strings visible on your screen. A second command is *Edit > Toggle Comments*, which automatically detects the coding language and converts the selected text from executable code to non-executed code comments. A third command is *Edit > Lines > Auto Indent*, which cleans up code indentation to make it more readable. Finally, you can install many more [Pular packages](https://web.pulsar-edit.dev) in the Preferences menu.
 
 GitHub also offers a powerful platform for collaborative projects. When two people work on a shared repository, one co-worker can "pull" the most recent version of the code to their local computer using GitHub Desktop, then "push" their edits (also called commits) back to the online GitHub repo. The other co-worker can "pull" and "push" from the same repo at the same time, though it's simpler if they work on different files or sections of code. Both can see the changes that the other person made by selecting the GitHub repo *Code* tab and selecting a specific commit, which can be viewed line-by-line in green (additions) or red (deletions), as shown in Figure \@ref(fig:compare-commits).
 

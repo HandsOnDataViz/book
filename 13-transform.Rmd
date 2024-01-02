@@ -40,7 +40,7 @@ Since we focus on vector data in the several sections of this chapter, let's tak
 ```
 
 In addition to `Point` feature type shown above, other GeoJSON types can be `LineString` (also known as lines or polylines) or `Polygon`, both of which are represented as arrays of points. The simplicity and readability of GeoJSON allows you to edit it even in the most
-simple text editor, such as the [Atom Editor tool described in Chapter 10](github-desktop-atom.html).
+simple text editor, such as the [Pulsar Editor tool described in Chapter 10](github-desktop-editor.html).
 
 We strongly recommend that you create and edit map data in GeoJSON format, which is supported by the map tools we recommend in this book (such as Datawrapper and Leaflet) and dozens of others. Storing and sharing your geospatial data in GeoJSON ensures that you can others will be able to use the file without installing bulky or expensive GIS desktop applications. Another benefit is that your GitHub repository will automatically display a map preview of any GeoJSON file, as shown in Figure \@ref(fig:geojson-github).
 

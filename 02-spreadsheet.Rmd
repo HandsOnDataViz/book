@@ -42,9 +42,9 @@ Spreadsheet tools organize data in different formats. When you download spreadsh
  knitr::include_graphics("images/02-spreadsheet/data-formats.png")
 ```
 
-Tip: The Mac computer hides filename extensions by default, meaning you may not be able to see the abbreviated file format after the period, such as `data.csv` or `map.geojson`. We recommend that you change this setting by going to Finder > Preferences > Advanced, and check the box to *Show all filename extensions*, as shown in Figure \@ref(fig:mac-file-extensions).
+Tip: The Mac computer hides filename extensions by default, meaning you may not be able to see the abbreviated file format after the period, such as `data.csv` or `map.geojson`. We recommend that you change this setting by going to Finder > Settings > Advanced, and check the box to *Show all filename extensions*, as shown in Figure \@ref(fig:mac-file-extensions). In older Mac operating systems, the steps were Finder > Preferences > Advanced.
 
-(ref:mac-file-extensions) On a Mac, go to *Finder-Preferences-Advanced* and check the box to *Show all filename extensions*.
+(ref:mac-file-extensions) On a Mac, go to *Finder-Settings-Advanced* and check the box to *Show all filename extensions*.
 
 ```{r mac-file-extensions, out.width=400, fig.cap="(ref:mac-file-extensions)"}
  knitr::include_graphics("images/02-spreadsheet/mac-file-extensions.png")

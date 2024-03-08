@@ -1,7 +1,6 @@
 cff-version: 1.2.0
 title: "Hands-On Data Visualization: Interactive Storytelling from Spreadsheets to Code, open web edition"
 message: "Please cite our book using this metadata"
-type: book
 authors:
   - given-names: Jack
     family-names: Dougherty
@@ -11,3 +10,13 @@ authors:
 url: 'https://handsondataviz.org'
 license: CC-BY-NC-ND-4.0
 date-released: '2024-03-07'
+preferred-citation:
+  type: book
+  authors:
+  - family-names: "Dougherty"
+    given-names: "Jack"
+  - family-names: "Ilyankou"
+    given-names: "Ilya"
+  url: 'https://handsondataviz.org'
+  title: "Hands-On Data Visualization: Interactive Storytelling from Spreadsheets to Code, open web edition"
+  year: 2024

@@ -268,7 +268,7 @@ If you have finished entering most of your data into your Google Sheets, downloa
  knitr::include_graphics("images/12-leaflet/sheets-download-csv.png")
 ```
 
-2. Shorten each file name as shown. The names must be exact. Only the first file below (Options.csv) is required, and others are optional, depending on your data.
+2. Shorten each file name as shown. The names must be exact, such as upper-case for the first letter in *Options.csv*. Only the first file below (Options.csv) is required, and others are optional, depending on your data.
 
 - Options.csv
 - Points.csv
@@ -548,7 +548,7 @@ If you have finished entering most of your data into your Google Sheets, downloa
  knitr::include_graphics("images/12-leaflet/storymap-download-csv.png")
 ```
 
-2. Shorten each file name as shown. The names must be exact. The first two files below are required, and others are optional.
+2. Shorten each file name as shown. The names must be exact, such as upper-case for the first letter in *Chapters.csv*. The first two files below are required, and others are optional.
 
 - Chapters.csv
 - Options.csv

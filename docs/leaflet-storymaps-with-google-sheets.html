@@ -669,7 +669,7 @@ Figure 12.29: Download each Google Sheets tab as a separate CSV file.
 </p>
 </div>
 <ol start="2" style="list-style-type: decimal">
-<li>Shorten each file name as shown. The names must be exact, such as upper-case for the first letter in <em>Chapters.csv</em>. The first two files below are required, and others are optional.</li>
+<li>Shorten each file name as shown. The first two files below are required, and others are optional. File names must appear <em>exactly</em> as shown, such as upper-case for the first letter in <em>Chapters.csv</em>, and so forth.</li>
 </ol>
 <ul>
 <li>Chapters.csv</li>
@@ -686,6 +686,11 @@ Figure 12.29: Download each Google Sheets tab as a separate CSV file.
 Figure 12.30: Upload your map data files into the <em>csv</em> subfolder in GitHub.
 </p>
 </div>
+<ol start="4" style="list-style-type: decimal">
+<li>After migrating data from your Google Sheet to the <em>csv</em> subfolder in GitHub, go to the <code>google-doc-url.js</code> file and change the googleDocURL value to <code>null</code> with no quotation marks, as shown below. This will change the “data by” attribution link at the bottom of your map from the old data source (your published Google Sheet) to your new source (your <em>csv</em> files on GitHub). Update the code comment as a reminder, as shown below:</li>
+</ol>
+<pre><code>// data stored in csv folder on GitHub, not Google Sheets
+var googleDocURL = null;</code></pre>
 <ol start="4" style="list-style-type: decimal">
 <li>If you wish to edit your map after uploading your CSV files, you have two options. You can make small edits directly to your CSV files by opening them in the GitHub web interface. Or you can make larger edits in the Google Sheet, and repeating the steps above to download them in CSV format and upload them to replace your existing files on GitHub.</li>
 </ol>

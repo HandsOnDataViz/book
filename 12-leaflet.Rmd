@@ -268,7 +268,7 @@ If you have finished entering most of your data into your Google Sheets, downloa
  knitr::include_graphics("images/12-leaflet/sheets-download-csv.png")
 ```
 
-2. Shorten each file name as shown. The names must be exact, such as upper-case for the first letter in *Options.csv*. Only the first file below (Options.csv) is required, and others are optional, depending on your data.
+2. Shorten each file name as shown. Only the first file below (Options.csv) is required, and others are optional, depending on your data. File names must be *exactly* as shown, such as upper-case for the first letter in *Options.csv*, and so forth.
 
 - Options.csv
 - Points.csv
@@ -284,7 +284,15 @@ If you have finished entering most of your data into your Google Sheets, downloa
  knitr::include_graphics("images/12-leaflet/leaflet-upload-csv.png")
 ```
 
-4. If you wish to edit your map after uploading your CSV files, you have two options. You can make small edits directly to your CSV files by opening them in the GitHub web interface. Or you can make larger edits in the Google Sheet, and repeating the steps above to download them in CSV format and upload them to replace your existing files on GitHub.
+4. After migrating data from your Google Sheet to the *csv* subfolder in GitHub, go to the `google-doc-url.js` file and change the googleDocURL value to `null` with no quotation marks, as shown below. This will change the "data by" attribution link at the bottom of your map from the old data source (your published Google Sheet) to your new source (your *csv* files on GitHub). Update the code comment as a reminder, as shown below:
+
+```
+// data stored in csv folder on GitHub, not Google Sheets
+var googleDocURL = null;
+```
+
+5. If you wish to edit your map after uploading your CSV files, you have two options. You can make small edits directly to your CSV files by opening them in the GitHub web interface. Or you can make larger edits in the Google Sheet, and repeating the steps above to download them in CSV format and upload them to replace your existing files on GitHub.
+
 
 #### H) Get your own Google Sheets API Key to insert into the code {-}
 As an alternative to step G, if you wish to continue to store your map data in your Google Sheets that is published online, go to the section of this chapter titled [Get Your Own Google Sheets API Key](google-sheets-api-key.html), and insert it into the Leaflet map code as described, to avoid overusing our key. Google Sheets requires an API key to maintain reasonable [usage limits](https://developers.google.com/sheets/api/limits) on its service. You can get a free Google Sheets API key if you have a personal Google account, but *not* a Google Suite account provided by your school or business.
@@ -548,7 +556,7 @@ If you have finished entering most of your data into your Google Sheets, downloa
  knitr::include_graphics("images/12-leaflet/storymap-download-csv.png")
 ```
 
-2. Shorten each file name as shown. The names must be exact, such as upper-case for the first letter in *Chapters.csv*. The first two files below are required, and others are optional.
+2. Shorten each file name as shown. The first two files below are required, and others are optional. File names must appear *exactly* as shown, such as upper-case for the first letter in *Chapters.csv*, and so forth.
 
 - Chapters.csv
 - Options.csv
@@ -560,6 +568,13 @@ If you have finished entering most of your data into your Google Sheets, downloa
 
 ```{r storymap-upload-csv, out.width=400, fig.cap="(ref:storymap-upload-csv)"}
  knitr::include_graphics("images/12-leaflet/storymap-upload-csv.png")
+```
+
+4. After migrating data from your Google Sheet to the *csv* subfolder in GitHub, go to the `google-doc-url.js` file and change the googleDocURL value to `null` with no quotation marks, as shown below. This will change the "data by" attribution link at the bottom of your map from the old data source (your published Google Sheet) to your new source (your *csv* files on GitHub). Update the code comment as a reminder, as shown below:
+
+```
+// data stored in csv folder on GitHub, not Google Sheets
+var googleDocURL = null;
 ```
 
 4. If you wish to edit your map after uploading your CSV files, you have two options. You can make small edits directly to your CSV files by opening them in the GitHub web interface. Or you can make larger edits in the Google Sheet, and repeating the steps above to download them in CSV format and upload them to replace your existing files on GitHub.

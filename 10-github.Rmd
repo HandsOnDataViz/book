@@ -391,28 +391,23 @@ Let's use GitHub Desktop to pull a copy of your `leaflet-map-simple` template to
  knitr::include_graphics("images/10-github/atom-remove-project-annotated.png")
 ```
 
-Sidebar: To fully view more complex code templates in your local browser, including some [Chart.js or Highcharts templates in Chapter 11](chartcode.html) or [Leaflet templates in Chapter 12](leaflet.html), you may need to temporarily relax [same-origin policy restrictions](https://en.wikipedia.org/wiki/Same-origin_policy), an internet security mechanism that limits how web pages access content from other domains. You can do so by managing your [Cross-Origin Resource Sharing](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)(CORS) settings, and methods for doing this vary across operating systems and browsers. For example, [to disable same-origin policy on Safari for Mac](https://stackoverflow.com/questions/4556429/disabling-same-origin-policy-in-safari), first go to *Preferences > Advanced* to enable the *Developer* menu, then in this new menu select *Disable Cross-Origin Restrictions*, as shown in Figure \@ref(fig:disable-cors-safari). After you are done testing your code, restart Safari to reset the setting to its default safety position. See also ways to [run the Chrome browser without same-origin restrictions on various computers](https://alfilatov.com/posts/run-chrome-without-cors/), as shown in Figure \@ref(fig:disable-cors-chrome), or this [popular Stackoverflow page](https://stackoverflow.com/questions/3102819/disable-same-origin-policy-in-chrome). If you temporarily disable this safety mechanism in your browser, be sure to re-enable it before browsing sites on the public web.
-
-(ref:disable-cors-safari) To view more complex code templates on your local computer with Safari browser, temporarily *Disable Cross-Origin Restrictions*.
-
-```{r disable-cors-safari, out.width=500, fig.cap="(ref:disable-cors-safari)"}
- knitr::include_graphics("images/10-github/disable-cors-safari.png")
-```
-
-(ref:disable-cors-chrome) To view more complex code templates on your local computer with Chrome browser, use the *Terminal* application command-line (bottom window) to run a version without same-origin safety restrictions.
-
-```{r disable-cors-chrome, out.width=500, fig.cap="(ref:disable-cors-chrome)"}
- knitr::include_graphics("images/10-github/disable-cors-chrome-annotated.png")
-```
-
-Note: Since your browser is displaying only the *local computer* version of your code, the web address will begin with `file:///...` rather than `https://...`, as appears in your GitHub Pages online map. Also, if your code depends on online elements, those features may not function when viewing it locally. But for this simple Leaflet map template, your updated map title should appear, allowing you to check its appearance before pushing your edits to the web.
-
 11. Now that you've edited the code for your map on your local computer, let's test how it looks before uploading it to GitHub. Go to the location where you saved the repo on your local computer, and right-click the `index.html` file, select Open With, and choose your preferred web browser, as shown in Figure \@ref(fig:finder-open-with).  
 
 (ref:finder-open-with) Right-click the index.html file on your local computer and open with a browser to check your edits.
 
 ```{r finder-open-with, fig.cap="(ref:finder-open-with)"}
  knitr::include_graphics("images/10-github/finder-open-with.png")
+```
+
+Note: Since your browser is displaying only the *local computer* version of your code, the web address will begin with `file:///...` rather than `https://...`, as appears in your GitHub Pages online map. Also, if your code depends on online elements, those features may not function when viewing it locally. But for this simple Leaflet map template, your updated map title should appear, allowing you to check its appearance before pushing your edits to the web.
+
+Sidebar: Launch a Local Web Server to Display More Complex Web Code
+To fully view more complex code templates in your local browser, including some [Chart.js or Highcharts templates in Chapter 11](chartcode.html) or [Leaflet templates in Chapter 12](leaflet.html), you need to set up a simple web server that can display them without errors on your local computer. On Mac and Windows, you can easily launch the web server that's built into the free Python code library (version 3 or higher), available from this [Python download site](https://www.python.org/downloads/). First, open either the [Terminal application for Mac](https://support.apple.com/guide/terminal/welcome/mac) or the [Terminal application for Windows](https://apps.microsoft.com/detail/9n0dx20hk701) and type in this command-line instruction: `python -m http.server`. Second, open your preferred web browser and enter this local computer address into the search bar: `localhost:8000`. You should see an index of folders on your local computer, so navigate to the folder containing your web code that you wish to view, as shown in Figure \@ref(fig:terminal-server). If problems arise, see this [Real Python help page](https://realpython.com/python-http-server/). When done, enter CTRL+C to exit the Terminal, and quit your browser.
+
+(ref:terminal-server) To launch a local web server to view more complex web code while you test it, type *python -m http.server* into Terminal (on left) and *localhost:8000* into your browser (on right).
+
+```{r terminal-server, fig.cap="(ref:terminal-server)"}
+ knitr::include_graphics("images/10-github/terminal-server-annotated.png")
 ```
 
 Now let's transfer your edits from your local computer to your GitHub web account, which you previously connected when you set up GitHub Desktop.

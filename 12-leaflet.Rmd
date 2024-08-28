@@ -829,16 +829,14 @@ This template will work with data in [CSV](csv.html) and [GeoJSON](geojson.html)
 ## Leaflet Maps with Open Data APIs {- #leaflet-maps-open-data-apis}
 
 Learn how to code your own Leaflet map with an application programming interface (API) that continuously pulls the most current information directly from an open-data repository, similar to the [Socrata Open Data map you learned about in Chapter 7](map-socrata.html). Leaflet maps can pull and display data from various open data repositories using APIs.
-Figure \@ref(fig:leaflet-open-data) shows an interactive map of North Dakota counties,
-colored by population density, with emergency medical service (EMS) locations and recent AmeriCorps projects.
-
-*Note: The original example showed hospital locations in North Dakota provided by Medicare.gov website. This example was modified on 23 March 2022 due to Medicare.gov replacing Socrata with a different database system. In this updated example, AmeriCorps NCCC projects in North Dakota are shown.*
+Figure \@ref(fig:leaflet-open-data) shows an interactive map of Hawaii,
+colored by seismic hazard risk, along with locations of volcanoes and large hotels.
 
 This map template pulls data from three different open repository sources:
 
-- Locations of AmeriCorps NCCC projects are pulled directly from [AmeriCorps Socrata database](https://data.americorps.gov/).
-- County boundaries and population density are pulled from [North Dakota GIS](https://www.gis.nd.gov/) ArcGIS server.
-- EMS stations are fetched from [Homeland Infrastructure Foundation-Level Data](https://hifld-geoplatform.opendata.arcgis.com/) ArcGIS server.
+- Locations of volcanoes are provided by [USGS Volcano API](https://volcanoes.usgs.gov/vsc/api/volcanoApi/)
+- Seismic hazard layer is pulled from an Esri/ArcGIS FeatureServer run by the US DHS as part of the [Homeland Infrastructure Foundation-Level Data](https://hifld-geoplatform.hub.arcgis.com/maps/geoplatform::seismic-hazard-model-pga-with-2-5-or-10-probability-in-50-years/about)
+- Hotels with at least 100 rooms are pulled from an Esri MapServer hosted by [Hawaii Geospatial Data Portal](https://geoportal.hawaii.gov/)
 
 (ref:leaflet-open-data) Explore the [interactive Leaflet Map with Open Data](https://handsondataviz.github.io/leaflet-maps-open-data-apis/index.html).
 
@@ -846,8 +844,9 @@ This map template pulls data from three different open repository sources:
 if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://handsondataviz.github.io/leaflet-maps-open-data-apis/index.html", height = "500px") else knitr::include_graphics("images/12-leaflet/leaflet-open-data.png")
 ```
 
-You can enable Leaflet to pull data from ArcGIS servers using a free [`esri-leaflet`](https://github.com/Esri/esri-leaflet) plugin.
-Data from Socrata can be pulled from [SODA API](https://dev.socrata.com/) using jQuery's `$.getJSON()` function.
+*Note: Our original 2021 map showed hospital locations in North Dakota provided by Medicare.gov website. We updated the map in March 2022 when Medicare.gov replaced Socrata with a different database system, and instead we displayed AmeriCorps NCCC projects in North Dakota. We updated the map once again in August 2024 when the North Dakota database moved, and we now show large hotels, volcanos, and seismic hazards in Hawaii. Overall, these map revisions over time illustrate the dynamic nature of third-party data providers and web systems.*
+
+You can enable Leaflet to pull data from various ArcGIS services, including MapServer or FeatureServer, using a free [`esri-leaflet`](https://github.com/Esri/esri-leaflet) plugin. Data from regular JSON endpoints, such as USGS Volcano API or Socrata's [SODA API](https://dev.socrata.com/), can be pulled using jQuery's `$.getJSON()` function.
 
 To adapt this template for your own project:
 
@@ -858,105 +857,103 @@ data from Socrata or another JSON/GeoJSON endpoint, modify the following code sn
 with the appropriate URL and icon:
 
 ```javascript
-/*
-  From AmeriCorps Socrata database, add projects in North Dakota
-  using simple filtering on the `stabbr` column, and a JSON endpoint.
-  Each point is a custom .png icon with a tooltip containing AmeriCorps
-  sponsor name, and project description.
-*/
+$.getJSON('https://volcanoes.usgs.gov/vsc/api/volcanoApi/volcanoesUS', function(apiResults) {
 
+    // Create an empty array to store Lefalet markers
+    let volcanoMarkers = [];
 
-$.getJSON("https://data.americorps.gov/resource/yie5-ur4v.json?stabbr=ND", function(data) {
+    // Let's go through every element of the array returned by the Volcanoes API
+    for (var i in apiResults) {
 
-  // Array of Leaflet markers
-  var markers = [];
+        // Let's only add volcanoes that are located around Hawaii
+        if (apiResults[i].subregion === 'Hawaii') {
 
-  // For each row in Socrata, create a Leaflet marker
-  for (var i = 0; i < data.length; i++) {
+        // Extract coordinates from the volcano object
+        var lat = apiResults[i].latitude;
+        var lon = apiResults[i].longitude;
 
-    var item = data[i];
+        // Create a Leaflet marker with a custom image
+        var marker = L.marker([lat, lon], {
+            icon: L.icon({
+            iconUrl: 'images/volcano.png',
+            iconSize: [24, 24],
+            iconAnchor: [12, 12],
+            opacity: 0.5
+            })
+        }).bindTooltip(apiResults[i].vName); // Add a tooltip with volcano name
 
-    // Extract coordinates for each project, convert strings to floats
-    var coordinates = [
-      parseFloat(item.geocoded_column.latitude),
-      parseFloat(item.geocoded_column.longitude)
-    ]
+        // Add our volcano marker to the array of all other markers
+        volcanoMarkers.push(marker);
 
-    // Create a marker with a custom icon
-    var marker = L.marker(coordinates, {
-        icon: L.icon({
-          iconUrl: 'images/americorps.png',
-          iconSize: [24, 24],
-          iconAnchor: [12, 12],
-          opacity: 0.5
-        })
-    }).bindTooltip(item.sponsor + '<br>' + item.project_description);
+        }
+    }
 
-    // Add marker to the array of markers
-    markers.push(marker);
-  }
+    // Create a Leaflet layer group from array of markers
+    var volcanoLayer = L.layerGroup(volcanoMarkers);
+    volcanoLayer.addTo(map); // add layer to the map
 
-  // Create a Leaflet layer group from array of markers
-  var layer = L.layerGroup(markers);
-  layer.addTo(map); // add layer to the map
-
-  // Add layer to the legend, together with the little icon
-  legend.addOverlay(layer, 'AmeriCorps NCCC <img src="images/americorps.png" height="11" alt="AmeriCorps NCCC">')
+    // Add layer to the legend, together with the little icon
+    legend.addOverlay(
+        volcanoLayer,
+        'Volcanoes <img src="images/volcano.png" height="13" alt="Volcano emoji">'
+    )
 
 })
 ```
 
 The following code snippet uses `esri-leaflet` plugin to pull polygon data
-from an ArcGIS server, and creates a choropleth layer based on population density
-(stored in `POP10_SQMI` variable of each feature, or polygon).
+from an ArcGIS FeatureServer, and creates a choropleth layer based on the
+modelled hazard value stored in the `low_cont` variable of each polygon feature.
 
 ```javascript
-var counties = L.esri.featureLayer({
-  url:'https://ndgishub.nd.gov/arcgis/rest/services/All_GovtBoundaries/MapServer/20',
-  style: function(feature) {
-    return {
-      fillOpacity: 0.5,
-      weight: 0.5,
-      color: 'silver',
-      fillColor: getDensityColor(feature.properties.POP10_SQMI)
+var seismicHazardLayer = L.esri.featureLayer({
+    url: 'https://services1.arcgis.com/Hp6G80Pky0om7QvQ/ArcGIS/rest/services/Seismic_Ground_Motion_Hazards_with_2_5_or_10_Percent_Probability_in_50_years/FeatureServer/5',
+    style: function(feature) {
+        return {
+            fillOpacity: 0.5,
+            weight: 0, // the polygons are quite dense, so let's not draw boundaries
+            fillColor: getHazardColor(feature.properties.low_cont)
+        }
     }
-  }
 }).addTo(map)
+
+legend.addOverlay(seismicHazardLayer, 'Seismic hazard')
 ```
 
-Here, the `getDensityColor()` function returns a color for a given value
-based on pre-defined thresholds. In case of the North Dakota example,
-population density of over 100 people per square mile is assigned the darkest shade of red,
-while the density of 5 and under is shown with the lightest.
+Here, the `getHazardColor()` function returns a color for a given value
+based on pre-defined thresholds. In our case, we define 5 buckets,
+assigning the darkest red to values over 1.5 (centered around the volcano in
+the middle of the largest Hilo island), and the palest red
+to the values of 0.2 and under.
 
 ```javascript
-var getDensityColor = function(d) {
-  return d > 100  ? '#7a0177' :
-          d > 50  ? '#c51b8a' :
-          d > 20  ? '#f768a1' :
-          d > 5   ? '#fbb4b9' :
-                    '#feebe2'
+var getHazardColor = function(d) {
+    return d > 1.5   ? '#7a0177' :
+            d > 1.0  ? '#c51b8a' :
+            d > 0.5  ? '#f768a1' :
+            d > 0.2  ? '#fbb4b9' :
+                        '#feebe2'
 }
 ```
 
 While it is convenient to pull data directly from the source databases,
 remember that those resources are out of your control (unless you administer them, of course).
 Data changes often come unannounced. For example, if the dataset owner decides
-to rename the population density field from `POP10_SQMI` to `Pop10_sqmi`,
+to rename the value field from `low_cont` to `hazard_value`,
 your map will stop showing values correctly. Datasets may get moved
 to a different domain name or get deleted entirely (we experienced both!), so
 it is wise to have a back-up file saved locally.
 
 If you are more concerned about the long-term functioning of your map as opposed
-to displaying the most up-to-date version of the dataset, you may consider serving
+to displaying the most up-to-date version of the dataset, consider serving
 your data from local GeoJSON files instead (but ensure first that it is permitted by the data license).
 
 ### Summary {- #summary12}
 
 In this chapter, we introduced Leaflet map templates for common map problems,
 such as telling stories about places using scrollable interface,
-showing point data from databases like Socrata, and creating heatmaps
-to visualize areas of high event density.
+showing point and polygon data from sources such as ArcGIS/Esri MapServer and JSON API endpoints,
+and creating heatmaps to visualize areas of high event density.
 
 You can use these templates as a base to kickstart your own mapping projects.
 Leaflet.js is [well-documented](https://leafletjs.com/reference), and we recommend

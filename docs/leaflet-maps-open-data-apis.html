@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Leaflet Maps with Open Data APIs | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Leaflet Maps with Open Data APIs | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2024-06-27" />
+<meta name="date" content="2024-08-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -383,14 +383,13 @@ div.csl-indent {
 <div id="leaflet-maps-open-data-apis" class="section level2 unnumbered hasAnchor">
 <h2>Leaflet Maps with Open Data APIs<a href="leaflet-maps-open-data-apis.html#leaflet-maps-open-data-apis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Learn how to code your own Leaflet map with an application programming interface (API) that continuously pulls the most current information directly from an open-data repository, similar to the <a href="map-socrata.html">Socrata Open Data map you learned about in Chapter 7</a>. Leaflet maps can pull and display data from various open data repositories using APIs.
-Figure <a href="leaflet-maps-open-data-apis.html#fig:leaflet-open-data">12.43</a> shows an interactive map of North Dakota counties,
-colored by population density, with emergency medical service (EMS) locations and recent AmeriCorps projects.</p>
-<p><em>Note: The original example showed hospital locations in North Dakota provided by Medicare.gov website. This example was modified on 23 March 2022 due to Medicare.gov replacing Socrata with a different database system. In this updated example, AmeriCorps NCCC projects in North Dakota are shown.</em></p>
+Figure <a href="leaflet-maps-open-data-apis.html#fig:leaflet-open-data">12.43</a> shows an interactive map of Hawaii,
+colored by seismic hazard risk, along with locations of volcanoes and large hotels.</p>
 <p>This map template pulls data from three different open repository sources:</p>
 <ul>
-<li>Locations of AmeriCorps NCCC projects are pulled directly from <a href="https://data.americorps.gov/">AmeriCorps Socrata database</a>.</li>
-<li>County boundaries and population density are pulled from <a href="https://www.gis.nd.gov/">North Dakota GIS</a> ArcGIS server.</li>
-<li>EMS stations are fetched from <a href="https://hifld-geoplatform.opendata.arcgis.com/">Homeland Infrastructure Foundation-Level Data</a> ArcGIS server.</li>
+<li>Locations of volcanoes are provided by <a href="https://volcanoes.usgs.gov/vsc/api/volcanoApi/">USGS Volcano API</a></li>
+<li>Seismic hazard layer is pulled from an Esri/ArcGIS FeatureServer run by the US DHS as part of the <a href="https://hifld-geoplatform.hub.arcgis.com/maps/geoplatform::seismic-hazard-model-pga-with-2-5-or-10-probability-in-50-years/about">Homeland Infrastructure Foundation-Level Data</a></li>
+<li>Hotels with at least 100 rooms are pulled from an Esri MapServer hosted by <a href="https://geoportal.hawaii.gov/">Hawaii Geospatial Data Portal</a></li>
 </ul>
 
 <div class="figure"><span style="display:block;" id="fig:leaflet-open-data"></span>
@@ -400,8 +399,8 @@ colored by population density, with emergency medical service (EMS) locations an
 Figure 12.43: Explore the <a href="https://handsondataviz.github.io/leaflet-maps-open-data-apis/index.html">interactive Leaflet Map with Open Data</a>.
 </p>
 </div>
-<p>You can enable Leaflet to pull data from ArcGIS servers using a free <a href="https://github.com/Esri/esri-leaflet"><code>esri-leaflet</code></a> plugin.
-Data from Socrata can be pulled from <a href="https://dev.socrata.com/">SODA API</a> using jQuery’s <code>$.getJSON()</code> function.</p>
+<p><em>Note: Our original 2021 map showed hospital locations in North Dakota provided by Medicare.gov website. We updated the map in March 2022 when Medicare.gov replaced Socrata with a different database system, and instead we displayed AmeriCorps NCCC projects in North Dakota. We updated the map once again in August 2024 when the North Dakota database moved, and we now show large hotels, volcanos, and seismic hazards in Hawaii. Overall, these map revisions over time illustrate the dynamic nature of third-party data providers and web systems.</em></p>
+<p>You can enable Leaflet to pull data from various ArcGIS services, including MapServer or FeatureServer, using a free <a href="https://github.com/Esri/esri-leaflet"><code>esri-leaflet</code></a> plugin. Data from regular JSON endpoints, such as USGS Volcano API or Socrata’s <a href="https://dev.socrata.com/">SODA API</a>, can be pulled using jQuery’s <code>$.getJSON()</code> function.</p>
 <p>To adapt this template for your own project:</p>
 <ol style="list-style-type: decimal">
 <li>Visit the <a href="https://github.com/HandsOnDataViz/leaflet-maps-open-data-apis">GitHub repository</a> that contains the code for the map in Figure <a href="leaflet-maps-open-data-apis.html#fig:leaflet-open-data">12.43</a>,
@@ -410,93 +409,91 @@ and press the <em>Use this template</em> button to copy the repo to your own Git
 data from Socrata or another JSON/GeoJSON endpoint, modify the following code snippet
 with the appropriate URL and icon:</li>
 </ol>
-<div class="sourceCode" id="cb36"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb36-1"><a href="leaflet-maps-open-data-apis.html#cb36-1" tabindex="-1"></a><span class="co">/*</span></span>
-<span id="cb36-2"><a href="leaflet-maps-open-data-apis.html#cb36-2" tabindex="-1"></a><span class="co">  From AmeriCorps Socrata database, add projects in North Dakota</span></span>
-<span id="cb36-3"><a href="leaflet-maps-open-data-apis.html#cb36-3" tabindex="-1"></a><span class="co">  using simple filtering on the `stabbr` column, and a JSON endpoint.</span></span>
-<span id="cb36-4"><a href="leaflet-maps-open-data-apis.html#cb36-4" tabindex="-1"></a><span class="co">  Each point is a custom .png icon with a tooltip containing AmeriCorps</span></span>
-<span id="cb36-5"><a href="leaflet-maps-open-data-apis.html#cb36-5" tabindex="-1"></a><span class="co">  sponsor name, and project description.</span></span>
-<span id="cb36-6"><a href="leaflet-maps-open-data-apis.html#cb36-6" tabindex="-1"></a><span class="co">*/</span></span>
-<span id="cb36-7"><a href="leaflet-maps-open-data-apis.html#cb36-7" tabindex="-1"></a></span>
+<div class="sourceCode" id="cb36"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb36-1"><a href="leaflet-maps-open-data-apis.html#cb36-1" tabindex="-1"></a>$<span class="op">.</span><span class="fu">getJSON</span>(<span class="st">&#39;https://volcanoes.usgs.gov/vsc/api/volcanoApi/volcanoesUS&#39;</span><span class="op">,</span> <span class="kw">function</span>(apiResults) {</span>
+<span id="cb36-2"><a href="leaflet-maps-open-data-apis.html#cb36-2" tabindex="-1"></a></span>
+<span id="cb36-3"><a href="leaflet-maps-open-data-apis.html#cb36-3" tabindex="-1"></a>    <span class="co">// Create an empty array to store Lefalet markers</span></span>
+<span id="cb36-4"><a href="leaflet-maps-open-data-apis.html#cb36-4" tabindex="-1"></a>    <span class="kw">let</span> volcanoMarkers <span class="op">=</span> []<span class="op">;</span></span>
+<span id="cb36-5"><a href="leaflet-maps-open-data-apis.html#cb36-5" tabindex="-1"></a></span>
+<span id="cb36-6"><a href="leaflet-maps-open-data-apis.html#cb36-6" tabindex="-1"></a>    <span class="co">// Let&#39;s go through every element of the array returned by the Volcanoes API</span></span>
+<span id="cb36-7"><a href="leaflet-maps-open-data-apis.html#cb36-7" tabindex="-1"></a>    <span class="cf">for</span> (<span class="kw">var</span> i <span class="kw">in</span> apiResults) {</span>
 <span id="cb36-8"><a href="leaflet-maps-open-data-apis.html#cb36-8" tabindex="-1"></a></span>
-<span id="cb36-9"><a href="leaflet-maps-open-data-apis.html#cb36-9" tabindex="-1"></a>$<span class="op">.</span><span class="fu">getJSON</span>(<span class="st">&quot;https://data.americorps.gov/resource/yie5-ur4v.json?stabbr=ND&quot;</span><span class="op">,</span> <span class="kw">function</span>(data) {</span>
-<span id="cb36-10"><a href="leaflet-maps-open-data-apis.html#cb36-10" tabindex="-1"></a></span>
-<span id="cb36-11"><a href="leaflet-maps-open-data-apis.html#cb36-11" tabindex="-1"></a>  <span class="co">// Array of Leaflet markers</span></span>
-<span id="cb36-12"><a href="leaflet-maps-open-data-apis.html#cb36-12" tabindex="-1"></a>  <span class="kw">var</span> markers <span class="op">=</span> []<span class="op">;</span></span>
-<span id="cb36-13"><a href="leaflet-maps-open-data-apis.html#cb36-13" tabindex="-1"></a></span>
-<span id="cb36-14"><a href="leaflet-maps-open-data-apis.html#cb36-14" tabindex="-1"></a>  <span class="co">// For each row in Socrata, create a Leaflet marker</span></span>
-<span id="cb36-15"><a href="leaflet-maps-open-data-apis.html#cb36-15" tabindex="-1"></a>  <span class="cf">for</span> (<span class="kw">var</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> data<span class="op">.</span><span class="at">length</span><span class="op">;</span> i<span class="op">++</span>) {</span>
-<span id="cb36-16"><a href="leaflet-maps-open-data-apis.html#cb36-16" tabindex="-1"></a></span>
-<span id="cb36-17"><a href="leaflet-maps-open-data-apis.html#cb36-17" tabindex="-1"></a>    <span class="kw">var</span> item <span class="op">=</span> data[i]<span class="op">;</span></span>
-<span id="cb36-18"><a href="leaflet-maps-open-data-apis.html#cb36-18" tabindex="-1"></a></span>
-<span id="cb36-19"><a href="leaflet-maps-open-data-apis.html#cb36-19" tabindex="-1"></a>    <span class="co">// Extract coordinates for each project, convert strings to floats</span></span>
-<span id="cb36-20"><a href="leaflet-maps-open-data-apis.html#cb36-20" tabindex="-1"></a>    <span class="kw">var</span> coordinates <span class="op">=</span> [</span>
-<span id="cb36-21"><a href="leaflet-maps-open-data-apis.html#cb36-21" tabindex="-1"></a>      <span class="pp">parseFloat</span>(item<span class="op">.</span><span class="at">geocoded_column</span><span class="op">.</span><span class="at">latitude</span>)<span class="op">,</span></span>
-<span id="cb36-22"><a href="leaflet-maps-open-data-apis.html#cb36-22" tabindex="-1"></a>      <span class="pp">parseFloat</span>(item<span class="op">.</span><span class="at">geocoded_column</span><span class="op">.</span><span class="at">longitude</span>)</span>
-<span id="cb36-23"><a href="leaflet-maps-open-data-apis.html#cb36-23" tabindex="-1"></a>    ]</span>
-<span id="cb36-24"><a href="leaflet-maps-open-data-apis.html#cb36-24" tabindex="-1"></a></span>
-<span id="cb36-25"><a href="leaflet-maps-open-data-apis.html#cb36-25" tabindex="-1"></a>    <span class="co">// Create a marker with a custom icon</span></span>
-<span id="cb36-26"><a href="leaflet-maps-open-data-apis.html#cb36-26" tabindex="-1"></a>    <span class="kw">var</span> marker <span class="op">=</span> L<span class="op">.</span><span class="fu">marker</span>(coordinates<span class="op">,</span> {</span>
-<span id="cb36-27"><a href="leaflet-maps-open-data-apis.html#cb36-27" tabindex="-1"></a>        <span class="dt">icon</span><span class="op">:</span> L<span class="op">.</span><span class="fu">icon</span>({</span>
-<span id="cb36-28"><a href="leaflet-maps-open-data-apis.html#cb36-28" tabindex="-1"></a>          <span class="dt">iconUrl</span><span class="op">:</span> <span class="st">&#39;images/americorps.png&#39;</span><span class="op">,</span></span>
-<span id="cb36-29"><a href="leaflet-maps-open-data-apis.html#cb36-29" tabindex="-1"></a>          <span class="dt">iconSize</span><span class="op">:</span> [<span class="dv">24</span><span class="op">,</span> <span class="dv">24</span>]<span class="op">,</span></span>
-<span id="cb36-30"><a href="leaflet-maps-open-data-apis.html#cb36-30" tabindex="-1"></a>          <span class="dt">iconAnchor</span><span class="op">:</span> [<span class="dv">12</span><span class="op">,</span> <span class="dv">12</span>]<span class="op">,</span></span>
-<span id="cb36-31"><a href="leaflet-maps-open-data-apis.html#cb36-31" tabindex="-1"></a>          <span class="dt">opacity</span><span class="op">:</span> <span class="fl">0.5</span></span>
-<span id="cb36-32"><a href="leaflet-maps-open-data-apis.html#cb36-32" tabindex="-1"></a>        })</span>
-<span id="cb36-33"><a href="leaflet-maps-open-data-apis.html#cb36-33" tabindex="-1"></a>    })<span class="op">.</span><span class="fu">bindTooltip</span>(item<span class="op">.</span><span class="at">sponsor</span> <span class="op">+</span> <span class="st">&#39;&lt;br&gt;&#39;</span> <span class="op">+</span> item<span class="op">.</span><span class="at">project_description</span>)<span class="op">;</span></span>
-<span id="cb36-34"><a href="leaflet-maps-open-data-apis.html#cb36-34" tabindex="-1"></a></span>
-<span id="cb36-35"><a href="leaflet-maps-open-data-apis.html#cb36-35" tabindex="-1"></a>    <span class="co">// Add marker to the array of markers</span></span>
-<span id="cb36-36"><a href="leaflet-maps-open-data-apis.html#cb36-36" tabindex="-1"></a>    markers<span class="op">.</span><span class="fu">push</span>(marker)<span class="op">;</span></span>
-<span id="cb36-37"><a href="leaflet-maps-open-data-apis.html#cb36-37" tabindex="-1"></a>  }</span>
-<span id="cb36-38"><a href="leaflet-maps-open-data-apis.html#cb36-38" tabindex="-1"></a></span>
-<span id="cb36-39"><a href="leaflet-maps-open-data-apis.html#cb36-39" tabindex="-1"></a>  <span class="co">// Create a Leaflet layer group from array of markers</span></span>
-<span id="cb36-40"><a href="leaflet-maps-open-data-apis.html#cb36-40" tabindex="-1"></a>  <span class="kw">var</span> layer <span class="op">=</span> L<span class="op">.</span><span class="fu">layerGroup</span>(markers)<span class="op">;</span></span>
-<span id="cb36-41"><a href="leaflet-maps-open-data-apis.html#cb36-41" tabindex="-1"></a>  layer<span class="op">.</span><span class="fu">addTo</span>(map)<span class="op">;</span> <span class="co">// add layer to the map</span></span>
-<span id="cb36-42"><a href="leaflet-maps-open-data-apis.html#cb36-42" tabindex="-1"></a></span>
-<span id="cb36-43"><a href="leaflet-maps-open-data-apis.html#cb36-43" tabindex="-1"></a>  <span class="co">// Add layer to the legend, together with the little icon</span></span>
-<span id="cb36-44"><a href="leaflet-maps-open-data-apis.html#cb36-44" tabindex="-1"></a>  legend<span class="op">.</span><span class="fu">addOverlay</span>(layer<span class="op">,</span> <span class="st">&#39;AmeriCorps NCCC &lt;img src=&quot;images/americorps.png&quot; height=&quot;11&quot; alt=&quot;AmeriCorps NCCC&quot;&gt;&#39;</span>)</span>
-<span id="cb36-45"><a href="leaflet-maps-open-data-apis.html#cb36-45" tabindex="-1"></a></span>
-<span id="cb36-46"><a href="leaflet-maps-open-data-apis.html#cb36-46" tabindex="-1"></a>})</span></code></pre></div>
+<span id="cb36-9"><a href="leaflet-maps-open-data-apis.html#cb36-9" tabindex="-1"></a>        <span class="co">// Let&#39;s only add volcanoes that are located around Hawaii</span></span>
+<span id="cb36-10"><a href="leaflet-maps-open-data-apis.html#cb36-10" tabindex="-1"></a>        <span class="cf">if</span> (apiResults[i]<span class="op">.</span><span class="at">subregion</span> <span class="op">===</span> <span class="st">&#39;Hawaii&#39;</span>) {</span>
+<span id="cb36-11"><a href="leaflet-maps-open-data-apis.html#cb36-11" tabindex="-1"></a></span>
+<span id="cb36-12"><a href="leaflet-maps-open-data-apis.html#cb36-12" tabindex="-1"></a>        <span class="co">// Extract coordinates from the volcano object</span></span>
+<span id="cb36-13"><a href="leaflet-maps-open-data-apis.html#cb36-13" tabindex="-1"></a>        <span class="kw">var</span> lat <span class="op">=</span> apiResults[i]<span class="op">.</span><span class="at">latitude</span><span class="op">;</span></span>
+<span id="cb36-14"><a href="leaflet-maps-open-data-apis.html#cb36-14" tabindex="-1"></a>        <span class="kw">var</span> lon <span class="op">=</span> apiResults[i]<span class="op">.</span><span class="at">longitude</span><span class="op">;</span></span>
+<span id="cb36-15"><a href="leaflet-maps-open-data-apis.html#cb36-15" tabindex="-1"></a></span>
+<span id="cb36-16"><a href="leaflet-maps-open-data-apis.html#cb36-16" tabindex="-1"></a>        <span class="co">// Create a Leaflet marker with a custom image</span></span>
+<span id="cb36-17"><a href="leaflet-maps-open-data-apis.html#cb36-17" tabindex="-1"></a>        <span class="kw">var</span> marker <span class="op">=</span> L<span class="op">.</span><span class="fu">marker</span>([lat<span class="op">,</span> lon]<span class="op">,</span> {</span>
+<span id="cb36-18"><a href="leaflet-maps-open-data-apis.html#cb36-18" tabindex="-1"></a>            <span class="dt">icon</span><span class="op">:</span> L<span class="op">.</span><span class="fu">icon</span>({</span>
+<span id="cb36-19"><a href="leaflet-maps-open-data-apis.html#cb36-19" tabindex="-1"></a>            <span class="dt">iconUrl</span><span class="op">:</span> <span class="st">&#39;images/volcano.png&#39;</span><span class="op">,</span></span>
+<span id="cb36-20"><a href="leaflet-maps-open-data-apis.html#cb36-20" tabindex="-1"></a>            <span class="dt">iconSize</span><span class="op">:</span> [<span class="dv">24</span><span class="op">,</span> <span class="dv">24</span>]<span class="op">,</span></span>
+<span id="cb36-21"><a href="leaflet-maps-open-data-apis.html#cb36-21" tabindex="-1"></a>            <span class="dt">iconAnchor</span><span class="op">:</span> [<span class="dv">12</span><span class="op">,</span> <span class="dv">12</span>]<span class="op">,</span></span>
+<span id="cb36-22"><a href="leaflet-maps-open-data-apis.html#cb36-22" tabindex="-1"></a>            <span class="dt">opacity</span><span class="op">:</span> <span class="fl">0.5</span></span>
+<span id="cb36-23"><a href="leaflet-maps-open-data-apis.html#cb36-23" tabindex="-1"></a>            })</span>
+<span id="cb36-24"><a href="leaflet-maps-open-data-apis.html#cb36-24" tabindex="-1"></a>        })<span class="op">.</span><span class="fu">bindTooltip</span>(apiResults[i]<span class="op">.</span><span class="at">vName</span>)<span class="op">;</span> <span class="co">// Add a tooltip with volcano name</span></span>
+<span id="cb36-25"><a href="leaflet-maps-open-data-apis.html#cb36-25" tabindex="-1"></a></span>
+<span id="cb36-26"><a href="leaflet-maps-open-data-apis.html#cb36-26" tabindex="-1"></a>        <span class="co">// Add our volcano marker to the array of all other markers</span></span>
+<span id="cb36-27"><a href="leaflet-maps-open-data-apis.html#cb36-27" tabindex="-1"></a>        volcanoMarkers<span class="op">.</span><span class="fu">push</span>(marker)<span class="op">;</span></span>
+<span id="cb36-28"><a href="leaflet-maps-open-data-apis.html#cb36-28" tabindex="-1"></a></span>
+<span id="cb36-29"><a href="leaflet-maps-open-data-apis.html#cb36-29" tabindex="-1"></a>        }</span>
+<span id="cb36-30"><a href="leaflet-maps-open-data-apis.html#cb36-30" tabindex="-1"></a>    }</span>
+<span id="cb36-31"><a href="leaflet-maps-open-data-apis.html#cb36-31" tabindex="-1"></a></span>
+<span id="cb36-32"><a href="leaflet-maps-open-data-apis.html#cb36-32" tabindex="-1"></a>    <span class="co">// Create a Leaflet layer group from array of markers</span></span>
+<span id="cb36-33"><a href="leaflet-maps-open-data-apis.html#cb36-33" tabindex="-1"></a>    <span class="kw">var</span> volcanoLayer <span class="op">=</span> L<span class="op">.</span><span class="fu">layerGroup</span>(volcanoMarkers)<span class="op">;</span></span>
+<span id="cb36-34"><a href="leaflet-maps-open-data-apis.html#cb36-34" tabindex="-1"></a>    volcanoLayer<span class="op">.</span><span class="fu">addTo</span>(map)<span class="op">;</span> <span class="co">// add layer to the map</span></span>
+<span id="cb36-35"><a href="leaflet-maps-open-data-apis.html#cb36-35" tabindex="-1"></a></span>
+<span id="cb36-36"><a href="leaflet-maps-open-data-apis.html#cb36-36" tabindex="-1"></a>    <span class="co">// Add layer to the legend, together with the little icon</span></span>
+<span id="cb36-37"><a href="leaflet-maps-open-data-apis.html#cb36-37" tabindex="-1"></a>    legend<span class="op">.</span><span class="fu">addOverlay</span>(</span>
+<span id="cb36-38"><a href="leaflet-maps-open-data-apis.html#cb36-38" tabindex="-1"></a>        volcanoLayer<span class="op">,</span></span>
+<span id="cb36-39"><a href="leaflet-maps-open-data-apis.html#cb36-39" tabindex="-1"></a>        <span class="st">&#39;Volcanoes &lt;img src=&quot;images/volcano.png&quot; height=&quot;13&quot; alt=&quot;Volcano emoji&quot;&gt;&#39;</span></span>
+<span id="cb36-40"><a href="leaflet-maps-open-data-apis.html#cb36-40" tabindex="-1"></a>    )</span>
+<span id="cb36-41"><a href="leaflet-maps-open-data-apis.html#cb36-41" tabindex="-1"></a></span>
+<span id="cb36-42"><a href="leaflet-maps-open-data-apis.html#cb36-42" tabindex="-1"></a>})</span></code></pre></div>
 <p>The following code snippet uses <code>esri-leaflet</code> plugin to pull polygon data
-from an ArcGIS server, and creates a choropleth layer based on population density
-(stored in <code>POP10_SQMI</code> variable of each feature, or polygon).</p>
-<div class="sourceCode" id="cb37"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb37-1"><a href="leaflet-maps-open-data-apis.html#cb37-1" tabindex="-1"></a><span class="kw">var</span> counties <span class="op">=</span> L<span class="op">.</span><span class="at">esri</span><span class="op">.</span><span class="fu">featureLayer</span>({</span>
-<span id="cb37-2"><a href="leaflet-maps-open-data-apis.html#cb37-2" tabindex="-1"></a>  <span class="dt">url</span><span class="op">:</span><span class="st">&#39;https://ndgishub.nd.gov/arcgis/rest/services/All_GovtBoundaries/MapServer/20&#39;</span><span class="op">,</span></span>
-<span id="cb37-3"><a href="leaflet-maps-open-data-apis.html#cb37-3" tabindex="-1"></a>  <span class="dt">style</span><span class="op">:</span> <span class="kw">function</span>(feature) {</span>
-<span id="cb37-4"><a href="leaflet-maps-open-data-apis.html#cb37-4" tabindex="-1"></a>    <span class="cf">return</span> {</span>
-<span id="cb37-5"><a href="leaflet-maps-open-data-apis.html#cb37-5" tabindex="-1"></a>      <span class="dt">fillOpacity</span><span class="op">:</span> <span class="fl">0.5</span><span class="op">,</span></span>
-<span id="cb37-6"><a href="leaflet-maps-open-data-apis.html#cb37-6" tabindex="-1"></a>      <span class="dt">weight</span><span class="op">:</span> <span class="fl">0.5</span><span class="op">,</span></span>
-<span id="cb37-7"><a href="leaflet-maps-open-data-apis.html#cb37-7" tabindex="-1"></a>      <span class="dt">color</span><span class="op">:</span> <span class="st">&#39;silver&#39;</span><span class="op">,</span></span>
-<span id="cb37-8"><a href="leaflet-maps-open-data-apis.html#cb37-8" tabindex="-1"></a>      <span class="dt">fillColor</span><span class="op">:</span> <span class="fu">getDensityColor</span>(feature<span class="op">.</span><span class="at">properties</span><span class="op">.</span><span class="at">POP10_SQMI</span>)</span>
+from an ArcGIS FeatureServer, and creates a choropleth layer based on the
+modelled hazard value stored in the <code>low_cont</code> variable of each polygon feature.</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb37-1"><a href="leaflet-maps-open-data-apis.html#cb37-1" tabindex="-1"></a><span class="kw">var</span> seismicHazardLayer <span class="op">=</span> L<span class="op">.</span><span class="at">esri</span><span class="op">.</span><span class="fu">featureLayer</span>({</span>
+<span id="cb37-2"><a href="leaflet-maps-open-data-apis.html#cb37-2" tabindex="-1"></a>    <span class="dt">url</span><span class="op">:</span> <span class="st">&#39;https://services1.arcgis.com/Hp6G80Pky0om7QvQ/ArcGIS/rest/services/Seismic_Ground_Motion_Hazards_with_2_5_or_10_Percent_Probability_in_50_years/FeatureServer/5&#39;</span><span class="op">,</span></span>
+<span id="cb37-3"><a href="leaflet-maps-open-data-apis.html#cb37-3" tabindex="-1"></a>    <span class="dt">style</span><span class="op">:</span> <span class="kw">function</span>(feature) {</span>
+<span id="cb37-4"><a href="leaflet-maps-open-data-apis.html#cb37-4" tabindex="-1"></a>        <span class="cf">return</span> {</span>
+<span id="cb37-5"><a href="leaflet-maps-open-data-apis.html#cb37-5" tabindex="-1"></a>            <span class="dt">fillOpacity</span><span class="op">:</span> <span class="fl">0.5</span><span class="op">,</span></span>
+<span id="cb37-6"><a href="leaflet-maps-open-data-apis.html#cb37-6" tabindex="-1"></a>            <span class="dt">weight</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="co">// the polygons are quite dense, so let&#39;s not draw boundaries</span></span>
+<span id="cb37-7"><a href="leaflet-maps-open-data-apis.html#cb37-7" tabindex="-1"></a>            <span class="dt">fillColor</span><span class="op">:</span> <span class="fu">getHazardColor</span>(feature<span class="op">.</span><span class="at">properties</span><span class="op">.</span><span class="at">low_cont</span>)</span>
+<span id="cb37-8"><a href="leaflet-maps-open-data-apis.html#cb37-8" tabindex="-1"></a>        }</span>
 <span id="cb37-9"><a href="leaflet-maps-open-data-apis.html#cb37-9" tabindex="-1"></a>    }</span>
-<span id="cb37-10"><a href="leaflet-maps-open-data-apis.html#cb37-10" tabindex="-1"></a>  }</span>
-<span id="cb37-11"><a href="leaflet-maps-open-data-apis.html#cb37-11" tabindex="-1"></a>})<span class="op">.</span><span class="fu">addTo</span>(map)</span></code></pre></div>
-<p>Here, the <code>getDensityColor()</code> function returns a color for a given value
-based on pre-defined thresholds. In case of the North Dakota example,
-population density of over 100 people per square mile is assigned the darkest shade of red,
-while the density of 5 and under is shown with the lightest.</p>
-<div class="sourceCode" id="cb38"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb38-1"><a href="leaflet-maps-open-data-apis.html#cb38-1" tabindex="-1"></a><span class="kw">var</span> getDensityColor <span class="op">=</span> <span class="kw">function</span>(d) {</span>
-<span id="cb38-2"><a href="leaflet-maps-open-data-apis.html#cb38-2" tabindex="-1"></a>  <span class="cf">return</span> d <span class="op">&gt;</span> <span class="dv">100</span>  <span class="op">?</span> <span class="st">&#39;#7a0177&#39;</span> <span class="op">:</span></span>
-<span id="cb38-3"><a href="leaflet-maps-open-data-apis.html#cb38-3" tabindex="-1"></a>          d <span class="op">&gt;</span> <span class="dv">50</span>  <span class="op">?</span> <span class="st">&#39;#c51b8a&#39;</span> <span class="op">:</span></span>
-<span id="cb38-4"><a href="leaflet-maps-open-data-apis.html#cb38-4" tabindex="-1"></a>          d <span class="op">&gt;</span> <span class="dv">20</span>  <span class="op">?</span> <span class="st">&#39;#f768a1&#39;</span> <span class="op">:</span></span>
-<span id="cb38-5"><a href="leaflet-maps-open-data-apis.html#cb38-5" tabindex="-1"></a>          d <span class="op">&gt;</span> <span class="dv">5</span>   <span class="op">?</span> <span class="st">&#39;#fbb4b9&#39;</span> <span class="op">:</span></span>
-<span id="cb38-6"><a href="leaflet-maps-open-data-apis.html#cb38-6" tabindex="-1"></a>                    <span class="st">&#39;#feebe2&#39;</span></span>
+<span id="cb37-10"><a href="leaflet-maps-open-data-apis.html#cb37-10" tabindex="-1"></a>})<span class="op">.</span><span class="fu">addTo</span>(map)</span>
+<span id="cb37-11"><a href="leaflet-maps-open-data-apis.html#cb37-11" tabindex="-1"></a></span>
+<span id="cb37-12"><a href="leaflet-maps-open-data-apis.html#cb37-12" tabindex="-1"></a>legend<span class="op">.</span><span class="fu">addOverlay</span>(seismicHazardLayer<span class="op">,</span> <span class="st">&#39;Seismic hazard&#39;</span>)</span></code></pre></div>
+<p>Here, the <code>getHazardColor()</code> function returns a color for a given value
+based on pre-defined thresholds. In our case, we define 5 buckets,
+assigning the darkest red to values over 1.5 (centered around the volcano in
+the middle of the largest Hilo island), and the palest red
+to the values of 0.2 and under.</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb38-1"><a href="leaflet-maps-open-data-apis.html#cb38-1" tabindex="-1"></a><span class="kw">var</span> getHazardColor <span class="op">=</span> <span class="kw">function</span>(d) {</span>
+<span id="cb38-2"><a href="leaflet-maps-open-data-apis.html#cb38-2" tabindex="-1"></a>    <span class="cf">return</span> d <span class="op">&gt;</span> <span class="fl">1.5</span>   <span class="op">?</span> <span class="st">&#39;#7a0177&#39;</span> <span class="op">:</span></span>
+<span id="cb38-3"><a href="leaflet-maps-open-data-apis.html#cb38-3" tabindex="-1"></a>            d <span class="op">&gt;</span> <span class="fl">1.0</span>  <span class="op">?</span> <span class="st">&#39;#c51b8a&#39;</span> <span class="op">:</span></span>
+<span id="cb38-4"><a href="leaflet-maps-open-data-apis.html#cb38-4" tabindex="-1"></a>            d <span class="op">&gt;</span> <span class="fl">0.5</span>  <span class="op">?</span> <span class="st">&#39;#f768a1&#39;</span> <span class="op">:</span></span>
+<span id="cb38-5"><a href="leaflet-maps-open-data-apis.html#cb38-5" tabindex="-1"></a>            d <span class="op">&gt;</span> <span class="fl">0.2</span>  <span class="op">?</span> <span class="st">&#39;#fbb4b9&#39;</span> <span class="op">:</span></span>
+<span id="cb38-6"><a href="leaflet-maps-open-data-apis.html#cb38-6" tabindex="-1"></a>                        <span class="st">&#39;#feebe2&#39;</span></span>
 <span id="cb38-7"><a href="leaflet-maps-open-data-apis.html#cb38-7" tabindex="-1"></a>}</span></code></pre></div>
 <p>While it is convenient to pull data directly from the source databases,
 remember that those resources are out of your control (unless you administer them, of course).
 Data changes often come unannounced. For example, if the dataset owner decides
-to rename the population density field from <code>POP10_SQMI</code> to <code>Pop10_sqmi</code>,
+to rename the value field from <code>low_cont</code> to <code>hazard_value</code>,
 your map will stop showing values correctly. Datasets may get moved
 to a different domain name or get deleted entirely (we experienced both!), so
 it is wise to have a back-up file saved locally.</p>
 <p>If you are more concerned about the long-term functioning of your map as opposed
-to displaying the most up-to-date version of the dataset, you may consider serving
+to displaying the most up-to-date version of the dataset, consider serving
 your data from local GeoJSON files instead (but ensure first that it is permitted by the data license).</p>
 <div id="summary12" class="section level3 unnumbered hasAnchor">
 <h3>Summary<a href="leaflet-maps-open-data-apis.html#summary12" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>In this chapter, we introduced Leaflet map templates for common map problems,
 such as telling stories about places using scrollable interface,
-showing point data from databases like Socrata, and creating heatmaps
-to visualize areas of high event density.</p>
+showing point and polygon data from sources such as ArcGIS/Esri MapServer and JSON API endpoints,
+and creating heatmaps to visualize areas of high event density.</p>
 <p>You can use these templates as a base to kickstart your own mapping projects.
 Leaflet.js is <a href="https://leafletjs.com/reference">well-documented</a>, and we recommend
 looking at <a href="https://leafletjs.com/examples.html">their tutorials</a> for more inspiration.</p>

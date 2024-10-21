@@ -24,7 +24,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2024-09-09" />
+<meta name="date" content="2024-10-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -599,7 +599,9 @@ Figure 13.18: When clipping, make sure your active layer is the one being clippe
 </div>
 <div id="join-points-with-polygon-map" class="section level4 unnumbered hasAnchor">
 <h4>Join points with polygon map<a href="mapshaper.html#join-points-with-polygon-map" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Joining a spreadsheet of point data with geographical boundaries is also known as a <em>spatial join</em> and is a common task in data visualization. In this exercise, you will download this table of <a href="data/ct-stations.csv">Connecticut electric vehicle charging station data, including latitude and longitude coordinates for each location, in CSV format</a>, and also download this <a href="data/ct-census-tracts-2018.geojson">Connecticut census tracts 2018 boundaries in GeoJSON format</a>. Our goal is to use Mapshaper’s powerful <code>-join</code> command to answer this question: in which census tract is each charging station located?</p>
+<p>Joining a spreadsheet of point data with geographical boundaries is also known as a <em>spatial join</em> and is a common task in data visualization. Below we will download two files: a CSV table of points with latitude-longitudue coordinates and a GeoJSON file of census tract boundaries. Our goal is to use Mapshaper’s powerful <code>-join</code> command to answer this question: in which census tract is each charging station located?</p>
+<p>Before you start, download this table of <a href="data/ct-stations.csv">Connecticut electric vehicle charging station data, including latitude and longitude coordinates for each location, in CSV format</a>. Note: Safari browser users may need to File &gt; Save As &gt; Format: Page Source to download in CSV format.</p>
+<p>Also, download this <a href="data/ct-census-tracts-2018.geojson">Connecticut census tracts 2018 boundaries in GeoJSON format</a>. Note: Safari browser users may need to File &gt; Save As &gt; Format: Page Source to download in GeoJSON format.</p>
 <ol style="list-style-type: decimal">
 <li>Import the CSV point data file you downloaded above into Mapshaper using its Quick import box. Click on the <em>inspect features</em> arrow tool and float over cells to confirm that they contain <em>Latitude</em> and <em>Longitude</em> data columns, as shown in Figure <a href="mapshaper.html#fig:mapshaper-inspect-csv">13.19</a>.</li>
 </ol>

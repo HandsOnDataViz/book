@@ -455,7 +455,11 @@ knitr::include_graphics("images/13-transform/mapshaper-clip-annotated.png")
 ```
 
 #### Join points with polygon map {-}
-Joining a spreadsheet of point data with geographical boundaries is also known as a *spatial join* and is a common task in data visualization. In this exercise, you will download this table of [Connecticut electric vehicle charging station data, including latitude and longitude coordinates for each location, in CSV format](data/ct-stations.csv), and also download this [Connecticut census tracts 2018 boundaries in GeoJSON format](data/ct-census-tracts-2018.geojson). Our goal is to use Mapshaper's powerful `-join` command to answer this question: in which census tract is each charging station located?
+Joining a spreadsheet of point data with geographical boundaries is also known as a *spatial join* and is a common task in data visualization. Below we will download two files: a CSV table of points with latitude-longitudue coordinates and a GeoJSON file of census tract boundaries. Our goal is to use Mapshaper's powerful `-join` command to answer this question: in which census tract is each charging station located?
+
+Before you start, download this table of [Connecticut electric vehicle charging station data, including latitude and longitude coordinates for each location, in CSV format](data/ct-stations.csv). Note: Safari browser users may need to File > Save As > Format: Page Source to download in CSV format. 
+
+Also, download this [Connecticut census tracts 2018 boundaries in GeoJSON format](data/ct-census-tracts-2018.geojson). Note: Safari browser users may need to File > Save As > Format: Page Source to download in GeoJSON format.  
 
 1. Import the CSV point data file you downloaded above into Mapshaper using its Quick import box. Click on the *inspect features* arrow tool and float over cells to confirm that they contain *Latitude* and *Longitude* data columns, as shown in Figure \@ref(fig:mapshaper-inspect-csv).
 

@@ -80,15 +80,19 @@ Tell your story and show it with data, using free and easy-to-learn tools on the
 
 Learn more about this [open-access web edition](open-access.html), based on the book manuscript we submitted to our publisher, O'Reilly Media, Inc., which we have permission to freely share under the terms of our contract. Readers may purchase the publisher's improved and copyedited version, in print or ebook editions. Figure numbering and other details vary between this open-access web edition and the publisher's editions.
 
-<div style="text-align:center">
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
+<!-- <div style="text-align:center">
+<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
   <img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png" />
 </a></div>
 <div style="text-align:left">
 <strong>Hands-On Data Visualization</strong> is copyrighted
 by <a href="https://handsondataviz.org/authors">Jack Dougherty and Ilya Ilyankou</a>
-and distributed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.
-You may freely share this content for non-commercial purposes, with a source credit to <a href="http://HandsOnDataViz.org">http://HandsOnDataViz.org</a>.
+and distributed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a><br>.
+You may freely share this content for non-commercial purposes, with a source credit to <a href="https://HandsOnDataViz.org">http://HandsOnDataViz.org</a>. -->
+
+<div style="text-align:left">
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><strong><a property="dct:title" rel="cc:attributionURL" href="https://handsondataviz.org">Hands-On Data Visualization</a></strong> is copyrighted by <span property="cc:attributionName">Jack Dougherty and Ilya Ilyankou</span> and distributed under a <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Creative Commons Attribution-NonCommercial-NoDerivatives (BY-NC-ND) 4.0 International license <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1" alt=""></a>.<br>You may freely share this content for non-commercial purposes, with a source credit to <a href="https://HandsOnDataViz.org">https://HandsOnDataViz.org</a>.</p>
+</div>
 
 #### Disclaimer {-}
 The information is this book is provided without warranty. The authors and publisher have neither liability nor responsibility to any person or entity related to any loss or damages arising from the information contained in this book.
@@ -152,7 +156,7 @@ The chapters in this book build up toward our central goal: telling true and mea
 
 | Authors      | About Us     |
 | ------------ | ------------ |
-| ![](images/0-preface/dougherty-jack-200.png) | Jack Dougherty is Professor of Educational Studies at Trinity College in Hartford, Connecticut. He teaches a data visualization course where students partner with community organizations to help them tell their stories online with interactive charts and maps. Trained as a historian, Jack learned data visualization to share evidence more widely about cities, suburbs, and schools over time for his *[On The Line](https://ontheline.trincoll.edu)* book. Visit [his website](https://jackdougherty.org) or follow him on [Mastodon](https://mstdn.social/@jackdougherty"). |
+| ![](images/0-preface/dougherty-jack-200.png) | Jack Dougherty is Professor of Educational Studies at Trinity College in Hartford, Connecticut. He teaches a data visualization course where students partner with community organizations to help them tell their stories online with interactive charts and maps. Trained as a historian, Jack learned data visualization to share evidence more widely about cities, suburbs, and schools over time for his *[On The Line](https://ontheline.trincoll.edu)* book. Visit [his website](https://jackdougherty.org) to email or follow him on social media. |
 | ![](images/0-preface/ilyankou-ilya-200.png) | Ilya Ilyankou is a computer scientist and artist. He is currently pursuing a PhD in conversational systems (large language models) at University College London (UCL). Prior to joining UCL, Ilya spent five years in industry as a full-stack developer and data engineer. He holds a bachelor’s degree in Computer Science and Studio Arts from Trinity College, Hartford, and a master’s degree in Geospatial Information Science from the University of Leeds. Follow Ilya on [Twitter](https://twitter.com/ilyankou) or visit his [website](https://ilyankou.com/). |   
 
 ### Acknowledgements {-}

@@ -9,7 +9,7 @@ The interactive charts and maps that we'll construct later this book are built o
  knitr::include_graphics("images/02-spreadsheet/spreadsheet-terms-annotated.png")
 ```
 
-In this chapter, we'll start by reviewing basic steps, such as [sharing](share.html), [uploading](upload.html), [geocoding with add-on tools](geocode.html), and [collecting data with online forms](forms.html). Then we'll move on to ways of organizing and analyzing your data, such as [sorting and filtering](sort.html), [calculating with formulas](calculate.html), and [summarizing with pivot tables](pivot.html). Finally, we'll examine ways to connect different sheets, such as [matching columns with lookup tables](vlookup.html), and [relational databases](database.html). We illustrate all of these methods with beginner-level users in mind, meaning they do not require any prior background.
+In this chapter, we'll start by reviewing basic steps, such as [sharing](share.html), [uploading](upload.html), [geocoding with add-on tools](geocode.html), and [collecting data with online forms](forms.html). Then we'll move on to ways of organizing and analyzing your data, such as [sorting and filtering](sort.html), [calculating with formulas](calculate.html), and [summarizing with pivot tables](pivot.html). Finally, we'll examine ways to connect different sheets, such as [matching columns with lookup tables](xlookup.html), and [relational databases](database.html). We illustrate all of these methods with beginner-level users in mind, meaning they do not require any prior background.
 
 We'll practice several of these skills using sample data that may interest you, because it includes people like you. So far over 3,000 readers of this book have responded to a quick public survey about their general location, prior level of experience and education, and goals for learning data visualization. If you haven't already done so, [fill out the quick survey form](https://forms.gle/yn5QwTzfQkYcppQn9) to contribute your own response, and also to give you a better sense of how the questions were posed, then see the results in the [public sample dataset](https://docs.google.com/spreadsheets/d/1egX_akJccnCSzdk1aaDdtrEGe5HcaTrlOW-Yf6mJ3Uo).
 
@@ -434,89 +434,96 @@ Although Google Sheets pivot tables display raw numbers by default, under the *S
 
 While designing pivot tables may look differently across other spreadsheet tools, the concept is the same. Learn more about how pivot tables work in the [support pages for Google Sheets](https://support.google.com/docs/topic/9054603) or [LibreOffice](https://help.libreoffice.org/Calc/Creating_Pivot_Tables) or [Microsoft Excel](https://support.microsoft.com/en-us/office/create-a-pivottable-to-analyze-worksheet-data-a9a84538-bfe9-40a9-a8e9-f99134456576). Remember that you can download the Google Sheets data and export to ODS or Excel format to experiment with pivot tables in other tools.
 
-Now that you've learned how to regroup and summarize data with pivot tables, in the next section you'll learn a related method to connect matching data columns across different spreadsheets using VLOOKUP.
+Now that you've learned how to regroup and summarize data with pivot tables, in the next section you'll learn a related method to connect matching data columns across different spreadsheets using XLOOKUP.
 
 
-## Match Columns with VLOOKUP {- #vlookup}
-Spreadsheet tools also allow you to "look up" data in one sheet and automatically find and paste matching data from another sheet. This section introduces the VLOOKUP function, where the "V" stands for "vertical," meaning matches across columns, which is the most common way to look up data. You'll learn how to write a function in one sheet that looks for matching cells in select columns in a second sheet, and pastes the relevant data into a new column in the first sheet. If you've ever faced the tedious task of manually looking up and matching data between two different spreadsheets, this automated method will save you lots of time.
+## Match Columns with XLOOKUP {- #xlookup}
+Spreadsheet tools also allow you to "look up" data in one sheet and automatically find and paste matching data from another sheet. This section introduces the XLOOKUP function, where the "X" stands for "cross," meaning matches across columns, which is the most common way to look up data. You'll learn how to write a function in one sheet that looks for matching cells in select columns in a second sheet, and pastes the relevant data into a new column in the first sheet. If you've ever faced the tedious task of manually looking up and matching data between two different spreadsheets, this automated method will save you lots of time.
 
-Here's a scenario that illustrates why and how to use the VLOOKUP function. Figure \@ref(fig:vlookup-setup) shows two different sheets with sample data about food banks that help feed hungry people in different parts of the US, drawn from [Feeding America: Find Your Local Food Bank](https://www.feedingamerica.org/find-your-local-foodbank). The first sheet lists individual people at each food bank, the second sheet lists the address for each food bank, and the two share a common column named *organization*. Your goal is to produce one sheet that serves as a mailing list, where each row contains one individual's name, organization, and full mailing address. Since we're using a small data sample to simplify this tutorial, it may be tempting to manually copy and paste in the data. But imagine an actual case that includes over 200 US food banks and many more individuals, where using an automated method to match and paste data is essential.
+Tip: Earlier editions of this book described a similar function called VLOOKUP, but the XLOOKUP function is simpler to set up and more flexible. See more about both in the [Google Sheets help page for XLOOKUP](https://support.google.com/docs/answer/12405947) and the [help page for VLOOKUP](https://support.google.com/docs/answer/3093318).
 
-(ref:vlookup-setup) Your goal is to create one mailing list that matches individual names and organizations on the left sheet with their addresses on the right sheet.
+Here's a scenario that illustrates why and how to use the XLOOKUP function. Figure \@ref(fig:xlookup-setup) shows two different sheets with sample data about food banks that help feed hungry people in different parts of the US, drawn from [Feeding America: Find Your Local Food Bank](https://www.feedingamerica.org/find-your-local-foodbank). The first sheet lists individual people at each food bank, the second sheet lists the address for each food bank, and the two share a common column named *organization*. Your goal is to produce one sheet that serves as a mailing list, where each row contains one individual's name, organization, and full mailing address. Since we're using a small data sample to simplify this tutorial, it may be tempting to manually copy and paste in the data. But imagine an actual case that includes over 200 US food banks and many more individuals, where using an automated method to match and paste data is essential.
 
-```{r vlookup-setup, out.width=750, fig.cap="(ref:vlookup-setup)"}
- knitr::include_graphics("images/02-spreadsheet/vlookup-setup.png")
+(ref:xlookup-setup) Your goal is to create one mailing list that matches individual names and organizations on the left sheet with their addresses on the right sheet.
+
+```{r xlookup-setup, out.width=750, fig.cap="(ref:xlookup-setup)"}
+ knitr::include_graphics("images/02-spreadsheet/xlookup-setup.png")
 ```
 
 1. Open this [Google Sheet of Food Bank sample names and addresses](https://docs.google.com/spreadsheets/d/1bcvOJayycijIbf8e-u_cMq0kPbEp29MFQr_FXK6igs4) in a new browser tab. Log into your Google Drive, and go to *File > Make a Copy* to create your own version that you can edit.
 
 We simplified this two-sheet problem by placing both tables in the same Google Sheet. Click on the first tab, called *names*, and the second tab, called *addresses*. In the future, if you need to move two separate Google Sheets into the same file, go to the tab of one sheet, right-click the tab to *Copy to > Existing spreadsheet*, and select the name of the other sheet.
 
-2. In your editable copy of the Google Sheet, the *names* tab will be our destination for the mailing list we will create. Go to the *addresses* sheet, copy the column headers for *street - city - state - zip*, and paste them into cells C1 through F1 on the *names* sheet, as shown in Figure \@ref(fig:vlookup-headers). This creates new column headers where our lookup results will be automatically pasted.
+2. In your editable copy of the Google Sheet, the *names* tab will be our destination for the mailing list we will create. Go to the *addresses* sheet, copy the column headers for *street - city - state - zip*, and paste them into cells C1 through F1 on the *names* sheet, as shown in Figure \@ref(fig:xlookup-headers). This creates new column headers where our lookup results will be automatically pasted.
 
-(ref:vlookup-headers) Paste the last four column headers from the *addresses* sheet into the *names* sheet.
+(ref:xlookup-headers) Paste the last four column headers from the *addresses* sheet into the *names* sheet.
 
-```{r vlookup-headers, out.width=500, fig.cap="(ref:vlookup-headers)"}
- knitr::include_graphics("images/02-spreadsheet/vlookup-headers.png")
+```{r xlookup-headers, out.width=500, fig.cap="(ref:xlookup-headers)"}
+ knitr::include_graphics("images/02-spreadsheet/xlookup-headers.png")
 ```
 
-3. In the *names* sheet, click in cell C2 and type `=VLOOKUP`, and Google Sheets will suggest that you complete the full formula in this format:
+3. In the *names* sheet, click in cell C2 and type `=XLOOKUP`, and Google Sheets will suggest that you complete the full formula in this format:
 
 ```
-VLOOKUP(search_key, range, index, [is_sorted])
+XLOOKUP(search_key, lookup_range, result_range,...)
 ```
 
-Here's what each part means:
+Here's what the three *required* parts mean:
 
 - search_key = The cell in 1st sheet you wish to match.
-- range = At least two columns in the 2nd sheet to search for your match and desired result.
-- index = The column in the 2nd sheet range that contains your desired result, where 1 = first column, 2 = second column, etc.
-- [is_sorted] = Enter `false` to find exact matches only, which makes sense in this case. Otherwise, enter `true` if the first column of the 2nd sheet range is sorted and you will accept the closest match, even if not an exact one.
+- lookup_range = The column or row in the 2nd sheet to search for your match.
+- result_range = The column or row the 2nd sheet that contains your desired result.
 
-4. One option is to directly type this formula into cell C2, using comma separators: `=VLOOKUP(B2,'addresses'!A:E,2,false)`. Another option is to click on the *VLOOKUP Vertical lookup* grey box that Google Sheets suggests, and click on the relevant cells, columns, and sheets for the formula to be automatically entered for you, as shown in Figure \@ref(fig:vlookup-solution). What's new here is that this formula in the *names* sheet refers to a range of columns A to E in the *addresses* sheet. Press *Return* or *Enter* on your keyboard.
+Afterwards are three *optional* parts, which in most cases you can omit and use the default values:
+- missing_value = The value to return if no match is found (#N/A by default).
+- match_mode = The precision level for finding matches (default is 0 for exact match).
+- search_mode = The direction for searching matches (default is 1 from first to last).
 
-(ref:vlookup-solution) The VLOOKUP formula in cell C2 of the *names* sheet (top) searches for matches across columns A to E in the *addresses* sheet (bottom).
+4. One option is to directly type this formula into cell C2, using comma separators, but it's very long: `=XLOOKUP(B2,'addresses'!A:A, 'addresses'!B:B)`.
 
-```{r vlookup-solution, out.width=700, fig.cap="(ref:vlookup-solution)"}
- knitr::include_graphics("images/02-spreadsheet/vlookup-solution.png")
+A better option is to click on the *XLOOKUP cross lookup* green box that Google Sheets suggests, and click on the relevant cells, columns, and sheets for the formula to be automatically entered for you, as shown in Figure \@ref(fig:xlookup-solution). What's new here is that this formula in the *names* sheet refers to a *range* of all rows in columns A and B in the *addresses* sheet. Press *Return* or *Enter* on your keyboard.
+
+(ref:xlookup-solution) The XLOOKUP formula in cell C2 of the *names* sheet (top) searches for matches across column A in the *addresses* sheet and shows results from column B (bottom).
+
+```{r xlookup-solution, out.width=700, fig.cap="(ref:xlookup-solution)"}
+ knitr::include_graphics("images/02-spreadsheet/xlookup-solution.png")
 ```
 
 Let's break down each part of the formula you entered in cell C2 of the *names* sheet:
 
-- `B2` = The search_key: the cell in the *organization* column you wish to match in the *names* sheet
-- `'addresses'!A:E` = The range where you are searching for your match and results across columns A to E in the *addresses* sheet.
-- `2` = The index, meaning your desired result appears in the 2nd column (*street*) of the range above.
-- `false` = Find exact matches only.
+- `B2` = The search_key: the cell in the *organization* column of the *names* sheet you wish to match.
+- `'addresses'!A:A` = The lookup range where you are searching for a match in the *organization* column of the *addresses* sheet.
+- `'addresses'!B:B` = The result range, meaning your desired result in the *street* column of the *addresses* sheet.
 
-5. After you enter the full VLOOKUP formula, it will display the exact match for the first organization, the Central Texas Food Bank, whose address is 6500 Metropolis Dr. Click and hold down on the blue dot in the bottom-right corner of cell C2, and drag your crosshair cursor across columns D to F and let go, which will automatically paste and update the formula for the city, state, and zip columns, as shown in Figure \@ref(fig:vlookup-drag).
+5. After you enter the full XLOOKUP formula, it will display the exact match for the first organization, the Central Texas Food Bank, whose address is 6500 Metropolis Dr. Click and hold down on the blue dot in the bottom-right corner of cell C2, and drag your crosshair cursor across columns D to F and let go, which will automatically paste and update the formula for the city, state, and zip columns, as shown in Figure \@ref(fig:xlookup-drag).
 
-(ref:vlookup-drag) Click on cell C2, then hold-and-drag the bottom-right blue dot across columns D to F, which automatically pastes and updates the formula.
+(ref:xlookup-drag) Click on cell C2, then hold-and-drag the bottom-right blue dot across columns D to F, which automatically pastes and updates the formula.
 
-```{r vlookup-drag, out.width=500, fig.cap="(ref:vlookup-drag)"}
- knitr::include_graphics("images/02-spreadsheet/vlookup-drag.png")
+```{r xlookup-drag, out.width=500, fig.cap="(ref:xlookup-drag)"}
+ knitr::include_graphics("images/02-spreadsheet/xlookup-drag.png")
 ```
 
-6. Finally, use the same hold-and-drag method to paste and update the formula downward to fill in all rows, as shown in Figure \@ref(fig:vlookup-final).
+6. Finally, use the same hold-and-drag method to paste and update the formula downward to fill in all rows, as shown in Figure \@ref(fig:xlookup-final).
 
-(ref:vlookup-final) Click on cell F2, then hold-and-drag the bottom-right blue dot down to row 11, which automatically pastes and updates the formula.
+(ref:xlookup-final) Click on cell F2, then hold-and-drag the bottom-right blue dot down to row 11, which automatically pastes and updates the formula.
 
-```{r vlookup-final, out.width=500, fig.cap="(ref:vlookup-final)"}
- knitr::include_graphics("images/02-spreadsheet/vlookup-final.png")
+```{r xlookup-final, out.width=500, fig.cap="(ref:xlookup-final)"}
+ knitr::include_graphics("images/02-spreadsheet/xlookup-final.png")
 ```
 
 Warning: If you save this spreadsheet in CSV format, your calculated results will appear in the CSV sheet, but any formulas you created to produce those results will disappear. Always keep track of your original spreadsheet to remind yourself how you constructed formulas.
 
-You've successfully created a mailing list---including each person's name, organization, and full mailing address---using the VLOOKUP function to match and paste data from two sheets. Now that you understand how to use formulas to connect different spreadsheets, the next section will teach you how to manage multiple relationships between spreadsheets with the help of a relational database.
+You've successfully created a mailing list---including each person's name, organization, and full mailing address---using the XLOOKUP function to match and paste data from two sheets. Now that you understand how to use formulas to connect different spreadsheets, the next section will teach you how to manage multiple relationships between spreadsheets with the help of a relational database.
 
 
 ## Spreadsheet vs. Relational Database {- #database}
-In the previous section, you learned how the VLOOKUP function can search for matching data in columns across spreadsheets and automatically paste results. Building on that concept, let's distinguish between a spreadsheet and a relational database, and under what circumstances it might be wiser to use the latter.
+In the previous section, you learned how the XLOOKUP function can search for matching data in columns across spreadsheets and automatically paste results. Building on that concept, let's distinguish between a spreadsheet and a relational database, and under what circumstances it might be wiser to use the latter.
 
-A spreadsheet is sometimes called a "flat-file database" because all of the records are stored in rows and columns in a single table. For example, if you kept a single spreadsheet of US food bank staff, every row would list an individual person, organization, and addresses, just like the mailing list we created in Figure \@ref(fig:vlookup-final) in the prior section on VLOOKUP.
+A spreadsheet is sometimes called a "flat-file database" because all of the records are stored in rows and columns in a single table. For example, if you kept a single spreadsheet of US food bank staff, every row would list an individual person, organization, and addresses, just like the mailing list we created in Figure \@ref(fig:xlookup-final) in the prior section on XLOOKUP.
 
 But keeping all of your data in a single spreadsheet can raise problems. For example, it contains lots of duplicated entries. For people who all work at the same food bank, each row contains a duplicate of that organization's address. If an organization moves to a new location, you need to update all of the rows that contain those addresses. Or if two organizations merge together under a new name, you need to update all of the rows for individuals affected by that change. While keeping all of your information organized in a single spreadsheet initially sounds like a good idea, when your dataset grows in size and internal relationships (such as tracking people who are connected to organizations, etc.), continually updating every row becomes a lot of extra work.
 
-Instead of a single spreadsheet, consider using a relational database, which organizes information into separate sheets (also known as tables), but continually maintains the relevant connections between them. Look back at the two-sheet problem we presented in Figure \@ref(fig:vlookup-setup) at the beginning of the VLOOKUP section. The first sheet lists individual people at each food bank, the second sheet lists the address for each food bank, and the two sheets share a column named *organization* that shows how they are related. Relational databases can save you time. For example, if you update an organization's address in one sheet, the linked sheet will automatically reflect this change in every row for staff who work at that organization.
+Instead of a single spreadsheet, consider using a relational database, which organizes information into separate sheets (also known as tables), but continually maintains the relevant connections between them. Look back at the two-sheet problem we presented in Figure \@ref(fig:xlookup-setup) at the beginning of the XLOOKUP section. The first sheet lists individual people at each food bank, the second sheet lists the address for each food bank, and the two sheets share a column named *organization* that shows how they are related. Relational databases can save you time. For example, if you update an organization's address in one sheet, the linked sheet will automatically reflect this change in every row for staff who work at that organization.
 
 Although Google Sheets is a great spreadsheet, it's not a relational database. Instead, consider a better tool such as [Airtable](https://airtable.com), which allows you to create relational databases in your web browser with up to 1,200 free records (or more with the paid version), using existing templates or your own designs. Airtable enables data migration by importing or exporting all records in CSV format, and it also supports real-time editor collaboration with co-workers.
 

@@ -457,7 +457,7 @@ knitr::include_graphics("images/13-transform/mapshaper-clip-annotated.png")
 #### Join points with polygon map {-}
 Joining a spreadsheet of point data with geographical boundaries is also known as a *spatial join* and is a common task in data visualization. Below we will download two files: a CSV table of points with latitude-longitudue coordinates and a GeoJSON file of census tract boundaries. Our goal is to use Mapshaper's powerful `-join` command to answer this question: in which census tract is each charging station located?
 
-Before you start, download this table of [Connecticut electric vehicle charging station data, including latitude and longitude coordinates for each location, in CSV format](data/ct-stations.csv). Note: Safari browser users may need to File > Save As > Format: Page Source to download in CSV format. 
+Before you start, download this table of [Connecticut electric vehicle charging station data, including latitude and longitude coordinates for each location, in CSV format](data/ct-stations.csv). Note: Safari browser users may need to File > Save As > Format: Page Source to download in CSV format.
 
 Also, download this [Connecticut census tracts 2018 boundaries in GeoJSON format](data/ct-census-tracts-2018.geojson). Note: Safari browser users may need to File > Save As > Format: Page Source to download in GeoJSON format.  
 
@@ -576,7 +576,7 @@ In the section above on "Count points in polygons," you did not need to specify 
 
 If you don't have a CSV dataset that matches the columns in your boundary map data, you can easily create one.
 Upload the boundary map to Mapshaper, and export in CSV format. Open the downloaded CSV file in any spreadsheet tool.
-To match data columns in the CSV spreadsheet, use the [VLOOKUP](vlookup.html) function.
+To match data columns in the CSV spreadsheet, use the [XLOOKUP](xlookup.html) function.
 
 In real life, you will rarely have perfect files with one-to-one matches,
 so you might want to have more information about which features didn't get matched so

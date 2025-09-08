@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Datawrapper Table with Sparklines | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.42 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.44 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Datawrapper Table with Sparklines | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2025-03-15" />
+<meta name="date" content="2025-09-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -205,7 +205,7 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="sort.html"><a href="sort.html"><i class="fa fa-check"></i>Sort and Filter Data</a></li>
 <li class="chapter" data-level="" data-path="calculate.html"><a href="calculate.html"><i class="fa fa-check"></i>Calculate with Formulas</a></li>
 <li class="chapter" data-level="" data-path="pivot.html"><a href="pivot.html"><i class="fa fa-check"></i>Summarize Data with Pivot Tables</a></li>
-<li class="chapter" data-level="" data-path="vlookup.html"><a href="vlookup.html"><i class="fa fa-check"></i>Match Columns with VLOOKUP</a></li>
+<li class="chapter" data-level="" data-path="xlookup.html"><a href="xlookup.html"><i class="fa fa-check"></i>Match Columns with XLOOKUP</a></li>
 <li class="chapter" data-level="" data-path="database.html"><a href="database.html"><i class="fa fa-check"></i>Spreadsheet vs. Relational Database</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="find.html"><a href="find.html"><i class="fa fa-check"></i><b>3</b> Find and Question Your Data</a>
@@ -398,7 +398,7 @@ Figure 8.2: Table with sparklines. Explore the <a href="https://datawrapper.dwcd
 <ol style="list-style-type: decimal">
 <li>Open our <a href="https://docs.google.com/spreadsheets/d/1Wev14VaXyq7d7yuYo-7FwRoAjyyaY1v6z_qBoo_4VSo/edit#gid=3466257">cleaned-up World Bank data on life expectancy at birth, 1960 to 2018 in Google Sheets</a>.</li>
 </ol>
-<p>To simplify this tutorial, we downloaded <a href="https://data.worldbank.org/indicator/SP.DYN.LE00.IN">life expectancy at birth from 1960 to 2018 by nation, in CSV format, from the World Bank</a>, one of the open data repositories we listed in <a href="find.html">Chapter 3: Find and Question Your Data</a>. In our spreadsheet, we cleaned up the data, such as removing nations with 5 or fewer years of data reported over a half-century, as described in the Notes tab in the Google Sheet. Using the <a href="vlookup.html">VLookup spreadsheet method from Chapter 2</a>, we merged in columns of <a href="https://github.com/datawrapper/datawrapper/wiki/Country-flag-icons">two-letter nation codes and continents from Datawrapper</a>. We also created two new columns: one named <em>Life Expectancy 1960</em> (intentionally blank for the sparkline to come) and <em>Difference</em> (which calculates the difference between the earliest and the most recent year of data available, in most cases from 1960 to 2018). See the Notes tab in the Google Sheet for more details.</p>
+<p>To simplify this tutorial, we downloaded <a href="https://data.worldbank.org/indicator/SP.DYN.LE00.IN">life expectancy at birth from 1960 to 2018 by nation, in CSV format, from the World Bank</a>, one of the open data repositories we listed in <a href="find.html">Chapter 3: Find and Question Your Data</a>. In our spreadsheet, we cleaned up the data, such as removing nations with 5 or fewer years of data reported over a half-century, as described in the Notes tab in the Google Sheet. Using the <a href="xlookup.html">XLookup spreadsheet method from Chapter 2</a>, we merged in columns of <a href="https://github.com/datawrapper/datawrapper/wiki/Country-flag-icons">two-letter nation codes and continents from Datawrapper</a>. We also created two new columns: one named <em>Life Expectancy 1960</em> (intentionally blank for the sparkline to come) and <em>Difference</em> (which calculates the difference between the earliest and the most recent year of data available, in most cases from 1960 to 2018). See the Notes tab in the Google Sheet for more details.</p>
 <ol start="2" style="list-style-type: decimal">
 <li><p>Go to <a href="https://www.datawrapper.de">Datawrapper</a>, click on <em>Start Creating</em>, and select <em>New Table</em> in the top navigation. You are not required to sign in, but if you wish to save your work, we recommend that you create a free account.</p></li>
 <li><p>In the first <em>Upload Data</em> tab, select <em>Import Google Spreadsheet</em>, paste in the web address of our cleaned-up Google Sheet, and click <em>Proceed.</em> Your Google Sheet must be <em>shared</em> so that others can view it.</p></li>

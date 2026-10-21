@@ -150,7 +150,7 @@ Now that your published Google Sheet is linked to your live map, go to the *Opti
 
 Open the browser tab that displays your live map and refresh the page to see your changes. If your changes do not appear within a few seconds, see the [Fix Common Problems](fix.html) section of the appendix.
 
-Tip: In Google Sheet Options > Map Settings > Basemap Tiles, the default option is the CartoDB.Positron basemap. If you choose options by [other Leaflet basemap providers](https://leaflet-extras.github.io/leaflet-providers/preview/), you may need to [register for and insert an API key](https://github.com/leaflet-extras/leaflet-providers#providers-requiring-registration) to use their service. If you choose a Stadia basemap, [register for an account to use domain-based authentication](https://docs.stadiamaps.com/authentication), as shown in Figure \@ref(fig:stadia-domain).
+Tip: In Google Sheet Options > Map Settings > Basemap Tiles, the default option is the CartoDB.Positron basemap. If you use any Carto basemaps, get your own [free CARTO basemap API key](https://carto.com/basemaps/apikey/), and paste it place of our key. See more details in the [Get Your CARTO Basemaps API Key](carto-basemaps-api-key.html) section. If you choose options by [other Leaflet basemap providers](https://leaflet-extras.github.io/leaflet-providers/preview/), you may need to [register for and insert an API key](https://github.com/leaflet-extras/leaflet-providers#providers-requiring-registration) to use their service. If you choose a Stadia basemap, [register for an account to use domain-based authentication](https://docs.stadiamaps.com/authentication), as shown in Figure \@ref(fig:stadia-domain).
 
 (ref:stadia-domain) If you choose a Stadia basemap option, register to use domain-based authentication. For example, *handsondataviz.github.io* is the domain for our demo map on GitHub Pages.
 
@@ -450,7 +450,7 @@ Now that your published Google Sheet is linked to your live map, go to the *Opti
 
 Open the browser tab that displays your live map and refresh the page to see your changes. If your changes do not appear within a few seconds, see the [Fix Common Problems](fix.html) section of the appendix.
 
-Tip: In Google Sheet Options > Map Settings > Basemap Tiles, the default option is the CartoDB.Positron basemap. If you choose options by [other Leaflet basemap providers](https://leaflet-extras.github.io/leaflet-providers/preview/), you may need to [register for and insert an API key](https://github.com/leaflet-extras/leaflet-providers#providers-requiring-registration) to use their service. If you choose a Stadia basemap, [register for an account to use domain-based authentication](https://docs.stadiamaps.com/authentication), as shown in Figure \@ref(fig:stadia-domain2).
+Tip: In Google Sheet Options > Map Settings > Basemap Tiles, the default option is the CartoDB.Positron basemap. If you use any Carto basemaps, get your own [free CARTO basemap API key](https://carto.com/basemaps/apikey/), and paste it place of our key. See more details in the [Get Your CARTO Basemaps API Key](carto-basemaps-api-key.html) section. If you choose options by [other Leaflet basemap providers](https://leaflet-extras.github.io/leaflet-providers/preview/), you may need to [register for and insert an API key](https://github.com/leaflet-extras/leaflet-providers#providers-requiring-registration) to use their service. If you choose a Stadia basemap, [register for an account to use domain-based authentication](https://docs.stadiamaps.com/authentication), as shown in Figure \@ref(fig:stadia-domain2).
 
 (ref:stadia-domain2) If you choose a Stadia basemap option, register to use domain-based authentication. For example, *handsondataviz.github.io* is the domain for our demo map on GitHub Pages.
 
@@ -583,6 +583,42 @@ var googleDocURL = null;
 As an alternative to step G, if you wish to continue to store your map data in your Google Sheets that is published online, go to the section of this chapter titled [Get Your Own Google Sheets API Key](google-sheets-api-key.html), and insert it into the Leaflet map code as described, to avoid overusing our key. Google Sheets requires an API key to maintain reasonable [usage limits](https://developers.google.com/sheets/api/limits) on its service. You can get a free Google Sheets API key if you have a personal Google account, but *not* a Google Suite account provided by your school or business.
 
 If problems arise, see the [Fix Common Problems](fix.html) section of the appendix.
+
+## Get Your CARTO Basemaps API Key {- #carto-basemaps-api-key}
+Beginning in September 2026, [CARTO requires a free API key](https://docs.carto.com/faqs/carto-basemaps#why-do-i-see-an-api-key-required-watermark) (application programming interface key) for code to display its basemap tiles, in order to maintain reasonable limits on the use of its services.
+
+If you do not insert your free CARTO API key into the Leaflet code templates from this book and our GitHub repository, your map will display background tiles with words like "API KEY REQUIRED," as shown in Figure \@ref(fig:carto-api-required).
+
+(ref:carto-api-required) Screenshot of CARTO basemap error message for "API KEY REQUIRED".
+
+```{r carto-api-required, out.width=400, fig.cap="(ref:carto-api-required)"}
+ knitr::include_graphics("images/12-leaflet/carto-api-required.png")
+```
+
+To fix this problem: Request a [free CARTO basemaps API key](https://carto.com/basemaps/apikey/).
+
+If using a **simple Leaflet code template from this book**, such as the section on [Copy, Edit, and Host a Simple Leaflet Map Template](copy-leaflet.html), paste the key into the CARTO basemap URL portion of your code as shown in this generic format below:
+
+```
+https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png?key=INSERT_YOUR_KEY
+```
+
+Or if using a **more complex Leaflet code template from this book**, such as [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets.html) or [Leaflet Storymaps with Google Sheets](leaflet-storymaps-with-google-sheets.html), make sure you are using the most recent version of the code from our GitHub repository (version 1.3.2 or higher), where you should paste your free CARTO Basemaps API Key in the linked Google Sheet > Options > Map Settings field as shown in Figure \@ref(fig:storymaps-carto-api).
+
+(ref:storymaps-carto-api) Paste your free CARTO basemap API key into your linked Google Sheet.
+
+```{r storymaps-carto-api, out.width=600, fig.cap="(ref:storymaps-carto-api)"}
+ knitr::include_graphics("images/12-leaflet/storymaps-carto-api.png")
+```
+
+Note that if you originally used an earlier version of a complex Leaflet code template from our book, you might be able to fix the CARTO API KEY REQUIRED issue by updating the [Leaflet Providers](https://leaflet-extras.github.io/leaflet-providers/preview/) reference in the `index.html` file (around line 17) to version 4.0.0 or later, as shown in this code excerpt below:
+
+```
+<script src="https://unpkg.com/leaflet-providers@4.0.0/leaflet-providers.js"></script>
+```
+
+This updated version of Leaflet Providers should correctly read your CARTO API key that you pasted into your linked Google Sheet > Options > Map Settings field.
+
 
 ## Get Your Google Sheets API Key {- #google-sheets-api-key}
 After you've created your own version of [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets.html) or [Leaflet Storymaps with Google Sheets](leaflet-storymaps-with-google-sheets.html), there are two ways to finalize your map, as described above: either save your Google Sheet tabs in CSV format, or get your own Google Sheets API key and paste it into your Leaflet code on GitHub. You'll learn about the latter method in this section.

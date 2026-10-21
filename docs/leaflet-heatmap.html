@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Leaflet Heatmap Points with CSV Data | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.48 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Leaflet Heatmap Points with CSV Data | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2026-06-01" />
+<meta name="date" content="2026-10-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -295,6 +295,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="" data-path="leaflet-maps-with-google-sheets.html"><a href="leaflet-maps-with-google-sheets.html"><i class="fa fa-check"></i>Leaflet Maps with Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="leaflet-storymaps-with-google-sheets.html"><a href="leaflet-storymaps-with-google-sheets.html"><i class="fa fa-check"></i>Leaflet Storymaps with Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="carto-basemaps-api-key.html"><a href="carto-basemaps-api-key.html"><i class="fa fa-check"></i>Get Your CARTO Basemaps API Key</a></li>
 <li class="chapter" data-level="" data-path="google-sheets-api-key.html"><a href="google-sheets-api-key.html"><i class="fa fa-check"></i>Get Your Google Sheets API Key</a></li>
 <li class="chapter" data-level="" data-path="leaflet-maps-with-csv.html"><a href="leaflet-maps-with-csv.html"><i class="fa fa-check"></i>Leaflet Maps with CSV Data</a></li>
 <li class="chapter" data-level="" data-path="leaflet-heatmap.html"><a href="leaflet-heatmap.html"><i class="fa fa-check"></i>Leaflet Heatmap Points with CSV Data</a></li>
@@ -384,7 +385,7 @@ div.csl-indent {
 <div id="leaflet-heatmap" class="section level2 unnumbered hasAnchor">
 <h2>Leaflet Heatmap Points with CSV Data<a href="leaflet-heatmap.html#leaflet-heatmap" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Heatmaps turn individual points into hotspots or clusters, allowing viewers to explore
-spatial distributions of events, such as areas of high and low population density or incidents of crime. Figure <a href="leaflet-heatmap.html#fig:leaflet-heatmap">12.41</a> shows an interactive heatmap of
+spatial distributions of events, such as areas of high and low population density or incidents of crime. Figure <a href="leaflet-heatmap.html#fig:leaflet-heatmap">12.43</a> shows an interactive heatmap of
 bike theft locations in London between January and July 2020. The underlying
 data are coordinate locations for each reported bike theft,
 which the <a href="https://github.com/Leaflet/Leaflet.heat"><code>Leaflet.heat</code></a> plugin transforms
@@ -396,7 +397,7 @@ into more distinct clusters.</p>
 <iframe src="https://handsondataviz.github.io/leaflet-heatmap/" width="672" height="500px" data-external="1">
 </iframe>
 <p class="caption">
-Figure 12.41: Explore the <a href="https://handsondataviz.github.io/leaflet-heatmap/">interactive Leaflet Heatmap</a>.
+Figure 12.43: Explore the <a href="https://handsondataviz.github.io/leaflet-heatmap/">interactive Leaflet Heatmap</a>.
 </p>
 </div>
 <p>You can adapt the code we used for this London heatmap to create your own.</p>
@@ -413,17 +414,17 @@ make sure you are logged in, and click <em>Use this template</em> button to make
 <li>Depending on your data density, you might want to tweak <em>radius</em> and <em>blur</em> parameters
 inside the <code>&lt;script&gt;</code> tag of <code>index.html</code>:</li>
 </ol>
-<div class="sourceCode" id="cb34"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb34-1"><a href="leaflet-heatmap.html#cb34-1" tabindex="-1"></a><span class="kw">var</span> heat <span class="op">=</span> L<span class="op">.</span><span class="fu">heatLayer</span>(data<span class="op">,</span> {</span>
-<span id="cb34-2"><a href="leaflet-heatmap.html#cb34-2" tabindex="-1"></a>  <span class="dt">radius</span><span class="op">:</span> <span class="dv">25</span><span class="op">,</span></span>
-<span id="cb34-3"><a href="leaflet-heatmap.html#cb34-3" tabindex="-1"></a>  <span class="dt">blur</span><span class="op">:</span> <span class="dv">15</span><span class="op">,</span></span>
-<span id="cb34-4"><a href="leaflet-heatmap.html#cb34-4" tabindex="-1"></a>})</span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb36-1"><a href="leaflet-heatmap.html#cb36-1" tabindex="-1"></a><span class="kw">var</span> heat <span class="op">=</span> L<span class="op">.</span><span class="fu">heatLayer</span>(data<span class="op">,</span> {</span>
+<span id="cb36-2"><a href="leaflet-heatmap.html#cb36-2" tabindex="-1"></a>  <span class="dt">radius</span><span class="op">:</span> <span class="dv">25</span><span class="op">,</span></span>
+<span id="cb36-3"><a href="leaflet-heatmap.html#cb36-3" tabindex="-1"></a>  <span class="dt">blur</span><span class="op">:</span> <span class="dv">15</span><span class="op">,</span></span>
+<span id="cb36-4"><a href="leaflet-heatmap.html#cb36-4" tabindex="-1"></a>})</span></code></pre></div>
 <ol start="5" style="list-style-type: decimal">
 <li>Edit the following chunk of code to set your map’s default position and zoom level:</li>
 </ol>
-<div class="sourceCode" id="cb35"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb35-1"><a href="leaflet-heatmap.html#cb35-1" tabindex="-1"></a><span class="kw">var</span> map <span class="op">=</span> L<span class="op">.</span><span class="fu">map</span>(<span class="st">&#39;map&#39;</span><span class="op">,</span> {</span>
-<span id="cb35-2"><a href="leaflet-heatmap.html#cb35-2" tabindex="-1"></a>  <span class="dt">center</span><span class="op">:</span> [<span class="fl">51.5</span><span class="op">,</span> <span class="op">-</span><span class="fl">0.1</span>]<span class="op">,</span> <span class="co">// Initial map center</span></span>
-<span id="cb35-3"><a href="leaflet-heatmap.html#cb35-3" tabindex="-1"></a>  <span class="dt">zoom</span><span class="op">:</span> <span class="dv">10</span><span class="op">,</span> <span class="co">// Initial zoom level</span></span>
-<span id="cb35-4"><a href="leaflet-heatmap.html#cb35-4" tabindex="-1"></a>})</span></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb37-1"><a href="leaflet-heatmap.html#cb37-1" tabindex="-1"></a><span class="kw">var</span> map <span class="op">=</span> L<span class="op">.</span><span class="fu">map</span>(<span class="st">&#39;map&#39;</span><span class="op">,</span> {</span>
+<span id="cb37-2"><a href="leaflet-heatmap.html#cb37-2" tabindex="-1"></a>  <span class="dt">center</span><span class="op">:</span> [<span class="fl">51.5</span><span class="op">,</span> <span class="op">-</span><span class="fl">0.1</span>]<span class="op">,</span> <span class="co">// Initial map center</span></span>
+<span id="cb37-3"><a href="leaflet-heatmap.html#cb37-3" tabindex="-1"></a>  <span class="dt">zoom</span><span class="op">:</span> <span class="dv">10</span><span class="op">,</span> <span class="co">// Initial zoom level</span></span>
+<span id="cb37-4"><a href="leaflet-heatmap.html#cb37-4" tabindex="-1"></a>})</span></code></pre></div>
 <p>If for some reason you cannot see clusters, make sure your point data is represented
 in <code>latitude,longitude</code> order, not the other way around. If you have few points,
 try increasing the value of <code>radius</code> property of <code>L.heatLayer</code>.</p>

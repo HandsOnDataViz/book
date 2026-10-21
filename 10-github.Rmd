@@ -186,12 +186,14 @@ The next code block displays the basemap tile layer that serve as the map backgr
 
 ```
  L.tileLayer(
-   'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+   'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png?key=INSERT_YOUR_KEY', {
      attribution: '&copy; <a href="https://osm.org/copyright">\
       OpenStreetMap</a> contributors, &copy;\
         <a href="https://carto.com/attribution">CARTO</a>'
  }).addTo(map);
 ```
+
+Tip: Get your own [free CARTO basemap API key](https://carto.com/basemaps/apikey/), and paste it place of the INSERT_YOUR_KEY portion of the code excerpt shown above. See more details in the [Get Your CARTO Basemaps API Key](carto-basemaps-api-key.html) section.
 
 The last code block displays a single point marker on the map, colored blue by default in Leaflet, with a pop-up message when users click it. You can edit the marker coordinates, insert the pop-up text, or copy and paste the code block to create a second marker.
 

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Leaflet Storymaps with Google Sheets | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.48 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Leaflet Storymaps with Google Sheets | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2026-06-01" />
+<meta name="date" content="2026-10-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="leaflet-maps-with-google-sheets.html"/>
-<link rel="next" href="google-sheets-api-key.html"/>
+<link rel="next" href="carto-basemaps-api-key.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -295,6 +295,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="" data-path="leaflet-maps-with-google-sheets.html"><a href="leaflet-maps-with-google-sheets.html"><i class="fa fa-check"></i>Leaflet Maps with Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="leaflet-storymaps-with-google-sheets.html"><a href="leaflet-storymaps-with-google-sheets.html"><i class="fa fa-check"></i>Leaflet Storymaps with Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="carto-basemaps-api-key.html"><a href="carto-basemaps-api-key.html"><i class="fa fa-check"></i>Get Your CARTO Basemaps API Key</a></li>
 <li class="chapter" data-level="" data-path="google-sheets-api-key.html"><a href="google-sheets-api-key.html"><i class="fa fa-check"></i>Get Your Google Sheets API Key</a></li>
 <li class="chapter" data-level="" data-path="leaflet-maps-with-csv.html"><a href="leaflet-maps-with-csv.html"><i class="fa fa-check"></i>Leaflet Maps with CSV Data</a></li>
 <li class="chapter" data-level="" data-path="leaflet-heatmap.html"><a href="leaflet-heatmap.html"><i class="fa fa-check"></i>Leaflet Heatmap Points with CSV Data</a></li>
@@ -560,7 +561,7 @@ Figure 12.23: Edit your README file to replace the link to <em>our</em> site wit
 <li>and many more</li>
 </ul>
 <p>Open the browser tab that displays your live map and refresh the page to see your changes. If your changes do not appear within a few seconds, see the <a href="fix.html">Fix Common Problems</a> section of the appendix.</p>
-<p>Tip: In Google Sheet Options &gt; Map Settings &gt; Basemap Tiles, the default option is the CartoDB.Positron basemap. If you choose options by <a href="https://leaflet-extras.github.io/leaflet-providers/preview/">other Leaflet basemap providers</a>, you may need to <a href="https://github.com/leaflet-extras/leaflet-providers#providers-requiring-registration">register for and insert an API key</a> to use their service. If you choose a Stadia basemap, <a href="https://docs.stadiamaps.com/authentication">register for an account to use domain-based authentication</a>, as shown in Figure <a href="leaflet-storymaps-with-google-sheets.html#fig:stadia-domain2">12.24</a>.</p>
+<p>Tip: In Google Sheet Options &gt; Map Settings &gt; Basemap Tiles, the default option is the CartoDB.Positron basemap. If you use any Carto basemaps, get your own <a href="https://carto.com/basemaps/apikey/">free CARTO basemap API key</a>, and paste it place of our key. See more details in the <a href="carto-basemaps-api-key.html">Get Your CARTO Basemaps API Key</a> section. If you choose options by <a href="https://leaflet-extras.github.io/leaflet-providers/preview/">other Leaflet basemap providers</a>, you may need to <a href="https://github.com/leaflet-extras/leaflet-providers#providers-requiring-registration">register for and insert an API key</a> to use their service. If you choose a Stadia basemap, <a href="https://docs.stadiamaps.com/authentication">register for an account to use domain-based authentication</a>, as shown in Figure <a href="leaflet-storymaps-with-google-sheets.html#fig:stadia-domain2">12.24</a>.</p>
 
 <div class="figure"><span style="display:block;" id="fig:stadia-domain2"></span>
 <img src="images/12-leaflet/stadia-domain.png" alt="If you choose a Stadia basemap option, register to use domain-based authentication. For example, handsondataviz.github.io is the domain for our demo map on GitHub Pages." width="500" />
@@ -749,7 +750,7 @@ var googleDocURL = null;</code></pre>
         </div>
       </div>
 <a href="leaflet-maps-with-google-sheets.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="google-sheets-api-key.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="carto-basemaps-api-key.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
